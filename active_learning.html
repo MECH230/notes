@@ -73,35 +73,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -195,19 +166,27 @@ window.Quarto = {
 
 <p>Check out these two excellent videos of Professor Noel Perkins from the University of Michigan at Ann Arbor explaining the active learning techniques he uses to teach dynamics: <a href="https://www.youtube.com/watch?v=wHEys-JHeb8">Part 1</a>, <a href="https://www.youtube.com/watch?v=96j69u4v-wE">Part 2</a>. We will be using these techniques ourselves. The techniques include:</p>
 <ul>
-<li><p><strong>Having an agenda for the day.</strong> Students can add topics they want to discuss too.</p></li>
-<li><p><strong>Frequently checking student understanding:</strong></p></li>
-<li><p>“Raise your hand if you understand 90% of this or above.”</p></li>
-<li><p><strong>Encouragement:</strong></p></li>
-<li><p>“Ask me a question.”</p></li>
-<li><p>“Persevere. Someone else is going to have this question.”</p></li>
-<li><p>“I had a great question from one of your classmates.”</p></li>
-<li><p><strong>Think <span class="math inline">\(\rightarrow\)</span> Share:</strong></p></li>
-<li><p>“I would like you to do the first step on your own. Take a min.”</p></li>
-<li><p>“Show of hands: I did it, or I know how to do it.”</p></li>
-<li><p><strong>Think <span class="math inline">\(\rightarrow\)</span> Pair <span class="math inline">\(\rightarrow\)</span> Share:</strong> * “I would like you to take 5 min to talk to your neighbor and come up with a strategy that will solve this problem.”</p></li>
-<li><p>“Show of hands: my neighbor convinced me this will work.”</p></li>
-<li><p>“Show of hands: I am not convinced yet.”</p></li>
+<li><strong>Having an agenda for the day.</strong> Students can add topics they want to discuss too.</li>
+<li><strong>Frequently checking student understanding:</strong>
+<ul>
+<li>“Raise your hand if you understand 90% of this or above.”</li>
+</ul></li>
+<li><strong>Encouragement:</strong>
+<ul>
+<li>“Ask me a question.”</li>
+<li>“Persevere. Someone else is going to have this question.”</li>
+<li>“I had a great question from one of your classmates.”</li>
+</ul></li>
+<li><strong>Think → Share:</strong>
+<ul>
+<li>“I would like you to do the first step on your own. Take a min.”</li>
+<li>“Show of hands: I did it, or I know how to do it.”</li>
+</ul></li>
+<li><strong>Think → Pair → Share:</strong> * “I would like you to take 5 min to talk to your neighbor and come up with a strategy that will solve this problem.”
+<ul>
+<li>“Show of hands: my neighbor convinced me this will work.”</li>
+<li>“Show of hands: I am not convinced yet.”</li>
+</ul></li>
 </ul>
 
 
