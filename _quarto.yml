@@ -7,7 +7,7 @@ book:
   date: "3/16/2026"
   chapters:
     - index.qmd
-    - intro.qmd
+    - active_learning.qmd
     - summary.qmd
     - references.qmd
 
