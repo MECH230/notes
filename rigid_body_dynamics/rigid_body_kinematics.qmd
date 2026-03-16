@@ -1,0 +1,15 @@
+---
+title: "Kinematics of Soft Robots"
+---
+
+# Overview
+This chapter covers the geometric representation of deformable structures.
+
+## Discrete Elastic Rods
+Here we discuss the DER framework and its application to line contact.
+
+### Degrees of Freedom
+Details on the nodal coordinates...
+
+## Symbolic Formulations
+Using symbolic math to derive equations of motion.

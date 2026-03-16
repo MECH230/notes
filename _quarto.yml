@@ -5,18 +5,28 @@ book:
   title: "MECH230 Dynamics Notes"
   author: "Theresa Honein"
   date: "3/16/2026"
+  number-sections: true
+  sidebar:
+    style: "docked"
+    search: true
+    collapse-level: 2 # This ensures ## sections are visible/expanded by default
   chapters:
     - index.qmd
     - active_learning.qmd
+    - part: "Rigid Body Dynamics"
+      chapters: 
+        - rigid_body_kinematics.qmd
+        - rigid_body_kinetics.qmd
     - summary.qmd
     - references.qmd
 
 bibliography: references.bib
 
+
 format:
   html:
     theme:
-      - cosmo
+      - cosmo # Try: lumen, flatly, quartz, or materia
       - brand
   pdf:
     documentclass: scrreprt

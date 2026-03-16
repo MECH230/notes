@@ -1,0 +1,9 @@
+---
+title: "Rigid Body Kinetics"
+---
+
+$$
+\mathbf{r}_{P/O} = \mathbf{r}_{G/O} + \mathbf{r}_{P/G}
+$$ {#eq-relative-pos}
+
+The relative position vector is defined in @eq-relative-pos.
