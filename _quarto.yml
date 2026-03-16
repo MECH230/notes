@@ -1,11 +1,13 @@
 project:
   type: book
 
+
+title: "MECH230 Dynamics Notes"
+author: "Theresa Honein"
+date: "3/16/2026"
+number-sections: true
+
 book:
-  title: "MECH230 Dynamics Notes"
-  author: "Theresa Honein"
-  date: "3/16/2026"
-  number-sections: true
   sidebar:
     style: "docked"
     search: true
