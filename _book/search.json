@@ -10,23 +10,68 @@
     ]
   },
   {
-    "objectID": "active_learning.html",
-    "href": "active_learning.html",
+    "objectID": "preliminaries/active_learning.html",
+    "href": "preliminaries/active_learning.html",
     "title": "1  Active learning",
     "section": "",
     "text": "Check out these two excellent videos of Professor Noel Perkins from the University of Michigan at Ann Arbor explaining the active learning techniques he uses to teach dynamics: Part 1, Part 2. We will be using these techniques ourselves. The techniques include:\n\nHaving an agenda for the day. Students can add topics they want to discuss too.\nFrequently checking student understanding:\n\n“Raise your hand if you understand 90% of this or above.”\n\nEncouragement:\n\n“Ask me a question.”\n“Persevere. Someone else is going to have this question.”\n“I had a great question from one of your classmates.”\n\nThink → Share:\n\n“I would like you to do the first step on your own. Take a min.”\n“Show of hands: I did it, or I know how to do it.”\n\nThink → Pair → Share: * “I would like you to take 5 min to talk to your neighbor and come up with a strategy that will solve this problem.”\n\n“Show of hands: my neighbor convinced me this will work.”\n“Show of hands: I am not convinced yet.”",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Active learning</span>"
+      "Preliminaries",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+    ]
+  },
+  {
+    "objectID": "rigid_body_dynamics/rigid_body_kinematics.html",
+    "href": "rigid_body_dynamics/rigid_body_kinematics.html",
+    "title": "2  Kinematics of Soft Robots",
+    "section": "",
+    "text": "3 Overview\nThis chapter covers the geometric representation of deformable structures.",
+    "crumbs": [
+      "Rigid Body Dynamics",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Kinematics of Soft Robots</span>"
+    ]
+  },
+  {
+    "objectID": "rigid_body_dynamics/rigid_body_kinematics.html#discrete-elastic-rods",
+    "href": "rigid_body_dynamics/rigid_body_kinematics.html#discrete-elastic-rods",
+    "title": "2  Kinematics of Soft Robots",
+    "section": "3.1 Discrete Elastic Rods",
+    "text": "3.1 Discrete Elastic Rods\nHere we discuss the DER framework and its application to line contact.\n\n3.1.1 Degrees of Freedom\nDetails on the nodal coordinates…",
+    "crumbs": [
+      "Rigid Body Dynamics",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Kinematics of Soft Robots</span>"
+    ]
+  },
+  {
+    "objectID": "rigid_body_dynamics/rigid_body_kinematics.html#symbolic-formulations",
+    "href": "rigid_body_dynamics/rigid_body_kinematics.html#symbolic-formulations",
+    "title": "2  Kinematics of Soft Robots",
+    "section": "3.2 Symbolic Formulations",
+    "text": "3.2 Symbolic Formulations\nUsing symbolic math to derive equations of motion.",
+    "crumbs": [
+      "Rigid Body Dynamics",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Kinematics of Soft Robots</span>"
+    ]
+  },
+  {
+    "objectID": "rigid_body_dynamics/rigid_body_kinetics.html",
+    "href": "rigid_body_dynamics/rigid_body_kinetics.html",
+    "title": "3  Rigid Body Kinetics",
+    "section": "",
+    "text": "\\[\n\\mathbf{r}_{P/O} = \\mathbf{r}_{G/O} + \\mathbf{r}_{P/G}\n\\tag{3.1}\\]\nThe relative position vector is defined in Equation 3.1.",
+    "crumbs": [
+      "Rigid Body Dynamics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Rigid Body Kinetics</span>"
     ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "2  Summary",
+    "title": "4  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Summary</span>"
     ]
   }
 ]
