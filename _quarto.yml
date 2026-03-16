@@ -14,11 +14,14 @@ book:
     collapse-level: 2 # This ensures ## sections are visible/expanded by default
   chapters:
     - index.qmd
-    - active_learning.qmd
+    - part: "Preliminaries"
+      chapters:
+        - preliminaries/active_learning.qmd
+        # - preliminaries/notation.qmd
     - part: "Rigid Body Dynamics"
       chapters: 
-        - rigid_body_kinematics.qmd
-        - rigid_body_kinetics.qmd
+        - rigid_body_dynamics/rigid_body_kinematics.qmd
+        - rigid_body_dynamics/rigid_body_kinetics.qmd
     - summary.qmd
     - references.qmd
 
