@@ -1,5 +1,17 @@
-# Introduction
+# Active learning
 
-This is a book created from markdown and executable code.
+Check out these two excellent videos of Professor Noel Perkins from the University of Michigan at Ann Arbor explaining the active learning techniques he uses to teach dynamics: [Part 1](https://www.youtube.com/watch?v=wHEys-JHeb8), [Part 2](https://www.youtube.com/watch?v=96j69u4v-wE). We will be using these techniques ourselves. The techniques include:
 
-See @knuth84 for additional discussion of literate programming.
+* **Having an agenda for the day.** Students can add topics they want to discuss too.
+* **Frequently checking student understanding:**
+    * "Raise your hand if you understand 90% of this or above."
+* **Encouragement:**
+    * "Ask me a question."
+    * "Persevere. Someone else is going to have this question."
+    * "I had a great question from one of your classmates."
+* **Think → Share:**
+    * "I would like you to do the first step on your own. Take a min."
+    * "Show of hands: I did it, or I know how to do it."
+* **Think → Pair → Share:** * "I would like you to take 5 min to talk to your neighbor and come up with a strategy that will solve this problem."
+    * "Show of hands: my neighbor convinced me this will work."
+    * "Show of hands: I am not convinced yet."

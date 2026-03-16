@@ -2,8 +2,8 @@ project:
   type: book
 
 book:
-  title: "notes"
-  author: "Norah Jones"
+  title: "MECH230 Dynamics Notes"
+  author: "Theresa Honein"
   date: "3/16/2026"
   chapters:
     - index.qmd
