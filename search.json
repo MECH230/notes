@@ -6,7 +6,7 @@
     "section": "",
     "text": "Preface\n\nThese notes are prepared for the MECH230 Dynamics course at the American University of Beirut (AUB), Lebanon. The content is adapted primarily from O’Reilly’s Primer, with selected examples and exercises drawn from MKB’s and Hibbeler’s classic textbooks.\nThese notes begin with simpler examples to build a strong foundation, enabling students to confidently tackle more complex problems. They are not comprehensive; students should refer to the course textbooks as needed.\nI am grateful for the perspectives on dynamics of Professor Noel Perkins (University of Michigan–Ann Arbor), Professor James Casey (UC Berkeley), and Dr. Evan Hemingway, which I gained while TAing Berkeley’s ME104.\nIf you find any mistakes in these notes, please let me know by filling out https://forms.gle/McKpRhMq4JejnG8V9 form.",
     "crumbs": [
-      "Preface"
+      "MECH230 Dynamics Notes"
     ]
   },
   {
@@ -71,7 +71,7 @@
     "section": "",
     "text": "In summary, this book has no content whatsoever.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
     ]
   }
 ]
