@@ -7,3 +7,12 @@ $$
 $$ {#eq-relative-pos}
 
 The relative position vector is defined in @eq-relative-pos.
+
+
+
+```{tikz}
+\begin{tikzpicture}
+  \draw[->] (0,0) -- (2,0) node[right] {$x$};
+  \draw[->] (0,0) -- (0,2) node[above] {$y$};
+  \draw[ultra thick, blue] (0,0) -- (1,1);
+\end{tikzpicture}
