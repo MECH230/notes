@@ -36,6 +36,8 @@ format:
       - brand
   pdf:
     documentclass: scrreprt
-
+    include-in-header:
+      text: |
+        \usepackage{tikz}
 
 
