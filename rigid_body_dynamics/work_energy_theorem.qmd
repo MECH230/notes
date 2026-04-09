@@ -152,7 +152,7 @@ In conclusion, we have an alternative form of the work-energy theorem that prove
     \dot{T} = \sum_{i=1}^K\mathbf{F}_i\cdot\mathbf{v}_i+\mathbf{M}_e\cdot\boldsymbol{\omega}.
 \end{align}
 
-\subsection{Example: A bar of length $\ell$ and mass $m$ pendulum fixed at its end}
+\subsection{Example: A pendulum bar of length ell and mass m fixed at its end}
 
 
 \begin{figure}[h!]
