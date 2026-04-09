@@ -2,3 +2,278 @@
 title: "Work Energy Theorem"
 ---
 
+The Koenig decomposition for the kinetic energy of a rigid body is:
+\begin{align}
+    T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}\cdot\bomega.
+\end{align}
+In this class, $\bomega = \omega {\bf E}_z$, $\frac{1}{2}{\bf H}\cdot\bomega = \frac{1}{2}I_{zz} w^2$.
+
+In the special case of a fixed point rotation about point $O$, the kinetic energy becomes
+\begin{align}
+    T = \frac{1}{2}{\bf H}^O\cdot\bomega.
+\end{align}
+which simplifies to $T = \frac{1}{2}I^O_{zz} w^2$ when $\bomega = \omega{\bf E}_z$.
+
+The work-energy theorem for a rigid body is:
+\begin{align}
+    \frac{dT}{dt} = {\bf F}\cdot{\bf v}_C+{\bf M}\cdot\bomega = \sum_{i=1}^N{\bf F}_i\cdot{\bf v}_i+{\bf M}_e\cdot\bomega.
+\end{align}
+Integrating the above expression with respect time between $t_A$ and $t_B$, we obtain
+\begin{align}
+    \begin{split}
+        T_B-T_A = W_{{\bf F},AB}+W_{{\bf M},AB} = \sum_{i=1}^N W_{{\bf F}_i,AB}+W_{{\bf M}_e,AB},
+        \label{eq:work-energy-theorem-RB}
+    \end{split}
+\end{align}
+where the work of the forces and moments is calculates as follows:
+\begin{align}
+    \begin{split}
+        W_{{\bf F},AB} &= \int_{t_A}^{t_B}{\bf F}\cdot{\bf v}_Cdt,\\
+        W_{{\bf M},AB} &= \int_{t_A}^{t_B}{\bf M}^C\cdot\bomega dt,\\
+        W_{{\bf F}_i,AB} &= \int_{t_A}^{t_B}{\bf F}_i\cdot{\bf v}_i dt,\\
+        W_{{\bf M}_e,AB} &= \int_{t_A}^{t_B}{\bf M}_e\cdot\bomega dt,\\
+    \end{split}
+\end{align}
+Notice that in calculating the work of a force, we dot the force with the velocity of its point of application.
+
+As in particles and systems of particles, this theorem can be used to establish conservation of the total energy of a rigid body during a motion.
+
+In the following section, we derive these results.
+
+\section{Koenig's Decomposition}
+By definition, the kinetic energy $T$ of a rigid body is the (continuous) sum of the kinetic energies of the differential masses composing it:
+\begin{align}
+    T = \frac{1}{2}\int_{\mathcal{R}}{\bf v}\cdot{\bf v}\rho dv.
+\end{align}
+We can introduce the ${\bf v}_C$ term through 
+\begin{align}
+    \begin{split}
+        & {\bf v} = {\bf v}_C+\bomega\times\bpi,\\
+        & \bpi = {\bf r}-{\bf r}_C,\\
+        & \bomega = \omega_x{\bf e}_x+\omega_y{\bf e}_y+\omega_z{\bf e}_z.
+    \end{split}
+\end{align}
+Substituting the above expressions in the kinetic energy integral, we get
+\begin{align}
+    T = \frac{1}{2}\int_{\mathcal{B}}\lp{\bf v}_C\cdot{\bf v}_C+2{\bf v}_C\cdot(\bomega\times\bpi)+(\bomega\times\bpi)\cdot(\bomega\times\bpi)  \rp dm
+\end{align}
+For the first two terms in the above integral,
+\begin{align}
+    \begin{split}
+        & \frac{1}{2}\int_{\mathcal{B}}{\bf v}_C\cdot{\bf v}_C dm = \frac{{\bf v}_C\cdot{\bf v}_C}{2}\int dm = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C.\\
+        & \int_{\mathcal{B}}{\bf v}_C\cdot(\bomega\times\bpi)dm = {\bf v}_C\cdot\lp\bomega\times\int\pi dm \rp = 0.
+    \end{split}
+\end{align}
+Thus,
+\begin{align}
+    T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}\int_{\mathcal{B}}(\bomega\times\bpi)\cdot(\bomega\times\bpi)dm
+\end{align}
+we can simplify\footnote{Here we used 
+\begin{align*}
+    ({\bf a}\times{\bf b})\cdot({\bf c}\times{\bf d}) = ({\bf a}\cdot{\bf c})({\bf b}\cdot{\bf d})-({\bf a}\cdot{\bf d})({\bf b}\cdot{\bf c}).
+\end{align*}}
+\begin{align}
+    (\bomega\times\bpi)\cdot(\bomega\times\bpi) = ((\bpi\cdot\bpi)\bomega-(\bpi\cdot\bomega)\cdot\bpi).
+\end{align}
+Recall that
+\begin{align}
+    {\bf H}^C = \int_{\mathcal{B}}\bpi\times(\omega\times\bpi)dm = \int_{\mathcal{B}}((\bpi\cdot\bpi)\bomega-(\bpi\cdot\bomega)\bpi)dm.
+\end{align}
+Hence, we obtain the Koenig decomposition:
+\begin{align}
+    T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}\cdot\bomega.
+\end{align}
+
+\subsection{Fixed Point Rotation}
+In the case of fixed point rotation, ${\bf v}_C = \bomega\times({\bf r}_C-{\bf r}_O)$ and ${\bf v}_O = 0$, then\footnote{Here we use the cyclical property of the scalar triple product: $${\bf a}\cdot({\bf b}\times{\bf c}) = {\bf b}\cdot({\bf c}\times{\bf a}) = {\bf c}\times({\bf a}\times{\bf b}).$$}
+\begin{align}
+    \begin{split}
+        T &= \frac{1}{2}{\bf G}\cdot(\bomega\times{\bf r}_{C/O})+\frac{1}{2}{\bf H}\cdot\bomega\\
+        &= \frac{1}{2}\bomega\cdot({\bf r}_{C/O}\times{\bf G})+\frac{1}{2}{\bf H}^C\cdot\bomega\\
+        &= \frac{1}{2}({\bf r}_{C/O}\times{\bf G}+{\bf H})\cdot\bomega\\
+        &= \frac{1}{2}{\bf H}^O\cdot\bomega.
+    \end{split}
+\end{align}
+
+\section{The Work-Energy Theorem}
+\begin{align}
+    \dot{T} = \frac{1}{2}m\dot{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}m{\bf v}_C\cdot\dot{\bf v}_C+\frac{1}{2}\dot{\bf H}\cdot\bomega+\frac{1}{2}{\bf H}\cdot\dot{\bomega}.
+\end{align}
+We need to show that $\dot{\bf H}\cdot\bomega = {\bf H}\cdot\dot{\bomega}$.
+\begin{align}
+    \begin{split}
+        \balpha = \dot{\bomega} &= \frac{d}{dt}(\omega_x{\bf e}_x+\omega_y{\bf e}_y+\omega_z{\bf e}_z)\\
+        &= \dot{\omega}_x{\bf e}_x+\dot{\omega}_y{\bf e}_y+\dot{\omega}_z{\bf e}_z+\omega_x\dot{\bf e}_x+\omega_y\dot{\bf e}_y+\omega_z\dot{\bf e}_z\\
+        &= \dot{\omega}_x{\bf e}_x+\dot{\omega}_y{\bf e}_y+\dot{\omega}_z{\bf e}_z+\bomega\times(\omega_x{\bf e}_x+\omega_y{\bf e}_y+\omega_z{\bf e}_z)\\
+        &= \dot{\omega}_x{\bf e}_x+\dot{\omega}_y{\bf e}_y+\dot{\omega}_z{\bf e}_z.
+    \end{split}
+\end{align}
+
+Another direct calculation using this expression for $\balpha$ shows that
+\begin{align}
+    \begin{split}
+        {\bf H}^C\cdot\dot{\bomega} = (I_{xx}\omega_x+I_{xy}\omega_y+I_{xz}\omega_z)\dot{\omega}_x+(I_{xy}\omega_x+I_{yy}\omega_y+I_{yz}\omega_z)\dot{\omega}_y+(I_{xz}\omega_x+I_{yz}\omega_y+I_{zz}\omega_z)\dot{\omega}_z.
+    \end{split}
+\end{align}
+
+Comparing this to the corresponding expression for $\dot{H}^C\cdot\bomega$, we find that they are equal. Consequently,
+\begin{align}
+    \dot{T} = \frac{1}{2}m\dot{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}m{\bf v}_C\cdot\dot{\bf v}_C+\frac{1}{2}\dot{\bf H}\cdot\bomega+\frac{1}{2}\dot{\bf H}\cdot\bomega.
+\end{align}
+This result implies that
+\begin{align}
+    \dot{T} = m\dot{\bf v}_C\cdot{\bf v}_C+\dot{\bf H}\cdot\bomega.
+\end{align}
+Invoking the balance of linear momentum and the balance of angular momentum, we obtain the work-energy theorem:
+\begin{align}
+    \dot{T} = {\bf F}\cdot{\bf v}_C+{\bf M}\cdot\bomega.
+\end{align}
+You should notice how this is a natural extension of the work-energy theorem for a single particle. We can then integrate these expressions of the work-energy theorem to get equation (\ref{eq:work-energy-theorem-RB}).
+
+\section{An alternative form of the work-energy theorem}
+
+Recall,
+\begin{align}
+    \begin{split}
+        & {\bf F} = \sum_{i=1}^K{\bf F}_i\\
+        & {\bf M}^C = {\bf M}_e+\sum_{i=1}^K({\bf r}_i-{\bf r}_C)\times{\bf F}_i
+    \end{split}
+\end{align}
+Hence, the mechanical power of the resultant forces and moments can be written as
+\begin{align}
+    {\bf F}\cdot{\bf v}_C+{\bf M}^C\cdot\bomega = \lp\sum_{i=1}^K{\bf F}_i\rp\cdot{\bf v}_C+{\bf M}_e\cdot\bomega+\lp \sum_{i=1}^K({\bf x}_i-{\bf x}_C)\times{\bf F}_i\rp\cdot\bomega
+\end{align}
+With some minor manipulations involving the identity ${\bf a}\cdot({\bf b}\times{\bf c}) = {\bf c}\cdot({\bf a}\times{\bf b})$ and noting that ${\bf v}_i = {\bf v}_C+\bomega\times({\bf x}_i-{\bf x}_C)$, we find that
+\begin{align}
+    {\bf F}\cdot{\bf v}_C+{\bf M}\cdot\bomega = \sum_{i=1}^K{\bf F}_i\cdot{\bf v}_i+{\bf M}_e\cdot\bomega.
+\end{align}
+In conclusion, we have an alternative form of the work-energy theorem that proves to be far easier to use in applications:
+\begin{align}
+    \dot{T} = \sum_{i=1}^K{\bf F}_i\cdot{\bf v}_i+{\bf M}_e\cdot\bomega.
+\end{align}
+
+\subsection{Example: A bar of length $\ell$ and mass $m$ pendulum fixed at its end}
+
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \draw[thick] (0,0) -- (3,-4);
+        \fill[black] (0,0) circle (0.1);
+        \draw[thick,->] (0,0) -- (0,-1) node[below] {${\bf E}_x$};
+        \draw[thick,->] (0,0) -- (1,0) node[right] {${\bf E}_y$};
+        \draw[thick,->,blue] (0,0) -- (0.6,-0.8) node[below] {${\bf e}_x$};
+        \draw[thick,->,blue] (0,0) -- (0.8,0.6) node[above] {${\bf e}_y$};
+    \end{tikzpicture}
+\end{figure}
+
+
+\begin{align}
+    \begin{split}
+        & U = -\frac{mg\ell}{2}\cos(\theta),\\
+        & E = \frac{m\ell^2}{6}\dot{\theta}^2-\frac{mg\ell}{2}\cos(\theta) = const.
+    \end{split}
+\end{align}
+
+\subsection{Example: What happens if you attach a dead mass at the end of the rod?}
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \draw[thick] (0,0) -- (3,-4);
+        \fill[black] (0,0) circle (0.1);
+        \draw[thick,->] (0,0) -- (0,-1) node[below] {${\bf E}_x$};
+        \draw[thick,->] (0,0) -- (1,0) node[right] {${\bf E}_y$};
+        \draw[thick,->,blue] (0,0) -- (0.6,-0.8) node[below] {${\bf e}_x$};
+        \draw[thick,->,blue] (0,0) -- (0.8,0.6) node[above] {${\bf e}_y$};
+        \fill[black] (3,-4) circle (0.4);
+    \end{tikzpicture}
+\end{figure}
+
+\begin{align}
+    & U = -\frac{mg\ell}{2}\cos(\theta)-m_e g\ell\cos(\theta)
+\end{align}
+
+\underline{What happens if there is a follower force applied at the end of the rod always perpendicular to it?}
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \draw[thick] (0,0) -- (3,-4);
+        \fill[black] (0,0) circle (0.1);
+        \draw[thick,->] (0,0) -- (0,-1) node[below] {${\bf E}_x$};
+        \draw[thick,->] (0,0) -- (1,0) node[right] {${\bf E}_y$};
+        \draw[thick,->,blue] (0,0) -- (0.6,-0.8) node[below] {${\bf e}_x$};
+        \draw[thick,->,blue] (0,0) -- (0.8,0.6) node[above] {${\bf e}_y$};
+        
+        \draw[thick,->] (3,-4) -- (4.6,-2.8) node[above] {${\bf P}$};
+    \end{tikzpicture}
+\end{figure}
+
+${\bf P}$ is actively changing depending on what the configuration is. 
+
+This is a nonconservative system.
+
+\section{Conservative Moments}
+
+Moments can also be conservative.
+
+A torsional spring is just a model for some kind of elasticity at the joint.
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        % Parameters for the spiral
+        \draw[domain=0:1000, samples=100, smooth, variable=\t] 
+            plot ({0.0005*\t * cos(\t)}, {0.0005*\t * sin(\t)});
+        \draw[thick] (0,0) -- (3,-4);
+        \fill[black] (0,0) circle (0.1);
+        \draw[thick,->] (0,0) -- (0,-1) node[below] {${\bf E}_x$};
+        \draw[thick,->] (0,0) -- (1,0) node[right] {${\bf E}_y$};
+        \draw[thick,->,blue] (0,0) -- (0.6,-0.8) node[below] {${\bf e}_x$};
+        \draw[thick,->,blue] (0,0) -- (0.8,0.6) node[above] {${\bf e}_y$};
+    \end{tikzpicture}
+\end{figure}
+
+The torsional spring with stiffness $K$ creates a couple
+\begin{align}
+    {\bf M}_S = K\theta(-{\bf E}_Z)
+\end{align}
+The power of the couple is
+\begin{align}
+    {\bf M}_S\cdot\bomega = -K\theta\dot{\theta} = -\frac{d}{dt}\lp K\frac{\dot{\theta}^2}{2} \rp.
+\end{align}
+Hence, $U = \frac{1}{2}K\dot{\theta}^2$ for the torsional spring.
+
+A constant couple ${\bf M}_e = M_e{\bf E}_Z$ is also conservative. 
+Its power is
+\begin{align}
+    {\bf M}_e\cdot\bomega = M_e\dot{\theta} = -\frac{d}{dt}(-M_e\theta).
+\end{align}
+Hence, $U = -M_e\theta$ for a constant couple.
+
+Note. This only works for $\bomega = \omega{\bf E}_z$. Constant couples are not conservative in general.
+
+\newpage
+\section{Impact Problems / Center of Percussion}
+
+For rigid bodies, impact ideas are the same as in systems of particles,
+
+\underline{Example}
+
+Consider a projectile fired at a pendulum in the horizontal plane (no gravity). What is $x$ so that the reaction for at the pin is almost zero during impact.
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \draw[thick] (0,0) -- (0,-4);
+        \fill (0,0) circle (0.1);
+        \fill (-2,-3) circle (0.25);
+        \draw[thick,->] (-2,-3) -- (-1,-3) node[above] {${\bf v}_0$};
+        \draw[->] (1,0) -- (1,-3) node[midway, right] {$x$};
+    \end{tikzpicture}
+\end{figure}
+
+If $x$ is big enough, the horizontal component of reaction force at $O$ will point to the left. If $x$ is small enough, the horizontal component of the reaction force at $O$ will point to the right. Somewhere in between, the reaction force at $O$ will be minimized. This optimal location $x$ is called the center of percussion.
+
+

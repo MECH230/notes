@@ -9,7 +9,7 @@
 <meta name="author" content="Theresa Honein">
 <meta name="dcterms.date" content="2026-01-01">
 
-<title>1&nbsp; Active Learning</title>
+<title>4&nbsp; Work Energy Theorem</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -35,8 +35,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../rigid_body_dynamics/rigid_body_kinematics.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../summary.html" rel="next">
+<link href="../rigid_body_dynamics/rigid_body_kinetics.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -75,6 +75,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -87,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../preliminaries/active_learning.html">Preliminaries</a></li><li class="breadcrumb-item"><a href="../preliminaries/active_learning.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Active Learning</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html">Rigid Body Dynamics</a></li><li class="breadcrumb-item"><a href="../rigid_body_dynamics/work_energy_theorem.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Work Energy Theorem</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../preliminaries/active_learning.html" class="sidebar-item-text sidebar-link active">
+  <a href="../preliminaries/active_learning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Active Learning</span></span></a>
   </div>
 </li>
@@ -153,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../rigid_body_dynamics/work_energy_theorem.html" class="sidebar-item-text sidebar-link">
+  <a href="../rigid_body_dynamics/work_energy_theorem.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Work Energy Theorem</span></span></a>
   </div>
 </li>
@@ -182,9 +211,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../preliminaries/active_learning.html">Preliminaries</a></li><li class="breadcrumb-item"><a href="../preliminaries/active_learning.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Active Learning</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html">Rigid Body Dynamics</a></li><li class="breadcrumb-item"><a href="../rigid_body_dynamics/work_energy_theorem.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Work Energy Theorem</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Active Learning</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Work Energy Theorem</span></h1>
 </div>
 
 
@@ -213,34 +242,122 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Check out these two excellent videos of Professor Noel Perkins from the University of Michigan at Ann Arbor explaining the active learning techniques he uses to teach dynamics: <a href="https://www.youtube.com/watch?v=wHEys-JHeb8">Part 1</a>, <a href="https://www.youtube.com/watch?v=96j69u4v-wE">Part 2</a>. We will be using these techniques ourselves. The techniques include:</p>
-<ul>
-<li><strong>Having an agenda for the day.</strong> Students can add topics they want to discuss too.</li>
-<li><strong>Frequently checking student understanding:</strong>
-<ul>
-<li>“Raise your hand if you understand 90% of this or above.”</li>
-</ul></li>
-<li><strong>Encouragement:</strong>
-<ul>
-<li>“Ask me a question.”</li>
-<li>“Persevere. Someone else is going to have this question.”</li>
-<li>“I had a great question from one of your classmates.”</li>
-</ul></li>
-<li><strong>Think → Share:</strong>
-<ul>
-<li>“I would like you to do the first step on your own. Take a min.”</li>
-<li>“Show of hands: I did it, or I know how to do it.”</li>
-</ul></li>
-<li><strong>Think → Pair → Share:</strong> * “I would like you to take 5 min to talk to your neighbor and come up with a strategy that will solve this problem.”
-<ul>
-<li>“Show of hands: my neighbor convinced me this will work.”</li>
-<li>“Show of hands: I am not convinced yet.”</li>
-</ul></li>
-<li><strong>This is a test:</strong> I am testing this.
-<ul>
-<li>Test 1</li>
-</ul></li>
-</ul>
+<p>The Koenig decomposition for the kinetic energy of a rigid body is: <span class="math display">\[\begin{align}
+    T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}\cdot\bomega.
+\end{align}\]</span> In this class, <span class="math inline">\(\bomega = \omega {\bf E}_z\)</span>, <span class="math inline">\(\frac{1}{2}{\bf H}\cdot\bomega = \frac{1}{2}I_{zz} w^2\)</span>.</p>
+<p>In the special case of a fixed point rotation about point <span class="math inline">\(O\)</span>, the kinetic energy becomes <span class="math display">\[\begin{align}
+    T = \frac{1}{2}{\bf H}^O\cdot\bomega.
+\end{align}\]</span> which simplifies to <span class="math inline">\(T = \frac{1}{2}I^O_{zz} w^2\)</span> when <span class="math inline">\(\bomega = \omega{\bf E}_z\)</span>.</p>
+<p>The work-energy theorem for a rigid body is: <span class="math display">\[\begin{align}
+    \frac{dT}{dt} = {\bf F}\cdot{\bf v}_C+{\bf M}\cdot\bomega = \sum_{i=1}^N{\bf F}_i\cdot{\bf v}_i+{\bf M}_e\cdot\bomega.
+\end{align}\]</span> Integrating the above expression with respect time between <span class="math inline">\(t_A\)</span> and <span class="math inline">\(t_B\)</span>, we obtain <span class="math display">\[\begin{align}
+    \begin{split}
+        T_B-T_A = W_{{\bf F},AB}+W_{{\bf M},AB} = \sum_{i=1}^N W_{{\bf F}_i,AB}+W_{{\bf M}_e,AB},
+        \label{eq:work-energy-theorem-RB}
+    \end{split}
+\end{align}\]</span> where the work of the forces and moments is calculates as follows: <span class="math display">\[\begin{align}
+    \begin{split}
+        W_{{\bf F},AB} &amp;= \int_{t_A}^{t_B}{\bf F}\cdot{\bf v}_Cdt,\\
+        W_{{\bf M},AB} &amp;= \int_{t_A}^{t_B}{\bf M}^C\cdot\bomega dt,\\
+        W_{{\bf F}_i,AB} &amp;= \int_{t_A}^{t_B}{\bf F}_i\cdot{\bf v}_i dt,\\
+        W_{{\bf M}_e,AB} &amp;= \int_{t_A}^{t_B}{\bf M}_e\cdot\bomega dt,\\
+    \end{split}
+\end{align}\]</span> Notice that in calculating the work of a force, we dot the force with the velocity of its point of application.</p>
+<p>As in particles and systems of particles, this theorem can be used to establish conservation of the total energy of a rigid body during a motion.</p>
+<p>In the following section, we derive these results.</p>
+<p>By definition, the kinetic energy <span class="math inline">\(T\)</span> of a rigid body is the (continuous) sum of the kinetic energies of the differential masses composing it: <span class="math display">\[\begin{align}
+    T = \frac{1}{2}\int_{\mathcal{R}}{\bf v}\cdot{\bf v}\rho dv.
+\end{align}\]</span> We can introduce the <span class="math inline">\({\bf v}_C\)</span> term through <span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; {\bf v} = {\bf v}_C+\bomega\times\bpi,\\
+        &amp; \bpi = {\bf r}-{\bf r}_C,\\
+        &amp; \bomega = \omega_x{\bf e}_x+\omega_y{\bf e}_y+\omega_z{\bf e}_z.
+    \end{split}
+\end{align}\]</span> Substituting the above expressions in the kinetic energy integral, we get <span class="math display">\[\begin{align}
+    T = \frac{1}{2}\int_{\mathcal{B}}\lp{\bf v}_C\cdot{\bf v}_C+2{\bf v}_C\cdot(\bomega\times\bpi)+(\bomega\times\bpi)\cdot(\bomega\times\bpi)  \rp dm
+\end{align}\]</span> For the first two terms in the above integral, <span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; \frac{1}{2}\int_{\mathcal{B}}{\bf v}_C\cdot{\bf v}_C dm = \frac{{\bf v}_C\cdot{\bf v}_C}{2}\int dm = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C.\\
+        &amp; \int_{\mathcal{B}}{\bf v}_C\cdot(\bomega\times\bpi)dm = {\bf v}_C\cdot\lp\bomega\times\int\pi dm \rp = 0.
+    \end{split}
+\end{align}\]</span> Thus, <span class="math display">\[\begin{align}
+    T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}\int_{\mathcal{B}}(\bomega\times\bpi)\cdot(\bomega\times\bpi)dm
+\end{align}\]</span> we can simplify <span class="math display">\[\begin{align}
+    (\bomega\times\bpi)\cdot(\bomega\times\bpi) = ((\bpi\cdot\bpi)\bomega-(\bpi\cdot\bomega)\cdot\bpi).
+\end{align}\]</span> Recall that <span class="math display">\[\begin{align}
+    {\bf H}^C = \int_{\mathcal{B}}\bpi\times(\omega\times\bpi)dm = \int_{\mathcal{B}}((\bpi\cdot\bpi)\bomega-(\bpi\cdot\bomega)\bpi)dm.
+\end{align}\]</span> Hence, we obtain the Koenig decomposition: <span class="math display">\[\begin{align}
+    T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}\cdot\bomega.
+\end{align}\]</span></p>
+<p>In the case of fixed point rotation, <span class="math inline">\({\bf v}_C = \bomega\times({\bf r}_C-{\bf r}_O)\)</span> and <span class="math inline">\({\bf v}_O = 0\)</span>, then <span class="math display">\[\begin{align}
+    \begin{split}
+        T &amp;= \frac{1}{2}{\bf G}\cdot(\bomega\times{\bf r}_{C/O})+\frac{1}{2}{\bf H}\cdot\bomega\\
+        &amp;= \frac{1}{2}\bomega\cdot({\bf r}_{C/O}\times{\bf G})+\frac{1}{2}{\bf H}^C\cdot\bomega\\
+        &amp;= \frac{1}{2}({\bf r}_{C/O}\times{\bf G}+{\bf H})\cdot\bomega\\
+        &amp;= \frac{1}{2}{\bf H}^O\cdot\bomega.
+    \end{split}
+\end{align}\]</span></p>
+<p><span class="math display">\[\begin{align}
+    \dot{T} = \frac{1}{2}m\dot{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}m{\bf v}_C\cdot\dot{\bf v}_C+\frac{1}{2}\dot{\bf H}\cdot\bomega+\frac{1}{2}{\bf H}\cdot\dot{\bomega}.
+\end{align}\]</span> We need to show that <span class="math inline">\(\dot{\bf H}\cdot\bomega = {\bf H}\cdot\dot{\bomega}\)</span>. <span class="math display">\[\begin{align}
+    \begin{split}
+        \balpha = \dot{\bomega} &amp;= \frac{d}{dt}(\omega_x{\bf e}_x+\omega_y{\bf e}_y+\omega_z{\bf e}_z)\\
+        &amp;= \dot{\omega}_x{\bf e}_x+\dot{\omega}_y{\bf e}_y+\dot{\omega}_z{\bf e}_z+\omega_x\dot{\bf e}_x+\omega_y\dot{\bf e}_y+\omega_z\dot{\bf e}_z\\
+        &amp;= \dot{\omega}_x{\bf e}_x+\dot{\omega}_y{\bf e}_y+\dot{\omega}_z{\bf e}_z+\bomega\times(\omega_x{\bf e}_x+\omega_y{\bf e}_y+\omega_z{\bf e}_z)\\
+        &amp;= \dot{\omega}_x{\bf e}_x+\dot{\omega}_y{\bf e}_y+\dot{\omega}_z{\bf e}_z.
+    \end{split}
+\end{align}\]</span></p>
+<p>Another direct calculation using this expression for <span class="math inline">\(\balpha\)</span> shows that <span class="math display">\[\begin{align}
+    \begin{split}
+        {\bf H}^C\cdot\dot{\bomega} = (I_{xx}\omega_x+I_{xy}\omega_y+I_{xz}\omega_z)\dot{\omega}_x+(I_{xy}\omega_x+I_{yy}\omega_y+I_{yz}\omega_z)\dot{\omega}_y+(I_{xz}\omega_x+I_{yz}\omega_y+I_{zz}\omega_z)\dot{\omega}_z.
+    \end{split}
+\end{align}\]</span></p>
+<p>Comparing this to the corresponding expression for <span class="math inline">\(\dot{H}^C\cdot\bomega\)</span>, we find that they are equal. Consequently, <span class="math display">\[\begin{align}
+    \dot{T} = \frac{1}{2}m\dot{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}m{\bf v}_C\cdot\dot{\bf v}_C+\frac{1}{2}\dot{\bf H}\cdot\bomega+\frac{1}{2}\dot{\bf H}\cdot\bomega.
+\end{align}\]</span> This result implies that <span class="math display">\[\begin{align}
+    \dot{T} = m\dot{\bf v}_C\cdot{\bf v}_C+\dot{\bf H}\cdot\bomega.
+\end{align}\]</span> Invoking the balance of linear momentum and the balance of angular momentum, we obtain the work-energy theorem: <span class="math display">\[\begin{align}
+    \dot{T} = {\bf F}\cdot{\bf v}_C+{\bf M}\cdot\bomega.
+\end{align}\]</span> You should notice how this is a natural extension of the work-energy theorem for a single particle. We can then integrate these expressions of the work-energy theorem to get equation (<span class="math inline">\(\ref{eq:work-energy-theorem-RB}\)</span>).</p>
+<p>Recall, <span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; {\bf F} = \sum_{i=1}^K{\bf F}_i\\
+        &amp; {\bf M}^C = {\bf M}_e+\sum_{i=1}^K({\bf r}_i-{\bf r}_C)\times{\bf F}_i
+    \end{split}
+\end{align}\]</span> Hence, the mechanical power of the resultant forces and moments can be written as <span class="math display">\[\begin{align}
+    {\bf F}\cdot{\bf v}_C+{\bf M}^C\cdot\bomega = \lp\sum_{i=1}^K{\bf F}_i\rp\cdot{\bf v}_C+{\bf M}_e\cdot\bomega+\lp \sum_{i=1}^K({\bf x}_i-{\bf x}_C)\times{\bf F}_i\rp\cdot\bomega
+\end{align}\]</span> With some minor manipulations involving the identity <span class="math inline">\({\bf a}\cdot({\bf b}\times{\bf c}) = {\bf c}\cdot({\bf a}\times{\bf b})\)</span> and noting that <span class="math inline">\({\bf v}_i = {\bf v}_C+\bomega\times({\bf x}_i-{\bf x}_C)\)</span>, we find that <span class="math display">\[\begin{align}
+    {\bf F}\cdot{\bf v}_C+{\bf M}\cdot\bomega = \sum_{i=1}^K{\bf F}_i\cdot{\bf v}_i+{\bf M}_e\cdot\bomega.
+\end{align}\]</span> In conclusion, we have an alternative form of the work-energy theorem that proves to be far easier to use in applications: <span class="math display">\[\begin{align}
+    \dot{T} = \sum_{i=1}^K{\bf F}_i\cdot{\bf v}_i+{\bf M}_e\cdot\bomega.
+\end{align}\]</span></p>
+<p><span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; U = -\frac{mg\ell}{2}\cos(\theta),\\
+        &amp; E = \frac{m\ell^2}{6}\dot{\theta}^2-\frac{mg\ell}{2}\cos(\theta) = const.
+    \end{split}
+\end{align}\]</span></p>
+<p><span class="math display">\[\begin{align}
+    &amp; U = -\frac{mg\ell}{2}\cos(\theta)-m_e g\ell\cos(\theta)
+\end{align}\]</span></p>
+<p></p>
+<p><span class="math inline">\({\bf P}\)</span> is actively changing depending on what the configuration is.</p>
+<p>This is a nonconservative system.</p>
+<p>Moments can also be conservative.</p>
+<p>A torsional spring is just a model for some kind of elasticity at the joint.</p>
+<p>The torsional spring with stiffness <span class="math inline">\(K\)</span> creates a couple <span class="math display">\[\begin{align}
+    {\bf M}_S = K\theta(-{\bf E}_Z)
+\end{align}\]</span> The power of the couple is <span class="math display">\[\begin{align}
+    {\bf M}_S\cdot\bomega = -K\theta\dot{\theta} = -\frac{d}{dt}\lp K\frac{\dot{\theta}^2}{2} \rp.
+\end{align}\]</span> Hence, <span class="math inline">\(U = \frac{1}{2}K\dot{\theta}^2\)</span> for the torsional spring.</p>
+<p>A constant couple <span class="math inline">\({\bf M}_e = M_e{\bf E}_Z\)</span> is also conservative. Its power is <span class="math display">\[\begin{align}
+    {\bf M}_e\cdot\bomega = M_e\dot{\theta} = -\frac{d}{dt}(-M_e\theta).
+\end{align}\]</span> Hence, <span class="math inline">\(U = -M_e\theta\)</span> for a constant couple.</p>
+<p>Note. This only works for <span class="math inline">\(\bomega = \omega{\bf E}_z\)</span>. Constant couples are not conservative in general.</p>
+<p>For rigid bodies, impact ideas are the same as in systems of particles,</p>
+<p></p>
+<p>Consider a projectile fired at a pendulum in the horizontal plane (no gravity). What is <span class="math inline">\(x\)</span> so that the reaction for at the pin is almost zero during impact.</p>
+<p>If <span class="math inline">\(x\)</span> is big enough, the horizontal component of reaction force at <span class="math inline">\(O\)</span> will point to the left. If <span class="math inline">\(x\)</span> is small enough, the horizontal component of the reaction force at <span class="math inline">\(O\)</span> will point to the right. Somewhere in between, the reaction force at <span class="math inline">\(O\)</span> will be minimized. This optimal location <span class="math inline">\(x\)</span> is called the center of percussion.</p>
 
 
 
@@ -647,13 +764,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="MECH230 Dynamics Notes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">MECH230 Dynamics Notes</span>
+      <a href="../rigid_body_dynamics/rigid_body_kinetics.html" class="pagination-link" aria-label="Rigid Body Kinetics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rigid Body Kinetics</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../rigid_body_dynamics/rigid_body_kinematics.html" class="pagination-link" aria-label="Kinematics of Soft Robots">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Kinematics of Soft Robots</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../summary.html" class="pagination-link" aria-label="MECH230 Dynamics Notes">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
