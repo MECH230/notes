@@ -4,19 +4,19 @@ title: "Work Energy Theorem"
 
 The Koenig decomposition for the kinetic energy of a rigid body is:
 \begin{align}
-    T = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C+\frac{1}{2}\mathbf{H}\cdot\bomega.
+    T = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C+\frac{1}{2}\mathbf{H}\cdot\boldsymbol{\omega}.
 \end{align}
-In this class, $\bomega = \omega \mathbf{E}_z$, $\frac{1}{2}\mathbf{H}\cdot\bomega = \frac{1}{2}I_{zz} w^2$.
+In this class, $\boldsymbol{\omega} = \omega \mathbf{E}_z$, $\frac{1}{2}\mathbf{H}\cdot\boldsymbol{\omega} = \frac{1}{2}I_{zz} w^2$.
 
 In the special case of a fixed point rotation about point $O$, the kinetic energy becomes
 \begin{align}
-    T = \frac{1}{2}\mathbf{H}^O\cdot\bomega.
+    T = \frac{1}{2}\mathbf{H}^O\cdot\boldsymbol{\omega}.
 \end{align}
-which simplifies to $T = \frac{1}{2}I^O_{zz} w^2$ when $\bomega = \omega\mathbf{E}_z$.
+which simplifies to $T = \frac{1}{2}I^O_{zz} w^2$ when $\boldsymbol{\omega} = \omega\mathbf{E}_z$.
 
 The work-energy theorem for a rigid body is:
 \begin{align}
-    \frac{dT}{dt} = \mathbf{F}\cdot\mathbf{v}_C+\mathbf{M}\cdot\bomega = \sum_{i=1}^N\mathbf{F}_i\cdot\mathbf{v}_i+\mathbf{M}_e\cdot\bomega.
+    \frac{dT}{dt} = \mathbf{F}\cdot\mathbf{v}_C+\mathbf{M}\cdot\boldsymbol{\omega} = \sum_{i=1}^N\mathbf{F}_i\cdot\mathbf{v}_i+\mathbf{M}_e\cdot\boldsymbol{\omega}.
 \end{align}
 Integrating the above expression with respect time between $t_A$ and $t_B$, we obtain
 \begin{align}
@@ -29,9 +29,9 @@ where the work of the forces and moments is calculates as follows:
 \begin{align}
     \begin{split}
         W_{\mathbf{F},AB} &= \int_{t_A}^{t_B}\mathbf{F}\cdot\mathbf{v}_Cdt,\\
-        W_{\mathbf{M},AB} &= \int_{t_A}^{t_B}\mathbf{M}^C\cdot\bomega dt,\\
+        W_{\mathbf{M},AB} &= \int_{t_A}^{t_B}\mathbf{M}^C\cdot\boldsymbol{\omega} dt,\\
         W_{\mathbf{F}_i,AB} &= \int_{t_A}^{t_B}\mathbf{F}_i\cdot\mathbf{v}_i dt,\\
-        W_{\mathbf{M}_e,AB} &= \int_{t_A}^{t_B}\mathbf{M}_e\cdot\bomega dt,\\
+        W_{\mathbf{M}_e,AB} &= \int_{t_A}^{t_B}\mathbf{M}_e\cdot\boldsymbol{\omega} dt,\\
     \end{split}
 \end{align}
 Notice that in calculating the work of a force, we dot the force with the velocity of its point of application.
@@ -48,85 +48,85 @@ By definition, the kinetic energy $T$ of a rigid body is the (continuous) sum of
 We can introduce the $\mathbf{v}_C$ term through 
 \begin{align}
     \begin{split}
-        & \mathbf{v} = \mathbf{v}_C+\bomega\times\bpi,\\
-        & \bpi = \mathbf{r}-\mathbf{r}_C,\\
-        & \bomega = \omega_x\mathbf{e}_x+\omega_y\mathbf{e}_y+\omega_z\mathbf{e}_z.
+        & \mathbf{v} = \mathbf{v}_C+\boldsymbol{\omega}\times\boldsymbol{\pi},\\
+        & \boldsymbol{\pi} = \mathbf{r}-\mathbf{r}_C,\\
+        & \boldsymbol{\omega} = \omega_x\mathbf{e}_x+\omega_y\mathbf{e}_y+\omega_z\mathbf{e}_z.
     \end{split}
 \end{align}
 Substituting the above expressions in the kinetic energy integral, we get
 \begin{align}
-    T = \frac{1}{2}\int_{\mathcal{B}}\lp\mathbf{v}_C\cdot\mathbf{v}_C+2\mathbf{v}_C\cdot(\bomega\times\bpi)+(\bomega\times\bpi)\cdot(\bomega\times\bpi)  \rp dm
+    T = \frac{1}{2}\int_{\mathcal{B}}\left(\mathbf{v}_C\cdot\mathbf{v}_C+2\mathbf{v}_C\cdot(\boldsymbol{\omega}\times\boldsymbol{\pi})+(\boldsymbol{\omega}\times\boldsymbol{\pi})\cdot(\boldsymbol{\omega}\times\boldsymbol{\pi})\right) dm
 \end{align}
 For the first two terms in the above integral,
 \begin{align}
     \begin{split}
         & \frac{1}{2}\int_{\mathcal{B}}\mathbf{v}_C\cdot\mathbf{v}_C dm = \frac{\mathbf{v}_C\cdot\mathbf{v}_C}{2}\int dm = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C.\\
-        & \int_{\mathcal{B}}\mathbf{v}_C\cdot(\bomega\times\bpi)dm = \mathbf{v}_C\cdot\lp\bomega\times\int\pi dm \rp = 0.
+        & \int_{\mathcal{B}}\mathbf{v}_C\cdot(\boldsymbol{\omega}\times\boldsymbol{\pi})dm = \mathbf{v}_C\cdot\left(\boldsymbol{\omega}\times\int\pi dm \right) = 0.
     \end{split}
 \end{align}
 Thus,
 \begin{align}
-    T = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C+\frac{1}{2}\int_{\mathcal{B}}(\bomega\times\bpi)\cdot(\bomega\times\bpi)dm
+    T = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C+\frac{1}{2}\int_{\mathcal{B}}(\boldsymbol{\omega}\times\boldsymbol{\pi})\cdot(\boldsymbol{\omega}\times\boldsymbol{\pi})dm
 \end{align}
 we can simplify\footnote{Here we used 
 \begin{align*}
     (\mathbf{a}\times\mathbf{b})\cdot(\mathbf{c}\times\mathbf{d}) = (\mathbf{a}\cdot\mathbf{c})(\mathbf{b}\cdot\mathbf{d})-(\mathbf{a}\cdot\mathbf{d})(\mathbf{b}\cdot\mathbf{c}).
 \end{align*}}
 \begin{align}
-    (\bomega\times\bpi)\cdot(\bomega\times\bpi) = ((\bpi\cdot\bpi)\bomega-(\bpi\cdot\bomega)\cdot\bpi).
+    (\boldsymbol{\omega}\times\boldsymbol{\pi})\cdot(\boldsymbol{\omega}\times\boldsymbol{\pi}) = ((\boldsymbol{\pi}\cdot\boldsymbol{\pi})\boldsymbol{\omega}-(\boldsymbol{\pi}\cdot\boldsymbol{\omega})\cdot\boldsymbol{\pi}).
 \end{align}
 Recall that
 \begin{align}
-    \mathbf{H}^C = \int_{\mathcal{B}}\bpi\times(\omega\times\bpi)dm = \int_{\mathcal{B}}((\bpi\cdot\bpi)\bomega-(\bpi\cdot\bomega)\bpi)dm.
+    \mathbf{H}^C = \int_{\mathcal{B}}\boldsymbol{\pi}\times(\omega\times\boldsymbol{\pi})dm = \int_{\mathcal{B}}((\boldsymbol{\pi}\cdot\boldsymbol{\pi})\boldsymbol{\omega}-(\boldsymbol{\pi}\cdot\boldsymbol{\omega})\boldsymbol{\pi})dm.
 \end{align}
 Hence, we obtain the Koenig decomposition:
 \begin{align}
-    T = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C+\frac{1}{2}\mathbf{H}\cdot\bomega.
+    T = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C+\frac{1}{2}\mathbf{H}\cdot\boldsymbol{\omega}.
 \end{align}
 
 \subsection{Fixed Point Rotation}
-In the case of fixed point rotation, $\mathbf{v}_C = \bomega\times(\mathbf{r}_C-\mathbf{r}_O)$ and $\mathbf{v}_O = 0$, then\footnote{Here we use the cyclical property of the scalar triple product: $$\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c}) = \mathbf{b}\cdot(\mathbf{c}\times\mathbf{a}) = \mathbf{c}\times(\mathbf{a}\times\mathbf{b}).$$}
+In the case of fixed point rotation, $\mathbf{v}_C = \boldsymbol{\omega}\times(\mathbf{r}_C-\mathbf{r}_O)$ and $\mathbf{v}_O = 0$, then\footnote{Here we use the cyclical property of the scalar triple product: $$\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c}) = \mathbf{b}\cdot(\mathbf{c}\times\mathbf{a}) = \mathbf{c}\times(\mathbf{a}\times\mathbf{b}).$$}
 \begin{align}
     \begin{split}
-        T &= \frac{1}{2}\mathbf{G}\cdot(\bomega\times\mathbf{r}_{C/O})+\frac{1}{2}\mathbf{H}\cdot\bomega\\
-        &= \frac{1}{2}\bomega\cdot(\mathbf{r}_{C/O}\times\mathbf{G})+\frac{1}{2}\mathbf{H}^C\cdot\bomega\\
-        &= \frac{1}{2}(\mathbf{r}_{C/O}\times\mathbf{G}+\mathbf{H})\cdot\bomega\\
-        &= \frac{1}{2}\mathbf{H}^O\cdot\bomega.
+        T &= \frac{1}{2}\mathbf{G}\cdot(\boldsymbol{\omega}\times\mathbf{r}_{C/O})+\frac{1}{2}\mathbf{H}\cdot\boldsymbol{\omega}\\
+        &= \frac{1}{2}\boldsymbol{\omega}\cdot(\mathbf{r}_{C/O}\times\mathbf{G})+\frac{1}{2}\mathbf{H}^C\cdot\boldsymbol{\omega}\\
+        &= \frac{1}{2}(\mathbf{r}_{C/O}\times\mathbf{G}+\mathbf{H})\cdot\boldsymbol{\omega}\\
+        &= \frac{1}{2}\mathbf{H}^O\cdot\boldsymbol{\omega}.
     \end{split}
 \end{align}
 
 \section{The Work-Energy Theorem}
 \begin{align}
-    \dot{T} = \frac{1}{2}m\dot{\mathbf{v}}_C\cdot\mathbf{v}_C+\frac{1}{2}m\mathbf{v}_C\cdot\dot{\mathbf{v}}_C+\frac{1}{2}\dot{\mathbf{H}}\cdot\bomega+\frac{1}{2}\mathbf{H}\cdot\dot{\bomega}.
+    \dot{T} = \frac{1}{2}m\dot{\mathbf{v}}_C\cdot\mathbf{v}_C+\frac{1}{2}m\mathbf{v}_C\cdot\dot{\mathbf{v}}_C+\frac{1}{2}\dot{\mathbf{H}}\cdot\boldsymbol{\omega}+\frac{1}{2}\mathbf{H}\cdot\dot{\boldsymbol{\omega}}.
 \end{align}
-We need to show that $\dot{\mathbf{H}}\cdot\bomega = \mathbf{H}\cdot\dot{\bomega}$.
+We need to show that $\dot{\mathbf{H}}\cdot\boldsymbol{\omega} = \mathbf{H}\cdot\dot{\boldsymbol{\omega}}$.
 \begin{align}
     \begin{split}
-        \balpha = \dot{\bomega} &= \frac{d}{dt}(\omega_x\mathbf{e}_x+\omega_y\mathbf{e}_y+\omega_z\mathbf{e}_z)\\
+        \boldsymbol{\alpha} = \dot{\boldsymbol{\omega}} &= \frac{d}{dt}(\omega_x\mathbf{e}_x+\omega_y\mathbf{e}_y+\omega_z\mathbf{e}_z)\\
         &= \dot{\omega}_x\mathbf{e}_x+\dot{\omega}_y\mathbf{e}_y+\dot{\omega}_z\mathbf{e}_z+\omega_x\dot{\mathbf{e}}_x+\omega_y\dot{\mathbf{e}}_y+\omega_z\dot{\mathbf{e}}_z\\
-        &= \dot{\omega}_x\mathbf{e}_x+\dot{\omega}_y\mathbf{e}_y+\dot{\omega}_z\mathbf{e}_z+\bomega\times(\omega_x\mathbf{e}_x+\omega_y\mathbf{e}_y+\omega_z\mathbf{e}_z)\\
+        &= \dot{\omega}_x\mathbf{e}_x+\dot{\omega}_y\mathbf{e}_y+\dot{\omega}_z\mathbf{e}_z+\boldsymbol{\omega}\times(\omega_x\mathbf{e}_x+\omega_y\mathbf{e}_y+\omega_z\mathbf{e}_z)\\
         &= \dot{\omega}_x\mathbf{e}_x+\dot{\omega}_y\mathbf{e}_y+\dot{\omega}_z\mathbf{e}_z.
     \end{split}
 \end{align}
 
-Another direct calculation using this expression for $\balpha$ shows that
+Another direct calculation using this expression for $\boldsymbol{\alpha}$ shows that
 \begin{align}
     \begin{split}
-        \mathbf{H}^C\cdot\dot{\bomega} = (I_{xx}\omega_x+I_{xy}\omega_y+I_{xz}\omega_z)\dot{\omega}_x+(I_{xy}\omega_x+I_{yy}\omega_y+I_{yz}\omega_z)\dot{\omega}_y+(I_{xz}\omega_x+I_{yz}\omega_y+I_{zz}\omega_z)\dot{\omega}_z.
+        \mathbf{H}^C\cdot\dot{\boldsymbol{\omega}} = (I_{xx}\omega_x+I_{xy}\omega_y+I_{xz}\omega_z)\dot{\omega}_x+(I_{xy}\omega_x+I_{yy}\omega_y+I_{yz}\omega_z)\dot{\omega}_y+(I_{xz}\omega_x+I_{yz}\omega_y+I_{zz}\omega_z)\dot{\omega}_z.
     \end{split}
 \end{align}
 
-Comparing this to the corresponding expression for $\dot{H}^C\cdot\bomega$, we find that they are equal. Consequently,
+Comparing this to the corresponding expression for $\dot{H}^C\cdot\boldsymbol{\omega}$, we find that they are equal. Consequently,
 \begin{align}
-    \dot{T} = \frac{1}{2}m\dot{\mathbf{v}}_C\cdot\mathbf{v}_C+\frac{1}{2}m\mathbf{v}_C\cdot\dot{\mathbf{v}}_C+\frac{1}{2}\dot{\mathbf{H}}\cdot\bomega+\frac{1}{2}\dot{\mathbf{H}}\cdot\bomega.
+    \dot{T} = \frac{1}{2}m\dot{\mathbf{v}}_C\cdot\mathbf{v}_C+\frac{1}{2}m\mathbf{v}_C\cdot\dot{\mathbf{v}}_C+\frac{1}{2}\dot{\mathbf{H}}\cdot\boldsymbol{\omega}+\frac{1}{2}\dot{\mathbf{H}}\cdot\boldsymbol{\omega}.
 \end{align}
 This result implies that
 \begin{align}
-    \dot{T} = m\dot{\mathbf{v}}_C\cdot\mathbf{v}_C+\dot{\mathbf{H}}\cdot\bomega.
+    \dot{T} = m\dot{\mathbf{v}}_C\cdot\mathbf{v}_C+\dot{\mathbf{H}}\cdot\boldsymbol{\omega}.
 \end{align}
 Invoking the balance of linear momentum and the balance of angular momentum, we obtain the work-energy theorem:
 \begin{align}
-    \dot{T} = \mathbf{F}\cdot\mathbf{v}_C+\mathbf{M}\cdot\bomega.
+    \dot{T} = \mathbf{F}\cdot\mathbf{v}_C+\mathbf{M}\cdot\boldsymbol{\omega}.
 \end{align}
 You should notice how this is a natural extension of the work-energy theorem for a single particle. We can then integrate these expressions of the work-energy theorem to get equation (\ref{eq:work-energy-theorem-RB}).
 
@@ -141,15 +141,15 @@ Recall,
 \end{align}
 Hence, the mechanical power of the resultant forces and moments can be written as
 \begin{align}
-    \mathbf{F}\cdot\mathbf{v}_C+\mathbf{M}^C\cdot\bomega = \lp\sum_{i=1}^K\mathbf{F}_i\rp\cdot\mathbf{v}_C+\mathbf{M}_e\cdot\bomega+\lp \sum_{i=1}^K(\mathbf{x}_i-\mathbf{x}_C)\times\mathbf{F}_i\rp\cdot\bomega
+    \mathbf{F}\cdot\mathbf{v}_C+\mathbf{M}^C\cdot\boldsymbol{\omega} = \left(\sum_{i=1}^K\mathbf{F}_i\right)\cdot\mathbf{v}_C+\mathbf{M}_e\cdot\boldsymbol{\omega}+\left(\sum_{i=1}^K(\mathbf{x}_i-\mathbf{x}_C)\times\mathbf{F}_i\right)\cdot\boldsymbol{\omega}
 \end{align}
-With some minor manipulations involving the identity $\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c}) = \mathbf{c}\cdot(\mathbf{a}\times\mathbf{b})$ and noting that $\mathbf{v}_i = \mathbf{v}_C+\bomega\times(\mathbf{x}_i-\mathbf{x}_C)$, we find that
+With some minor manipulations involving the identity $\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c}) = \mathbf{c}\cdot(\mathbf{a}\times\mathbf{b})$ and noting that $\mathbf{v}_i = \mathbf{v}_C+\boldsymbol{\omega}\times(\mathbf{x}_i-\mathbf{x}_C)$, we find that
 \begin{align}
-    \mathbf{F}\cdot\mathbf{v}_C+\mathbf{M}\cdot\bomega = \sum_{i=1}^K\mathbf{F}_i\cdot\mathbf{v}_i+\mathbf{M}_e\cdot\bomega.
+    \mathbf{F}\cdot\mathbf{v}_C+\mathbf{M}\cdot\boldsymbol{\omega} = \sum_{i=1}^K\mathbf{F}_i\cdot\mathbf{v}_i+\mathbf{M}_e\cdot\boldsymbol{\omega}.
 \end{align}
 In conclusion, we have an alternative form of the work-energy theorem that proves to be far easier to use in applications:
 \begin{align}
-    \dot{T} = \sum_{i=1}^K\mathbf{F}_i\cdot\mathbf{v}_i+\mathbf{M}_e\cdot\bomega.
+    \dot{T} = \sum_{i=1}^K\mathbf{F}_i\cdot\mathbf{v}_i+\mathbf{M}_e\cdot\boldsymbol{\omega}.
 \end{align}
 
 \subsection{Example: A bar of length $\ell$ and mass $m$ pendulum fixed at its end}
@@ -241,18 +241,18 @@ The torsional spring with stiffness $K$ creates a couple
 \end{align}
 The power of the couple is
 \begin{align}
-    \mathbf{M}_S\cdot\bomega = -K\theta\dot{\theta} = -\frac{d}{dt}\lp K\frac{\dot{\theta}^2}{2} \rp.
+    \mathbf{M}_S\cdot\boldsymbol{\omega} = -K\theta\dot{\theta} = -\frac{d}{dt}\left( K\frac{\dot{\theta}^2}{2} \right).
 \end{align}
 Hence, $U = \frac{1}{2}K\dot{\theta}^2$ for the torsional spring.
 
 A constant couple $\mathbf{M}_e = M_e\mathbf{E}_Z$ is also conservative. 
 Its power is
 \begin{align}
-    \mathbf{M}_e\cdot\bomega = M_e\dot{\theta} = -\frac{d}{dt}(-M_e\theta).
+    \mathbf{M}_e\cdot\boldsymbol{\omega} = M_e\dot{\theta} = -\frac{d}{dt}(-M_e\theta).
 \end{align}
 Hence, $U = -M_e\theta$ for a constant couple.
 
-Note. This only works for $\bomega = \omega\mathbf{E}_z$. Constant couples are not conservative in general.
+Note. This only works for $\boldsymbol{\omega} = \omega\mathbf{E}_z$. Constant couples are not conservative in general.
 
 \newpage
 \section{Impact Problems / Center of Percussion}
@@ -275,4 +275,3 @@ Consider a projectile fired at a pendulum in the horizontal plane (no gravity). 
 \end{figure}
 
 If $x$ is big enough, the horizontal component of reaction force at $O$ will point to the left. If $x$ is small enough, the horizontal component of the reaction force at $O$ will point to the right. Somewhere in between, the reaction force at $O$ will be minimized. This optimal location $x$ is called the center of percussion.
-
