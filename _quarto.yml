@@ -22,6 +22,7 @@ book:
       chapters: 
         - rigid_body_dynamics/rigid_body_kinematics.qmd
         - rigid_body_dynamics/rigid_body_kinetics.qmd
+        - rigid_body_dynamics/work_energy_theorem.qmd
     - summary.qmd
     - references.qmd
 
