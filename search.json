@@ -21,68 +21,156 @@
     ]
   },
   {
+    "objectID": "system_of_particles/system_of_particles.html",
+    "href": "system_of_particles/system_of_particles.html",
+    "title": "2  System of Particles",
+    "section": "",
+    "text": "2.1 Center of Mass\nIn this chapter, we will define analogous quantities for the system. Also, starting the balance law for each individual particle, we’ll write the balance law for the system.\nIn the previous exercise, we used \\[\\begin{equation}\n    \\mathbf r_{C/A} = \\frac{\\sum m_i \\mathbf r_{i/A}}{\\sum m_i}.\n\\end{equation}\\]\nDifferentiating the expression for the position vector of the mass center, we get \\[\\begin{align}\n    \\mathbf{v}_C = \\frac{1}{m}\\sum_{k=1}^nm_k\\mathbf{v}_k = \\frac{1}{m}\\sum_{k=1}^n\\mathbf{G}_k.\n\\end{align}\\] Notice that the velocity of the center of mass is the weighted sum of the velocities of the particles.",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
+    "objectID": "system_of_particles/system_of_particles.html#center-of-mass",
+    "href": "system_of_particles/system_of_particles.html#center-of-mass",
+    "title": "2  System of Particles",
+    "section": "",
+    "text": "NoteThink!\n\n\n\nQuestion: What is the position vector of the center of mass of a system of multiple particles?\nAnswer:\nThe center of mass \\(C\\) of a system of particles is defined to have position vector\n\\[\\begin{align}\n    \\mathbf{r}_C = \\frac{1}{m}\\sum_{k=1}^n m_k\\mathbf{r}_k,\n\\end{align}\\]\nwhere\n\\[\\begin{align}\n    m = \\sum_{k=1}^n m_k\n\\end{align}\\]\nis the total mass of the system of particles.\n\n\n\n\n\n\n\n\nWarningExample\n\n\n\nQuestion: Consider the unsymmetrical dumbbell depicted in the figure below. Particle 1 of mass \\(m\\) and particle 2 of mass \\(3m\\) are connected by a massless rigid rod.\n\n\n\nUnsymmetrical dumbbell\n\n\nwhere\n\\[\\begin{align*}\n    \\mathbf{r}_1 &= \\mathbf{E}_x+\\mathbf{E}_y,\\\\\n    \\mathbf{r}_2 &= 2\\mathbf{E}_x.\n\\end{align*}\\]\nCalculate \\(\\mathbf{r}_C\\), the position vector of the center of mass \\(C\\) of \\(m_1\\) and \\(m_2\\). Is \\(C\\) located on the dumbbell?\nAnswer:\n\\[\\begin{align*}\n    \\mathbf{r}_C = \\frac{m\\mathbf{r}_1+3m\\mathbf{r}_2}{m+3m} = \\, ...\n\\end{align*}\\]\nWe can check mathematically that \\(C\\) lies on the line connecting \\(m_1\\) and \\(m_2\\) by calculating the equation of that line and checking whether \\(C\\) belongs to it.\nAlternatively, we can define a new basis, \\(\\{\\mathbf{u},\\mathbf{v}\\}\\), and calculate the position of \\(C\\) relative to \\(m_1\\) on that basis. This should be along \\(\\mathbf{u}\\).\n\n\n\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestions: Starting from \\[ \\mathbf r_C = \\frac{1}{m}\\sum_{k=1}^nm_k\\mathbf r_k, \\] show that \\[\\mathbf r_{C/A} = \\frac{\\sum m_i \\mathbf r_{i/A}}{\\sum m_i}.\\]\n\n\n\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestion: Show that the following identities are true. \\[\\begin{align}\n    \\begin{split}\n        \\sum_{k=1}^nm_k(\\mathbf{r}_C-\\mathbf{r}_k) = \\mathbf{0},\\\\\n        \\sum_{k=1}^nm_k(\\mathbf{v}_C-\\mathbf{v}_k) = \\mathbf{0}.\n    \\end{split}\n\\end{align}\\]",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
+    "objectID": "system_of_particles/system_of_particles.html#linear-momentum",
+    "href": "system_of_particles/system_of_particles.html#linear-momentum",
+    "title": "2  System of Particles",
+    "section": "2.2 Linear Momentum",
+    "text": "2.2 Linear Momentum\nThe linear momentum \\(\\mathbf{G}\\) of the system of particles is the sum of the linear momenta of the individual particles. \\[\\begin{align}\n    \\mathbf{G} = m\\frac{d\\mathbf{r}}{dt} = \\sum_{k=1}^n m_k\\frac{d\\mathbf{r}_k}{dt} = \\sum_{k=1}^n\\mathbf{G}_k.\n\\end{align}\\] The linear momentum of the center of mass is the linear momentum of the system.",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
+    "objectID": "system_of_particles/system_of_particles.html#angular-momentum",
+    "href": "system_of_particles/system_of_particles.html#angular-momentum",
+    "title": "2  System of Particles",
+    "section": "2.3 Angular Momentum",
+    "text": "2.3 Angular Momentum\nThe angular momentum \\(\\mathbf{H}^P\\) of the system of particles relative to a point \\(P\\), whose position vector relative to \\(O\\) is \\(\\mathbf{r}_P\\), is the sum of the individual angular momenta: \\[\\begin{align}\n    \\begin{split}\n        \\mathbf{H}^P &= \\sum_{k=1}^n\\mathbf{H}^{P_K} = \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_P)\\times m_k\\mathbf{v}_k\\\\\n        &= \\mathbf{H}^C + (\\mathbf{r}_C-\\mathbf{r}_P)\\times \\mathbf{G}.\n    \\end{split}\n\\end{align}\\] where \\[\\begin{align}\n    \\begin{split}\n        \\mathbf{H}^C &= \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_C)\\times m_k\\mathbf{v}_k\\\\\n        &= \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_C)\\times m_k(\\mathbf{v}_k-\\mathbf{v}_C).\n    \\end{split}\n\\end{align}\\]\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestion: Show that \\[\\begin{align}\n    \\begin{split}\n        \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_P)\\times m_k\\mathbf{v}_k = \\mathbf{H}^C + (\\mathbf{r}_C-\\mathbf{r}_P)\\times \\mathbf{G}.\n    \\end{split}\n\\end{align}\\]\nHint: Introduce \\(\\mathbf{r}-\\mathbf{r}\\).\n\n\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestion: Show that \\[\\begin{align}\n    \\begin{split}\n        \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_C)\\times m_k\\mathbf{v}_k = \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_C)\\times m_k(\\mathbf{v}_k-\\mathbf{v}_C).\n    \\end{split}\n\\end{align}\\]\nHint: introduce \\(\\mathbf{v}_C-\\mathbf{v}_C\\).",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
+    "objectID": "system_of_particles/system_of_particles.html#kinetic-energy",
+    "href": "system_of_particles/system_of_particles.html#kinetic-energy",
+    "title": "2  System of Particles",
+    "section": "2.4 Kinetic Energy",
+    "text": "2.4 Kinetic Energy\nThe kinetic energy \\(T\\) of the system of particles is defined to be the sum of their individual kinetic energies: \\[\\begin{align}\n    T = \\sum_{k=1}^nT_k = \\sum_{k=1}^n\\frac{1}{2}m_k\\mathbf{v}_k\\cdot\\mathbf{v}_k.\n\\end{align}\\]\nIn general, the kinetic energy of the system is not equal to the kinetic energy of the center of mass.\nUsing the center of mass, \\[\\begin{align}\n    T = \\frac{1}{2}m\\mathbf{v}_C\\cdot\\mathbf{v}_C + \\frac{1}{2}\\sum_{k=1}^nm_k(\\mathbf{v}_k-\\mathbf{v}_C)\\cdot(\\mathbf{v}_k-\\mathbf{v}_C).\n\\end{align}\\]\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestion: Show that \\[\\begin{align}\n    \\begin{split}\n        \\sum_{k=1}^n\\frac{1}{2}m_k\\mathbf{v}_k\\cdot\\mathbf{v}_k = \\frac{1}{2}m\\mathbf{v}_C\\cdot\\mathbf{v}_C + \\frac{1}{2}\\sum_{k=1}^nm_k(\\mathbf{v}_k-\\mathbf{v}_C)\\cdot(\\mathbf{v}_k-\\mathbf{v}_C).\n    \\end{split}\n\\end{align}\\]\nHint: Add \\(\\mathbf{v}_C-\\mathbf{v}_C\\) to the previous for both \\(\\mathbf{v}_k\\) terms.",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
+    "objectID": "system_of_particles/system_of_particles.html#kinetics-of-a-system-of-particles-linear-momentum",
+    "href": "system_of_particles/system_of_particles.html#kinetics-of-a-system-of-particles-linear-momentum",
+    "title": "2  System of Particles",
+    "section": "2.5 Kinetics of a System of Particles: Linear Momentum",
+    "text": "2.5 Kinetics of a System of Particles: Linear Momentum\nFor each particle \\[\\begin{align}\n    \\mathbf{F}_i = m_i\\mathbf{a}_i.\n\\end{align}\\] Adding these \\(n\\) equations together and using the definition of the center of mass \\[\\begin{align}\n    \\mathbf{F} = m\\mathbf{a}_c\n\\end{align}\\] \\[\\begin{align}\n    \\mathbf{F} = \\sum_{k=1}^n\\mathbf{F}_k.\n\\end{align}\\] :::\nExample: Monkey problems from the problem set.\n\n\n\n\n\n\nImportantNote!\n\n\n\nThe conditions for the conservation of linear momentum of a system of particles completely or along a certain direction are analogous to those of a single particle established earlier.",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
+    "objectID": "system_of_particles/system_of_particles.html#kinetics-of-a-system-of-particles-angular-momentum",
+    "href": "system_of_particles/system_of_particles.html#kinetics-of-a-system-of-particles-angular-momentum",
+    "title": "2  System of Particles",
+    "section": "2.6 Kinetics of a System of Particles: Angular Momentum",
+    "text": "2.6 Kinetics of a System of Particles: Angular Momentum\nStarting from \\[\\begin{align}\n    \\begin{split}\n        \\mathbf{H}^P &= \\sum_{k=1}^n\\mathbf{H}^{P_K} = \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_P)\\times m_k\\mathbf{v}_k.\n    \\end{split}\n\\end{align}\\]\nThe derivative \\(\\dot{\\mathbf{H}}^P\\) simplifies to \\[\\begin{align}\n    \\dot{\\mathbf{H}}^P = \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_P)\\times\\mathbf{F}_k-\\mathbf{v}_P\\times\\mathbf{G}.\n\\end{align}\\] The resultant moment of the system of forces relative to \\(P\\) is \\[\\begin{align}\n    \\mathbf{M}^P = \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_P)\\times\\mathbf{F}_k.\n\\end{align}\\] The angular momentum theorem becomes \\[\\begin{align}\n    \\dot{\\mathbf{H}}^P = \\mathbf{M}^P-\\mathbf{v}_P\\times\\mathbf{G}.\n\\end{align}\\] It is very important to notice that \\(\\dot{\\mathbf{H}}^P\\) is not necessarily equal to \\(\\mathbf{M}^P\\).\nTwo important special cases of the angular momentum theorem:\n\n\n\n\n\n\nImportantNote!\n\n\n\nThe conditions for the conservations of angular momentum of a system of particles completely or along a certain direction are analogous to those of a single particle established earlier.",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
+    "objectID": "system_of_particles/system_of_particles.html#work-energy-theorem",
+    "href": "system_of_particles/system_of_particles.html#work-energy-theorem",
+    "title": "2  System of Particles",
+    "section": "2.7 Work-Energy Theorem",
+    "text": "2.7 Work-Energy Theorem\nThe work-energy theorem and the energy conservation for a system of particles are then \\[\\begin{align}\n    \\dot{T} = \\sum_{k=1}^n\\mathbf{F}_k\\cdot\\mathbf{v}_k,\n\\end{align}\\] and \\[\\begin{align}\n    \\dot{E} = \\sum_{k=1}^n\\mathbf{F}_{nc_k}\\cdot\\mathbf{v}_K\n\\end{align}\\] where \\(\\mathbf{F}_{nc_k}\\) is the nonconservative force acting on the \\(k\\)th particle and \\(E\\) is the total energy of the system of particles.\nIntegrating with respect to time, we get \\[\\begin{align}\n    \\begin{split}\n        T(t_2)-T(t_1) = \\sum_{k=1}^n W_{\\mathbf{F}_k,12}\n    \\end{split}\n\\end{align}\\] where the work of force \\(\\mathbf{F}_k\\) is \\[\\begin{align}\n    \\begin{split}\n        W_{\\mathbf{F}_k,12} = \\int_{t_1}^{t_2} \\mathbf{F}_k\\cdot\\mathbf{v}_kdt = \\int_{\\mathbf{r}(t_1)}^{\\mathbf{r}(t_2)}\\mathbf{F}_k d\\mathbf{r}_k.\n    \\end{split}\n\\end{align}\\]\n\n\n\n\n\n\nImportantNote!\n\n\n\nThe work of the force is the integral of the force dotted with the velocity of displacement of the point of application of the force.\n\n\n\n\n\n\n\n\nWarningExample\n\n\n\nQuestion: Consider the unsymmetrical dumbbell depicted in the figure below. Particle 1 of mass \\(m\\) and particle 2 of mass \\(3m\\) are connected by a massless rigid rod. The dumbbell is in motion in the smooth \\(\\{\\mathbf{E}_x,\\mathbf{E}_y\\}\\) plane at gravity acts along \\(-\\mathbf{E}_z\\).\n\n\n\n\n\nwhere \\[\\begin{align*}\n    \\mathbf{r}_1 &= \\mathbf{E}_x+\\mathbf{E}_y,\\\\\n    \\mathbf{r}_2 &= 2\\mathbf{E}_x.\n\\end{align*}\\]\nIs the energy of the dumbbell conserved throughout its motion?\nAnswer: Drawing the free body diagram of both masses, we get …",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
     "objectID": "rigid_body_dynamics/rigid_body_kinematics.html",
     "href": "rigid_body_dynamics/rigid_body_kinematics.html",
-    "title": "2  Kinematics of Soft Robots",
+    "title": "3  Kinematics of Soft Robots",
     "section": "",
-    "text": "3 Overview\nThis chapter covers the geometric representation of deformable structures.",
+    "text": "4 Overview\nThis chapter covers the geometric representation of deformable structures.",
     "crumbs": [
       "Rigid Body Dynamics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Kinematics of Soft Robots</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Kinematics of Soft Robots</span>"
     ]
   },
   {
     "objectID": "rigid_body_dynamics/rigid_body_kinematics.html#discrete-elastic-rods",
     "href": "rigid_body_dynamics/rigid_body_kinematics.html#discrete-elastic-rods",
-    "title": "2  Kinematics of Soft Robots",
-    "section": "3.1 Discrete Elastic Rods",
-    "text": "3.1 Discrete Elastic Rods\nHere we discuss the DER framework and its application to line contact.\n\n3.1.1 Degrees of Freedom\nDetails on the nodal coordinates…",
+    "title": "3  Kinematics of Soft Robots",
+    "section": "4.1 Discrete Elastic Rods",
+    "text": "4.1 Discrete Elastic Rods\nHere we discuss the DER framework and its application to line contact.\n\n4.1.1 Degrees of Freedom\nDetails on the nodal coordinates…",
     "crumbs": [
       "Rigid Body Dynamics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Kinematics of Soft Robots</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Kinematics of Soft Robots</span>"
     ]
   },
   {
     "objectID": "rigid_body_dynamics/rigid_body_kinematics.html#symbolic-formulations",
     "href": "rigid_body_dynamics/rigid_body_kinematics.html#symbolic-formulations",
-    "title": "2  Kinematics of Soft Robots",
-    "section": "3.2 Symbolic Formulations",
-    "text": "3.2 Symbolic Formulations\nUsing symbolic math to derive equations of motion.",
+    "title": "3  Kinematics of Soft Robots",
+    "section": "4.2 Symbolic Formulations",
+    "text": "4.2 Symbolic Formulations\nUsing symbolic math to derive equations of motion.",
     "crumbs": [
       "Rigid Body Dynamics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Kinematics of Soft Robots</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Kinematics of Soft Robots</span>"
     ]
   },
   {
     "objectID": "rigid_body_dynamics/rigid_body_kinetics.html",
     "href": "rigid_body_dynamics/rigid_body_kinetics.html",
-    "title": "3  Rigid Body Kinetics",
+    "title": "4  Rigid Body Kinetics",
     "section": "",
-    "text": "\\[\n\\mathbf{r}_{P/O} = \\mathbf{r}_{G/O} + \\mathbf{r}_{P/G}\n\\tag{3.1}\\]\nThe relative position vector is defined in Equation 3.1.",
+    "text": "\\[\n\\mathbf{r}_{P/O} = \\mathbf{r}_{G/O} + \\mathbf{r}_{P/G}\n\\tag{4.1}\\]\nThe relative position vector is defined in Equation 4.1.",
     "crumbs": [
       "Rigid Body Dynamics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Rigid Body Kinetics</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Rigid Body Kinetics</span>"
     ]
   },
   {
     "objectID": "rigid_body_dynamics/work_energy_theorem.html",
     "href": "rigid_body_dynamics/work_energy_theorem.html",
-    "title": "4  Work Energy Theorem",
+    "title": "5  Work Energy Theorem",
     "section": "",
     "text": "The Koenig decomposition for the kinetic energy of a rigid body is: \\[\\begin{align}\n    T = \\frac{1}{2}m\\mathbf{v}_C\\cdot\\mathbf{v}_C+\\frac{1}{2}\\mathbf{H}\\cdot\\boldsymbol{\\omega}.\n\\end{align}\\] In this class, \\(\\boldsymbol{\\omega} = \\omega \\mathbf{E}_z\\), \\(\\frac{1}{2}\\mathbf{H}\\cdot\\boldsymbol{\\omega} = \\frac{1}{2}I_{zz} w^2\\).\nIn the special case of a fixed point rotation about point \\(O\\), the kinetic energy becomes \\[\\begin{align}\n    T = \\frac{1}{2}\\mathbf{H}^O\\cdot\\boldsymbol{\\omega}.\n\\end{align}\\] which simplifies to \\(T = \\frac{1}{2}I^O_{zz} w^2\\) when \\(\\boldsymbol{\\omega} = \\omega\\mathbf{E}_z\\).\nThe work-energy theorem for a rigid body is: \\[\\begin{align}\n    \\frac{dT}{dt} = \\mathbf{F}\\cdot\\mathbf{v}_C+\\mathbf{M}\\cdot\\boldsymbol{\\omega} = \\sum_{i=1}^N\\mathbf{F}_i\\cdot\\mathbf{v}_i+\\mathbf{M}_e\\cdot\\boldsymbol{\\omega}.\n\\end{align}\\] Integrating the above expression with respect time between \\(t_A\\) and \\(t_B\\), we obtain \\[\\begin{align}\n    \\begin{split}\n        T_B-T_A = W_{\\mathbf{F},AB}+W_{\\mathbf{M},AB} = \\sum_{i=1}^N W_{\\mathbf{F}_i,AB}+W_{\\mathbf{M}_e,AB},\n        \\label{eq:work-energy-theorem-RB}\n    \\end{split}\n\\end{align}\\] where the work of the forces and moments is calculates as follows: \\[\\begin{align}\n    \\begin{split}\n        W_{\\mathbf{F},AB} &= \\int_{t_A}^{t_B}\\mathbf{F}\\cdot\\mathbf{v}_Cdt,\\\\\n        W_{\\mathbf{M},AB} &= \\int_{t_A}^{t_B}\\mathbf{M}^C\\cdot\\boldsymbol{\\omega} dt,\\\\\n        W_{\\mathbf{F}_i,AB} &= \\int_{t_A}^{t_B}\\mathbf{F}_i\\cdot\\mathbf{v}_i dt,\\\\\n        W_{\\mathbf{M}_e,AB} &= \\int_{t_A}^{t_B}\\mathbf{M}_e\\cdot\\boldsymbol{\\omega} dt,\\\\\n    \\end{split}\n\\end{align}\\] Notice that in calculating the work of a force, we dot the force with the velocity of its point of application.\nAs in particles and systems of particles, this theorem can be used to establish conservation of the total energy of a rigid body during a motion.\nIn the following section, we derive these results.\nBy definition, the kinetic energy \\(T\\) of a rigid body is the (continuous) sum of the kinetic energies of the differential masses composing it: \\[\\begin{align}\n    T = \\frac{1}{2}\\int_{\\mathcal{R}}\\mathbf{v}\\cdot\\mathbf{v}\\rho dv.\n\\end{align}\\] We can introduce the \\(\\mathbf{v}_C\\) term through \\[\\begin{align}\n    \\begin{split}\n        & \\mathbf{v} = \\mathbf{v}_C+\\boldsymbol{\\omega}\\times\\boldsymbol{\\pi},\\\\\n        & \\boldsymbol{\\pi} = \\mathbf{r}-\\mathbf{r}_C,\\\\\n        & \\boldsymbol{\\omega} = \\omega_x\\mathbf{e}_x+\\omega_y\\mathbf{e}_y+\\omega_z\\mathbf{e}_z.\n    \\end{split}\n\\end{align}\\] Substituting the above expressions in the kinetic energy integral, we get \\[\\begin{align}\n    T = \\frac{1}{2}\\int_{\\mathcal{B}}\\left(\\mathbf{v}_C\\cdot\\mathbf{v}_C+2\\mathbf{v}_C\\cdot(\\boldsymbol{\\omega}\\times\\boldsymbol{\\pi})+(\\boldsymbol{\\omega}\\times\\boldsymbol{\\pi})\\cdot(\\boldsymbol{\\omega}\\times\\boldsymbol{\\pi})\\right) dm\n\\end{align}\\] For the first two terms in the above integral, \\[\\begin{align}\n    \\begin{split}\n        & \\frac{1}{2}\\int_{\\mathcal{B}}\\mathbf{v}_C\\cdot\\mathbf{v}_C dm = \\frac{\\mathbf{v}_C\\cdot\\mathbf{v}_C}{2}\\int dm = \\frac{1}{2}m\\mathbf{v}_C\\cdot\\mathbf{v}_C.\\\\\n        & \\int_{\\mathcal{B}}\\mathbf{v}_C\\cdot(\\boldsymbol{\\omega}\\times\\boldsymbol{\\pi})dm = \\mathbf{v}_C\\cdot\\left(\\boldsymbol{\\omega}\\times\\int\\pi dm \\right) = 0.\n    \\end{split}\n\\end{align}\\] Thus, \\[\\begin{align}\n    T = \\frac{1}{2}m\\mathbf{v}_C\\cdot\\mathbf{v}_C+\\frac{1}{2}\\int_{\\mathcal{B}}(\\boldsymbol{\\omega}\\times\\boldsymbol{\\pi})\\cdot(\\boldsymbol{\\omega}\\times\\boldsymbol{\\pi})dm\n\\end{align}\\] we can simplify \\[\\begin{align}\n    (\\boldsymbol{\\omega}\\times\\boldsymbol{\\pi})\\cdot(\\boldsymbol{\\omega}\\times\\boldsymbol{\\pi}) = ((\\boldsymbol{\\pi}\\cdot\\boldsymbol{\\pi})\\boldsymbol{\\omega}-(\\boldsymbol{\\pi}\\cdot\\boldsymbol{\\omega})\\cdot\\boldsymbol{\\pi}).\n\\end{align}\\] Recall that \\[\\begin{align}\n    \\mathbf{H}^C = \\int_{\\mathcal{B}}\\boldsymbol{\\pi}\\times(\\omega\\times\\boldsymbol{\\pi})dm = \\int_{\\mathcal{B}}((\\boldsymbol{\\pi}\\cdot\\boldsymbol{\\pi})\\boldsymbol{\\omega}-(\\boldsymbol{\\pi}\\cdot\\boldsymbol{\\omega})\\boldsymbol{\\pi})dm.\n\\end{align}\\] Hence, we obtain the Koenig decomposition: \\[\\begin{align}\n    T = \\frac{1}{2}m\\mathbf{v}_C\\cdot\\mathbf{v}_C+\\frac{1}{2}\\mathbf{H}\\cdot\\boldsymbol{\\omega}.\n\\end{align}\\]\nIn the case of fixed point rotation, \\(\\mathbf{v}_C = \\boldsymbol{\\omega}\\times(\\mathbf{r}_C-\\mathbf{r}_O)\\) and \\(\\mathbf{v}_O = 0\\), then \\[\\begin{align}\n    \\begin{split}\n        T &= \\frac{1}{2}\\mathbf{G}\\cdot(\\boldsymbol{\\omega}\\times\\mathbf{r}_{C/O})+\\frac{1}{2}\\mathbf{H}\\cdot\\boldsymbol{\\omega}\\\\\n        &= \\frac{1}{2}\\boldsymbol{\\omega}\\cdot(\\mathbf{r}_{C/O}\\times\\mathbf{G})+\\frac{1}{2}\\mathbf{H}^C\\cdot\\boldsymbol{\\omega}\\\\\n        &= \\frac{1}{2}(\\mathbf{r}_{C/O}\\times\\mathbf{G}+\\mathbf{H})\\cdot\\boldsymbol{\\omega}\\\\\n        &= \\frac{1}{2}\\mathbf{H}^O\\cdot\\boldsymbol{\\omega}.\n    \\end{split}\n\\end{align}\\]\n\\[\\begin{align}\n    \\dot{T} = \\frac{1}{2}m\\dot{\\mathbf{v}}_C\\cdot\\mathbf{v}_C+\\frac{1}{2}m\\mathbf{v}_C\\cdot\\dot{\\mathbf{v}}_C+\\frac{1}{2}\\dot{\\mathbf{H}}\\cdot\\boldsymbol{\\omega}+\\frac{1}{2}\\mathbf{H}\\cdot\\dot{\\boldsymbol{\\omega}}.\n\\end{align}\\] We need to show that \\(\\dot{\\mathbf{H}}\\cdot\\boldsymbol{\\omega} = \\mathbf{H}\\cdot\\dot{\\boldsymbol{\\omega}}\\). \\[\\begin{align}\n    \\begin{split}\n        \\boldsymbol{\\alpha} = \\dot{\\boldsymbol{\\omega}} &= \\frac{d}{dt}(\\omega_x\\mathbf{e}_x+\\omega_y\\mathbf{e}_y+\\omega_z\\mathbf{e}_z)\\\\\n        &= \\dot{\\omega}_x\\mathbf{e}_x+\\dot{\\omega}_y\\mathbf{e}_y+\\dot{\\omega}_z\\mathbf{e}_z+\\omega_x\\dot{\\mathbf{e}}_x+\\omega_y\\dot{\\mathbf{e}}_y+\\omega_z\\dot{\\mathbf{e}}_z\\\\\n        &= \\dot{\\omega}_x\\mathbf{e}_x+\\dot{\\omega}_y\\mathbf{e}_y+\\dot{\\omega}_z\\mathbf{e}_z+\\boldsymbol{\\omega}\\times(\\omega_x\\mathbf{e}_x+\\omega_y\\mathbf{e}_y+\\omega_z\\mathbf{e}_z)\\\\\n        &= \\dot{\\omega}_x\\mathbf{e}_x+\\dot{\\omega}_y\\mathbf{e}_y+\\dot{\\omega}_z\\mathbf{e}_z.\n    \\end{split}\n\\end{align}\\]\nAnother direct calculation using this expression for \\(\\boldsymbol{\\alpha}\\) shows that \\[\\begin{align}\n    \\begin{split}\n        \\mathbf{H}^C\\cdot\\dot{\\boldsymbol{\\omega}} = (I_{xx}\\omega_x+I_{xy}\\omega_y+I_{xz}\\omega_z)\\dot{\\omega}_x+(I_{xy}\\omega_x+I_{yy}\\omega_y+I_{yz}\\omega_z)\\dot{\\omega}_y+(I_{xz}\\omega_x+I_{yz}\\omega_y+I_{zz}\\omega_z)\\dot{\\omega}_z.\n    \\end{split}\n\\end{align}\\]\nComparing this to the corresponding expression for \\(\\dot{H}^C\\cdot\\boldsymbol{\\omega}\\), we find that they are equal. Consequently, \\[\\begin{align}\n    \\dot{T} = \\frac{1}{2}m\\dot{\\mathbf{v}}_C\\cdot\\mathbf{v}_C+\\frac{1}{2}m\\mathbf{v}_C\\cdot\\dot{\\mathbf{v}}_C+\\frac{1}{2}\\dot{\\mathbf{H}}\\cdot\\boldsymbol{\\omega}+\\frac{1}{2}\\dot{\\mathbf{H}}\\cdot\\boldsymbol{\\omega}.\n\\end{align}\\] This result implies that \\[\\begin{align}\n    \\dot{T} = m\\dot{\\mathbf{v}}_C\\cdot\\mathbf{v}_C+\\dot{\\mathbf{H}}\\cdot\\boldsymbol{\\omega}.\n\\end{align}\\] Invoking the balance of linear momentum and the balance of angular momentum, we obtain the work-energy theorem: \\[\\begin{align}\n    \\dot{T} = \\mathbf{F}\\cdot\\mathbf{v}_C+\\mathbf{M}\\cdot\\boldsymbol{\\omega}.\n\\end{align}\\] You should notice how this is a natural extension of the work-energy theorem for a single particle. We can then integrate these expressions of the work-energy theorem to get equation (\\(\\ref{eq:work-energy-theorem-RB}\\)).\nRecall, \\[\\begin{align}\n    \\begin{split}\n        & \\mathbf{F} = \\sum_{i=1}^K\\mathbf{F}_i\\\\\n        & \\mathbf{M}^C = \\mathbf{M}_e+\\sum_{i=1}^K(\\mathbf{r}_i-\\mathbf{r}_C)\\times\\mathbf{F}_i\n    \\end{split}\n\\end{align}\\] Hence, the mechanical power of the resultant forces and moments can be written as \\[\\begin{align}\n    \\mathbf{F}\\cdot\\mathbf{v}_C+\\mathbf{M}^C\\cdot\\boldsymbol{\\omega} = \\left(\\sum_{i=1}^K\\mathbf{F}_i\\right)\\cdot\\mathbf{v}_C+\\mathbf{M}_e\\cdot\\boldsymbol{\\omega}+\\left(\\sum_{i=1}^K(\\mathbf{x}_i-\\mathbf{x}_C)\\times\\mathbf{F}_i\\right)\\cdot\\boldsymbol{\\omega}\n\\end{align}\\] With some minor manipulations involving the identity \\(\\mathbf{a}\\cdot(\\mathbf{b}\\times\\mathbf{c}) = \\mathbf{c}\\cdot(\\mathbf{a}\\times\\mathbf{b})\\) and noting that \\(\\mathbf{v}_i = \\mathbf{v}_C+\\boldsymbol{\\omega}\\times(\\mathbf{x}_i-\\mathbf{x}_C)\\), we find that \\[\\begin{align}\n    \\mathbf{F}\\cdot\\mathbf{v}_C+\\mathbf{M}\\cdot\\boldsymbol{\\omega} = \\sum_{i=1}^K\\mathbf{F}_i\\cdot\\mathbf{v}_i+\\mathbf{M}_e\\cdot\\boldsymbol{\\omega}.\n\\end{align}\\] In conclusion, we have an alternative form of the work-energy theorem that proves to be far easier to use in applications: \\[\\begin{align}\n    \\dot{T} = \\sum_{i=1}^K\\mathbf{F}_i\\cdot\\mathbf{v}_i+\\mathbf{M}_e\\cdot\\boldsymbol{\\omega}.\n\\end{align}\\]\n\\[\\begin{align}\n    \\begin{split}\n        & U = -\\frac{mg\\ell}{2}\\cos(\\theta),\\\\\n        & E = \\frac{m\\ell^2}{6}\\dot{\\theta}^2-\\frac{mg\\ell}{2}\\cos(\\theta) = const.\n    \\end{split}\n\\end{align}\\]\n\\[\\begin{align}\n    & U = -\\frac{mg\\ell}{2}\\cos(\\theta)-m_e g\\ell\\cos(\\theta)\n\\end{align}\\]\n\n\\(\\mathbf{P}\\) is actively changing depending on what the configuration is.\nThis is a nonconservative system.\nMoments can also be conservative.\nA torsional spring is just a model for some kind of elasticity at the joint.\nThe torsional spring with stiffness \\(K\\) creates a couple \\[\\begin{align}\n    \\mathbf{M}_S = K\\theta(-\\mathbf{E}_Z)\n\\end{align}\\] The power of the couple is \\[\\begin{align}\n    \\mathbf{M}_S\\cdot\\boldsymbol{\\omega} = -K\\theta\\dot{\\theta} = -\\frac{d}{dt}\\left( K\\frac{\\dot{\\theta}^2}{2} \\right).\n\\end{align}\\] Hence, \\(U = \\frac{1}{2}K\\dot{\\theta}^2\\) for the torsional spring.\nA constant couple \\(\\mathbf{M}_e = M_e\\mathbf{E}_Z\\) is also conservative. Its power is \\[\\begin{align}\n    \\mathbf{M}_e\\cdot\\boldsymbol{\\omega} = M_e\\dot{\\theta} = -\\frac{d}{dt}(-M_e\\theta).\n\\end{align}\\] Hence, \\(U = -M_e\\theta\\) for a constant couple.\nNote. This only works for \\(\\boldsymbol{\\omega} = \\omega\\mathbf{E}_z\\). Constant couples are not conservative in general.\nFor rigid bodies, impact ideas are the same as in systems of particles,\n\nConsider a projectile fired at a pendulum in the horizontal plane (no gravity). What is \\(x\\) so that the reaction for at the pin is almost zero during impact.\nIf \\(x\\) is big enough, the horizontal component of reaction force at \\(O\\) will point to the left. If \\(x\\) is small enough, the horizontal component of the reaction force at \\(O\\) will point to the right. Somewhere in between, the reaction force at \\(O\\) will be minimized. This optimal location \\(x\\) is called the center of percussion.",
     "crumbs": [
       "Rigid Body Dynamics",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Work Energy Theorem</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Work Energy Theorem</span>"
     ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "5  Summary",
+    "title": "6  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
     ]
   }
 ]
