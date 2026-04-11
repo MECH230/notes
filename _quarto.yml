@@ -18,6 +18,9 @@ book:
       chapters:
         - preliminaries/active_learning.qmd
         # - preliminaries/notation.qmd
+    - part: "System of Particles"
+      chapters:
+        - system_of_particles/system_of_particles.qmd
     - part: "Rigid Body Dynamics"
       chapters: 
         - rigid_body_dynamics/rigid_body_kinematics.qmd

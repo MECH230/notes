@@ -9,7 +9,7 @@
 <meta name="author" content="Theresa Honein">
 <meta name="dcterms.date" content="2026-01-01">
 
-<title>4&nbsp; Rigid Body Kinetics</title>
+<title>2&nbsp; System of Particles</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -35,8 +35,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../rigid_body_dynamics/work_energy_theorem.html" rel="next">
-<link href="../rigid_body_dynamics/rigid_body_kinematics.html" rel="prev">
+<link href="../rigid_body_dynamics/rigid_body_kinematics.html" rel="next">
+<link href="../preliminaries/active_learning.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -116,7 +116,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html">Rigid Body Dynamics</a></li><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinetics.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Rigid Body Kinetics</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../system_of_particles/system_of_particles.html">System of Particles</a></li><li class="breadcrumb-item"><a href="../system_of_particles/system_of_particles.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">System of Particles</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -170,7 +170,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../system_of_particles/system_of_particles.html" class="sidebar-item-text sidebar-link">
+  <a href="../system_of_particles/system_of_particles.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">System of Particles</span></span></a>
   </div>
 </li>
@@ -193,7 +193,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../rigid_body_dynamics/rigid_body_kinetics.html" class="sidebar-item-text sidebar-link active">
+  <a href="../rigid_body_dynamics/rigid_body_kinetics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Rigid Body Kinetics</span></span></a>
   </div>
 </li>
@@ -222,15 +222,27 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#center-of-mass" id="toc-center-of-mass" class="nav-link active" data-scroll-target="#center-of-mass"><span class="header-section-number">2.1</span> Center of Mass</a></li>
+  <li><a href="#linear-momentum" id="toc-linear-momentum" class="nav-link" data-scroll-target="#linear-momentum"><span class="header-section-number">2.2</span> Linear Momentum</a></li>
+  <li><a href="#angular-momentum" id="toc-angular-momentum" class="nav-link" data-scroll-target="#angular-momentum"><span class="header-section-number">2.3</span> Angular Momentum</a></li>
+  <li><a href="#kinetic-energy" id="toc-kinetic-energy" class="nav-link" data-scroll-target="#kinetic-energy"><span class="header-section-number">2.4</span> Kinetic Energy</a></li>
+  <li><a href="#kinetics-of-a-system-of-particles-linear-momentum" id="toc-kinetics-of-a-system-of-particles-linear-momentum" class="nav-link" data-scroll-target="#kinetics-of-a-system-of-particles-linear-momentum"><span class="header-section-number">2.5</span> Kinetics of a System of Particles: Linear Momentum</a></li>
+  <li><a href="#kinetics-of-a-system-of-particles-angular-momentum" id="toc-kinetics-of-a-system-of-particles-angular-momentum" class="nav-link" data-scroll-target="#kinetics-of-a-system-of-particles-angular-momentum"><span class="header-section-number">2.6</span> Kinetics of a System of Particles: Angular Momentum</a></li>
+  <li><a href="#work-energy-theorem" id="toc-work-energy-theorem" class="nav-link" data-scroll-target="#work-energy-theorem"><span class="header-section-number">2.7</span> Work-Energy Theorem</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html">Rigid Body Dynamics</a></li><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinetics.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Rigid Body Kinetics</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../system_of_particles/system_of_particles.html">System of Particles</a></li><li class="breadcrumb-item"><a href="../system_of_particles/system_of_particles.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">System of Particles</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Rigid Body Kinetics</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">System of Particles</span></h1>
 </div>
 
 
@@ -259,14 +271,296 @@ window.Quarto = {
 </header>
 
 
-<p><span id="eq-relative-pos"><span class="math display">\[
-\mathbf{r}_{P/O} = \mathbf{r}_{G/O} + \mathbf{r}_{P/G}
-\tag{4.1}\]</span></span></p>
-<p>The relative position vector is defined in <a href="#eq-relative-pos" class="quarto-xref">Equation&nbsp;<span>4.1</span></a>.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yxvqLBHZfXk?si=wg9cNWnssxdNyC0G" title="YouTube video" frameborder="0" allowfullscreen="">
-</iframe>
+<p><img src="../images/SOP_1.png" class="img-fluid"></p>
+Consider a system of <span class="math inline">\(n\)</span> particles. A typical particle has
+<p>In this chapter, we will define analogous quantities for the system. Also, starting the balance law for each individual particle, we’ll write the balance law for the system.</p>
+<section id="center-of-mass" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="center-of-mass"><span class="header-section-number">2.1</span> Center of Mass</h2>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> What is the position vector of the center of mass of a system of multiple particles?</p>
+<p><strong>Answer:</strong></p>
+<p>The center of mass <span class="math inline">\(C\)</span> of a system of particles is defined to have position vector</p>
+<p><span class="math display">\[\begin{align}
+    \mathbf{r}_C = \frac{1}{m}\sum_{k=1}^n m_k\mathbf{r}_k,
+\end{align}\]</span></p>
+<p>where</p>
+<p><span class="math display">\[\begin{align}
+    m = \sum_{k=1}^n m_k
+\end{align}\]</span></p>
+<p>is the total mass of the system of particles.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Consider the unsymmetrical dumbbell depicted in the figure below. Particle 1 of mass <span class="math inline">\(m\)</span> and particle 2 of mass <span class="math inline">\(3m\)</span> are connected by a massless rigid rod.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/SOP_2.png" class="img-fluid figure-img" style="width:30.0%"></p>
+<figcaption>Unsymmetrical dumbbell</figcaption>
+</figure>
+</div>
+<p>where</p>
+<p><span class="math display">\[\begin{align*}
+    \mathbf{r}_1 &amp;= \mathbf{E}_x+\mathbf{E}_y,\\
+    \mathbf{r}_2 &amp;= 2\mathbf{E}_x.
+\end{align*}\]</span></p>
+<p>Calculate <span class="math inline">\(\mathbf{r}_C\)</span>, the position vector of the center of mass <span class="math inline">\(C\)</span> of <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span>. Is <span class="math inline">\(C\)</span> located on the dumbbell?</p>
+<p><strong>Answer:</strong></p>
+<p><span class="math display">\[\begin{align*}
+    \mathbf{r}_C = \frac{m\mathbf{r}_1+3m\mathbf{r}_2}{m+3m} = \, ...
+\end{align*}\]</span></p>
+<p>We can check mathematically that <span class="math inline">\(C\)</span> lies on the line connecting <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> by calculating the equation of that line and checking whether <span class="math inline">\(C\)</span> belongs to it.</p>
+<p>Alternatively, we can define a new basis, <span class="math inline">\(\{\mathbf{u},\mathbf{v}\}\)</span>, and calculate the position of <span class="math inline">\(C\)</span> relative to <span class="math inline">\(m_1\)</span> on that basis. This should be along <span class="math inline">\(\mathbf{u}\)</span>.</p>
+</div>
+</div>
+<p>In the previous exercise, we used <span class="math display">\[\begin{equation}
+    \mathbf r_{C/A} = \frac{\sum m_i \mathbf r_{i/A}}{\sum m_i}.
+\end{equation}\]</span></p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Questions:</strong> Starting from <span class="math display">\[ \mathbf r_C = \frac{1}{m}\sum_{k=1}^nm_k\mathbf r_k, \]</span> show that <span class="math display">\[\mathbf r_{C/A} = \frac{\sum m_i \mathbf r_{i/A}}{\sum m_i}.\]</span></p>
+</div>
+</div>
+<p>Differentiating the expression for the position vector of the mass center, we get <span class="math display">\[\begin{align}
+    {\bf v}_C = \frac{1}{m}\sum_{k=1}^nm_k{\bf v}_k = \frac{1}{m}\sum_{k=1}^n{\bf G}_k.
+\end{align}\]</span> Notice that the velocity of the center of mass is the weighted sum of the velocities of the particles.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Show that the following identities are true. <span class="math display">\[\begin{align}
+    \begin{split}
+        \sum_{k=1}^nm_k({\bf r}_C-{\bf r}_k) = {\bf 0},\\
+        \sum_{k=1}^nm_k({\bf v}_C-{\bf v}_k) = {\bf 0}.
+    \end{split}
+\end{align}\]</span></p>
+</div>
+</div>
+</section>
+<section id="linear-momentum" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="linear-momentum"><span class="header-section-number">2.2</span> Linear Momentum</h2>
+<p>The linear momentum <span class="math inline">\({\bf G}\)</span> of the system of particles is the sum of the linear momenta of the individual particles. <span class="math display">\[\begin{align}
+    {\bf G} = m\frac{d{\bf r}}{dt} = \sum_{k=1}^n m_k\frac{d{\bf r}_k}{dt} = \sum_{k=1}^n{\bf G}_k.
+\end{align}\]</span> The linear momentum of the center of mass is the linear momentum of the system.</p>
+</section>
+<section id="angular-momentum" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="angular-momentum"><span class="header-section-number">2.3</span> Angular Momentum</h2>
+<p>The angular momentum <span class="math inline">\({\bf H}^P\)</span> of the system of particles relative to a point <span class="math inline">\(P\)</span>, whose position vector relative to <span class="math inline">\(O\)</span> is <span class="math inline">\({\bf r}_P\)</span>, is the sum of the individual angular momenta: <span class="math display">\[\begin{align}
+    \begin{split}
+        {\bf H}^P &amp;= \sum_{k=1}^n{\bf H}^{P_K} = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k\\
+        &amp;= {\bf H}^C + ({\bf r}_C-{\bf r}_P)\times {\bf G}.
+    \end{split}
+\end{align}\]</span> where <span class="math display">\[\begin{align}
+    \begin{split}
+        {\bf H}^C &amp;= \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times m_k{\bf v}_k\\
+        &amp;= \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times m_k({\bf v}_k-{\bf v}_C).
+    \end{split}
+\end{align}\]</span></p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Show that <span class="math display">\[\begin{align}
+    \begin{split}
+        \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k = {\bf H}^C + ({\bf r}_C-{\bf r}_P)\times {\bf G}.
+    \end{split}
+\end{align}\]</span></p>
+<p>Hint: Introduce <span class="math inline">\({\bf r}-{\bf r}\)</span>.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Show that <span class="math display">\[\begin{align}
+    \begin{split}
+        \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times m_k{\bf v}_k = \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times m_k({\bf v}_k-{\bf v}_C).
+    \end{split}
+\end{align}\]</span></p>
+<p>Hint: introduce <span class="math inline">\({\bf v}_C-{\bf v}_C\)</span>.</p>
+</div>
+</div>
+</section>
+<section id="kinetic-energy" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="kinetic-energy"><span class="header-section-number">2.4</span> Kinetic Energy</h2>
+<p>The kinetic energy <span class="math inline">\(T\)</span> of the system of particles is defined to be the sum of their individual kinetic energies: <span class="math display">\[\begin{align}
+    T = \sum_{k=1}^nT_k = \sum_{k=1}^n\frac{1}{2}m_k{\bf v}_k\cdot{\bf v}_k.
+\end{align}\]</span></p>
+<p>In general, the kinetic energy of the system is not equal to the kinetic energy of the center of mass.</p>
+<p>Using the center of mass, <span class="math display">\[\begin{align}
+    T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C + \frac{1}{2}\sum_{k=1}^nm_k({\bf v}_k-{\bf v}_C)\cdot({\bf v}_k-{\bf v}_C).
+\end{align}\]</span></p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Show that <span class="math display">\[\begin{align}
+    \begin{split}
+        \sum_{k=1}^n\frac{1}{2}m_k{\bf v}_k\cdot{\bf v}_k = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C + \frac{1}{2}\sum_{k=1}^nm_k({\bf v}_k-{\bf v}_C)\cdot({\bf v}_k-{\bf v}_C).
+    \end{split}
+\end{align}\]</span></p>
+<p>Hint: Add <span class="math inline">\({\bf v}_C-{\bf v}_C\)</span> to the previous for both <span class="math inline">\({\bf v}_k\)</span> terms.</p>
+</div>
+</div>
+</section>
+<section id="kinetics-of-a-system-of-particles-linear-momentum" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="kinetics-of-a-system-of-particles-linear-momentum"><span class="header-section-number">2.5</span> Kinetics of a System of Particles: Linear Momentum</h2>
+<p>For each particle <span class="math display">\[\begin{align}
+    {\bf F}_i = m_i{\bf a}_i.
+\end{align}\]</span> Adding these <span class="math inline">\(n\)</span> equations together and using the definition of the center of mass <span class="math display">\[\begin{align}
+    {\bf F} = m{\bf a}_c
+\end{align}\]</span> <span class="math display">\[\begin{align}
+    {\bf F} = \sum_{k=1}^n{\bf F}_k.
+\end{align}\]</span> :::</p>
+<p>Example: Monkey problems from the problem set.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Note!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The conditions for the conservation of linear momentum of a system of particles completely or along a certain direction are analogous to those of a single particle established earlier.</p>
+</div>
+</div>
+</section>
+<section id="kinetics-of-a-system-of-particles-angular-momentum" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="kinetics-of-a-system-of-particles-angular-momentum"><span class="header-section-number">2.6</span> Kinetics of a System of Particles: Angular Momentum</h2>
+<p>Starting from <span class="math display">\[\begin{align}
+    \begin{split}
+        {\bf H}^P &amp;= \sum_{k=1}^n{\bf H}^{P_K} = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k.
+    \end{split}
+\end{align}\]</span></p>
+<p>The derivative <span class="math inline">\(\dot{\bf H}^P\)</span> simplifies to <span class="math display">\[\begin{align}
+    \dot{\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times{\bf F}_k-{\bf v}_P\times{\bf G}.
+\end{align}\]</span> The resultant moment of the system of forces relative to <span class="math inline">\(P\)</span> is <span class="math display">\[\begin{align}
+    {\bf M}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times{\bf F}_k.
+\end{align}\]</span> The angular momentum theorem becomes <span class="math display">\[\begin{align}
+    \dot{\bf H}^P = {\bf M}^P-{\bf v}_P\times{\bf G}.
+\end{align}\]</span> It is very important to notice that <span class="math inline">\(\dot{\bf H}^P\)</span> is not necessarily equal to <span class="math inline">\({\bf M}^P\)</span>.</p>
+Two important special cases of the angular momentum theorem:
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Note!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The conditions for the conservations of angular momentum of a system of particles completely or along a certain direction are analogous to those of a single particle established earlier.</p>
+</div>
+</div>
+</section>
+<section id="work-energy-theorem" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="work-energy-theorem"><span class="header-section-number">2.7</span> Work-Energy Theorem</h2>
+<p>The work-energy theorem and the energy conservation for a system of particles are then <span class="math display">\[\begin{align}
+    \dot{T} = \sum_{k=1}^n{\bf F}_k\cdot{\bf v}_k,
+\end{align}\]</span> and <span class="math display">\[\begin{align}
+    \dot{E} = \sum_{k=1}^n{\bf F}_{nc_k}\cdot{\bf v}_K
+\end{align}\]</span> where <span class="math inline">\({\bf F}_{nc_k}\)</span> is the nonconservative force acting on the <span class="math inline">\(k\)</span>th particle and <span class="math inline">\(E\)</span> is the total energy of the system of particles.</p>
+<p>Integrating with respect to time, we get <span class="math display">\[\begin{align}
+    \begin{split}
+        T(t_2)-T(t_1) = \sum_{k=1}^n W_{{\bf F}_k,12}
+    \end{split}
+\end{align}\]</span> where the work of force <span class="math inline">\({\bf F}_k\)</span> is <span class="math display">\[\begin{align}
+    \begin{split}
+        W_{{\bf F}_k,12} = \int_{t_1}^{t_2} {\bf F}_k\cdot{\bf v}_kdt = \int_{{\bf r}(t_1)}^{{\bf r}(t_2)}{\bf F}_kd{\bf r}_k.
+    \end{split}
+\end{align}\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Note!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The work of the force is the integral of the force dotted with the velocity of displacement of the point of application of the force.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Consider the unsymmetrical dumbbell depicted in the figure below. Particle 1 of mass <span class="math inline">\(m\)</span> and particle 2 of mass <span class="math inline">\(3m\)</span> are connected by a massless rigid rod. The dumbbell is in motion in the smooth <span class="math inline">\(\{{\bf E}_x,{\bf E}_y\}\)</span> plane at gravity acts along <span class="math inline">\(-{\bf E}_z\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/SOP_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>where <span class="math display">\[\begin{align*}
+    {\bf r}_1 &amp;= {\bf E}_x+{\bf E}_y,\\
+    {\bf r}_2 &amp;= 2{\bf E}_x.
+\end{align*}\]</span></p>
+<p>Is the energy of the dumbbell conserved throughout its motion?</p>
+<p><strong>Answer:</strong> Drawing the free body diagram of both masses, we get …</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -671,13 +965,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../rigid_body_dynamics/rigid_body_kinematics.html" class="pagination-link" aria-label="Kinematics of Soft Robots">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Kinematics of Soft Robots</span></span>
+      <a href="../preliminaries/active_learning.html" class="pagination-link" aria-label="Active Learning">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Active Learning</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../rigid_body_dynamics/work_energy_theorem.html" class="pagination-link" aria-label="Work Energy Theorem">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Work Energy Theorem</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../rigid_body_dynamics/rigid_body_kinematics.html" class="pagination-link" aria-label="Kinematics of Soft Robots">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Kinematics of Soft Robots</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
