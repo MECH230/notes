@@ -17,5 +17,3 @@ Check out these two excellent videos of Professor Noel Perkins from the Universi
 * **Think → Pair → Share:** * "I would like you to take 5 min to talk to your neighbor and come up with a strategy that will solve this problem."
     * "Show of hands: my neighbor convinced me this will work."
     * "Show of hands: I am not convinced yet."
-* **This is a test:** I am testing this. 
-    * Test 1
