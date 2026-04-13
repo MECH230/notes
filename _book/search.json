@@ -21,6 +21,94 @@
     ]
   },
   {
+    "objectID": "system_of_particles/system_of_particles.html",
+    "href": "system_of_particles/system_of_particles.html",
+    "title": "2  System of Particles",
+    "section": "",
+    "text": "2.1 Center of Mass\nIn this chapter, we will define analogous quantities for the system. Also, starting the balance law for each individual particle, we’ll write the balance law for the system.\nIn the previous exercise, we used \\[\\begin{equation}\n    \\mathbf r_{C/A} = \\frac{\\sum m_i \\mathbf r_{i/A}}{\\sum m_i}.\n\\end{equation}\\]\nDifferentiating the expression for the position vector of the mass center, we get \\[\\begin{align}\n    \\mathbf{v}_C = \\frac{1}{m}\\sum_{k=1}^nm_k\\mathbf{v}_k = \\frac{1}{m}\\sum_{k=1}^n\\mathbf{G}_k.\n\\end{align}\\] Notice that the velocity of the center of mass is the weighted sum of the velocities of the particles.",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
+    "objectID": "system_of_particles/system_of_particles.html#center-of-mass",
+    "href": "system_of_particles/system_of_particles.html#center-of-mass",
+    "title": "2  System of Particles",
+    "section": "",
+    "text": "NoteThink!\n\n\n\nQuestion: What is the position vector of the center of mass of a system of multiple particles?\nAnswer:\nThe center of mass \\(C\\) of a system of particles is defined to have position vector\n\\[\\begin{align}\n    \\mathbf{r}_C = \\frac{1}{m}\\sum_{k=1}^n m_k\\mathbf{r}_k,\n\\end{align}\\]\nwhere\n\\[\\begin{align}\n    m = \\sum_{k=1}^n m_k\n\\end{align}\\]\nis the total mass of the system of particles.\n\n\n\n\n\n\n\n\nWarningExample\n\n\n\nQuestion: Consider the unsymmetrical dumbbell depicted in the figure below. Particle 1 of mass \\(m\\) and particle 2 of mass \\(3m\\) are connected by a massless rigid rod.\n\n\n\nUnsymmetrical dumbbell\n\n\nwhere\n\\[\\begin{align*}\n    \\mathbf{r}_1 &= \\mathbf{E}_x+\\mathbf{E}_y,\\\\\n    \\mathbf{r}_2 &= 2\\mathbf{E}_x.\n\\end{align*}\\]\nCalculate \\(\\mathbf{r}_C\\), the position vector of the center of mass \\(C\\) of \\(m_1\\) and \\(m_2\\). Is \\(C\\) located on the dumbbell?\nAnswer:\n\\[\\begin{align*}\n    \\mathbf{r}_C = \\frac{m\\mathbf{r}_1+3m\\mathbf{r}_2}{m+3m} = \\, ...\n\\end{align*}\\]\nWe can check mathematically that \\(C\\) lies on the line connecting \\(m_1\\) and \\(m_2\\) by calculating the equation of that line and checking whether \\(C\\) belongs to it.\nAlternatively, we can define a new basis, \\(\\{\\mathbf{u},\\mathbf{v}\\}\\), and calculate the position of \\(C\\) relative to \\(m_1\\) on that basis. This should be along \\(\\mathbf{u}\\).\n\n\n\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestions: Starting from \\[ \\mathbf r_C = \\frac{1}{m}\\sum_{k=1}^nm_k\\mathbf r_k, \\] show that \\[\\mathbf r_{C/A} = \\frac{\\sum m_i \\mathbf r_{i/A}}{\\sum m_i}.\\]\n\n\n\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestion: Show that the following identities are true. \\[\\begin{align}\n    \\begin{split}\n        \\sum_{k=1}^nm_k(\\mathbf{r}_C-\\mathbf{r}_k) = \\mathbf{0},\\\\\n        \\sum_{k=1}^nm_k(\\mathbf{v}_C-\\mathbf{v}_k) = \\mathbf{0}.\n    \\end{split}\n\\end{align}\\]",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
+    "objectID": "system_of_particles/system_of_particles.html#linear-momentum",
+    "href": "system_of_particles/system_of_particles.html#linear-momentum",
+    "title": "2  System of Particles",
+    "section": "2.2 Linear Momentum",
+    "text": "2.2 Linear Momentum\nThe linear momentum \\(\\mathbf{G}\\) of the system of particles is the sum of the linear momenta of the individual particles. \\[\\begin{align}\n    \\mathbf{G} = m\\frac{d\\mathbf{r}}{dt} = \\sum_{k=1}^n m_k\\frac{d\\mathbf{r}_k}{dt} = \\sum_{k=1}^n\\mathbf{G}_k.\n\\end{align}\\] The linear momentum of the center of mass is the linear momentum of the system.",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
+    "objectID": "system_of_particles/system_of_particles.html#angular-momentum",
+    "href": "system_of_particles/system_of_particles.html#angular-momentum",
+    "title": "2  System of Particles",
+    "section": "2.3 Angular Momentum",
+    "text": "2.3 Angular Momentum\nThe angular momentum \\(\\mathbf{H}^P\\) of the system of particles relative to a point \\(P\\), whose position vector relative to \\(O\\) is \\(\\mathbf{r}_P\\), is the sum of the individual angular momenta: \\[\\begin{align}\n    \\begin{split}\n        \\mathbf{H}^P &= \\sum_{k=1}^n\\mathbf{H}^{P_K} = \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_P)\\times m_k\\mathbf{v}_k\\\\\n        &= \\mathbf{H}^C + (\\mathbf{r}_C-\\mathbf{r}_P)\\times \\mathbf{G}.\n    \\end{split}\n\\end{align}\\] where \\[\\begin{align}\n    \\begin{split}\n        \\mathbf{H}^C &= \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_C)\\times m_k\\mathbf{v}_k\\\\\n        &= \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_C)\\times m_k(\\mathbf{v}_k-\\mathbf{v}_C).\n    \\end{split}\n\\end{align}\\]\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestion: Show that \\[\\begin{align}\n    \\begin{split}\n        \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_P)\\times m_k\\mathbf{v}_k = \\mathbf{H}^C + (\\mathbf{r}_C-\\mathbf{r}_P)\\times \\mathbf{G}.\n    \\end{split}\n\\end{align}\\]\nHint: Introduce \\(\\mathbf{r}-\\mathbf{r}\\).\n\n\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestion: Show that \\[\\begin{align}\n    \\begin{split}\n        \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_C)\\times m_k\\mathbf{v}_k = \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_C)\\times m_k(\\mathbf{v}_k-\\mathbf{v}_C).\n    \\end{split}\n\\end{align}\\]\nHint: introduce \\(\\mathbf{v}_C-\\mathbf{v}_C\\).",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
+    "objectID": "system_of_particles/system_of_particles.html#kinetic-energy",
+    "href": "system_of_particles/system_of_particles.html#kinetic-energy",
+    "title": "2  System of Particles",
+    "section": "2.4 Kinetic Energy",
+    "text": "2.4 Kinetic Energy\nThe kinetic energy \\(T\\) of the system of particles is defined to be the sum of their individual kinetic energies: \\[\\begin{align}\n    T = \\sum_{k=1}^nT_k = \\sum_{k=1}^n\\frac{1}{2}m_k\\mathbf{v}_k\\cdot\\mathbf{v}_k.\n\\end{align}\\]\nIn general, the kinetic energy of the system is not equal to the kinetic energy of the center of mass.\nUsing the center of mass, \\[\\begin{align}\n    T = \\frac{1}{2}m\\mathbf{v}_C\\cdot\\mathbf{v}_C + \\frac{1}{2}\\sum_{k=1}^nm_k(\\mathbf{v}_k-\\mathbf{v}_C)\\cdot(\\mathbf{v}_k-\\mathbf{v}_C).\n\\end{align}\\]\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestion: Show that \\[\\begin{align}\n    \\begin{split}\n        \\sum_{k=1}^n\\frac{1}{2}m_k\\mathbf{v}_k\\cdot\\mathbf{v}_k = \\frac{1}{2}m\\mathbf{v}_C\\cdot\\mathbf{v}_C + \\frac{1}{2}\\sum_{k=1}^nm_k(\\mathbf{v}_k-\\mathbf{v}_C)\\cdot(\\mathbf{v}_k-\\mathbf{v}_C).\n    \\end{split}\n\\end{align}\\]\nHint: Add \\(\\mathbf{v}_C-\\mathbf{v}_C\\) to the previous for both \\(\\mathbf{v}_k\\) terms.",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
+    "objectID": "system_of_particles/system_of_particles.html#kinetics-of-a-system-of-particles-linear-momentum",
+    "href": "system_of_particles/system_of_particles.html#kinetics-of-a-system-of-particles-linear-momentum",
+    "title": "2  System of Particles",
+    "section": "2.5 Kinetics of a System of Particles: Linear Momentum",
+    "text": "2.5 Kinetics of a System of Particles: Linear Momentum\nFor each particle \\[\\begin{align}\n    \\mathbf{F}_i = m_i\\mathbf{a}_i.\n\\end{align}\\] Adding these \\(n\\) equations together and using the definition of the center of mass \\[\\begin{align}\n    \\mathbf{F} = m\\mathbf{a}_c\n\\end{align}\\] \\[\\begin{align}\n    \\mathbf{F} = \\sum_{k=1}^n\\mathbf{F}_k.\n\\end{align}\\] :::\nExample: Monkey problems from the problem set.\n\n\n\n\n\n\nImportantNote!\n\n\n\nThe conditions for the conservation of linear momentum of a system of particles completely or along a certain direction are analogous to those of a single particle established earlier.",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
+    "objectID": "system_of_particles/system_of_particles.html#kinetics-of-a-system-of-particles-angular-momentum",
+    "href": "system_of_particles/system_of_particles.html#kinetics-of-a-system-of-particles-angular-momentum",
+    "title": "2  System of Particles",
+    "section": "2.6 Kinetics of a System of Particles: Angular Momentum",
+    "text": "2.6 Kinetics of a System of Particles: Angular Momentum\nStarting from \\[\\begin{align}\n    \\begin{split}\n        \\mathbf{H}^P &= \\sum_{k=1}^n\\mathbf{H}^{P_K} = \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_P)\\times m_k\\mathbf{v}_k.\n    \\end{split}\n\\end{align}\\]\nThe derivative \\(\\dot{\\mathbf{H}}^P\\) simplifies to \\[\\begin{align}\n    \\dot{\\mathbf{H}}^P = \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_P)\\times\\mathbf{F}_k-\\mathbf{v}_P\\times\\mathbf{G}.\n\\end{align}\\] The resultant moment of the system of forces relative to \\(P\\) is \\[\\begin{align}\n    \\mathbf{M}^P = \\sum_{k=1}^n(\\mathbf{r}_k-\\mathbf{r}_P)\\times\\mathbf{F}_k.\n\\end{align}\\] The angular momentum theorem becomes \\[\\begin{align}\n    \\dot{\\mathbf{H}}^P = \\mathbf{M}^P-\\mathbf{v}_P\\times\\mathbf{G}.\n\\end{align}\\] It is very important to notice that \\(\\dot{\\mathbf{H}}^P\\) is not necessarily equal to \\(\\mathbf{M}^P\\).\nTwo important special cases of the angular momentum theorem:\n\n\n\n\n\n\nImportantNote!\n\n\n\nThe conditions for the conservations of angular momentum of a system of particles completely or along a certain direction are analogous to those of a single particle established earlier.",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
+    "objectID": "system_of_particles/system_of_particles.html#work-energy-theorem",
+    "href": "system_of_particles/system_of_particles.html#work-energy-theorem",
+    "title": "2  System of Particles",
+    "section": "2.7 Work-Energy Theorem",
+    "text": "2.7 Work-Energy Theorem\nThe work-energy theorem and the energy conservation for a system of particles are then \\[\\begin{align}\n    \\dot{T} = \\sum_{k=1}^n\\mathbf{F}_k\\cdot\\mathbf{v}_k,\n\\end{align}\\] and \\[\\begin{align}\n    \\dot{E} = \\sum_{k=1}^n\\mathbf{F}_{nc_k}\\cdot\\mathbf{v}_K\n\\end{align}\\] where \\(\\mathbf{F}_{nc_k}\\) is the nonconservative force acting on the \\(k\\)th particle and \\(E\\) is the total energy of the system of particles.\nIntegrating with respect to time, we get \\[\\begin{align}\n    \\begin{split}\n        T(t_2)-T(t_1) = \\sum_{k=1}^n W_{\\mathbf{F}_k,12}\n    \\end{split}\n\\end{align}\\] where the work of force \\(\\mathbf{F}_k\\) is \\[\\begin{align}\n    \\begin{split}\n        W_{\\mathbf{F}_k,12} = \\int_{t_1}^{t_2} \\mathbf{F}_k\\cdot\\mathbf{v}_kdt = \\int_{\\mathbf{r}(t_1)}^{\\mathbf{r}(t_2)}\\mathbf{F}_k d\\mathbf{r}_k.\n    \\end{split}\n\\end{align}\\]\n\n\n\n\n\n\nImportantNote!\n\n\n\nThe work of the force is the integral of the force dotted with the velocity of displacement of the point of application of the force.\n\n\n\n\n\n\n\n\nWarningExample\n\n\n\nQuestion: Consider the unsymmetrical dumbbell depicted in the figure below. Particle 1 of mass \\(m\\) and particle 2 of mass \\(3m\\) are connected by a massless rigid rod. The dumbbell is in motion in the smooth \\(\\{\\mathbf{E}_x,\\mathbf{E}_y\\}\\) plane at gravity acts along \\(-\\mathbf{E}_z\\).\n\n\n\n\n\nwhere \\[\\begin{align*}\n    \\mathbf{r}_1 &= \\mathbf{E}_x+\\mathbf{E}_y,\\\\\n    \\mathbf{r}_2 &= 2\\mathbf{E}_x.\n\\end{align*}\\]\nIs the energy of the dumbbell conserved throughout its motion?\nAnswer: Drawing the free body diagram of both masses, we get …",
+    "crumbs": [
+      "System of Particles",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+    ]
+  },
+  {
     "objectID": "rigid_body_dynamics/rigid_body_kinematics.html",
     "href": "rigid_body_dynamics/rigid_body_kinematics.html",
     "title": "3  Kinematics of Soft Robots",
@@ -78,99 +166,11 @@
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "5  Summary",
+    "title": "6  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
-    ]
-  },
-  {
-    "objectID": "system_of_particles/system_of_particles.html",
-    "href": "system_of_particles/system_of_particles.html",
-    "title": "2  System of Particles",
-    "section": "",
-    "text": "2.1 Center of Mass\nIn this chapter, we will define analogous quantities for the system. Also, starting the balance law for each individual particle, we’ll write the balance law for the system.\nIn the previous exercise, we used \\[\\begin{equation}\n    \\mathbf r_{C/A} = \\frac{\\sum m_i \\mathbf r_{i/A}}{\\sum m_i}.\n\\end{equation}\\]\nDifferentiating the expression for the position vector of the mass center, we get \\[\\begin{align}\n    {\\bf v}_C = \\frac{1}{m}\\sum_{k=1}^nm_k{\\bf v}_k = \\frac{1}{m}\\sum_{k=1}^n{\\bf G}_k.\n\\end{align}\\] Notice that the velocity of the center of mass is the weighted sum of the velocities of the particles.",
-    "crumbs": [
-      "System of Particles",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
-    ]
-  },
-  {
-    "objectID": "system_of_particles/system_of_particles.html#center-of-mass",
-    "href": "system_of_particles/system_of_particles.html#center-of-mass",
-    "title": "2  System of Particles",
-    "section": "",
-    "text": "NoteThink!\n\n\n\nQuestion: What is the position vector of the center of mass of a system of multiple particles?\nAnswer:\nThe center of mass \\(C\\) of a system of particles is defined to have position vector\n\\[\\begin{align}\n    \\mathbf{r}_C = \\frac{1}{m}\\sum_{k=1}^n m_k\\mathbf{r}_k,\n\\end{align}\\]\nwhere\n\\[\\begin{align}\n    m = \\sum_{k=1}^n m_k\n\\end{align}\\]\nis the total mass of the system of particles.\n\n\n\n\n\n\n\n\nWarningExample\n\n\n\nQuestion: Consider the unsymmetrical dumbbell depicted in the figure below. Particle 1 of mass \\(m\\) and particle 2 of mass \\(3m\\) are connected by a massless rigid rod.\n\n\n\nUnsymmetrical dumbbell\n\n\nwhere\n\\[\\begin{align*}\n    \\mathbf{r}_1 &= \\mathbf{E}_x+\\mathbf{E}_y,\\\\\n    \\mathbf{r}_2 &= 2\\mathbf{E}_x.\n\\end{align*}\\]\nCalculate \\(\\mathbf{r}_C\\), the position vector of the center of mass \\(C\\) of \\(m_1\\) and \\(m_2\\). Is \\(C\\) located on the dumbbell?\nAnswer:\n\\[\\begin{align*}\n    \\mathbf{r}_C = \\frac{m\\mathbf{r}_1+3m\\mathbf{r}_2}{m+3m} = \\, ...\n\\end{align*}\\]\nWe can check mathematically that \\(C\\) lies on the line connecting \\(m_1\\) and \\(m_2\\) by calculating the equation of that line and checking whether \\(C\\) belongs to it.\nAlternatively, we can define a new basis, \\(\\{\\mathbf{u},\\mathbf{v}\\}\\), and calculate the position of \\(C\\) relative to \\(m_1\\) on that basis. This should be along \\(\\mathbf{u}\\).\n\n\n\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestions: Starting from \\[ \\mathbf r_C = \\frac{1}{m}\\sum_{k=1}^nm_k\\mathbf r_k, \\] show that \\[\\mathbf r_{C/A} = \\frac{\\sum m_i \\mathbf r_{i/A}}{\\sum m_i}.\\]\n\n\n\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestion: Show that the following identities are true. \\[\\begin{align}\n    \\begin{split}\n        \\sum_{k=1}^nm_k({\\bf r}_C-{\\bf r}_k) = {\\bf 0},\\\\\n        \\sum_{k=1}^nm_k({\\bf v}_C-{\\bf v}_k) = {\\bf 0}.\n    \\end{split}\n\\end{align}\\]",
-    "crumbs": [
-      "System of Particles",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
-    ]
-  },
-  {
-    "objectID": "system_of_particles/system_of_particles.html#linear-momentum",
-    "href": "system_of_particles/system_of_particles.html#linear-momentum",
-    "title": "2  System of Particles",
-    "section": "2.2 Linear Momentum",
-    "text": "2.2 Linear Momentum\nThe linear momentum \\({\\bf G}\\) of the system of particles is the sum of the linear momenta of the individual particles. \\[\\begin{align}\n    {\\bf G} = m\\frac{d{\\bf r}}{dt} = \\sum_{k=1}^n m_k\\frac{d{\\bf r}_k}{dt} = \\sum_{k=1}^n{\\bf G}_k.\n\\end{align}\\] The linear momentum of the center of mass is the linear momentum of the system.",
-    "crumbs": [
-      "System of Particles",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
-    ]
-  },
-  {
-    "objectID": "system_of_particles/system_of_particles.html#angular-momentum",
-    "href": "system_of_particles/system_of_particles.html#angular-momentum",
-    "title": "2  System of Particles",
-    "section": "2.3 Angular Momentum",
-    "text": "2.3 Angular Momentum\nThe angular momentum \\({\\bf H}^P\\) of the system of particles relative to a point \\(P\\), whose position vector relative to \\(O\\) is \\({\\bf r}_P\\), is the sum of the individual angular momenta: \\[\\begin{align}\n    \\begin{split}\n        {\\bf H}^P &= \\sum_{k=1}^n{\\bf H}^{P_K} = \\sum_{k=1}^n({\\bf r}_k-{\\bf r}_P)\\times m_k{\\bf v}_k\\\\\n        &= {\\bf H}^C + ({\\bf r}_C-{\\bf r}_P)\\times {\\bf G}.\n    \\end{split}\n\\end{align}\\] where \\[\\begin{align}\n    \\begin{split}\n        {\\bf H}^C &= \\sum_{k=1}^n({\\bf r}_k-{\\bf r}_C)\\times m_k{\\bf v}_k\\\\\n        &= \\sum_{k=1}^n({\\bf r}_k-{\\bf r}_C)\\times m_k({\\bf v}_k-{\\bf v}_C).\n    \\end{split}\n\\end{align}\\]\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestion: Show that \\[\\begin{align}\n    \\begin{split}\n        \\sum_{k=1}^n({\\bf r}_k-{\\bf r}_P)\\times m_k{\\bf v}_k = {\\bf H}^C + ({\\bf r}_C-{\\bf r}_P)\\times {\\bf G}.\n    \\end{split}\n\\end{align}\\]\nHint: Introduce \\({\\bf r}-{\\bf r}\\).\n\n\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestion: Show that \\[\\begin{align}\n    \\begin{split}\n        \\sum_{k=1}^n({\\bf r}_k-{\\bf r}_C)\\times m_k{\\bf v}_k = \\sum_{k=1}^n({\\bf r}_k-{\\bf r}_C)\\times m_k({\\bf v}_k-{\\bf v}_C).\n    \\end{split}\n\\end{align}\\]\nHint: introduce \\({\\bf v}_C-{\\bf v}_C\\).",
-    "crumbs": [
-      "System of Particles",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
-    ]
-  },
-  {
-    "objectID": "system_of_particles/system_of_particles.html#kinetic-energy",
-    "href": "system_of_particles/system_of_particles.html#kinetic-energy",
-    "title": "2  System of Particles",
-    "section": "2.4 Kinetic Energy",
-    "text": "2.4 Kinetic Energy\nThe kinetic energy \\(T\\) of the system of particles is defined to be the sum of their individual kinetic energies: \\[\\begin{align}\n    T = \\sum_{k=1}^nT_k = \\sum_{k=1}^n\\frac{1}{2}m_k{\\bf v}_k\\cdot{\\bf v}_k.\n\\end{align}\\]\nIn general, the kinetic energy of the system is not equal to the kinetic energy of the center of mass.\nUsing the center of mass, \\[\\begin{align}\n    T = \\frac{1}{2}m{\\bf v}_C\\cdot{\\bf v}_C + \\frac{1}{2}\\sum_{k=1}^nm_k({\\bf v}_k-{\\bf v}_C)\\cdot({\\bf v}_k-{\\bf v}_C).\n\\end{align}\\]\n\n\n\n\n\n\nNoteThink!\n\n\n\nQuestion: Show that \\[\\begin{align}\n    \\begin{split}\n        \\sum_{k=1}^n\\frac{1}{2}m_k{\\bf v}_k\\cdot{\\bf v}_k = \\frac{1}{2}m{\\bf v}_C\\cdot{\\bf v}_C + \\frac{1}{2}\\sum_{k=1}^nm_k({\\bf v}_k-{\\bf v}_C)\\cdot({\\bf v}_k-{\\bf v}_C).\n    \\end{split}\n\\end{align}\\]\nHint: Add \\({\\bf v}_C-{\\bf v}_C\\) to the previous for both \\({\\bf v}_k\\) terms.",
-    "crumbs": [
-      "System of Particles",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
-    ]
-  },
-  {
-    "objectID": "system_of_particles/system_of_particles.html#kinetics-of-a-system-of-particles-linear-momentum",
-    "href": "system_of_particles/system_of_particles.html#kinetics-of-a-system-of-particles-linear-momentum",
-    "title": "2  System of Particles",
-    "section": "2.5 Kinetics of a System of Particles: Linear Momentum",
-    "text": "2.5 Kinetics of a System of Particles: Linear Momentum\nFor each particle \\[\\begin{align}\n    {\\bf F}_i = m_i{\\bf a}_i.\n\\end{align}\\] Adding these \\(n\\) equations together and using the definition of the center of mass \\[\\begin{align}\n    {\\bf F} = m{\\bf a}_c\n\\end{align}\\] \\[\\begin{align}\n    {\\bf F} = \\sum_{k=1}^n{\\bf F}_k.\n\\end{align}\\] :::\nExample: Monkey problems from the problem set.\n\n\n\n\n\n\nImportantNote!\n\n\n\nThe conditions for the conservation of linear momentum of a system of particles completely or along a certain direction are analogous to those of a single particle established earlier.",
-    "crumbs": [
-      "System of Particles",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
-    ]
-  },
-  {
-    "objectID": "system_of_particles/system_of_particles.html#kinetics-of-a-system-of-particles-angular-momentum",
-    "href": "system_of_particles/system_of_particles.html#kinetics-of-a-system-of-particles-angular-momentum",
-    "title": "2  System of Particles",
-    "section": "2.6 Kinetics of a System of Particles: Angular Momentum",
-    "text": "2.6 Kinetics of a System of Particles: Angular Momentum\nStarting from \\[\\begin{align}\n    \\begin{split}\n        {\\bf H}^P &= \\sum_{k=1}^n{\\bf H}^{P_K} = \\sum_{k=1}^n({\\bf r}_k-{\\bf r}_P)\\times m_k{\\bf v}_k.\n    \\end{split}\n\\end{align}\\]\nThe derivative \\(\\dot{\\bf H}^P\\) simplifies to \\[\\begin{align}\n    \\dot{\\bf H}^P = \\sum_{k=1}^n({\\bf r}_k-{\\bf r}_P)\\times{\\bf F}_k-{\\bf v}_P\\times{\\bf G}.\n\\end{align}\\] The resultant moment of the system of forces relative to \\(P\\) is \\[\\begin{align}\n    {\\bf M}^P = \\sum_{k=1}^n({\\bf r}_k-{\\bf r}_P)\\times{\\bf F}_k.\n\\end{align}\\] The angular momentum theorem becomes \\[\\begin{align}\n    \\dot{\\bf H}^P = {\\bf M}^P-{\\bf v}_P\\times{\\bf G}.\n\\end{align}\\] It is very important to notice that \\(\\dot{\\bf H}^P\\) is not necessarily equal to \\({\\bf M}^P\\).\nTwo important special cases of the angular momentum theorem:\n\n\n\n\n\n\nImportantNote!\n\n\n\nThe conditions for the conservations of angular momentum of a system of particles completely or along a certain direction are analogous to those of a single particle established earlier.",
-    "crumbs": [
-      "System of Particles",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
-    ]
-  },
-  {
-    "objectID": "system_of_particles/system_of_particles.html#work-energy-theorem",
-    "href": "system_of_particles/system_of_particles.html#work-energy-theorem",
-    "title": "2  System of Particles",
-    "section": "2.7 Work-Energy Theorem",
-    "text": "2.7 Work-Energy Theorem\nThe work-energy theorem and the energy conservation for a system of particles are then \\[\\begin{align}\n    \\dot{T} = \\sum_{k=1}^n{\\bf F}_k\\cdot{\\bf v}_k,\n\\end{align}\\] and \\[\\begin{align}\n    \\dot{E} = \\sum_{k=1}^n{\\bf F}_{nc_k}\\cdot{\\bf v}_K\n\\end{align}\\] where \\({\\bf F}_{nc_k}\\) is the nonconservative force acting on the \\(k\\)th particle and \\(E\\) is the total energy of the system of particles.\nIntegrating with respect to time, we get \\[\\begin{align}\n    \\begin{split}\n        T(t_2)-T(t_1) = \\sum_{k=1}^n W_{{\\bf F}_k,12}\n    \\end{split}\n\\end{align}\\] where the work of force \\({\\bf F}_k\\) is \\[\\begin{align}\n    \\begin{split}\n        W_{{\\bf F}_k,12} = \\int_{t_1}^{t_2} {\\bf F}_k\\cdot{\\bf v}_kdt = \\int_{{\\bf r}(t_1)}^{{\\bf r}(t_2)}{\\bf F}_kd{\\bf r}_k.\n    \\end{split}\n\\end{align}\\]\n\n\n\n\n\n\nImportantNote!\n\n\n\nThe work of the force is the integral of the force dotted with the velocity of displacement of the point of application of the force.\n\n\n\n\n\n\n\n\nWarningExample\n\n\n\nQuestion: Consider the unsymmetrical dumbbell depicted in the figure below. Particle 1 of mass \\(m\\) and particle 2 of mass \\(3m\\) are connected by a massless rigid rod. The dumbbell is in motion in the smooth \\(\\{{\\bf E}_x,{\\bf E}_y\\}\\) plane at gravity acts along \\(-{\\bf E}_z\\).\n\n\n\n\n\nwhere \\[\\begin{align*}\n    {\\bf r}_1 &= {\\bf E}_x+{\\bf E}_y,\\\\\n    {\\bf r}_2 &= 2{\\bf E}_x.\n\\end{align*}\\]\nIs the energy of the dumbbell conserved throughout its motion?\nAnswer: Drawing the free body diagram of both masses, we get …",
-    "crumbs": [
-      "System of Particles",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
     ]
   }
 ]

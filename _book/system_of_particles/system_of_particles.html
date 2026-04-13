@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.9.28">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-49e51e44f424ea8c7044b429bdbbbfe2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-ea8ef702a3f84812c808b1cddcfad5b3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -347,7 +347,7 @@ Consider a system of <span class="math inline">\(n\)</span> particles. A typical
 </div>
 </div>
 <p>Differentiating the expression for the position vector of the mass center, we get <span class="math display">\[\begin{align}
-    {\bf v}_C = \frac{1}{m}\sum_{k=1}^nm_k{\bf v}_k = \frac{1}{m}\sum_{k=1}^n{\bf G}_k.
+    \mathbf{v}_C = \frac{1}{m}\sum_{k=1}^nm_k\mathbf{v}_k = \frac{1}{m}\sum_{k=1}^n\mathbf{G}_k.
 \end{align}\]</span> Notice that the velocity of the center of mass is the weighted sum of the velocities of the particles.</p>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -361,8 +361,8 @@ Consider a system of <span class="math inline">\(n\)</span> particles. A typical
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> Show that the following identities are true. <span class="math display">\[\begin{align}
     \begin{split}
-        \sum_{k=1}^nm_k({\bf r}_C-{\bf r}_k) = {\bf 0},\\
-        \sum_{k=1}^nm_k({\bf v}_C-{\bf v}_k) = {\bf 0}.
+        \sum_{k=1}^nm_k(\mathbf{r}_C-\mathbf{r}_k) = \mathbf{0},\\
+        \sum_{k=1}^nm_k(\mathbf{v}_C-\mathbf{v}_k) = \mathbf{0}.
     \end{split}
 \end{align}\]</span></p>
 </div>
@@ -370,21 +370,21 @@ Consider a system of <span class="math inline">\(n\)</span> particles. A typical
 </section>
 <section id="linear-momentum" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="linear-momentum"><span class="header-section-number">2.2</span> Linear Momentum</h2>
-<p>The linear momentum <span class="math inline">\({\bf G}\)</span> of the system of particles is the sum of the linear momenta of the individual particles. <span class="math display">\[\begin{align}
-    {\bf G} = m\frac{d{\bf r}}{dt} = \sum_{k=1}^n m_k\frac{d{\bf r}_k}{dt} = \sum_{k=1}^n{\bf G}_k.
+<p>The linear momentum <span class="math inline">\(\mathbf{G}\)</span> of the system of particles is the sum of the linear momenta of the individual particles. <span class="math display">\[\begin{align}
+    \mathbf{G} = m\frac{d\mathbf{r}}{dt} = \sum_{k=1}^n m_k\frac{d\mathbf{r}_k}{dt} = \sum_{k=1}^n\mathbf{G}_k.
 \end{align}\]</span> The linear momentum of the center of mass is the linear momentum of the system.</p>
 </section>
 <section id="angular-momentum" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="angular-momentum"><span class="header-section-number">2.3</span> Angular Momentum</h2>
-<p>The angular momentum <span class="math inline">\({\bf H}^P\)</span> of the system of particles relative to a point <span class="math inline">\(P\)</span>, whose position vector relative to <span class="math inline">\(O\)</span> is <span class="math inline">\({\bf r}_P\)</span>, is the sum of the individual angular momenta: <span class="math display">\[\begin{align}
+<p>The angular momentum <span class="math inline">\(\mathbf{H}^P\)</span> of the system of particles relative to a point <span class="math inline">\(P\)</span>, whose position vector relative to <span class="math inline">\(O\)</span> is <span class="math inline">\(\mathbf{r}_P\)</span>, is the sum of the individual angular momenta: <span class="math display">\[\begin{align}
     \begin{split}
-        {\bf H}^P &amp;= \sum_{k=1}^n{\bf H}^{P_K} = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k\\
-        &amp;= {\bf H}^C + ({\bf r}_C-{\bf r}_P)\times {\bf G}.
+        \mathbf{H}^P &amp;= \sum_{k=1}^n\mathbf{H}^{P_K} = \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_P)\times m_k\mathbf{v}_k\\
+        &amp;= \mathbf{H}^C + (\mathbf{r}_C-\mathbf{r}_P)\times \mathbf{G}.
     \end{split}
 \end{align}\]</span> where <span class="math display">\[\begin{align}
     \begin{split}
-        {\bf H}^C &amp;= \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times m_k{\bf v}_k\\
-        &amp;= \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times m_k({\bf v}_k-{\bf v}_C).
+        \mathbf{H}^C &amp;= \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_C)\times m_k\mathbf{v}_k\\
+        &amp;= \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_C)\times m_k(\mathbf{v}_k-\mathbf{v}_C).
     \end{split}
 \end{align}\]</span></p>
 <div class="callout callout-style-simple callout-note callout-titled">
@@ -399,10 +399,10 @@ Consider a system of <span class="math inline">\(n\)</span> particles. A typical
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> Show that <span class="math display">\[\begin{align}
     \begin{split}
-        \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k = {\bf H}^C + ({\bf r}_C-{\bf r}_P)\times {\bf G}.
+        \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_P)\times m_k\mathbf{v}_k = \mathbf{H}^C + (\mathbf{r}_C-\mathbf{r}_P)\times \mathbf{G}.
     \end{split}
 \end{align}\]</span></p>
-<p>Hint: Introduce <span class="math inline">\({\bf r}-{\bf r}\)</span>.</p>
+<p>Hint: Introduce <span class="math inline">\(\mathbf{r}-\mathbf{r}\)</span>.</p>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note callout-titled">
@@ -417,21 +417,21 @@ Consider a system of <span class="math inline">\(n\)</span> particles. A typical
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> Show that <span class="math display">\[\begin{align}
     \begin{split}
-        \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times m_k{\bf v}_k = \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times m_k({\bf v}_k-{\bf v}_C).
+        \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_C)\times m_k\mathbf{v}_k = \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_C)\times m_k(\mathbf{v}_k-\mathbf{v}_C).
     \end{split}
 \end{align}\]</span></p>
-<p>Hint: introduce <span class="math inline">\({\bf v}_C-{\bf v}_C\)</span>.</p>
+<p>Hint: introduce <span class="math inline">\(\mathbf{v}_C-\mathbf{v}_C\)</span>.</p>
 </div>
 </div>
 </section>
 <section id="kinetic-energy" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="kinetic-energy"><span class="header-section-number">2.4</span> Kinetic Energy</h2>
 <p>The kinetic energy <span class="math inline">\(T\)</span> of the system of particles is defined to be the sum of their individual kinetic energies: <span class="math display">\[\begin{align}
-    T = \sum_{k=1}^nT_k = \sum_{k=1}^n\frac{1}{2}m_k{\bf v}_k\cdot{\bf v}_k.
+    T = \sum_{k=1}^nT_k = \sum_{k=1}^n\frac{1}{2}m_k\mathbf{v}_k\cdot\mathbf{v}_k.
 \end{align}\]</span></p>
 <p>In general, the kinetic energy of the system is not equal to the kinetic energy of the center of mass.</p>
 <p>Using the center of mass, <span class="math display">\[\begin{align}
-    T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C + \frac{1}{2}\sum_{k=1}^nm_k({\bf v}_k-{\bf v}_C)\cdot({\bf v}_k-{\bf v}_C).
+    T = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C + \frac{1}{2}\sum_{k=1}^nm_k(\mathbf{v}_k-\mathbf{v}_C)\cdot(\mathbf{v}_k-\mathbf{v}_C).
 \end{align}\]</span></p>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -445,21 +445,21 @@ Consider a system of <span class="math inline">\(n\)</span> particles. A typical
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> Show that <span class="math display">\[\begin{align}
     \begin{split}
-        \sum_{k=1}^n\frac{1}{2}m_k{\bf v}_k\cdot{\bf v}_k = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C + \frac{1}{2}\sum_{k=1}^nm_k({\bf v}_k-{\bf v}_C)\cdot({\bf v}_k-{\bf v}_C).
+        \sum_{k=1}^n\frac{1}{2}m_k\mathbf{v}_k\cdot\mathbf{v}_k = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C + \frac{1}{2}\sum_{k=1}^nm_k(\mathbf{v}_k-\mathbf{v}_C)\cdot(\mathbf{v}_k-\mathbf{v}_C).
     \end{split}
 \end{align}\]</span></p>
-<p>Hint: Add <span class="math inline">\({\bf v}_C-{\bf v}_C\)</span> to the previous for both <span class="math inline">\({\bf v}_k\)</span> terms.</p>
+<p>Hint: Add <span class="math inline">\(\mathbf{v}_C-\mathbf{v}_C\)</span> to the previous for both <span class="math inline">\(\mathbf{v}_k\)</span> terms.</p>
 </div>
 </div>
 </section>
 <section id="kinetics-of-a-system-of-particles-linear-momentum" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="kinetics-of-a-system-of-particles-linear-momentum"><span class="header-section-number">2.5</span> Kinetics of a System of Particles: Linear Momentum</h2>
 <p>For each particle <span class="math display">\[\begin{align}
-    {\bf F}_i = m_i{\bf a}_i.
+    \mathbf{F}_i = m_i\mathbf{a}_i.
 \end{align}\]</span> Adding these <span class="math inline">\(n\)</span> equations together and using the definition of the center of mass <span class="math display">\[\begin{align}
-    {\bf F} = m{\bf a}_c
+    \mathbf{F} = m\mathbf{a}_c
 \end{align}\]</span> <span class="math display">\[\begin{align}
-    {\bf F} = \sum_{k=1}^n{\bf F}_k.
+    \mathbf{F} = \sum_{k=1}^n\mathbf{F}_k.
 \end{align}\]</span> :::</p>
 <p>Example: Monkey problems from the problem set.</p>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -480,16 +480,16 @@ Consider a system of <span class="math inline">\(n\)</span> particles. A typical
 <h2 data-number="2.6" class="anchored" data-anchor-id="kinetics-of-a-system-of-particles-angular-momentum"><span class="header-section-number">2.6</span> Kinetics of a System of Particles: Angular Momentum</h2>
 <p>Starting from <span class="math display">\[\begin{align}
     \begin{split}
-        {\bf H}^P &amp;= \sum_{k=1}^n{\bf H}^{P_K} = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k.
+        \mathbf{H}^P &amp;= \sum_{k=1}^n\mathbf{H}^{P_K} = \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_P)\times m_k\mathbf{v}_k.
     \end{split}
 \end{align}\]</span></p>
-<p>The derivative <span class="math inline">\(\dot{\bf H}^P\)</span> simplifies to <span class="math display">\[\begin{align}
-    \dot{\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times{\bf F}_k-{\bf v}_P\times{\bf G}.
+<p>The derivative <span class="math inline">\(\dot{\mathbf{H}}^P\)</span> simplifies to <span class="math display">\[\begin{align}
+    \dot{\mathbf{H}}^P = \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_P)\times\mathbf{F}_k-\mathbf{v}_P\times\mathbf{G}.
 \end{align}\]</span> The resultant moment of the system of forces relative to <span class="math inline">\(P\)</span> is <span class="math display">\[\begin{align}
-    {\bf M}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times{\bf F}_k.
+    \mathbf{M}^P = \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_P)\times\mathbf{F}_k.
 \end{align}\]</span> The angular momentum theorem becomes <span class="math display">\[\begin{align}
-    \dot{\bf H}^P = {\bf M}^P-{\bf v}_P\times{\bf G}.
-\end{align}\]</span> It is very important to notice that <span class="math inline">\(\dot{\bf H}^P\)</span> is not necessarily equal to <span class="math inline">\({\bf M}^P\)</span>.</p>
+    \dot{\mathbf{H}}^P = \mathbf{M}^P-\mathbf{v}_P\times\mathbf{G}.
+\end{align}\]</span> It is very important to notice that <span class="math inline">\(\dot{\mathbf{H}}^P\)</span> is not necessarily equal to <span class="math inline">\(\mathbf{M}^P\)</span>.</p>
 Two important special cases of the angular momentum theorem:
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -508,17 +508,17 @@ Two important special cases of the angular momentum theorem:
 <section id="work-energy-theorem" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="work-energy-theorem"><span class="header-section-number">2.7</span> Work-Energy Theorem</h2>
 <p>The work-energy theorem and the energy conservation for a system of particles are then <span class="math display">\[\begin{align}
-    \dot{T} = \sum_{k=1}^n{\bf F}_k\cdot{\bf v}_k,
+    \dot{T} = \sum_{k=1}^n\mathbf{F}_k\cdot\mathbf{v}_k,
 \end{align}\]</span> and <span class="math display">\[\begin{align}
-    \dot{E} = \sum_{k=1}^n{\bf F}_{nc_k}\cdot{\bf v}_K
-\end{align}\]</span> where <span class="math inline">\({\bf F}_{nc_k}\)</span> is the nonconservative force acting on the <span class="math inline">\(k\)</span>th particle and <span class="math inline">\(E\)</span> is the total energy of the system of particles.</p>
+    \dot{E} = \sum_{k=1}^n\mathbf{F}_{nc_k}\cdot\mathbf{v}_K
+\end{align}\]</span> where <span class="math inline">\(\mathbf{F}_{nc_k}\)</span> is the nonconservative force acting on the <span class="math inline">\(k\)</span>th particle and <span class="math inline">\(E\)</span> is the total energy of the system of particles.</p>
 <p>Integrating with respect to time, we get <span class="math display">\[\begin{align}
     \begin{split}
-        T(t_2)-T(t_1) = \sum_{k=1}^n W_{{\bf F}_k,12}
+        T(t_2)-T(t_1) = \sum_{k=1}^n W_{\mathbf{F}_k,12}
     \end{split}
-\end{align}\]</span> where the work of force <span class="math inline">\({\bf F}_k\)</span> is <span class="math display">\[\begin{align}
+\end{align}\]</span> where the work of force <span class="math inline">\(\mathbf{F}_k\)</span> is <span class="math display">\[\begin{align}
     \begin{split}
-        W_{{\bf F}_k,12} = \int_{t_1}^{t_2} {\bf F}_k\cdot{\bf v}_kdt = \int_{{\bf r}(t_1)}^{{\bf r}(t_2)}{\bf F}_kd{\bf r}_k.
+        W_{\mathbf{F}_k,12} = \int_{t_1}^{t_2} \mathbf{F}_k\cdot\mathbf{v}_kdt = \int_{\mathbf{r}(t_1)}^{\mathbf{r}(t_2)}\mathbf{F}_k d\mathbf{r}_k.
     \end{split}
 \end{align}\]</span></p>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -544,15 +544,15 @@ Two important special cases of the angular momentum theorem:
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Question:</strong> Consider the unsymmetrical dumbbell depicted in the figure below. Particle 1 of mass <span class="math inline">\(m\)</span> and particle 2 of mass <span class="math inline">\(3m\)</span> are connected by a massless rigid rod. The dumbbell is in motion in the smooth <span class="math inline">\(\{{\bf E}_x,{\bf E}_y\}\)</span> plane at gravity acts along <span class="math inline">\(-{\bf E}_z\)</span>.</p>
+<p><strong>Question:</strong> Consider the unsymmetrical dumbbell depicted in the figure below. Particle 1 of mass <span class="math inline">\(m\)</span> and particle 2 of mass <span class="math inline">\(3m\)</span> are connected by a massless rigid rod. The dumbbell is in motion in the smooth <span class="math inline">\(\{\mathbf{E}_x,\mathbf{E}_y\}\)</span> plane at gravity acts along <span class="math inline">\(-\mathbf{E}_z\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../images/SOP_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>where <span class="math display">\[\begin{align*}
-    {\bf r}_1 &amp;= {\bf E}_x+{\bf E}_y,\\
-    {\bf r}_2 &amp;= 2{\bf E}_x.
+    \mathbf{r}_1 &amp;= \mathbf{E}_x+\mathbf{E}_y,\\
+    \mathbf{r}_2 &amp;= 2\mathbf{E}_x.
 \end{align*}\]</span></p>
 <p>Is the energy of the dumbbell conserved throughout its motion?</p>
 <p><strong>Answer:</strong> Drawing the free body diagram of both masses, we get …</p>
