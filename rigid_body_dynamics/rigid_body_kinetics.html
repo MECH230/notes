@@ -265,6 +265,15 @@ window.Quarto = {
 <p>The relative position vector is defined in <a href="#eq-relative-pos" class="quarto-xref">Equation&nbsp;<span>4.1</span></a>.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yxvqLBHZfXk?si=wg9cNWnssxdNyC0G" title="YouTube video" frameborder="0" allowfullscreen="">
 </iframe>
+<pre class="{tikz}"><code>#| fig-cap: "My TikZ Figure"
+#| engine-opts:
+#|   extra.preamble: "\\usepackage{tikz}"
+
+\begin{tikzpicture}
+  \draw[-&gt;] (0,0) -- (2,0) node[right] {$x$};
+  \draw[-&gt;] (0,0) -- (0,2) node[above] {$y$};
+  \draw[blue, thick] (0,0) circle (1);
+\end{tikzpicture}</code></pre>
 
 
 
