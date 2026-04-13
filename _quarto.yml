@@ -7,6 +7,8 @@ author: "Theresa Honein"
 date: "Spring 2026"
 number-sections: true
 
+engine: knitr
+
 book:
   sidebar:
     style: "docked"

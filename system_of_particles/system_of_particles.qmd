@@ -181,7 +181,7 @@ Adding these $n$ equations together and using the definition of the center of ma
 \begin{align}
     \mathbf{F} = \sum_{k=1}^n\mathbf{F}_k.
 \end{align}
-:::
+<!-- ::: -->
 
 Example: Monkey problems from the problem set.
 

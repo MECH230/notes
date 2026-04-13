@@ -146,7 +146,7 @@
     "href": "rigid_body_dynamics/rigid_body_kinetics.html",
     "title": "4  Rigid Body Kinetics",
     "section": "",
-    "text": "\\[\n\\mathbf{r}_{P/O} = \\mathbf{r}_{G/O} + \\mathbf{r}_{P/G}\n\\tag{4.1}\\]\nThe relative position vector is defined in Equation 4.1.",
+    "text": "\\[\n\\mathbf{r}_{P/O} = \\mathbf{r}_{G/O} + \\mathbf{r}_{P/G}\n\\tag{4.1}\\]\nThe relative position vector is defined in Equation 4.1.\n\n\n#| fig-cap: \"My TikZ Figure\"\n#| fig-ext: svg\n\n\\begin{tikzpicture}\n  \\draw[-&gt;] (0,0) -- (2,0) node[right] {$x$};\n  \\draw[-&gt;] (0,0) -- (0,2) node[above] {$y$};\n  \\draw[blue, thick] (0,0) circle (1);\n\\end{tikzpicture}",
     "crumbs": [
       "Rigid Body Dynamics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Rigid Body Kinetics</span>"
