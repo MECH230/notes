@@ -17,3 +17,15 @@ title="YouTube video"
 frameborder="0"
 allowfullscreen>
 </iframe>
+
+```{tikz}
+#| fig-cap: "My TikZ Figure"
+#| engine-opts:
+#|   extra.preamble: "\\usepackage{tikz}"
+
+\begin{tikzpicture}
+  \draw[->] (0,0) -- (2,0) node[right] {$x$};
+  \draw[->] (0,0) -- (0,2) node[above] {$y$};
+  \draw[blue, thick] (0,0) circle (1);
+\end{tikzpicture}
+```
