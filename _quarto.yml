@@ -9,6 +9,12 @@ number-sections: true
 
 engine: knitr
 
+knitr:
+  opts_chunk:
+    engine.opts:
+      template: "!expr system.file('tex/plain.tex', package='tikzDevice')"
+
+
 book:
   sidebar:
     style: "docked"

@@ -80,7 +80,7 @@
     "href": "system_of_particles/system_of_particles.html#kinetics-of-a-system-of-particles-linear-momentum",
     "title": "2  System of Particles",
     "section": "2.5 Kinetics of a System of Particles: Linear Momentum",
-    "text": "2.5 Kinetics of a System of Particles: Linear Momentum\nFor each particle \\[\\begin{align}\n    \\mathbf{F}_i = m_i\\mathbf{a}_i.\n\\end{align}\\] Adding these \\(n\\) equations together and using the definition of the center of mass \\[\\begin{align}\n    \\mathbf{F} = m\\mathbf{a}_c\n\\end{align}\\] \\[\\begin{align}\n    \\mathbf{F} = \\sum_{k=1}^n\\mathbf{F}_k.\n\\end{align}\\] :::\nExample: Monkey problems from the problem set.\n\n\n\n\n\n\nImportantNote!\n\n\n\nThe conditions for the conservation of linear momentum of a system of particles completely or along a certain direction are analogous to those of a single particle established earlier.",
+    "text": "2.5 Kinetics of a System of Particles: Linear Momentum\nFor each particle \\[\\begin{align}\n    \\mathbf{F}_i = m_i\\mathbf{a}_i.\n\\end{align}\\] Adding these \\(n\\) equations together and using the definition of the center of mass \\[\\begin{align}\n    \\mathbf{F} = m\\mathbf{a}_c\n\\end{align}\\] \\[\\begin{align}\n    \\mathbf{F} = \\sum_{k=1}^n\\mathbf{F}_k.\n\\end{align}\\] \nExample: Monkey problems from the problem set.\n\n\n\n\n\n\nImportantNote!\n\n\n\nThe conditions for the conservation of linear momentum of a system of particles completely or along a certain direction are analogous to those of a single particle established earlier.",
     "crumbs": [
       "System of Particles",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>System of Particles</span>"
@@ -146,7 +146,7 @@
     "href": "rigid_body_dynamics/rigid_body_kinetics.html",
     "title": "4  Rigid Body Kinetics",
     "section": "",
-    "text": "\\[\n\\mathbf{r}_{P/O} = \\mathbf{r}_{G/O} + \\mathbf{r}_{P/G}\n\\tag{4.1}\\]\nThe relative position vector is defined in Equation 4.1.\n\n\n#| fig-cap: \"My TikZ Figure\"\n#| fig-ext: svg\n\n\\begin{tikzpicture}\n  \\draw[-&gt;] (0,0) -- (2,0) node[right] {$x$};\n  \\draw[-&gt;] (0,0) -- (0,2) node[above] {$y$};\n  \\draw[blue, thick] (0,0) circle (1);\n\\end{tikzpicture}",
+    "text": "\\[\n\\mathbf{r}_{P/O} = \\mathbf{r}_{G/O} + \\mathbf{r}_{P/G}\n\\tag{4.1}\\]\nThe relative position vector is defined in Equation 4.1.\n\n\n\n\n\nMy figure",
     "crumbs": [
       "Rigid Body Dynamics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Rigid Body Kinetics</span>"

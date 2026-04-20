@@ -1,0 +1,51 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Rigid Body Kinetics\"\n",
+        "---\n",
+        "\n",
+        "$$\n",
+        "\\mathbf{r}_{P/O} = \\mathbf{r}_{G/O} + \\mathbf{r}_{P/G}\n",
+        "$$ {#eq-relative-pos}\n",
+        "\n",
+        "The relative position vector is defined in @eq-relative-pos.\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "<iframe width=\"560\" height=\"315\"\n",
+        "src=\"https://www.youtube.com/embed/yxvqLBHZfXk?si=wg9cNWnssxdNyC0G\"\n",
+        "title=\"YouTube video\"\n",
+        "frameborder=\"0\"\n",
+        "allowfullscreen>\n",
+        "</iframe>\n",
+        "\n",
+        "```{tikz}\n",
+        "#| fig-cap: \"My TikZ Figure\"\n",
+        "#| fig-ext: svg\n",
+        "\n",
+        "\\begin{tikzpicture}\n",
+        "  \\draw[->] (0,0) -- (2,0) node[right] {$x$};\n",
+        "  \\draw[->] (0,0) -- (0,2) node[above] {$y$};\n",
+        "  \\draw[blue, thick] (0,0) circle (1);\n",
+        "\\end{tikzpicture}\n",
+        "```"
+      ],
+      "id": "5a35bafa"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/theresahonein/Desktop/notes/.venv/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
