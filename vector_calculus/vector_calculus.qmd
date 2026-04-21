@@ -23,7 +23,7 @@ Answer:
 
 :::
 
-![ ](figures/vector_calculus_unit_vector.svg)
+![ ](../figures/vector_calculus_unit_vector.svg)
 
 ## Vector summation and subtraction
 
@@ -31,15 +31,15 @@ Vectors can be added using the parallelogram law or by placing vectors in a head
 
 The vector difference $\mathbf{a}-\mathbf{b}$ points from the tip of $\mathbf{b}$ to the tip of $\mathbf{a}$.
 
-![Vector addition via parallelogram law and tip to tail.](figures/vector_calculus_vector_addition.svg)
+![Vector addition via parallelogram law and tip to tail.](../figures/vector_calculus_vector_addition.svg)
 
-![Vector subtraction as $\vec{a} - \vec{b}$ using the parallelogram law. This can be also done using head to tail.](figures/vector_calculus_vector_subtraction.svg)
+![Vector subtraction as $\vec{a} - \vec{b}$ using the parallelogram law. This can be also done using head to tail.](../figures/vector_calculus_vector_subtraction.svg)
 
 ## The dot (scalar) product
 
 Consider the three dimensional Euclidean space $\mathbb{E}^3 = (\mathbb{R}^3,\cdot) $ which is the three-dimensional space $\mathbb{R}^3$ and a dot product defined as follows.
 
-![ ](figures/vector_calculus_two_vectors.svg)
+![ ](../figures/vector_calculus_two_vectors.svg)
 
 Let $\mathbf{a}, \mathbf{b} \in  \mathbb{E}^3$.
 
@@ -71,7 +71,7 @@ Answer: Yes, the dot product is commutative. This can be shown using the definit
 
 Suppose $\mathbf{u}$ is a unit vector: $\mathbf{u}\cdot\mathbf{u}=1$.
 
-![ ](figures/vector_calculus_projection.svg)
+![ ](../figures/vector_calculus_projection.svg)
 
 ::: {.callout-tip title="Think!"}
 
@@ -101,7 +101,7 @@ This is the projection of $\mathbf{b}$ in the direction perpendicular to $\mathb
 
 Remember that $\cos^2(\theta)+\sin^2(\theta)=1$.
 
-![ ](figures/cartesian_projection.PNG)
+![ ](../figures/cartesian_projection.PNG)
 
 ## Cross Product
 
