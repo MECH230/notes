@@ -2,11 +2,11 @@
 
 ## Scaling Vectors
 
-We can scale the vector $\mathbf{a}$.
+We can scale the vector ${\bf a}$.
 
 ::: {.callout-tip title="Think!"}
 
-Question: Consider a vector $\mathbf{a}$. Plot the vectors $2\mathbf{a}$, $-\mathbf{a}$, $\frac{1}{2}\mathbf{a}$
+Question: Consider a vector ${\bf a}$. Plot the vectors $2{\bf a}$, $-{\bf a}$, $\frac{1}{2}{\bf a}$
 
 Answer: ...
 
@@ -14,12 +14,12 @@ Answer: ...
 
 ::: {.callout-tip title="Think!"}
 
-Question: Give the expression for a unit vector in the direction of $\mathbf{a}$? Opposite to $\mathbf{a}$.
+Question: Give the expression for a unit vector in the direction of ${\bf a}$? Opposite to ${\bf a}$.
 
 Answer:
 
-- $\frac{\mathbf{a}}{\lnorm\mathbf{a}\rnorm}$ is a unit vector in the direction of $\mathbf{a}$.
-- $-\frac{\mathbf{a}}{\lnorm\mathbf{a}\rnorm}$ is a unit vector in the direction opposite to that of $\mathbf{a}$.
+- $\frac{\bf a}{\lnorm{\bf a}\rnorm}$ is a unit vector in the direction of ${\bf a}$.
+- $-\frac{\bf a}{\lnorm{\bf a}\rnorm}$ is a unit vector in the direction opposite to that of ${\bf a}$.
 
 :::
 
@@ -29,7 +29,7 @@ Answer:
 
 Vectors can be added using the parallelogram law or by placing vectors in a head to tail sequence.
 
-The vector difference $\mathbf{a}-\mathbf{b}$ points from the tip of $\mathbf{b}$ to the tip of $\mathbf{a}$.
+The vector difference ${\bf a}-{\bf b}$ points from the tip of ${\bf b}$ to the tip of ${\bf a}$.
 
 ![Vector addition via parallelogram law and tip to tail.](figures/vector_calculus_vector_addition.svg)
 
@@ -41,27 +41,27 @@ Consider the three dimensional Euclidean space $\mathbb{E}^3 = (\mathbb{R}^3,\cd
 
 ![ ](figures/vector_calculus_two_vectors.svg)
 
-Let $\mathbf{a}, \mathbf{b} \in  \mathbb{E}^3$.
+Let ${\bf a}, {\bf b} \in  \mathbb{E}^3$.
 
 \begin{align}
-    \mathbf{a}\cdot\mathbf{b} &= \lnorm\mathbf{a}\rnorm \lnorm \mathbf{b}\rnorm \cos(\theta).
+    {\bf a}\cdot{\bf b} &= \lnorm{\bf a}\rnorm \lnorm {\bf b}\rnorm \cos(\theta).
 \end{align}
 
 ::: {.callout-tip title="Think!"}
 
-Question: What is the result of $\mathbf{a}\cdot\mathbf{a}$?
+Question: What is the result of ${\bf a}\cdot{\bf a}$?
 
 Answer:
-The magnitude of a vector $\mathbf{a}$ is given by
+The magnitude of a vector ${\bf a}$ is given by
 \begin{align}
-    \mathbf{a}\cdot\mathbf{a} = \lnorm\mathbf{a}\rnorm^2 \implies \lnorm\mathbf{a}\rnorm = \sqrt{\mathbf{a}\cdot\mathbf{a}}.
+    {\bf a}\cdot{\bf a} = \lnorm{\bf a}\rnorm^2 \implies \lnorm{\bf a}\rnorm = \sqrt{{\bf a}\cdot{\bf a}}.
 \end{align}
 
 :::
 
 ::: {.callout-tip title="Think!"}
 
-Question: Is $\mathbf{a}\cdot\mathbf{b} = \mathbf{b}\cdot\mathbf{a}$? Why?
+Question: Is ${\bf a}\cdot{\bf b} = {\bf b}\cdot{\bf a}$? Why?
 
 Answer: Yes, the dot product is commutative. This can be shown using the definition of the dot product.
 
@@ -69,34 +69,34 @@ Answer: Yes, the dot product is commutative. This can be shown using the definit
 
 ## Vector Projections
 
-Suppose $\mathbf{u}$ is a unit vector: $\mathbf{u}\cdot\mathbf{u}=1$.
+Suppose ${\bf u}$ is a unit vector: ${\bf u}\cdot{\bf u}=1$.
 
 ![ ](figures/vector_calculus_projection.svg)
 
 ::: {.callout-tip title="Think!"}
 
-Question: Calculate $\mathbf{b}\cdot\mathbf{u}$
+Question: Calculate ${\bf b}\cdot{\bf u}$
 
 Answer:
 \begin{align}
-    \mathbf{b}\cdot\mathbf{u} = \lnorm\mathbf{b}\rnorm \underbrace{\lnorm\mathbf{u}\rnorm}_{1}\cos(\theta) = \lnorm\mathbf{b}\rnorm\cos(\theta).
+    {\bf b}\cdot{\bf u} = \lnorm{\bf b}\rnorm \underbrace{\lnorm{\bf u}\rnorm}_{1}\cos(\theta) = \lnorm{\bf b}\rnorm\cos(\theta).
 \end{align}
 
-Notice the right triangle in the above figure. Verify that $\mathbf{b}\cdot\mathbf{u}$ is the orthogonal projection of $\mathbf{b}$ in the direction of $\mathbf{u}$.
+Notice the right triangle in the above figure. Verify that ${\bf b}\cdot{\bf u}$ is the orthogonal projection of ${\bf b}$ in the direction of ${\bf u}$.
 
 :::
 
-Suppose $\mathbf{v}\cdot\mathbf{v} = 1$ ($\mathbf{v}$ is a unit vector), and $\mathbf{v}\cdot\mathbf{u}=0$ ($\mathbf{v}$ and $\mathbf{u}$ are orthogonal/perpendicular).
+Suppose ${\bf v}\cdot{\bf v} = 1$ (${\bf v}$ is a unit vector), and ${\bf v}\cdot{\bf u}=0$ (${\bf v}$ and ${\bf u}$ are orthogonal/perpendicular).
 
 \begin{align}
-    \mathbf{b}\cdot\mathbf{v} = \lnorm\mathbf{b}\rnorm\cos\lp\frac{\pi}{2}-\theta\rp = \lnorm\mathbf{b}\rnorm\sin(\theta).
+    {\bf b}\cdot{\bf v} = \lnorm{\bf b}\rnorm\cos\lp\frac{\pi}{2}-\theta\rp = \lnorm{\bf b}\rnorm\sin(\theta).
 \end{align}
 
-This is the projection of $\mathbf{b}$ in the direction perpendicular to $\mathbf{u}$. Hence, we can write
+This is the projection of ${\bf b}$ in the direction perpendicular to ${\bf u}$. Hence, we can write
 
 \begin{align}
-    \mathbf{b} &= \lp\mathbf{b}\cdot\mathbf{u}\rp\mathbf{u}+\lp\mathbf{b}\cdot\mathbf{v}\rp\mathbf{v}\\
-    &= \underbrace{\lnorm\mathbf{b}\rnorm}_{\text{magnitude}}\lp\underbrace{\cos(\theta)\mathbf{u}+\sin(\theta)\mathbf{v}}_{\text{direction}}\rp.
+    {\bf b} &= \lp{\bf b}\cdot{\bf u}\rp{\bf u}+\lp{\bf b}\cdot{\bf v}\rp{\bf v}\\
+    &= \underbrace{\lnorm{\bf b}\rnorm}_{\text{magnitude}}\lp\underbrace{\cos(\theta){\bf u}+\sin(\theta){\bf v}}_{\text{direction}}\rp.
 \end{align}
 
 Remember that $\cos^2(\theta)+\sin^2(\theta)=1$.
@@ -108,14 +108,14 @@ Remember that $\cos^2(\theta)+\sin^2(\theta)=1$.
 We also define the cross product
 
 \begin{align}
-    \mathbf{a}\times\mathbf{b} &= \lnorm\mathbf{a}\rnorm \lnorm\mathbf{b}\rnorm |\sin(\theta)|\mathbf{n}
+    {\bf a}\times{\bf b} &= \lnorm{\bf a}\rnorm \lnorm{\bf b}\rnorm |\sin(\theta)|{\bf n}
 \end{align}
 
-where $\mathbf{n}$ is a unit vector normal to the plane formed by $\mathbf{a}$ and $\mathbf{b}$. The direction of $\mathbf{n}$ is given by the right hand rule.
+where ${\bf n}$ is a unit vector normal to the plane formed by ${\bf a}$ and ${\bf b}$. The direction of ${\bf n}$ is given by the right hand rule.
 
 ::: {.callout-tip title="Think!"}
 
-Question: Is $\mathbf{a}\times\mathbf{b} = \mathbf{b}\times\mathbf{a}$?
+Question: Is ${\bf a}\times{\bf b} = {\bf b}\times{\bf a}$?
 
 Answer:
 No, the cross product is not commutative. These vectors are opposite.
