@@ -1,0 +1,77 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{graphicx}
+\usepackage[colorlinks]{hyperref}
+\hypersetup{allcolors = {blue}}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,patterns}
+\usetikzlibrary{arrows,patterns,backgrounds,fit,calc}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage[us,12hr]{datetime}
+\usepackage{parskip}
+\usepackage{amsfonts}
+\usepackage[shortlabels]{enumitem}
+\usepackage{cancel}
+\usepackage{subcaption}
+\usepackage[most]{tcolorbox}
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+
+\definecolor{darkgreen}{rgb}{0.0, 0.4, 0.0}
+
+\newcommand{\bomega}{\mbox{\boldmath $\omega$}}
+\newcommand{\bOmega}{\mbox{\boldmath $\Omega$}}
+\newcommand{\balpha}{\mbox{\boldmath $\alpha$}}
+\newcommand{\bchi}{\mbox{\boldmath $\chi$}}
+\newcommand{\bpi}{\mbox{\boldmath $\pi$}}
+\newcommand{\bPi}{\mbox{\boldmath $\Pi$}}
+
+\newcommand{\leb}{\left[}
+\newcommand{\reb}{\right]}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+
+\newcommand{\lnorm}{\left|\!\left|}
+\newcommand{\rnorm}{\right|\!\right|}
+
+\begin{document}
+\begin{tikzpicture}
+    % basis and origin
+    \draw[thick,->] (0,0) -- (0,1) node[above] {${\bf E}_z$};
+    \draw[thick,->] (0,0) -- (-1.3,-1) node[left] {${\bf E}_x$};
+    \draw[thick,->] (0,0) -- (1.3,-1) node[right] {${\bf E}_y$};
+    \fill (0,0) circle (0.05);
+    \node at (-0.3,0.1) {$O$};
+
+    % mi
+    \fill[gray!40] (3,1) circle (0.3);
+    \node at (2.8,1.5) {$m_i$};
+
+    % velocity
+    \draw[thick,->,darkgreen] (3,1) -- (5,0) node[right] {${\bf v}_i$};
+
+    % position vector
+    \draw[thick,->,blue] (0,0) -- (3,1) node[midway,above] {${\bf r}_i$};
+
+    % m1
+    \fill[gray!40] (-3,2) circle (0.3);
+    \node at (-3,2.5) {$m_1$};
+
+    % velocity
+    \draw[thick,->,darkgreen] (-3,2) -- (-4,1) node[left] {${\bf v}_1$};
+
+    % position vector
+    \draw[thick,->,blue] (0,0) -- (-3,2) node[midway,above] {${\bf r}_1$};
+
+    % mn
+    \fill[gray!40] (1,-3) circle (0.3);
+    \node at (1,-3.5) {$m_n$};
+
+    % velocity
+    \draw[thick,->,darkgreen] (1,-3) -- (2,-2) node[right] {${\bf v}_n$};
+
+    % position vector
+    \draw[thick,->,blue] (0,0) -- (1,-3) node[midway,left] {${\bf r}_n$};
+\end{tikzpicture}
+\end{document}

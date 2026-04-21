@@ -2,7 +2,7 @@
 title: "System of Particles"
 ---
 
-![](../images/SOP_1.png)
+![](../figures/system_of_particles_intro.svg){fig-align="center" width="45%"}
  
 Consider a system of $n$ particles. A typical particle has
 \begin{itemize}
