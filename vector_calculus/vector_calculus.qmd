@@ -37,7 +37,7 @@ The vector difference $\mathbf{a}-\mathbf{b}$ points from the tip of $\mathbf{b}
 
 ## The dot (scalar) product
 
-Consider the three-dimensional Euclidean space $\mathbb{E}^3$. It is the space $\mathbb{R}^3$ together with a dot product, defined as follows.
+Consider the three dimensional Euclidean space $\mathbb{E}^3 = (\mathbb{R}^3,\cdot) $ which is the three-dimensional space $\mathbb{R}^3$ and a dot product defined as follows.
 
 ![ ](../figures/vector_calculus_two_vectors.svg)
 
