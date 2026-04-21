@@ -25,6 +25,8 @@ book:
     - part: "Preliminaries"
       chapters:
         - preliminaries/active_learning.qmd
+        - fundamental_concepts_of_solid_mechanics/fundamental_concepts_of_solid_mechanics.qmd
+        - vector_calculus/vector_calculus.qmd
         # - preliminaries/notation.qmd
     - part: "System of Particles"
       chapters:

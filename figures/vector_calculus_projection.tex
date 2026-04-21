@@ -1,0 +1,11 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+    \draw[thick,->] (0,0) -- (4,3) node[above, midway] {${\bf b}$};
+    \draw[thick,->] (0,0) -- (1,0) node[above] {${\bf u}$};
+    \draw[dashed] (0,0) -- (4,0) node[midway,below] {${\bf b}\cdot{\bf u}$};
+    \draw[dashed] (4,0) -- (4,3);
+    \draw[thick,->] (0,0) -- (0,1) node[above] {${\bf v}$};
+\end{tikzpicture}
+\end{document}
