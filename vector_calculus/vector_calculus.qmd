@@ -18,8 +18,8 @@ Question: Give the expression for a unit vector in the direction of $\mathbf{a}$
 
 Answer:
 
-- $\frac{\mathbf{a}}{\left\lVert\mathbf{a}\right\rVert}$ is a unit vector in the direction of $\mathbf{a}$.
-- $-\frac{\mathbf{a}}{\left\lVert\mathbf{a}\right\rVert}$ is a unit vector in the direction opposite to that of $\mathbf{a}$.
+- $\frac{\mathbf{a}}{\lnorm\mathbf{a}\rnorm}$ is a unit vector in the direction of $\mathbf{a}$.
+- $-\frac{\mathbf{a}}{\lnorm\mathbf{a}\rnorm}$ is a unit vector in the direction opposite to that of $\mathbf{a}$.
 
 :::
 
@@ -44,7 +44,7 @@ Consider the three dimensional Euclidean space $\mathbb{E}^3 = (\mathbb{R}^3,\cd
 Let $\mathbf{a}, \mathbf{b} \in  \mathbb{E}^3$.
 
 \begin{align}
-    \mathbf{a}\cdot\mathbf{b} &= \left\lVert\mathbf{a}\right\rVert \left\lVert \mathbf{b}\right\rVert \cos(\theta).
+    \mathbf{a}\cdot\mathbf{b} &= \lnorm\mathbf{a}\rnorm \lnorm \mathbf{b}\rnorm \cos(\theta).
 \end{align}
 
 ::: {.callout-tip title="Think!"}
@@ -54,7 +54,7 @@ Question: What is the result of $\mathbf{a}\cdot\mathbf{a}$?
 Answer:
 The magnitude of a vector $\mathbf{a}$ is given by
 \begin{align}
-    \mathbf{a}\cdot\mathbf{a} = \left\lVert\mathbf{a}\right\rVert^2 \implies \left\lVert\mathbf{a}\right\rVert = \sqrt{\mathbf{a}\cdot\mathbf{a}}.
+    \mathbf{a}\cdot\mathbf{a} = \lnorm\mathbf{a}\rnorm^2 \implies \lnorm\mathbf{a}\rnorm = \sqrt{\mathbf{a}\cdot\mathbf{a}}.
 \end{align}
 
 :::
@@ -79,7 +79,7 @@ Question: Calculate $\mathbf{b}\cdot\mathbf{u}$
 
 Answer:
 \begin{align}
-    \mathbf{b}\cdot\mathbf{u} = \left\lVert\mathbf{b}\right\rVert \underbrace{\left\lVert\mathbf{u}\right\rVert}_{1}\cos(\theta) = \left\lVert\mathbf{b}\right\rVert\cos(\theta).
+    \mathbf{b}\cdot\mathbf{u} = \lnorm\mathbf{b}\rnorm \underbrace{\lnorm\mathbf{u}\rnorm}_{1}\cos(\theta) = \lnorm\mathbf{b}\rnorm\cos(\theta).
 \end{align}
 
 Notice the right triangle in the above figure. Verify that $\mathbf{b}\cdot\mathbf{u}$ is the orthogonal projection of $\mathbf{b}$ in the direction of $\mathbf{u}$.
@@ -89,14 +89,14 @@ Notice the right triangle in the above figure. Verify that $\mathbf{b}\cdot\math
 Suppose $\mathbf{v}\cdot\mathbf{v} = 1$ ($\mathbf{v}$ is a unit vector), and $\mathbf{v}\cdot\mathbf{u}=0$ ($\mathbf{v}$ and $\mathbf{u}$ are orthogonal/perpendicular).
 
 \begin{align}
-    \mathbf{b}\cdot\mathbf{v} = \left\lVert\mathbf{b}\right\rVert \cos\left(\frac{\pi}{2}-\theta\right) = \left\lVert\mathbf{b}\right\rVert \sin(\theta).
+    \mathbf{b}\cdot\mathbf{v} = \lnorm\mathbf{b}\rnorm\cos\lp\frac{\pi}{2}-\theta\rp = \lnorm\mathbf{b}\rnorm\sin(\theta).
 \end{align}
 
 This is the projection of $\mathbf{b}$ in the direction perpendicular to $\mathbf{u}$. Hence, we can write
 
 \begin{align}
-    \mathbf{b} &= \left(\mathbf{b}\cdot\mathbf{u}\right)\mathbf{u}+\left(\mathbf{b}\cdot\mathbf{v}\right)\mathbf{v}\\
-    &= \underbrace{\left\lVert\mathbf{b}\right\rVert}_{\text{magnitude}}\left(\underbrace{\cos(\theta)\mathbf{u}+\sin(\theta)\mathbf{v}}_{\text{direction}}\right).
+    \mathbf{b} &= \lp\mathbf{b}\cdot\mathbf{u}\rp\mathbf{u}+\lp\mathbf{b}\cdot\mathbf{v}\rp\mathbf{v}\\
+    &= \underbrace{\lnorm\mathbf{b}\rnorm}_{\text{magnitude}}\lp\underbrace{\cos(\theta)\mathbf{u}+\sin(\theta)\mathbf{v}}_{\text{direction}}\rp.
 \end{align}
 
 Remember that $\cos^2(\theta)+\sin^2(\theta)=1$.
@@ -108,7 +108,7 @@ Remember that $\cos^2(\theta)+\sin^2(\theta)=1$.
 We also define the cross product
 
 \begin{align}
-    \mathbf{a}\times\mathbf{b} &= \left\lVert\mathbf{a}\right\rVert \left\lVert\mathbf{b}\right\rVert |\sin(\theta)|\mathbf{n}
+    \mathbf{a}\times\mathbf{b} &= \lnorm\mathbf{a}\rnorm \lnorm\mathbf{b}\rnorm |\sin(\theta)|\mathbf{n}
 \end{align}
 
 where $\mathbf{n}$ is a unit vector normal to the plane formed by $\mathbf{a}$ and $\mathbf{b}$. The direction of $\mathbf{n}$ is given by the right hand rule.
