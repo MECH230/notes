@@ -9,7 +9,7 @@
 <meta name="author" content="Theresa Honein">
 <meta name="dcterms.date" content="2026-01-01">
 
-<title>5&nbsp; Work Energy Theorem</title>
+<title>22&nbsp; The Work-Energy Theorem for a Rigid Body</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,6 +74,26 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+MathJax = {
+  tex: {
+    macros: {
+      lnorm: "\\left|\\!\\left|",
+      rnorm: "\\right|\\!\\right|",
+      lp: "\\left(",
+      rp: "\\right)",
+      leb: "\\left[",
+      reb: "\\right]",
+      bomega: "\\boldsymbol{\\omega}",
+      bOmega: "\\boldsymbol{\\Omega}",
+      balpha: "\\boldsymbol{\\alpha}",
+      bchi: "\\boldsymbol{\\chi}",
+      bpi: "\\boldsymbol{\\pi}",
+      bPi: "\\boldsymbol{\\Pi}"
+    }
+  }
+};
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -116,7 +136,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html">Rigid Body Dynamics</a></li><li class="breadcrumb-item"><a href="../rigid_body_dynamics/work_energy_theorem.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Work Energy Theorem</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html">Rigid Body Dynamics</a></li><li class="breadcrumb-item"><a href="../rigid_body_dynamics/work_energy_theorem.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">The Work-Energy Theorem for a Rigid Body</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -157,12 +177,42 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Active Learning</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preliminaries/note_on_units.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A Note on Units</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preliminaries/free_body_diagrams.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Free Body Diagrams</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vector_calculus/vector_calculus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamental_concepts_of_solid_mechanics/fundamental_concepts_of_solid_mechanics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preliminaries/continuum_mechanics_perspective.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Starting from Continuum Mechanics</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">System of Particles</span></a>
+ <span class="menu-text">Particle Dynamics</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -170,8 +220,74 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../system_of_particles/system_of_particles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">System of Particles</span></span></a>
+  <a href="../particle_dynamics/basic_particle_kinematics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Basic Particle Kinematics Concepts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/particle_kinetics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Particle Kinetics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/four_steps_bolm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Four Steps to Problem Solving Using the Balance of Linear Momentum</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/cylindrical_polar_coordinates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Cylindrical Polar Coordinate System</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/constrained_motion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Constrained Motion</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/serret_frenet_triad.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Serret-Frenet Basis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/spring_force.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spring Force</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/friction_force.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Friction Force</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/gravitational_force_model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Gravitational Force Model</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/power_work_energy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Power, Work, and Energy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/momenta_and_impulses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Momenta and Impulses of Particles</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/collisions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Collisions</span></span></a>
   </div>
 </li>
       </ul>
@@ -179,7 +295,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Rigid Body Dynamics</span></a>
+ <span class="menu-text">System of Particles</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -187,20 +303,37 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../system_of_particles/system_of_particles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">System of Particles</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Rigid Body Dynamics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../rigid_body_dynamics/rigid_body_kinematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Kinematics of Soft Robots</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Kinematics of Rigid Bodies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../rigid_body_dynamics/rigid_body_kinetics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Rigid Body Kinetics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Kinetics of Rigid Bodies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../rigid_body_dynamics/work_energy_theorem.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Work Energy Theorem</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">The Work-Energy Theorem for a Rigid Body</span></span></a>
   </div>
 </li>
       </ul>
@@ -208,7 +341,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -217,20 +350,61 @@ window.Quarto = {
  <span class="menu-text">MECH230 Dynamics Notes</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/conservative_forces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Mathematical Background for Conservative Forces</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/sets_linear_function_spaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Sets and Linear Function Spaces</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#koenigs-decomposition" id="toc-koenigs-decomposition" class="nav-link active" data-scroll-target="#koenigs-decomposition"><span class="header-section-number">22.1</span> Koenig’s Decomposition</a>
+  <ul class="collapse">
+  <li><a href="#fixed-point-rotation" id="toc-fixed-point-rotation" class="nav-link" data-scroll-target="#fixed-point-rotation"><span class="header-section-number">22.1.1</span> Fixed Point Rotation</a></li>
+  </ul></li>
+  <li><a href="#derivation-of-the-work-energy-theorem" id="toc-derivation-of-the-work-energy-theorem" class="nav-link" data-scroll-target="#derivation-of-the-work-energy-theorem"><span class="header-section-number">22.2</span> Derivation of the Work-Energy Theorem</a></li>
+  <li><a href="#alternative-form" id="toc-alternative-form" class="nav-link" data-scroll-target="#alternative-form"><span class="header-section-number">22.3</span> Alternative Form</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">22.4</span> Examples</a>
+  <ul class="collapse">
+  <li><a href="#bar-pendulum-fixed-at-its-end" id="toc-bar-pendulum-fixed-at-its-end" class="nav-link" data-scroll-target="#bar-pendulum-fixed-at-its-end"><span class="header-section-number">22.4.1</span> Bar Pendulum Fixed at Its End</a></li>
+  <li><a href="#bar-pendulum-with-end-mass" id="toc-bar-pendulum-with-end-mass" class="nav-link" data-scroll-target="#bar-pendulum-with-end-mass"><span class="header-section-number">22.4.2</span> Bar Pendulum With End Mass</a></li>
+  <li><a href="#follower-force" id="toc-follower-force" class="nav-link" data-scroll-target="#follower-force"><span class="header-section-number">22.4.3</span> Follower Force</a></li>
+  </ul></li>
+  <li><a href="#energy-conservation" id="toc-energy-conservation" class="nav-link" data-scroll-target="#energy-conservation"><span class="header-section-number">22.5</span> Energy Conservation</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html">Rigid Body Dynamics</a></li><li class="breadcrumb-item"><a href="../rigid_body_dynamics/work_energy_theorem.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Work Energy Theorem</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html">Rigid Body Dynamics</a></li><li class="breadcrumb-item"><a href="../rigid_body_dynamics/work_energy_theorem.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">The Work-Energy Theorem for a Rigid Body</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Work Energy Theorem</span></h1>
+<h1 class="title"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">The Work-Energy Theorem for a Rigid Body</span></h1>
 </div>
 
 
@@ -259,124 +433,98 @@ window.Quarto = {
 </header>
 
 
-<p>The Koenig decomposition for the kinetic energy of a rigid body is: <span class="math display">\[\begin{align}
-    T = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C+\frac{1}{2}\mathbf{H}\cdot\boldsymbol{\omega}.
-\end{align}\]</span> In this class, <span class="math inline">\(\boldsymbol{\omega} = \omega \mathbf{E}_z\)</span>, <span class="math inline">\(\frac{1}{2}\mathbf{H}\cdot\boldsymbol{\omega} = \frac{1}{2}I_{zz} w^2\)</span>.</p>
-<p>In the special case of a fixed point rotation about point <span class="math inline">\(O\)</span>, the kinetic energy becomes <span class="math display">\[\begin{align}
-    T = \frac{1}{2}\mathbf{H}^O\cdot\boldsymbol{\omega}.
-\end{align}\]</span> which simplifies to <span class="math inline">\(T = \frac{1}{2}I^O_{zz} w^2\)</span> when <span class="math inline">\(\boldsymbol{\omega} = \omega\mathbf{E}_z\)</span>.</p>
-<p>The work-energy theorem for a rigid body is: <span class="math display">\[\begin{align}
-    \frac{dT}{dt} = \mathbf{F}\cdot\mathbf{v}_C+\mathbf{M}\cdot\boldsymbol{\omega} = \sum_{i=1}^N\mathbf{F}_i\cdot\mathbf{v}_i+\mathbf{M}_e\cdot\boldsymbol{\omega}.
-\end{align}\]</span> Integrating the above expression with respect time between <span class="math inline">\(t_A\)</span> and <span class="math inline">\(t_B\)</span>, we obtain <span class="math display">\[\begin{align}
-    \begin{split}
-        T_B-T_A = W_{\mathbf{F},AB}+W_{\mathbf{M},AB} = \sum_{i=1}^N W_{\mathbf{F}_i,AB}+W_{\mathbf{M}_e,AB},
-        \label{eq:work-energy-theorem-RB}
-    \end{split}
-\end{align}\]</span> where the work of the forces and moments is calculates as follows: <span class="math display">\[\begin{align}
-    \begin{split}
-        W_{\mathbf{F},AB} &amp;= \int_{t_A}^{t_B}\mathbf{F}\cdot\mathbf{v}_Cdt,\\
-        W_{\mathbf{M},AB} &amp;= \int_{t_A}^{t_B}\mathbf{M}^C\cdot\boldsymbol{\omega} dt,\\
-        W_{\mathbf{F}_i,AB} &amp;= \int_{t_A}^{t_B}\mathbf{F}_i\cdot\mathbf{v}_i dt,\\
-        W_{\mathbf{M}_e,AB} &amp;= \int_{t_A}^{t_B}\mathbf{M}_e\cdot\boldsymbol{\omega} dt,\\
-    \end{split}
-\end{align}\]</span> Notice that in calculating the work of a force, we dot the force with the velocity of its point of application.</p>
-<p>As in particles and systems of particles, this theorem can be used to establish conservation of the total energy of a rigid body during a motion.</p>
-<p>In the following section, we derive these results.</p>
-<p>By definition, the kinetic energy <span class="math inline">\(T\)</span> of a rigid body is the (continuous) sum of the kinetic energies of the differential masses composing it: <span class="math display">\[\begin{align}
-    T = \frac{1}{2}\int_{\mathcal{R}}\mathbf{v}\cdot\mathbf{v}\rho dv.
-\end{align}\]</span> We can introduce the <span class="math inline">\(\mathbf{v}_C\)</span> term through <span class="math display">\[\begin{align}
-    \begin{split}
-        &amp; \mathbf{v} = \mathbf{v}_C+\boldsymbol{\omega}\times\boldsymbol{\pi},\\
-        &amp; \boldsymbol{\pi} = \mathbf{r}-\mathbf{r}_C,\\
-        &amp; \boldsymbol{\omega} = \omega_x\mathbf{e}_x+\omega_y\mathbf{e}_y+\omega_z\mathbf{e}_z.
-    \end{split}
-\end{align}\]</span> Substituting the above expressions in the kinetic energy integral, we get <span class="math display">\[\begin{align}
-    T = \frac{1}{2}\int_{\mathcal{B}}\left(\mathbf{v}_C\cdot\mathbf{v}_C+2\mathbf{v}_C\cdot(\boldsymbol{\omega}\times\boldsymbol{\pi})+(\boldsymbol{\omega}\times\boldsymbol{\pi})\cdot(\boldsymbol{\omega}\times\boldsymbol{\pi})\right) dm
-\end{align}\]</span> For the first two terms in the above integral, <span class="math display">\[\begin{align}
-    \begin{split}
-        &amp; \frac{1}{2}\int_{\mathcal{B}}\mathbf{v}_C\cdot\mathbf{v}_C dm = \frac{\mathbf{v}_C\cdot\mathbf{v}_C}{2}\int dm = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C.\\
-        &amp; \int_{\mathcal{B}}\mathbf{v}_C\cdot(\boldsymbol{\omega}\times\boldsymbol{\pi})dm = \mathbf{v}_C\cdot\left(\boldsymbol{\omega}\times\int\pi dm \right) = 0.
-    \end{split}
-\end{align}\]</span> Thus, <span class="math display">\[\begin{align}
-    T = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C+\frac{1}{2}\int_{\mathcal{B}}(\boldsymbol{\omega}\times\boldsymbol{\pi})\cdot(\boldsymbol{\omega}\times\boldsymbol{\pi})dm
-\end{align}\]</span> we can simplify <span class="math display">\[\begin{align}
-    (\boldsymbol{\omega}\times\boldsymbol{\pi})\cdot(\boldsymbol{\omega}\times\boldsymbol{\pi}) = ((\boldsymbol{\pi}\cdot\boldsymbol{\pi})\boldsymbol{\omega}-(\boldsymbol{\pi}\cdot\boldsymbol{\omega})\cdot\boldsymbol{\pi}).
-\end{align}\]</span> Recall that <span class="math display">\[\begin{align}
-    \mathbf{H}^C = \int_{\mathcal{B}}\boldsymbol{\pi}\times(\omega\times\boldsymbol{\pi})dm = \int_{\mathcal{B}}((\boldsymbol{\pi}\cdot\boldsymbol{\pi})\boldsymbol{\omega}-(\boldsymbol{\pi}\cdot\boldsymbol{\omega})\boldsymbol{\pi})dm.
-\end{align}\]</span> Hence, we obtain the Koenig decomposition: <span class="math display">\[\begin{align}
-    T = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C+\frac{1}{2}\mathbf{H}\cdot\boldsymbol{\omega}.
+<p>The <strong>Koenig decomposition</strong> for the kinetic energy of a rigid body is: <span class="math display">\[\begin{align}
+    T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}^C\cdot\bomega.
+\end{align}\]</span> In this class, <span class="math inline">\(\bomega = \omega{\bf E}_z\)</span>, so <span class="math inline">\(\frac{1}{2}{\bf H}^C\cdot\bomega = \frac{1}{2}I_{zz}\omega^2\)</span>.</p>
+<p>For fixed point rotation about <span class="math inline">\(O\)</span>, the kinetic energy simplifies to: <span class="math display">\[\begin{align}
+    T = \frac{1}{2}{\bf H}^O\cdot\bomega = \frac{1}{2}I^O_{zz}\omega^2.
 \end{align}\]</span></p>
-<p>In the case of fixed point rotation, <span class="math inline">\(\mathbf{v}_C = \boldsymbol{\omega}\times(\mathbf{r}_C-\mathbf{r}_O)\)</span> and <span class="math inline">\(\mathbf{v}_O = 0\)</span>, then <span class="math display">\[\begin{align}
-    \begin{split}
-        T &amp;= \frac{1}{2}\mathbf{G}\cdot(\boldsymbol{\omega}\times\mathbf{r}_{C/O})+\frac{1}{2}\mathbf{H}\cdot\boldsymbol{\omega}\\
-        &amp;= \frac{1}{2}\boldsymbol{\omega}\cdot(\mathbf{r}_{C/O}\times\mathbf{G})+\frac{1}{2}\mathbf{H}^C\cdot\boldsymbol{\omega}\\
-        &amp;= \frac{1}{2}(\mathbf{r}_{C/O}\times\mathbf{G}+\mathbf{H})\cdot\boldsymbol{\omega}\\
-        &amp;= \frac{1}{2}\mathbf{H}^O\cdot\boldsymbol{\omega}.
-    \end{split}
+<p>The <strong>work-energy theorem</strong> for a rigid body is: <span class="math display">\[\begin{align}
+    \frac{dT}{dt} = {\bf F}\cdot{\bf v}_C+{\bf M}^C\cdot\bomega = \sum_{i=1}^N{\bf F}_i\cdot{\bf v}_i+{\bf M}_e\cdot\bomega.
+\end{align}\]</span> Integrating from <span class="math inline">\(t_A\)</span> to <span class="math inline">\(t_B\)</span>: <span class="math display">\[\begin{align}
+    T_B-T_A = W_{{\bf F},AB}+W_{{\bf M},AB} = \sum_{i=1}^N W_{{\bf F}_i,AB}+W_{{\bf M}_e,AB},
+\end{align}\]</span> where <span class="math display">\[\begin{align}
+    W_{{\bf F},AB} &amp;= \int_{t_A}^{t_B}{\bf F}\cdot{\bf v}_C\,dt, &amp;
+    W_{{\bf M},AB} &amp;= \int_{t_A}^{t_B}{\bf M}^C\cdot\bomega\,dt,\\
+    W_{{\bf F}_i,AB} &amp;= \int_{t_A}^{t_B}{\bf F}_i\cdot{\bf v}_i\,dt, &amp;
+    W_{{\bf M}_e,AB} &amp;= \int_{t_A}^{t_B}{\bf M}_e\cdot\bomega\,dt.
+\end{align}\]</span> Notice: the work of a force uses the velocity of its <strong>point of application</strong>.</p>
+<section id="koenigs-decomposition" class="level2" data-number="22.1">
+<h2 data-number="22.1" class="anchored" data-anchor-id="koenigs-decomposition"><span class="header-section-number">22.1</span> Koenig’s Decomposition</h2>
+<p>By definition, the kinetic energy of a rigid body is: <span class="math display">\[\begin{align}
+    T = \frac{1}{2}\int_{\mathcal{B}}{\bf v}\cdot{\bf v}\,\rho\,dv.
+\end{align}\]</span> Using <span class="math inline">\({\bf v} = {\bf v}_C+\bomega\times\bpi\)</span> with <span class="math inline">\(\bpi = {\bf r}-{\bf r}_C\)</span>: <span class="math display">\[\begin{align}
+    T = \frac{1}{2}\int_{\mathcal{B}}\lp{\bf v}_C\cdot{\bf v}_C+2{\bf v}_C\cdot(\bomega\times\bpi)+(\bomega\times\bpi)\cdot(\bomega\times\bpi)\rp dm.
+\end{align}\]</span> The first term integrates to <span class="math inline">\(\frac{1}{2}m{\bf v}_C\cdot{\bf v}_C\)</span>, the second vanishes (since <span class="math inline">\(\int\bpi\,dm = {\bf 0}\)</span>), and using the BAC-CAB identity for the third: <span class="math display">\[\begin{align}
+    T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}^C\cdot\bomega.
 \end{align}\]</span></p>
-<p><span class="math display">\[\begin{align}
-    \dot{T} = \frac{1}{2}m\dot{\mathbf{v}}_C\cdot\mathbf{v}_C+\frac{1}{2}m\mathbf{v}_C\cdot\dot{\mathbf{v}}_C+\frac{1}{2}\dot{\mathbf{H}}\cdot\boldsymbol{\omega}+\frac{1}{2}\mathbf{H}\cdot\dot{\boldsymbol{\omega}}.
-\end{align}\]</span> We need to show that <span class="math inline">\(\dot{\mathbf{H}}\cdot\boldsymbol{\omega} = \mathbf{H}\cdot\dot{\boldsymbol{\omega}}\)</span>. <span class="math display">\[\begin{align}
-    \begin{split}
-        \boldsymbol{\alpha} = \dot{\boldsymbol{\omega}} &amp;= \frac{d}{dt}(\omega_x\mathbf{e}_x+\omega_y\mathbf{e}_y+\omega_z\mathbf{e}_z)\\
-        &amp;= \dot{\omega}_x\mathbf{e}_x+\dot{\omega}_y\mathbf{e}_y+\dot{\omega}_z\mathbf{e}_z+\omega_x\dot{\mathbf{e}}_x+\omega_y\dot{\mathbf{e}}_y+\omega_z\dot{\mathbf{e}}_z\\
-        &amp;= \dot{\omega}_x\mathbf{e}_x+\dot{\omega}_y\mathbf{e}_y+\dot{\omega}_z\mathbf{e}_z+\boldsymbol{\omega}\times(\omega_x\mathbf{e}_x+\omega_y\mathbf{e}_y+\omega_z\mathbf{e}_z)\\
-        &amp;= \dot{\omega}_x\mathbf{e}_x+\dot{\omega}_y\mathbf{e}_y+\dot{\omega}_z\mathbf{e}_z.
-    \end{split}
+<section id="fixed-point-rotation" class="level3" data-number="22.1.1">
+<h3 data-number="22.1.1" class="anchored" data-anchor-id="fixed-point-rotation"><span class="header-section-number">22.1.1</span> Fixed Point Rotation</h3>
+<p>For fixed point rotation about <span class="math inline">\(O\)</span> (<span class="math inline">\({\bf v}_O = {\bf 0}\)</span>), using the cyclic property of the scalar triple product: <span class="math display">\[\begin{align}
+    T &amp;= \frac{1}{2}{\bf G}\cdot(\bomega\times{\bf r}_{C/O})+\frac{1}{2}{\bf H}^C\cdot\bomega
+    = \frac{1}{2}({\bf r}_{C/O}\times{\bf G}+{\bf H}^C)\cdot\bomega
+    = \frac{1}{2}{\bf H}^O\cdot\bomega.
 \end{align}\]</span></p>
-<p>Another direct calculation using this expression for <span class="math inline">\(\boldsymbol{\alpha}\)</span> shows that <span class="math display">\[\begin{align}
-    \begin{split}
-        \mathbf{H}^C\cdot\dot{\boldsymbol{\omega}} = (I_{xx}\omega_x+I_{xy}\omega_y+I_{xz}\omega_z)\dot{\omega}_x+(I_{xy}\omega_x+I_{yy}\omega_y+I_{yz}\omega_z)\dot{\omega}_y+(I_{xz}\omega_x+I_{yz}\omega_y+I_{zz}\omega_z)\dot{\omega}_z.
-    \end{split}
+</section>
+</section>
+<section id="derivation-of-the-work-energy-theorem" class="level2" data-number="22.2">
+<h2 data-number="22.2" class="anchored" data-anchor-id="derivation-of-the-work-energy-theorem"><span class="header-section-number">22.2</span> Derivation of the Work-Energy Theorem</h2>
+<p>From <span class="math inline">\(T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}^C\cdot\bomega\)</span>, taking the time derivative and using the fact that <span class="math inline">\(\dot{\bf H}^C\cdot\bomega = {\bf H}^C\cdot\dot{\bomega}\)</span> (verified by direct calculation): <span class="math display">\[\begin{align}
+    \dot{T} = m\dot{\bf v}_C\cdot{\bf v}_C+\dot{\bf H}^C\cdot\bomega.
+\end{align}\]</span> Invoking the BoLM and BoAM: <span class="math display">\[\begin{align}
+    \dot{T} = {\bf F}\cdot{\bf v}_C+{\bf M}^C\cdot\bomega.
 \end{align}\]</span></p>
-<p>Comparing this to the corresponding expression for <span class="math inline">\(\dot{H}^C\cdot\boldsymbol{\omega}\)</span>, we find that they are equal. Consequently, <span class="math display">\[\begin{align}
-    \dot{T} = \frac{1}{2}m\dot{\mathbf{v}}_C\cdot\mathbf{v}_C+\frac{1}{2}m\mathbf{v}_C\cdot\dot{\mathbf{v}}_C+\frac{1}{2}\dot{\mathbf{H}}\cdot\boldsymbol{\omega}+\frac{1}{2}\dot{\mathbf{H}}\cdot\boldsymbol{\omega}.
-\end{align}\]</span> This result implies that <span class="math display">\[\begin{align}
-    \dot{T} = m\dot{\mathbf{v}}_C\cdot\mathbf{v}_C+\dot{\mathbf{H}}\cdot\boldsymbol{\omega}.
-\end{align}\]</span> Invoking the balance of linear momentum and the balance of angular momentum, we obtain the work-energy theorem: <span class="math display">\[\begin{align}
-    \dot{T} = \mathbf{F}\cdot\mathbf{v}_C+\mathbf{M}\cdot\boldsymbol{\omega}.
-\end{align}\]</span> You should notice how this is a natural extension of the work-energy theorem for a single particle. We can then integrate these expressions of the work-energy theorem to get equation (<span class="math inline">\(\ref{eq:work-energy-theorem-RB}\)</span>).</p>
-<p>Recall, <span class="math display">\[\begin{align}
-    \begin{split}
-        &amp; \mathbf{F} = \sum_{i=1}^K\mathbf{F}_i\\
-        &amp; \mathbf{M}^C = \mathbf{M}_e+\sum_{i=1}^K(\mathbf{r}_i-\mathbf{r}_C)\times\mathbf{F}_i
-    \end{split}
-\end{align}\]</span> Hence, the mechanical power of the resultant forces and moments can be written as <span class="math display">\[\begin{align}
-    \mathbf{F}\cdot\mathbf{v}_C+\mathbf{M}^C\cdot\boldsymbol{\omega} = \left(\sum_{i=1}^K\mathbf{F}_i\right)\cdot\mathbf{v}_C+\mathbf{M}_e\cdot\boldsymbol{\omega}+\left(\sum_{i=1}^K(\mathbf{x}_i-\mathbf{x}_C)\times\mathbf{F}_i\right)\cdot\boldsymbol{\omega}
-\end{align}\]</span> With some minor manipulations involving the identity <span class="math inline">\(\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c}) = \mathbf{c}\cdot(\mathbf{a}\times\mathbf{b})\)</span> and noting that <span class="math inline">\(\mathbf{v}_i = \mathbf{v}_C+\boldsymbol{\omega}\times(\mathbf{x}_i-\mathbf{x}_C)\)</span>, we find that <span class="math display">\[\begin{align}
-    \mathbf{F}\cdot\mathbf{v}_C+\mathbf{M}\cdot\boldsymbol{\omega} = \sum_{i=1}^K\mathbf{F}_i\cdot\mathbf{v}_i+\mathbf{M}_e\cdot\boldsymbol{\omega}.
-\end{align}\]</span> In conclusion, we have an alternative form of the work-energy theorem that proves to be far easier to use in applications: <span class="math display">\[\begin{align}
-    \dot{T} = \sum_{i=1}^K\mathbf{F}_i\cdot\mathbf{v}_i+\mathbf{M}_e\cdot\boldsymbol{\omega}.
+</section>
+<section id="alternative-form" class="level2" data-number="22.3">
+<h2 data-number="22.3" class="anchored" data-anchor-id="alternative-form"><span class="header-section-number">22.3</span> Alternative Form</h2>
+<p>Using <span class="math inline">\({\bf F} = \sum_i{\bf F}_i\)</span> and <span class="math inline">\({\bf M}^C = {\bf M}_e+\sum_i({\bf r}_i-{\bf r}_C)\times{\bf F}_i\)</span>, and noting that <span class="math inline">\({\bf v}_i = {\bf v}_C+\bomega\times({\bf r}_i-{\bf r}_C)\)</span>: <span class="math display">\[\begin{align}
+    \dot{T} = \sum_{i=1}^K{\bf F}_i\cdot{\bf v}_i+{\bf M}_e\cdot\bomega.
+\end{align}\]</span> This form is often easier to use in applications: each force is dotted with the velocity of its point of application.</p>
+</section>
+<section id="examples" class="level2" data-number="22.4">
+<h2 data-number="22.4" class="anchored" data-anchor-id="examples"><span class="header-section-number">22.4</span> Examples</h2>
+<section id="bar-pendulum-fixed-at-its-end" class="level3" data-number="22.4.1">
+<h3 data-number="22.4.1" class="anchored" data-anchor-id="bar-pendulum-fixed-at-its-end"><span class="header-section-number">22.4.1</span> Bar Pendulum Fixed at Its End</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="work_energy_theorem_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A bar of length <span class="math inline">\(\ell\)</span> and mass <span class="math inline">\(m\)</span> pinned at its end. The energy is conserved: <span class="math display">\[\begin{align}
+    U &amp;= -\frac{mg\ell}{2}\cos\theta,\\
+    E &amp;= \frac{m\ell^2}{6}\dot{\theta}^2-\frac{mg\ell}{2}\cos\theta = \text{const}.
 \end{align}\]</span></p>
-<p><span class="math display">\[\begin{align}
-    \begin{split}
-        &amp; U = -\frac{mg\ell}{2}\cos(\theta),\\
-        &amp; E = \frac{m\ell^2}{6}\dot{\theta}^2-\frac{mg\ell}{2}\cos(\theta) = const.
-    \end{split}
+</section>
+<section id="bar-pendulum-with-end-mass" class="level3" data-number="22.4.2">
+<h3 data-number="22.4.2" class="anchored" data-anchor-id="bar-pendulum-with-end-mass"><span class="header-section-number">22.4.2</span> Bar Pendulum With End Mass</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="work_energy_theorem_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Adding a dead mass <span class="math inline">\(m_e\)</span> at the end: <span class="math display">\[\begin{align}
+    U = -\frac{mg\ell}{2}\cos\theta-m_e g\ell\cos\theta.
 \end{align}\]</span></p>
-<p><span class="math display">\[\begin{align}
-    &amp; U = -\frac{mg\ell}{2}\cos(\theta)-m_e g\ell\cos(\theta)
-\end{align}\]</span></p>
-<p></p>
-<p><span class="math inline">\(\mathbf{P}\)</span> is actively changing depending on what the configuration is.</p>
-<p>This is a nonconservative system.</p>
-<p>Moments can also be conservative.</p>
-<p>A torsional spring is just a model for some kind of elasticity at the joint.</p>
-<p>The torsional spring with stiffness <span class="math inline">\(K\)</span> creates a couple <span class="math display">\[\begin{align}
-    \mathbf{M}_S = K\theta(-\mathbf{E}_Z)
-\end{align}\]</span> The power of the couple is <span class="math display">\[\begin{align}
-    \mathbf{M}_S\cdot\boldsymbol{\omega} = -K\theta\dot{\theta} = -\frac{d}{dt}\left( K\frac{\dot{\theta}^2}{2} \right).
-\end{align}\]</span> Hence, <span class="math inline">\(U = \frac{1}{2}K\dot{\theta}^2\)</span> for the torsional spring.</p>
-<p>A constant couple <span class="math inline">\(\mathbf{M}_e = M_e\mathbf{E}_Z\)</span> is also conservative. Its power is <span class="math display">\[\begin{align}
-    \mathbf{M}_e\cdot\boldsymbol{\omega} = M_e\dot{\theta} = -\frac{d}{dt}(-M_e\theta).
-\end{align}\]</span> Hence, <span class="math inline">\(U = -M_e\theta\)</span> for a constant couple.</p>
-<p>Note. This only works for <span class="math inline">\(\boldsymbol{\omega} = \omega\mathbf{E}_z\)</span>. Constant couples are not conservative in general.</p>
-<p>For rigid bodies, impact ideas are the same as in systems of particles,</p>
-<p></p>
-<p>Consider a projectile fired at a pendulum in the horizontal plane (no gravity). What is <span class="math inline">\(x\)</span> so that the reaction for at the pin is almost zero during impact.</p>
-<p>If <span class="math inline">\(x\)</span> is big enough, the horizontal component of reaction force at <span class="math inline">\(O\)</span> will point to the left. If <span class="math inline">\(x\)</span> is small enough, the horizontal component of the reaction force at <span class="math inline">\(O\)</span> will point to the right. Somewhere in between, the reaction force at <span class="math inline">\(O\)</span> will be minimized. This optimal location <span class="math inline">\(x\)</span> is called the center of percussion.</p>
+</section>
+<section id="follower-force" class="level3" data-number="22.4.3">
+<h3 data-number="22.4.3" class="anchored" data-anchor-id="follower-force"><span class="header-section-number">22.4.3</span> Follower Force</h3>
+<p>If instead a follower force <span class="math inline">\({\bf P}\)</span> is applied perpendicular to the bar at its end, this force is <strong>nonconservative</strong> (its direction actively changes with configuration). Energy is not conserved.</p>
+</section>
+</section>
+<section id="energy-conservation" class="level2" data-number="22.5">
+<h2 data-number="22.5" class="anchored" data-anchor-id="energy-conservation"><span class="header-section-number">22.5</span> Energy Conservation</h2>
+<p>As with particles and systems of particles, this theorem can be used to establish conservation of the total mechanical energy of a rigid body, <span class="math inline">\(E = T + U\)</span>, when all work-doing forces and moments are conservative.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -781,13 +929,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../rigid_body_dynamics/rigid_body_kinetics.html" class="pagination-link" aria-label="Rigid Body Kinetics">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Rigid Body Kinetics</span></span>
+      <a href="../rigid_body_dynamics/rigid_body_kinetics.html" class="pagination-link" aria-label="Kinetics of Rigid Bodies">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Kinetics of Rigid Bodies</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../summary.html" class="pagination-link" aria-label="MECH230 Dynamics Notes">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
