@@ -25,7 +25,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -441,7 +460,7 @@ window.Quarto = {
 </header>
 
 
-<p>This section is adapted from chapter 1 of <a href="https://link.springer.com/book/10.1007/978-1-4614-6768-7">Introduction to Solid Mechanics - An Integrated Approach</a> by Lubliner and Papadopoulos <span class="citation" data-cites="lubliner2017introduction">(<a href="#ref-lubliner2017introduction" role="doc-biblioref"><strong>lubliner2017introduction?</strong></a>)</span>.</p>
+<p>This section is adapted from chapter 1 of <a href="https://link.springer.com/book/10.1007/978-1-4614-6768-7">Introduction to Solid Mechanics - An Integrated Approach</a> by Lubliner and Papadopoulos <span class="citation" data-cites="lubliner2017introduction">(<a href="../references.html#ref-lubliner2017introduction" role="doc-biblioref">Lubliner and Papadopoulos 2017</a>)</span>.</p>
 <section id="mechanics" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="mechanics"><span class="header-section-number">5.1</span> Mechanics</h2>
 <p>Mechanics, as a scientific discipline, is the study of the behavior of bodies subject to forces and displacements (and, to some extent, heating and cooling).</p>
@@ -518,9 +537,14 @@ window.Quarto = {
 </section>
 <section id="equilibrium" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="equilibrium"><span class="header-section-number">6.3</span> Equilibrium</h2>
-<p>If a body’s acceleration is zero, then it is at rest or in a uniform motion. In this case, the forces is said to be in equilibrium. The study of equilibrium is known as statics and constitutes one of the main subjects of this book. Traditionally, statics deals only (or at least primarily) with rigid bodies, while deformable bodies are studied in courses historically called strength of materials (or, more recently, mechanics of materials). In this book <span class="citation" data-cites="lubliner2017introduction">(<a href="#ref-lubliner2017introduction" role="doc-biblioref"><strong>lubliner2017introduction?</strong></a>)</span>, the statics of rigid and deformable solid bodies will be studied in an integrated manner.</p>
+<p>If a body’s acceleration is zero, then it is at rest or in a uniform motion. In this case, the forces is said to be in equilibrium. The study of equilibrium is known as statics and constitutes one of the main subjects of this book. Traditionally, statics deals only (or at least primarily) with rigid bodies, while deformable bodies are studied in courses historically called strength of materials (or, more recently, mechanics of materials). In this book <span class="citation" data-cites="lubliner2017introduction">(<a href="../references.html#ref-lubliner2017introduction" role="doc-biblioref">Lubliner and Papadopoulos 2017</a>)</span>, the statics of rigid and deformable solid bodies will be studied in an integrated manner.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-lubliner2017introduction" class="csl-entry" role="listitem">
+Lubliner, Jacob, and Panayiotis Papadopoulos. 2017. <em>Introduction to Solid Mechanics: An Integrated Approach</em>. Springer. <a href="https://doi.org/10.1007/978-1-4614-6768-7">https://doi.org/10.1007/978-1-4614-6768-7</a>.
+</div>
+</div>
 </section>
 </section>
 

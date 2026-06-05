@@ -23,7 +23,21 @@ Answer:
 
 :::
 
-![ ](figures/vector_calculus_unit_vector.svg)
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+    \coordinate (O) at (0,0);
+    \coordinate (V) at (4,0);
+    \coordinate (U1) at (1,0);
+    \coordinate (U2) at (-1,0);
+    \draw[->, thick, blue] (O) -- (V) node[midway, above] {$\mathbf{a}$};
+    \draw[->, thick, red] (O) -- (U1) node[midway, below] {$\frac{\mathbf{a}}{||\mathbf{a}||}$};
+    \draw[->, thick, green!70!black] (O) -- (U2) node[midway, below] {$-\frac{\mathbf{a}}{||\mathbf{a}||}$};
+    \filldraw (O) circle (1pt);
+\end{tikzpicture}
+```
 
 ## Vector summation and subtraction
 
@@ -31,15 +45,61 @@ Vectors can be added using the parallelogram law or by placing vectors in a head
 
 The vector difference ${\bf a}-{\bf b}$ points from the tip of ${\bf b}$ to the tip of ${\bf a}$.
 
-![Vector addition via parallelogram law and tip to tail.](figures/vector_calculus_vector_addition.svg)
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\usetikzlibrary{arrows}
+\begin{tikzpicture}[>=stealth, scale=1.0]
+    \draw[->, thick, blue] (0,0) -- (2,2) node[midway, above left] {${\bf a}$};
+    \draw[->, thick, red] (0,0) -- (3,1) node[midway, below right] {${\bf b}$};
+    \draw[->, thick, purple] (0,0) -- (5,3) node[midway, above] {${\bf a}+{\bf b}$};
+    \draw[dashed, red] (2,2) -- (5,3);
+    \draw[dashed, blue] (3,1) -- (5,3);
+    \filldraw (0,0) circle (1pt) node[below left] {O};
+    \filldraw (2,2) circle (1pt);
+    \filldraw (3,1) circle (1pt);
+    \filldraw (5,3) circle (1pt);
+\end{tikzpicture}
+```
 
-![Vector subtraction as $\vec{a} - \vec{b}$ using the parallelogram law. This can be also done using head to tail.](figures/vector_calculus_vector_subtraction.svg)
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\usetikzlibrary{arrows}
+\begin{tikzpicture}[>=stealth, scale=1.0]
+    \draw[->, thick, blue] (0,0) -- (2,2) node[midway, above left] {${\bf a}$};
+    \draw[->, thick, red] (0,0) -- (3,1) node[midway, below right] {${\bf b}$};
+    \draw[dashed, red] (2,2) -- (5,3);
+    \draw[dashed, blue] (3,1) -- (5,3);
+    \draw[->, thick, green!70!black] (3,1) -- (2,2) node[midway, below left] {${\bf a}-{\bf b}$};
+    \filldraw (0,0) circle (1pt) node[below left] {O};
+    \filldraw (2,2) circle (1pt);
+    \filldraw (3,1) circle (1pt);
+    \filldraw (5,3) circle (1pt);
+\end{tikzpicture}
+```
 
 ## The dot (scalar) product
 
-Consider the three dimensional Euclidean space $\mathbb{E}^3 = (\mathbb{R}^3,\cdot) $ which is the three-dimensional space $\mathbb{R}^3$ and a dot product defined as follows.
+Consider the three dimensional Euclidean space $\mathbb{E}^3 = (\mathbb{R}^3,\cdot)$ which is the three-dimensional space $\mathbb{R}^3$ and a dot product defined as follows.
 
-![ ](figures/vector_calculus_two_vectors.svg)
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+    \coordinate (O) at (0,0);
+    \coordinate (A) at (3,0);
+    \coordinate (B) at (30:3);
+    \draw[->, thick] (O) -- (A) node[midway, below] {$\mathbf{a}$};
+    \draw[->, thick] (O) -- (B) node[midway, above] {$\mathbf{b}$};
+    \draw[thick] (0.5,0) arc[start angle=0, end angle=30, radius=0.5];
+    \node at (15:0.8) {$\theta$};
+    \filldraw (O) circle (1pt);
+\end{tikzpicture}
+```
 
 Let ${\bf a}, {\bf b} \in  \mathbb{E}^3$.
 
@@ -71,7 +131,18 @@ Answer: Yes, the dot product is commutative. This can be shown using the definit
 
 Suppose ${\bf u}$ is a unit vector: ${\bf u}\cdot{\bf u}=1$.
 
-![ ](figures/vector_calculus_projection.svg)
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+    \draw[thick,->] (0,0) -- (4,3) node[above, midway] {${\bf b}$};
+    \draw[thick,->] (0,0) -- (1,0) node[above] {${\bf u}$};
+    \draw[dashed] (0,0) -- (4,0) node[midway,below] {${\bf b}\cdot{\bf u}$};
+    \draw[dashed] (4,0) -- (4,3);
+    \draw[thick,->] (0,0) -- (0,1) node[above] {${\bf v}$};
+\end{tikzpicture}
+```
 
 ::: {.callout-tip title="Think!"}
 
@@ -101,7 +172,7 @@ This is the projection of ${\bf b}$ in the direction perpendicular to ${\bf u}$.
 
 Remember that $\cos^2(\theta)+\sin^2(\theta)=1$.
 
-![ ](figures/cartesian_projection.PNG)
+![ ](../figures/vector_calculus/cartesian_projection.PNG)
 
 ## Cross Product
 

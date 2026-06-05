@@ -106,7 +106,7 @@ Define the arc-length parameter $s$ such that
 
 $\frac{ds}{dt}$ is the speed of the particle. Recall that ${\bf v} = \frac{d{\bf r}}{dt}$, so
 \begin{align}
-    \frac{ds}{dt} = \left\lnorm\frac{d{\bf r}}{dt}\right\rnorm.
+    \frac{ds}{dt} = \lnorm\frac{d{\bf r}}{dt}\rnorm.
 \end{align}
 
 So $ds$ is the length of the differential $d{\bf r}$ along the curve. Integrating:
