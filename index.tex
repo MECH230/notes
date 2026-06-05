@@ -1,0 +1,3776 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrreprt}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\usepackage{svg}
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\usepackage{tikz}
+\newcommand{\lnorm}{\left|\!\left|}
+\newcommand{\rnorm}{\right|\!\right|}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\leb}{\left[}
+\newcommand{\reb}{\right]}
+\newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\bOmega}{\boldsymbol{\Omega}}
+\newcommand{\balpha}{\boldsymbol{\alpha}}
+\newcommand{\bchi}{\boldsymbol{\chi}}
+\newcommand{\bpi}{\boldsymbol{\pi}}
+\newcommand{\bPi}{\boldsymbol{\Pi}}
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={MECH230 Dynamics Notes},
+  pdfauthor={Theresa Honein},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{MECH230 Dynamics Notes}
+\author{Theresa Honein}
+\date{2026-01-01}
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Table of contents}
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Preface}\label{preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+\markboth{Preface}{Preface}
+
+These notes are prepared for the MECH230 Dynamics course at the American
+University of Beirut (AUB), Lebanon. The content is adapted primarily
+from O'Reilly's Primer, with selected examples and exercises drawn from
+MKB's and Hibbeler's classic textbooks.
+
+These notes begin with simpler examples to build a strong foundation,
+enabling students to confidently tackle more complex problems. They are
+not comprehensive; students should refer to the course textbooks as
+needed.
+
+I am grateful for the perspectives on dynamics of Professor Noel Perkins
+(University of Michigan--Ann Arbor), Professor James Casey (UC
+Berkeley), and Dr.~Evan Hemingway, which I gained while TAing Berkeley's
+ME104.
+
+If you find any mistakes in these notes, please let me know by filling
+out \url{https://forms.gle/McKpRhMq4JejnG8V9} form.
+
+\part{Preliminaries}
+
+\chapter{Active Learning}\label{active-learning}
+
+Check out these two excellent videos of Professor Noel Perkins from the
+University of Michigan at Ann Arbor explaining the active learning
+techniques he uses to teach dynamics:
+\href{https://www.youtube.com/watch?v=wHEys-JHeb8}{Part 1},
+\href{https://www.youtube.com/watch?v=96j69u4v-wE}{Part 2}. We will be
+using these techniques ourselves. The techniques include:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Having an agenda for the day.} Students can add topics they
+  want to discuss too.
+\item
+  \textbf{Frequently checking student understanding:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``Raise your hand if you understand 90\% of this or above.''
+  \end{itemize}
+\item
+  \textbf{Encouragement:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``Ask me a question.''
+  \item
+    ``Persevere. Someone else is going to have this question.''
+  \item
+    ``I had a great question from one of your classmates.''
+  \end{itemize}
+\item
+  \textbf{Think → Share:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``I would like you to do the first step on your own. Take a min.''
+  \item
+    ``Show of hands: I did it, or I know how to do it.''
+  \end{itemize}
+\item
+  \textbf{Think → Pair → Share:} * ``I would like you to take 5 min to
+  talk to your neighbor and come up with a strategy that will solve this
+  problem.''
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``Show of hands: my neighbor convinced me this will work.''
+  \item
+    ``Show of hands: I am not convinced yet.''
+  \end{itemize}
+\end{itemize}
+
+\chapter{A Note on Units}\label{a-note-on-units}
+
+\begin{figure}[H]
+
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{preliminaries/../figures/units/units_table.png}}
+
+}
+
+\caption{Source: MKB}
+
+\end{figure}%
+
+In this class, we will use both SI and US customary units.
+
+In the US customary units, the pound is used both as a unit of force
+(lbf) and as a unit of mass (lbm). The lbm is the amount of mass which
+weighs 1 lbf under standard conditions (at latitude 45° and sea level).
+In MKB, almost exclusively the unit of slug is used for mass. In
+addition, they use the symbol lb to mean pound force.
+
+Notice that seconds is abbreviated as s in SI units and sec in US
+customary units.
+
+Regarding the gravitational acceleration, use the values \(g = 9.81\) m
+s\(^{-2}\) in SI units and \(g = 32.2\) ft sec\(^{-2}\) in US customary
+units.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+When solving a problem, keep all variables in the unit system they are
+given. For example, you may convert g to kg, but don't convert g to
+slugs!
+
+\end{tcolorbox}
+
+\chapter{Free Body Diagrams}\label{free-body-diagrams}
+
+Recall the following table taken from the Hibbeler Statics textbook. It
+summarizes the constraint resultant forces and moments due to various
+types of supports.
+
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{preliminaries/../figures/free_body_diagrams/fbd1.png}
+
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{preliminaries/../figures/free_body_diagrams/fbd2.png}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What is the general rule which encompasses all the
+cases in the above table and more?
+
+\textbf{Answer:} Whenever translation in a certain direction is
+constrained, a constraint force in that direction enforces the
+constraint. Whenever rotation along a certain axis is constrained, a
+constraint moment along the same axis results.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note! Notation}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Good notation is important: in print, vectors are usually denoted by
+boldface, e.g.~\({\bf v}\) or \({\bf F}\). In writing, vectors are
+either denoted by an overhead arrow, e.g.~\(\vec{v}\), or by a line or
+squiggle underneath, e.g.~\(\underline{v}\). We opt for the latter
+notation since we reserve the top of a vector for other accents.
+
+\end{tcolorbox}
+
+\chapter{Vector calculus - A quick
+review}\label{vector-calculus---a-quick-review}
+
+\section{Scaling Vectors}\label{scaling-vectors}
+
+We can scale the vector \({\bf a}\).
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Question: Consider a vector \({\bf a}\). Plot the vectors \(2{\bf a}\),
+\(-{\bf a}\), \(\frac{1}{2}{\bf a}\)
+
+Answer: \ldots{}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Question: Give the expression for a unit vector in the direction of
+\({\bf a}\)? Opposite to \({\bf a}\).
+
+Answer:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\frac{\bf a}{\lnorm{\bf a}\rnorm}\) is a unit vector in the
+  direction of \({\bf a}\).
+\item
+  \(-\frac{\bf a}{\lnorm{\bf a}\rnorm}\) is a unit vector in the
+  direction opposite to that of \({\bf a}\).
+\end{itemize}
+
+\end{tcolorbox}
+
+\pandocbounded{\includesvg[keepaspectratio]{vector_calculus/figures/vector_calculus_unit_vector.svg}}
+
+\section{Vector summation and
+subtraction}\label{vector-summation-and-subtraction}
+
+Vectors can be added using the parallelogram law or by placing vectors
+in a head to tail sequence.
+
+The vector difference \({\bf a}-{\bf b}\) points from the tip of
+\({\bf b}\) to the tip of \({\bf a}\).
+
+\begin{figure}[H]
+
+{\centering \pandocbounded{\includesvg[keepaspectratio]{vector_calculus/figures/vector_calculus_vector_addition.svg}}
+
+}
+
+\caption{Vector addition via parallelogram law and tip to tail.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+{\centering \pandocbounded{\includesvg[keepaspectratio]{vector_calculus/figures/vector_calculus_vector_subtraction.svg}}
+
+}
+
+\caption{Vector subtraction as \(\vec{a} - \vec{b}\) using the
+parallelogram law. This can be also done using head to tail.}
+
+\end{figure}%
+
+\section{The dot (scalar) product}\label{the-dot-scalar-product}
+
+Consider the three dimensional Euclidean space \$\mathbb{E}\^{}3 =
+(\mathbb{R}\^{}3,\cdot) \$ which is the three-dimensional space
+\(\mathbb{R}^3\) and a dot product defined as follows.
+
+\pandocbounded{\includesvg[keepaspectratio]{vector_calculus/figures/vector_calculus_two_vectors.svg}}
+
+Let \({\bf a}, {\bf b} \in  \mathbb{E}^3\).
+
+\begin{align}
+    {\bf a}\cdot{\bf b} &= \lnorm{\bf a}\rnorm \lnorm {\bf b}\rnorm \cos(\theta).
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Question: What is the result of \({\bf a}\cdot{\bf a}\)?
+
+Answer: The magnitude of a vector \({\bf a}\) is given by \begin{align}
+    {\bf a}\cdot{\bf a} = \lnorm{\bf a}\rnorm^2 \implies \lnorm{\bf a}\rnorm = \sqrt{{\bf a}\cdot{\bf a}}.
+\end{align}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Question: Is \({\bf a}\cdot{\bf b} = {\bf b}\cdot{\bf a}\)? Why?
+
+Answer: Yes, the dot product is commutative. This can be shown using the
+definition of the dot product.
+
+\end{tcolorbox}
+
+\section{Vector Projections}\label{vector-projections}
+
+Suppose \({\bf u}\) is a unit vector: \({\bf u}\cdot{\bf u}=1\).
+
+\pandocbounded{\includesvg[keepaspectratio]{vector_calculus/figures/vector_calculus_projection.svg}}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Question: Calculate \({\bf b}\cdot{\bf u}\)
+
+Answer: \begin{align}
+    {\bf b}\cdot{\bf u} = \lnorm{\bf b}\rnorm \underbrace{\lnorm{\bf u}\rnorm}_{1}\cos(\theta) = \lnorm{\bf b}\rnorm\cos(\theta).
+\end{align}
+
+Notice the right triangle in the above figure. Verify that
+\({\bf b}\cdot{\bf u}\) is the orthogonal projection of \({\bf b}\) in
+the direction of \({\bf u}\).
+
+\end{tcolorbox}
+
+Suppose \({\bf v}\cdot{\bf v} = 1\) (\({\bf v}\) is a unit vector), and
+\({\bf v}\cdot{\bf u}=0\) (\({\bf v}\) and \({\bf u}\) are
+orthogonal/perpendicular).
+
+\begin{align}
+    {\bf b}\cdot{\bf v} = \lnorm{\bf b}\rnorm\cos\lp\frac{\pi}{2}-\theta\rp = \lnorm{\bf b}\rnorm\sin(\theta).
+\end{align}
+
+This is the projection of \({\bf b}\) in the direction perpendicular to
+\({\bf u}\). Hence, we can write
+
+\begin{align}
+    {\bf b} &= \lp{\bf b}\cdot{\bf u}\rp{\bf u}+\lp{\bf b}\cdot{\bf v}\rp{\bf v}\\
+    &= \underbrace{\lnorm{\bf b}\rnorm}_{\text{magnitude}}\lp\underbrace{\cos(\theta){\bf u}+\sin(\theta){\bf v}}_{\text{direction}}\rp.
+\end{align}
+
+Remember that \(\cos^2(\theta)+\sin^2(\theta)=1\).
+
+\pandocbounded{\includegraphics[keepaspectratio]{vector_calculus/figures/cartesian_projection.PNG}}
+
+\section{Cross Product}\label{cross-product}
+
+We also define the cross product
+
+\begin{align}
+    {\bf a}\times{\bf b} &= \lnorm{\bf a}\rnorm \lnorm{\bf b}\rnorm |\sin(\theta)|{\bf n}
+\end{align}
+
+where \({\bf n}\) is a unit vector normal to the plane formed by
+\({\bf a}\) and \({\bf b}\). The direction of \({\bf n}\) is given by
+the right hand rule.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Question: Is \({\bf a}\times{\bf b} = {\bf b}\times{\bf a}\)?
+
+Answer: No, the cross product is not commutative. These vectors are
+opposite.
+
+\end{tcolorbox}
+
+\chapter{Fundamental concepts of solid
+mechanics}\label{fundamental-concepts-of-solid-mechanics}
+
+This section is adapted from chapter 1 of
+\href{https://link.springer.com/book/10.1007/978-1-4614-6768-7}{Introduction
+to Solid Mechanics - An Integrated Approach} by Lubliner and
+Papadopoulos (\textbf{lubliner2017introduction?}).
+
+\section{Mechanics}\label{mechanics}
+
+Mechanics, as a scientific discipline, is the study of the behavior of
+bodies subject to forces and displacements (and, to some extent, heating
+and cooling).
+
+\section{Solid Mechanics}\label{solid-mechanics}
+
+Solid mechanics is the branch of mechanics dealing specifically with
+solid bodies.
+
+\section{Body}\label{body}
+
+A body, for the purpose of mechanics, is a portion of matter that, at a
+given moment in time, occupies a certain region in space.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Particle} If the region occupied by the body can be idealized
+  as being of negligible extent (and thus reducible to a point), the
+  body is called a particle.
+\item
+  \textbf{Finite Body} A body that is not reducible to a point is called
+  a finite body.
+\end{itemize}
+
+\section{Continuum}\label{continuum}
+
+A finite body occupying a connected region every portion of which
+contains some matter is called a continuous body or, simply, a
+continuum.
+
+\section{Material Points}\label{material-points}
+
+At any point in a region occupied by a continuum, the matter in its
+immediate (infinitesimal) neighborhood can also be thought of as
+constituting a particle, and we may thus speak of the particles (also
+called material points) of a continuum.
+
+\section{Displacement}\label{displacement}
+
+A body is said to undergo a displacement when some or all of its
+particles are moved to occupy different positions in space.
+
+\section{Configuration}\label{configuration}
+
+The correspondence between the particles and the positions occupied by
+them at a given time is known as the body's configuration.
+
+\section{Deformation}\label{deformation}
+
+The displacement of a body is said to be rigid if the distances between
+all pairs of particles are the same in any two configurations.
+Otherwise, the body is said to undergo deformation.
+
+\section{Rigid bodies}\label{rigid-bodies}
+
+Bodies that can undergo only rigid displacements are called rigid
+bodies. Bodies that are not rigid are deformable.
+
+\section{Motion}\label{motion}
+
+Motion is said to occur when the body occupies a succession of different
+configurations continuously over time.
+
+\section{Rigid Motion}\label{rigid-motion}
+
+A rigid motion is a motion that involves only rigid displacements.
+
+\section{Velocity}\label{velocity}
+
+The rate of change, in time, of the position of a particle is its
+velocity.
+
+\section{Acceleration}\label{acceleration}
+
+The velocity may in turn change in time, and its rate of change is the
+acceleration. The motion of a body is called uniform if the acceleration
+of all the particles is zero; otherwise, it is called accelerated.
+
+\section{Kinematics}\label{kinematics}
+
+The branch of mechanics dealing with the displacement and motion of
+bodies is called kinematics.
+
+\section{Force}\label{force}
+
+Forces are interactions between bodies that cause them to move, and more
+specifically to accelerate, relative to each other (unless prevented
+from doing so by other forces).
+
+\chapter{Galileo, Kepler, Newton}\label{galileo-kepler-newton}
+
+\section{Gravitational force}\label{gravitational-force}
+
+All bodies on or near the earth are subject to the earth's gravitational
+force and, as shown by Galileo in his famous experiments, will fall
+toward the center of the earth (unless prevented from doing so by other
+forces) with the same acceleration; the magnitude of this acceleration
+is denoted by \(g\).
+
+\section{\texorpdfstring{\(F = ma\)}{F = ma}}\label{f-ma}
+
+It was later shown by Newton, on the basis of Kepler's laws of planetary
+motion, that the magnitude of the acceleration (with respect to a frame
+of reference based on the ``fixed'' stars) due to gravitational force
+between any two bodies (idealized as particles) is inversely
+proportional to the square of the distance between them, and for each
+body it is proportional to the quantity of matter (or mass) of the other
+body. The product of mass and acceleration is therefore equal and
+opposite for the two bodies and may be identified with the force exerted
+on each body by the other.
+
+\section{Equilibrium}\label{equilibrium}
+
+If a body's acceleration is zero, then it is at rest or in a uniform
+motion. In this case, the forces is said to be in equilibrium. The study
+of equilibrium is known as statics and constitutes one of the main
+subjects of this book. Traditionally, statics deals only (or at least
+primarily) with rigid bodies, while deformable bodies are studied in
+courses historically called strength of materials (or, more recently,
+mechanics of materials). In this book
+(\textbf{lubliner2017introduction?}), the statics of rigid and
+deformable solid bodies will be studied in an integrated manner.
+
+\chapter{Starting from Continuum
+Mechanics}\label{starting-from-continuum-mechanics}
+
+Consider a body \(\mathcal{B}\) in three-dimensional Euclidean space
+\(\mathbb{E}^3\).
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{preliminaries/continuum_mechanics_perspective_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+\end{center}
+
+In general, bodies are deformable continua. We depict continua as in the
+above figure and refer to them as \emph{continuum potatoes}.
+
+Point or distributed forces or moments can be applied to a body's
+surface or throughout its volume. For example, a body resting on a table
+has contact forces on the surface touching the table, while weight acts
+on all points in the body.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} How do we know if a body has moved?
+
+\textbf{Answer:} \ldots{}
+
+\end{tcolorbox}
+
+Consider a reference configuration for this body. A reference
+configuration is any configuration that can be physically occupied by
+the body --- it could be the initial configuration, but need not be.
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{preliminaries/continuum_mechanics_perspective_files/figure-pdf/unnamed-chunk-2-1.pdf}}
+\end{center}
+
+We denote the position vector from a chosen fixed origin to a material
+point in the reference configuration as \({\bf R}\). The position vector
+to the same material point in the current configuration is \({\bf r}\).
+
+The motion of the body is described by \begin{align}
+    {\bf r} = \bchi({\bf R},t).
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What makes a body rigid?
+
+\textbf{Answer:} In this class, we consider only rigid bodies. If we
+choose two points on a rigid body, the distance between them is always
+constant. Also, angles between material lines on a rigid body are
+constant.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Under what conditions do we consider a rigid body to
+be a particle?
+
+\textbf{Answer:} In the beginning of the class, we consider particles.
+Particles are idealized rigid bodies whose rotational inertia is
+ignored.
+
+\end{tcolorbox}
+
+\part{Particle Dynamics}
+
+\chapter{Basic Particle Kinematics
+Concepts}\label{basic-particle-kinematics-concepts}
+
+\section{Position, Velocity, and
+Acceleration}\label{position-velocity-and-acceleration}
+
+Consider a particle moving in \(\mathbb{E}^3\). Its position vector
+relative to a fixed origin \(O\) is denoted by
+\({\bf r} \in \mathbb{E}^3\). As time \(t\) evolves, so does
+\({\bf r}(t)\).
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/basic_particle_kinematics_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+\end{center}
+
+Let \(\Delta t\) be a finite time elapsed: \begin{align}
+    \Delta{\bf r} = {\bf r}(t+\Delta t)-{\bf r}(t).
+\end{align} As \(\Delta t \rightarrow 0\), \(\Delta t\) becomes \(dt\)
+and \(\Delta {\bf r}\) becomes \(d{\bf r}\).
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/basic_particle_kinematics_files/figure-pdf/unnamed-chunk-2-1.pdf}}
+\end{center}
+
+The (absolute) velocity vector \({\bf v}\) of the particle is
+\begin{align}
+    {\bf v} = \frac{d{\bf r}}{dt}=\dot{\bf r} = \lim_{\Delta t \rightarrow 0}\frac{{\bf r}(t+\Delta t)-{\bf r}(t)}{\Delta t}.
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What is the direction of the velocity vector?
+
+\textbf{Answer:} \({\bf v}\) is always tangent to the path.
+
+\end{tcolorbox}
+
+The speed of the particle is the magnitude of the velocity vector
+\(v = \lnorm{\bf v}\rnorm\).
+
+The (absolute) acceleration is \begin{align}
+    {\bf a} = \frac{d{\bf v}}{dt} = \dot{\bf v} = \ddot{\bf r} = \frac{d^2{\bf r}}{dt^2}.
+\end{align}
+
+\section{Arc-Length and the Unit Tangent
+Vector}\label{arc-length-and-the-unit-tangent-vector}
+
+Define the arc-length parameter \(s\) such that \begin{align}
+    \frac{ds}{dt} = \lnorm {\bf v}\rnorm.
+\end{align}
+
+\(\frac{ds}{dt}\) is the speed of the particle. Recall that
+\({\bf v} = \frac{d{\bf r}}{dt}\), so \begin{align}
+    \frac{ds}{dt} = \left\lnorm\frac{d{\bf r}}{dt}\right\rnorm.
+\end{align}
+
+So \(ds\) is the length of the differential \(d{\bf r}\) along the
+curve. Integrating: \begin{align}
+    s(t)-s_0 = \int_{t_0}^t\frac{ds}{dt}(\tau)d\tau = \int_{t_0}^t\sqrt{{\bf v}(\tau)\cdot{\bf v}(\tau)}\,d\tau.
+\end{align}
+
+Notes:
+
+\begin{itemize}
+\tightlist
+\item
+  \(s(t)-s_0\) is the distance traveled by the particle along its path
+  \(\mathcal{C}\) during the time interval \([t_0, t]\).
+\item
+  \(s(t_0)=s_0\) where \(t_0\) and \(s_0\) are initial conditions.
+\item
+  The dummy variable \(\tau\) is used (as opposed to \(t\)) when
+  evaluating this integral because we are integrating the speed as it
+  varies between \(t_0\) and \(t\).
+\end{itemize}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Under what conditions is \(s(t)\) invertible so that
+\(t(s)\) is well defined?
+
+\textbf{Answer:} If the function \(s(t)\) is one-to-one, it can be
+inverted, and time can be written in terms of arc-length \(t = t(s)\).
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Why is \begin{align}
+    s(t)-s_0 \neq \lnorm {\bf r}(t)-{\bf r}_0\rnorm?
+\end{align} Under what conditions does the equality hold?
+
+\textbf{Answer:} The equality holds under rectilinear motion or over an
+infinitesimal time interval.
+
+\end{tcolorbox}
+
+We define the unit tangent vector \({\bf e}_t\): \begin{align}
+    \frac{\bf v}{\lnorm{\bf v}\rnorm} = {\bf e}_t, \qquad {\bf v} = \frac{d{\bf r}}{dt} = \frac{d{\bf r}}{ds}\frac{ds}{dt} = \dot{s}{\bf e}_t.
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Verify that \({\bf e}_t\) is a unit vector.
+
+\textbf{Answer:} \ldots{}
+
+\end{tcolorbox}
+
+Note the relationships \begin{align*}
+    {\bf v} &= \frac{d{\bf r}(t)}{dt} = \frac{d{\bf r}}{ds}\frac{ds}{dt},\\
+    {\bf a} &= \frac{d{\bf v}(t)}{dt} = \frac{d^2{\bf r}}{ds^2}\lp\frac{ds}{dt}\rp^2+\frac{d{\bf r}}{ds}\frac{d^2 s}{dt^2}.
+\end{align*}
+
+Notice: the acceleration vector is due to changes in both the magnitude
+and direction of the velocity vector.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Is the unit vector \({\bf e}_t\) constant in general?
+Under what conditions is it constant?
+
+\textbf{Answer:} No.~It is constant only during rectilinear motion in a
+fixed direction.
+
+\end{tcolorbox}
+
+\subsection{Example}\label{example}
+
+Consider a particle moving in space with position vector \begin{align}
+    {\bf r}(t) = R_0\lp\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\rp.
+\end{align}
+
+Calculate and plot \({\bf v}\), \({\bf a}\), \({\bf v}\times {\bf a}\),
+\(\lnorm{\bf r}\rnorm\). Show that the motion satisfies: \begin{align}
+    \ddot{x}+\omega^2 x=0, \qquad \ddot{y}+\omega^2 y=0.
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Example}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Consider a particle \(P\) moving in \(\mathbb{E}^2\)
+with position vector \begin{align*}
+    {\bf r} = R_0\lp\cos\lp\omega t\rp{\bf E}_x+\sin\lp\omega t\rp{\bf E}_y\rp.
+\end{align*} Calculate \({\bf r}\times{\bf a}\) and
+\({\bf r}\cdot{\bf a}\). Describe the motion of the particle.
+
+\textbf{Answer:} The velocity and acceleration are: \begin{align*}
+    {\bf v} &= R_0\omega\lp-\sin\lp\omega t\rp{\bf E}_x+\cos\lp\omega t\rp{\bf E}_y\rp,\\
+    {\bf a} &= -R_0\omega^2\lp\cos\lp\omega t\rp{\bf E}_x+\sin\lp\omega t\rp{\bf E}_y\rp.
+\end{align*} Note that \(\dot{\bf E}_x={\bf 0}\) and
+\(\dot{\bf E}_y={\bf 0}\) since the basis is fixed, and the chain rule
+applies.
+
+Noting that \({\bf a} = -\omega^2{\bf r}\): \begin{align*}
+    {\bf r}\times{\bf a} = {\bf r}\times(-\omega^2{\bf r}) = -\omega^2{\bf r}\times{\bf r} = {\bf 0}.
+\end{align*}
+
+For \({\bf r}\cdot{\bf a}\): \begin{align*}
+    {\bf r}\cdot{\bf a} &= -R_0^2\omega^2\lp\cos^2(\omega t)+\sin^2(\omega t)\rp = -R_0^2\omega^2.
+\end{align*}
+
+\end{tcolorbox}
+
+\section{Cartesian Coordinates}\label{cartesian-coordinates}
+
+\(\{{\bf E}_x,{\bf E}_y,{\bf E}_z\}\) is a basis for \(\mathbb{E}^3\).
+Since this basis is fixed, we have: \begin{align}
+    {\bf r} &= x{\bf E}_x+y{\bf E}_y+z{\bf E}_z,\\
+    {\bf v} &= \dot{x}{\bf E}_x+\dot{y}{\bf E}_y+\dot{z}{\bf E}_z,\\
+    {\bf a} &= \ddot{x}{\bf E}_x+\ddot{y}{\bf E}_y+\ddot{z}{\bf E}_z.
+\end{align}
+
+Later we will also use the cylindrical polar basis
+\(\{{\bf e}_r,{\bf e}_\theta,{\bf E}_z\}\) and the Serret-Frenet triad
+\(\{{\bf e}_t,{\bf e}_n,{\bf e}_b\}\).
+
+\section{Rectilinear Motion}\label{rectilinear-motion}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{rectus} = straight, \emph{linea} = line
+\end{itemize}
+
+Due to constraints or initial conditions, the body moves on a straight
+line, e.g.~a car on a straight road or a ball tossed vertically.
+
+We take \({\bf E}_x\) parallel to the line and \({\bf c}\) to be a
+constant vector. Then: \begin{align}
+    {\bf r}(t) &= x(t){\bf E}_x+{\bf c},\\
+    {\bf v}(t) &= \dot{x}{\bf E}_x = v(t){\bf E}_x,\\
+    {\bf a}(t) &= \ddot{x}{\bf E}_x = a(t){\bf E}_x.
+\end{align}
+
+\(\frac{ds}{dt}=\left|\frac{dx}{dt}\right|\), so unless \(\dot{x}>0\) or
+\(\dot{x}<0\) throughout, \(x\) and \(s\) cannot be easily interchanged.
+
+\subsection{Identities for Rectilinear
+Motion}\label{identities-for-rectilinear-motion}
+
+Recall \(v = \frac{dx}{dt}\) and \(a = \frac{dv}{dt}\). Applying the
+chain rule: \begin{align}
+    a = \frac{dv}{dt} = \frac{dv}{dx}\frac{dx}{dt} = v\frac{dv}{dx}.
+\end{align}
+
+Three useful identities: \begin{align}
+    ds &= v\, dt, \qquad dv = a\, dt, \qquad v\,dv = a\,ds.
+\end{align}
+
+\subsection{Given Acceleration as a Function of
+Time}\label{given-acceleration-as-a-function-of-time}
+
+From \(dv = a\, dt\): \begin{align}
+    v(t)-v(t_0) = \int_{t_0}^{t}a(\tilde{t})\,d\tilde{t}.
+\end{align} From \(ds = v\, dt\): \begin{align}
+    s(t_1)-s(t_0) = \int_{t_0}^{t_1}v(\tilde{t})\,d\tilde{t}.
+\end{align}
+
+\subsection{Given Acceleration as a Function of
+Speed}\label{given-acceleration-as-a-function-of-speed}
+
+From \(dv = a\, dt\) with \(a = a(v)\): \begin{align}
+    t(v) - t(v_0) = \int_{v_0}^{v}\frac{d\tilde{v}}{a(\tilde{v})}.
+\end{align} Using \(a = v\frac{dv}{ds}\): \begin{align}
+    s(t)-s_0 = \int_{v_0}^{v}\frac{\tilde{v}\,d\tilde{v}}{a(\tilde{v})}.
+\end{align}
+
+\subsection{Given Acceleration as a Function of
+Displacement}\label{given-acceleration-as-a-function-of-displacement}
+
+Using \(v\,dv = a\,ds\) with \(a = a(s)\): \begin{align}
+    \frac{1}{2}\lp v^2(s)-v^2(s_0)\rp = \int_{s_0}^{s}a(\tilde{s})\,d\tilde{s}.
+\end{align}
+
+\subsubsection{Constant Acceleration}\label{constant-acceleration}
+
+\textbf{Example: Gravity.} Throw a ball up; take the hand as origin.
+Here \(a = -g\).
+
+\begin{align}
+    v(t) &= v_0-gt,\\
+    s(t) &= s_0+v_0t-\frac{g}{2}t^2.
+\end{align}
+
+\textbf{Example: Vehicle Braking.} Using \(v\,dv = a\,ds\):
+\begin{align}
+    v^2(s)-v^2(s_0) = 2a\,\Delta s.
+\end{align}
+
+\chapter{Particle Kinetics}\label{particle-kinetics}
+
+\section{The Balance of Linear
+Momentum}\label{the-balance-of-linear-momentum}
+
+A particle is endowed with an inertial measure \(m\), called its mass.
+
+The linear momentum of a particle is defined to be \begin{align}
+    {\bf G} = m{\bf v}.
+\end{align} Taking the time derivative: \begin{align}
+    \dot{\bf G} = \dot{m}{\bf v}+m\dot{\bf v}.
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Can you think of systems whose mass is not conserved?
+
+\textbf{Answer:} In this class, we consider cases where mass is
+conserved, i.e.~\(\dot{m} = 0\). This is not the case, for example, for
+a launching rocket that is losing mass. The \(\dot{m}{\bf v}\) term is
+useful in control volume analysis.
+
+\end{tcolorbox}
+
+Then, in our case of interest: \begin{align}
+    \dot{\bf G} = m\dot{\bf v} = m{\bf a}.
+\end{align} We postulate the following balance law: \begin{align}
+    {\bf F} = \dot{\bf G},
+\end{align} where \({\bf F}\) is the resultant external force acting on
+the particle. This is known as the \textbf{Balance of Linear Momentum},
+\textbf{Newton's Second Law}, or \textbf{Euler's First Law}.
+
+\textbf{Important:} \({\bf a}\) here is the absolute acceleration vector
+of the particle.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Under what conditions is the linear momentum
+\({\bf G}\) conserved?
+
+\textbf{Answer:} An unbalanced net force \({\bf F}\neq {\bf 0}\) results
+in a change of \({\bf G}\). If \({\bf F}={\bf 0}\), then
+\({\bf G}={\bf c}\) where \({\bf c}\) is a constant vector. This is
+Newton's First Law.
+
+\end{tcolorbox}
+
+If \({\bf c}={\bf 0}\), we recover statics.
+
+\subsection{Representations and
+Projections}\label{representations-and-projections}
+
+Vectors are represented on a basis. For example: \begin{align}
+    {\bf F} &= F_x{\bf E}_x+F_y{\bf E}_y+ F_z{\bf E}_z,\\
+    {\bf a} &= a_x{\bf E}_x+a_y{\bf E}_y+a_z{\bf E}_z.
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} How many independent scalar equations can we obtain
+from \({\bf F}=m{\bf a}\)? How do we obtain them?
+
+\textbf{Answer:} We get useful scalar equations by projecting
+\({\bf F} = \dot{\bf G}\) along unit directions: \begin{align}
+    \lp{\bf F}=\dot{\bf G}\rp\cdot{\bf E}_x \implies F_x = ma_x.
+\end{align}
+
+\end{tcolorbox}
+
+\section{Newton's Third Law}\label{newtons-third-law}
+
+When dealing with the forces of interaction between particles, a
+particle and a rigid body, or rigid bodies, we also invoke Newton's
+third law: ``For every action there is an equal and opposite reaction.''
+For example, the force exerted by a surface on a particle is equal in
+magnitude and opposite in direction to the force exerted by the particle
+on the surface.
+
+\chapter{Four Steps to Problem Solving Using the Balance of Linear
+Momentum}\label{four-steps-to-problem-solving-using-the-balance-of-linear-momentum}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Specify the system you are considering. Pick a frame (choose an origin
+  and a coordinate system), and express \({\bf r}\), \({\bf v}\) and
+  \({\bf a}\) using that coordinate system.
+\item
+  Draw a Free Body Diagram (FBD), i.e.~model of the forces.
+\item
+  Write the balance of linear momentum for the system:
+  \({\bf F}=\dot{\bf G}\).
+\item
+  Do the analysis: project \({\bf F}=\dot{\bf G}\) to get useful
+  equations.
+\end{enumerate}
+
+\section{Example: Projectile Motion}\label{example-projectile-motion}
+
+Projectile motion is a curvilinear motion in the plane \(\mathbb{E}^2\).
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/four_steps_bolm_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+\end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Choose \(O\) at the launch point, \({\bf E}_x\) along the ground,
+  \({\bf E}_y\) against gravity. \begin{align}
+   {\bf r} &= x{\bf E}_x+y{\bf E}_y, \quad {\bf v} = \dot{x}{\bf E}_x+\dot{y}{\bf E}_y, \quad {\bf a} = \ddot{x}{\bf E}_x+\ddot{y}{\bf E}_y.
+  \end{align}
+\item
+  Force model:
+\end{enumerate}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.1\linewidth,height=\textheight,keepaspectratio]{particle_dynamics/../figures/four_steps_bolm/FBD.png}
+
+}
+
+\caption{FBD}
+
+\end{figure}%
+
+\begin{align}
+    {\bf W} = mg\lp-{\bf E}_y\rp.
+\end{align}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  Balance of linear momentum: \begin{align}
+   mg(-{\bf E}_y) = m\lp\ddot{x}{\bf E}_x+\ddot{y}{\bf E}_y\rp.
+  \end{align} Projecting: \begin{align}
+   \lp{\bf F}=\dot{\bf G}\rp\cdot{\bf E}_x &\implies 0 = m\ddot{x} \implies \ddot{x} = 0,\\
+   \lp{\bf F}=\dot{\bf G}\rp\cdot{\bf E}_y &\implies -mg = m\ddot{y} \implies \ddot{y} = -g.
+  \end{align}
+\item
+  Integrating: \begin{align}
+   \dot{x}(t) &= \dot{x}_0, \quad x(t) = \dot{x}_0 t,\\
+   \dot{y}(t) &= -gt+\dot{y}_0, \quad y(t) = -\frac{g}{2}t^2+\dot{y}_0 t+y_0.
+  \end{align}
+\end{enumerate}
+
+\textbf{Remark:} You can also project \({\bf F} = m{\bf a}\) in the
+\({\bf E}_z\) direction, but since there are no forces in that direction
+and the initial velocity in that direction is 0, you conclude that the
+motion is planar.
+
+\section{Example: Projectile Motion with Viscous
+Drag}\label{example-projectile-motion-with-viscous-drag}
+
+\emph{(Primer Section 1.5.3)}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Same kinematics as above.
+\item
+  Force model --- weight and Stokes drag:
+\end{enumerate}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/four_steps_bolm_files/figure-pdf/unnamed-chunk-2-1.pdf}}
+\end{center}
+
+\begin{align}
+    {\bf W} &= mg(-{\bf E}_y),\\
+    {\bf F}_D &= -c_s{\bf v}.
+\end{align} The Stokes drag (1851) applies at low speeds in viscous
+fluids.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  Balance of linear momentum: \begin{align}
+   -mg{\bf E}_y -c_s\lp\dot{x}{\bf E}_x+\dot{y}{\bf E}_y\rp &= m\lp\ddot{x}{\bf E}_x+\ddot{y}{\bf E}_y\rp.
+  \end{align} Projecting: \begin{align}
+   -c_s\dot{x} &= m\ddot{x},\\
+   -mg-c_s\dot{y} &= m\ddot{y}.
+  \end{align} Given initial conditions
+  \(x_0, \dot{x}_0, y_0, \dot{y}_0\), these are an initial value problem
+  (IVP).
+\item
+  Solving the \(x\)-equation (let \(v_x = \dot{x}\)): \begin{align}
+   v_x = v_{x_0}e^{-c_s t/m}, \quad \lim_{t\rightarrow\infty} v_x = 0.
+  \end{align} Thus, the terminal velocity is only along \({\bf E}_y\).
+\end{enumerate}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/four_steps_bolm_files/figure-pdf/unnamed-chunk-3-1.pdf}}
+\end{center}
+
+Solving the \(y\)-equation: \begin{align}
+    v_y = -\frac{mg}{c_s}+\frac{1}{c_s}\lp mg+c_s v_{y_0}\rp e^{-c_s t/m}.
+\end{align} The terminal velocity:
+\({\bf v}_{\text{term}} = \frac{mg}{c_s}\lp-{\bf E}_y\rp\).
+
+\section{Example: Projectile Motion with Bluff Body Pressure
+Drag}\label{example-projectile-motion-with-bluff-body-pressure-drag}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{particle_dynamics/../figures/four_steps_bolm/bluff_body.jpeg}
+
+}
+
+\caption{Bluff body pressure drag}
+
+\end{figure}%
+
+\begin{align}
+    {\bf F}_D = \frac{1}{2}m C_D v^2\lp-\frac{\bf v}{\lnorm{\bf v}\rnorm}\rp,
+\end{align} where \(C_D\) is the drag coefficient, \(\rho\) is the
+density of the fluid, and \(A\) is the projected area in the direction
+of motion.
+
+See Section 1.6 in the book for a worked example.
+
+\chapter{Cylindrical Polar Coordinate
+System}\label{cylindrical-polar-coordinate-system}
+
+The cylindrical polar coordinate system is three-dimensional. We start
+by introducing the two-dimensional polar basis, then extend it to three
+dimensions.
+
+\section{Polar Coordinates}\label{polar-coordinates}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/cylindrical_polar_coordinates_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+\end{center}
+
+Consider \(\mathbb{E}^2\). Define: \begin{align}
+    r = \sqrt{x^2+y^2}\geq 0, \qquad \theta = \tan^{-1}\lp\frac{y}{x}\rp.
+\end{align} So \(x = r\cos(\theta)\) and \(y = r\sin(\theta)\).
+
+Define the basis \(\{{\bf e}_r,{\bf e}_\theta\}\) as a rotation of
+\(\{{\bf E}_x,{\bf E}_y\}\) by angle \(\theta\) (positive CCW about
+\({\bf E}_z\)):
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/cylindrical_polar_coordinates_files/figure-pdf/unnamed-chunk-2-1.pdf}}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Express \({\bf e}_r\) and \({\bf e}_\theta\) in the
+Cartesian basis.
+
+\textbf{Answer:} \begin{align}
+    {\bf e}_r &= \cos(\theta){\bf E}_x+\sin(\theta){\bf E}_y,\\
+    {\bf e}_\theta &= -\sin(\theta){\bf E}_x+\cos(\theta){\bf E}_y.
+\end{align}
+
+\end{tcolorbox}
+
+\(\{{\bf e}_r,{\bf e}_\theta\}\) is an orthonormal basis:
+\({\bf e}_r\cdot{\bf e}_r = 1\),
+\({\bf e}_\theta\cdot{\bf e}_\theta = 1\),
+\({\bf e}_r\cdot{\bf e}_\theta=0\).
+
+\begin{itemize}
+\tightlist
+\item
+  \({\bf e}_r\) points in the direction of increasing \(r\).
+\item
+  \({\bf e}_\theta\) points in the direction of increasing \(\theta\).
+\end{itemize}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Calculate \(\dot{\bf e}_r\) and
+\(\dot{\bf e}_\theta\).
+
+\textbf{Answer:} \begin{align}
+    \dot{\bf e}_r = \dot{\theta}{\bf e}_\theta, \qquad \dot{\bf e}_\theta = -\dot{\theta}{\bf e}_r.
+\end{align}
+
+\end{tcolorbox}
+
+The position vector is \({\bf r} = r{\bf e}_r\) (with \(r\geq 0\)).
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Calculate \({\bf v}\) and \({\bf a}\).
+
+\textbf{Answer:} \begin{align*}
+    {\bf v} &= \dot{r}{\bf e}_r+r\dot{\theta}{\bf e}_\theta,\\
+    {\bf a} &= \lp \ddot{r}-r\dot{\theta}^2\rp{\bf e}_r+\lp 2\dot{r}\dot{\theta}+r\ddot{\theta}\rp{\bf e}_\theta.
+\end{align*}
+
+\end{tcolorbox}
+
+Note the components of acceleration:
+
+\begin{itemize}
+\tightlist
+\item
+  \(r\ddot{\theta}\): tangential
+\item
+  \(\ddot{r}\): radial
+\item
+  \(r\dot{\theta}^2\): centripetal
+\item
+  \(2\dot{r}\dot{\theta}\): Coriolis
+\end{itemize}
+
+\textbf{Remark: \(a_r \neq \dot{v}_r\).} Be careful: \(v_r = \dot{r}\)
+so \(\dot{v}_r = \ddot{r}\), but
+\(a_r = \ddot{r} - r\dot{\theta}^2 \neq \dot{v}_r\) in general.
+
+For rectilinear motions, Cartesian coordinates are usually easiest. For
+problems where \(r\) is directly measured (e.g.~radar tracking), polar
+coordinates are natural.
+
+\includegraphics[width=0.4\linewidth,height=\textheight,keepaspectratio]{particle_dynamics/../figures/cylindrical_polar_coordinates/02-121.jpg}
+
+\subsection{Example: Nonlinear
+Pendulum}\label{example-nonlinear-pendulum}
+
+Consider a particle of mass \(m\) suspended from a rigid inextensible
+string of length \(\ell\). Find the equation of motion.
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/cylindrical_polar_coordinates_files/figure-pdf/unnamed-chunk-3-1.pdf}}
+\end{center}
+
+The constraint on the motion: \begin{align}
+    r = \ell = \text{const.} \implies \dot{r}=0,\ \ddot{r} = 0.
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} How many degrees of freedom does this system have?
+
+\textbf{Answer:} One. A particle in the plane has 2 DOFs, but the
+constraint \(r=\ell\) removes one. Knowing \(\theta(t)\) completely
+describes the motion.
+
+\end{tcolorbox}
+
+Following the four steps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Choose polar coordinates: \begin{align*}
+   {\bf r} &= \ell{\bf e}_r, \quad {\bf v} = \ell\dot{\theta}{\bf e}_\theta, \quad {\bf a} = \ell\ddot{\theta}{\bf e}_\theta-\ell\dot{\theta}^2{\bf e}_r.
+  \end{align*}
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Orienting \({\bf e}_\theta\)}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\({\bf e}_\theta\) points in the direction of increasing \(\theta\),
+determined by the right-hand rule: point the thumb along \({\bf E}_z\);
+your fingers curl in the direction of increasing \(\theta\).
+
+\end{tcolorbox}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Forces: \begin{align*}
+   {\bf T} &= T\lp-{\bf e}_r\rp, \quad {\bf W} = mg\lp\cos(\theta){\bf e}_r-\sin(\theta){\bf e}_\theta\rp.
+  \end{align*}
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Remark: Tension}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\({\bf T}\) is a constraint force keeping the particle on a circular
+path. If \(T>0\), the wire is in tension. The tension is the same
+throughout because the wire is massless.
+
+\end{tcolorbox}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Balance of linear momentum: \begin{align*}
+   mg{\bf E}_x-T{\bf e}_r &= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2{\bf e}_r\rp.
+  \end{align*} Projecting along \({\bf e}_\theta\) (hides unknown
+  tension): \begin{align*}
+   -mg\sin(\theta) &= m\ell\ddot{\theta} \implies \ddot{\theta}+\frac{g}{\ell}\sin(\theta) = 0.
+  \end{align*} For small \(\theta\):
+  \(\ddot{\theta}+\frac{g}{\ell}\theta = 0\) (simple harmonic motion).
+\end{enumerate}
+
+Projecting along \({\bf e}_r\) gives the tension:
+\(T = m\lp\ell\dot{\theta}^2+g\cos(\theta)\rp\).
+
+\section{Types of Accelerations
+Explained}\label{types-of-accelerations-explained}
+
+Recall: \begin{align*}
+    {\bf a} = \lp\ddot{r}-r\dot{\theta}^2\rp{\bf e}_r+\lp2\dot{r}\dot{\theta}+r\ddot{\theta}\rp{\bf e}_\theta.
+\end{align*}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Radial} \(\ddot{r}\): particle on a spring in rectilinear
+  motion.
+\item
+  \textbf{Centripetal} \(-r\dot{\theta}^2\): particle on a circle at
+  constant speed --- the normal force steers the particle.
+\item
+  \textbf{Coriolis} \(2\dot{r}\dot{\theta}\): particle in a tube
+  rotating at constant angular velocity.
+\item
+  \textbf{Tangential} \(r\ddot{\theta}\): particle pushed along a
+  circle.
+\end{itemize}
+
+\subsection{Example: Particle in a Rotating
+Tube}\label{example-particle-in-a-rotating-tube}
+
+\(\dot{\theta} = \omega = \text{const.}\), \(\ddot{\theta} = 0\).
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/cylindrical_polar_coordinates_files/figure-pdf/unnamed-chunk-4-1.pdf}}
+\end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Kinematics: \begin{align*}
+   {\bf r} = r{\bf e}_r, \quad {\bf v} = \dot{r}{\bf e}_r+r\omega{\bf e}_\theta, \quad {\bf a} = \lp\ddot{r}-r\omega^2\rp{\bf e}_r+2\dot{r}\omega{\bf e}_\theta.
+  \end{align*}
+\item
+  Assume no friction: \({\bf N} = N{\bf e}_\theta\).
+\item
+  Applying BoLM and projecting: \begin{align*}
+   \lp{\bf F} = \dot{\bf G}\rp\cdot{\bf e}_r &\implies \ddot{r}-\omega^2 r = 0 \quad (\text{EOM for } r(t)),\\
+   \lp{\bf F} = \dot{\bf G}\rp\cdot{\bf e}_\theta &\implies N = 2m\dot{r}\omega \quad (\text{Coriolis reaction}).
+  \end{align*}
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Coriolis acceleration}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+As the particle moves outward, \(r\omega\) increases. The tube must
+supply the \({\bf e}_\theta\) acceleration \(2\dot{r}\omega\) so the
+particle stays inside.
+
+\end{tcolorbox}
+
+\subsection{Example: Particle Pushed in a
+Circle}\label{example-particle-pushed-in-a-circle}
+
+\({\bf P} = P{\bf e}_\theta\), \(r = R = \text{const.}\): \begin{align*}
+    \lp{\bf F}=\dot{G}\rp\cdot{\bf e}_\theta &\implies P=mR\ddot{\theta} \quad (\text{EOM for }\theta),\\
+    \lp{\bf F}=\dot{G}\rp\cdot{\bf e}_r &\implies N_r=mR\dot{\theta}^2 \quad (\text{centripetal}),\\
+    \lp{\bf F}=\dot{G}\rp\cdot{\bf E}_z &\implies N_z=mg \quad (\text{vertical equilibrium}).
+\end{align*}
+
+\section{Cylindrical-Polar
+Coordinates}\label{cylindrical-polar-coordinates}
+
+In \(\mathbb{E}^3\), the polar system extends by adding \(z\):
+\begin{align*}
+    \begin{bmatrix}{\bf e}_r\\ {\bf e}_\theta\\ {\bf E}_z\end{bmatrix}
+    =
+    \begin{bmatrix}\cos(\theta) & \sin(\theta) & 0\\ -\sin(\theta) & \cos(\theta) & 0\\ 0 & 0 & 1\end{bmatrix}
+    \begin{bmatrix}{\bf E}_x\\ {\bf E}_y\\ {\bf E}_z\end{bmatrix}.
+\end{align*}
+
+Position, velocity, acceleration: \begin{align*}
+    {\bf r} &= r{\bf e}_r+z{\bf E}_z,\\
+    {\bf v} &= \dot{r}{\bf e}_r+r\dot{\theta}{\bf e}_\theta+\dot{z}{\bf E}_z,\\
+    {\bf a} &= \lp\ddot{r}-r\dot{\theta}^2\rp{\bf e}_r+\lp2\dot{r}\dot{\theta}+r\ddot{\theta}\rp{\bf e}_\theta+\ddot{z}{\bf E}_z.
+\end{align*}
+
+\subsection{Example: Particle on a
+Cone}\label{example-particle-on-a-cone}
+
+See animation for 03/067
+\href{https://drive.google.com/file/d/1d8FJqs0GMQU0FxUE3R66rfcSTCCHFTOu/view?usp=sharing}{here}.
+
+\includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio]{particle_dynamics/../figures/cylindrical_polar_coordinates/03-067.png}
+
+\includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio]{particle_dynamics/../figures/cylindrical_polar_coordinates/03-193.png}
+
+\chapter{Constrained Motion}\label{constrained-motion}
+
+The \textbf{degree of freedom (DOF)} of a system is the number of
+independent coordinates needed to describe a configuration of the
+system.
+
+Examples:
+
+\begin{itemize}
+\tightlist
+\item
+  A particle free to move in \(\mathbb{E}^2\) has 2 DOFs.
+\item
+  A particle constrained to move on a curve in \(\mathbb{E}^2\) has 1
+  DOF.
+\item
+  Two particles free to move in \(\mathbb{E}^2\) have a combined total
+  of 4 DOFs.
+\item
+  If two particles in \(\mathbb{E}^2\) are constrained to move on the
+  same curve, they have 2 DOFs.
+\item
+  If two particles in \(\mathbb{E}^2\) are connected by a rigid rod,
+  they have 3 DOFs. The constraint
+  \(\lnorm{\bf r}_{B/A}\rnorm = l\,\forall t\) provides a relationship
+  between their coordinates that eliminates one DOF.
+\item
+  If two particles in \(\mathbb{E}^2\) are connected by a rigid rod and
+  constrained to move on a curve, they have 1 DOF.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Example:} Consider two particles in smooth vertical slots. If
+\(A\) and \(B\) move independently, the system has 2 DOFs. If connected
+by an inextensible cable, the system has 1 DOF.
+
+The inextensibility constraint \(\ell = \text{const.}\) can be written
+as: \begin{align}
+    \ell &= s_A+c+s_B \implies \Delta s_B = -\Delta s_A \implies \dot{s}_B=-\dot{s}_A.
+\end{align}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/constrained_motion_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+\end{center}
+
+\emph{See Set 06: Constrained Motion Problem 02/172.}
+
+\chapter{The Serret-Frenet Basis}\label{the-serret-frenet-basis}
+
+In general, the path of a particle is a curve in space --- we refer to
+such curves as \emph{space curves}.
+
+Consider a fixed curve \(\mathcal{C}\) embedded in \(\mathbb{E}^3\). Let
+the position vector of a point \(P\in\mathcal{C}\) be \({\bf r}\). In
+Cartesian coordinates, \({\bf r} = x{\bf E}_x+y{\bf E}_y+z{\bf E}_z\).
+
+Recall the arc-length parameter \(s\) associated with \(\mathcal{C}\):
+\begin{align*}
+    \lp\frac{ds}{dt}\rp^2 = \frac{d{\bf r}}{dt}\cdot\frac{d{\bf r}}{dt}.
+\end{align*} This parameter uniquely identifies a point \(P\) on
+\(\mathcal{C}\), giving the representation \({\bf r} = \hat{\bf r}(s)\).
+
+\section{The Serret-Frenet Triad}\label{the-serret-frenet-triad}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/serret_frenet_triad_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+\end{center}
+
+The Serret-Frenet basis \(\{{\bf e}_t,{\bf e}_n,{\bf e}_b\}\) is defined
+at the point \(P\); it depends on the curve and the particle's location
+on it.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} How do we define the unit tangent vector?
+
+\textbf{Answer:} \ldots{}
+
+\end{tcolorbox}
+
+Recall the unit tangent vector: \begin{align}
+    {\bf e}_t = \hat{\bf e}_t(s) = \frac{d{\bf r}}{ds} = \lim_{\Delta s\rightarrow 0}\frac{\hat{\bf r}(s+\Delta s)-\hat{\bf r}(s)}{\Delta s}.
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What do we know about \(\frac{d\hat{\bf e}_t}{ds}\)?
+
+\textbf{Answer:} We can show that \({\bf e}_t\) and
+\(\frac{d\hat{\bf e}_t}{ds}\) are perpendicular by differentiating
+\({\bf e}_t\cdot{\bf e}_t = 1\): \begin{align}
+    {\bf e}_t\cdot\frac{d{\bf e}_t}{ds} = 0.
+\end{align}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note! Derivatives of a unit vector}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+It is a common mistake to assume that the derivative of a unit vector is
+necessarily a unit vector. Recall:
+\(\dot{\bf e}_r = \dot{\theta}{\bf e}_\theta\) is not generally a unit
+vector.
+
+\end{tcolorbox}
+
+Hence, we define: \begin{align}
+    \kappa{\bf e}_n = \frac{d{\bf e}_t}{ds},
+\end{align} where \(\kappa = \lnorm \frac{d{\bf e}_t}{ds}\rnorm \geq 0\)
+and \(\lnorm{\bf e}_n\rnorm=1\).
+
+\begin{itemize}
+\tightlist
+\item
+  \({\bf e}_n\) is the unit \textbf{principal normal} vector.
+\item
+  \(\kappa\) is the \textbf{curvature} of \(\mathcal{C}\) at \(P\).
+\item
+  The \textbf{radius of curvature} is \(\rho = 1/\kappa\).
+\end{itemize}
+
+For any point on a curve, three nearby non-collinear points define the
+\textbf{osculating circle} (radius \(\rho\), center of curvature).
+
+\begin{figure}[H]
+
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/../figures/serret_frenet_triad/serret-frenet-triad-example.jpg}}
+
+}
+
+\caption{Serret-Frenet triad example}
+
+\end{figure}%
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} When is \({\bf e}_n\) not uniquely defined?
+
+\textbf{Answer:} When \(d{\bf e}_t/ds = {\bf 0}\) (i.e.~\(\kappa = 0\)),
+such as on a straight line, at an inflection point, or at a corner. In
+this case, \({\bf e}_n\) is defined as any unit vector perpendicular to
+\({\bf e}_t\).
+
+\end{tcolorbox}
+
+The unit \textbf{binormal} vector: \begin{align*}
+    {\bf e}_b = {\bf e}_t\times{\bf e}_n.
+\end{align*}
+
+Concluding remarks:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\{{\bf e}_t,{\bf e}_n,{\bf e}_b\}\) is orthonormal and right-handed.
+\item
+  The \textbf{osculating plane} is spanned by \({\bf e}_t\) and
+  \({\bf e}_n\); it contains the osculating circle.
+\item
+  The \textbf{rectifying plane} is spanned by \({\bf e}_t\) and
+  \({\bf e}_b\).
+\item
+  The \textbf{normal plane} is spanned by \({\bf e}_n\) and
+  \({\bf e}_b\).
+\end{itemize}
+
+Check out
+\href{https://www.youtube.com/shorts/NyphZOJggFk?feature=share}{this}
+animation showing the osculating circle, and
+\href{https://www.youtube.com/watch?v=0ACqRREH180}{this} video placing
+the Serret-Frenet basis on a bobsled.
+
+\section{Kinematics}\label{kinematics-1}
+
+Position, velocity, and acceleration in the Serret-Frenet basis:
+\begin{align*}
+    {\bf v} &= \frac{ds}{dt}{\bf e}_t = v{\bf e}_t,\\
+    {\bf a} &= \dot{v}{\bf e}_t+\kappa v^2{\bf e}_n.
+\end{align*}
+
+\subsection{Example: Problem 02/279}\label{example-problem-02279}
+
+Draw the Serret-Frenet basis. Indicate whether the car is accelerating
+or decelerating and its direction of motion.
+
+\section{Kinetics}\label{kinetics}
+
+\begin{align}
+    {\bf F} &= m{\bf a}\\
+    F_t{\bf e}_t+F_n{\bf e}_n+F_b{\bf e}_b &= m\lp\dot{v}{\bf e}_t+\kappa v^2{\bf e}_n\rp.
+\end{align} Note that forces in the binormal direction should always
+balance.
+
+\subsection{Example: Problem 03/040 and Roller Coaster
+Design}\label{example-problem-03040-and-roller-coaster-design}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Consider the design of a roller coaster that is a
+circular ring. Comment on its safety.
+
+\textbf{Answer:} At the transition between the circular and straight
+portions, there is a jump in curvature, hence a jump in acceleration,
+hence a jump in the normal force --- producing a jerk. For a circular
+loop, the normal force goes from 0 to a finite value instantaneously.
+This could snap the rider's neck. Instead, we use two connected
+\textbf{clothoids} (Euler spirals), whose curvature is proportional to
+arc length.
+
+\end{tcolorbox}
+
+\section{The Serret-Frenet Formulae}\label{the-serret-frenet-formulae}
+
+We want the derivatives of the Serret-Frenet basis vectors with respect
+to \(s\).
+
+We already have: \begin{align}
+    \frac{d{\bf e}_t}{ds} = \kappa{\bf e}_n.
+\end{align}
+
+Since \({\bf e}_b\cdot{\bf e}_b = 1\), we have
+\(\frac{d{\bf e}_b}{ds}\cdot{\bf e}_b = 0\). Also from
+\({\bf e}_t\cdot{\bf e}_b = 0\), we get
+\(\frac{d{\bf e}_b}{ds}\cdot{\bf e}_t=0\). So \(\frac{d{\bf e}_b}{ds}\)
+is parallel to \({\bf e}_n\): \begin{align}
+    \frac{d{\bf e}_b}{ds} = -\tau{\bf e}_n,
+\end{align} where \(\tau\) is the \textbf{torsion} of \(\mathcal{C}\) at
+\(P\).
+
+Then: \begin{align}
+    \frac{d{\bf e}_n}{ds} = -\kappa{\bf e}_t+\tau{\bf e}_b.
+\end{align}
+
+In summary (the Serret-Frenet formulae): \begin{align}
+    \begin{bmatrix}
+        \frac{d{\bf e}_t}{ds}\\
+        \frac{d{\bf e}_n}{ds}\\
+        \frac{d{\bf e}_b}{ds}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        0 & \kappa & 0\\
+        -\kappa & 0 & \tau\\
+        0 & -\tau & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        {\bf e}_t\\
+        {\bf e}_n\\
+        {\bf e}_b
+    \end{bmatrix}.
+\end{align}
+
+Define the \textbf{Darboux vector}
+\(\bomega_{SF} = \kappa{\bf e}_b+\tau{\bf e}_t\) so that: \begin{align}
+    \frac{d{\bf e}_i}{ds} = \bomega_{SF}\times{\bf e}_i, \quad i = t, n, b.
+\end{align}
+
+\subsection{Example: A Particle on a
+Helix}\label{example-a-particle-on-a-helix}
+
+For a helix \(x=R\cos(\theta)\), \(y=R\sin(\theta)\),
+\(z=\alpha R\theta\): \begin{align}
+    \kappa = \frac{1}{R(1+\alpha^2)}, \qquad \tau = \frac{\alpha}{(1+\alpha^2)R}.
+\end{align}
+
+\section{The Curvature Formula for a Plane
+Curve}\label{the-curvature-formula-for-a-plane-curve}
+
+For a plane curve \(y = f(x)\), \(z = z_0\): \begin{align}
+    \kappa = \kappa(x) = \frac{\left|\frac{d^2 f}{dx^2}\right|}{\lp\sqrt{1+\lp\frac{df}{dx}\rp^2}\rp^3}.
+\end{align}
+
+\section{Alternative Notation for Plane
+Curves}\label{alternative-notation-for-plane-curves}
+
+\emph{This section is not usually covered.}
+
+For plane curves, some texts define the angle \(\beta = \beta(s)\) such
+that: \begin{align}
+    {\bf e}_t = \cos(\beta){\bf E}_x+\sin(\beta){\bf E}_y, \qquad \bar{\bf e}_n = \cos(\beta){\bf E}_y-\sin(\beta){\bf E}_x.
+\end{align} Then \(\kappa = \left|\frac{d\beta}{ds}\right|\) and
+\(\frac{d\beta}{ds}\) is the rate of rotation of the triad about
+\({\bf E}_z\).
+
+\chapter{Spring Force}\label{spring-force}
+
+\section{Introduction}\label{introduction}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What does it mean for a spring to be linear?
+
+\textbf{Answer:} Consider a mass \(m\) suspended by a spring causing an
+extension \(\delta\). Suspending a mass \(2m\) causes double the
+extension, \(2\delta\).
+
+\end{tcolorbox}
+
+\textbf{Hooke's Law:} The force generated by a spring is assumed to be
+linearly proportional to its extension/compression.
+
+Consider a block of mass \(m\) attached to a linear spring of stiffness
+\(k\) and unstretched length \(\ell_0\). Denote the current length by
+\(\ell\) and the stretch by \(\varepsilon = \ell-\ell_0\).
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/spring_force_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What is the stretch in each case? What is the spring
+force?
+
+\textbf{Answer:}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  Unstretched: \(\varepsilon = 0\), no spring force.
+\item
+  Extended: \(\varepsilon = \ell - \ell_0 > 0\). Spring force
+  \({\bf F}_s = -k\varepsilon{\bf E}_x\) (pointing left, toward
+  equilibrium).
+\item
+  Compressed: \(\varepsilon = \ell - \ell_0 < 0\). Spring force
+  \({\bf F}_s = -k\varepsilon{\bf E}_x\) (pointing right, toward
+  equilibrium).
+\end{enumerate}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note! Prescribing the spring force}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+The spring force always seeks to return the particle to the unstretched
+state. The same expression applies whether the spring is extended or
+compressed.
+
+\end{tcolorbox}
+
+\section{Formalism}\label{formalism}
+
+In general:
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.6\linewidth,height=\textheight,keepaspectratio]{particle_dynamics/../figures/spring_force/general-spring.jpg}
+
+}
+
+\caption{General spring configuration}
+
+\end{figure}%
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What is the prescription of the spring force in this
+general case?
+
+\textbf{Answer:} \ldots{}
+
+\end{tcolorbox}
+
+The stretch is: \begin{align}
+    \varepsilon = \lnorm{\bf r}-{\bf r}_A\rnorm-\ell_0,
+\end{align} where \(\ell_0\) is the unstretched length. The spring force
+is: \begin{align}
+    {\bf F}_s = -K\lp\lnorm{\bf r}-{\bf r}_A\rnorm-\ell_0\rp\frac{{\bf r}-{\bf r}_A}{\lnorm{\bf r}-{\bf r}_A\rnorm}.
+\end{align} This direction is correct in both tension and compression.
+
+\subsection{Example: Horizontal Simple Harmonic
+Oscillator}\label{example-horizontal-simple-harmonic-oscillator}
+
+Derive the equations of motion with the origin at the fixed end of the
+spring.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} How does the equation of motion change if the origin
+is taken at the free end when the spring is unstretched?
+
+\textbf{Answer:} The equation of motion is \begin{align}
+    \ddot{x}+\frac{k}{m}x = 0,
+\end{align} where \(x\) is measured from the undeformed position.
+
+\end{tcolorbox}
+
+\subsection{Example: Vertical Simple Harmonic
+Oscillator}\label{example-vertical-simple-harmonic-oscillator}
+
+By analogy, the equation of motion of a vertical harmonic oscillator is:
+\begin{align}
+    \ddot{x}+\frac{k}{m}x = 0,
+\end{align} where \(x\) is measured from the \textbf{static equilibrium}
+position.
+
+See \href{https://www.youtube.com/watch?v=YE9N2f2qTqg}{this video} for
+intuition on static deflection.
+
+\chapter{Friction Force}\label{friction-force}
+
+Most theories of friction arise from studies by the French scientist
+Charles Augustin de Coulomb (1736--1806).
+
+\section{Introduction}\label{introduction-1}
+
+Consider a block on a rough horizontal surface pushed with force
+\({\bf P} = P{\bf E}_x\).
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/friction_force_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+\end{center}
+
+Upon increasing \(P\), we observe:
+
+\begin{itemize}
+\tightlist
+\item
+  For small \(P\), the block remains at rest.
+\item
+  Beyond a critical value \(P = P^*\), the block starts to move.
+\item
+  Once in motion, a constant value \(P = P^{**}\) is required to
+  maintain constant speed.
+\item
+  Both \(P^*\) and \(P^{**}\) are proportional to the normal force
+  \(\lnorm{\bf N}\rnorm\).
+\end{itemize}
+
+\section{Formalism: Coulomb's Theory of
+Friction}\label{formalism-coulombs-theory-of-friction}
+
+We distinguish two types of friction: static and kinetic.
+
+\subsection{Static Friction}\label{static-friction}
+
+When the relative velocity is zero (\({\bf v}_{rel} = {\bf 0}\)), the
+friction force \({\bf F}_f\) is \textbf{unknown} and lies along the
+contact surface. We must solve for both its magnitude and direction. We
+say the static friction force points in the direction that
+\textbf{impedes motion}.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Consider a block on a rough inclined surface that is
+not moving. Draw the FBD and write the equation of motion. Do you have
+as many equations as unknowns?
+
+\textbf{Answer:} Yes. The friction and normal forces have unknown
+magnitudes, but the block's acceleration is known (it matches the
+surface acceleration). There are as many equations as unknowns.
+
+\end{tcolorbox}
+
+The static friction criterion: \begin{align}
+    \lnorm{\bf F}_f\rnorm \leq \mu_s\lnorm{\bf N}\rnorm,
+\end{align} where \(\mu_s\) is the static friction coefficient.
+
+\subsection{Kinetic Friction}\label{kinetic-friction}
+
+When two bodies are in relative motion (\({\bf v}_{rel} \neq {\bf 0}\)),
+the friction force is \textbf{known}: \begin{align}
+    {\bf F}_f = \mu_k\lnorm{\bf N}\rnorm\lp-\frac{{\bf v}_{rel}}{\lnorm{\bf v}_{rel}\rnorm}\rp,
+\end{align} where \(\mu_k\) is the kinetic friction coefficient.
+
+Remarks:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\mu_k\) is also written \(\mu_d\) (dynamic friction coefficient).
+\item
+  Kinetic friction is a prescription, not a constraint force.
+\item
+  The magnitude of kinetic friction does not depend on speed.
+\end{itemize}
+
+\subsection{Example: Crate Pushed with Incremental
+Force}\label{example-crate-pushed-with-incremental-force}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/friction_force_files/figure-pdf/unnamed-chunk-2-1.pdf}}
+\end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Kinematics: \({\bf r} = x{\bf E}_x+y_0{\bf E}_y\),
+  \({\bf v} = \dot{x}{\bf E}_x\), \({\bf a} = \ddot{x}{\bf E}_x\).
+\item
+  FBD with forces \({\bf P} = P{\bf E}_x\), \({\bf W} = -mg{\bf E}_y\),
+  \({\bf N} = N{\bf E}_y\), \({\bf F}_f = F_f(-{\bf E}_x)\).
+
+  When kinetic:
+  \({\bf F}_f = -\mu_k\lnorm{\bf N}\rnorm\,\text{sgn}(\dot{x}){\bf E}_x\).
+\item
+  BoLM: \begin{align}
+   P{\bf E}_x-mg{\bf E}_y+N{\bf E}_y-F_f{\bf E}_x = m\ddot{x}{\bf E}_x.
+  \end{align}
+\item
+  Initially at rest (static friction). Setting \(\ddot{x}=0\):
+  \begin{align}
+   P = F_f, \quad N = mg.
+  \end{align} The block stays at rest while \(P \leq \mu_s mg\). The
+  maximum static value is \(P^* = \mu_s mg\).
+\end{enumerate}
+
+Once sliding, \({\bf F}_f = -\mu_k mg{\bf E}_x\) and: \begin{align}
+    \ddot{x} = \frac{P}{m}-\mu_k g.
+\end{align} For constant speed, \(P^{**} = \mu_k mg\).
+
+\subsection{Example: A Box on a Ramp}\label{example-a-box-on-a-ramp}
+
+\emph{(MKB problem 03/002.)}
+
+When it is unknown whether the block is in motion:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Assume sticking: \({\bf v}_{rel} = {\bf 0}\).
+\item
+  Calculate the static friction force.
+\item
+  Check the static friction criterion.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If satisfied: the block sticks. Analysis complete.
+  \item
+    If not satisfied: the block slides. Apply kinetic friction and
+    resolve.
+  \end{itemize}
+\end{enumerate}
+
+\section{Relative Velocity}\label{relative-velocity}
+
+A common misconception: if an object is moving, the friction acting on
+it must be kinetic. Counter-example: a crate on a moving truck. If the
+crate moves with the truck (same velocity), the friction between them is
+\textbf{static}. Only if the crate slides on the truck bed is the
+friction kinetic.
+
+Similar examples include a person in an elevator and a person riding a
+bus.
+
+\subsection{Example: Nonzero Relative
+Velocity}\label{example-nonzero-relative-velocity}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Box held fixed on a moving conveyor belt:} The belt moves, so
+  \({\bf v}_{rel} = -{\bf v}_c \neq {\bf 0}\) --- friction is kinetic.
+  The box is stationary in space but moving relative to the belt.
+\end{itemize}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/friction_force_files/figure-pdf/unnamed-chunk-3-1.pdf}}
+\end{center}
+
+\begin{itemize}
+\item
+  \textbf{Person standing in an accelerating bus:} Friction is static.
+  The impending motion of the person (relative to the bus) is toward the
+  rear, so the static friction force points toward the front.
+\item
+  \textbf{Car rolling without slipping:} Friction is static and points
+  in the direction of motion, opposing the tendency of the tire to slip
+  backward.
+\end{itemize}
+
+\section{Normal and Friction Force
+Prescription}\label{normal-and-friction-force-prescription}
+
+See \href{https://www.youtube.com/watch?v=XNdP7Nk850s}{this video}.
+
+\begin{itemize}
+\tightlist
+\item
+  For a particle moving on a \textbf{space curve}:
+  \({\bf N} = N_n{\bf e}_n+N_b{\bf e}_b\) and
+  \({\bf F}_f = F_f{\bf e}_t\).
+\item
+  For a particle moving on a \textbf{surface} with normal \({\bf n}\)
+  and tangent directions \({\bf t}_1\), \({\bf t}_2\):
+  \({\bf N} = N{\bf n}\) and
+  \({\bf F}_f = F_{f1}{\bf t}_1+F_{f2}{\bf t}_2\).
+\end{itemize}
+
+\chapter{Gravitational Force Model}\label{gravitational-force-model}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/gravitational_force_model_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+\end{center}
+
+Call \({\bf r}_2 - {\bf r}_1 = {\bf r}_{2/1}\). According to Newton's
+law of gravitation, the force on \(m_1\) due to \(m_2\) is:
+\begin{align}
+    {\bf F}_1 = G \frac{m_1 m_2}{\lnorm{\bf r}_{2/1}\rnorm^3}{\bf r}_{2/1},
+\end{align} where \(G = 6.67408\times10^{-11}\) m\(^3\) kg\(^{-1}\)
+s\(^{-2}\) is the gravitational constant.
+
+\section{\texorpdfstring{Example: Attraction Between Earth and an Object
+of Mass
+\(m\)}{Example: Attraction Between Earth and an Object of Mass m}}\label{example-attraction-between-earth-and-an-object-of-mass-m}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/gravitational_force_model_files/figure-pdf/unnamed-chunk-2-1.pdf}}
+\end{center}
+
+\begin{align}
+    {\bf F} = G\frac{M_e m}{\lp R_e+h\rp^2}\lp-{\bf E}_z\rp.
+\end{align}
+
+Since \(h \ll R_e\), we have \(\lp R_e+h\rp^2 \approx R_e^2\), giving:
+\begin{align}
+    {\bf F} = G\frac{M_e}{R_e^2}m\lp-{\bf E}_z\rp = mg\lp-{\bf E}_z\rp,
+\end{align} where \(g = G M_e / R_e^2 = 9.81\) m/s\(^2 = 32.2\)
+ft/s\(^2\).
+
+Earth's parameters:
+
+\begin{itemize}
+\tightlist
+\item
+  \(M_e = 5.972 \times 10^{24}\) kg
+\item
+  \(R_e = 6.371 \times 10^6\) m
+\end{itemize}
+
+\chapter{Power, Work, and Energy}\label{power-work-and-energy}
+
+\section{Power and Work}\label{power-and-work}
+
+The \textbf{mechanical power} of a force \({\bf F}\) acting on a
+particle with absolute velocity \({\bf v}\) is: \begin{align}
+    \mathcal{P} = {\bf F}\cdot{\bf v}.
+\end{align}
+
+The \textbf{work} done by \({\bf F}\) over the interval \([t_1,t_2]\)
+is: \begin{align}
+    W_{{\bf F},12} = \int_{t_1}^{t_2} {\bf F}\cdot{\bf v}\,dt = \int_{t_1}^{t_2}{\bf F}\cdot d{\bf r},
+\end{align} since \(d{\bf r} = {\bf v}\,dt\). So power is the derivative
+of work: \(\mathcal{P} = \dot{W}\).
+
+In SI units: work is in Newton meters (Joules) and power in Watts.
+
+Notes:
+
+\begin{itemize}
+\tightlist
+\item
+  There are many representations of this integral depending on the
+  coordinate system:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Cartesian: \(d{\bf r} = dx{\bf E}_x+dy{\bf E}_y+dz{\bf E}_z\)
+  \item
+    Polar: \(d{\bf r} = dr{\bf e}_r+r\,d\theta{\bf e}_\theta\)
+  \item
+    Serret-Frenet: \(d{\bf r} = ds\,{\bf e}_t\)
+  \end{itemize}
+\item
+  This integral is \textbf{path dependent} --- we need to know the
+  particle's path to compute it.
+\end{itemize}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} In what case would the work of a force be zero?
+
+\textbf{Answer:} The work is zero if the force is perpendicular to the
+displacement/velocity, or if the force is applied at a fixed point.
+
+\end{tcolorbox}
+
+\subsection{Example: Particle on a
+Rail}\label{example-particle-on-a-rail}
+
+Consider two points \(A\) and \(B\) in the vertical plane connected by a
+smooth rail.
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/power_work_energy_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+\end{center}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What is the work done by forces on an object
+traveling from \(A\) to \(B\) on (a) a straight rail or (b) a curved
+path?
+
+\textbf{Answer:} In both cases \({\bf F} = {\bf W}+{\bf N}\). Since
+\({\bf N}\perp d{\bf r}\), the normal force does no work. The work of
+weight is: \begin{align*}
+    W_{{\bf W},1-2} = \int mg{\bf E}_y\cdot d{\bf r} = mg{\bf E}_y\cdot\Delta{\bf r}_{1-2}.
+\end{align*} \(\Delta{\bf r}_{1-2}\) is the same for both rails, so
+weight does the same work regardless of path.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What changes if the rail is rough?
+
+\textbf{Answer:} With friction: \begin{align*}
+    W_{1-2} = W_{{\bf W},1-2} - \mu_k\int_{s_1}^{s_2}\lnorm{\bf N}\rnorm\,ds.
+\end{align*} Friction work is path dependent and dissipative
+(\(W_{{\bf F}_f,1-2}<0\)).
+
+\end{tcolorbox}
+
+\section{Kinetic Energy}\label{kinetic-energy}
+
+The \textbf{kinetic energy} of a particle: \begin{align}
+    T = \frac{m}{2}{\bf v}\cdot{\bf v} = \frac{1}{2}mv^2.
+\end{align}
+
+In different bases: \begin{align*}
+    T = \frac{1}{2}m(v_x^2+v_y^2+v_z^2) = \frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2+\dot{z}^2).
+\end{align*}
+
+\section{Energy}\label{energy}
+
+Energy is defined as the ability to perform work.
+
+\section{The Work-Energy Theorem}\label{the-work-energy-theorem}
+
+The rate of change of kinetic energy equals the mechanical power of the
+resultant force: \begin{align}
+    \frac{dT}{dt} = {\bf F}\cdot{\bf v} = \mathcal{P}.
+\end{align}
+
+Proof: \begin{align*}
+    \frac{d}{dt}T = \frac{d}{dt}\lp\frac{1}{2}m{\bf v}\cdot{\bf v}\rp = m{\bf a}\cdot{\bf v} = {\bf F}\cdot{\bf v}.
+\end{align*}
+
+Integral form: \begin{align}
+    T_2 - T_1 = W_{{\bf F},12} = \int_{{\bf r}_1}^{{\bf r}_2}{\bf F}\cdot d{\bf r}.
+\end{align}
+
+\section{Conservative Forces}\label{conservative-forces}
+
+Forces whose work depends only on the endpoints of a path are
+\textbf{conservative}. Weight (constant force) is conservative; friction
+is not.
+
+A force \({\bf F}_c\) is conservative if there exists a scalar
+\textbf{potential energy} \(U = U({\bf r})\) such that: \begin{align}
+    {\bf F}_c = -\frac{\partial U}{\partial {\bf r}} = -\nabla U.
+\end{align}
+
+Then: \begin{align}
+    W_{1-2} = -U_2+U_1 = -\Delta U.
+\end{align}
+
+If potential energy decreases (\(U_2 \leq U_1\)), the work is positive
+and kinetic energy increases.
+
+\subsection{Constant Forces}\label{constant-forces}
+
+Constant force \({\bf C}\) is conservative with potential
+\(U = -{\bf C}\cdot{\bf r}\).
+
+The weight near Earth's surface: \(U_{\bf W} = mgy\).
+
+\subsection{Spring Force}\label{spring-force-1}
+
+The spring force is conservative with potential: \begin{align*}
+    U_s = \frac{1}{2}K\varepsilon^2.
+\end{align*} \(U_s > 0\) in both compression and tension --- it
+represents the spring's capacity to do work.
+
+\subsection{Gravitational Force}\label{gravitational-force-1}
+
+The gravitational force is conservative with: \begin{align*}
+    U = -\frac{GM_e m}{r}.
+\end{align*}
+
+Drag, friction, tension in inextensible cables, and normal forces are
+nonconservative.
+
+\section{Energy and Its Conservation}\label{energy-and-its-conservation}
+
+If only conservative forces act, define total mechanical energy
+\(E = T + U\). Then: \begin{align*}
+    \dot{T} = -\dot{U} \implies \dot{E} = \dot{T}+\dot{U} = 0.
+\end{align*} \(E\) is conserved when all work-doing forces are
+conservative.
+
+If nonconservative forces also act: \begin{align}
+    E_B - E_A = W_{{\bf F}_{nc},AB}.
+\end{align}
+
+\subsection{Example: Smooth vs.~Rough
+Rail}\label{example-smooth-vs.-rough-rail}
+
+\emph{Smooth rail:}
+\({\bf F}\cdot{\bf v} = {\bf W}\cdot{\bf v}+{\bf N}\cdot{\bf v} = {\bf W}\cdot{\bf v} = -\dot{U}\),
+so \(\dot{E} = 0\).
+
+\emph{Rough rail:} \(\dot{E} = {\bf F}_f\cdot{\bf v} < 0\), so energy
+bleeds off over time. Integrating: \begin{align*}
+    E(t_2) = E(t_1) + W_{{\bf F}_f,1-2} < E(t_1).
+\end{align*}
+
+\chapter{Momenta and Impulses of
+Particles}\label{momenta-and-impulses-of-particles}
+
+\section{Linear Momentum and Its
+Conservation}\label{linear-momentum-and-its-conservation}
+
+Recall the linear momentum \({\bf G} = m{\bf v}\).
+
+\subsection{Linear Impulse and Linear
+Momentum}\label{linear-impulse-and-linear-momentum}
+
+The integral form of the balance of linear momentum: \begin{align}
+    {\bf G}(t_1)-{\bf G}(t_0) = \int_{t_0}^{t_1}{\bf F}\,dt.
+\end{align}
+
+The time integral of a force is its \textbf{linear impulse}. This form
+is more general than \({\bf F}=m{\bf a}\) because it does not require
+\({\bf v}\) to be differentiable.
+
+\subsection{Conservation of Linear
+Momentum}\label{conservation-of-linear-momentum}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Under what conditions is the linear momentum of a
+system conserved in a direction \({\bf c}\)?
+
+\textbf{Answer:} \begin{align}
+    \frac{d}{dt}({\bf G}\cdot{\bf c}) = {\bf F}\cdot{\bf c}+{\bf G}\cdot\dot{\bf c} = 0.
+\end{align} For a constant \({\bf c}\), \({\bf G}\cdot{\bf c}\) is
+conserved if and only if \({\bf F}\cdot{\bf c} = 0\) --- i.e., no force
+in that direction.
+
+\end{tcolorbox}
+
+\subsection{Example}\label{example-1}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Example}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Is the linear momentum of a projectile conserved? In
+a certain direction?
+
+\textbf{Answer:} With \({\bf W} = -mg{\bf E}_y\), linear momentum is
+conserved in the \({\bf E}_x\) direction (no force there) but not in
+\({\bf E}_y\).
+
+\end{tcolorbox}
+
+\section{The Moment of a Force}\label{the-moment-of-a-force}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} How do you calculate the moment of a force about a
+point?
+
+\textbf{Answer:} The moment of force \({\bf F}\) applied at \(A\) about
+point \(P\) is: \begin{align}
+    {\bf M}^P = \lp{\bf r}_A-{\bf r}_P\rp\times {\bf F}.
+\end{align}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Example}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Given \begin{align*}
+    {\bf F} &= F_x{\bf E}_x+F_y{\bf E}_y+F_z{\bf E}_z,\\
+    {\bf r}_P &= -2{\bf E}_x+3{\bf E}_y+{\bf E}_z,\\
+    {\bf r}_A &= -{\bf E}_x+2{\bf E}_y-{\bf E}_z,
+\end{align*} calculate \({\bf M}^O\) and \({\bf M}^P\).
+
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/momenta_and_impulses_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+
+\textbf{Answer:} \ldots{}
+
+\end{tcolorbox}
+
+\section{Angular Momentum and Its
+Conservation}\label{angular-momentum-and-its-conservation}
+
+Let \({\bf r}\) be the position vector of a particle relative to a fixed
+point \(O\), and \({\bf v}\) its absolute velocity. The \textbf{angular
+momentum} relative to \(O\): \begin{align}
+    {\bf H}^O = {\bf r}\times m{\bf v} = {\bf r}\times{\bf G}.
+\end{align}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{particle_dynamics/momenta_and_impulses_files/figure-pdf/unnamed-chunk-2-1.pdf}}
+\end{center}
+
+\subsection{Angular Momentum Theorem}\label{angular-momentum-theorem}
+
+From the BoLM: \begin{align}
+    \dot{\bf H}^O = \frac{d}{dt}\lp{\bf r}\times m{\bf v}\rp = \underbrace{{\bf v}\times m{\bf v}}_{{\bf 0}}+{\bf r}\times m\dot{\bf v} = {\bf r}\times {\bf F}.
+\end{align} So \(\dot{\bf H}^O = {\bf M}^O\) (the angular momentum
+theorem).
+
+\subsection{Conservation of Angular
+Momentum}\label{conservation-of-angular-momentum}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Under what conditions is \({\bf H}^O\cdot{\bf c}\)
+conserved?
+
+\textbf{Answer:} For a constant \({\bf c}\): if and only if
+\(\lp{\bf r}\times{\bf F}\rp\cdot{\bf c} = 0\).
+
+\end{tcolorbox}
+
+\subsection{Central Force Problems}\label{central-force-problems}
+
+A \textbf{central force} problem has \({\bf F}\) parallel to
+\({\bf r}\), so \(\dot{\bf H}^O = {\bf 0}\) and \({\bf H}^O = h{\bf h}\)
+= constant.
+
+The vectors \({\bf r}\) and \({\bf v}\) remain in a fixed plane through
+\(O\). Choosing \({\bf E}_z = {\bf h}\): \begin{align}
+    {\bf H}^O = h{\bf E}_z = {\bf r}(t_0)\times m{\bf v}(t_0).
+\end{align}
+
+\subsection{Kepler's Problem}\label{keplers-problem}
+
+The gravitational force on a planet of mass \(m\) by the sun of mass
+\(M\): \begin{align}
+    {\bf F} = -\frac{GmM}{\lnorm{\bf r}\rnorm^3}{\bf r}, \qquad U = -\frac{GmM}{\lnorm{\bf r}\rnorm}.
+\end{align}
+
+Two conserved quantities: \begin{align}
+    E &= \frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2)-\frac{GMm}{r},\\
+    h &= {\bf H}^O\cdot{\bf E}_z = mr^2\dot{\theta}.
+\end{align}
+
+Watch this \href{https://www.youtube.com/watch?v=pdst6HQkdrc}{video on
+Kepler's laws}.
+
+\subsection{Particle on a Smooth Cone}\label{particle-on-a-smooth-cone}
+
+Show that \({\bf H}^O\cdot{\bf E}_z\) is conserved.
+
+\chapter{Collisions}\label{collisions}
+
+\section{Collision of Two Bodies}\label{collision-of-two-bodies}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What happens in reality when two cars collide?
+
+\textbf{Answer:} In reality, colliding bodies deform --- possibly
+permanently --- and their rotational inertia may change.
+
+\end{tcolorbox}
+
+Ignoring rotational motion, the simplest model uses a mass particle for
+each body. Since particles do not deform, we introduce the
+\textbf{coefficient of restitution} \(e\).
+
+\section{Frictionless, Oblique, Central Impact of Two
+Bodies}\label{frictionless-oblique-central-impact-of-two-bodies}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.75\linewidth,height=\textheight,keepaspectratio]{particle_dynamics/../figures/collisions/collision-stages.png}
+
+}
+
+\caption{Figure from O. M. O'Reilly's Dynamics Primer}
+
+\end{figure}%
+
+\subsection{Assumptions}\label{assumptions}
+
+\begin{itemize}
+\tightlist
+\item
+  Model each body as a mass particle.
+\item
+  We ignore the rotational inertias of bodies (purely translational
+  motion).
+\item
+  All points on a body have the same velocity.
+\item
+  No friction between particles during collision --- all impact forces
+  are along \({\bf n}\).
+\item
+  The duration of compression (\(t_1-t_0\)) and restitution
+  (\(t_2-t_1\)) are very small.
+\item
+  At time \(t_1\), both particles have the same velocity along
+  \({\bf n}\): \(v_{II}\).
+\item
+  \({\bf F}_{1C} = -{\bf F}_{2C}\), \({\bf F}_{1R} = -{\bf F}_{2R}\).
+\end{itemize}
+
+\subsection{Impact Stages}\label{impact-stages}
+
+Let \({\bf n}\) be the common unit normal between the bodies at contact.
+Define \(\{{\bf n},{\bf t}_1,{\bf t}_2\}\) as an orthonormal set. These
+vectors are assumed constant for the duration of impact.
+
+\subsection{Linear Impulses During
+Impact}\label{linear-impulses-during-impact}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Draw the FBDs of \(m_1\) and \(m_2\) separately
+during compression and restitution.
+
+\textbf{Answer:} - \({\bf F}_{1_d} = F_{1_d}{\bf n}\): force exerted by
+body 2 on body 1 during compression. -
+\({\bf F}_{1_r} = F_{1_r}{\bf n}\): force exerted by body 2 on body 1
+during restitution. - \({\bf F}_{2_d}\), \({\bf F}_{2_r}\): reaction
+forces by body 1 on body 2. - All other forces have resultants
+\({\bf R}_1\) and \({\bf R}_2\).
+
+\end{tcolorbox}
+
+Since the collision duration is very small, the impulses of
+\({\bf R}_1\) and \({\bf R}_2\) vanish. Approximating: \begin{align}
+    \int_{t_0}^{t_1}\lp{\bf F}_{1_d}+{\bf R}_1\rp d\tau &\approx \int_{t_0}^{t_1}{\bf F}_{1_d}\,d\tau,\\
+    \int_{t_1}^{t_2}\lp{\bf F}_{1_r}+{\bf R}_1\rp d\tau &\approx \int_{t_1}^{t_2}{\bf F}_{1_r}\,d\tau,
+\end{align} and similarly for body 2.
+
+With equal and opposite collisional forces
+(\({\bf F}_{1_d}=-{\bf F}_{2_d}\), \({\bf F}_{1_r}=-{\bf F}_{2_r}\)), we
+define the \textbf{coefficient of restitution}: \begin{align}
+    e = \frac{\int_{t_1}^{t_2}{\bf F}_{1_r}\cdot{\bf n}\,d\tau}{\int_{t_0}^{t_1}{\bf F}_{1_d}\cdot{\bf n}\,d\tau}.
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What does \(e=0\) and \(e=1\) mean?
+
+\textbf{Answer:} - \(e=1\): perfectly \textbf{elastic} collision ---
+compression impulse equals restitution impulse. - \(e=0\): perfectly
+\textbf{plastic} collision --- no restitution impulse. - In general
+\(0\leq e\leq 1\), determined experimentally.
+
+\end{tcolorbox}
+
+\subsection{The Coefficient of Restitution in Terms of
+Velocities}\label{the-coefficient-of-restitution-in-terms-of-velocities}
+
+From the linear impulse-momentum equations for each particle and stage:
+\begin{align}
+    \begin{split}
+        m_1 v_{II} - m_1{\bf v}_1\cdot{\bf n} &= \int_{t_0}^{t_1}{\bf F}_{1_d}\cdot{\bf n}\,d\tau,\\
+        m_2 v_{II} - m_2{\bf v}_2\cdot{\bf n} &= \int_{t_0}^{t_1}{\bf F}_{2_d}\cdot{\bf n}\,d\tau,\\
+        m_1{\bf v}_1'\cdot{\bf n}-m_1 v_{II} &= e\int_{t_0}^{t_1}{\bf F}_{1_d}\cdot{\bf n}\,d\tau,\\
+        m_2{\bf v}_2'\cdot{\bf n}-m_2 v_{II} &= e\int_{t_0}^{t_1}{\bf F}_{2_d}\cdot{\bf n}\,d\tau.
+    \end{split}
+\end{align}
+
+Eliminating \(v_{II}\) yields the familiar expression: \begin{align}
+    e = \frac{{\bf v}_2'\cdot{\bf n}-{\bf v}_1'\cdot{\bf n}}{{\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}}.
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+When one object impacts a massive constrained object (e.g.~a wall), the
+velocity of the massive object is unaffected by the collision.
+
+\end{tcolorbox}
+
+\section{Example: The Most General Planar Impact
+Problem}\label{example-the-most-general-planar-impact-problem}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Example}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Given particles \(m_1\) and \(m_2\) with pre-impact
+velocities \({\bf v}_1\) and \({\bf v}_2\), find the post-impact
+velocities. The coefficient of restitution \(e\) is given.
+
+\textbf{Answer:} There are 4 unknowns (components of \({\bf v}_1'\) and
+\({\bf v}_2'\) along \({\bf n}\), \({\bf t}_1\), \({\bf t}_2\)). Along
+the tangent directions: velocities are unchanged. Along \({\bf n}\): we
+have the conservation of linear momentum and the restitution equation.
+
+\end{tcolorbox}
+
+\section{Energy Loss During Impact}\label{energy-loss-during-impact}
+
+Pre-impact and post-impact kinetic energies: \begin{align}
+    T &= \frac{1}{2}m_1{\bf v}_1\cdot{\bf v}_1+\frac{1}{2}m_2{\bf v}_2\cdot{\bf v}_2,\\
+    T' &= \frac{1}{2}m_1{\bf v}_1'\cdot{\bf v}_1'+\frac{1}{2}m_2{\bf v}_2'\cdot{\bf v}_2'.
+\end{align}
+
+The energy lost: \begin{align}
+    T-T' = \frac{m_1 m_2}{2(m_1+m_2)}\lp{\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}\rp^2(1-e^2).
+\end{align}
+
+Hence, for \(0\leq e\leq 1\), kinetic energy cannot increase as a result
+of impact.
+
+\section{Negative Values of the Coefficient of
+Restitution}\label{negative-values-of-the-coefficient-of-restitution}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What does a negative \(e\) mean for a ball impacting
+a wall?
+
+\textbf{Answer:} When \(e < 0\),
+\({\bf v}_1'\cdot{\bf n}-{\bf v}_2'\cdot{\bf n}\) has the same sign as
+\({\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}\), meaning the bodies pass
+through each other during impact. To prevent this, we generally require
+\(e \geq 0\).
+
+\end{tcolorbox}
+
+\part{System of Particles}
+
+\chapter{System of Particles}\label{system-of-particles-1}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{system_of_particles/system_of_particles_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+\end{center}
+
+Consider a system of \(n\) particles. A typical particle has mass
+\(m_i\), position vector \({\bf r}_i\) relative to \(O\), velocity
+\({\bf v}_i = \dot{\bf r}_i\), acceleration
+\({\bf a}_i = \dot{\bf v}_i\), linear momentum
+\({\bf G}_i = m_i{\bf v}_i\), angular momentum
+\({\bf H}^P_i = ({\bf r}_i-{\bf r}_P)\times{\bf G}_i\), and kinetic
+energy \(T_i = \frac{1}{2}m_i{\bf v}_i\cdot{\bf v}_i\).
+
+In this chapter, we define analogous system-level quantities and derive
+the balance laws for the system from the balance law for each individual
+particle.
+
+\section{Center of Mass}\label{center-of-mass}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What is the position vector of the center of mass of
+a system of particles?
+
+\textbf{Answer:} The center of mass \(C\) has position vector
+\begin{align}
+    {\bf r}_C = \frac{1}{m}\sum_{k=1}^n m_k{\bf r}_k,
+\end{align} where \(m = \sum_{k=1}^n m_k\) is the total mass.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Example}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Consider an unsymmetrical dumbbell: particle 1 of
+mass \(m\) and particle 2 of mass \(3m\) connected by a massless rigid
+rod, with \begin{align*}
+    {\bf r}_1 = {\bf E}_x+{\bf E}_y, \qquad {\bf r}_2 = 2{\bf E}_x.
+\end{align*} Calculate \({\bf r}_C\). Is \(C\) located on the dumbbell?
+
+\pandocbounded{\includegraphics[keepaspectratio]{system_of_particles/system_of_particles_files/figure-pdf/unnamed-chunk-2-1.pdf}}
+
+\textbf{Answer:} \begin{align*}
+    {\bf r}_C = \frac{m{\bf r}_1+3m{\bf r}_2}{m+3m} = \frac{{\bf r}_1+3{\bf r}_2}{4} = \frac{7}{4}{\bf E}_x+\frac{1}{4}{\bf E}_y.
+\end{align*} We can check that \(C\) lies on the line connecting \(m_1\)
+and \(m_2\).
+
+\end{tcolorbox}
+
+Note the useful identity: relative to any reference point \(A\),
+\begin{align}
+    {\bf r}_{C/A} = \frac{\sum_i m_i{\bf r}_{i/A}}{\sum_i m_i}.
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Show that
+\(\sum_{k=1}^n m_k({\bf r}_C-{\bf r}_k) = {\bf 0}\) and
+\(\sum_{k=1}^n m_k({\bf v}_C-{\bf v}_k) = {\bf 0}\).
+
+\textbf{Answer:} Both follow directly from the definition of the center
+of mass.
+
+\end{tcolorbox}
+
+Differentiating the position of the center of mass: \begin{align}
+    {\bf v}_C = \frac{1}{m}\sum_{k=1}^n m_k{\bf v}_k = \frac{1}{m}\sum_{k=1}^n{\bf G}_k.
+\end{align}
+
+\section{Linear Momentum}\label{linear-momentum}
+
+The linear momentum of the system is \begin{align}
+    {\bf G} = \sum_{k=1}^n{\bf G}_k = m{\bf v}_C.
+\end{align} The linear momentum of the system equals that of its center
+of mass.
+
+\section{Angular Momentum}\label{angular-momentum}
+
+The angular momentum \({\bf H}^P\) of the system relative to a point
+\(P\) is: \begin{align}
+    {\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k = {\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf G},
+\end{align} where \begin{align}
+    {\bf H}^C = \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times m_k{\bf v}_k = \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times m_k({\bf v}_k-{\bf v}_C).
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Show that
+\(\sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k = {\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf G}\).
+
+\textbf{Answer:} Introduce \({\bf r}_C-{\bf r}_C\) inside the sum and
+expand.
+
+\end{tcolorbox}
+
+\section{Kinetic Energy}\label{kinetic-energy-1}
+
+The kinetic energy of the system is: \begin{align}
+    T = \sum_{k=1}^n\frac{1}{2}m_k{\bf v}_k\cdot{\bf v}_k = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}\sum_{k=1}^n m_k({\bf v}_k-{\bf v}_C)\cdot({\bf v}_k-{\bf v}_C).
+\end{align} The kinetic energy splits into the kinetic energy of the
+center of mass plus the kinetic energy relative to the center of mass.
+In general, \(T \neq \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C\).
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Prove
+\(\sum_{k=1}^n\frac{1}{2}m_k{\bf v}_k\cdot{\bf v}_k = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}\sum_{k=1}^n m_k({\bf v}_k-{\bf v}_C)\cdot({\bf v}_k-{\bf v}_C)\).
+
+\textbf{Answer:} Add \({\bf v}_C-{\bf v}_C\) to each \({\bf v}_k\),
+expand, and use \(\sum m_k({\bf v}_k-{\bf v}_C) = {\bf 0}\).
+
+\end{tcolorbox}
+
+\section{Kinetics: Balance of Linear
+Momentum}\label{kinetics-balance-of-linear-momentum}
+
+Starting from \({\bf F}_i = m_i{\bf a}_i\) for each particle and
+summing: \begin{align}
+    {\bf F} = \sum_{k=1}^n{\bf F}_k = m{\bf a}_C.
+\end{align} The resultant external force equals the total mass times the
+acceleration of the center of mass.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+The conditions for conservation of linear momentum of a system
+(completely or along a direction) are analogous to those for a single
+particle: \({\bf F}\cdot{\bf c} = 0\) for a constant \({\bf c}\).
+
+\end{tcolorbox}
+
+\section{Kinetics: Balance of Angular
+Momentum}\label{kinetics-balance-of-angular-momentum}
+
+Starting from
+\({\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k\),
+the time derivative is: \begin{align}
+    \dot{\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times{\bf F}_k-{\bf v}_P\times{\bf G} = {\bf M}^P-{\bf v}_P\times{\bf G}.
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\(\dot{\bf H}^P\) is \textbf{not} necessarily equal to \({\bf M}^P\).
+The two agree only in special cases.
+
+\end{tcolorbox}
+
+Two important special cases:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(P = O\) (fixed origin, \({\bf v}_O = {\bf 0}\)):
+  \(\dot{\bf H}^O = {\bf M}^O = \sum_{k=1}^n{\bf r}_k\times{\bf F}_k\).
+\item
+  \(P = C\) (center of mass, \({\bf v}_C\times{\bf G} = {\bf 0}\)):
+  \(\dot{\bf H}^C = {\bf M}^C = \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times{\bf F}_k\).
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+The conditions for conservation of angular momentum of a system are
+analogous to those for a single particle.
+
+\end{tcolorbox}
+
+\emph{Example: A pendulum suspended from a cart on smooth horizontal
+rails --- write the BoAM in 3 forms.}
+
+\section{Work-Energy Theorem}\label{work-energy-theorem}
+
+The work-energy theorem for a system of particles is: \begin{align}
+    \dot{T} = \sum_{k=1}^n{\bf F}_k\cdot{\bf v}_k,
+\end{align} and for energy conservation (with nonconservative forces
+\({\bf F}_{nc_k}\)): \begin{align}
+    \dot{E} = \sum_{k=1}^n{\bf F}_{nc_k}\cdot{\bf v}_k.
+\end{align} Integrating: \begin{align}
+    T(t_2)-T(t_1) = \sum_{k=1}^n W_{{\bf F}_k,12}, \qquad W_{{\bf F}_k,12} = \int_{t_1}^{t_2}{\bf F}_k\cdot{\bf v}_k\,dt.
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+The work of a force is the integral of the force dotted with the
+velocity of the \textbf{point of application} of the force.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Example}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Consider the unsymmetrical dumbbell (particle 1 of
+mass \(m\), particle 2 of mass \(3m\), massless rod) moving in the
+smooth \(\{{\bf E}_x,{\bf E}_y\}\) plane with gravity along
+\(-{\bf E}_z\). Is the energy conserved?
+
+\textbf{Answer:} Drawing the FBDs of both masses: the only forces are
+gravity (conservative) and the constraint force in the rod (does no work
+on the system, since it is internal and the rod is rigid). Hence the
+total energy is conserved.
+
+\end{tcolorbox}
+
+\part{Rigid Body Dynamics}
+
+\chapter{Kinematics of Rigid Bodies}\label{kinematics-of-rigid-bodies}
+
+In this chapter, we will denote the fixed basis by
+\(\{{\bf E}_1,{\bf E}_2,{\bf E}_3\}\).
+
+Consider a body \(\mathcal{B}\) in motion in 3D space.
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{rigid_body_dynamics/rigid_body_kinematics_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+\end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  A body \(\mathcal{B}\) is a collection of material points (mass
+  particles or particles).
+\item
+  It is convenient to define a fixed reference configuration
+  \(\boldsymbol{\kappa}_0\) for the body:
+  \({\bf X}=\boldsymbol{\kappa}_0\).
+\item
+  The present (or current) configuration of the body is denoted by
+  \(\boldsymbol{\kappa}_t\).
+\item
+  We denote a material point by \(X\). The position of the material
+  point \(X\) relative to a fixed origin at the reference configuration
+  is denoted by \({\bf X}\) and at time \(t\) is denoted by \({\bf x}\).
+\item
+  This motion is invertible; we can use \({\bf X}\) to uniquely define
+  the motion as a function of \(X\) and \(t\):
+  \({\bf x} = {\bchi}({\bf X},t)\).
+\item
+  \(\bchi\) (pronounced like ``kye'') is called the \textbf{motion
+  function}. It tells you the current position vector of the material
+  point which, at the reference configuration, had position vector
+  \({\bf X}\).
+\end{itemize}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What is a mathematical statement that means that a
+body is rigid?
+
+\textbf{Answer:} For rigid bodies the distance between any two mass
+particles \(X_1\) and \(X_2\) remains constant for all motions:
+\begin{align}
+    \lnorm{\bf x}_1-{\bf x}_2\rnorm = \lnorm{\bf X}_1-{\bf X}_2\rnorm.
+\end{align} The motion preserves angles between lines on the body
+(unlike elastic bodies or fluids) and preserves orientation (it is not a
+reflection).
+
+\end{tcolorbox}
+
+Any rigid body motion can be built in two steps:
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{rigid_body_dynamics/rigid_body_kinematics_files/figure-pdf/unnamed-chunk-2-1.pdf}}
+\end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Rotate} the object about \(O\) to the desired orientation:
+  \({\bf x}_I = {\bf Q}(t){\bf X}\) with
+  \(\lnorm{\bf Q}(t){\bf X}\rnorm = \lnorm{\bf X}\rnorm\).
+\item
+  \textbf{Translate} via the translation vector \({\bf y}(t)\).
+\end{enumerate}
+
+Then every rigid motion is: \begin{align}
+    {\bf x} = \bchi({\bf X},t) = {\bf Q}(t){\bf X}+{\bf y}(t).
+\end{align}
+
+\({\bf Q}(t)\) is a linear map and is called the \textbf{rotation
+tensor}. Both \({\bf Q}\) and \({\bf y}\) are the same for all material
+points (functions of \(t\) only). In this class we consider
+\textbf{general plane motion}, where \(\bomega = \dot{\theta}{\bf E}_3\)
+and \(\balpha = \dot{\bomega}\).
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} How do we know if a body has rotated relative to a
+reference configuration?
+
+\pandocbounded{\includegraphics[keepaspectratio]{rigid_body_dynamics/rigid_body_kinematics_files/figure-pdf/unnamed-chunk-3-1.pdf}}
+
+\textbf{Answer:} We need the reference configuration to define rotation.
+The rotation angle \(\theta\) is the angular displacement of every
+material line from reference to current configuration. The axis of
+rotation is perpendicular to the page.
+
+\end{tcolorbox}
+
+\section{Corotational Bases}\label{corotational-bases}
+
+A \emph{corotational basis} \(\{{\bf e}_1,{\bf e}_2\}\) is a pair of
+vectors embedded in the material. Initially \({\bf e}_i = {\bf E}_i\).
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{rigid_body_dynamics/rigid_body_kinematics_files/figure-pdf/unnamed-chunk-4-1.pdf}}
+\end{center}
+
+For a rigid body, the components of a material vector \({\bf v}\) along
+the corotational basis are constant throughout the motion: \begin{align}
+    {\bf v} = a{\bf e}_1+b{\bf e}_2,
+\end{align} where \(a\) and \(b\) are constant and \({\bf e}_1(t)\),
+\({\bf e}_2(t)\) evolve with the body. The corotational basis is
+unaffected by translation.
+
+\section{Tensors}\label{tensors}
+
+A tensor \({\bf T}\) is a \emph{linear transformation} that transforms a
+vector into another vector: \({\bf T}{\bf u} = {\bf v}\). A tensor
+exists independent of any basis and is defined by its action on vectors.
+
+Examples: a rotation tensor \({\bf Q}\), the identity tensor
+\({\bf I}\), a scaling tensor \({\bf S}\).
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Is a rotation a linear transformation?
+
+\textbf{Answer:} Yes. Rotating \(a{\bf X}\) is the same as rotating
+\({\bf X}\) then scaling by \(a\), and rotating \({\bf X}_1+{\bf X}_2\)
+equals rotating each and adding. So rotations are linear transformations
+--- hence tensors.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Are vectors and matrices the same?
+
+\textbf{Answer:} No.~A vector is an abstract object independent of any
+basis; a matrix is its representation in a specific basis. Similarly, a
+tensor is not a matrix, but can be expressed as one in a given
+coordinate system.
+
+\end{tcolorbox}
+
+\section{Tensor (Bun) Product}\label{tensor-bun-product}
+
+The \textbf{tensor product} \({\bf a}\otimes{\bf b}\) acts on vectors
+by: \begin{align}
+    \lp{\bf a}\otimes{\bf b}\rp{\bf u} = \lp{\bf b}\cdot{\bf u}\rp{\bf a}.
+\end{align} This is linear (verifiable directly), so it is a tensor.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What does
+\(2{\bf E}_1\otimes{\bf E}_1+2{\bf E}_2\otimes{\bf E}_2+2{\bf E}_3\otimes{\bf E}_3\)
+do to a vector?
+
+\textbf{Answer:} It scales it by a factor of two.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Show that
+\({\bf E}_1\otimes{\bf E}_1+{\bf E}_2\otimes{\bf E}_2+{\bf E}_3\otimes{\bf E}_3\)
+is the identity tensor. Show also that the rotation tensor can be
+expressed as
+\({\bf Q} = {\bf e}_x\otimes{\bf E}_x+{\bf e}_y\otimes{\bf E}_y+{\bf e}_z\otimes{\bf E}_z\).
+
+\textbf{Answer:} Apply the definition of the tensor product term by
+term.
+
+\end{tcolorbox}
+
+\section{Matrix Representation of
+Tensors}\label{matrix-representation-of-tensors}
+
+Given a basis \(\{{\bf e}_1,{\bf e}_2,{\bf e}_3\}\), define
+\(Q_{ij} \equiv \lp{\bf Q}{\bf e}_j\rp\cdot{\bf e}_i\). Then the action
+of \({\bf Q}\) in matrix form is: \begin{align}
+    \begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}
+    =
+    \begin{bmatrix}Q_{11}&Q_{12}&Q_{13}\\Q_{21}&Q_{22}&Q_{23}\\Q_{31}&Q_{32}&Q_{33}\end{bmatrix}
+    \begin{bmatrix}X_1\\X_2\\X_3\end{bmatrix}.
+\end{align} The matrix representation depends on the chosen basis, but
+the tensor itself is basis-independent.
+
+\subsection{Rigid Body Motion}\label{rigid-body-motion}
+
+In matrix form, rigid body motion is: \begin{align}
+    \begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}
+    =
+    \begin{bmatrix}Q_{11}(t)&Q_{12}(t)&Q_{13}(t)\\Q_{21}(t)&Q_{22}(t)&Q_{23}(t)\\Q_{31}(t)&Q_{32}(t)&Q_{33}(t)\end{bmatrix}
+    \begin{bmatrix}X_1\\X_2\\X_3\end{bmatrix}
+    +
+    \begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix}.
+\end{align} For \([{\bf Q}(t)]\) to be a rotation matrix:
+\({\bf Q}{\bf Q}^T = {\bf I}\) and \(\det([{\bf Q}]) = 1\).
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Verify that the rotation about \({\bf E}_z\) by angle
+\(\theta(t)\) has matrix representation \begin{align*}
+    \mathtt{Q} = \begin{bmatrix}\cos\theta & -\sin\theta & 0\\\sin\theta & \cos\theta & 0\\0 & 0 & 1\end{bmatrix}
+\end{align*} using
+\({\bf Q} = {\bf e}_1\otimes{\bf E}_1+{\bf e}_2\otimes{\bf E}_2+{\bf e}_3\otimes{\bf E}_3\)
+with \({\bf e}_1 = \cos\theta\,{\bf E}_1+\sin\theta\,{\bf E}_2\) and
+\({\bf e}_2 = -\sin\theta\,{\bf E}_1+\cos\theta\,{\bf E}_2\).
+
+\textbf{Answer:} Compute
+\(Q_{ij} = \lp{\bf Q}{\bf E}_j\rp\cdot{\bf E}_i = {\bf e}_j\cdot{\bf E}_i\)
+to recover the matrix.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+This matrix satisfies \(\mathtt{Q}\mathtt{Q}^T = \mathtt{I}\) and
+\(\det(\mathtt{Q})=1\), so \({\bf Q}\) is a \textbf{proper orthogonal
+tensor}. All proper orthogonal tensors are rotations and vice versa.
+
+\end{tcolorbox}
+
+\section{The Angular Velocity Vector}\label{the-angular-velocity-vector}
+
+From rigid body motion, for any two material points \(A\) and \(B\):
+\(({\bf x}_B-{\bf x}_A) = {\bf Q}({\bf X}_B-{\bf X}_A)\).
+Differentiating: \begin{align}
+    {\bf v}_B-{\bf v}_A = \dot{\bf Q}{\bf Q}^T({\bf x}_B-{\bf x}_A).
+\end{align} Since \({\bf Q}{\bf Q}^T = {\bf I}\),
+\(\dot{\bf Q}{\bf Q}^T\) is \textbf{skew}. Every skew tensor corresponds
+to a vector cross product, so: \begin{align}
+    {\bf v}_B-{\bf v}_A = \bomega\times({\bf x}_B-{\bf x}_A).
+\end{align} The tensor \(\bOmega = \dot{\bf Q}{\bf Q}^T\) is the
+\textbf{angular velocity tensor} and \(\bomega\) is the \textbf{angular
+velocity vector}. Taking another derivative: \begin{align}
+    {\bf a}_B-{\bf a}_A = \balpha\times({\bf x}_B-{\bf x}_A)+\bomega\times(\bomega\times({\bf x}_B-{\bf x}_A))
+\end{align} where \(\balpha\) is the angular acceleration.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+For any corotational basis vector \({\bf e}_i\) fixed to the rigid body:
+\begin{align}
+    \dot{\bf e}_i = \bomega\times{\bf e}_i, \quad i=1,2,3.
+\end{align}
+
+\end{tcolorbox}
+
+\section{Velocity and Acceleration of Two Material
+Points}\label{velocity-and-acceleration-of-two-material-points}
+
+Let \(A\) and \(B\) be material points on the rigid body. Expressing
+\({\bf x}_{B/A}\) on a corotational basis (constant components):
+\begin{align}
+    {\bf x}_{B/A} &= x{\bf e}_x+y{\bf e}_y,\\
+    {\bf v}_{B/A} &= x\dot{\bf e}_x+y\dot{\bf e}_y = \bomega\times{\bf x}_{B/A},\\
+    {\bf a}_{B/A} &= \balpha\times{\bf x}_{B/A}+\bomega\times(\bomega\times{\bf x}_{B/A}).
+\end{align} With \(\bomega = \omega{\bf E}_z\) and
+\(\balpha = \alpha{\bf E}_z\): \begin{align}
+    \omega\,d\omega = \alpha\,d\theta, \qquad \omega\,dt = d\theta, \qquad \alpha\,dt = d\omega.
+\end{align}
+
+\section{Particle in a Noninertial
+Frame}\label{particle-in-a-noninertial-frame}
+
+A noninertial frame is one that accelerates (e.g.~an accelerating bus, a
+merry-go-round). If \(A\) is fixed to the rigid body and \(B\) moves
+relative to it: \begin{align}
+    {\bf v}_B-{\bf v}_A &= \bomega\times({\bf x}_B-{\bf x}_A)+\overset{\circ}{\bf x}_{B/A},\\
+    {\bf a}_B-{\bf a}_A &= \balpha\times({\bf x}_B-{\bf x}_A)+\bomega\times\lp\bomega\times\lp{\bf x}_B-{\bf x}_A\rp\rp+2\bomega\times\overset{\circ}{\bf x}_{B/A}+\overset{\circ\circ}{\bf x}_{B/A},
+\end{align} where
+\(\overset{\circ}{\bf x}_{B/A} = \dot{x}{\bf e}_x+\dot{y}{\bf e}_y\) and
+\(\overset{\circ\circ}{\bf x}_{B/A} = \ddot{x}{\bf e}_x+\ddot{y}{\bf e}_y\)
+are the first and second \textbf{corotational rates}. The term
+\(2\bomega\times\overset{\circ}{\bf x}_{B/A}\) is the \textbf{Coriolis
+acceleration} and \(\bomega\times(\bomega\times{\bf x}_{B/A})\) is the
+\textbf{centripetal acceleration}.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} See
+\href{https://www.youtube.com/watch?v=mPsLanVS1Q8}{this video} of people
+playing catch on a merry-go-round. A ball is thrown on a merry-go-round
+rotating about fixed center \(O\), with \({\bf r}_0 = -R{\bf E}_x\) and
+\({\bf v}_0 = v_0{\bf E}_x\). What velocity does the ball appear to have
+to an observer on the merry-go-round?
+
+\textbf{Answer:} The ball is a projectile: \({\bf a} = -g{\bf E}_z\),
+\({\bf v} = -gt{\bf E}_z+{\bf v}_0\). From
+\({\bf v} = \bomega\times({\bf r}-{\bf r}_0)+\overset{\circ}{\bf x}_{P/O}\):
+\begin{align}
+    \overset{\circ}{\bf x}_{P/O} = -gt{\bf E}_z+v_0{\bf E}_x+\omega(v_0 t-R){\bf E}_y.
+\end{align}
+
+\end{tcolorbox}
+
+\section{Classifications of Rigid Body
+Motions}\label{classifications-of-rigid-body-motions}
+
+\textbf{Pure (rectilinear) translation:} \(\bomega = {\bf 0}\),
+\(\balpha = {\bf 0}\).
+
+\textbf{Curvilinear translation:} material points follow parallel curved
+paths; \(\bomega = {\bf 0}\), \(\balpha = {\bf 0}\)
+(e.g.~\href{https://www.youtube.com/watch?v=LU_xVr4b2qM&t=387s}{Ferris
+wheel bucket}).
+
+\textbf{Fixed point rotation:} \(\bomega \neq {\bf 0}\), fixed point
+with \({\bf v}_O = {\bf a}_O = {\bf 0}\) (e.g.~pendulum): \begin{align}
+    {\bf a}_P = \balpha\times{\bf r}_P+\bomega\times(\bomega\times{\bf r}_P).
+\end{align} The term \(\balpha\times{\bf r}_P\) is the tangential
+acceleration; \(\bomega\times(\bomega\times{\bf r}_P)\) is the
+centripetal acceleration.
+
+\textbf{General motion:} combined translation and rotation.
+
+\section{Instantaneous Center of
+Rotation}\label{instantaneous-center-of-rotation}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Draw the velocity profile of a rotating link with a
+fixed end.
+
+\textbf{Answer:}
+
+\pandocbounded{\includegraphics[keepaspectratio]{rigid_body_dynamics/rigid_body_kinematics_files/figure-pdf/unnamed-chunk-5-1.pdf}}
+
+\end{tcolorbox}
+
+A body in general plane motion is not rotating about a fixed point, but
+\textbf{instantaneously} it rotates about the \textbf{instantaneous
+center of rotation (IC)} --- a point with zero velocity at that instant.
+If \({\bf v}_{IC} = {\bf 0}\), then for any material point \(A\):
+\begin{align}
+    {\bf v}_A = \bomega\times({\bf r}_A-{\bf r}_{IC}).
+\end{align} So \({\bf r}_{A/IC}\) is perpendicular to \({\bf v}_A\).
+Knowing the directions of \({\bf v}_A\) and \({\bf v}_B\) for two
+material points identifies the IC.
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{rigid_body_dynamics/rigid_body_kinematics_files/figure-pdf/unnamed-chunk-6-1.pdf}}
+\end{center}
+
+For the IC: \begin{align}
+    {\bf v}_P = \bomega\times{\bf r}_{P/IC}, \qquad
+    {\bf a}_P = \balpha\times{\bf r}_{P/IC}+\bomega\times(\bomega\times{\bf r}_{P/IC}).
+\end{align}
+
+\textbf{Remarks:} the IC generally migrates through space; for a
+translating rigid body the IC is at infinity; the IC can only be used
+for velocity analysis since its acceleration is nonzero.
+
+\textbf{Procedure:} use geometry to find the IC; find \(|\omega|\) via
+\({\bf v}_P = \bomega\times{\bf r}_{P/IC}\); obtain \({\bf v}_P\) for
+any point.
+
+\emph{Examples: \href{https://www.youtube.com/watch?v=RDixpdSGERQ}{Crank
+slider}, rod falling on a corner.}
+
+\section{Doing Kinematics
+Geometrically}\label{doing-kinematics-geometrically}
+
+In some problems, geometric laws that hold for all time can be
+differentiated: - The law of sines holds at all times. - The law of
+cosines holds at all times. - Angle sum relations for a triangle
+(e.g.~\(\beta+\alpha+\theta=\pi\)) can be differentiated.
+
+\section{Kinematics of Rolling and
+Sliding}\label{kinematics-of-rolling-and-sliding}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Terminology: ``rolling'' = roll without slip; ``sliding'' = roll with
+slip.
+
+\end{tcolorbox}
+
+Consider a rigid body \(\mathcal{B}\) in contact with a fixed surface
+\(\mathcal{S}\). Let \(P\) be the material point of \(\mathcal{B}\) in
+contact at time \(t\), with unit normal \({\bf n}\) to \(\mathcal{S}\).
+
+Since \(P\) belongs to \(\mathcal{B}\): \begin{align}
+    {\bf v}_P-{\bf v}_C &= \bomega\times({\bf r}_P-{\bf r}_C),\\
+    {\bf a}_P-{\bf a}_C &= \balpha\times({\bf r}_P-{\bf r}_C)+\bomega\times\lp\bomega\times({\bf r}_P-{\bf r}_C)\rp.
+\end{align}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Contact (touching):} \({\bf v}_P\cdot{\bf n} = 0\).
+\item
+  \textbf{Rolling (no slip):} \({\bf v}_P = {\bf 0}\), so
+  \({\bf v}_C = -\bomega\times({\bf r}_P-{\bf r}_C)\). Note:
+  \({\bf a}_P \neq {\bf 0}\) in general.
+\end{itemize}
+
+\subsection{Example: Rolling Circular
+Disk}\label{example-rolling-circular-disk}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} What is the IC of a rolling disk?
+
+\textbf{Answer:} The contact point with the surface.
+
+\end{tcolorbox}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{rigid_body_dynamics/rigid_body_kinematics_files/figure-pdf/unnamed-chunk-7-1.pdf}}
+\end{center}
+
+A disk of radius \(R\) rolling on a plane with
+\(\bomega = \omega{\bf E}_z\). Since \({\bf v}_P = {\bf 0}\):
+\begin{align}
+    {\bf v}_C = \bomega\times R{\bf E}_y = -\omega R{\bf E}_x \implies \dot{x} = -\omega R, \quad \ddot{x} = -\alpha R.
+\end{align} The acceleration of the contact point: \begin{align}
+    {\bf a}_P = -\omega^2 R{\bf E}_y
+\end{align} (purely vertical --- toward the center).
+
+\section{Center of Mass}\label{center-of-mass-1}
+
+The center of mass \(C\) of \(\mathcal{B}\) has position vector
+\begin{align}
+    {\bf r}_C = \frac{\int_{\mathcal{B}}{\bf r}\,dm}{\int_{\mathcal{B}}dm}, \qquad dm = \rho(x,t)\,dv.
+\end{align} For rigid bodies, \(C\) behaves as a material point:
+\begin{align}
+    {\bf v}_C-{\bf v}_A = \bomega\times({\bf r}_C-{\bf r}_A), \qquad
+    {\bf a}_C-{\bf a}_A = \balpha\times({\bf r}_C-{\bf r}_A)+\bomega\times\lp\bomega\times({\bf r}_C-{\bf r}_A)\rp.
+\end{align}
+
+\section{Linear Momentum}\label{linear-momentum-1}
+
+\begin{align}
+    {\bf G} = \int_{\mathcal{B}}{\bf v}\,dm = m{\bf v}_C.
+\end{align}
+
+\section{Angular Momenta}\label{angular-momenta}
+
+The angular momentum about a point \(P\) is \begin{align}
+    {\bf H}^P = \int_{\mathcal{B}}({\bf r}-{\bf r}_P)\times{\bf v}\,dm,
+\end{align} and the relationship between angular momenta about \(O\) and
+\(C\) is \begin{align}
+    {\bf H}^O = {\bf H}^C+{\bf r}_C\times{\bf G}.
+\end{align}
+
+\subsection{Inertia Tensor}\label{inertia-tensor}
+
+With \(\bpi = {\bf r}-{\bf r}_C\) and using the BAC-CAB identity:
+\begin{align}
+    {\bf H}^C = \int_{\mathcal{B}}\lp(\bpi\cdot\bpi)\bomega-(\bpi\cdot\bomega)\bpi\rp dm = {\bf I}^C\bomega.
+\end{align} The inertia matrix on the corotational basis: \begin{align}
+    [{\bf I}^C] =
+    \begin{bmatrix}
+        I^C_{xx} & I^C_{xy} & I^C_{xz}\\
+        I^C_{xy} & I^C_{yy} & I^C_{yz}\\
+        I^C_{xz} & I^C_{yz} & I^C_{zz}
+    \end{bmatrix},
+\end{align} with diagonal entries (\textbf{moments of inertia}) and
+off-diagonal entries (\textbf{products of inertia}): \begin{align}
+    I^C_{xx} &= \int_{\mathcal{B}}(y^2+z^2)\,dm, \qquad
+    I^C_{yy} = \int_{\mathcal{B}}(x^2+z^2)\,dm, \qquad
+    I^C_{zz} = \int_{\mathcal{B}}(x^2+y^2)\,dm,\\
+    I^C_{xy} &= -\int_{\mathcal{B}}xy\,dm, \qquad
+    I^C_{xz} = -\int_{\mathcal{B}}xz\,dm, \qquad
+    I^C_{yz} = -\int_{\mathcal{B}}yz\,dm.
+\end{align} When \(\{{\bf e}_x,{\bf e}_y,{\bf e}_z\}\) is an eigenbasis
+of \([{\bf I}^C]\), the products of inertia vanish.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Think!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+\textbf{Question:} Is my moment of inertia about an axis through my body
+greater when my arms are closed or open?
+
+\textbf{Answer:} Greater when arms are open --- mass is farther from the
+axis. See also:
+\href{https://www.youtube.com/watch?v=M_YCWDXCwZM}{Professor Walter
+Lewin rolling cylinders}.
+
+\end{tcolorbox}
+
+\subsection{Example: Solid Cylinder}\label{example-solid-cylinder}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{rigid_body_dynamics/rigid_body_kinematics_files/figure-pdf/unnamed-chunk-8-1.pdf}}
+\end{center}
+
+With \(dm = \rho\,r\,dr\,d\theta\,dz\): \begin{align}
+    I^C_{zz} = \rho\int_{-\ell/2}^{\ell/2}\int_0^{2\pi}\int_0^R r^3\,dr\,d\theta\,dz = \frac{1}{2}\rho\pi\ell R^4 = \frac{mR^2}{2}.
+\end{align}
+
+\subsection{Example: Cylindrical Hoop}\label{example-cylindrical-hoop}
+
+Every \(dm\) has \(r = R\), so: \begin{align}
+    I^C_{zz} = R^2\int_{\mathcal{B}}dm = mR^2.
+\end{align}
+
+\section{Parallel Axis Theorem}\label{parallel-axis-theorem}
+
+Given inertia components about \(C\), the inertia about a material point
+\(A\) with
+\({\bf r}_A - {\bf r}_C = A_x{\bf e}_x+A_y{\bf e}_y+A_z{\bf e}_z\) (axes
+parallel at \(A\) and \(C\)): \begin{align}
+    I^A_{xx} &= I^C_{xx}+m(A_y^2+A_z^2),\\
+    I^A_{xy} &= I^C_{xy}-mA_xA_y.
+\end{align} In tensor form: \begin{align}
+    {\bf I}^A = {\bf I}^C+m\lnorm{\bf r}_A-{\bf r}_C\rnorm^2{\bf I}-m({\bf r}_A-{\bf r}_C)\otimes({\bf r}_A-{\bf r}_C).
+\end{align}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+The parallel axis theorem applies only between the center of mass \(C\)
+and another material point --- not between any two arbitrary material
+points. The moment of inertia always increases when moving away from
+\(C\).
+
+\end{tcolorbox}
+
+\section{Radius of Gyration}\label{radius-of-gyration}
+
+The radius of gyration \(k_z\) about the \(z\)-axis satisfies
+\(mk_z^2 = I_{zz}\).
+
+\section{\texorpdfstring{Angular Momentum About a Moving Point
+\(P\)}{Angular Momentum About a Moving Point P}}\label{angular-momentum-about-a-moving-point-p}
+
+For a material point \(P\) on the rigid body: \begin{align}
+    {\bf H}^P &= {\bf I}^P\bomega+({\bf r}_C-{\bf r}_P)\times m{\bf v}_P,
+\end{align} with special cases \({\bf H}^C = {\bf I}^C\bomega\) and
+\({\bf H}^O = {\bf I}^O\bomega\) (fixed \(O\)). In general:
+\begin{align}
+    \dot{\bf H}^P = {\bf I}^P\overset{\circ}{\bomega}+\bomega\times({\bf I}^P\bomega)+\frac{d}{dt}\leb({\bf r}_C-{\bf r}_P)\times m{\bf v}_P\reb.
+\end{align}
+
+\chapter{Kinetics of Rigid Bodies}\label{kinetics-of-rigid-bodies}
+
+\section{Balance Laws for a Rigid
+Body}\label{balance-laws-for-a-rigid-body}
+
+The balance laws for a rigid body are \textbf{Euler's first law}
+(Balance of Linear Momentum, BoLM) and \textbf{Euler's second law}
+(Balance of Angular Momentum, BoAM): \begin{align}
+    {\bf F} &= m{\bf a}_C,\\
+    {\bf M}^O &= \dot{\bf H}^O \quad\text{about a fixed point }O,\\
+    {\bf M}^C &= \dot{\bf H}^C \quad\text{about the center of mass }C,\\
+    {\bf M}^P &= \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G} \quad\text{about any material point }P.
+\end{align} The BoAM is an \textbf{independent postulate}, not derivable
+from the BoLM.
+
+\section{Resultant Forces and
+Moments}\label{resultant-forces-and-moments}
+
+The resultant force \({\bf F}\) is the sum of all external forces. The
+resultant moment about a point includes the moment due to forces plus
+any applied pure moments \({\bf M}_e\) not due to forces.
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{rigid_body_dynamics/rigid_body_kinetics_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+\end{center}
+
+For \(K\) forces \({\bf F}_i\) acting at positions \({\bf r}_i\) plus a
+pure moment \({\bf M}_e\): \begin{align}
+    {\bf F} &= \sum_{i=1}^K{\bf F}_i,\\
+    {\bf M}^O &= {\bf M}_e+\sum_{i=1}^K{\bf r}_i\times{\bf F}_i,\\
+    {\bf M}^C &= {\bf M}_e+\sum_{i=1}^K({\bf r}_i-{\bf r}_C)\times{\bf F}_i.
+\end{align}
+
+Examples of pure moments: reaction moments \({\bf M}_R\) at joints;
+torsional spring moments \(-K_T(\theta-\theta_0){\bf E}_z\).
+
+\subsection{Does Weight Give a Moment About the Center of
+Mass?}\label{does-weight-give-a-moment-about-the-center-of-mass}
+
+The total weight is
+\({\bf W} = \int_{\mathcal{B}}{\bf g}\,dm = m{\bf g}\), and its moment
+about \(C\) is: \begin{align}
+    {\bf M}^C = \int_{\mathcal{B}}\bpi\times{\bf g}\,dm = \lp\int_{\mathcal{B}}\bpi\,dm\rp\times{\bf g} = {\bf 0},
+\end{align} since \(\int_{\mathcal{B}}\bpi\,dm = {\bf 0}\) by definition
+of the center of mass.
+
+\section{Equivalence of the BoAM
+Forms}\label{equivalence-of-the-boam-forms}
+
+\subsection{\texorpdfstring{BoAM About Any Point
+\(P\)}{BoAM About Any Point P}}\label{boam-about-any-point-p}
+
+Starting from \({\bf M}^C = \dot{\bf H}^C\) and replacing
+\({\bf M}^P = {\bf M}^C+({\bf r}_C-{\bf r}_P)\times{\bf F}\):
+\begin{align}
+    {\bf M}^P = \dot{\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf F}.
+\end{align} Substituting
+\(\dot{\bf H}^C = \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G}+({\bf r}_P-{\bf r}_C)\times m{\bf a}_C\)
+and simplifying: \begin{align}
+    {\bf M}^P = \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G},
+\end{align} recovering the BoAM about a general material point \(P\).
+
+\subsection{\texorpdfstring{BoAM About a Fixed Point
+\(O\)}{BoAM About a Fixed Point O}}\label{boam-about-a-fixed-point-o}
+
+If \(P\) is a fixed point \(O\) (so \({\bf v}_O = {\bf 0}\)), the above
+simplifies to \({\bf M}^O = \dot{\bf H}^O\).
+
+\section{Calculating the Derivative of Angular
+Momentum}\label{calculating-the-derivative-of-angular-momentum}
+
+Recall \({\bf H}^C = {\bf I}^C\bomega\) and
+\(\dot{\bf H}^C = \overset{\circ}{\bf H}^C+\bomega\times{\bf H}^C\),
+where \(\overset{\circ}{\bf H}^C\) is the corotational rate (time
+derivative with \({\bf e}_x,{\bf e}_y,{\bf e}_z\) fixed).
+
+For \(\bomega = \omega{\bf E}_z\) (the case exclusively considered in
+this class): \begin{align}
+    {\bf H}^C &= I^C_{xz}\omega_z{\bf e}_x+I^C_{yz}\omega_z{\bf e}_y+I^C_{zz}\omega_z{\bf e}_z,\\
+    \dot{\bf H}^C &= (I^C_{xz}\dot{\omega}-I^C_{yz}\omega^2){\bf e}_x+(I^C_{yz}\dot{\omega}+I^C_{xz}\omega^2){\bf e}_y+I^C_{zz}\dot{\omega}{\bf E}_z.
+\end{align} Analogously for other reference points.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+For fixed axis rotation, sum moments about a fixed point on the axis.
+For general plane motion, sum about \(C\) or a general material point
+\(P\) using \begin{align}
+    {\bf M}^P = (I^C_{xz}\dot{\omega}-I^C_{yz}\omega^2){\bf e}_x+(I^C_{yz}\dot{\omega}+I^C_{xz}\omega^2){\bf e}_y+I^C_{zz}\dot{\omega}{\bf E}_z+({\bf r}_C-{\bf r}_P)\times m{\bf a}_C.
+\end{align} In most problems, axes are chosen so that
+\(I_{xz}=I_{yz}=0\).
+
+\end{tcolorbox}
+
+\section{Conservative Moments}\label{conservative-moments}
+
+\subsection{Torsional Spring}\label{torsional-spring}
+
+A torsional spring with stiffness \(K\) creates a couple
+\({\bf M}_S = -K\theta{\bf E}_z\). Its power is: \begin{align}
+    {\bf M}_S\cdot\bomega = -K\theta\dot{\theta} = -\frac{d}{dt}\lp\frac{K\theta^2}{2}\rp.
+\end{align} Hence \(U = \frac{1}{2}K\theta^2\) for the torsional spring.
+
+\subsection{Constant Couple}\label{constant-couple}
+
+A constant couple \({\bf M}_e = M_e{\bf E}_z\) has power
+\({\bf M}_e\cdot\bomega = M_e\dot{\theta} = -\frac{d}{dt}(-M_e\theta)\).
+Hence \(U = -M_e\theta\).
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+These results apply only for \(\bomega = \omega{\bf E}_z\). Constant
+couples are not conservative in general.
+
+\end{tcolorbox}
+
+\section{Impact Problems and Center of
+Percussion}\label{impact-problems-and-center-of-percussion}
+
+For rigid bodies, impact ideas are the same as in systems of particles.
+
+\emph{Example:} Consider a projectile fired horizontally at a pendulum
+(in the horizontal plane, no gravity). Find position \(x\) along the
+pendulum such that the reaction force at the pin is nearly zero during
+impact.
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{rigid_body_dynamics/rigid_body_kinetics_files/figure-pdf/unnamed-chunk-2-1.pdf}}
+\end{center}
+
+If \(x\) is large, the horizontal reaction at \(O\) points left; if
+\(x\) is small, it points right. The optimal \(x\) that minimizes the
+reaction is called the \textbf{center of percussion}.
+
+\section{Summary}\label{summary}
+
+For \(K\) forces and a moment \({\bf M}_e\) acting on a rigid body, the
+balance laws are: \begin{align}
+    {\bf F} = m\frac{d{\bf v}_C}{dt}, \qquad {\bf M}^O = \dot{\bf H}^O \quad (\text{or equivalently } {\bf M}^C = \dot{\bf H}^C).
+\end{align}
+
+For fixed-axis rotation with \(\bomega = \omega{\bf E}_z\) and
+\(I_{xz}=I_{yz}=0\): \begin{align}
+    {\bf F} = m\dot{\bf v}_C, \qquad {\bf M} = I_{zz}\dot{\omega}{\bf E}_z.
+\end{align}
+
+Four classes of applications: (1) purely translational motion
+(\(\bomega=\balpha={\bf 0}\)), (2) rigid body with a fixed point, (3)
+rolling and sliding rigid bodies, (4) imbalanced rotors.
+
+\chapter{The Work-Energy Theorem for a Rigid
+Body}\label{the-work-energy-theorem-for-a-rigid-body}
+
+The \textbf{Koenig decomposition} for the kinetic energy of a rigid body
+is: \begin{align}
+    T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}^C\cdot\bomega.
+\end{align} In this class, \(\bomega = \omega{\bf E}_z\), so
+\(\frac{1}{2}{\bf H}^C\cdot\bomega = \frac{1}{2}I_{zz}\omega^2\).
+
+For fixed point rotation about \(O\), the kinetic energy simplifies to:
+\begin{align}
+    T = \frac{1}{2}{\bf H}^O\cdot\bomega = \frac{1}{2}I^O_{zz}\omega^2.
+\end{align}
+
+The \textbf{work-energy theorem} for a rigid body is: \begin{align}
+    \frac{dT}{dt} = {\bf F}\cdot{\bf v}_C+{\bf M}^C\cdot\bomega = \sum_{i=1}^N{\bf F}_i\cdot{\bf v}_i+{\bf M}_e\cdot\bomega.
+\end{align} Integrating from \(t_A\) to \(t_B\): \begin{align}
+    T_B-T_A = W_{{\bf F},AB}+W_{{\bf M},AB} = \sum_{i=1}^N W_{{\bf F}_i,AB}+W_{{\bf M}_e,AB},
+\end{align} where \begin{align}
+    W_{{\bf F},AB} &= \int_{t_A}^{t_B}{\bf F}\cdot{\bf v}_C\,dt, &
+    W_{{\bf M},AB} &= \int_{t_A}^{t_B}{\bf M}^C\cdot\bomega\,dt,\\
+    W_{{\bf F}_i,AB} &= \int_{t_A}^{t_B}{\bf F}_i\cdot{\bf v}_i\,dt, &
+    W_{{\bf M}_e,AB} &= \int_{t_A}^{t_B}{\bf M}_e\cdot\bomega\,dt.
+\end{align} Notice: the work of a force uses the velocity of its
+\textbf{point of application}.
+
+\section{Koenig's Decomposition}\label{koenigs-decomposition}
+
+By definition, the kinetic energy of a rigid body is: \begin{align}
+    T = \frac{1}{2}\int_{\mathcal{B}}{\bf v}\cdot{\bf v}\,\rho\,dv.
+\end{align} Using \({\bf v} = {\bf v}_C+\bomega\times\bpi\) with
+\(\bpi = {\bf r}-{\bf r}_C\): \begin{align}
+    T = \frac{1}{2}\int_{\mathcal{B}}\lp{\bf v}_C\cdot{\bf v}_C+2{\bf v}_C\cdot(\bomega\times\bpi)+(\bomega\times\bpi)\cdot(\bomega\times\bpi)\rp dm.
+\end{align} The first term integrates to
+\(\frac{1}{2}m{\bf v}_C\cdot{\bf v}_C\), the second vanishes (since
+\(\int\bpi\,dm = {\bf 0}\)), and using the BAC-CAB identity for the
+third: \begin{align}
+    T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}^C\cdot\bomega.
+\end{align}
+
+\subsection{Fixed Point Rotation}\label{fixed-point-rotation}
+
+For fixed point rotation about \(O\) (\({\bf v}_O = {\bf 0}\)), using
+the cyclic property of the scalar triple product: \begin{align}
+    T &= \frac{1}{2}{\bf G}\cdot(\bomega\times{\bf r}_{C/O})+\frac{1}{2}{\bf H}^C\cdot\bomega
+    = \frac{1}{2}({\bf r}_{C/O}\times{\bf G}+{\bf H}^C)\cdot\bomega
+    = \frac{1}{2}{\bf H}^O\cdot\bomega.
+\end{align}
+
+\section{Derivation of the Work-Energy
+Theorem}\label{derivation-of-the-work-energy-theorem}
+
+From
+\(T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}^C\cdot\bomega\),
+taking the time derivative and using the fact that
+\(\dot{\bf H}^C\cdot\bomega = {\bf H}^C\cdot\dot{\bomega}\) (verified by
+direct calculation): \begin{align}
+    \dot{T} = m\dot{\bf v}_C\cdot{\bf v}_C+\dot{\bf H}^C\cdot\bomega.
+\end{align} Invoking the BoLM and BoAM: \begin{align}
+    \dot{T} = {\bf F}\cdot{\bf v}_C+{\bf M}^C\cdot\bomega.
+\end{align}
+
+\section{Alternative Form}\label{alternative-form}
+
+Using \({\bf F} = \sum_i{\bf F}_i\) and
+\({\bf M}^C = {\bf M}_e+\sum_i({\bf r}_i-{\bf r}_C)\times{\bf F}_i\),
+and noting that
+\({\bf v}_i = {\bf v}_C+\bomega\times({\bf r}_i-{\bf r}_C)\):
+\begin{align}
+    \dot{T} = \sum_{i=1}^K{\bf F}_i\cdot{\bf v}_i+{\bf M}_e\cdot\bomega.
+\end{align} This form is often easier to use in applications: each force
+is dotted with the velocity of its point of application.
+
+\section{Examples}\label{examples}
+
+\subsection{Bar Pendulum Fixed at Its
+End}\label{bar-pendulum-fixed-at-its-end}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{rigid_body_dynamics/work_energy_theorem_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+\end{center}
+
+A bar of length \(\ell\) and mass \(m\) pinned at its end. The energy is
+conserved: \begin{align}
+    U &= -\frac{mg\ell}{2}\cos\theta,\\
+    E &= \frac{m\ell^2}{6}\dot{\theta}^2-\frac{mg\ell}{2}\cos\theta = \text{const}.
+\end{align}
+
+\subsection{Bar Pendulum With End
+Mass}\label{bar-pendulum-with-end-mass}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{rigid_body_dynamics/work_energy_theorem_files/figure-pdf/unnamed-chunk-2-1.pdf}}
+\end{center}
+
+Adding a dead mass \(m_e\) at the end: \begin{align}
+    U = -\frac{mg\ell}{2}\cos\theta-m_e g\ell\cos\theta.
+\end{align}
+
+\subsection{Follower Force}\label{follower-force}
+
+If instead a follower force \({\bf P}\) is applied perpendicular to the
+bar at its end, this force is \textbf{nonconservative} (its direction
+actively changes with configuration). Energy is not conserved.
+
+\section{Energy Conservation}\label{energy-conservation}
+
+As with particles and systems of particles, this theorem can be used to
+establish conservation of the total mechanical energy of a rigid body,
+\(E = T + U\), when all work-doing forces and moments are conservative.
+
+\bookmarksetup{startatroot}
+
+\chapter{Summary}\label{summary-1}
+
+In summary, this book has no content whatsoever.
+
+\bookmarksetup{startatroot}
+
+\chapter*{References}\label{references}
+\addcontentsline{toc}{chapter}{References}
+
+\markboth{References}{References}
+
+\protect\phantomsection\label{refs}
+
+\part{Appendices}
+
+\chapter{Mathematical Background for Conservative
+Forces}\label{mathematical-background-for-conservative-forces}
+
+\section{Gradient}\label{gradient}
+
+In coordinate-free terms, the gradient of a function \(f({\bf r})\) is
+defined by \begin{align}
+    df = \nabla f\cdot d{\bf r},
+\end{align} where \(df\) is the total infinitesimal change in \(f\) for
+an infinitesimal displacement \(d{\bf r}\).
+
+\subsection{Cartesian Coordinates}\label{cartesian-coordinates-1}
+
+For \(f = f(x,y,z)\) with
+\(d{\bf r} = dx{\bf E}_x+dy{\bf E}_y+dz{\bf E}_z\): \begin{align}
+    df = \frac{\partial f}{\partial x}dx+\frac{\partial f}{\partial y}dy+\frac{\partial f}{\partial z}dz.
+\end{align} Since this must hold for all independent variations \(dx\),
+\(dy\), \(dz\): \begin{align}
+    \nabla f = \frac{\partial f}{\partial x}{\bf E}_x+\frac{\partial f}{\partial y}{\bf E}_y+\frac{\partial f}{\partial z}{\bf E}_z.
+\end{align}
+
+\subsection{Cylindrical-Polar
+Coordinates}\label{cylindrical-polar-coordinates-1}
+
+For \(f = f(r,\theta,z)\) with
+\(d{\bf r} = dr{\bf e}_r+r\,d\theta{\bf e}_\theta+dz{\bf E}_z\):
+\begin{align}
+    df = \frac{\partial f}{\partial r}dr+\frac{\partial f}{\partial \theta}d\theta+\frac{\partial f}{\partial z}dz = \nabla f\cdot(dr{\bf e}_r+r\,d\theta{\bf e}_\theta+dz{\bf E}_z).
+\end{align} Matching coefficients: \begin{align}
+    \nabla f = \frac{\partial f}{\partial r}{\bf e}_r+\frac{1}{r}\frac{\partial f}{\partial \theta}{\bf e}_\theta+\frac{\partial f}{\partial z}{\bf E}_z.
+\end{align}
+
+\subsection{Curvilinear Coordinates}\label{curvilinear-coordinates}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+This section is beyond the scope of this course. See O. M. O'Reilly's
+\emph{Intermediate Dynamics} Section 1.6 for more information.
+
+\end{tcolorbox}
+
+Consider a curvilinear coordinate system \(\{q^1,q^2,q^3\}\) defined by
+\(q^i = \hat{q}^i(x_1,x_2,x_3)\), assumed locally invertible. The
+\textbf{covariant basis vectors} are: \begin{align}
+    {\bf a}_i = \frac{\partial{\bf r}}{\partial q^i} = \sum_{k=1}^3\frac{\partial\hat{x}^k}{\partial q^i}{\bf E}_k.
+\end{align} The \textbf{contravariant basis vectors} are the gradients
+of the curvilinear coordinates: \begin{align}
+    {\bf a}^k = \nabla q^k = \sum_{i=1}^3\frac{\partial\hat{q}^k}{\partial x_i}{\bf E}_i.
+\end{align}
+
+\section{Condition for a Vector Field to Be
+Conservative}\label{condition-for-a-vector-field-to-be-conservative}
+
+A force \({\bf F} = F_x{\bf E}_x+F_y{\bf E}_y+F_z{\bf E}_z\) is
+derivable from a potential if \(F_x = \partial f/\partial x\),
+\(F_y = \partial f/\partial y\), \(F_z = \partial f/\partial z\). This
+requires: \begin{align}
+    \frac{\partial F_x}{\partial y} = \frac{\partial F_y}{\partial x}, \qquad
+    \frac{\partial F_x}{\partial z} = \frac{\partial F_z}{\partial x}, \qquad
+    \frac{\partial F_y}{\partial z} = \frac{\partial F_z}{\partial y},
+\end{align} summarized by \(\text{curl}\,{\bf F} = {\bf 0}\).
+
+This condition is both necessary and sufficient for \({\bf F}\) to be
+derivable from a potential (see
+\href{https://chatgpt.com/share/68da8fea-c574-8011-afa4-15974e1bd223}{this
+proof}).
+
+\section{Conservative Forces}\label{conservative-forces-1}
+
+A conservative force \({\bf F}_c\) is derivable from a potential \(U\):
+\begin{align}
+    {\bf F}_c = -\nabla U.
+\end{align} The work of a conservative force depends only on the
+endpoints: \begin{align}
+    W_{{\bf F}_c,AB} = \int_{{\bf r}(t_A)}^{{\bf r}(t_B)}{\bf F}_c\cdot d{\bf r} = -(U_B-U_A) = U_A-U_B.
+\end{align}
+
+\subsection{Constant Force}\label{constant-force}
+
+For a constant force \({\bf C}\), the potential is
+\(U = -{\bf C}\cdot{\bf r}\). In Cartesians: \begin{align}
+    \nabla({\bf C}\cdot{\bf r}) = \frac{\partial{\bf C}\cdot{\bf r}}{\partial x}{\bf E}_x+\frac{\partial{\bf C}\cdot{\bf r}}{\partial y}{\bf E}_y+\frac{\partial{\bf C}\cdot{\bf r}}{\partial z}{\bf E}_z = {\bf C}.
+\end{align} Hence \({\bf C} = -\nabla(-{\bf C}\cdot{\bf r})\). ✓
+
+\subsection{Spring Force}\label{spring-force-2}
+
+For the spring force \({\bf F}_s = -K(r-\ell_0){\bf e}_r\) (taking the
+anchor at the origin), the potential is
+\(U = \frac{1}{2}K(r-\ell_0)^2\). Using the polar gradient:
+\begin{align}
+    \nabla\lp\frac{1}{2}K(r-\ell_0)^2\rp = K(r-\ell_0){\bf e}_r,
+\end{align} so \({\bf F}_s = -\nabla U\). ✓
+
+\subsection{Gravitational Force}\label{gravitational-force-2}
+
+For Newton's law of gravitation, the force on particle 1 due to particle
+2 is \begin{align}
+    {\bf F}_1 = G\frac{m_1 m_2}{\lnorm{\bf r}_{2/1}\rnorm^3}{\bf r}_{2/1}.
+\end{align} Using the polar gradient with
+\({\bf r}_{2/1} = r{\bf e}_r\), one can show that \(U = -Gm_1m_2/r\) is
+the corresponding potential.
+
+\chapter{Sets and Linear Function
+Spaces}\label{sets-and-linear-function-spaces}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+This appendix is taken from Professor Panayiotis Papadopoulos's notes
+for UC Berkeley's ME280A course, Section 2.1.
+
+\end{tcolorbox}
+
+\section{Sets}\label{sets}
+
+A \emph{set} \(\mathcal{U}\) is a collection of elements. Elements of
+the set are denoted \(u \in \mathcal{U}\). A set can be finite or
+infinite, and may have algebraic structure imposed on it.
+
+\section{Linear (Vector) Spaces}\label{linear-vector-spaces}
+
+A set \(\mathcal{V}\) is a \textbf{linear space} (or vector space) over
+the real numbers \(\mathbb{R}\) if it is equipped with two operations:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Addition:} \({\bf u}+{\bf v} \in \mathcal{V}\) for all
+  \({\bf u},{\bf v} \in \mathcal{V}\),
+\item
+  \textbf{Scalar multiplication:} \(\alpha{\bf u} \in \mathcal{V}\) for
+  all \(\alpha \in \mathbb{R}\), \({\bf u} \in \mathcal{V}\),
+\end{enumerate}
+
+satisfying the standard axioms (commutativity, associativity, existence
+of zero element, existence of additive inverse, distributivity).
+
+Examples of linear spaces: \(\mathbb{R}^n\); the space of continuous
+functions on an interval; the space of \(n\times n\) matrices.
+
+\section{Linear Transformations}\label{linear-transformations}
+
+A map \({\bf T}: \mathcal{V} \to \mathcal{W}\) between two linear spaces
+is a \textbf{linear transformation} if: \begin{align}
+    {\bf T}({\bf u}+{\bf v}) &= {\bf T}{\bf u}+{\bf T}{\bf v} \quad \text{for all } {\bf u},{\bf v} \in \mathcal{V},\\
+    {\bf T}(\alpha{\bf u}) &= \alpha{\bf T}{\bf u} \quad \text{for all } \alpha \in \mathbb{R},\; {\bf u} \in \mathcal{V}.
+\end{align}
+
+When \(\mathcal{V} = \mathcal{W}\) is the space of 3D vectors
+\(\mathbb{E}^3\), a linear transformation from \(\mathbb{E}^3\) to
+\(\mathbb{E}^3\) is called a \textbf{tensor}.
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Note!}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+The rotation \({\bf Q}\) is a linear transformation from
+\(\mathbb{E}^3\) to \(\mathbb{E}^3\), so it is a tensor. This justifies
+calling it the \textbf{rotation tensor} throughout the kinematics of
+rigid bodies chapter.
+
+\end{tcolorbox}
+
+\section{Basis and Dimension}\label{basis-and-dimension}
+
+A set \(\{{\bf e}_1,\ldots,{\bf e}_n\}\) is a \textbf{basis} for
+\(\mathcal{V}\) if: - The vectors are \textbf{linearly independent}:
+\(\sum_i \alpha_i{\bf e}_i = {\bf 0}\) implies \(\alpha_i = 0\) for all
+\(i\). - They \textbf{span} \(\mathcal{V}\): every
+\({\bf v} \in \mathcal{V}\) can be written as
+\({\bf v} = \sum_i v_i{\bf e}_i\).
+
+The number of basis vectors is the \textbf{dimension} of the space.
+
+For 3D Euclidean space \(\mathbb{E}^3\), any orthonormal set
+\(\{{\bf E}_1,{\bf E}_2,{\bf E}_3\}\) with
+\({\bf E}_i\cdot{\bf E}_j = \delta_{ij}\) is a basis.
+
+
+
+
+\end{document}

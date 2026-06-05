@@ -1,0 +1,198 @@
+---
+title: "The Serret-Frenet Basis"
+---
+
+In general, the path of a particle is a curve in space — we refer to such curves as *space curves*.
+
+Consider a fixed curve $\mathcal{C}$ embedded in $\mathbb{E}^3$. Let the position vector of a point $P\in\mathcal{C}$ be ${\bf r}$. In Cartesian coordinates, ${\bf r} = x{\bf E}_x+y{\bf E}_y+z{\bf E}_z$.
+
+Recall the arc-length parameter $s$ associated with $\mathcal{C}$:
+\begin{align*}
+    \lp\frac{ds}{dt}\rp^2 = \frac{d{\bf r}}{dt}\cdot\frac{d{\bf r}}{dt}.
+\end{align*}
+This parameter uniquely identifies a point $P$ on $\mathcal{C}$, giving the representation ${\bf r} = \hat{\bf r}(s)$.
+
+## The Serret-Frenet Triad
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+
+    \draw[thick] plot[smooth, tension=1] coordinates {(-2,-1) (0,0) (2,-0.5) (4,1) (7,0.8)};
+
+    \node[circle, fill=red, inner sep=2pt, label=above:{$P$}] at (2,-0.5) {};
+    \node[circle, fill=black, inner sep=2pt, label=below:{$O$}] at (1,-2) {};
+
+    \draw[->, thick, blue] (1,-2) -- (2,-0.5) node[midway, above left] {${\bf r}$};
+
+    \draw[->] (1,-2) -- (2,-2) node[right] {${\bf E}_y$};
+    \draw[->] (1,-2) -- (1,-1) node[above] {${\bf E}_z$};
+    \draw[->] (1,-2) -- (0.5,-2.5) node[below left] {${\bf E}_x$};
+
+    \draw[->] (2,-0.5) -- (2.8,-0.3) node[right] {${\bf e}_t$};
+    \draw[->] (2,-0.5) -- (1.7,0.1) node[above] {${\bf e}_n$};
+    \draw[->] (2,-0.5) -- (1.8,-1) node[below] {${\bf e}_b$};
+
+    \draw[->] (4,1) -- (4.1,1.01) node[above left] {Inc. $s$};
+
+\end{tikzpicture}
+```
+
+The Serret-Frenet basis $\{{\bf e}_t,{\bf e}_n,{\bf e}_b\}$ is defined at the point $P$; it depends on the curve and the particle's location on it.
+
+::: {.callout-tip title="Think!"}
+**Question:** How do we define the unit tangent vector?
+
+**Answer:** …
+:::
+
+Recall the unit tangent vector:
+\begin{align}
+    {\bf e}_t = \hat{\bf e}_t(s) = \frac{d{\bf r}}{ds} = \lim_{\Delta s\rightarrow 0}\frac{\hat{\bf r}(s+\Delta s)-\hat{\bf r}(s)}{\Delta s}.
+\end{align}
+
+::: {.callout-tip title="Think!"}
+**Question:** What do we know about $\frac{d\hat{\bf e}_t}{ds}$?
+
+**Answer:** We can show that ${\bf e}_t$ and $\frac{d\hat{\bf e}_t}{ds}$ are perpendicular by differentiating ${\bf e}_t\cdot{\bf e}_t = 1$:
+\begin{align}
+    {\bf e}_t\cdot\frac{d{\bf e}_t}{ds} = 0.
+\end{align}
+:::
+
+::: {.callout-important title="Note! Derivatives of a unit vector"}
+It is a common mistake to assume that the derivative of a unit vector is necessarily a unit vector. Recall: $\dot{\bf e}_r = \dot{\theta}{\bf e}_\theta$ is not generally a unit vector.
+:::
+
+Hence, we define:
+\begin{align}
+    \kappa{\bf e}_n = \frac{d{\bf e}_t}{ds},
+\end{align}
+where $\kappa = \lnorm \frac{d{\bf e}_t}{ds}\rnorm \geq 0$ and $\lnorm{\bf e}_n\rnorm=1$.
+
+- ${\bf e}_n$ is the unit **principal normal** vector.
+- $\kappa$ is the **curvature** of $\mathcal{C}$ at $P$.
+- The **radius of curvature** is $\rho = 1/\kappa$.
+
+For any point on a curve, three nearby non-collinear points define the **osculating circle** (radius $\rho$, center of curvature).
+
+![Serret-Frenet triad example](../figures/serret_frenet_triad/serret-frenet-triad-example.jpg)
+
+::: {.callout-tip title="Think!"}
+**Question:** When is ${\bf e}_n$ not uniquely defined?
+
+**Answer:** When $d{\bf e}_t/ds = {\bf 0}$ (i.e. $\kappa = 0$), such as on a straight line, at an inflection point, or at a corner. In this case, ${\bf e}_n$ is defined as any unit vector perpendicular to ${\bf e}_t$.
+:::
+
+The unit **binormal** vector:
+\begin{align*}
+    {\bf e}_b = {\bf e}_t\times{\bf e}_n.
+\end{align*}
+
+Concluding remarks:
+
+- $\{{\bf e}_t,{\bf e}_n,{\bf e}_b\}$ is orthonormal and right-handed.
+- The **osculating plane** is spanned by ${\bf e}_t$ and ${\bf e}_n$; it contains the osculating circle.
+- The **rectifying plane** is spanned by ${\bf e}_t$ and ${\bf e}_b$.
+- The **normal plane** is spanned by ${\bf e}_n$ and ${\bf e}_b$.
+
+Check out [this](https://www.youtube.com/shorts/NyphZOJggFk?feature=share) animation showing the osculating circle, and [this](https://www.youtube.com/watch?v=0ACqRREH180) video placing the Serret-Frenet basis on a bobsled.
+
+## Kinematics
+
+Position, velocity, and acceleration in the Serret-Frenet basis:
+\begin{align*}
+    {\bf v} &= \frac{ds}{dt}{\bf e}_t = v{\bf e}_t,\\
+    {\bf a} &= \dot{v}{\bf e}_t+\kappa v^2{\bf e}_n.
+\end{align*}
+
+### Example: Problem 02/279
+
+Draw the Serret-Frenet basis. Indicate whether the car is accelerating or decelerating and its direction of motion.
+
+## Kinetics
+
+\begin{align}
+    {\bf F} &= m{\bf a}\\
+    F_t{\bf e}_t+F_n{\bf e}_n+F_b{\bf e}_b &= m\lp\dot{v}{\bf e}_t+\kappa v^2{\bf e}_n\rp.
+\end{align}
+Note that forces in the binormal direction should always balance.
+
+### Example: Problem 03/040 and Roller Coaster Design
+
+::: {.callout-tip title="Think!"}
+**Question:** Consider the design of a roller coaster that is a circular ring. Comment on its safety.
+
+**Answer:** At the transition between the circular and straight portions, there is a jump in curvature, hence a jump in acceleration, hence a jump in the normal force — producing a jerk. For a circular loop, the normal force goes from 0 to a finite value instantaneously. This could snap the rider's neck. Instead, we use two connected **clothoids** (Euler spirals), whose curvature is proportional to arc length.
+:::
+
+## The Serret-Frenet Formulae
+
+We want the derivatives of the Serret-Frenet basis vectors with respect to $s$.
+
+We already have:
+\begin{align}
+    \frac{d{\bf e}_t}{ds} = \kappa{\bf e}_n.
+\end{align}
+
+Since ${\bf e}_b\cdot{\bf e}_b = 1$, we have $\frac{d{\bf e}_b}{ds}\cdot{\bf e}_b = 0$. Also from ${\bf e}_t\cdot{\bf e}_b = 0$, we get $\frac{d{\bf e}_b}{ds}\cdot{\bf e}_t=0$. So $\frac{d{\bf e}_b}{ds}$ is parallel to ${\bf e}_n$:
+\begin{align}
+    \frac{d{\bf e}_b}{ds} = -\tau{\bf e}_n,
+\end{align}
+where $\tau$ is the **torsion** of $\mathcal{C}$ at $P$.
+
+Then:
+\begin{align}
+    \frac{d{\bf e}_n}{ds} = -\kappa{\bf e}_t+\tau{\bf e}_b.
+\end{align}
+
+In summary (the Serret-Frenet formulae):
+\begin{align}
+    \begin{bmatrix}
+        \frac{d{\bf e}_t}{ds}\\
+        \frac{d{\bf e}_n}{ds}\\
+        \frac{d{\bf e}_b}{ds}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        0 & \kappa & 0\\
+        -\kappa & 0 & \tau\\
+        0 & -\tau & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        {\bf e}_t\\
+        {\bf e}_n\\
+        {\bf e}_b
+    \end{bmatrix}.
+\end{align}
+
+Define the **Darboux vector** $\bomega_{SF} = \kappa{\bf e}_b+\tau{\bf e}_t$ so that:
+\begin{align}
+    \frac{d{\bf e}_i}{ds} = \bomega_{SF}\times{\bf e}_i, \quad i = t, n, b.
+\end{align}
+
+### Example: A Particle on a Helix
+
+For a helix $x=R\cos(\theta)$, $y=R\sin(\theta)$, $z=\alpha R\theta$:
+\begin{align}
+    \kappa = \frac{1}{R(1+\alpha^2)}, \qquad \tau = \frac{\alpha}{(1+\alpha^2)R}.
+\end{align}
+
+## The Curvature Formula for a Plane Curve
+
+For a plane curve $y = f(x)$, $z = z_0$:
+\begin{align}
+    \kappa = \kappa(x) = \frac{\left|\frac{d^2 f}{dx^2}\right|}{\lp\sqrt{1+\lp\frac{df}{dx}\rp^2}\rp^3}.
+\end{align}
+
+## Alternative Notation for Plane Curves
+
+*This section is not usually covered.*
+
+For plane curves, some texts define the angle $\beta = \beta(s)$ such that:
+\begin{align}
+    {\bf e}_t = \cos(\beta){\bf E}_x+\sin(\beta){\bf E}_y, \qquad \bar{\bf e}_n = \cos(\beta){\bf E}_y-\sin(\beta){\bf E}_x.
+\end{align}
+Then $\kappa = \left|\frac{d\beta}{ds}\right|$ and $\frac{d\beta}{ds}$ is the rate of rotation of the triad about ${\bf E}_z$.

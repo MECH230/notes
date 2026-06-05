@@ -2,276 +2,188 @@
 title: "System of Particles"
 ---
 
-![](../images/SOP_1.png)
- 
-Consider a system of $n$ particles. A typical particle has
-\begin{itemize}
-    \item mass $m_i$.
-    \item position vector with respect to $O$, $\mathbf{r}_i$.
-    \item velocity vector, $\mathbf{v}_i = \frac{d\mathbf{r}_i}{dt}$.
-    \item acceleration vector, $\mathbf{a}_i = \frac{d^2\mathbf{r}_i}{dt} = \frac{d\mathbf{v}_i}{dt}$.
-    \item linear momentum, $\mathbf{G}_i = m_i\mathbf{v}_i$.
-    \item angular momentum relative to some point $P$, $\mathbf{H}^{p_i} = (\mathbf{r}_i-\mathbf{r}_p)\times\mathbf{G}_i$.
-    \item kinetic energy, $T_i = \frac{1}{2}m_i\mathbf{v}_i\cdot\mathbf{v}_i$.
-\end{itemize}
-In this chapter, we will define analogous quantities for the system. Also, starting the balance law for each individual particle, we'll write the balance law for the system.
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+    \draw[thick,->] (0,0) -- (0,1) node[above] {${\bf E}_z$};
+    \draw[thick,->] (0,0) -- (-1.3,-1) node[left] {${\bf E}_x$};
+    \draw[thick,->] (0,0) -- (1.3,-1) node[right] {${\bf E}_y$};
+    \fill (0,0) circle (0.05);
+    \node at (-0.3,0.1) {$O$};
+    \fill[gray!40] (3,1) circle (0.3);
+    \node at (2.8,1.5) {$m_i$};
+    \draw[thick,->] (3,1) -- (5,0) node[right] {${\bf v}_i$};
+    \draw[thick,->,blue] (0,0) -- (3,1) node[midway,above] {${\bf r}_i$};
+    \fill[gray!40] (-3,2) circle (0.3);
+    \node at (-3,2.5) {$m_1$};
+    \draw[thick,->] (-3,2) -- (-4,1) node[left] {${\bf v}_1$};
+    \draw[thick,->,blue] (0,0) -- (-3,2) node[midway,above] {${\bf r}_1$};
+    \fill[gray!40] (1,-3) circle (0.3);
+    \node at (1,-3.5) {$m_n$};
+    \draw[thick,->] (1,-3) -- (2,-2) node[right] {${\bf v}_n$};
+    \draw[thick,->,blue] (0,0) -- (1,-3) node[midway,left] {${\bf r}_n$};
+\end{tikzpicture}
+```
 
-## Center of Mass 
+Consider a system of $n$ particles. A typical particle has mass $m_i$, position vector ${\bf r}_i$ relative to $O$, velocity ${\bf v}_i = \dot{\bf r}_i$, acceleration ${\bf a}_i = \dot{\bf v}_i$, linear momentum ${\bf G}_i = m_i{\bf v}_i$, angular momentum ${\bf H}^P_i = ({\bf r}_i-{\bf r}_P)\times{\bf G}_i$, and kinetic energy $T_i = \frac{1}{2}m_i{\bf v}_i\cdot{\bf v}_i$.
 
-::: {.callout-note appearance="simple"}
-## Think!
+In this chapter, we define analogous system-level quantities and derive the balance laws for the system from the balance law for each individual particle.
 
-**Question:** What is the position vector of the center of mass of a system of multiple particles?
+## Center of Mass
+
+::: {.callout-tip title="Think!"}
+**Question:** What is the position vector of the center of mass of a system of particles?
+
+**Answer:** The center of mass $C$ has position vector
+\begin{align}
+    {\bf r}_C = \frac{1}{m}\sum_{k=1}^n m_k{\bf r}_k,
+\end{align}
+where $m = \sum_{k=1}^n m_k$ is the total mass.
+:::
+
+::: {.callout-warning title="Example"}
+**Question:** Consider an unsymmetrical dumbbell: particle 1 of mass $m$ and particle 2 of mass $3m$ connected by a massless rigid rod, with
+\begin{align*}
+    {\bf r}_1 = {\bf E}_x+{\bf E}_y, \qquad {\bf r}_2 = 2{\bf E}_x.
+\end{align*}
+Calculate ${\bf r}_C$. Is $C$ located on the dumbbell?
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+    \fill[gray!50] (2,2) circle (0.2);
+    \fill[gray!50] (4,0) circle (0.5);
+    \fill (0,0) circle (0.05);
+    \draw[thick] (2,2) -- (4,0);
+    \draw[blue,thick,->] (0,0) -- (4,0) node[midway,below] {${\bf r}_2$};
+    \draw[blue,thick,->] (0,0) -- (2,2) node[midway,above] {${\bf r}_1$};
+    \draw[thick,->] (0,0) -- (1,0) node[below] {${\bf E}_x$};
+    \draw[thick,->] (0,0) -- (0,1) node[above] {${\bf E}_y$};
+    \node at (1.6,2) {$A$};
+\end{tikzpicture}
+```
 
 **Answer:**
-
-The center of mass $C$ of a system of particles is defined to have position vector
-
-\begin{align}
-    \mathbf{r}_C = \frac{1}{m}\sum_{k=1}^n m_k\mathbf{r}_k,
-\end{align}
-
-where
-
-\begin{align}
-    m = \sum_{k=1}^n m_k
-\end{align}
-
-is the total mass of the system of particles.
-:::
-
-::: {.callout-warning appearance="simple"}
-## Example
-
-**Question:** Consider the unsymmetrical dumbbell depicted in the figure below. Particle 1 of mass $m$ and particle 2 of mass $3m$ are connected by a massless rigid rod.
-
-![Unsymmetrical dumbbell](../images/SOP_2.png){width=30%}
-
-where
-
 \begin{align*}
-    \mathbf{r}_1 &= \mathbf{E}_x+\mathbf{E}_y,\\
-    \mathbf{r}_2 &= 2\mathbf{E}_x.
+    {\bf r}_C = \frac{m{\bf r}_1+3m{\bf r}_2}{m+3m} = \frac{{\bf r}_1+3{\bf r}_2}{4} = \frac{7}{4}{\bf E}_x+\frac{1}{4}{\bf E}_y.
 \end{align*}
-
-Calculate $\mathbf{r}_C$, the position vector of the center of mass $C$ of $m_1$ and $m_2$. Is $C$ located on the dumbbell?
-
-**Answer:**
-
-\begin{align*}
-    \mathbf{r}_C = \frac{m\mathbf{r}_1+3m\mathbf{r}_2}{m+3m} = \, ...
-\end{align*}
-
-We can check mathematically that $C$ lies on the line connecting $m_1$ and $m_2$ by calculating the equation of that line and checking whether $C$ belongs to it.
-
-Alternatively, we can define a new basis, $\{\mathbf{u},\mathbf{v}\}$, and calculate the position of $C$ relative to $m_1$ on that basis. This should be along $\mathbf{u}$.
+We can check that $C$ lies on the line connecting $m_1$ and $m_2$.
 :::
 
-In the previous exercise, we used
-\begin{equation}
-    \mathbf r_{C/A} = \frac{\sum m_i \mathbf r_{i/A}}{\sum m_i}. 
-\end{equation}
+Note the useful identity: relative to any reference point $A$,
+\begin{align}
+    {\bf r}_{C/A} = \frac{\sum_i m_i{\bf r}_{i/A}}{\sum_i m_i}.
+\end{align}
 
-:::{.callout-note appearance=simple}
-## Think!
-**Questions:** Starting from
-$$ \mathbf r_C = \frac{1}{m}\sum_{k=1}^nm_k\mathbf r_k, $$ 
-show that 
-$$\mathbf r_{C/A} = \frac{\sum m_i \mathbf r_{i/A}}{\sum m_i}.$$
+::: {.callout-tip title="Think!"}
+**Question:** Show that $\sum_{k=1}^n m_k({\bf r}_C-{\bf r}_k) = {\bf 0}$ and $\sum_{k=1}^n m_k({\bf v}_C-{\bf v}_k) = {\bf 0}$.
+
+**Answer:** Both follow directly from the definition of the center of mass.
 :::
 
-Differentiating the expression for the position vector of the mass center, we get
+Differentiating the position of the center of mass:
 \begin{align}
-    \mathbf{v}_C = \frac{1}{m}\sum_{k=1}^nm_k\mathbf{v}_k = \frac{1}{m}\sum_{k=1}^n\mathbf{G}_k.
+    {\bf v}_C = \frac{1}{m}\sum_{k=1}^n m_k{\bf v}_k = \frac{1}{m}\sum_{k=1}^n{\bf G}_k.
 \end{align}
-Notice that the velocity of the center of mass is the weighted sum of the velocities of the particles.
 
-::: {.callout-note appearance=simple}
-## Think!
-**Question:** Show that the following identities are true.
-\begin{align}
-    \begin{split}
-        \sum_{k=1}^nm_k(\mathbf{r}_C-\mathbf{r}_k) = \mathbf{0},\\
-        \sum_{k=1}^nm_k(\mathbf{v}_C-\mathbf{v}_k) = \mathbf{0}.
-    \end{split}
-\end{align}
-:::
+## Linear Momentum
 
-## Linear Momentum 
-The linear momentum $\mathbf{G}$ of the system of particles is the sum of the linear momenta of the individual particles.
+The linear momentum of the system is
 \begin{align}
-    \mathbf{G} = m\frac{d\mathbf{r}}{dt} = \sum_{k=1}^n m_k\frac{d\mathbf{r}_k}{dt} = \sum_{k=1}^n\mathbf{G}_k.
+    {\bf G} = \sum_{k=1}^n{\bf G}_k = m{\bf v}_C.
 \end{align}
-The linear momentum of the center of mass is the linear momentum of the system.
+The linear momentum of the system equals that of its center of mass.
 
 ## Angular Momentum
-The angular momentum $\mathbf{H}^P$ of the system of particles relative to a point $P$, whose position vector relative to $O$ is $\mathbf{r}_P$, is the sum of the individual angular momenta:
+
+The angular momentum ${\bf H}^P$ of the system relative to a point $P$ is:
 \begin{align}
-    \begin{split}
-        \mathbf{H}^P &= \sum_{k=1}^n\mathbf{H}^{P_K} = \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_P)\times m_k\mathbf{v}_k\\
-        &= \mathbf{H}^C + (\mathbf{r}_C-\mathbf{r}_P)\times \mathbf{G}.
-    \end{split}
+    {\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k = {\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf G},
 \end{align}
 where
 \begin{align}
-    \begin{split}
-        \mathbf{H}^C &= \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_C)\times m_k\mathbf{v}_k\\
-        &= \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_C)\times m_k(\mathbf{v}_k-\mathbf{v}_C).
-    \end{split}
+    {\bf H}^C = \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times m_k{\bf v}_k = \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times m_k({\bf v}_k-{\bf v}_C).
 \end{align}
 
-::: {.callout-note appearance=simple}
-## Think!
-**Question:** Show that
-\begin{align}
-    \begin{split}
-        \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_P)\times m_k\mathbf{v}_k = \mathbf{H}^C + (\mathbf{r}_C-\mathbf{r}_P)\times \mathbf{G}.
-    \end{split}
-\end{align}
+::: {.callout-tip title="Think!"}
+**Question:** Show that $\sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k = {\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf G}$.
 
-Hint: Introduce $\mathbf{r}-\mathbf{r}$.
+**Answer:** Introduce ${\bf r}_C-{\bf r}_C$ inside the sum and expand.
 :::
 
-::: {.callout-note appearance=simple}
-## Think!
-**Question:** Show that
-\begin{align}
-    \begin{split}
-        \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_C)\times m_k\mathbf{v}_k = \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_C)\times m_k(\mathbf{v}_k-\mathbf{v}_C).
-    \end{split}
-\end{align}
+## Kinetic Energy
 
-Hint: introduce $\mathbf{v}_C-\mathbf{v}_C$.
+The kinetic energy of the system is:
+\begin{align}
+    T = \sum_{k=1}^n\frac{1}{2}m_k{\bf v}_k\cdot{\bf v}_k = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}\sum_{k=1}^n m_k({\bf v}_k-{\bf v}_C)\cdot({\bf v}_k-{\bf v}_C).
+\end{align}
+The kinetic energy splits into the kinetic energy of the center of mass plus the kinetic energy relative to the center of mass. In general, $T \neq \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C$.
+
+::: {.callout-tip title="Think!"}
+**Question:** Prove $\sum_{k=1}^n\frac{1}{2}m_k{\bf v}_k\cdot{\bf v}_k = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}\sum_{k=1}^n m_k({\bf v}_k-{\bf v}_C)\cdot({\bf v}_k-{\bf v}_C)$.
+
+**Answer:** Add ${\bf v}_C-{\bf v}_C$ to each ${\bf v}_k$, expand, and use $\sum m_k({\bf v}_k-{\bf v}_C) = {\bf 0}$.
 :::
 
-## Kinetic Energy 
-The kinetic energy $T$ of the system of particles is defined to be the sum of their individual kinetic energies:
+## Kinetics: Balance of Linear Momentum
+
+Starting from ${\bf F}_i = m_i{\bf a}_i$ for each particle and summing:
 \begin{align}
-    T = \sum_{k=1}^nT_k = \sum_{k=1}^n\frac{1}{2}m_k\mathbf{v}_k\cdot\mathbf{v}_k.
+    {\bf F} = \sum_{k=1}^n{\bf F}_k = m{\bf a}_C.
 \end{align}
+The resultant external force equals the total mass times the acceleration of the center of mass.
 
-In general, the kinetic energy of the system is not equal to the kinetic energy of the center of mass.
-
-Using the center of mass,
-\begin{align}
-    T = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C + \frac{1}{2}\sum_{k=1}^nm_k(\mathbf{v}_k-\mathbf{v}_C)\cdot(\mathbf{v}_k-\mathbf{v}_C).
-\end{align}
-
-::: {.callout-note appearance=simple}
-## Think!
-**Question:** Show that
-\begin{align}
-    \begin{split}
-        \sum_{k=1}^n\frac{1}{2}m_k\mathbf{v}_k\cdot\mathbf{v}_k = \frac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C + \frac{1}{2}\sum_{k=1}^nm_k(\mathbf{v}_k-\mathbf{v}_C)\cdot(\mathbf{v}_k-\mathbf{v}_C).
-    \end{split}
-\end{align}
-
-Hint: Add $\mathbf{v}_C-\mathbf{v}_C$ to the previous for both $\mathbf{v}_k$ terms.
+::: {.callout-important title="Note!"}
+The conditions for conservation of linear momentum of a system (completely or along a direction) are analogous to those for a single particle: ${\bf F}\cdot{\bf c} = 0$ for a constant ${\bf c}$.
 :::
 
-## Kinetics of a System of Particles: Linear Momentum
-For each particle
-\begin{align}
-    \mathbf{F}_i = m_i\mathbf{a}_i.
-\end{align}
-Adding these $n$ equations together and using the definition of the center of mass
-\begin{align}
-    \mathbf{F} = m\mathbf{a}_c
-\end{align}
-\begin{align}
-    \mathbf{F} = \sum_{k=1}^n\mathbf{F}_k.
-\end{align}
-<!-- ::: -->
+## Kinetics: Balance of Angular Momentum
 
-Example: Monkey problems from the problem set.
+Starting from ${\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k$, the time derivative is:
+\begin{align}
+    \dot{\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times{\bf F}_k-{\bf v}_P\times{\bf G} = {\bf M}^P-{\bf v}_P\times{\bf G}.
+\end{align}
 
-::: {.callout-important}
-## Note!
-The conditions for the conservation of linear momentum of a system of particles completely or along a certain direction are analogous to those of a single particle established earlier.
+::: {.callout-important title="Note!"}
+$\dot{\bf H}^P$ is **not** necessarily equal to ${\bf M}^P$. The two agree only in special cases.
 :::
 
-## Kinetics of a System of Particles: Angular Momentum
-Starting from
-\begin{align}
-    \begin{split}
-        \mathbf{H}^P &= \sum_{k=1}^n\mathbf{H}^{P_K} = \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_P)\times m_k\mathbf{v}_k.
-    \end{split}
-\end{align}
+Two important special cases:
 
-The derivative $\dot{\mathbf{H}}^P$ simplifies to
-\begin{align}
-    \dot{\mathbf{H}}^P = \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_P)\times\mathbf{F}_k-\mathbf{v}_P\times\mathbf{G}.
-\end{align}
-The resultant moment of the system of forces relative to $P$ is
-\begin{align}
-    \mathbf{M}^P = \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r}_P)\times\mathbf{F}_k.
-\end{align}
-The angular momentum theorem becomes
-\begin{align}
-    \dot{\mathbf{H}}^P = \mathbf{M}^P-\mathbf{v}_P\times\mathbf{G}.
-\end{align}
-It is very important to notice that $\dot{\mathbf{H}}^P$ is not necessarily equal to $\mathbf{M}^P$.
+1. $P = O$ (fixed origin, ${\bf v}_O = {\bf 0}$): $\dot{\bf H}^O = {\bf M}^O = \sum_{k=1}^n{\bf r}_k\times{\bf F}_k$.
+2. $P = C$ (center of mass, ${\bf v}_C\times{\bf G} = {\bf 0}$): $\dot{\bf H}^C = {\bf M}^C = \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times{\bf F}_k$.
 
-Two important special cases of the angular momentum theorem:
-\begin{enumerate}
-    \item If $P$ is the fixed point that is taken to be the origin $O$, where $\mathbf{r}_O=0$, then
-    \begin{align}
-        \dot{\mathbf{H}}^O = \mathbf{M}^O\text{, where }\mathbf{M}^O = \sum_{k=1}^n\mathbf{r}_k\times\mathbf{F}_k
-    \end{align}
-    \item If $P$ is the center of mass $C$, then $\mathbf{v}\times\mathbf{G}=\mathbf{0}$ and
-    \begin{align}
-        \dot{\mathbf{H}}^C = \mathbf{M}^C\text{, where }\mathbf{M} = \sum_{k=1}^n(\mathbf{r}_k-\mathbf{r})\times\mathbf{F}_k.
-    \end{align}
-\end{enumerate}
-
-::: {.callout-important}
-## Note!
-The conditions for the conservations of angular momentum of a system of particles completely or along a certain direction are analogous to those of a single particle established earlier.
+::: {.callout-important title="Note!"}
+The conditions for conservation of angular momentum of a system are analogous to those for a single particle.
 :::
 
-## Work-Energy Theorem 
-The work-energy theorem and the energy conservation for a system of particles are then
-\begin{align}
-    \dot{T} = \sum_{k=1}^n\mathbf{F}_k\cdot\mathbf{v}_k,
-\end{align}
-and
-\begin{align}
-    \dot{E} = \sum_{k=1}^n\mathbf{F}_{nc_k}\cdot\mathbf{v}_K
-\end{align}
-where $\mathbf{F}_{nc_k}$ is the nonconservative force acting on the $k$th particle and $E$ is the total energy of the system of particles.
+*Example: A pendulum suspended from a cart on smooth horizontal rails — write the BoAM in 3 forms.*
 
-Integrating with respect to time, we get
+## Work-Energy Theorem
+
+The work-energy theorem for a system of particles is:
 \begin{align}
-    \begin{split}
-        T(t_2)-T(t_1) = \sum_{k=1}^n W_{\mathbf{F}_k,12}
-    \end{split}
+    \dot{T} = \sum_{k=1}^n{\bf F}_k\cdot{\bf v}_k,
 \end{align}
-where the work of force $\mathbf{F}_k$ is
+and for energy conservation (with nonconservative forces ${\bf F}_{nc_k}$):
 \begin{align}
-    \begin{split}
-        W_{\mathbf{F}_k,12} = \int_{t_1}^{t_2} \mathbf{F}_k\cdot\mathbf{v}_kdt = \int_{\mathbf{r}(t_1)}^{\mathbf{r}(t_2)}\mathbf{F}_k d\mathbf{r}_k.
-    \end{split}
+    \dot{E} = \sum_{k=1}^n{\bf F}_{nc_k}\cdot{\bf v}_k.
+\end{align}
+Integrating:
+\begin{align}
+    T(t_2)-T(t_1) = \sum_{k=1}^n W_{{\bf F}_k,12}, \qquad W_{{\bf F}_k,12} = \int_{t_1}^{t_2}{\bf F}_k\cdot{\bf v}_k\,dt.
 \end{align}
 
-::: {.callout-important}
-## Note!
-The work of the force is the integral of the force dotted with the velocity of displacement of the point of application of the force.
+::: {.callout-important title="Note!"}
+The work of a force is the integral of the force dotted with the velocity of the **point of application** of the force.
 :::
 
-::: {.callout-warning appearance=simple}
-## Example
-**Question:** Consider the unsymmetrical dumbbell depicted in the figure below. Particle 1 of mass $m$ and particle 2 of mass $3m$ are connected by a massless rigid rod. The dumbbell is in motion in the smooth $\{\mathbf{E}_x,\mathbf{E}_y\}$ plane at gravity acts along $-\mathbf{E}_z$.
+::: {.callout-warning title="Example"}
+**Question:** Consider the unsymmetrical dumbbell (particle 1 of mass $m$, particle 2 of mass $3m$, massless rod) moving in the smooth $\{{\bf E}_x,{\bf E}_y\}$ plane with gravity along $-{\bf E}_z$. Is the energy conserved?
 
-![](../images/SOP_2.png){fig-align="center"}
-
-where
-\begin{align*}
-    \mathbf{r}_1 &= \mathbf{E}_x+\mathbf{E}_y,\\
-    \mathbf{r}_2 &= 2\mathbf{E}_x.
-\end{align*}
-
-Is the energy of the dumbbell conserved throughout its motion?
-
-**Answer:**
-Drawing the free body diagram of both masses, we get ...
+**Answer:** Drawing the FBDs of both masses: the only forces are gravity (conservative) and the constraint force in the rod (does no work on the system, since it is internal and the rod is rigid). Hence the total energy is conserved.
 :::

@@ -1,0 +1,95 @@
+---
+title: "Mathematical Background for Conservative Forces"
+---
+
+## Gradient
+
+In coordinate-free terms, the gradient of a function $f({\bf r})$ is defined by
+\begin{align}
+    df = \nabla f\cdot d{\bf r},
+\end{align}
+where $df$ is the total infinitesimal change in $f$ for an infinitesimal displacement $d{\bf r}$.
+
+### Cartesian Coordinates
+
+For $f = f(x,y,z)$ with $d{\bf r} = dx{\bf E}_x+dy{\bf E}_y+dz{\bf E}_z$:
+\begin{align}
+    df = \frac{\partial f}{\partial x}dx+\frac{\partial f}{\partial y}dy+\frac{\partial f}{\partial z}dz.
+\end{align}
+Since this must hold for all independent variations $dx$, $dy$, $dz$:
+\begin{align}
+    \nabla f = \frac{\partial f}{\partial x}{\bf E}_x+\frac{\partial f}{\partial y}{\bf E}_y+\frac{\partial f}{\partial z}{\bf E}_z.
+\end{align}
+
+### Cylindrical-Polar Coordinates
+
+For $f = f(r,\theta,z)$ with $d{\bf r} = dr{\bf e}_r+r\,d\theta{\bf e}_\theta+dz{\bf E}_z$:
+\begin{align}
+    df = \frac{\partial f}{\partial r}dr+\frac{\partial f}{\partial \theta}d\theta+\frac{\partial f}{\partial z}dz = \nabla f\cdot(dr{\bf e}_r+r\,d\theta{\bf e}_\theta+dz{\bf E}_z).
+\end{align}
+Matching coefficients:
+\begin{align}
+    \nabla f = \frac{\partial f}{\partial r}{\bf e}_r+\frac{1}{r}\frac{\partial f}{\partial \theta}{\bf e}_\theta+\frac{\partial f}{\partial z}{\bf E}_z.
+\end{align}
+
+### Curvilinear Coordinates
+
+::: {.callout-note title="Note"}
+This section is beyond the scope of this course. See O. M. O'Reilly's *Intermediate Dynamics* Section 1.6 for more information.
+:::
+
+Consider a curvilinear coordinate system $\{q^1,q^2,q^3\}$ defined by $q^i = \hat{q}^i(x_1,x_2,x_3)$, assumed locally invertible. The **covariant basis vectors** are:
+\begin{align}
+    {\bf a}_i = \frac{\partial{\bf r}}{\partial q^i} = \sum_{k=1}^3\frac{\partial\hat{x}^k}{\partial q^i}{\bf E}_k.
+\end{align}
+The **contravariant basis vectors** are the gradients of the curvilinear coordinates:
+\begin{align}
+    {\bf a}^k = \nabla q^k = \sum_{i=1}^3\frac{\partial\hat{q}^k}{\partial x_i}{\bf E}_i.
+\end{align}
+
+## Condition for a Vector Field to Be Conservative
+
+A force ${\bf F} = F_x{\bf E}_x+F_y{\bf E}_y+F_z{\bf E}_z$ is derivable from a potential if $F_x = \partial f/\partial x$, $F_y = \partial f/\partial y$, $F_z = \partial f/\partial z$. This requires:
+\begin{align}
+    \frac{\partial F_x}{\partial y} = \frac{\partial F_y}{\partial x}, \qquad
+    \frac{\partial F_x}{\partial z} = \frac{\partial F_z}{\partial x}, \qquad
+    \frac{\partial F_y}{\partial z} = \frac{\partial F_z}{\partial y},
+\end{align}
+summarized by $\text{curl}\,{\bf F} = {\bf 0}$.
+
+This condition is both necessary and sufficient for ${\bf F}$ to be derivable from a potential (see [this proof](https://chatgpt.com/share/68da8fea-c574-8011-afa4-15974e1bd223)).
+
+## Conservative Forces
+
+A conservative force ${\bf F}_c$ is derivable from a potential $U$:
+\begin{align}
+    {\bf F}_c = -\nabla U.
+\end{align}
+The work of a conservative force depends only on the endpoints:
+\begin{align}
+    W_{{\bf F}_c,AB} = \int_{{\bf r}(t_A)}^{{\bf r}(t_B)}{\bf F}_c\cdot d{\bf r} = -(U_B-U_A) = U_A-U_B.
+\end{align}
+
+### Constant Force
+
+For a constant force ${\bf C}$, the potential is $U = -{\bf C}\cdot{\bf r}$. In Cartesians:
+\begin{align}
+    \nabla({\bf C}\cdot{\bf r}) = \frac{\partial{\bf C}\cdot{\bf r}}{\partial x}{\bf E}_x+\frac{\partial{\bf C}\cdot{\bf r}}{\partial y}{\bf E}_y+\frac{\partial{\bf C}\cdot{\bf r}}{\partial z}{\bf E}_z = {\bf C}.
+\end{align}
+Hence ${\bf C} = -\nabla(-{\bf C}\cdot{\bf r})$. ✓
+
+### Spring Force
+
+For the spring force ${\bf F}_s = -K(r-\ell_0){\bf e}_r$ (taking the anchor at the origin), the potential is $U = \frac{1}{2}K(r-\ell_0)^2$. Using the polar gradient:
+\begin{align}
+    \nabla\lp\frac{1}{2}K(r-\ell_0)^2\rp = K(r-\ell_0){\bf e}_r,
+\end{align}
+so ${\bf F}_s = -\nabla U$. ✓
+
+### Gravitational Force
+
+For Newton's law of gravitation, the force on particle 1 due to particle 2 is
+\begin{align}
+    {\bf F}_1 = G\frac{m_1 m_2}{\lnorm{\bf r}_{2/1}\rnorm^3}{\bf r}_{2/1}.
+\end{align}
+Using the polar gradient with ${\bf r}_{2/1} = r{\bf e}_r$, one can show that $U = -Gm_1m_2/r$ is the corresponding potential.

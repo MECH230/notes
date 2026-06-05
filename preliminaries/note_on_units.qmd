@@ -1,0 +1,17 @@
+---
+title: "A Note on Units"
+---
+
+![Source: MKB](../figures/units/units_table.png)
+
+In this class, we will use both SI and US customary units.
+
+In the US customary units, the pound is used both as a unit of force (lbf) and as a unit of mass (lbm). The lbm is the amount of mass which weighs 1 lbf under standard conditions (at latitude 45° and sea level). In MKB, almost exclusively the unit of slug is used for mass. In addition, they use the symbol lb to mean pound force.
+
+Notice that seconds is abbreviated as s in SI units and sec in US customary units.
+
+Regarding the gravitational acceleration, use the values $g = 9.81$ m s$^{-2}$ in SI units and $g = 32.2$ ft sec$^{-2}$ in US customary units.
+
+::: {.callout-important title="Note!"}
+When solving a problem, keep all variables in the unit system they are given. For example, you may convert g to kg, but don't convert g to slugs!
+:::

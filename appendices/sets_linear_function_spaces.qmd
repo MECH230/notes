@@ -1,0 +1,46 @@
+---
+title: "Sets and Linear Function Spaces"
+---
+
+::: {.callout-note title="Note"}
+This appendix is taken from Professor Panayiotis Papadopoulos's notes for UC Berkeley's ME280A course, Section 2.1.
+:::
+
+## Sets
+
+A *set* $\mathcal{U}$ is a collection of elements. Elements of the set are denoted $u \in \mathcal{U}$. A set can be finite or infinite, and may have algebraic structure imposed on it.
+
+## Linear (Vector) Spaces
+
+A set $\mathcal{V}$ is a **linear space** (or vector space) over the real numbers $\mathbb{R}$ if it is equipped with two operations:
+
+1. **Addition:** ${\bf u}+{\bf v} \in \mathcal{V}$ for all ${\bf u},{\bf v} \in \mathcal{V}$,
+2. **Scalar multiplication:** $\alpha{\bf u} \in \mathcal{V}$ for all $\alpha \in \mathbb{R}$, ${\bf u} \in \mathcal{V}$,
+
+satisfying the standard axioms (commutativity, associativity, existence of zero element, existence of additive inverse, distributivity).
+
+Examples of linear spaces: $\mathbb{R}^n$; the space of continuous functions on an interval; the space of $n\times n$ matrices.
+
+## Linear Transformations
+
+A map ${\bf T}: \mathcal{V} \to \mathcal{W}$ between two linear spaces is a **linear transformation** if:
+\begin{align}
+    {\bf T}({\bf u}+{\bf v}) &= {\bf T}{\bf u}+{\bf T}{\bf v} \quad \text{for all } {\bf u},{\bf v} \in \mathcal{V},\\
+    {\bf T}(\alpha{\bf u}) &= \alpha{\bf T}{\bf u} \quad \text{for all } \alpha \in \mathbb{R},\; {\bf u} \in \mathcal{V}.
+\end{align}
+
+When $\mathcal{V} = \mathcal{W}$ is the space of 3D vectors $\mathbb{E}^3$, a linear transformation from $\mathbb{E}^3$ to $\mathbb{E}^3$ is called a **tensor**.
+
+::: {.callout-important title="Note!"}
+The rotation ${\bf Q}$ is a linear transformation from $\mathbb{E}^3$ to $\mathbb{E}^3$, so it is a tensor. This justifies calling it the **rotation tensor** throughout the kinematics of rigid bodies chapter.
+:::
+
+## Basis and Dimension
+
+A set $\{{\bf e}_1,\ldots,{\bf e}_n\}$ is a **basis** for $\mathcal{V}$ if:
+- The vectors are **linearly independent**: $\sum_i \alpha_i{\bf e}_i = {\bf 0}$ implies $\alpha_i = 0$ for all $i$.
+- They **span** $\mathcal{V}$: every ${\bf v} \in \mathcal{V}$ can be written as ${\bf v} = \sum_i v_i{\bf e}_i$.
+
+The number of basis vectors is the **dimension** of the space.
+
+For 3D Euclidean space $\mathbb{E}^3$, any orthonormal set $\{{\bf E}_1,{\bf E}_2,{\bf E}_3\}$ with ${\bf E}_i\cdot{\bf E}_j = \delta_{ij}$ is a basis.

@@ -1,0 +1,116 @@
+---
+title: "Collisions"
+---
+
+## Collision of Two Bodies
+
+::: {.callout-tip title="Think!"}
+**Question:** What happens in reality when two cars collide?
+
+**Answer:** In reality, colliding bodies deform — possibly permanently — and their rotational inertia may change.
+:::
+
+Ignoring rotational motion, the simplest model uses a mass particle for each body. Since particles do not deform, we introduce the **coefficient of restitution** $e$.
+
+## Frictionless, Oblique, Central Impact of Two Bodies
+
+![Figure from O. M. O'Reilly's Dynamics Primer](../figures/collisions/collision-stages.png){width=75%}
+
+### Assumptions
+
+- Model each body as a mass particle.
+- We ignore the rotational inertias of bodies (purely translational motion).
+- All points on a body have the same velocity.
+- No friction between particles during collision — all impact forces are along ${\bf n}$.
+- The duration of compression ($t_1-t_0$) and restitution ($t_2-t_1$) are very small.
+- At time $t_1$, both particles have the same velocity along ${\bf n}$: $v_{II}$.
+- ${\bf F}_{1C} = -{\bf F}_{2C}$, ${\bf F}_{1R} = -{\bf F}_{2R}$.
+
+### Impact Stages
+
+Let ${\bf n}$ be the common unit normal between the bodies at contact. Define $\{{\bf n},{\bf t}_1,{\bf t}_2\}$ as an orthonormal set. These vectors are assumed constant for the duration of impact.
+
+### Linear Impulses During Impact
+
+::: {.callout-tip title="Think!"}
+**Question:** Draw the FBDs of $m_1$ and $m_2$ separately during compression and restitution.
+
+**Answer:**
+- ${\bf F}_{1_d} = F_{1_d}{\bf n}$: force exerted by body 2 on body 1 during compression.
+- ${\bf F}_{1_r} = F_{1_r}{\bf n}$: force exerted by body 2 on body 1 during restitution.
+- ${\bf F}_{2_d}$, ${\bf F}_{2_r}$: reaction forces by body 1 on body 2.
+- All other forces have resultants ${\bf R}_1$ and ${\bf R}_2$.
+:::
+
+Since the collision duration is very small, the impulses of ${\bf R}_1$ and ${\bf R}_2$ vanish. Approximating:
+\begin{align}
+    \int_{t_0}^{t_1}\lp{\bf F}_{1_d}+{\bf R}_1\rp d\tau &\approx \int_{t_0}^{t_1}{\bf F}_{1_d}\,d\tau,\\
+    \int_{t_1}^{t_2}\lp{\bf F}_{1_r}+{\bf R}_1\rp d\tau &\approx \int_{t_1}^{t_2}{\bf F}_{1_r}\,d\tau,
+\end{align}
+and similarly for body 2.
+
+With equal and opposite collisional forces (${\bf F}_{1_d}=-{\bf F}_{2_d}$, ${\bf F}_{1_r}=-{\bf F}_{2_r}$), we define the **coefficient of restitution**:
+\begin{align}
+    e = \frac{\int_{t_1}^{t_2}{\bf F}_{1_r}\cdot{\bf n}\,d\tau}{\int_{t_0}^{t_1}{\bf F}_{1_d}\cdot{\bf n}\,d\tau}.
+\end{align}
+
+::: {.callout-tip title="Think!"}
+**Question:** What does $e=0$ and $e=1$ mean?
+
+**Answer:**
+- $e=1$: perfectly **elastic** collision — compression impulse equals restitution impulse.
+- $e=0$: perfectly **plastic** collision — no restitution impulse.
+- In general $0\leq e\leq 1$, determined experimentally.
+:::
+
+### The Coefficient of Restitution in Terms of Velocities
+
+From the linear impulse-momentum equations for each particle and stage:
+\begin{align}
+    \begin{split}
+        m_1 v_{II} - m_1{\bf v}_1\cdot{\bf n} &= \int_{t_0}^{t_1}{\bf F}_{1_d}\cdot{\bf n}\,d\tau,\\
+        m_2 v_{II} - m_2{\bf v}_2\cdot{\bf n} &= \int_{t_0}^{t_1}{\bf F}_{2_d}\cdot{\bf n}\,d\tau,\\
+        m_1{\bf v}_1'\cdot{\bf n}-m_1 v_{II} &= e\int_{t_0}^{t_1}{\bf F}_{1_d}\cdot{\bf n}\,d\tau,\\
+        m_2{\bf v}_2'\cdot{\bf n}-m_2 v_{II} &= e\int_{t_0}^{t_1}{\bf F}_{2_d}\cdot{\bf n}\,d\tau.
+    \end{split}
+\end{align}
+
+Eliminating $v_{II}$ yields the familiar expression:
+\begin{align}
+    e = \frac{{\bf v}_2'\cdot{\bf n}-{\bf v}_1'\cdot{\bf n}}{{\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}}.
+\end{align}
+
+::: {.callout-important title="Note!"}
+When one object impacts a massive constrained object (e.g. a wall), the velocity of the massive object is unaffected by the collision.
+:::
+
+## Example: The Most General Planar Impact Problem
+
+::: {.callout-warning title="Example"}
+**Question:** Given particles $m_1$ and $m_2$ with pre-impact velocities ${\bf v}_1$ and ${\bf v}_2$, find the post-impact velocities. The coefficient of restitution $e$ is given.
+
+**Answer:** There are 4 unknowns (components of ${\bf v}_1'$ and ${\bf v}_2'$ along ${\bf n}$, ${\bf t}_1$, ${\bf t}_2$). Along the tangent directions: velocities are unchanged. Along ${\bf n}$: we have the conservation of linear momentum and the restitution equation.
+:::
+
+## Energy Loss During Impact
+
+Pre-impact and post-impact kinetic energies:
+\begin{align}
+    T &= \frac{1}{2}m_1{\bf v}_1\cdot{\bf v}_1+\frac{1}{2}m_2{\bf v}_2\cdot{\bf v}_2,\\
+    T' &= \frac{1}{2}m_1{\bf v}_1'\cdot{\bf v}_1'+\frac{1}{2}m_2{\bf v}_2'\cdot{\bf v}_2'.
+\end{align}
+
+The energy lost:
+\begin{align}
+    T-T' = \frac{m_1 m_2}{2(m_1+m_2)}\lp{\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}\rp^2(1-e^2).
+\end{align}
+
+Hence, for $0\leq e\leq 1$, kinetic energy cannot increase as a result of impact.
+
+## Negative Values of the Coefficient of Restitution
+
+::: {.callout-tip title="Think!"}
+**Question:** What does a negative $e$ mean for a ball impacting a wall?
+
+**Answer:** When $e < 0$, ${\bf v}_1'\cdot{\bf n}-{\bf v}_2'\cdot{\bf n}$ has the same sign as ${\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}$, meaning the bodies pass through each other during impact. To prevent this, we generally require $e \geq 0$.
+:::

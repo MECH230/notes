@@ -1,0 +1,95 @@
+---
+title: "Starting from Continuum Mechanics"
+---
+
+Consider a body $\mathcal{B}$ in three-dimensional Euclidean space $\mathbb{E}^3$.
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+
+    % Draw the "potato" as an ellipse
+    \draw[fill=gray!30] (0,0) ellipse (3 and 2);
+
+    % Draw applied forces as arrows
+    \draw[->, thick] (-1.5, 1) -- (-4, 2) node[anchor=south east] {$\mathbf{F}_1$};
+    \draw[->, thick] (2, -1) -- (4, -2) node[anchor=north west] {$\mathbf{F}_2$};
+
+    % Draw a force distribution along the surface
+    \foreach \angle in {40, 50, 60, 70, 80, 90, 100, 110, 120} {
+        \draw[->, thick] ({3*cos(\angle)}, {2*sin(\angle)}) --
+                                 ({3.5*cos(\angle)}, {2.5*sin(\angle)});
+    }
+
+    % Label the force distribution
+    \node[anchor=south] at (0, 2.5) {Force distribution};
+
+\end{tikzpicture}
+```
+
+In general, bodies are deformable continua. We depict continua as in the above figure and refer to them as *continuum potatoes*.
+
+Point or distributed forces or moments can be applied to a body's surface or throughout its volume. For example, a body resting on a table has contact forces on the surface touching the table, while weight acts on all points in the body.
+
+::: {.callout-tip title="Think!"}
+**Question:** How do we know if a body has moved?
+
+**Answer:** …
+:::
+
+Consider a reference configuration for this body. A reference configuration is any configuration that can be physically occupied by the body — it could be the initial configuration, but need not be.
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+
+    % Draw the reference configuration (left potato)
+    \draw[fill=gray!30] (-6,0) ellipse (2 and 2);
+
+    % Draw the current configuration (right potato)
+    \draw[fill=gray!10] (2,0) ellipse (3 and 2);
+
+    % Draw the origin O
+    \node[circle, fill=black, inner sep=2pt, label=left:{$O$}] at (-3,-4) {};
+
+    % Draw the point X in the reference configuration
+    \node[circle, fill=blue, inner sep=2pt, label=above:{$X$}] at (-5, 1.5) {};
+
+    % Draw the point x in the current configuration
+    \node[circle, fill=red, inner sep=2pt, label=above:{$x$}] at (3.5, 1.2) {};
+
+    % Draw the vector R from O to X
+    \draw[->, thick] (-3,-4) -- (-5, 1.5) node[midway, below left] {${\bf R}$};
+
+    % Draw the vector r from O to x
+    \draw[->, thick] (-3,-4) -- (3.5, 1.2) node[midway, below right] {${\bf r}$};
+
+    % Label the configurations
+    \node at (-6, -3) {Reference Configuration};
+    \node at (2, -3) {Current Configuration};
+
+\end{tikzpicture}
+```
+
+We denote the position vector from a chosen fixed origin to a material point in the reference configuration as ${\bf R}$. The position vector to the same material point in the current configuration is ${\bf r}$.
+
+The motion of the body is described by
+\begin{align}
+    {\bf r} = \bchi({\bf R},t).
+\end{align}
+
+::: {.callout-tip title="Think!"}
+**Question:** What makes a body rigid?
+
+**Answer:** In this class, we consider only rigid bodies. If we choose two points on a rigid body, the distance between them is always constant. Also, angles between material lines on a rigid body are constant.
+:::
+
+::: {.callout-tip title="Think!"}
+**Question:** Under what conditions do we consider a rigid body to be a particle?
+
+**Answer:** In the beginning of the class, we consider particles. Particles are idealized rigid bodies whose rotational inertia is ignored.
+:::

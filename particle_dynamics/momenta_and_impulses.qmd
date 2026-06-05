@@ -1,0 +1,154 @@
+---
+title: "Momenta and Impulses of Particles"
+---
+
+## Linear Momentum and Its Conservation
+
+Recall the linear momentum ${\bf G} = m{\bf v}$.
+
+### Linear Impulse and Linear Momentum
+
+The integral form of the balance of linear momentum:
+\begin{align}
+    {\bf G}(t_1)-{\bf G}(t_0) = \int_{t_0}^{t_1}{\bf F}\,dt.
+\end{align}
+
+The time integral of a force is its **linear impulse**. This form is more general than ${\bf F}=m{\bf a}$ because it does not require ${\bf v}$ to be differentiable.
+
+### Conservation of Linear Momentum
+
+::: {.callout-tip title="Think!"}
+**Question:** Under what conditions is the linear momentum of a system conserved in a direction ${\bf c}$?
+
+**Answer:**
+\begin{align}
+    \frac{d}{dt}({\bf G}\cdot{\bf c}) = {\bf F}\cdot{\bf c}+{\bf G}\cdot\dot{\bf c} = 0.
+\end{align}
+For a constant ${\bf c}$, ${\bf G}\cdot{\bf c}$ is conserved if and only if ${\bf F}\cdot{\bf c} = 0$ — i.e., no force in that direction.
+:::
+
+### Example
+
+::: {.callout-warning title="Example"}
+**Question:** Is the linear momentum of a projectile conserved? In a certain direction?
+
+**Answer:** With ${\bf W} = -mg{\bf E}_y$, linear momentum is conserved in the ${\bf E}_x$ direction (no force there) but not in ${\bf E}_y$.
+:::
+
+## The Moment of a Force
+
+::: {.callout-tip title="Think!"}
+**Question:** How do you calculate the moment of a force about a point?
+
+**Answer:** The moment of force ${\bf F}$ applied at $A$ about point $P$ is:
+\begin{align}
+    {\bf M}^P = \lp{\bf r}_A-{\bf r}_P\rp\times {\bf F}.
+\end{align}
+:::
+
+::: {.callout-warning title="Example"}
+**Question:** Given
+\begin{align*}
+    {\bf F} &= F_x{\bf E}_x+F_y{\bf E}_y+F_z{\bf E}_z,\\
+    {\bf r}_P &= -2{\bf E}_x+3{\bf E}_y+{\bf E}_z,\\
+    {\bf r}_A &= -{\bf E}_x+2{\bf E}_y-{\bf E}_z,
+\end{align*}
+calculate ${\bf M}^O$ and ${\bf M}^P$.
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+    \draw[thick,->] (0,0) -- (0,1) node[above] {${\bf E}_z$};
+    \draw[thick,->] (0,0) -- (-1.3,-1) node[left] {${\bf E}_x$};
+    \draw[thick,->] (0,0) -- (1.3,-1) node[right] {${\bf E}_y$};
+    \fill (0,0) circle (0.05);
+    \node at (-0.3,0.1) {$O$};
+
+    \fill (4,2) circle (0.05);
+    \node at (4,2.5) {$P$};
+
+    \fill (3,-1) circle (0.05);
+    \node at (3,-1.5) {$A$};
+
+    \draw[thick,->] (3,-1) -- (6,0) node[midway,above] {${\bf F}$};
+    \draw[->] (0,0) -- (3,-1) node[midway,above] {${\bf r}_{A/O}$};
+    \draw[->] (0,0) -- (4,2) node[midway,above] {${\bf r}_{P/O}$};
+    \draw[->] (4,2) -- (3,-1) node[midway,right] {${\bf r}_{A/P}$};
+\end{tikzpicture}
+```
+
+**Answer:** ...
+:::
+
+## Angular Momentum and Its Conservation
+
+Let ${\bf r}$ be the position vector of a particle relative to a fixed point $O$, and ${\bf v}$ its absolute velocity. The **angular momentum** relative to $O$:
+\begin{align}
+    {\bf H}^O = {\bf r}\times m{\bf v} = {\bf r}\times{\bf G}.
+\end{align}
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+    \draw[thick,->] (0,0) -- (0,1) node[above] {${\bf E}_z$};
+    \draw[thick,->] (0,0) -- (-1.3,-1) node[left] {${\bf E}_x$};
+    \draw[thick,->] (0,0) -- (1.3,-1) node[right] {${\bf E}_y$};
+    \fill (0,0) circle (0.05);
+    \node at (-0.3,0.1) {$O$};
+
+    \fill[gray!40] (3,1) circle (0.3);
+    \node at (2.8,1.5) {$m$};
+
+    \draw[thick,->] (3,1) -- (6,0) node[right] {${\bf v}$};
+    \draw[thick,->] (0,0) -- (3,1) node[midway,above] {${\bf r}$};
+    \draw[thick,blue,->] (3,1) -- (4,4) node[above] {${\bf H}^O$};
+\end{tikzpicture}
+```
+
+### Angular Momentum Theorem
+
+From the BoLM:
+\begin{align}
+    \dot{\bf H}^O = \frac{d}{dt}\lp{\bf r}\times m{\bf v}\rp = \underbrace{{\bf v}\times m{\bf v}}_{{\bf 0}}+{\bf r}\times m\dot{\bf v} = {\bf r}\times {\bf F}.
+\end{align}
+So $\dot{\bf H}^O = {\bf M}^O$ (the angular momentum theorem).
+
+### Conservation of Angular Momentum
+
+::: {.callout-tip title="Think!"}
+**Question:** Under what conditions is ${\bf H}^O\cdot{\bf c}$ conserved?
+
+**Answer:** For a constant ${\bf c}$: if and only if $\lp{\bf r}\times{\bf F}\rp\cdot{\bf c} = 0$.
+:::
+
+### Central Force Problems
+
+A **central force** problem has ${\bf F}$ parallel to ${\bf r}$, so $\dot{\bf H}^O = {\bf 0}$ and ${\bf H}^O = h{\bf h}$ = constant.
+
+The vectors ${\bf r}$ and ${\bf v}$ remain in a fixed plane through $O$. Choosing ${\bf E}_z = {\bf h}$:
+\begin{align}
+    {\bf H}^O = h{\bf E}_z = {\bf r}(t_0)\times m{\bf v}(t_0).
+\end{align}
+
+### Kepler's Problem
+
+The gravitational force on a planet of mass $m$ by the sun of mass $M$:
+\begin{align}
+    {\bf F} = -\frac{GmM}{\lnorm{\bf r}\rnorm^3}{\bf r}, \qquad U = -\frac{GmM}{\lnorm{\bf r}\rnorm}.
+\end{align}
+
+Two conserved quantities:
+\begin{align}
+    E &= \frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2)-\frac{GMm}{r},\\
+    h &= {\bf H}^O\cdot{\bf E}_z = mr^2\dot{\theta}.
+\end{align}
+
+Watch this [video on Kepler's laws](https://www.youtube.com/watch?v=pdst6HQkdrc).
+
+### Particle on a Smooth Cone
+
+Show that ${\bf H}^O\cdot{\bf E}_z$ is conserved.

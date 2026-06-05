@@ -1,0 +1,61 @@
+---
+title: "Constrained Motion"
+---
+
+The **degree of freedom (DOF)** of a system is the number of independent coordinates needed to describe a configuration of the system.
+
+Examples:
+
+- A particle free to move in $\mathbb{E}^2$ has 2 DOFs.
+- A particle constrained to move on a curve in $\mathbb{E}^2$ has 1 DOF.
+- Two particles free to move in $\mathbb{E}^2$ have a combined total of 4 DOFs.
+- If two particles in $\mathbb{E}^2$ are constrained to move on the same curve, they have 2 DOFs.
+- If two particles in $\mathbb{E}^2$ are connected by a rigid rod, they have 3 DOFs. The constraint $\lnorm{\bf r}_{B/A}\rnorm = l\,\forall t$ provides a relationship between their coordinates that eliminates one DOF.
+- If two particles in $\mathbb{E}^2$ are connected by a rigid rod and constrained to move on a curve, they have 1 DOF.
+
+---
+
+**Example:** Consider two particles in smooth vertical slots. If $A$ and $B$ move independently, the system has 2 DOFs. If connected by an inextensible cable, the system has 1 DOF.
+
+The inextensibility constraint $\ell = \text{const.}$ can be written as:
+\begin{align}
+    \ell &= s_A+c+s_B \implies \Delta s_B = -\Delta s_A \implies \dot{s}_B=-\dot{s}_A.
+\end{align}
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+    % Draw the pulley
+    \draw (0,4) circle (1);
+    \draw[dashed] (-1,4) -- (-2.5,4);
+    \draw[dashed] (1,4) -- (2.5,4);
+
+    % Draw the rope
+    \draw[thick] (-1,4) -- (-1,1);
+    \draw[thick] (1,4) -- (1,1.5);
+
+    % Draw the boxes
+    \draw[thick] (-1.5,0) rectangle (-0.5,1);
+    \node at (-1,0.5) {A};
+    \draw[thick] (0.5,0.5) rectangle (1.5,1.5);
+    \node at (1,1) {B};
+
+    % Draw the vertical slots
+    \draw[dashed] (-1.5,-1) -- (-1.5,3);
+    \draw[dashed] (1.5,-1) -- (1.5,3);
+    \draw[dashed] (-0.5,-1) -- (-0.5,3);
+    \draw[dashed] (0.5,-1) -- (0.5,3);
+
+    % Pulley axle
+    \draw[thick] (0,4.3) -- (0,5);
+    \node at (0,4) {Pulley};
+
+    \draw[->] (-2,4) -- (-2,1) node[midway,left] {$s_A$};
+    \draw[->] (2,4) -- (2,1.5) node[midway,right] {$s_B$};
+
+\end{tikzpicture}
+```
+
+*See Set 06: Constrained Motion Problem 02/172.*

@@ -11,8 +11,7 @@ engine: knitr
 
 knitr:
   opts_chunk:
-    engine.opts:
-      template: "!expr system.file('tex/plain.tex', package='tikzDevice')"
+    echo: false
 
 
 book:
@@ -25,19 +24,39 @@ book:
     - part: "Preliminaries"
       chapters:
         - preliminaries/active_learning.qmd
-        - fundamental_concepts_of_solid_mechanics/fundamental_concepts_of_solid_mechanics.qmd
+        - preliminaries/note_on_units.qmd
+        - preliminaries/free_body_diagrams.qmd
         - vector_calculus/vector_calculus.qmd
-        # - preliminaries/notation.qmd
+        - fundamental_concepts_of_solid_mechanics/fundamental_concepts_of_solid_mechanics.qmd
+        - preliminaries/continuum_mechanics_perspective.qmd
+    - part: "Particle Dynamics"
+      chapters:
+        - particle_dynamics/basic_particle_kinematics.qmd
+        - particle_dynamics/particle_kinetics.qmd
+        - particle_dynamics/four_steps_bolm.qmd
+        - particle_dynamics/cylindrical_polar_coordinates.qmd
+        - particle_dynamics/constrained_motion.qmd
+        - particle_dynamics/serret_frenet_triad.qmd
+        - particle_dynamics/spring_force.qmd
+        - particle_dynamics/friction_force.qmd
+        - particle_dynamics/gravitational_force_model.qmd
+        - particle_dynamics/power_work_energy.qmd
+        - particle_dynamics/momenta_and_impulses.qmd
+        - particle_dynamics/collisions.qmd
     - part: "System of Particles"
       chapters:
         - system_of_particles/system_of_particles.qmd
     - part: "Rigid Body Dynamics"
-      chapters: 
+      chapters:
         - rigid_body_dynamics/rigid_body_kinematics.qmd
         - rigid_body_dynamics/rigid_body_kinetics.qmd
         - rigid_body_dynamics/work_energy_theorem.qmd
     - summary.qmd
     - references.qmd
+    - part: "Appendices"
+      chapters:
+        - appendices/conservative_forces.qmd
+        - appendices/sets_linear_function_spaces.qmd
 
 bibliography: references.bib
 
@@ -47,10 +66,45 @@ format:
     theme:
       - cosmo # Try: lumen, flatly, quartz, or materia
       - brand
+    include-in-header:
+      text: |
+        <script>
+        MathJax = {
+          tex: {
+            macros: {
+              lnorm: "\\left|\\!\\left|",
+              rnorm: "\\right|\\!\\right|",
+              lp: "\\left(",
+              rp: "\\right)",
+              leb: "\\left[",
+              reb: "\\right]",
+              bomega: "\\boldsymbol{\\omega}",
+              bOmega: "\\boldsymbol{\\Omega}",
+              balpha: "\\boldsymbol{\\alpha}",
+              bchi: "\\boldsymbol{\\chi}",
+              bpi: "\\boldsymbol{\\pi}",
+              bPi: "\\boldsymbol{\\Pi}"
+            }
+          }
+        };
+        </script>
   pdf:
     documentclass: scrreprt
     include-in-header:
       text: |
         \usepackage{tikz}
+        \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+        \newcommand{\lnorm}{\left|\!\left|}
+        \newcommand{\rnorm}{\right|\!\right|}
+        \newcommand{\lp}{\left(}
+        \newcommand{\rp}{\right)}
+        \newcommand{\leb}{\left[}
+        \newcommand{\reb}{\right]}
+        \newcommand{\bomega}{\boldsymbol{\omega}}
+        \newcommand{\bOmega}{\boldsymbol{\Omega}}
+        \newcommand{\balpha}{\boldsymbol{\alpha}}
+        \newcommand{\bchi}{\boldsymbol{\chi}}
+        \newcommand{\bpi}{\boldsymbol{\pi}}
+        \newcommand{\bPi}{\boldsymbol{\Pi}}
 
 

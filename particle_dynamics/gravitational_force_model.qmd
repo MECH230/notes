@@ -1,0 +1,75 @@
+---
+title: "Gravitational Force Model"
+---
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+
+\coordinate (O) at (0,0);
+\coordinate (m1) at (0,1.5);
+\coordinate (m2) at (2.5,1);
+
+\fill (m1) circle (2pt) node[above] {$m_1$};
+\fill (m2) circle (2pt) node[above] {$m_2$};
+\node[left] at (O) {$O$};
+
+\draw[->,thick] (O) -- (m1) node[midway,left] {${\bf r}_1$};
+\draw[->,thick] (O) -- (m2) node[midway,below] {${\bf r}_2$};
+\draw[->,thick] (m1) -- (m2) node[midway,above] {${\bf r}_2 - {\bf r}_1$};
+
+\end{tikzpicture}
+```
+
+Call ${\bf r}_2 - {\bf r}_1 = {\bf r}_{2/1}$. According to Newton's law of gravitation, the force on $m_1$ due to $m_2$ is:
+\begin{align}
+    {\bf F}_1 = G \frac{m_1 m_2}{\lnorm{\bf r}_{2/1}\rnorm^3}{\bf r}_{2/1},
+\end{align}
+where $G = 6.67408\times10^{-11}$ m$^3$ kg$^{-1}$ s$^{-2}$ is the gravitational constant.
+
+## Example: Attraction Between Earth and an Object of Mass $m$
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+
+\draw[thick] (0,0) circle (3);
+
+\fill (0,0) circle (0.05);
+\node[below left] at (0,0) {$O$};
+
+\draw[dashed] (0,0) -- (2.1,2.1);
+\node[above] at (1,1.2) {$R_e$};
+
+\node[above left] at (-2,2.4) {$M_e$};
+
+\fill (2.7,2.7) circle (0.08);
+\node[above right] at (2.3,2.8) {$m$};
+
+\draw[<->] (2.1,2.1) -- (2.7,2.7);
+\node[right] at (2.4,2.4) {$h$};
+
+\draw[->,thick] (2.7,2.7) -- (3.2,3.2);
+\node[right] at (3.8,3.2) {${\bf E}_z$};
+
+\end{tikzpicture}
+```
+
+\begin{align}
+    {\bf F} = G\frac{M_e m}{\lp R_e+h\rp^2}\lp-{\bf E}_z\rp.
+\end{align}
+
+Since $h \ll R_e$, we have $\lp R_e+h\rp^2 \approx R_e^2$, giving:
+\begin{align}
+    {\bf F} = G\frac{M_e}{R_e^2}m\lp-{\bf E}_z\rp = mg\lp-{\bf E}_z\rp,
+\end{align}
+where $g = G M_e / R_e^2 = 9.81$ m/s$^2 = 32.2$ ft/s$^2$.
+
+Earth's parameters:
+
+- $M_e = 5.972 \times 10^{24}$ kg
+- $R_e = 6.371 \times 10^6$ m

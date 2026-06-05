@@ -9,7 +9,7 @@
 <meta name="author" content="Theresa Honein">
 <meta name="dcterms.date" content="2026-01-01">
 
-<title>3&nbsp; Kinematics of Soft Robots</title>
+<title>20&nbsp; Kinematics of Rigid Bodies</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,7 +74,56 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+MathJax = {
+  tex: {
+    macros: {
+      lnorm: "\\left|\\!\\left|",
+      rnorm: "\\right|\\!\\right|",
+      lp: "\\left(",
+      rp: "\\right)",
+      leb: "\\left[",
+      reb: "\\right]",
+      bomega: "\\boldsymbol{\\omega}",
+      bOmega: "\\boldsymbol{\\Omega}",
+      balpha: "\\boldsymbol{\\alpha}",
+      bchi: "\\boldsymbol{\\chi}",
+      bpi: "\\boldsymbol{\\pi}",
+      bPi: "\\boldsymbol{\\Pi}"
+    }
+  }
+};
+</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -87,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html">Rigid Body Dynamics</a></li><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Kinematics of Soft Robots</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html">Rigid Body Dynamics</a></li><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Kinematics of Rigid Bodies</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -128,12 +177,42 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Active Learning</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preliminaries/note_on_units.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A Note on Units</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preliminaries/free_body_diagrams.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Free Body Diagrams</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vector_calculus/vector_calculus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamental_concepts_of_solid_mechanics/fundamental_concepts_of_solid_mechanics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preliminaries/continuum_mechanics_perspective.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Starting from Continuum Mechanics</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">System of Particles</span></a>
+ <span class="menu-text">Particle Dynamics</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -141,8 +220,74 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../system_of_particles/system_of_particles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">System of Particles</span></span></a>
+  <a href="../particle_dynamics/basic_particle_kinematics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Basic Particle Kinematics Concepts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/particle_kinetics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Particle Kinetics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/four_steps_bolm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Four Steps to Problem Solving Using the Balance of Linear Momentum</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/cylindrical_polar_coordinates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Cylindrical Polar Coordinate System</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/constrained_motion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Constrained Motion</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/serret_frenet_triad.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Serret-Frenet Basis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/spring_force.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spring Force</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/friction_force.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Friction Force</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/gravitational_force_model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Gravitational Force Model</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/power_work_energy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Power, Work, and Energy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/momenta_and_impulses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Momenta and Impulses of Particles</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../particle_dynamics/collisions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Collisions</span></span></a>
   </div>
 </li>
       </ul>
@@ -150,7 +295,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Rigid Body Dynamics</span></a>
+ <span class="menu-text">System of Particles</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -158,20 +303,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../system_of_particles/system_of_particles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">System of Particles</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Rigid Body Dynamics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../rigid_body_dynamics/rigid_body_kinematics.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Kinematics of Soft Robots</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Kinematics of Rigid Bodies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../rigid_body_dynamics/rigid_body_kinetics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Rigid Body Kinetics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Kinetics of Rigid Bodies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../rigid_body_dynamics/work_energy_theorem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Work Energy Theorem</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">The Work-Energy Theorem for a Rigid Body</span></span></a>
   </div>
 </li>
       </ul>
@@ -179,7 +341,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -188,6 +350,29 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">MECH230 Dynamics Notes</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/conservative_forces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Mathematical Background for Conservative Forces</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/sets_linear_function_spaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Sets and Linear Function Spaces</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -198,23 +383,43 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">4</span> Overview</a>
+  <li><a href="#corotational-bases" id="toc-corotational-bases" class="nav-link active" data-scroll-target="#corotational-bases"><span class="header-section-number">20.1</span> Corotational Bases</a></li>
+  <li><a href="#tensors" id="toc-tensors" class="nav-link" data-scroll-target="#tensors"><span class="header-section-number">20.2</span> Tensors</a></li>
+  <li><a href="#tensor-bun-product" id="toc-tensor-bun-product" class="nav-link" data-scroll-target="#tensor-bun-product"><span class="header-section-number">20.3</span> Tensor (Bun) Product</a></li>
+  <li><a href="#matrix-representation-of-tensors" id="toc-matrix-representation-of-tensors" class="nav-link" data-scroll-target="#matrix-representation-of-tensors"><span class="header-section-number">20.4</span> Matrix Representation of Tensors</a>
   <ul class="collapse">
-  <li><a href="#discrete-elastic-rods" id="toc-discrete-elastic-rods" class="nav-link" data-scroll-target="#discrete-elastic-rods"><span class="header-section-number">4.1</span> Discrete Elastic Rods</a>
+  <li><a href="#rigid-body-motion" id="toc-rigid-body-motion" class="nav-link" data-scroll-target="#rigid-body-motion"><span class="header-section-number">20.4.1</span> Rigid Body Motion</a></li>
+  </ul></li>
+  <li><a href="#the-angular-velocity-vector" id="toc-the-angular-velocity-vector" class="nav-link" data-scroll-target="#the-angular-velocity-vector"><span class="header-section-number">20.5</span> The Angular Velocity Vector</a></li>
+  <li><a href="#velocity-and-acceleration-of-two-material-points" id="toc-velocity-and-acceleration-of-two-material-points" class="nav-link" data-scroll-target="#velocity-and-acceleration-of-two-material-points"><span class="header-section-number">20.6</span> Velocity and Acceleration of Two Material Points</a></li>
+  <li><a href="#particle-in-a-noninertial-frame" id="toc-particle-in-a-noninertial-frame" class="nav-link" data-scroll-target="#particle-in-a-noninertial-frame"><span class="header-section-number">20.7</span> Particle in a Noninertial Frame</a></li>
+  <li><a href="#classifications-of-rigid-body-motions" id="toc-classifications-of-rigid-body-motions" class="nav-link" data-scroll-target="#classifications-of-rigid-body-motions"><span class="header-section-number">20.8</span> Classifications of Rigid Body Motions</a></li>
+  <li><a href="#instantaneous-center-of-rotation" id="toc-instantaneous-center-of-rotation" class="nav-link" data-scroll-target="#instantaneous-center-of-rotation"><span class="header-section-number">20.9</span> Instantaneous Center of Rotation</a></li>
+  <li><a href="#doing-kinematics-geometrically" id="toc-doing-kinematics-geometrically" class="nav-link" data-scroll-target="#doing-kinematics-geometrically"><span class="header-section-number">20.10</span> Doing Kinematics Geometrically</a></li>
+  <li><a href="#kinematics-of-rolling-and-sliding" id="toc-kinematics-of-rolling-and-sliding" class="nav-link" data-scroll-target="#kinematics-of-rolling-and-sliding"><span class="header-section-number">20.11</span> Kinematics of Rolling and Sliding</a>
   <ul class="collapse">
-  <li><a href="#degrees-of-freedom" id="toc-degrees-of-freedom" class="nav-link" data-scroll-target="#degrees-of-freedom"><span class="header-section-number">4.1.1</span> Degrees of Freedom</a></li>
+  <li><a href="#example-rolling-circular-disk" id="toc-example-rolling-circular-disk" class="nav-link" data-scroll-target="#example-rolling-circular-disk"><span class="header-section-number">20.11.1</span> Example: Rolling Circular Disk</a></li>
   </ul></li>
-  <li><a href="#symbolic-formulations" id="toc-symbolic-formulations" class="nav-link" data-scroll-target="#symbolic-formulations"><span class="header-section-number">4.2</span> Symbolic Formulations</a></li>
+  <li><a href="#center-of-mass" id="toc-center-of-mass" class="nav-link" data-scroll-target="#center-of-mass"><span class="header-section-number">20.12</span> Center of Mass</a></li>
+  <li><a href="#linear-momentum" id="toc-linear-momentum" class="nav-link" data-scroll-target="#linear-momentum"><span class="header-section-number">20.13</span> Linear Momentum</a></li>
+  <li><a href="#angular-momenta" id="toc-angular-momenta" class="nav-link" data-scroll-target="#angular-momenta"><span class="header-section-number">20.14</span> Angular Momenta</a>
+  <ul class="collapse">
+  <li><a href="#inertia-tensor" id="toc-inertia-tensor" class="nav-link" data-scroll-target="#inertia-tensor"><span class="header-section-number">20.14.1</span> Inertia Tensor</a></li>
+  <li><a href="#example-solid-cylinder" id="toc-example-solid-cylinder" class="nav-link" data-scroll-target="#example-solid-cylinder"><span class="header-section-number">20.14.2</span> Example: Solid Cylinder</a></li>
+  <li><a href="#example-cylindrical-hoop" id="toc-example-cylindrical-hoop" class="nav-link" data-scroll-target="#example-cylindrical-hoop"><span class="header-section-number">20.14.3</span> Example: Cylindrical Hoop</a></li>
   </ul></li>
+  <li><a href="#parallel-axis-theorem" id="toc-parallel-axis-theorem" class="nav-link" data-scroll-target="#parallel-axis-theorem"><span class="header-section-number">20.15</span> Parallel Axis Theorem</a></li>
+  <li><a href="#radius-of-gyration" id="toc-radius-of-gyration" class="nav-link" data-scroll-target="#radius-of-gyration"><span class="header-section-number">20.16</span> Radius of Gyration</a></li>
+  <li><a href="#angular-momentum-about-a-moving-point-p" id="toc-angular-momentum-about-a-moving-point-p" class="nav-link" data-scroll-target="#angular-momentum-about-a-moving-point-p"><span class="header-section-number">20.17</span> Angular Momentum About a Moving Point <span class="math inline">\(P\)</span></a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html">Rigid Body Dynamics</a></li><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Kinematics of Soft Robots</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html">Rigid Body Dynamics</a></li><li class="breadcrumb-item"><a href="../rigid_body_dynamics/rigid_body_kinematics.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Kinematics of Rigid Bodies</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Kinematics of Soft Robots</span></h1>
+<h1 class="title"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Kinematics of Rigid Bodies</span></h1>
 </div>
 
 
@@ -243,23 +448,499 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Overview</h1>
-<p>This chapter covers the geometric representation of deformable structures.</p>
-<section id="discrete-elastic-rods" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="discrete-elastic-rods"><span class="header-section-number">4.1</span> Discrete Elastic Rods</h2>
-<p>Here we discuss the DER framework and its application to line contact.</p>
-<section id="degrees-of-freedom" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="degrees-of-freedom"><span class="header-section-number">4.1.1</span> Degrees of Freedom</h3>
-<p>Details on the nodal coordinates…</p>
+<p>In this chapter, we will denote the fixed basis by <span class="math inline">\(\{{\bf E}_1,{\bf E}_2,{\bf E}_3\}\)</span>.</p>
+<p>Consider a body <span class="math inline">\(\mathcal{B}\)</span> in motion in 3D space.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>A body <span class="math inline">\(\mathcal{B}\)</span> is a collection of material points (mass particles or particles).</li>
+<li>It is convenient to define a fixed reference configuration <span class="math inline">\(\boldsymbol{\kappa}_0\)</span> for the body: <span class="math inline">\({\bf X}=\boldsymbol{\kappa}_0\)</span>.</li>
+<li>The present (or current) configuration of the body is denoted by <span class="math inline">\(\boldsymbol{\kappa}_t\)</span>.</li>
+<li>We denote a material point by <span class="math inline">\(X\)</span>. The position of the material point <span class="math inline">\(X\)</span> relative to a fixed origin at the reference configuration is denoted by <span class="math inline">\({\bf X}\)</span> and at time <span class="math inline">\(t\)</span> is denoted by <span class="math inline">\({\bf x}\)</span>.</li>
+<li>This motion is invertible; we can use <span class="math inline">\({\bf X}\)</span> to uniquely define the motion as a function of <span class="math inline">\(X\)</span> and <span class="math inline">\(t\)</span>: <span class="math inline">\({\bf x} = {\bchi}({\bf X},t)\)</span>.</li>
+<li><span class="math inline">\(\bchi\)</span> (pronounced like “kye”) is called the <strong>motion function</strong>. It tells you the current position vector of the material point which, at the reference configuration, had position vector <span class="math inline">\({\bf X}\)</span>.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> What is a mathematical statement that means that a body is rigid?</p>
+<p><strong>Answer:</strong> For rigid bodies the distance between any two mass particles <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> remains constant for all motions: <span class="math display">\[\begin{align}
+    \lnorm{\bf x}_1-{\bf x}_2\rnorm = \lnorm{\bf X}_1-{\bf X}_2\rnorm.
+\end{align}\]</span> The motion preserves angles between lines on the body (unlike elastic bodies or fluids) and preserves orientation (it is not a reflection).</p>
+</div>
+</div>
+<p>Any rigid body motion can be built in two steps:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol type="1">
+<li><strong>Rotate</strong> the object about <span class="math inline">\(O\)</span> to the desired orientation: <span class="math inline">\({\bf x}_I = {\bf Q}(t){\bf X}\)</span> with <span class="math inline">\(\lnorm{\bf Q}(t){\bf X}\rnorm = \lnorm{\bf X}\rnorm\)</span>.</li>
+<li><strong>Translate</strong> via the translation vector <span class="math inline">\({\bf y}(t)\)</span>.</li>
+</ol>
+<p>Then every rigid motion is: <span class="math display">\[\begin{align}
+    {\bf x} = \bchi({\bf X},t) = {\bf Q}(t){\bf X}+{\bf y}(t).
+\end{align}\]</span></p>
+<p><span class="math inline">\({\bf Q}(t)\)</span> is a linear map and is called the <strong>rotation tensor</strong>. Both <span class="math inline">\({\bf Q}\)</span> and <span class="math inline">\({\bf y}\)</span> are the same for all material points (functions of <span class="math inline">\(t\)</span> only). In this class we consider <strong>general plane motion</strong>, where <span class="math inline">\(\bomega = \dot{\theta}{\bf E}_3\)</span> and <span class="math inline">\(\balpha = \dot{\bomega}\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> How do we know if a body has rotated relative to a reference configuration?</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Answer:</strong> We need the reference configuration to define rotation. The rotation angle <span class="math inline">\(\theta\)</span> is the angular displacement of every material line from reference to current configuration. The axis of rotation is perpendicular to the page.</p>
+</div>
+</div>
+<section id="corotational-bases" class="level2" data-number="20.1">
+<h2 data-number="20.1" class="anchored" data-anchor-id="corotational-bases"><span class="header-section-number">20.1</span> Corotational Bases</h2>
+<p>A <em>corotational basis</em> <span class="math inline">\(\{{\bf e}_1,{\bf e}_2\}\)</span> is a pair of vectors embedded in the material. Initially <span class="math inline">\({\bf e}_i = {\bf E}_i\)</span>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>For a rigid body, the components of a material vector <span class="math inline">\({\bf v}\)</span> along the corotational basis are constant throughout the motion: <span class="math display">\[\begin{align}
+    {\bf v} = a{\bf e}_1+b{\bf e}_2,
+\end{align}\]</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constant and <span class="math inline">\({\bf e}_1(t)\)</span>, <span class="math inline">\({\bf e}_2(t)\)</span> evolve with the body. The corotational basis is unaffected by translation.</p>
+</section>
+<section id="tensors" class="level2" data-number="20.2">
+<h2 data-number="20.2" class="anchored" data-anchor-id="tensors"><span class="header-section-number">20.2</span> Tensors</h2>
+<p>A tensor <span class="math inline">\({\bf T}\)</span> is a <em>linear transformation</em> that transforms a vector into another vector: <span class="math inline">\({\bf T}{\bf u} = {\bf v}\)</span>. A tensor exists independent of any basis and is defined by its action on vectors.</p>
+<p>Examples: a rotation tensor <span class="math inline">\({\bf Q}\)</span>, the identity tensor <span class="math inline">\({\bf I}\)</span>, a scaling tensor <span class="math inline">\({\bf S}\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Is a rotation a linear transformation?</p>
+<p><strong>Answer:</strong> Yes. Rotating <span class="math inline">\(a{\bf X}\)</span> is the same as rotating <span class="math inline">\({\bf X}\)</span> then scaling by <span class="math inline">\(a\)</span>, and rotating <span class="math inline">\({\bf X}_1+{\bf X}_2\)</span> equals rotating each and adding. So rotations are linear transformations — hence tensors.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Are vectors and matrices the same?</p>
+<p><strong>Answer:</strong> No.&nbsp;A vector is an abstract object independent of any basis; a matrix is its representation in a specific basis. Similarly, a tensor is not a matrix, but can be expressed as one in a given coordinate system.</p>
+</div>
+</div>
+</section>
+<section id="tensor-bun-product" class="level2" data-number="20.3">
+<h2 data-number="20.3" class="anchored" data-anchor-id="tensor-bun-product"><span class="header-section-number">20.3</span> Tensor (Bun) Product</h2>
+<p>The <strong>tensor product</strong> <span class="math inline">\({\bf a}\otimes{\bf b}\)</span> acts on vectors by: <span class="math display">\[\begin{align}
+    \lp{\bf a}\otimes{\bf b}\rp{\bf u} = \lp{\bf b}\cdot{\bf u}\rp{\bf a}.
+\end{align}\]</span> This is linear (verifiable directly), so it is a tensor.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> What does <span class="math inline">\(2{\bf E}_1\otimes{\bf E}_1+2{\bf E}_2\otimes{\bf E}_2+2{\bf E}_3\otimes{\bf E}_3\)</span> do to a vector?</p>
+<p><strong>Answer:</strong> It scales it by a factor of two.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Show that <span class="math inline">\({\bf E}_1\otimes{\bf E}_1+{\bf E}_2\otimes{\bf E}_2+{\bf E}_3\otimes{\bf E}_3\)</span> is the identity tensor. Show also that the rotation tensor can be expressed as <span class="math inline">\({\bf Q} = {\bf e}_x\otimes{\bf E}_x+{\bf e}_y\otimes{\bf E}_y+{\bf e}_z\otimes{\bf E}_z\)</span>.</p>
+<p><strong>Answer:</strong> Apply the definition of the tensor product term by term.</p>
+</div>
+</div>
+</section>
+<section id="matrix-representation-of-tensors" class="level2" data-number="20.4">
+<h2 data-number="20.4" class="anchored" data-anchor-id="matrix-representation-of-tensors"><span class="header-section-number">20.4</span> Matrix Representation of Tensors</h2>
+<p>Given a basis <span class="math inline">\(\{{\bf e}_1,{\bf e}_2,{\bf e}_3\}\)</span>, define <span class="math inline">\(Q_{ij} \equiv \lp{\bf Q}{\bf e}_j\rp\cdot{\bf e}_i\)</span>. Then the action of <span class="math inline">\({\bf Q}\)</span> in matrix form is: <span class="math display">\[\begin{align}
+    \begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}
+    =
+    \begin{bmatrix}Q_{11}&amp;Q_{12}&amp;Q_{13}\\Q_{21}&amp;Q_{22}&amp;Q_{23}\\Q_{31}&amp;Q_{32}&amp;Q_{33}\end{bmatrix}
+    \begin{bmatrix}X_1\\X_2\\X_3\end{bmatrix}.
+\end{align}\]</span> The matrix representation depends on the chosen basis, but the tensor itself is basis-independent.</p>
+<section id="rigid-body-motion" class="level3" data-number="20.4.1">
+<h3 data-number="20.4.1" class="anchored" data-anchor-id="rigid-body-motion"><span class="header-section-number">20.4.1</span> Rigid Body Motion</h3>
+<p>In matrix form, rigid body motion is: <span class="math display">\[\begin{align}
+    \begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}
+    =
+    \begin{bmatrix}Q_{11}(t)&amp;Q_{12}(t)&amp;Q_{13}(t)\\Q_{21}(t)&amp;Q_{22}(t)&amp;Q_{23}(t)\\Q_{31}(t)&amp;Q_{32}(t)&amp;Q_{33}(t)\end{bmatrix}
+    \begin{bmatrix}X_1\\X_2\\X_3\end{bmatrix}
+    +
+    \begin{bmatrix}y_1\\y_2\\y_3\end{bmatrix}.
+\end{align}\]</span> For <span class="math inline">\([{\bf Q}(t)]\)</span> to be a rotation matrix: <span class="math inline">\({\bf Q}{\bf Q}^T = {\bf I}\)</span> and <span class="math inline">\(\det([{\bf Q}]) = 1\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Verify that the rotation about <span class="math inline">\({\bf E}_z\)</span> by angle <span class="math inline">\(\theta(t)\)</span> has matrix representation <span class="math display">\[\begin{align*}
+    \mathtt{Q} = \begin{bmatrix}\cos\theta &amp; -\sin\theta &amp; 0\\\sin\theta &amp; \cos\theta &amp; 0\\0 &amp; 0 &amp; 1\end{bmatrix}
+\end{align*}\]</span> using <span class="math inline">\({\bf Q} = {\bf e}_1\otimes{\bf E}_1+{\bf e}_2\otimes{\bf E}_2+{\bf e}_3\otimes{\bf E}_3\)</span> with <span class="math inline">\({\bf e}_1 = \cos\theta\,{\bf E}_1+\sin\theta\,{\bf E}_2\)</span> and <span class="math inline">\({\bf e}_2 = -\sin\theta\,{\bf E}_1+\cos\theta\,{\bf E}_2\)</span>.</p>
+<p><strong>Answer:</strong> Compute <span class="math inline">\(Q_{ij} = \lp{\bf Q}{\bf E}_j\rp\cdot{\bf E}_i = {\bf e}_j\cdot{\bf E}_i\)</span> to recover the matrix.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Note!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Note!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This matrix satisfies <span class="math inline">\(\mathtt{Q}\mathtt{Q}^T = \mathtt{I}\)</span> and <span class="math inline">\(\det(\mathtt{Q})=1\)</span>, so <span class="math inline">\({\bf Q}\)</span> is a <strong>proper orthogonal tensor</strong>. All proper orthogonal tensors are rotations and vice versa.</p>
+</div>
+</div>
 </section>
 </section>
-<section id="symbolic-formulations" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="symbolic-formulations"><span class="header-section-number">4.2</span> Symbolic Formulations</h2>
-<p>Using symbolic math to derive equations of motion.</p>
+<section id="the-angular-velocity-vector" class="level2" data-number="20.5">
+<h2 data-number="20.5" class="anchored" data-anchor-id="the-angular-velocity-vector"><span class="header-section-number">20.5</span> The Angular Velocity Vector</h2>
+<p>From rigid body motion, for any two material points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>: <span class="math inline">\(({\bf x}_B-{\bf x}_A) = {\bf Q}({\bf X}_B-{\bf X}_A)\)</span>. Differentiating: <span class="math display">\[\begin{align}
+    {\bf v}_B-{\bf v}_A = \dot{\bf Q}{\bf Q}^T({\bf x}_B-{\bf x}_A).
+\end{align}\]</span> Since <span class="math inline">\({\bf Q}{\bf Q}^T = {\bf I}\)</span>, <span class="math inline">\(\dot{\bf Q}{\bf Q}^T\)</span> is <strong>skew</strong>. Every skew tensor corresponds to a vector cross product, so: <span class="math display">\[\begin{align}
+    {\bf v}_B-{\bf v}_A = \bomega\times({\bf x}_B-{\bf x}_A).
+\end{align}\]</span> The tensor <span class="math inline">\(\bOmega = \dot{\bf Q}{\bf Q}^T\)</span> is the <strong>angular velocity tensor</strong> and <span class="math inline">\(\bomega\)</span> is the <strong>angular velocity vector</strong>. Taking another derivative: <span class="math display">\[\begin{align}
+    {\bf a}_B-{\bf a}_A = \balpha\times({\bf x}_B-{\bf x}_A)+\bomega\times(\bomega\times({\bf x}_B-{\bf x}_A))
+\end{align}\]</span> where <span class="math inline">\(\balpha\)</span> is the angular acceleration.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Note!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Note!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For any corotational basis vector <span class="math inline">\({\bf e}_i\)</span> fixed to the rigid body: <span class="math display">\[\begin{align}
+    \dot{\bf e}_i = \bomega\times{\bf e}_i, \quad i=1,2,3.
+\end{align}\]</span></p>
+</div>
+</div>
+</section>
+<section id="velocity-and-acceleration-of-two-material-points" class="level2" data-number="20.6">
+<h2 data-number="20.6" class="anchored" data-anchor-id="velocity-and-acceleration-of-two-material-points"><span class="header-section-number">20.6</span> Velocity and Acceleration of Two Material Points</h2>
+<p>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be material points on the rigid body. Expressing <span class="math inline">\({\bf x}_{B/A}\)</span> on a corotational basis (constant components): <span class="math display">\[\begin{align}
+    {\bf x}_{B/A} &amp;= x{\bf e}_x+y{\bf e}_y,\\
+    {\bf v}_{B/A} &amp;= x\dot{\bf e}_x+y\dot{\bf e}_y = \bomega\times{\bf x}_{B/A},\\
+    {\bf a}_{B/A} &amp;= \balpha\times{\bf x}_{B/A}+\bomega\times(\bomega\times{\bf x}_{B/A}).
+\end{align}\]</span> With <span class="math inline">\(\bomega = \omega{\bf E}_z\)</span> and <span class="math inline">\(\balpha = \alpha{\bf E}_z\)</span>: <span class="math display">\[\begin{align}
+    \omega\,d\omega = \alpha\,d\theta, \qquad \omega\,dt = d\theta, \qquad \alpha\,dt = d\omega.
+\end{align}\]</span></p>
+</section>
+<section id="particle-in-a-noninertial-frame" class="level2" data-number="20.7">
+<h2 data-number="20.7" class="anchored" data-anchor-id="particle-in-a-noninertial-frame"><span class="header-section-number">20.7</span> Particle in a Noninertial Frame</h2>
+<p>A noninertial frame is one that accelerates (e.g.&nbsp;an accelerating bus, a merry-go-round). If <span class="math inline">\(A\)</span> is fixed to the rigid body and <span class="math inline">\(B\)</span> moves relative to it: <span class="math display">\[\begin{align}
+    {\bf v}_B-{\bf v}_A &amp;= \bomega\times({\bf x}_B-{\bf x}_A)+\overset{\circ}{\bf x}_{B/A},\\
+    {\bf a}_B-{\bf a}_A &amp;= \balpha\times({\bf x}_B-{\bf x}_A)+\bomega\times\lp\bomega\times\lp{\bf x}_B-{\bf x}_A\rp\rp+2\bomega\times\overset{\circ}{\bf x}_{B/A}+\overset{\circ\circ}{\bf x}_{B/A},
+\end{align}\]</span> where <span class="math inline">\(\overset{\circ}{\bf x}_{B/A} = \dot{x}{\bf e}_x+\dot{y}{\bf e}_y\)</span> and <span class="math inline">\(\overset{\circ\circ}{\bf x}_{B/A} = \ddot{x}{\bf e}_x+\ddot{y}{\bf e}_y\)</span> are the first and second <strong>corotational rates</strong>. The term <span class="math inline">\(2\bomega\times\overset{\circ}{\bf x}_{B/A}\)</span> is the <strong>Coriolis acceleration</strong> and <span class="math inline">\(\bomega\times(\bomega\times{\bf x}_{B/A})\)</span> is the <strong>centripetal acceleration</strong>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> See <a href="https://www.youtube.com/watch?v=mPsLanVS1Q8">this video</a> of people playing catch on a merry-go-round. A ball is thrown on a merry-go-round rotating about fixed center <span class="math inline">\(O\)</span>, with <span class="math inline">\({\bf r}_0 = -R{\bf E}_x\)</span> and <span class="math inline">\({\bf v}_0 = v_0{\bf E}_x\)</span>. What velocity does the ball appear to have to an observer on the merry-go-round?</p>
+<p><strong>Answer:</strong> The ball is a projectile: <span class="math inline">\({\bf a} = -g{\bf E}_z\)</span>, <span class="math inline">\({\bf v} = -gt{\bf E}_z+{\bf v}_0\)</span>. From <span class="math inline">\({\bf v} = \bomega\times({\bf r}-{\bf r}_0)+\overset{\circ}{\bf x}_{P/O}\)</span>: <span class="math display">\[\begin{align}
+    \overset{\circ}{\bf x}_{P/O} = -gt{\bf E}_z+v_0{\bf E}_x+\omega(v_0 t-R){\bf E}_y.
+\end{align}\]</span></p>
+</div>
+</div>
+</section>
+<section id="classifications-of-rigid-body-motions" class="level2" data-number="20.8">
+<h2 data-number="20.8" class="anchored" data-anchor-id="classifications-of-rigid-body-motions"><span class="header-section-number">20.8</span> Classifications of Rigid Body Motions</h2>
+<p><strong>Pure (rectilinear) translation:</strong> <span class="math inline">\(\bomega = {\bf 0}\)</span>, <span class="math inline">\(\balpha = {\bf 0}\)</span>.</p>
+<p><strong>Curvilinear translation:</strong> material points follow parallel curved paths; <span class="math inline">\(\bomega = {\bf 0}\)</span>, <span class="math inline">\(\balpha = {\bf 0}\)</span> (e.g.&nbsp;<a href="https://www.youtube.com/watch?v=LU_xVr4b2qM&amp;t=387s">Ferris wheel bucket</a>).</p>
+<p><strong>Fixed point rotation:</strong> <span class="math inline">\(\bomega \neq {\bf 0}\)</span>, fixed point with <span class="math inline">\({\bf v}_O = {\bf a}_O = {\bf 0}\)</span> (e.g.&nbsp;pendulum): <span class="math display">\[\begin{align}
+    {\bf a}_P = \balpha\times{\bf r}_P+\bomega\times(\bomega\times{\bf r}_P).
+\end{align}\]</span> The term <span class="math inline">\(\balpha\times{\bf r}_P\)</span> is the tangential acceleration; <span class="math inline">\(\bomega\times(\bomega\times{\bf r}_P)\)</span> is the centripetal acceleration.</p>
+<p><strong>General motion:</strong> combined translation and rotation.</p>
+</section>
+<section id="instantaneous-center-of-rotation" class="level2" data-number="20.9">
+<h2 data-number="20.9" class="anchored" data-anchor-id="instantaneous-center-of-rotation"><span class="header-section-number">20.9</span> Instantaneous Center of Rotation</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Draw the velocity profile of a rotating link with a fixed end.</p>
+<p><strong>Answer:</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>A body in general plane motion is not rotating about a fixed point, but <strong>instantaneously</strong> it rotates about the <strong>instantaneous center of rotation (IC)</strong> — a point with zero velocity at that instant. If <span class="math inline">\({\bf v}_{IC} = {\bf 0}\)</span>, then for any material point <span class="math inline">\(A\)</span>: <span class="math display">\[\begin{align}
+    {\bf v}_A = \bomega\times({\bf r}_A-{\bf r}_{IC}).
+\end{align}\]</span> So <span class="math inline">\({\bf r}_{A/IC}\)</span> is perpendicular to <span class="math inline">\({\bf v}_A\)</span>. Knowing the directions of <span class="math inline">\({\bf v}_A\)</span> and <span class="math inline">\({\bf v}_B\)</span> for two material points identifies the IC.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>For the IC: <span class="math display">\[\begin{align}
+    {\bf v}_P = \bomega\times{\bf r}_{P/IC}, \qquad
+    {\bf a}_P = \balpha\times{\bf r}_{P/IC}+\bomega\times(\bomega\times{\bf r}_{P/IC}).
+\end{align}\]</span></p>
+<p><strong>Remarks:</strong> the IC generally migrates through space; for a translating rigid body the IC is at infinity; the IC can only be used for velocity analysis since its acceleration is nonzero.</p>
+<p><strong>Procedure:</strong> use geometry to find the IC; find <span class="math inline">\(|\omega|\)</span> via <span class="math inline">\({\bf v}_P = \bomega\times{\bf r}_{P/IC}\)</span>; obtain <span class="math inline">\({\bf v}_P\)</span> for any point.</p>
+<p><em>Examples: <a href="https://www.youtube.com/watch?v=RDixpdSGERQ">Crank slider</a>, rod falling on a corner.</em></p>
+</section>
+<section id="doing-kinematics-geometrically" class="level2" data-number="20.10">
+<h2 data-number="20.10" class="anchored" data-anchor-id="doing-kinematics-geometrically"><span class="header-section-number">20.10</span> Doing Kinematics Geometrically</h2>
+<p>In some problems, geometric laws that hold for all time can be differentiated: - The law of sines holds at all times. - The law of cosines holds at all times. - Angle sum relations for a triangle (e.g.&nbsp;<span class="math inline">\(\beta+\alpha+\theta=\pi\)</span>) can be differentiated.</p>
+</section>
+<section id="kinematics-of-rolling-and-sliding" class="level2" data-number="20.11">
+<h2 data-number="20.11" class="anchored" data-anchor-id="kinematics-of-rolling-and-sliding"><span class="header-section-number">20.11</span> Kinematics of Rolling and Sliding</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="Note!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Note!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Terminology: “rolling” = roll without slip; “sliding” = roll with slip.</p>
+</div>
+</div>
+<p>Consider a rigid body <span class="math inline">\(\mathcal{B}\)</span> in contact with a fixed surface <span class="math inline">\(\mathcal{S}\)</span>. Let <span class="math inline">\(P\)</span> be the material point of <span class="math inline">\(\mathcal{B}\)</span> in contact at time <span class="math inline">\(t\)</span>, with unit normal <span class="math inline">\({\bf n}\)</span> to <span class="math inline">\(\mathcal{S}\)</span>.</p>
+<p>Since <span class="math inline">\(P\)</span> belongs to <span class="math inline">\(\mathcal{B}\)</span>: <span class="math display">\[\begin{align}
+    {\bf v}_P-{\bf v}_C &amp;= \bomega\times({\bf r}_P-{\bf r}_C),\\
+    {\bf a}_P-{\bf a}_C &amp;= \balpha\times({\bf r}_P-{\bf r}_C)+\bomega\times\lp\bomega\times({\bf r}_P-{\bf r}_C)\rp.
+\end{align}\]</span></p>
+<ul>
+<li><strong>Contact (touching):</strong> <span class="math inline">\({\bf v}_P\cdot{\bf n} = 0\)</span>.</li>
+<li><strong>Rolling (no slip):</strong> <span class="math inline">\({\bf v}_P = {\bf 0}\)</span>, so <span class="math inline">\({\bf v}_C = -\bomega\times({\bf r}_P-{\bf r}_C)\)</span>. Note: <span class="math inline">\({\bf a}_P \neq {\bf 0}\)</span> in general.</li>
+</ul>
+<section id="example-rolling-circular-disk" class="level3" data-number="20.11.1">
+<h3 data-number="20.11.1" class="anchored" data-anchor-id="example-rolling-circular-disk"><span class="header-section-number">20.11.1</span> Example: Rolling Circular Disk</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> What is the IC of a rolling disk?</p>
+<p><strong>Answer:</strong> The contact point with the surface.</p>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A disk of radius <span class="math inline">\(R\)</span> rolling on a plane with <span class="math inline">\(\bomega = \omega{\bf E}_z\)</span>. Since <span class="math inline">\({\bf v}_P = {\bf 0}\)</span>: <span class="math display">\[\begin{align}
+    {\bf v}_C = \bomega\times R{\bf E}_y = -\omega R{\bf E}_x \implies \dot{x} = -\omega R, \quad \ddot{x} = -\alpha R.
+\end{align}\]</span> The acceleration of the contact point: <span class="math display">\[\begin{align}
+    {\bf a}_P = -\omega^2 R{\bf E}_y
+\end{align}\]</span> (purely vertical — toward the center).</p>
+</section>
+</section>
+<section id="center-of-mass" class="level2" data-number="20.12">
+<h2 data-number="20.12" class="anchored" data-anchor-id="center-of-mass"><span class="header-section-number">20.12</span> Center of Mass</h2>
+<p>The center of mass <span class="math inline">\(C\)</span> of <span class="math inline">\(\mathcal{B}\)</span> has position vector <span class="math display">\[\begin{align}
+    {\bf r}_C = \frac{\int_{\mathcal{B}}{\bf r}\,dm}{\int_{\mathcal{B}}dm}, \qquad dm = \rho(x,t)\,dv.
+\end{align}\]</span> For rigid bodies, <span class="math inline">\(C\)</span> behaves as a material point: <span class="math display">\[\begin{align}
+    {\bf v}_C-{\bf v}_A = \bomega\times({\bf r}_C-{\bf r}_A), \qquad
+    {\bf a}_C-{\bf a}_A = \balpha\times({\bf r}_C-{\bf r}_A)+\bomega\times\lp\bomega\times({\bf r}_C-{\bf r}_A)\rp.
+\end{align}\]</span></p>
+</section>
+<section id="linear-momentum" class="level2" data-number="20.13">
+<h2 data-number="20.13" class="anchored" data-anchor-id="linear-momentum"><span class="header-section-number">20.13</span> Linear Momentum</h2>
+<p><span class="math display">\[\begin{align}
+    {\bf G} = \int_{\mathcal{B}}{\bf v}\,dm = m{\bf v}_C.
+\end{align}\]</span></p>
+</section>
+<section id="angular-momenta" class="level2" data-number="20.14">
+<h2 data-number="20.14" class="anchored" data-anchor-id="angular-momenta"><span class="header-section-number">20.14</span> Angular Momenta</h2>
+<p>The angular momentum about a point <span class="math inline">\(P\)</span> is <span class="math display">\[\begin{align}
+    {\bf H}^P = \int_{\mathcal{B}}({\bf r}-{\bf r}_P)\times{\bf v}\,dm,
+\end{align}\]</span> and the relationship between angular momenta about <span class="math inline">\(O\)</span> and <span class="math inline">\(C\)</span> is <span class="math display">\[\begin{align}
+    {\bf H}^O = {\bf H}^C+{\bf r}_C\times{\bf G}.
+\end{align}\]</span></p>
+<section id="inertia-tensor" class="level3" data-number="20.14.1">
+<h3 data-number="20.14.1" class="anchored" data-anchor-id="inertia-tensor"><span class="header-section-number">20.14.1</span> Inertia Tensor</h3>
+<p>With <span class="math inline">\(\bpi = {\bf r}-{\bf r}_C\)</span> and using the BAC-CAB identity: <span class="math display">\[\begin{align}
+    {\bf H}^C = \int_{\mathcal{B}}\lp(\bpi\cdot\bpi)\bomega-(\bpi\cdot\bomega)\bpi\rp dm = {\bf I}^C\bomega.
+\end{align}\]</span> The inertia matrix on the corotational basis: <span class="math display">\[\begin{align}
+    [{\bf I}^C] =
+    \begin{bmatrix}
+        I^C_{xx} &amp; I^C_{xy} &amp; I^C_{xz}\\
+        I^C_{xy} &amp; I^C_{yy} &amp; I^C_{yz}\\
+        I^C_{xz} &amp; I^C_{yz} &amp; I^C_{zz}
+    \end{bmatrix},
+\end{align}\]</span> with diagonal entries (<strong>moments of inertia</strong>) and off-diagonal entries (<strong>products of inertia</strong>): <span class="math display">\[\begin{align}
+    I^C_{xx} &amp;= \int_{\mathcal{B}}(y^2+z^2)\,dm, \qquad
+    I^C_{yy} = \int_{\mathcal{B}}(x^2+z^2)\,dm, \qquad
+    I^C_{zz} = \int_{\mathcal{B}}(x^2+y^2)\,dm,\\
+    I^C_{xy} &amp;= -\int_{\mathcal{B}}xy\,dm, \qquad
+    I^C_{xz} = -\int_{\mathcal{B}}xz\,dm, \qquad
+    I^C_{yz} = -\int_{\mathcal{B}}yz\,dm.
+\end{align}\]</span> When <span class="math inline">\(\{{\bf e}_x,{\bf e}_y,{\bf e}_z\}\)</span> is an eigenbasis of <span class="math inline">\([{\bf I}^C]\)</span>, the products of inertia vanish.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Is my moment of inertia about an axis through my body greater when my arms are closed or open?</p>
+<p><strong>Answer:</strong> Greater when arms are open — mass is farther from the axis. See also: <a href="https://www.youtube.com/watch?v=M_YCWDXCwZM">Professor Walter Lewin rolling cylinders</a>.</p>
+</div>
+</div>
+</section>
+<section id="example-solid-cylinder" class="level3" data-number="20.14.2">
+<h3 data-number="20.14.2" class="anchored" data-anchor-id="example-solid-cylinder"><span class="header-section-number">20.14.2</span> Example: Solid Cylinder</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>With <span class="math inline">\(dm = \rho\,r\,dr\,d\theta\,dz\)</span>: <span class="math display">\[\begin{align}
+    I^C_{zz} = \rho\int_{-\ell/2}^{\ell/2}\int_0^{2\pi}\int_0^R r^3\,dr\,d\theta\,dz = \frac{1}{2}\rho\pi\ell R^4 = \frac{mR^2}{2}.
+\end{align}\]</span></p>
+</section>
+<section id="example-cylindrical-hoop" class="level3" data-number="20.14.3">
+<h3 data-number="20.14.3" class="anchored" data-anchor-id="example-cylindrical-hoop"><span class="header-section-number">20.14.3</span> Example: Cylindrical Hoop</h3>
+<p>Every <span class="math inline">\(dm\)</span> has <span class="math inline">\(r = R\)</span>, so: <span class="math display">\[\begin{align}
+    I^C_{zz} = R^2\int_{\mathcal{B}}dm = mR^2.
+\end{align}\]</span></p>
+</section>
+</section>
+<section id="parallel-axis-theorem" class="level2" data-number="20.15">
+<h2 data-number="20.15" class="anchored" data-anchor-id="parallel-axis-theorem"><span class="header-section-number">20.15</span> Parallel Axis Theorem</h2>
+<p>Given inertia components about <span class="math inline">\(C\)</span>, the inertia about a material point <span class="math inline">\(A\)</span> with <span class="math inline">\({\bf r}_A - {\bf r}_C = A_x{\bf e}_x+A_y{\bf e}_y+A_z{\bf e}_z\)</span> (axes parallel at <span class="math inline">\(A\)</span> and <span class="math inline">\(C\)</span>): <span class="math display">\[\begin{align}
+    I^A_{xx} &amp;= I^C_{xx}+m(A_y^2+A_z^2),\\
+    I^A_{xy} &amp;= I^C_{xy}-mA_xA_y.
+\end{align}\]</span> In tensor form: <span class="math display">\[\begin{align}
+    {\bf I}^A = {\bf I}^C+m\lnorm{\bf r}_A-{\bf r}_C\rnorm^2{\bf I}-m({\bf r}_A-{\bf r}_C)\otimes({\bf r}_A-{\bf r}_C).
+\end{align}\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Note!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Note!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The parallel axis theorem applies only between the center of mass <span class="math inline">\(C\)</span> and another material point — not between any two arbitrary material points. The moment of inertia always increases when moving away from <span class="math inline">\(C\)</span>.</p>
+</div>
+</div>
+</section>
+<section id="radius-of-gyration" class="level2" data-number="20.16">
+<h2 data-number="20.16" class="anchored" data-anchor-id="radius-of-gyration"><span class="header-section-number">20.16</span> Radius of Gyration</h2>
+<p>The radius of gyration <span class="math inline">\(k_z\)</span> about the <span class="math inline">\(z\)</span>-axis satisfies <span class="math inline">\(mk_z^2 = I_{zz}\)</span>.</p>
+</section>
+<section id="angular-momentum-about-a-moving-point-p" class="level2" data-number="20.17">
+<h2 data-number="20.17" class="anchored" data-anchor-id="angular-momentum-about-a-moving-point-p"><span class="header-section-number">20.17</span> Angular Momentum About a Moving Point <span class="math inline">\(P\)</span></h2>
+<p>For a material point <span class="math inline">\(P\)</span> on the rigid body: <span class="math display">\[\begin{align}
+    {\bf H}^P &amp;= {\bf I}^P\bomega+({\bf r}_C-{\bf r}_P)\times m{\bf v}_P,
+\end{align}\]</span> with special cases <span class="math inline">\({\bf H}^C = {\bf I}^C\bomega\)</span> and <span class="math inline">\({\bf H}^O = {\bf I}^O\bomega\)</span> (fixed <span class="math inline">\(O\)</span>). In general: <span class="math display">\[\begin{align}
+    \dot{\bf H}^P = {\bf I}^P\overset{\circ}{\bomega}+\bomega\times({\bf I}^P\bomega)+\frac{d}{dt}\leb({\bf r}_C-{\bf r}_P)\times m{\bf v}_P\reb.
+\end{align}\]</span></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -666,12 +1347,12 @@ ul.task-list li input[type="checkbox"] {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../system_of_particles/system_of_particles.html" class="pagination-link" aria-label="System of Particles">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">System of Particles</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">System of Particles</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../rigid_body_dynamics/rigid_body_kinetics.html" class="pagination-link" aria-label="Rigid Body Kinetics">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Rigid Body Kinetics</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../rigid_body_dynamics/rigid_body_kinetics.html" class="pagination-link" aria-label="Kinetics of Rigid Bodies">
+        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Kinetics of Rigid Bodies</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

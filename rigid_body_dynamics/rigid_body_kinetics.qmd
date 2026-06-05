@@ -1,21 +1,149 @@
 ---
-title: "Rigid Body Kinetics"
+title: "Kinetics of Rigid Bodies"
 ---
 
-$$
-\mathbf{r}_{P/O} = \mathbf{r}_{G/O} + \mathbf{r}_{P/G}
-$$ {#eq-relative-pos}
+## Balance Laws for a Rigid Body
 
-The relative position vector is defined in @eq-relative-pos.
+The balance laws for a rigid body are **Euler's first law** (Balance of Linear Momentum, BoLM) and **Euler's second law** (Balance of Angular Momentum, BoAM):
+\begin{align}
+    {\bf F} &= m{\bf a}_C,\\
+    {\bf M}^O &= \dot{\bf H}^O \quad\text{about a fixed point }O,\\
+    {\bf M}^C &= \dot{\bf H}^C \quad\text{about the center of mass }C,\\
+    {\bf M}^P &= \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G} \quad\text{about any material point }P.
+\end{align}
+The BoAM is an **independent postulate**, not derivable from the BoLM.
 
+## Resultant Forces and Moments
 
+The resultant force ${\bf F}$ is the sum of all external forces. The resultant moment about a point includes the moment due to forces plus any applied pure moments ${\bf M}_e$ not due to forces.
 
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}[scale=1]
+    \draw[thick] plot [smooth cycle, tension=1] coordinates {
+        (0,0) (2,3) (5,2.5) (7,1) (4,-2) (1,-3)};
+    \fill[blue] (1,0.5) circle (1.5pt) node[anchor=north west] {$X_1$};
+    \fill[blue] (6,0) circle (1.5pt) node[anchor=south] {$X_2$};
+    \fill[blue] (2,-2) circle (1.5pt) node[anchor=north east] {$X_3$};
+    \fill[black] (-2,-2) circle (1.5pt) node[anchor=north east] {$O$};
+    \draw[thick,->] (-2,-2) -- (1,0.5) node[midway,above] {${\bf r}_1$};
+    \draw[thick,->] (-2,-2) -- (6,0) node[midway,above] {${\bf r}_2$};
+    \draw[thick,->] (-2,-2) -- (2,-2) node[midway,below] {${\bf r}_3$};
+    \node[anchor=south east] at (1,2.2) {$\mathcal{B}$};
+    \draw[->, thick, blue] (1,0.5) -- ++(0.8,1.2) node[anchor=west] {$\mathbf{F}_1$};
+    \draw[->, thick, blue] (6,0) -- ++(-0.8,0.4) node[anchor=south] {$\mathbf{F}_2$};
+    \draw[->, thick, blue] (2,-2) -- ++(0.8,-1.2) node[anchor=north] {$\mathbf{F}_3$};
+    \draw[->, thick, blue] (4,2) arc[start angle=0, end angle=260, radius=0.4]
+        node[right] {$\mathbf{M}_e$};
+    \fill[red] (3,0) circle (1.5pt) node[anchor = south east] {$C$};
+\end{tikzpicture}
+```
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/yxvqLBHZfXk?si=wg9cNWnssxdNyC0G"
-title="YouTube video"
-frameborder="0"
-allowfullscreen>
-</iframe>
+For $K$ forces ${\bf F}_i$ acting at positions ${\bf r}_i$ plus a pure moment ${\bf M}_e$:
+\begin{align}
+    {\bf F} &= \sum_{i=1}^K{\bf F}_i,\\
+    {\bf M}^O &= {\bf M}_e+\sum_{i=1}^K{\bf r}_i\times{\bf F}_i,\\
+    {\bf M}^C &= {\bf M}_e+\sum_{i=1}^K({\bf r}_i-{\bf r}_C)\times{\bf F}_i.
+\end{align}
 
-![My figure](../figures/myplot.svg)
+Examples of pure moments: reaction moments ${\bf M}_R$ at joints; torsional spring moments $-K_T(\theta-\theta_0){\bf E}_z$.
+
+### Does Weight Give a Moment About the Center of Mass?
+
+The total weight is ${\bf W} = \int_{\mathcal{B}}{\bf g}\,dm = m{\bf g}$, and its moment about $C$ is:
+\begin{align}
+    {\bf M}^C = \int_{\mathcal{B}}\bpi\times{\bf g}\,dm = \lp\int_{\mathcal{B}}\bpi\,dm\rp\times{\bf g} = {\bf 0},
+\end{align}
+since $\int_{\mathcal{B}}\bpi\,dm = {\bf 0}$ by definition of the center of mass.
+
+## Equivalence of the BoAM Forms
+
+### BoAM About Any Point $P$
+
+Starting from ${\bf M}^C = \dot{\bf H}^C$ and replacing ${\bf M}^P = {\bf M}^C+({\bf r}_C-{\bf r}_P)\times{\bf F}$:
+\begin{align}
+    {\bf M}^P = \dot{\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf F}.
+\end{align}
+Substituting $\dot{\bf H}^C = \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G}+({\bf r}_P-{\bf r}_C)\times m{\bf a}_C$ and simplifying:
+\begin{align}
+    {\bf M}^P = \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G},
+\end{align}
+recovering the BoAM about a general material point $P$.
+
+### BoAM About a Fixed Point $O$
+
+If $P$ is a fixed point $O$ (so ${\bf v}_O = {\bf 0}$), the above simplifies to ${\bf M}^O = \dot{\bf H}^O$.
+
+## Calculating the Derivative of Angular Momentum
+
+Recall ${\bf H}^C = {\bf I}^C\bomega$ and $\dot{\bf H}^C = \overset{\circ}{\bf H}^C+\bomega\times{\bf H}^C$, where $\overset{\circ}{\bf H}^C$ is the corotational rate (time derivative with ${\bf e}_x,{\bf e}_y,{\bf e}_z$ fixed).
+
+For $\bomega = \omega{\bf E}_z$ (the case exclusively considered in this class):
+\begin{align}
+    {\bf H}^C &= I^C_{xz}\omega_z{\bf e}_x+I^C_{yz}\omega_z{\bf e}_y+I^C_{zz}\omega_z{\bf e}_z,\\
+    \dot{\bf H}^C &= (I^C_{xz}\dot{\omega}-I^C_{yz}\omega^2){\bf e}_x+(I^C_{yz}\dot{\omega}+I^C_{xz}\omega^2){\bf e}_y+I^C_{zz}\dot{\omega}{\bf E}_z.
+\end{align}
+Analogously for other reference points.
+
+::: {.callout-important title="Note!"}
+For fixed axis rotation, sum moments about a fixed point on the axis. For general plane motion, sum about $C$ or a general material point $P$ using
+\begin{align}
+    {\bf M}^P = (I^C_{xz}\dot{\omega}-I^C_{yz}\omega^2){\bf e}_x+(I^C_{yz}\dot{\omega}+I^C_{xz}\omega^2){\bf e}_y+I^C_{zz}\dot{\omega}{\bf E}_z+({\bf r}_C-{\bf r}_P)\times m{\bf a}_C.
+\end{align}
+In most problems, axes are chosen so that $I_{xz}=I_{yz}=0$.
+:::
+
+## Conservative Moments
+
+### Torsional Spring
+
+A torsional spring with stiffness $K$ creates a couple ${\bf M}_S = -K\theta{\bf E}_z$. Its power is:
+\begin{align}
+    {\bf M}_S\cdot\bomega = -K\theta\dot{\theta} = -\frac{d}{dt}\lp\frac{K\theta^2}{2}\rp.
+\end{align}
+Hence $U = \frac{1}{2}K\theta^2$ for the torsional spring.
+
+### Constant Couple
+
+A constant couple ${\bf M}_e = M_e{\bf E}_z$ has power ${\bf M}_e\cdot\bomega = M_e\dot{\theta} = -\frac{d}{dt}(-M_e\theta)$. Hence $U = -M_e\theta$.
+
+::: {.callout-important title="Note!"}
+These results apply only for $\bomega = \omega{\bf E}_z$. Constant couples are not conservative in general.
+:::
+
+## Impact Problems and Center of Percussion
+
+For rigid bodies, impact ideas are the same as in systems of particles.
+
+*Example:* Consider a projectile fired horizontally at a pendulum (in the horizontal plane, no gravity). Find position $x$ along the pendulum such that the reaction force at the pin is nearly zero during impact.
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+    \draw[thick] (0,0) -- (0,-4);
+    \fill (0,0) circle (0.1);
+    \fill (-2,-3) circle (0.25);
+    \draw[thick,->] (-2,-3) -- (-1,-3) node[above] {${\bf v}_0$};
+    \draw[->] (1,0) -- (1,-3) node[midway, right] {$x$};
+\end{tikzpicture}
+```
+
+If $x$ is large, the horizontal reaction at $O$ points left; if $x$ is small, it points right. The optimal $x$ that minimizes the reaction is called the **center of percussion**.
+
+## Summary
+
+For $K$ forces and a moment ${\bf M}_e$ acting on a rigid body, the balance laws are:
+\begin{align}
+    {\bf F} = m\frac{d{\bf v}_C}{dt}, \qquad {\bf M}^O = \dot{\bf H}^O \quad (\text{or equivalently } {\bf M}^C = \dot{\bf H}^C).
+\end{align}
+
+For fixed-axis rotation with $\bomega = \omega{\bf E}_z$ and $I_{xz}=I_{yz}=0$:
+\begin{align}
+    {\bf F} = m\dot{\bf v}_C, \qquad {\bf M} = I_{zz}\dot{\omega}{\bf E}_z.
+\end{align}
+
+Four classes of applications: (1) purely translational motion ($\bomega=\balpha={\bf 0}$), (2) rigid body with a fixed point, (3) rolling and sliding rigid bodies, (4) imbalanced rotors.
