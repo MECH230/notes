@@ -1,4 +1,4 @@
-# Vector calculus - A quick review
+# Vector calculus
 
 ## Scaling Vectors
 

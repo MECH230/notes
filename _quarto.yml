@@ -26,8 +26,8 @@ book:
         - preliminaries/active_learning.qmd
         - preliminaries/note_on_units.qmd
         - preliminaries/free_body_diagrams.qmd
-        - vector_calculus/vector_calculus.qmd
-        - fundamental_concepts_of_solid_mechanics/fundamental_concepts_of_solid_mechanics.qmd
+        - preliminaries/vector_calculus.qmd
+        - preliminaries/fundamental_concepts_of_solid_mechanics.qmd
         - preliminaries/continuum_mechanics_perspective.qmd
     - part: "Particle Dynamics"
       chapters:

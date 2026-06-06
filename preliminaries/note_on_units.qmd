@@ -2,7 +2,7 @@
 title: "A Note on Units"
 ---
 
-![Source: MKB](../figures/units/units_table.png)
+![Source: MKB](../figures/units/units_table.png){width=60%}
 
 In this class, we will use both SI and US customary units.
 
