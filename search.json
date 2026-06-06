@@ -45,265 +45,265 @@
   {
     "objectID": "preliminaries/vector_calculus.html",
     "href": "preliminaries/vector_calculus.html",
-    "title": "4  Vector calculus",
+    "title": "4  Vector Calculus",
     "section": "",
     "text": "4.1 Scaling Vectors\nWe can scale the vector \\({\\bf a}\\).",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
     ]
   },
   {
     "objectID": "preliminaries/vector_calculus.html#scaling-vectors",
     "href": "preliminaries/vector_calculus.html#scaling-vectors",
-    "title": "4  Vector calculus",
+    "title": "4  Vector Calculus",
     "section": "",
     "text": "TipThink!\n\n\n\nQuestion: Consider a vector \\({\\bf a}\\). Plot the vectors \\(2{\\bf a}\\), \\(-{\\bf a}\\), \\(\\frac{1}{2}{\\bf a}\\)\nAnswer: …\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Give the expression for a unit vector in the direction of \\({\\bf a}\\)? Opposite to \\({\\bf a}\\).\nAnswer:\n\n\\(\\frac{\\bf a}{\\lnorm{\\bf a}\\rnorm}\\) is a unit vector in the direction of \\({\\bf a}\\).\n\\(-\\frac{\\bf a}{\\lnorm{\\bf a}\\rnorm}\\) is a unit vector in the direction opposite to that of \\({\\bf a}\\).",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
     ]
   },
   {
     "objectID": "preliminaries/vector_calculus.html#vector-summation-and-subtraction",
     "href": "preliminaries/vector_calculus.html#vector-summation-and-subtraction",
-    "title": "4  Vector calculus",
+    "title": "4  Vector Calculus",
     "section": "4.2 Vector summation and subtraction",
     "text": "4.2 Vector summation and subtraction\nVectors can be added using the parallelogram law or by placing vectors in a head to tail sequence.\nThe vector difference \\({\\bf a}-{\\bf b}\\) points from the tip of \\({\\bf b}\\) to the tip of \\({\\bf a}\\).",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
     ]
   },
   {
     "objectID": "preliminaries/vector_calculus.html#the-dot-scalar-product",
     "href": "preliminaries/vector_calculus.html#the-dot-scalar-product",
-    "title": "4  Vector calculus",
+    "title": "4  Vector Calculus",
     "section": "4.3 The dot (scalar) product",
     "text": "4.3 The dot (scalar) product\nConsider the three dimensional Euclidean space \\(\\mathbb{E}^3 = (\\mathbb{R}^3,\\cdot)\\) which is the three-dimensional space \\(\\mathbb{R}^3\\) and a dot product defined as follows.\n\n\n\n\n\n\n\n\n\nLet \\({\\bf a}, {\\bf b} \\in  \\mathbb{E}^3\\).\n\\[\\begin{align}\n    {\\bf a}\\cdot{\\bf b} &= \\lnorm{\\bf a}\\rnorm \\lnorm {\\bf b}\\rnorm \\cos(\\theta).\n\\end{align}\\]\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: What is the result of \\({\\bf a}\\cdot{\\bf a}\\)?\nAnswer: The magnitude of a vector \\({\\bf a}\\) is given by \\[\\begin{align}\n    {\\bf a}\\cdot{\\bf a} = \\lnorm{\\bf a}\\rnorm^2 \\implies \\lnorm{\\bf a}\\rnorm = \\sqrt{{\\bf a}\\cdot{\\bf a}}.\n\\end{align}\\]\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Is \\({\\bf a}\\cdot{\\bf b} = {\\bf b}\\cdot{\\bf a}\\)? Why?\nAnswer: Yes, the dot product is commutative. This can be shown using the definition of the dot product.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
     ]
   },
   {
     "objectID": "preliminaries/vector_calculus.html#vector-projections",
     "href": "preliminaries/vector_calculus.html#vector-projections",
-    "title": "4  Vector calculus",
+    "title": "4  Vector Calculus",
     "section": "4.4 Vector Projections",
     "text": "4.4 Vector Projections\nSuppose \\({\\bf u}\\) is a unit vector: \\({\\bf u}\\cdot{\\bf u}=1\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Calculate \\({\\bf b}\\cdot{\\bf u}\\)\nAnswer: \\[\\begin{align}\n    {\\bf b}\\cdot{\\bf u} = \\lnorm{\\bf b}\\rnorm \\underbrace{\\lnorm{\\bf u}\\rnorm}_{1}\\cos(\\theta) = \\lnorm{\\bf b}\\rnorm\\cos(\\theta).\n\\end{align}\\]\nNotice the right triangle in the above figure. Verify that \\({\\bf b}\\cdot{\\bf u}\\) is the orthogonal projection of \\({\\bf b}\\) in the direction of \\({\\bf u}\\).\n\n\nSuppose \\({\\bf v}\\cdot{\\bf v} = 1\\) (\\({\\bf v}\\) is a unit vector), and \\({\\bf v}\\cdot{\\bf u}=0\\) (\\({\\bf v}\\) and \\({\\bf u}\\) are orthogonal/perpendicular).\n\\[\\begin{align}\n    {\\bf b}\\cdot{\\bf v} = \\lnorm{\\bf b}\\rnorm\\cos\\lp\\frac{\\pi}{2}-\\theta\\rp = \\lnorm{\\bf b}\\rnorm\\sin(\\theta).\n\\end{align}\\]\nThis is the projection of \\({\\bf b}\\) in the direction perpendicular to \\({\\bf u}\\). Hence, we can write\n\\[\\begin{align}\n    {\\bf b} &= \\lp{\\bf b}\\cdot{\\bf u}\\rp{\\bf u}+\\lp{\\bf b}\\cdot{\\bf v}\\rp{\\bf v}\\\\\n    &= \\underbrace{\\lnorm{\\bf b}\\rnorm}_{\\text{magnitude}}\\lp\\underbrace{\\cos(\\theta){\\bf u}+\\sin(\\theta){\\bf v}}_{\\text{direction}}\\rp.\n\\end{align}\\]\nRemember that \\(\\cos^2(\\theta)+\\sin^2(\\theta)=1\\).",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
     ]
   },
   {
     "objectID": "preliminaries/vector_calculus.html#cross-product",
     "href": "preliminaries/vector_calculus.html#cross-product",
-    "title": "4  Vector calculus",
+    "title": "4  Vector Calculus",
     "section": "4.5 Cross Product",
     "text": "4.5 Cross Product\nWe also define the cross product\n\\[\\begin{align}\n    {\\bf a}\\times{\\bf b} &= \\lnorm{\\bf a}\\rnorm \\lnorm{\\bf b}\\rnorm |\\sin(\\theta)|{\\bf n}\n\\end{align}\\]\nwhere \\({\\bf n}\\) is a unit vector normal to the plane formed by \\({\\bf a}\\) and \\({\\bf b}\\). The direction of \\({\\bf n}\\) is given by the right hand rule.\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Is \\({\\bf a}\\times{\\bf b} = {\\bf b}\\times{\\bf a}\\)?\nAnswer: No, the cross product is not commutative. These vectors are opposite.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "",
     "text": "5.1 Mechanics\nThis section is adapted from chapter 1 of Introduction to Solid Mechanics - An Integrated Approach by Lubliner and Papadopoulos (Lubliner and Papadopoulos 2017).\nMechanics, as a scientific discipline, is the study of the behavior of bodies subject to forces and displacements (and, to some extent, heating and cooling).",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#solid-mechanics",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#solid-mechanics",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "5.2 Solid Mechanics",
     "text": "5.2 Solid Mechanics\nSolid mechanics is the branch of mechanics dealing specifically with solid bodies.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#body",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#body",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "5.3 Body",
     "text": "5.3 Body\nA body, for the purpose of mechanics, is a portion of matter that, at a given moment in time, occupies a certain region in space.\n\nParticle If the region occupied by the body can be idealized as being of negligible extent (and thus reducible to a point), the body is called a particle.\nFinite Body A body that is not reducible to a point is called a finite body.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#continuum",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#continuum",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "5.4 Continuum",
     "text": "5.4 Continuum\nA finite body occupying a connected region every portion of which contains some matter is called a continuous body or, simply, a continuum.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#material-points",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#material-points",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "5.5 Material Points",
     "text": "5.5 Material Points\nAt any point in a region occupied by a continuum, the matter in its immediate (infinitesimal) neighborhood can also be thought of as constituting a particle, and we may thus speak of the particles (also called material points) of a continuum.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#displacement",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#displacement",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "5.6 Displacement",
     "text": "5.6 Displacement\nA body is said to undergo a displacement when some or all of its particles are moved to occupy different positions in space.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#configuration",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#configuration",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "5.7 Configuration",
     "text": "5.7 Configuration\nThe correspondence between the particles and the positions occupied by them at a given time is known as the body’s configuration.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#deformation",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#deformation",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "5.8 Deformation",
     "text": "5.8 Deformation\nThe displacement of a body is said to be rigid if the distances between all pairs of particles are the same in any two configurations. Otherwise, the body is said to undergo deformation.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#rigid-bodies",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#rigid-bodies",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "5.9 Rigid bodies",
     "text": "5.9 Rigid bodies\nBodies that can undergo only rigid displacements are called rigid bodies. Bodies that are not rigid are deformable.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#motion",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#motion",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "5.10 Motion",
     "text": "5.10 Motion\nMotion is said to occur when the body occupies a succession of different configurations continuously over time.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#rigid-motion",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#rigid-motion",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "5.11 Rigid Motion",
     "text": "5.11 Rigid Motion\nA rigid motion is a motion that involves only rigid displacements.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#velocity",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#velocity",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "5.12 Velocity",
     "text": "5.12 Velocity\nThe rate of change, in time, of the position of a particle is its velocity.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#acceleration",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#acceleration",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "5.13 Acceleration",
     "text": "5.13 Acceleration\nThe velocity may in turn change in time, and its rate of change is the acceleration. The motion of a body is called uniform if the acceleration of all the particles is zero; otherwise, it is called accelerated.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#kinematics",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#kinematics",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "5.14 Kinematics",
     "text": "5.14 Kinematics\nThe branch of mechanics dealing with the displacement and motion of bodies is called kinematics.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#force",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#force",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "5.15 Force",
     "text": "5.15 Force\nForces are interactions between bodies that cause them to move, and more specifically to accelerate, relative to each other (unless prevented from doing so by other forces).",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#gravitational-force",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#gravitational-force",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "6.1 Gravitational force",
     "text": "6.1 Gravitational force\nAll bodies on or near the earth are subject to the earth’s gravitational force and, as shown by Galileo in his famous experiments, will fall toward the center of the earth (unless prevented from doing so by other forces) with the same acceleration; the magnitude of this acceleration is denoted by \\(g\\).",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#f-ma",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#f-ma",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "6.2 \\(F = ma\\)",
     "text": "6.2 \\(F = ma\\)\nIt was later shown by Newton, on the basis of Kepler’s laws of planetary motion, that the magnitude of the acceleration (with respect to a frame of reference based on the “fixed” stars) due to gravitational force between any two bodies (idealized as particles) is inversely proportional to the square of the distance between them, and for each body it is proportional to the quantity of matter (or mass) of the other body. The product of mass and acceleration is therefore equal and opposite for the two bodies and may be identified with the force exerted on each body by the other.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#equilibrium",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#equilibrium",
-    "title": "5  Fundamental concepts of solid mechanics",
+    "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "6.3 Equilibrium",
     "text": "6.3 Equilibrium\nIf a body’s acceleration is zero, then it is at rest or in a uniform motion. In this case, the forces is said to be in equilibrium. The study of equilibrium is known as statics and constitutes one of the main subjects of this book. Traditionally, statics deals only (or at least primarily) with rigid bodies, while deformable bodies are studied in courses historically called strength of materials (or, more recently, mechanics of materials). In this book (Lubliner and Papadopoulos 2017), the statics of rigid and deformable solid bodies will be studied in an integrated manner.\n\n\n\n\nLubliner, Jacob, and Panayiotis Papadopoulos. 2017. Introduction to Solid Mechanics: An Integrated Approach. Springer. https://doi.org/10.1007/978-1-4614-6768-7.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MECH230 Dynamics Notes</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
     ]
   },
   {
