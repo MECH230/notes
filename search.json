@@ -278,18 +278,7 @@
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#gravitational-force",
     "title": "5  Fundamental Concepts of Solid Mechanics",
     "section": "6.1 Gravitational force",
-    "text": "6.1 Gravitational force\nAll bodies on or near the earth are subject to the earth’s gravitational force and, as shown by Galileo in his famous experiments, will fall toward the center of the earth (unless prevented from doing so by other forces) with the same acceleration; the magnitude of this acceleration is denoted by \\(g\\).",
-    "crumbs": [
-      "Preliminaries",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
-    ]
-  },
-  {
-    "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#f-ma",
-    "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#f-ma",
-    "title": "5  Fundamental Concepts of Solid Mechanics",
-    "section": "6.2 \\(F = ma\\)",
-    "text": "6.2 \\(F = ma\\)\nIt was later shown by Newton, on the basis of Kepler’s laws of planetary motion, that the magnitude of the acceleration (with respect to a frame of reference based on the “fixed” stars) due to gravitational force between any two bodies (idealized as particles) is inversely proportional to the square of the distance between them, and for each body it is proportional to the quantity of matter (or mass) of the other body. The product of mass and acceleration is therefore equal and opposite for the two bodies and may be identified with the force exerted on each body by the other.",
+    "text": "6.1 Gravitational force\nAll bodies on or near the earth are subject to the earth’s gravitational force and, as shown by Galileo in his famous experiments, will fall toward the center of the earth (unless prevented from doing so by other forces) with the same acceleration; the magnitude of this acceleration is denoted by \\(g\\).\nIt was later shown by Newton, on the basis of Kepler’s laws of planetary motion, that the magnitude of the acceleration (with respect to a frame of reference based on the “fixed” stars) due to gravitational force between any two bodies (idealized as particles) is inversely proportional to the square of the distance between them, and for each body it is proportional to the quantity of matter (or mass) of the other body. The product of mass and acceleration is therefore equal and opposite for the two bodies and may be identified with the force exerted on each body by the other.",
     "crumbs": [
       "Preliminaries",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
@@ -299,8 +288,8 @@
     "objectID": "preliminaries/fundamental_concepts_of_solid_mechanics.html#equilibrium",
     "href": "preliminaries/fundamental_concepts_of_solid_mechanics.html#equilibrium",
     "title": "5  Fundamental Concepts of Solid Mechanics",
-    "section": "6.3 Equilibrium",
-    "text": "6.3 Equilibrium\nIf a body’s acceleration is zero, then it is at rest or in a uniform motion. In this case, the forces is said to be in equilibrium. The study of equilibrium is known as statics and constitutes one of the main subjects of this book. Traditionally, statics deals only (or at least primarily) with rigid bodies, while deformable bodies are studied in courses historically called strength of materials (or, more recently, mechanics of materials). In this book (Lubliner and Papadopoulos 2017), the statics of rigid and deformable solid bodies will be studied in an integrated manner.\n\n\n\n\nLubliner, Jacob, and Panayiotis Papadopoulos. 2017. Introduction to Solid Mechanics: An Integrated Approach. Springer. https://doi.org/10.1007/978-1-4614-6768-7.",
+    "section": "6.2 Equilibrium",
+    "text": "6.2 Equilibrium\nIf a body’s acceleration is zero, then it is at rest or in a uniform motion. In this case, the forces is said to be in equilibrium. The study of equilibrium is known as statics and constitutes one of the main subjects of this book. Traditionally, statics deals only (or at least primarily) with rigid bodies, while deformable bodies are studied in courses historically called strength of materials (or, more recently, mechanics of materials). In this book (Lubliner and Papadopoulos 2017), the statics of rigid and deformable solid bodies will be studied in an integrated manner.\n\n\n\n\nLubliner, Jacob, and Panayiotis Papadopoulos. 2017. Introduction to Solid Mechanics: An Integrated Approach. Springer. https://doi.org/10.1007/978-1-4614-6768-7.",
     "crumbs": [
       "Preliminaries",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fundamental Concepts of Solid Mechanics</span>"
