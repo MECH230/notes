@@ -9,7 +9,7 @@
 <meta name="author" content="Theresa Honein">
 <meta name="dcterms.date" content="2026-01-01">
 
-<title>7&nbsp; Basic Particle Kinematics Concepts</title>
+<title>5&nbsp; Fundamental concepts of solid mechanics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -25,7 +25,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -35,8 +54,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../particle_dynamics/particle_kinetics.html" rel="next">
-<link href="../preliminaries/continuum_mechanics_perspective.html" rel="prev">
+<link href="../preliminaries/continuum_mechanics_perspective.html" rel="next">
+<link href="../preliminaries/vector_calculus.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -136,7 +155,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../particle_dynamics/basic_particle_kinematics.html">Particle Dynamics</a></li><li class="breadcrumb-item"><a href="../particle_dynamics/basic_particle_kinematics.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Basic Particle Kinematics Concepts</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../preliminaries/active_learning.html">Preliminaries</a></li><li class="breadcrumb-item"><a href="../preliminaries/fundamental_concepts_of_solid_mechanics.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -197,7 +216,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../preliminaries/fundamental_concepts_of_solid_mechanics.html" class="sidebar-item-text sidebar-link">
+  <a href="../preliminaries/fundamental_concepts_of_solid_mechanics.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></span></a>
   </div>
 </li>
@@ -220,7 +239,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../particle_dynamics/basic_particle_kinematics.html" class="sidebar-item-text sidebar-link active">
+  <a href="../particle_dynamics/basic_particle_kinematics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Basic Particle Kinematics Concepts</span></span></a>
   </div>
 </li>
@@ -383,18 +402,26 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#position-velocity-and-acceleration" id="toc-position-velocity-and-acceleration" class="nav-link active" data-scroll-target="#position-velocity-and-acceleration"><span class="header-section-number">7.1</span> Position, Velocity, and Acceleration</a></li>
-  <li><a href="#arc-length-and-the-unit-tangent-vector" id="toc-arc-length-and-the-unit-tangent-vector" class="nav-link" data-scroll-target="#arc-length-and-the-unit-tangent-vector"><span class="header-section-number">7.2</span> Arc-Length and the Unit Tangent Vector</a>
+  <li><a href="#mechanics" id="toc-mechanics" class="nav-link active" data-scroll-target="#mechanics"><span class="header-section-number">5.1</span> Mechanics</a></li>
+  <li><a href="#solid-mechanics" id="toc-solid-mechanics" class="nav-link" data-scroll-target="#solid-mechanics"><span class="header-section-number">5.2</span> Solid Mechanics</a></li>
+  <li><a href="#body" id="toc-body" class="nav-link" data-scroll-target="#body"><span class="header-section-number">5.3</span> Body</a></li>
+  <li><a href="#continuum" id="toc-continuum" class="nav-link" data-scroll-target="#continuum"><span class="header-section-number">5.4</span> Continuum</a></li>
+  <li><a href="#material-points" id="toc-material-points" class="nav-link" data-scroll-target="#material-points"><span class="header-section-number">5.5</span> Material Points</a></li>
+  <li><a href="#displacement" id="toc-displacement" class="nav-link" data-scroll-target="#displacement"><span class="header-section-number">5.6</span> Displacement</a></li>
+  <li><a href="#configuration" id="toc-configuration" class="nav-link" data-scroll-target="#configuration"><span class="header-section-number">5.7</span> Configuration</a></li>
+  <li><a href="#deformation" id="toc-deformation" class="nav-link" data-scroll-target="#deformation"><span class="header-section-number">5.8</span> Deformation</a></li>
+  <li><a href="#rigid-bodies" id="toc-rigid-bodies" class="nav-link" data-scroll-target="#rigid-bodies"><span class="header-section-number">5.9</span> Rigid bodies</a></li>
+  <li><a href="#motion" id="toc-motion" class="nav-link" data-scroll-target="#motion"><span class="header-section-number">5.10</span> Motion</a></li>
+  <li><a href="#rigid-motion" id="toc-rigid-motion" class="nav-link" data-scroll-target="#rigid-motion"><span class="header-section-number">5.11</span> Rigid Motion</a></li>
+  <li><a href="#velocity" id="toc-velocity" class="nav-link" data-scroll-target="#velocity"><span class="header-section-number">5.12</span> Velocity</a></li>
+  <li><a href="#acceleration" id="toc-acceleration" class="nav-link" data-scroll-target="#acceleration"><span class="header-section-number">5.13</span> Acceleration</a></li>
+  <li><a href="#kinematics" id="toc-kinematics" class="nav-link" data-scroll-target="#kinematics"><span class="header-section-number">5.14</span> Kinematics</a></li>
+  <li><a href="#force" id="toc-force" class="nav-link" data-scroll-target="#force"><span class="header-section-number">5.15</span> Force</a></li>
+  <li><a href="#galileo-kepler-newton" id="toc-galileo-kepler-newton" class="nav-link" data-scroll-target="#galileo-kepler-newton"><span class="header-section-number">6</span> Galileo, Kepler, Newton</a>
   <ul class="collapse">
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">7.2.1</span> Example</a></li>
-  </ul></li>
-  <li><a href="#cartesian-coordinates" id="toc-cartesian-coordinates" class="nav-link" data-scroll-target="#cartesian-coordinates"><span class="header-section-number">7.3</span> Cartesian Coordinates</a></li>
-  <li><a href="#rectilinear-motion" id="toc-rectilinear-motion" class="nav-link" data-scroll-target="#rectilinear-motion"><span class="header-section-number">7.4</span> Rectilinear Motion</a>
-  <ul class="collapse">
-  <li><a href="#identities-for-rectilinear-motion" id="toc-identities-for-rectilinear-motion" class="nav-link" data-scroll-target="#identities-for-rectilinear-motion"><span class="header-section-number">7.4.1</span> Identities for Rectilinear Motion</a></li>
-  <li><a href="#given-acceleration-as-a-function-of-time" id="toc-given-acceleration-as-a-function-of-time" class="nav-link" data-scroll-target="#given-acceleration-as-a-function-of-time"><span class="header-section-number">7.4.2</span> Given Acceleration as a Function of Time</a></li>
-  <li><a href="#given-acceleration-as-a-function-of-speed" id="toc-given-acceleration-as-a-function-of-speed" class="nav-link" data-scroll-target="#given-acceleration-as-a-function-of-speed"><span class="header-section-number">7.4.3</span> Given Acceleration as a Function of Speed</a></li>
-  <li><a href="#given-acceleration-as-a-function-of-displacement" id="toc-given-acceleration-as-a-function-of-displacement" class="nav-link" data-scroll-target="#given-acceleration-as-a-function-of-displacement"><span class="header-section-number">7.4.4</span> Given Acceleration as a Function of Displacement</a></li>
+  <li><a href="#gravitational-force" id="toc-gravitational-force" class="nav-link" data-scroll-target="#gravitational-force"><span class="header-section-number">6.1</span> Gravitational force</a></li>
+  <li><a href="#f-ma" id="toc-f-ma" class="nav-link" data-scroll-target="#f-ma"><span class="header-section-number">6.2</span> <span class="math inline">\(F = ma\)</span></a></li>
+  <li><a href="#equilibrium" id="toc-equilibrium" class="nav-link" data-scroll-target="#equilibrium"><span class="header-section-number">6.3</span> Equilibrium</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -402,9 +429,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../particle_dynamics/basic_particle_kinematics.html">Particle Dynamics</a></li><li class="breadcrumb-item"><a href="../particle_dynamics/basic_particle_kinematics.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Basic Particle Kinematics Concepts</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../preliminaries/active_learning.html">Preliminaries</a></li><li class="breadcrumb-item"><a href="../preliminaries/fundamental_concepts_of_solid_mechanics.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Basic Particle Kinematics Concepts</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Fundamental concepts of solid mechanics</span></h1>
 </div>
 
 
@@ -433,234 +460,91 @@ window.Quarto = {
 </header>
 
 
-<section id="position-velocity-and-acceleration" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="position-velocity-and-acceleration"><span class="header-section-number">7.1</span> Position, Velocity, and Acceleration</h2>
-<p>Consider a particle moving in <span class="math inline">\(\mathbb{E}^3\)</span>. Its position vector relative to a fixed origin <span class="math inline">\(O\)</span> is denoted by <span class="math inline">\({\bf r} \in \mathbb{E}^3\)</span>. As time <span class="math inline">\(t\)</span> evolves, so does <span class="math inline">\({\bf r}(t)\)</span>.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="basic_particle_kinematics_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Let <span class="math inline">\(\Delta t\)</span> be a finite time elapsed: <span class="math display">\[\begin{align}
-    \Delta{\bf r} = {\bf r}(t+\Delta t)-{\bf r}(t).
-\end{align}\]</span> As <span class="math inline">\(\Delta t \rightarrow 0\)</span>, <span class="math inline">\(\Delta t\)</span> becomes <span class="math inline">\(dt\)</span> and <span class="math inline">\(\Delta {\bf r}\)</span> becomes <span class="math inline">\(d{\bf r}\)</span>.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="basic_particle_kinematics_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>The (absolute) velocity vector <span class="math inline">\({\bf v}\)</span> of the particle is <span class="math display">\[\begin{align}
-    {\bf v} = \frac{d{\bf r}}{dt}=\dot{\bf r} = \lim_{\Delta t \rightarrow 0}\frac{{\bf r}(t+\Delta t)-{\bf r}(t)}{\Delta t}.
-\end{align}\]</span></p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Think!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Question:</strong> What is the direction of the velocity vector?</p>
-<p><strong>Answer:</strong> <span class="math inline">\({\bf v}\)</span> is always tangent to the path.</p>
-</div>
-</div>
-<p>The speed of the particle is the magnitude of the velocity vector <span class="math inline">\(v = \lnorm{\bf v}\rnorm\)</span>.</p>
-<p>The (absolute) acceleration is <span class="math display">\[\begin{align}
-    {\bf a} = \frac{d{\bf v}}{dt} = \dot{\bf v} = \ddot{\bf r} = \frac{d^2{\bf r}}{dt^2}.
-\end{align}\]</span></p>
+<p>This section is adapted from chapter 1 of <a href="https://link.springer.com/book/10.1007/978-1-4614-6768-7">Introduction to Solid Mechanics - An Integrated Approach</a> by Lubliner and Papadopoulos <span class="citation" data-cites="lubliner2017introduction">(<a href="../references.html#ref-lubliner2017introduction" role="doc-biblioref">Lubliner and Papadopoulos 2017</a>)</span>.</p>
+<section id="mechanics" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="mechanics"><span class="header-section-number">5.1</span> Mechanics</h2>
+<p>Mechanics, as a scientific discipline, is the study of the behavior of bodies subject to forces and displacements (and, to some extent, heating and cooling).</p>
 </section>
-<section id="arc-length-and-the-unit-tangent-vector" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="arc-length-and-the-unit-tangent-vector"><span class="header-section-number">7.2</span> Arc-Length and the Unit Tangent Vector</h2>
-<p>Define the arc-length parameter <span class="math inline">\(s\)</span> such that <span class="math display">\[\begin{align}
-    \frac{ds}{dt} = \lnorm {\bf v}\rnorm.
-\end{align}\]</span></p>
-<p><span class="math inline">\(\frac{ds}{dt}\)</span> is the speed of the particle. Recall that <span class="math inline">\({\bf v} = \frac{d{\bf r}}{dt}\)</span>, so <span class="math display">\[\begin{align}
-    \frac{ds}{dt} = \lnorm\frac{d{\bf r}}{dt}\rnorm.
-\end{align}\]</span></p>
-<p>So <span class="math inline">\(ds\)</span> is the length of the differential <span class="math inline">\(d{\bf r}\)</span> along the curve. Integrating: <span class="math display">\[\begin{align}
-    s(t)-s_0 = \int_{t_0}^t\frac{ds}{dt}(\tau)d\tau = \int_{t_0}^t\sqrt{{\bf v}(\tau)\cdot{\bf v}(\tau)}\,d\tau.
-\end{align}\]</span></p>
-<p>Notes:</p>
+<section id="solid-mechanics" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="solid-mechanics"><span class="header-section-number">5.2</span> Solid Mechanics</h2>
+<p>Solid mechanics is the branch of mechanics dealing specifically with solid bodies.</p>
+</section>
+<section id="body" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="body"><span class="header-section-number">5.3</span> Body</h2>
+<p>A body, for the purpose of mechanics, is a portion of matter that, at a given moment in time, occupies a certain region in space.</p>
 <ul>
-<li><span class="math inline">\(s(t)-s_0\)</span> is the distance traveled by the particle along its path <span class="math inline">\(\mathcal{C}\)</span> during the time interval <span class="math inline">\([t_0, t]\)</span>.</li>
-<li><span class="math inline">\(s(t_0)=s_0\)</span> where <span class="math inline">\(t_0\)</span> and <span class="math inline">\(s_0\)</span> are initial conditions.</li>
-<li>The dummy variable <span class="math inline">\(\tau\)</span> is used (as opposed to <span class="math inline">\(t\)</span>) when evaluating this integral because we are integrating the speed as it varies between <span class="math inline">\(t_0\)</span> and <span class="math inline">\(t\)</span>.</li>
+<li><strong>Particle</strong> If the region occupied by the body can be idealized as being of negligible extent (and thus reducible to a point), the body is called a particle.</li>
+<li><strong>Finite Body</strong> A body that is not reducible to a point is called a finite body.</li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Think!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Question:</strong> Under what conditions is <span class="math inline">\(s(t)\)</span> invertible so that <span class="math inline">\(t(s)\)</span> is well defined?</p>
-<p><strong>Answer:</strong> If the function <span class="math inline">\(s(t)\)</span> is one-to-one, it can be inverted, and time can be written in terms of arc-length <span class="math inline">\(t = t(s)\)</span>.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Think!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Question:</strong> Why is <span class="math display">\[\begin{align}
-    s(t)-s_0 \neq \lnorm {\bf r}(t)-{\bf r}_0\rnorm?
-\end{align}\]</span> Under what conditions does the equality hold?</p>
-<p><strong>Answer:</strong> The equality holds under rectilinear motion or over an infinitesimal time interval.</p>
-</div>
-</div>
-<p>We define the unit tangent vector <span class="math inline">\({\bf e}_t\)</span>: <span class="math display">\[\begin{align}
-    \frac{\bf v}{\lnorm{\bf v}\rnorm} = {\bf e}_t, \qquad {\bf v} = \frac{d{\bf r}}{dt} = \frac{d{\bf r}}{ds}\frac{ds}{dt} = \dot{s}{\bf e}_t.
-\end{align}\]</span></p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Think!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Question:</strong> Verify that <span class="math inline">\({\bf e}_t\)</span> is a unit vector.</p>
-<p><strong>Answer:</strong> …</p>
-</div>
-</div>
-<p>Note the relationships <span class="math display">\[\begin{align*}
-    {\bf v} &amp;= \frac{d{\bf r}(t)}{dt} = \frac{d{\bf r}}{ds}\frac{ds}{dt},\\
-    {\bf a} &amp;= \frac{d{\bf v}(t)}{dt} = \frac{d^2{\bf r}}{ds^2}\lp\frac{ds}{dt}\rp^2+\frac{d{\bf r}}{ds}\frac{d^2 s}{dt^2}.
-\end{align*}\]</span></p>
-<p>Notice: the acceleration vector is due to changes in both the magnitude and direction of the velocity vector.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Think!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Question:</strong> Is the unit vector <span class="math inline">\({\bf e}_t\)</span> constant in general? Under what conditions is it constant?</p>
-<p><strong>Answer:</strong> No.&nbsp;It is constant only during rectilinear motion in a fixed direction.</p>
-</div>
-</div>
-<section id="example" class="level3" data-number="7.2.1">
-<h3 data-number="7.2.1" class="anchored" data-anchor-id="example"><span class="header-section-number">7.2.1</span> Example</h3>
-<p>Consider a particle moving in space with position vector <span class="math display">\[\begin{align}
-    {\bf r}(t) = R_0\lp\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\rp.
-\end{align}\]</span></p>
-<p>Calculate and plot <span class="math inline">\({\bf v}\)</span>, <span class="math inline">\({\bf a}\)</span>, <span class="math inline">\({\bf v}\times {\bf a}\)</span>, <span class="math inline">\(\lnorm{\bf r}\rnorm\)</span>. Show that the motion satisfies: <span class="math display">\[\begin{align}
-    \ddot{x}+\omega^2 x=0, \qquad \ddot{y}+\omega^2 y=0.
-\end{align}\]</span></p>
-<div class="callout callout-style-default callout-warning callout-titled" title="Example">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Example
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Question:</strong> Consider a particle <span class="math inline">\(P\)</span> moving in <span class="math inline">\(\mathbb{E}^2\)</span> with position vector <span class="math display">\[\begin{align*}
-    {\bf r} = R_0\lp\cos\lp\omega t\rp{\bf E}_x+\sin\lp\omega t\rp{\bf E}_y\rp.
-\end{align*}\]</span> Calculate <span class="math inline">\({\bf r}\times{\bf a}\)</span> and <span class="math inline">\({\bf r}\cdot{\bf a}\)</span>. Describe the motion of the particle.</p>
-<p><strong>Answer:</strong> The velocity and acceleration are: <span class="math display">\[\begin{align*}
-    {\bf v} &amp;= R_0\omega\lp-\sin\lp\omega t\rp{\bf E}_x+\cos\lp\omega t\rp{\bf E}_y\rp,\\
-    {\bf a} &amp;= -R_0\omega^2\lp\cos\lp\omega t\rp{\bf E}_x+\sin\lp\omega t\rp{\bf E}_y\rp.
-\end{align*}\]</span> Note that <span class="math inline">\(\dot{\bf E}_x={\bf 0}\)</span> and <span class="math inline">\(\dot{\bf E}_y={\bf 0}\)</span> since the basis is fixed, and the chain rule applies.</p>
-<p>Noting that <span class="math inline">\({\bf a} = -\omega^2{\bf r}\)</span>: <span class="math display">\[\begin{align*}
-    {\bf r}\times{\bf a} = {\bf r}\times(-\omega^2{\bf r}) = -\omega^2{\bf r}\times{\bf r} = {\bf 0}.
-\end{align*}\]</span></p>
-<p>For <span class="math inline">\({\bf r}\cdot{\bf a}\)</span>: <span class="math display">\[\begin{align*}
-    {\bf r}\cdot{\bf a} &amp;= -R_0^2\omega^2\lp\cos^2(\omega t)+\sin^2(\omega t)\rp = -R_0^2\omega^2.
-\end{align*}\]</span></p>
-</div>
-</div>
 </section>
+<section id="continuum" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="continuum"><span class="header-section-number">5.4</span> Continuum</h2>
+<p>A finite body occupying a connected region every portion of which contains some matter is called a continuous body or, simply, a continuum.</p>
 </section>
-<section id="cartesian-coordinates" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="cartesian-coordinates"><span class="header-section-number">7.3</span> Cartesian Coordinates</h2>
-<p><span class="math inline">\(\{{\bf E}_x,{\bf E}_y,{\bf E}_z\}\)</span> is a basis for <span class="math inline">\(\mathbb{E}^3\)</span>. Since this basis is fixed, we have: <span class="math display">\[\begin{align}
-    {\bf r} &amp;= x{\bf E}_x+y{\bf E}_y+z{\bf E}_z,\\
-    {\bf v} &amp;= \dot{x}{\bf E}_x+\dot{y}{\bf E}_y+\dot{z}{\bf E}_z,\\
-    {\bf a} &amp;= \ddot{x}{\bf E}_x+\ddot{y}{\bf E}_y+\ddot{z}{\bf E}_z.
-\end{align}\]</span></p>
-<p>Later we will also use the cylindrical polar basis <span class="math inline">\(\{{\bf e}_r,{\bf e}_\theta,{\bf E}_z\}\)</span> and the Serret-Frenet triad <span class="math inline">\(\{{\bf e}_t,{\bf e}_n,{\bf e}_b\}\)</span>.</p>
+<section id="material-points" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="material-points"><span class="header-section-number">5.5</span> Material Points</h2>
+<p>At any point in a region occupied by a continuum, the matter in its immediate (infinitesimal) neighborhood can also be thought of as constituting a particle, and we may thus speak of the particles (also called material points) of a continuum.</p>
 </section>
-<section id="rectilinear-motion" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="rectilinear-motion"><span class="header-section-number">7.4</span> Rectilinear Motion</h2>
-<ul>
-<li><em>rectus</em> = straight, <em>linea</em> = line</li>
-</ul>
-<p>Due to constraints or initial conditions, the body moves on a straight line, e.g.&nbsp;a car on a straight road or a ball tossed vertically.</p>
-<p>We take <span class="math inline">\({\bf E}_x\)</span> parallel to the line and <span class="math inline">\({\bf c}\)</span> to be a constant vector. Then: <span class="math display">\[\begin{align}
-    {\bf r}(t) &amp;= x(t){\bf E}_x+{\bf c},\\
-    {\bf v}(t) &amp;= \dot{x}{\bf E}_x = v(t){\bf E}_x,\\
-    {\bf a}(t) &amp;= \ddot{x}{\bf E}_x = a(t){\bf E}_x.
-\end{align}\]</span></p>
-<p><span class="math inline">\(\frac{ds}{dt}=\left|\frac{dx}{dt}\right|\)</span>, so unless <span class="math inline">\(\dot{x}&gt;0\)</span> or <span class="math inline">\(\dot{x}&lt;0\)</span> throughout, <span class="math inline">\(x\)</span> and <span class="math inline">\(s\)</span> cannot be easily interchanged.</p>
-<section id="identities-for-rectilinear-motion" class="level3" data-number="7.4.1">
-<h3 data-number="7.4.1" class="anchored" data-anchor-id="identities-for-rectilinear-motion"><span class="header-section-number">7.4.1</span> Identities for Rectilinear Motion</h3>
-<p>Recall <span class="math inline">\(v = \frac{dx}{dt}\)</span> and <span class="math inline">\(a = \frac{dv}{dt}\)</span>. Applying the chain rule: <span class="math display">\[\begin{align}
-    a = \frac{dv}{dt} = \frac{dv}{dx}\frac{dx}{dt} = v\frac{dv}{dx}.
-\end{align}\]</span></p>
-<p>Three useful identities: <span class="math display">\[\begin{align}
-    ds &amp;= v\, dt, \qquad dv = a\, dt, \qquad v\,dv = a\,ds.
-\end{align}\]</span></p>
+<section id="displacement" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="displacement"><span class="header-section-number">5.6</span> Displacement</h2>
+<p>A body is said to undergo a displacement when some or all of its particles are moved to occupy different positions in space.</p>
 </section>
-<section id="given-acceleration-as-a-function-of-time" class="level3" data-number="7.4.2">
-<h3 data-number="7.4.2" class="anchored" data-anchor-id="given-acceleration-as-a-function-of-time"><span class="header-section-number">7.4.2</span> Given Acceleration as a Function of Time</h3>
-<p>From <span class="math inline">\(dv = a\, dt\)</span>: <span class="math display">\[\begin{align}
-    v(t)-v(t_0) = \int_{t_0}^{t}a(\tilde{t})\,d\tilde{t}.
-\end{align}\]</span> From <span class="math inline">\(ds = v\, dt\)</span>: <span class="math display">\[\begin{align}
-    s(t_1)-s(t_0) = \int_{t_0}^{t_1}v(\tilde{t})\,d\tilde{t}.
-\end{align}\]</span></p>
+<section id="configuration" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="configuration"><span class="header-section-number">5.7</span> Configuration</h2>
+<p>The correspondence between the particles and the positions occupied by them at a given time is known as the body’s configuration.</p>
 </section>
-<section id="given-acceleration-as-a-function-of-speed" class="level3" data-number="7.4.3">
-<h3 data-number="7.4.3" class="anchored" data-anchor-id="given-acceleration-as-a-function-of-speed"><span class="header-section-number">7.4.3</span> Given Acceleration as a Function of Speed</h3>
-<p>From <span class="math inline">\(dv = a\, dt\)</span> with <span class="math inline">\(a = a(v)\)</span>: <span class="math display">\[\begin{align}
-    t(v) - t(v_0) = \int_{v_0}^{v}\frac{d\tilde{v}}{a(\tilde{v})}.
-\end{align}\]</span> Using <span class="math inline">\(a = v\frac{dv}{ds}\)</span>: <span class="math display">\[\begin{align}
-    s(t)-s_0 = \int_{v_0}^{v}\frac{\tilde{v}\,d\tilde{v}}{a(\tilde{v})}.
-\end{align}\]</span></p>
+<section id="deformation" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="deformation"><span class="header-section-number">5.8</span> Deformation</h2>
+<p>The displacement of a body is said to be rigid if the distances between all pairs of particles are the same in any two configurations. Otherwise, the body is said to undergo deformation.</p>
 </section>
-<section id="given-acceleration-as-a-function-of-displacement" class="level3" data-number="7.4.4">
-<h3 data-number="7.4.4" class="anchored" data-anchor-id="given-acceleration-as-a-function-of-displacement"><span class="header-section-number">7.4.4</span> Given Acceleration as a Function of Displacement</h3>
-<p>Using <span class="math inline">\(v\,dv = a\,ds\)</span> with <span class="math inline">\(a = a(s)\)</span>: <span class="math display">\[\begin{align}
-    \frac{1}{2}\lp v^2(s)-v^2(s_0)\rp = \int_{s_0}^{s}a(\tilde{s})\,d\tilde{s}.
-\end{align}\]</span></p>
-<section id="constant-acceleration" class="level4" data-number="7.4.4.1">
-<h4 data-number="7.4.4.1" class="anchored" data-anchor-id="constant-acceleration"><span class="header-section-number">7.4.4.1</span> Constant Acceleration</h4>
-<p><strong>Example: Gravity.</strong> Throw a ball up; take the hand as origin. Here <span class="math inline">\(a = -g\)</span>.</p>
-<p><span class="math display">\[\begin{align}
-    v(t) &amp;= v_0-gt,\\
-    s(t) &amp;= s_0+v_0t-\frac{g}{2}t^2.
-\end{align}\]</span></p>
-<p><strong>Example: Vehicle Braking.</strong> Using <span class="math inline">\(v\,dv = a\,ds\)</span>: <span class="math display">\[\begin{align}
-    v^2(s)-v^2(s_0) = 2a\,\Delta s.
-\end{align}\]</span></p>
+<section id="rigid-bodies" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="rigid-bodies"><span class="header-section-number">5.9</span> Rigid bodies</h2>
+<p>Bodies that can undergo only rigid displacements are called rigid bodies. Bodies that are not rigid are deformable.</p>
+</section>
+<section id="motion" class="level2" data-number="5.10">
+<h2 data-number="5.10" class="anchored" data-anchor-id="motion"><span class="header-section-number">5.10</span> Motion</h2>
+<p>Motion is said to occur when the body occupies a succession of different configurations continuously over time.</p>
+</section>
+<section id="rigid-motion" class="level2" data-number="5.11">
+<h2 data-number="5.11" class="anchored" data-anchor-id="rigid-motion"><span class="header-section-number">5.11</span> Rigid Motion</h2>
+<p>A rigid motion is a motion that involves only rigid displacements.</p>
+</section>
+<section id="velocity" class="level2" data-number="5.12">
+<h2 data-number="5.12" class="anchored" data-anchor-id="velocity"><span class="header-section-number">5.12</span> Velocity</h2>
+<p>The rate of change, in time, of the position of a particle is its velocity.</p>
+</section>
+<section id="acceleration" class="level2" data-number="5.13">
+<h2 data-number="5.13" class="anchored" data-anchor-id="acceleration"><span class="header-section-number">5.13</span> Acceleration</h2>
+<p>The velocity may in turn change in time, and its rate of change is the acceleration. The motion of a body is called uniform if the acceleration of all the particles is zero; otherwise, it is called accelerated.</p>
+</section>
+<section id="kinematics" class="level2" data-number="5.14">
+<h2 data-number="5.14" class="anchored" data-anchor-id="kinematics"><span class="header-section-number">5.14</span> Kinematics</h2>
+<p>The branch of mechanics dealing with the displacement and motion of bodies is called kinematics.</p>
+</section>
+<section id="force" class="level2" data-number="5.15">
+<h2 data-number="5.15" class="anchored" data-anchor-id="force"><span class="header-section-number">5.15</span> Force</h2>
+<p>Forces are interactions between bodies that cause them to move, and more specifically to accelerate, relative to each other (unless prevented from doing so by other forces).</p>
+</section>
+<section id="galileo-kepler-newton" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Galileo, Kepler, Newton</h1>
+<section id="gravitational-force" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="gravitational-force"><span class="header-section-number">6.1</span> Gravitational force</h2>
+<p>All bodies on or near the earth are subject to the earth’s gravitational force and, as shown by Galileo in his famous experiments, will fall toward the center of the earth (unless prevented from doing so by other forces) with the same acceleration; the magnitude of this acceleration is denoted by <span class="math inline">\(g\)</span>.</p>
+</section>
+<section id="f-ma" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="f-ma"><span class="header-section-number">6.2</span> <span class="math inline">\(F = ma\)</span></h2>
+<p>It was later shown by Newton, on the basis of Kepler’s laws of planetary motion, that the magnitude of the acceleration (with respect to a frame of reference based on the “fixed” stars) due to gravitational force between any two bodies (idealized as particles) is inversely proportional to the square of the distance between them, and for each body it is proportional to the quantity of matter (or mass) of the other body. The product of mass and acceleration is therefore equal and opposite for the two bodies and may be identified with the force exerted on each body by the other.</p>
+</section>
+<section id="equilibrium" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="equilibrium"><span class="header-section-number">6.3</span> Equilibrium</h2>
+<p>If a body’s acceleration is zero, then it is at rest or in a uniform motion. In this case, the forces is said to be in equilibrium. The study of equilibrium is known as statics and constitutes one of the main subjects of this book. Traditionally, statics deals only (or at least primarily) with rigid bodies, while deformable bodies are studied in courses historically called strength of materials (or, more recently, mechanics of materials). In this book <span class="citation" data-cites="lubliner2017introduction">(<a href="../references.html#ref-lubliner2017introduction" role="doc-biblioref">Lubliner and Papadopoulos 2017</a>)</span>, the statics of rigid and deformable solid bodies will be studied in an integrated manner.</p>
 
 
-</section>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-lubliner2017introduction" class="csl-entry" role="listitem">
+Lubliner, Jacob, and Panayiotis Papadopoulos. 2017. <em>Introduction to Solid Mechanics: An Integrated Approach</em>. Springer. <a href="https://doi.org/10.1007/978-1-4614-6768-7">https://doi.org/10.1007/978-1-4614-6768-7</a>.
+</div>
+</div>
 </section>
 </section>
 
@@ -1067,13 +951,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../preliminaries/continuum_mechanics_perspective.html" class="pagination-link" aria-label="Starting from Continuum Mechanics">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Starting from Continuum Mechanics</span></span>
+      <a href="../preliminaries/vector_calculus.html" class="pagination-link" aria-label="MECH230 Dynamics Notes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">MECH230 Dynamics Notes</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../particle_dynamics/particle_kinetics.html" class="pagination-link" aria-label="Particle Kinetics">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Particle Kinetics</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../preliminaries/continuum_mechanics_perspective.html" class="pagination-link" aria-label="Starting from Continuum Mechanics">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Starting from Continuum Mechanics</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
