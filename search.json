@@ -58,7 +58,7 @@
     "href": "preliminaries/vector_calculus.html#scaling-vectors",
     "title": "4  Vector Calculus",
     "section": "",
-    "text": "TipThink!\n\n\n\nQuestion: Consider a vector \\({\\bf a}\\). Plot the vectors \\(2{\\bf a}\\), \\(-{\\bf a}\\), \\(\\frac{1}{2}{\\bf a}\\)\nAnswer: …\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Give the expression for a unit vector in the direction of \\({\\bf a}\\)? Opposite to \\({\\bf a}\\).\nAnswer:\n\n\\(\\frac{\\bf a}{\\lnorm{\\bf a}\\rnorm}\\) is a unit vector in the direction of \\({\\bf a}\\).\n\\(-\\frac{\\bf a}{\\lnorm{\\bf a}\\rnorm}\\) is a unit vector in the direction opposite to that of \\({\\bf a}\\).",
+    "text": "TipThink!\n\n\n\nQuestion: Consider a vector \\({\\bf a}\\). Plot the vectors \\(2{\\bf a}\\), \\(-{\\bf a}\\), \\(\\frac{1}{2}{\\bf a}\\)\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n…\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Give the expression for a unit vector in the direction of \\({\\bf a}\\)? Opposite to \\({\\bf a}\\).\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n\n\\(\\frac{\\bf a}{\\lnorm{\\bf a}\\rnorm}\\) is a unit vector in the direction of \\({\\bf a}\\).\n\\(-\\frac{\\bf a}{\\lnorm{\\bf a}\\rnorm}\\) is a unit vector in the direction opposite to that of \\({\\bf a}\\).",
     "crumbs": [
       "Preliminaries",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
@@ -69,7 +69,7 @@
     "href": "preliminaries/vector_calculus.html#vector-summation-and-subtraction",
     "title": "4  Vector Calculus",
     "section": "4.2 Vector summation and subtraction",
-    "text": "4.2 Vector summation and subtraction\nVectors can be added using the parallelogram law or by placing vectors in a head to tail sequence.\nThe vector difference \\({\\bf a}-{\\bf b}\\) points from the tip of \\({\\bf b}\\) to the tip of \\({\\bf a}\\).",
+    "text": "4.2 Vector summation and subtraction\nVectors can be added using the parallelogram law or by placing vectors in a head to tail sequence.\nThe vector difference \\({\\bf a}-{\\bf b}\\) points from the tip of \\({\\bf b}\\) to the tip of \\({\\bf a}\\).\n\n\n\n\n\n\n\n\n\nVector addition via parallelogram law and tip to tail.\n\n\n\n\n\n\n\n\n\nVector subtraction as \\(\\mathbf{a}-\\mathbf{b}\\) using the parallelogram law. This can be also done using head to tail.\n\n\n\n\n\n\n\nFigure 4.1",
     "crumbs": [
       "Preliminaries",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
@@ -80,7 +80,7 @@
     "href": "preliminaries/vector_calculus.html#the-dot-scalar-product",
     "title": "4  Vector Calculus",
     "section": "4.3 The dot (scalar) product",
-    "text": "4.3 The dot (scalar) product\nConsider the three dimensional Euclidean space \\(\\mathbb{E}^3 = (\\mathbb{R}^3,\\cdot)\\) which is the three-dimensional space \\(\\mathbb{R}^3\\) and a dot product defined as follows.\n\n\n\n\n\n\n\n\n\nLet \\({\\bf a}, {\\bf b} \\in  \\mathbb{E}^3\\).\n\\[\\begin{align}\n    {\\bf a}\\cdot{\\bf b} &= \\lnorm{\\bf a}\\rnorm \\lnorm {\\bf b}\\rnorm \\cos(\\theta).\n\\end{align}\\]\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: What is the result of \\({\\bf a}\\cdot{\\bf a}\\)?\nAnswer: The magnitude of a vector \\({\\bf a}\\) is given by \\[\\begin{align}\n    {\\bf a}\\cdot{\\bf a} = \\lnorm{\\bf a}\\rnorm^2 \\implies \\lnorm{\\bf a}\\rnorm = \\sqrt{{\\bf a}\\cdot{\\bf a}}.\n\\end{align}\\]\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Is \\({\\bf a}\\cdot{\\bf b} = {\\bf b}\\cdot{\\bf a}\\)? Why?\nAnswer: Yes, the dot product is commutative. This can be shown using the definition of the dot product.",
+    "text": "4.3 The dot (scalar) product\nConsider the three dimensional Euclidean space \\(\\mathbb{E}^3 = (\\mathbb{R}^3,\\cdot)\\) which is the three-dimensional space \\(\\mathbb{R}^3\\) and a dot product defined as follows.\n\n\n\n\n\n\n\n\n\nLet \\({\\bf a}, {\\bf b} \\in  \\mathbb{E}^3\\).\n\\[\\begin{align}\n    {\\bf a}\\cdot{\\bf b} &= \\lnorm{\\bf a}\\rnorm \\lnorm {\\bf b}\\rnorm \\cos(\\theta).\n\\end{align}\\]\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: What is the result of \\({\\bf a}\\cdot{\\bf a}\\)?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nThe magnitude of a vector \\({\\bf a}\\) is given by \\[\\begin{align}\n    {\\bf a}\\cdot{\\bf a} = \\lnorm{\\bf a}\\rnorm^2 \\implies \\lnorm{\\bf a}\\rnorm = \\sqrt{{\\bf a}\\cdot{\\bf a}}.\n\\end{align}\\]\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Is \\({\\bf a}\\cdot{\\bf b} = {\\bf b}\\cdot{\\bf a}\\)? Why?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nYes, the dot product is commutative. This can be shown using the definition of the dot product.",
     "crumbs": [
       "Preliminaries",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
@@ -91,7 +91,7 @@
     "href": "preliminaries/vector_calculus.html#vector-projections",
     "title": "4  Vector Calculus",
     "section": "4.4 Vector Projections",
-    "text": "4.4 Vector Projections\nSuppose \\({\\bf u}\\) is a unit vector: \\({\\bf u}\\cdot{\\bf u}=1\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Calculate \\({\\bf b}\\cdot{\\bf u}\\)\nAnswer: \\[\\begin{align}\n    {\\bf b}\\cdot{\\bf u} = \\lnorm{\\bf b}\\rnorm \\underbrace{\\lnorm{\\bf u}\\rnorm}_{1}\\cos(\\theta) = \\lnorm{\\bf b}\\rnorm\\cos(\\theta).\n\\end{align}\\]\nNotice the right triangle in the above figure. Verify that \\({\\bf b}\\cdot{\\bf u}\\) is the orthogonal projection of \\({\\bf b}\\) in the direction of \\({\\bf u}\\).\n\n\nSuppose \\({\\bf v}\\cdot{\\bf v} = 1\\) (\\({\\bf v}\\) is a unit vector), and \\({\\bf v}\\cdot{\\bf u}=0\\) (\\({\\bf v}\\) and \\({\\bf u}\\) are orthogonal/perpendicular).\n\\[\\begin{align}\n    {\\bf b}\\cdot{\\bf v} = \\lnorm{\\bf b}\\rnorm\\cos\\lp\\frac{\\pi}{2}-\\theta\\rp = \\lnorm{\\bf b}\\rnorm\\sin(\\theta).\n\\end{align}\\]\nThis is the projection of \\({\\bf b}\\) in the direction perpendicular to \\({\\bf u}\\). Hence, we can write\n\\[\\begin{align}\n    {\\bf b} &= \\lp{\\bf b}\\cdot{\\bf u}\\rp{\\bf u}+\\lp{\\bf b}\\cdot{\\bf v}\\rp{\\bf v}\\\\\n    &= \\underbrace{\\lnorm{\\bf b}\\rnorm}_{\\text{magnitude}}\\lp\\underbrace{\\cos(\\theta){\\bf u}+\\sin(\\theta){\\bf v}}_{\\text{direction}}\\rp.\n\\end{align}\\]\nRemember that \\(\\cos^2(\\theta)+\\sin^2(\\theta)=1\\).",
+    "text": "4.4 Vector Projections\nSuppose \\({\\bf u}\\) is a unit vector: \\({\\bf u}\\cdot{\\bf u}=1\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Calculate \\({\\bf b}\\cdot{\\bf u}\\)\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n\\[\\begin{align}\n    {\\bf b}\\cdot{\\bf u} = \\lnorm{\\bf b}\\rnorm \\underbrace{\\lnorm{\\bf u}\\rnorm}_{1}\\cos(\\theta) = \\lnorm{\\bf b}\\rnorm\\cos(\\theta).\n\\end{align}\\]\nNotice the right triangle in the above figure. Verify that \\({\\bf b}\\cdot{\\bf u}\\) is the orthogonal projection of \\({\\bf b}\\) in the direction of \\({\\bf u}\\).\n\n\n\n\n\nSuppose \\({\\bf v}\\cdot{\\bf v} = 1\\) (\\({\\bf v}\\) is a unit vector), and \\({\\bf v}\\cdot{\\bf u}=0\\) (\\({\\bf v}\\) and \\({\\bf u}\\) are orthogonal/perpendicular).\n\\[\\begin{align}\n    {\\bf b}\\cdot{\\bf v} = \\lnorm{\\bf b}\\rnorm\\cos\\lp\\frac{\\pi}{2}-\\theta\\rp = \\lnorm{\\bf b}\\rnorm\\sin(\\theta).\n\\end{align}\\]\nThis is the projection of \\({\\bf b}\\) in the direction perpendicular to \\({\\bf u}\\). Hence, we can write\n\\[\\begin{align}\n    {\\bf b} &= \\lp{\\bf b}\\cdot{\\bf u}\\rp{\\bf u}+\\lp{\\bf b}\\cdot{\\bf v}\\rp{\\bf v}\\\\\n    &= \\underbrace{\\lnorm{\\bf b}\\rnorm}_{\\text{magnitude}}\\lp\\underbrace{\\cos(\\theta){\\bf u}+\\sin(\\theta){\\bf v}}_{\\text{direction}}\\rp.\n\\end{align}\\]\nRemember that \\(\\cos^2(\\theta)+\\sin^2(\\theta)=1\\).",
     "crumbs": [
       "Preliminaries",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
@@ -102,7 +102,40 @@
     "href": "preliminaries/vector_calculus.html#cross-product",
     "title": "4  Vector Calculus",
     "section": "4.5 Cross Product",
-    "text": "4.5 Cross Product\nWe also define the cross product\n\\[\\begin{align}\n    {\\bf a}\\times{\\bf b} &= \\lnorm{\\bf a}\\rnorm \\lnorm{\\bf b}\\rnorm |\\sin(\\theta)|{\\bf n}\n\\end{align}\\]\nwhere \\({\\bf n}\\) is a unit vector normal to the plane formed by \\({\\bf a}\\) and \\({\\bf b}\\). The direction of \\({\\bf n}\\) is given by the right hand rule.\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Is \\({\\bf a}\\times{\\bf b} = {\\bf b}\\times{\\bf a}\\)?\nAnswer: No, the cross product is not commutative. These vectors are opposite.",
+    "text": "4.5 Cross Product\nWe also define the cross product\n\\[\\begin{align}\n    {\\bf a}\\times{\\bf b} &= \\lnorm{\\bf a}\\rnorm \\lnorm{\\bf b}\\rnorm |\\sin(\\theta)|{\\bf n}\n\\end{align}\\]\nwhere \\({\\bf n}\\) is a unit vector normal to the plane formed by \\({\\bf a}\\) and \\({\\bf b}\\). The direction of \\({\\bf n}\\) is given by the right hand rule.\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Is \\({\\bf a}\\times{\\bf b} = {\\bf b}\\times{\\bf a}\\)?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nNo, the cross product is not commutative. These vectors are opposite.",
+    "crumbs": [
+      "Preliminaries",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
+    ]
+  },
+  {
+    "objectID": "preliminaries/vector_calculus.html#vector-representation-using-bases",
+    "href": "preliminaries/vector_calculus.html#vector-representation-using-bases",
+    "title": "4  Vector Calculus",
+    "section": "4.6 Vector Representation Using Bases",
+    "text": "4.6 Vector Representation Using Bases\nWe can assign a fixed (right handed) Cartesian basis for \\(\\mathbb{E}^3\\) denoted by \\(\\{{\\bf E}_x, {\\bf E}_y, {\\bf E}_z\\}\\). These three vectors are orthonormal (i.e. they each have a unit magnitude and are mutually perpendicular).\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Calculate \\({\\bf E}_x \\times {\\bf E}_x\\), \\({\\bf E}_x \\times {\\bf E}_y\\), etc.\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n…\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Calculate \\({\\bf E}_x \\cdot {\\bf E}_x\\), \\({\\bf E}_x \\cdot {\\bf E}_y\\), etc.\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n…\n\n\n\n\n\nWe can represent any vector \\({\\bf b}\\) as\n\\[\\begin{align}\n    {\\bf a} &= a_x {\\bf E}_x + a_y {\\bf E}_y + a_z {\\bf E}_z,\\\\\n    {\\bf b} &= b_x {\\bf E}_x + b_y {\\bf E}_y + b_z {\\bf E}_z.\n\\end{align}\\]\nWe can write the scalar product and cross product of these vectors in terms of their Cartesian components.\n\\[\\begin{align}\n    {\\bf a} \\cdot {\\bf b} &= a_x b_x + a_y b_y + a_z b_z\\\\\n    {\\bf a} \\times {\\bf b} &= \\ldots\n\\end{align}\\]",
+    "crumbs": [
+      "Preliminaries",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
+    ]
+  },
+  {
+    "objectID": "preliminaries/vector_calculus.html#differentiation-of-vectors",
+    "href": "preliminaries/vector_calculus.html#differentiation-of-vectors",
+    "title": "4  Vector Calculus",
+    "section": "4.7 Differentiation of Vectors",
+    "text": "4.7 Differentiation of Vectors\n\\[\\begin{align}\n    \\frac{d{\\bf u}}{dt} &= \\frac{du_x}{dt}{\\bf E}_x + \\frac{du_y}{dt}{\\bf E}_y + \\frac{du_z}{dt}{\\bf E}_z + u_x\\frac{d{\\bf E}_x}{dt} + u_y\\frac{d{\\bf E}_y}{dt} + u_z\\frac{d{\\bf E}_z}{dt}\\\\\n    &= \\frac{du_x}{dt}{\\bf E}_x + \\frac{du_y}{dt}{\\bf E}_y + \\frac{du_z}{dt}{\\bf E}_z\n\\end{align}\\]\n\\[\\begin{align}\n    \\frac{d}{dt}({\\bf u}\\cdot{\\bf v}) = \\frac{d{\\bf u}}{dt}\\cdot{\\bf v} + {\\bf u}\\cdot\\frac{d{\\bf v}}{dt}\n\\end{align}\\]\n\\[\\begin{align}\n    \\frac{d}{dt}({\\bf u}\\times{\\bf v}) = \\frac{d{\\bf u}}{dt}\\times{\\bf v} + {\\bf u}\\times\\frac{d{\\bf v}}{dt}\n\\end{align}\\]",
+    "crumbs": [
+      "Preliminaries",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
+    ]
+  },
+  {
+    "objectID": "preliminaries/vector_calculus.html#sine-law-and-cosine-law",
+    "href": "preliminaries/vector_calculus.html#sine-law-and-cosine-law",
+    "title": "4  Vector Calculus",
+    "section": "4.8 Sine Law and Cosine Law",
+    "text": "4.8 Sine Law and Cosine Law\n\n\n\n\n\n\n\n\n\nReferring to the above triangle with interior angles \\(A\\), \\(B\\), and \\(C\\) and with side lengths \\(a\\), \\(b\\), and \\(c\\), the sine law and cosine law are respectively\n\\[\\begin{align}\n    \\frac{\\sin(A)}{a} &= \\frac{\\sin(B)}{b} = \\frac{\\sin(C)}{c},\\\\\n    c^2 &= a^2 + b^2 - 2ab\\cos(C).\n\\end{align}\\]",
     "crumbs": [
       "Preliminaries",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"

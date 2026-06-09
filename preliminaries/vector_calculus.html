@@ -388,6 +388,9 @@ window.Quarto = {
   <li><a href="#the-dot-scalar-product" id="toc-the-dot-scalar-product" class="nav-link" data-scroll-target="#the-dot-scalar-product"><span class="header-section-number">4.3</span> The dot (scalar) product</a></li>
   <li><a href="#vector-projections" id="toc-vector-projections" class="nav-link" data-scroll-target="#vector-projections"><span class="header-section-number">4.4</span> Vector Projections</a></li>
   <li><a href="#cross-product" id="toc-cross-product" class="nav-link" data-scroll-target="#cross-product"><span class="header-section-number">4.5</span> Cross Product</a></li>
+  <li><a href="#vector-representation-using-bases" id="toc-vector-representation-using-bases" class="nav-link" data-scroll-target="#vector-representation-using-bases"><span class="header-section-number">4.6</span> Vector Representation Using Bases</a></li>
+  <li><a href="#differentiation-of-vectors" id="toc-differentiation-of-vectors" class="nav-link" data-scroll-target="#differentiation-of-vectors"><span class="header-section-number">4.7</span> Differentiation of Vectors</a></li>
+  <li><a href="#sine-law-and-cosine-law" id="toc-sine-law-and-cosine-law" class="nav-link" data-scroll-target="#sine-law-and-cosine-law"><span class="header-section-number">4.8</span> Sine Law and Cosine Law</a></li>
   </ul>
 </nav>
     </div>
@@ -439,7 +442,22 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Question: Consider a vector <span class="math inline">\({\bf a}\)</span>. Plot the vectors <span class="math inline">\(2{\bf a}\)</span>, <span class="math inline">\(-{\bf a}\)</span>, <span class="math inline">\(\frac{1}{2}{\bf a}\)</span></p>
-<p>Answer: …</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>…</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Think!">
@@ -453,11 +471,25 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Question: Give the expression for a unit vector in the direction of <span class="math inline">\({\bf a}\)</span>? Opposite to <span class="math inline">\({\bf a}\)</span>.</p>
-<p>Answer:</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ul>
 <li><span class="math inline">\(\frac{\bf a}{\lnorm{\bf a}\rnorm}\)</span> is a unit vector in the direction of <span class="math inline">\({\bf a}\)</span>.</li>
 <li><span class="math inline">\(-\frac{\bf a}{\lnorm{\bf a}\rnorm}\)</span> is a unit vector in the direction opposite to that of <span class="math inline">\({\bf a}\)</span>.</li>
 </ul>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
@@ -474,23 +506,36 @@ window.Quarto = {
 <h2 data-number="4.2" class="anchored" data-anchor-id="vector-summation-and-subtraction"><span class="header-section-number">4.2</span> Vector summation and subtraction</h2>
 <p>Vectors can be added using the parallelogram law or by placing vectors in a head to tail sequence.</p>
 <p>The vector difference <span class="math inline">\({\bf a}-{\bf b}\)</span> points from the tip of <span class="math inline">\({\bf b}\)</span> to the tip of <span class="math inline">\({\bf a}\)</span>.</p>
-<div class="cell" data-layout-align="center">
+<div id="fig-vec-add-sub" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vec-add-sub-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="vector_calculus_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="288"></p>
+<p><img src="vector_calculus_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Vector addition via parallelogram law and tip to tail.</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="vector_calculus_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="288"></p>
+<p><img src="vector_calculus_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Vector subtraction as <span class="math inline">\(\mathbf{a}-\mathbf{b}\)</span> using the parallelogram law. This can be also done using head to tail.</figcaption>
 </figure>
 </div>
 </div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-vec-add-sub-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1
+</figcaption>
+</figure>
 </div>
 </section>
 <section id="the-dot-scalar-product" class="level2" data-number="4.3">
@@ -500,7 +545,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="vector_calculus_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="288"></p>
+<p><img src="vector_calculus_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="192"></p>
 </figure>
 </div>
 </div>
@@ -520,9 +565,24 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Question: What is the result of <span class="math inline">\({\bf a}\cdot{\bf a}\)</span>?</p>
-<p>Answer: The magnitude of a vector <span class="math inline">\({\bf a}\)</span> is given by <span class="math display">\[\begin{align}
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The magnitude of a vector <span class="math inline">\({\bf a}\)</span> is given by <span class="math display">\[\begin{align}
     {\bf a}\cdot{\bf a} = \lnorm{\bf a}\rnorm^2 \implies \lnorm{\bf a}\rnorm = \sqrt{{\bf a}\cdot{\bf a}}.
 \end{align}\]</span></p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Think!">
@@ -536,7 +596,22 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Question: Is <span class="math inline">\({\bf a}\cdot{\bf b} = {\bf b}\cdot{\bf a}\)</span>? Why?</p>
-<p>Answer: Yes, the dot product is commutative. This can be shown using the definition of the dot product.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Yes, the dot product is commutative. This can be shown using the definition of the dot product.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -563,10 +638,25 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Question: Calculate <span class="math inline">\({\bf b}\cdot{\bf u}\)</span></p>
-<p>Answer: <span class="math display">\[\begin{align}
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\begin{align}
     {\bf b}\cdot{\bf u} = \lnorm{\bf b}\rnorm \underbrace{\lnorm{\bf u}\rnorm}_{1}\cos(\theta) = \lnorm{\bf b}\rnorm\cos(\theta).
 \end{align}\]</span></p>
 <p>Notice the right triangle in the above figure. Verify that <span class="math inline">\({\bf b}\cdot{\bf u}\)</span> is the orthogonal projection of <span class="math inline">\({\bf b}\)</span> in the direction of <span class="math inline">\({\bf u}\)</span>.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <p>Suppose <span class="math inline">\({\bf v}\cdot{\bf v} = 1\)</span> (<span class="math inline">\({\bf v}\)</span> is a unit vector), and <span class="math inline">\({\bf v}\cdot{\bf u}=0\)</span> (<span class="math inline">\({\bf v}\)</span> and <span class="math inline">\({\bf u}\)</span> are orthogonal/perpendicular).</p>
@@ -599,9 +689,135 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Question: Is <span class="math inline">\({\bf a}\times{\bf b} = {\bf b}\times{\bf a}\)</span>?</p>
-<p>Answer: No, the cross product is not commutative. These vectors are opposite.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>No, the cross product is not commutative. These vectors are opposite.</p>
 </div>
 </div>
+</div>
+</div>
+</div>
+</section>
+<section id="vector-representation-using-bases" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="vector-representation-using-bases"><span class="header-section-number">4.6</span> Vector Representation Using Bases</h2>
+<p>We can assign a fixed (right handed) Cartesian basis for <span class="math inline">\(\mathbb{E}^3\)</span> denoted by <span class="math inline">\(\{{\bf E}_x, {\bf E}_y, {\bf E}_z\}\)</span>. These three vectors are orthonormal (i.e.&nbsp;they each have a unit magnitude and are mutually perpendicular).</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Question: Calculate <span class="math inline">\({\bf E}_x \times {\bf E}_x\)</span>, <span class="math inline">\({\bf E}_x \times {\bf E}_y\)</span>, etc.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>…</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Question: Calculate <span class="math inline">\({\bf E}_x \cdot {\bf E}_x\)</span>, <span class="math inline">\({\bf E}_x \cdot {\bf E}_y\)</span>, etc.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>…</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>We can represent any vector <span class="math inline">\({\bf b}\)</span> as</p>
+<p><span class="math display">\[\begin{align}
+    {\bf a} &amp;= a_x {\bf E}_x + a_y {\bf E}_y + a_z {\bf E}_z,\\
+    {\bf b} &amp;= b_x {\bf E}_x + b_y {\bf E}_y + b_z {\bf E}_z.
+\end{align}\]</span></p>
+<p>We can write the scalar product and cross product of these vectors in terms of their Cartesian components.</p>
+<p><span class="math display">\[\begin{align}
+    {\bf a} \cdot {\bf b} &amp;= a_x b_x + a_y b_y + a_z b_z\\
+    {\bf a} \times {\bf b} &amp;= \ldots
+\end{align}\]</span></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="vector_calculus_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="differentiation-of-vectors" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="differentiation-of-vectors"><span class="header-section-number">4.7</span> Differentiation of Vectors</h2>
+<p><span class="math display">\[\begin{align}
+    \frac{d{\bf u}}{dt} &amp;= \frac{du_x}{dt}{\bf E}_x + \frac{du_y}{dt}{\bf E}_y + \frac{du_z}{dt}{\bf E}_z + u_x\frac{d{\bf E}_x}{dt} + u_y\frac{d{\bf E}_y}{dt} + u_z\frac{d{\bf E}_z}{dt}\\
+    &amp;= \frac{du_x}{dt}{\bf E}_x + \frac{du_y}{dt}{\bf E}_y + \frac{du_z}{dt}{\bf E}_z
+\end{align}\]</span></p>
+<p><span class="math display">\[\begin{align}
+    \frac{d}{dt}({\bf u}\cdot{\bf v}) = \frac{d{\bf u}}{dt}\cdot{\bf v} + {\bf u}\cdot\frac{d{\bf v}}{dt}
+\end{align}\]</span></p>
+<p><span class="math display">\[\begin{align}
+    \frac{d}{dt}({\bf u}\times{\bf v}) = \frac{d{\bf u}}{dt}\times{\bf v} + {\bf u}\times\frac{d{\bf v}}{dt}
+\end{align}\]</span></p>
+</section>
+<section id="sine-law-and-cosine-law" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="sine-law-and-cosine-law"><span class="header-section-number">4.8</span> Sine Law and Cosine Law</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="vector_calculus_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="336"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Referring to the above triangle with interior angles <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> and with side lengths <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span>, the sine law and cosine law are respectively</p>
+<p><span class="math display">\[\begin{align}
+    \frac{\sin(A)}{a} &amp;= \frac{\sin(B)}{b} = \frac{\sin(C)}{c},\\
+    c^2 &amp;= a^2 + b^2 - 2ab\cos(C).
+\end{align}\]</span></p>
 
 
 </section>
