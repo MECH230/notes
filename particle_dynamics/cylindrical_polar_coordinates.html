@@ -396,6 +396,9 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#example-particle-on-a-cone" id="toc-example-particle-on-a-cone" class="nav-link" data-scroll-target="#example-particle-on-a-cone"><span class="header-section-number">10.3.1</span> Example: Particle on a Cone</a></li>
   </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">10.4</span> Summary</a></li>
+  <li><a href="#lecture-videos" id="toc-lecture-videos" class="nav-link" data-scroll-target="#lecture-videos"><span class="header-section-number">10.5</span> Lecture Videos</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">10.6</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -734,9 +737,39 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
 <p>See animation for 03/067 <a href="https://drive.google.com/file/d/1d8FJqs0GMQU0FxUE3R66rfcSTCCHFTOu/view?usp=sharing">here</a>.</p>
 <p><img src="../figures/cylindrical_polar_coordinates/03-067.png" class="img-fluid" style="width:50.0%"></p>
 <p><img src="../figures/cylindrical_polar_coordinates/03-193.png" class="img-fluid" style="width:50.0%"></p>
-
-
 </section>
+</section>
+<section id="summary" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="summary"><span class="header-section-number">10.4</span> Summary</h2>
+<p><strong>Cylindrical polar basis</strong> <span class="math inline">\(\{\mathbf{e}_r,\mathbf{e}_\theta,\mathbf{E}_z\}\)</span>: <span class="math display">\[\begin{align}
+    \mathbf{e}_r &amp;= \cos\theta\,\mathbf{E}_x+\sin\theta\,\mathbf{E}_y, &amp;
+    \mathbf{e}_\theta &amp;= -\sin\theta\,\mathbf{E}_x+\cos\theta\,\mathbf{E}_y, \\
+    \dot{\mathbf{e}}_r &amp;= \dot\theta\,\mathbf{e}_\theta, &amp;
+    \dot{\mathbf{e}}_\theta &amp;= -\dot\theta\,\mathbf{e}_r.
+\end{align}\]</span></p>
+<p><strong>Position, velocity, acceleration:</strong> <span class="math display">\[\begin{align}
+    \mathbf{r} &amp;= r\mathbf{e}_r+z\mathbf{E}_z,\\
+    \mathbf{v} &amp;= \dot r\,\mathbf{e}_r + r\dot\theta\,\mathbf{e}_\theta + \dot z\,\mathbf{E}_z,\\
+    \mathbf{a} &amp;= (\ddot r-r\dot\theta^2)\mathbf{e}_r + (r\ddot\theta+2\dot r\dot\theta)\mathbf{e}_\theta + \ddot z\,\mathbf{E}_z.
+\end{align}\]</span></p>
+</section>
+<section id="lecture-videos" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="lecture-videos"><span class="header-section-number">10.5</span> Lecture Videos</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/pj7kitk0VcI" title="Animating the motion of a pendulum in Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="exercises" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">10.6</span> Exercises</h2>
+<p><em>The following problems are from Set 05 – Cylindrical Polar Coordinates.</em></p>
+<p><strong>1.</strong> [MKB 2/121] Take the origin at the satellite; <span class="math inline">\(\mathbf{E}_x\)</span> rightwards, <span class="math inline">\(\mathbf{E}_y\)</span> upwards. Write the position in both cylindrical and Cartesian coordinates. <em>(ans. <span class="math inline">\(v = 360\)</span> m/s, <span class="math inline">\(a = 20.1\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/wbUBexp8xfc" title="Solution – Problem 02/121" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p><strong>2.</strong> [MKB 02-105] Take <span class="math inline">\(\mathbf{E}_x\)</span> rightwards and <span class="math inline">\(\mathbf{E}_y\)</span> upwards; write the car’s position in both bases. <em>(ans. <span class="math inline">\(\dot r = 47.7\)</span> ft/sec, <span class="math inline">\(\dot\theta = -41.0\)</span> deg/sec)</em></p>
+<p><strong>3.</strong> [MKB 02-126] Write <span class="math inline">\(\mathbf{r}_P = (0.75+\ell)\mathbf{e}_r\)</span> m and differentiate. If the setup is in the vertical plane, find the force applied by the robot arm. <em>(ans. <span class="math inline">\(v=0.296\)</span> m/s, <span class="math inline">\(a=0.345\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
+<p><strong>4.</strong> [MKB 03-037] Apply the 4 steps at points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> independently; origin at the centre of curvature. <em>(ans. <span class="math inline">\(N_A = 10.89\)</span> N, <span class="math inline">\(N_B = 8.30\)</span> N)</em></p>
+<p><strong>5.</strong> [Primer Exercise 2.6] <em>(See O’Reilly Primer.)</em></p>
+<p><strong>6.</strong> [Primer Exercise 2.7]</p>
+<p><strong>7.</strong> [Primer Exercise 2.8]</p>
+
+
 </section>
 
 </main> <!-- /main -->

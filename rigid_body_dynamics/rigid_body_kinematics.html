@@ -411,6 +411,13 @@ window.Quarto = {
   <li><a href="#parallel-axis-theorem" id="toc-parallel-axis-theorem" class="nav-link" data-scroll-target="#parallel-axis-theorem"><span class="header-section-number">20.15</span> Parallel Axis Theorem</a></li>
   <li><a href="#radius-of-gyration" id="toc-radius-of-gyration" class="nav-link" data-scroll-target="#radius-of-gyration"><span class="header-section-number">20.16</span> Radius of Gyration</a></li>
   <li><a href="#angular-momentum-about-a-moving-point-p" id="toc-angular-momentum-about-a-moving-point-p" class="nav-link" data-scroll-target="#angular-momentum-about-a-moving-point-p"><span class="header-section-number">20.17</span> Angular Momentum About a Moving Point <span class="math inline">\(P\)</span></a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">20.18</span> Summary</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">20.19</span> Exercises</a>
+  <ul class="collapse">
+  <li><a href="#set-15-rigid-body-kinematics" id="toc-set-15-rigid-body-kinematics" class="nav-link" data-scroll-target="#set-15-rigid-body-kinematics"><span class="header-section-number">20.19.1</span> Set 15 – Rigid Body Kinematics</a></li>
+  <li><a href="#set-16-ic-and-particle-in-non-inertial-frame" id="toc-set-16-ic-and-particle-in-non-inertial-frame" class="nav-link" data-scroll-target="#set-16-ic-and-particle-in-non-inertial-frame"><span class="header-section-number">20.19.2</span> Set 16 – IC and Particle in Non-inertial Frame</a></li>
+  <li><a href="#set-17-rolling-and-sliding" id="toc-set-17-rolling-and-sliding" class="nav-link" data-scroll-target="#set-17-rolling-and-sliding"><span class="header-section-number">20.19.3</span> Set 17 – Rolling and Sliding</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -1103,8 +1110,51 @@ window.Quarto = {
 \end{align}\]</span> with special cases <span class="math inline">\({\bf H}^C = {\bf I}^C\bomega\)</span> and <span class="math inline">\({\bf H}^O = {\bf I}^O\bomega\)</span> (fixed <span class="math inline">\(O\)</span>). In general: <span class="math display">\[\begin{align}
     \dot{\bf H}^P = {\bf I}^P\overset{\circ}{\bomega}+\bomega\times({\bf I}^P\bomega)+\frac{d}{dt}\leb({\bf r}_C-{\bf r}_P)\times m{\bf v}_P\reb.
 \end{align}\]</span></p>
+</section>
+<section id="summary" class="level2" data-number="20.18">
+<h2 data-number="20.18" class="anchored" data-anchor-id="summary"><span class="header-section-number">20.18</span> Summary</h2>
+<p><strong>Corotational basis</strong> <span class="math inline">\(\{\mathbf{e}_x,\mathbf{e}_y,\mathbf{E}_z\}\)</span> fixed to the rigid body: <span class="math display">\[\begin{align}
+    \dot{\mathbf{e}}_x = \boldsymbol{\omega}\times\mathbf{e}_x, \qquad
+    \dot{\mathbf{e}}_y = \boldsymbol{\omega}\times\mathbf{e}_y, \qquad
+    \boldsymbol{\omega}=\dot\theta\,\mathbf{E}_z.
+\end{align}\]</span></p>
+<p><strong>Velocity/acceleration of two points</strong> <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> on a rigid body: <span class="math display">\[\begin{align}
+    \mathbf{v}_B - \mathbf{v}_A &amp;= \boldsymbol{\omega}\times(\mathbf{r}_B-\mathbf{r}_A), \\
+    \mathbf{a}_B - \mathbf{a}_A &amp;= \boldsymbol{\alpha}\times(\mathbf{r}_B-\mathbf{r}_A)+\boldsymbol{\omega}\times(\mathbf{v}_B-\mathbf{v}_A).
+\end{align}\]</span></p>
+<p><strong>Instantaneous center (IC)</strong>: the point on a body (or its extension) with instantaneous zero velocity. Lies at the intersection of perpendiculars to the velocity vectors of two points.</p>
+<p><strong>Particle in a non-inertial frame</strong> (point <span class="math inline">\(A\)</span> fixed to body, <span class="math inline">\(B\)</span> moving relative to body): <span class="math display">\[\begin{align}
+    \mathbf{v}_B - \mathbf{v}_A &amp;= \boldsymbol{\omega}\times(\mathbf{r}_B-\mathbf{r}_A)+\mathbf{v}_{\mathrm{rel}}, \\
+    \mathbf{a}_B - \mathbf{a}_A &amp;= \boldsymbol{\alpha}\times(\mathbf{r}_B-\mathbf{r}_A)+\boldsymbol{\omega}\times(\boldsymbol{\omega}\times(\mathbf{r}_B-\mathbf{r}_A))+2\boldsymbol{\omega}\times\mathbf{v}_{\mathrm{rel}}+\mathbf{a}_{\mathrm{rel}}.
+\end{align}\]</span> The Coriolis acceleration is <span class="math inline">\(2\boldsymbol{\omega}\times\mathbf{v}_{\mathrm{rel}}\)</span>.</p>
+</section>
+<section id="exercises" class="level2" data-number="20.19">
+<h2 data-number="20.19" class="anchored" data-anchor-id="exercises"><span class="header-section-number">20.19</span> Exercises</h2>
+<section id="set-15-rigid-body-kinematics" class="level3" data-number="20.19.1">
+<h3 data-number="20.19.1" class="anchored" data-anchor-id="set-15-rigid-body-kinematics"><span class="header-section-number">20.19.1</span> Set 15 – Rigid Body Kinematics</h3>
+<p><strong>1.</strong> [MKB 05-010] <em>(ans. <span class="math inline">\(\mathbf{v}_B=-11\mathbf{E}_x\)</span> m/s, <span class="math inline">\(\mathbf{a}_B=22\mathbf{E}_x-220\mathbf{E}_y\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
+<p><strong>2.</strong> [MKB 05-013] <em>(ans. <span class="math inline">\(\mathbf{v}_A=1.121\mathbf{E}_x+0.838\mathbf{E}_y\)</span> m/s, <span class="math inline">\(\mathbf{a}_B=-4.48\mathbf{E}_x+0.1465\mathbf{E}_y\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
+<p><strong>3.</strong> [05-018] <em>(ans. <span class="math inline">\(\mathbf{v}_A=-0.374\mathbf{E}_x+0.1905\mathbf{E}_y\)</span> m/s, <span class="math inline">\(\mathbf{a}_A=-0.757\mathbf{E}_x-0.605\mathbf{E}_y\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
+<p><strong>4.</strong> [05-049] <em>(ans. (a) <span class="math inline">\(N=91.7\)</span> rev/min CCW; (b) <span class="math inline">\(N=45.8\)</span> rev/min CCW; (c) <span class="math inline">\(N=45.8\)</span> rev/min CW)</em></p>
+<p><strong>5.</strong> [05-065] <em>(ans. <span class="math inline">\(\omega=0.722\)</span> rad/s)</em></p>
+<p><strong>6.</strong> [05-069] <em>(ans. <span class="math inline">\(\omega_{AB}=1.725\)</span> rad/s CCW, <span class="math inline">\(\omega_{BC}=4\)</span> rad/s CCW)</em></p>
+</section>
+<section id="set-16-ic-and-particle-in-non-inertial-frame" class="level3" data-number="20.19.2">
+<h3 data-number="20.19.2" class="anchored" data-anchor-id="set-16-ic-and-particle-in-non-inertial-frame"><span class="header-section-number">20.19.2</span> Set 16 – IC and Particle in Non-inertial Frame</h3>
+<p><strong>1.</strong> [MKB 05-102] <em>(ans. <span class="math inline">\(\alpha=0.286\)</span> rad/s<span class="math inline">\(^2\)</span>, <span class="math inline">\(a_A=0.653\)</span> m/s<span class="math inline">\(^2\)</span> down)</em></p>
+<p><strong>2.</strong> [MKB 05-125] <em>(ans. <span class="math inline">\(\mathbf{v}_A=0.1\mathbf{E}_x+0.25\mathbf{E}_y\)</span> m/s, <span class="math inline">\(\beta=68.2^\circ\)</span>)</em></p>
+<p><strong>3.</strong> [05-143] <em>(ans. <span class="math inline">\(v_{\mathrm{rel}}=3.93\)</span> m/s, <span class="math inline">\(a_{\mathrm{rel}}=15.22\)</span> m/s<span class="math inline">\(^2\)</span>, <span class="math inline">\(\omega_{BC}=1.046\)</span> rad/s CW, <span class="math inline">\(\alpha_{BC}=117.7\)</span> rad/s<span class="math inline">\(^2\)</span> CW)</em></p>
+</section>
+<section id="set-17-rolling-and-sliding" class="level3" data-number="20.19.3">
+<h3 data-number="20.19.3" class="anchored" data-anchor-id="set-17-rolling-and-sliding"><span class="header-section-number">20.19.3</span> Set 17 – Rolling and Sliding</h3>
+<p><strong>1.</strong> [MKB 05-055] <em>(ans. <span class="math inline">\(v_O=6.93\)</span> m/s, <span class="math inline">\(\omega=21.3\)</span> rad/s CW)</em></p>
+<p><strong>2.</strong> [MKB 05-087] <em>(ans. <span class="math inline">\(v_O=120\)</span> mm/s, <span class="math inline">\(v_P=216\)</span> mm/s)</em></p>
+<p><strong>3.</strong> [05-091] <em>(ans. <span class="math inline">\(v=15.71\)</span> ft/s right, <span class="math inline">\(v_s=6.89\)</span> ft/s left)</em></p>
+<p><strong>4.</strong> [05-093] <em>(ans. <span class="math inline">\(v_A=9.19\)</span> ft/sec left)</em></p>
+<p><strong>5.</strong> [05-100] <em>(ans. <span class="math inline">\(\mathbf{v}_A=5.12\mathbf{E}_x+2.12\mathbf{E}_y\)</span> m/s, <span class="math inline">\(\mathbf{a}_B=-16.25\mathbf{E}_x+2.5\mathbf{E}_y\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

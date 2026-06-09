@@ -398,6 +398,9 @@ window.Quarto = {
   </ul></li>
   <li><a href="#the-curvature-formula-for-a-plane-curve" id="toc-the-curvature-formula-for-a-plane-curve" class="nav-link" data-scroll-target="#the-curvature-formula-for-a-plane-curve"><span class="header-section-number">12.5</span> The Curvature Formula for a Plane Curve</a></li>
   <li><a href="#alternative-notation-for-plane-curves" id="toc-alternative-notation-for-plane-curves" class="nav-link" data-scroll-target="#alternative-notation-for-plane-curves"><span class="header-section-number">12.6</span> Alternative Notation for Plane Curves</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">12.7</span> Summary</a></li>
+  <li><a href="#lecture-videos" id="toc-lecture-videos" class="nav-link" data-scroll-target="#lecture-videos"><span class="header-section-number">12.8</span> Lecture Videos</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">12.9</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -686,6 +689,34 @@ window.Quarto = {
 <p>For plane curves, some texts define the angle <span class="math inline">\(\beta = \beta(s)\)</span> such that: <span class="math display">\[\begin{align}
     {\bf e}_t = \cos(\beta){\bf E}_x+\sin(\beta){\bf E}_y, \qquad \bar{\bf e}_n = \cos(\beta){\bf E}_y-\sin(\beta){\bf E}_x.
 \end{align}\]</span> Then <span class="math inline">\(\kappa = \left|\frac{d\beta}{ds}\right|\)</span> and <span class="math inline">\(\frac{d\beta}{ds}\)</span> is the rate of rotation of the triad about <span class="math inline">\({\bf E}_z\)</span>.</p>
+</section>
+<section id="summary" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="summary"><span class="header-section-number">12.7</span> Summary</h2>
+<p><strong>Serret–Frenet basis</strong> <span class="math inline">\(\{\mathbf{e}_t,\mathbf{e}_n,\mathbf{e}_b\}\)</span>: <span class="math display">\[\begin{align}
+    \mathbf{v} &amp;= v\,\mathbf{e}_t, \qquad
+    \mathbf{a} = \dot v\,\mathbf{e}_t + \kappa v^2\,\mathbf{e}_n, \qquad
+    \mathbf{e}_b = \mathbf{e}_t\times\mathbf{e}_n.
+\end{align}\]</span> The curvature is <span class="math inline">\(\kappa=1/\rho\)</span> (radius of curvature <span class="math inline">\(\rho\)</span>). The BoLM gives <span class="math inline">\(F_t = m\dot v\)</span> and <span class="math inline">\(F_n = m\kappa v^2\)</span>.</p>
+</section>
+<section id="lecture-videos" class="level2" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="lecture-videos"><span class="header-section-number">12.8</span> Lecture Videos</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/XNdP7Nk850s" title="Particle on a curve vs. particle on a surface" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/OB13c0WlUSg" title="Derivation of the Serret–Frenet formulae" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="exercises" class="level2" data-number="12.9">
+<h2 data-number="12.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">12.9</span> Exercises</h2>
+<p><em>The following problems are from Set 07 – The Serret–Frenet Basis.</em></p>
+<p><strong>1.</strong> [MKB 2/079] Analyse the acceleration vector in the Serret–Frenet basis. <em>(See problem set for figure.)</em></p>
+<p><strong>2.</strong> [MKB 02-090] Note that <span class="math inline">\(\dot v \neq \|\mathbf{a}\|\)</span>; acceleration has both tangential and normal components. <em>(ans. <span class="math inline">\(v = 20\)</span> m/s)</em></p>
+<p><strong>3.</strong> [MKB 02-091] <em>(ans. <span class="math inline">\(\rho = 1709\)</span> m)</em></p>
+<p><strong>4.</strong> [02-097] Follow the 4 steps; express <span class="math inline">\(\mathbf{e}_t\)</span> and <span class="math inline">\(\mathbf{e}_n\)</span> in the Cartesian basis. <em>(ans. at <span class="math inline">\(t=1\)</span> s: <span class="math inline">\(\dot v=-6.58\)</span> ft/s<span class="math inline">\(^2\)</span>, <span class="math inline">\(\rho=142.2\)</span> ft; at <span class="math inline">\(t=2\)</span> s: <span class="math inline">\(\dot v=8.75\)</span> ft/s<span class="math inline">\(^2\)</span>, <span class="math inline">\(\rho=149.7\)</span> ft)</em></p>
+<p><strong>5.</strong> [02-103] <em>(ans. <span class="math inline">\((x_C,y_C)=(22.5,-22.9)\)</span> m)</em></p>
+<p><strong>6.</strong> [02-199] Draw <span class="math inline">\(\mathbf{e}_t\)</span> and <span class="math inline">\(\mathbf{e}_n\)</span> first. <em>(ans. <span class="math inline">\(\dot r=15\)</span> m/s, <span class="math inline">\(\dot\theta=0.325\)</span> rad/s, <span class="math inline">\(\rho=129.9\)</span> m)</em></p>
+<p><strong>7.</strong> [03-040] Note the jump in normal force at the transition from straight to curved path. <em>(ans. (a) <span class="math inline">\(R=1.177\)</span> N; (b) <span class="math inline">\(R=1.664\)</span> N)</em></p>
+<p><strong>8.</strong> [03-041] What does “weightless” mean? <em>(ans. <span class="math inline">\(\rho=24\,000\)</span> ft)</em></p>
+<p><strong>9.</strong> [03-043] Draw the Serret–Frenet basis carefully; the figure hints at the direction of <span class="math inline">\(\mathbf{e}_n\)</span>. <em>(ans. <span class="math inline">\(v=29.1\)</span> m/s, <span class="math inline">\(N=12.36\)</span> kN)</em></p>
+<p><strong>10.</strong> [OOR 3.1] <em>(See O’Reilly Primer.)</em></p>
+<p><strong>11.</strong> [OOR 3.2]</p>
 
 
 </section>
