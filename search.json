@@ -364,12 +364,12 @@
   {
     "objectID": "preliminaries/continuum_mechanics_perspective.html",
     "href": "preliminaries/continuum_mechanics_perspective.html",
-    "title": "6  Starting from Continuum Mechanics",
+    "title": "6  A Continuum Mechanics Perspective",
     "section": "",
     "text": "Consider a body \\(\\mathcal{B}\\) in three-dimensional Euclidean space \\(\\mathbb{E}^3\\).\n\n\n\n\n\n\n\n\n\nIn general, bodies are deformable continua. We depict continua as in the above figure and refer to them as continuum potatoes.\nPoint or distributed forces or moments can be applied to a body’s surface or throughout its volume. For example, a body resting on a table has contact forces on the surface touching the table, while weight acts on all points in the body.\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: How do we know if a body has moved?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n…\n\n\n\n\n\nConsider a reference configuration for this body. A reference configuration is any configuration that can be physically occupied by the body — it could be the initial configuration, but need not be.\n\n\n\n\n\n\n\n\n\nWe denote the position vector from a chosen fixed origin to a material point in the reference configuration as \\({\\bf R}\\). The position vector to the same material point in the current configuration is \\({\\bf r}\\).\nThe motion of the body is described by \\[\\begin{align}\n    {\\bf r} = \\bchi({\\bf R},t).\n\\end{align}\\]\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: What makes a body rigid?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nIn this class, we consider only rigid bodies. If we choose two points on a rigid body, the distance between them is always constant. Also, angles between material lines on a rigid body are constant.\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Under what conditions do we consider a rigid body to be a particle?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nIn the beginning of the class, we consider particles. Particles are idealized rigid bodies whose rotational inertia is ignored.",
     "crumbs": [
       "Preliminaries",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Starting from Continuum Mechanics</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>A Continuum Mechanics Perspective</span>"
     ]
   },
   {
