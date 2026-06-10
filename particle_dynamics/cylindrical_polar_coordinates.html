@@ -583,11 +583,10 @@ window.Quarto = {
 </ul>
 <p><strong>Remark: <span class="math inline">\(a_r \neq \dot{v}_r\)</span>.</strong> Be careful: <span class="math inline">\(v_r = \dot{r}\)</span> so <span class="math inline">\(\dot{v}_r = \ddot{r}\)</span>, but <span class="math inline">\(a_r = \ddot{r} - r\dot{\theta}^2 \neq \dot{v}_r\)</span> in general.</p>
 <p>For rectilinear motions, Cartesian coordinates are usually easiest. For problems where <span class="math inline">\(r\)</span> is directly measured (e.g.&nbsp;radar tracking), polar coordinates are natural.</p>
-<p><img src="../figures/cylindrical_polar_coordinates/02-121.jpg" class="img-fluid" style="width:40.0%"></p>
 <section id="example-nonlinear-pendulum" class="level3" data-number="10.1.1">
 <h3 data-number="10.1.1" class="anchored" data-anchor-id="example-nonlinear-pendulum"><span class="header-section-number">10.1.1</span> Example: Nonlinear Pendulum</h3>
 <p>Consider a particle of mass <span class="math inline">\(m\)</span> suspended from a rigid inextensible string of length <span class="math inline">\(\ell\)</span>. Find the equation of motion.</p>
-<p><img src="../figures/cylindrical_polar_coordinates/pendulum_setup.JPG" class="img-fluid" style="width:35.0%" alt="Pendulum setup."> <img src="../figures/cylindrical_polar_coordinates/pendulum_fbd.JPG" class="img-fluid" style="width:35.0%" alt="Pendulum free body diagram."></p>
+<p><img src="../figures/cylindrical_polar_coordinates/pendulum_setup.JPG" class="img-fluid" style="width:50.0%" alt="Pendulum setup."> <img src="../figures/cylindrical_polar_coordinates/pendulum_fbd.JPG" class="img-fluid" style="width:50.0%" alt="Pendulum free body diagram."></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -687,11 +686,11 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
 <li><strong>Coriolis</strong> <span class="math inline">\(2\dot{r}\dot{\theta}\)</span>: particle in a tube rotating at constant angular velocity.</li>
 <li><strong>Tangential</strong> <span class="math inline">\(r\ddot{\theta}\)</span>: particle pushed along a circle.</li>
 </ul>
-<p><img src="../figures/cylindrical_polar_coordinates/rddot.png" class="img-fluid" style="width:45.0%" alt="Radial (\ddot{r}) acceleration."> <img src="../figures/cylindrical_polar_coordinates/centripetal_acceleration.png" class="img-fluid" style="width:45.0%" alt="Centripetal (-r\dot\theta^2) acceleration."> <img src="../figures/cylindrical_polar_coordinates/coriolis_acceleration.png" class="img-fluid" style="width:45.0%" alt="Coriolis (2\dot{r}\dot\theta) acceleration."> <img src="../figures/cylindrical_polar_coordinates/tangential_acceleration.png" class="img-fluid" style="width:45.0%" alt="Tangential (r\ddot\theta) acceleration."></p>
+<p><img src="../figures/cylindrical_polar_coordinates/rddot.png" class="img-fluid" style="width:50.0%" alt="Radial (\ddot{r}) acceleration."> <img src="../figures/cylindrical_polar_coordinates/centripetal_acceleration.png" class="img-fluid" style="width:50.0%" alt="Centripetal (-r\dot\theta^2) acceleration."> <img src="../figures/cylindrical_polar_coordinates/coriolis_acceleration.png" class="img-fluid" style="width:50.0%" alt="Coriolis (2\dot{r}\dot\theta) acceleration."> <img src="../figures/cylindrical_polar_coordinates/tangential_acceleration.png" class="img-fluid" style="width:50.0%" alt="Tangential (r\ddot\theta) acceleration."></p>
 <section id="example-particle-in-a-rotating-tube" class="level3" data-number="10.2.1">
 <h3 data-number="10.2.1" class="anchored" data-anchor-id="example-particle-in-a-rotating-tube"><span class="header-section-number">10.2.1</span> Example: Particle in a Rotating Tube</h3>
 <p><span class="math inline">\(\dot{\theta} = \omega = \text{const.}\)</span>, <span class="math inline">\(\ddot{\theta} = 0\)</span>.</p>
-<p><img src="../figures/cylindrical_polar_coordinates/particle_in_rotating_tube.png" class="img-fluid" style="width:50.0%" alt="Rotating tube setup."> <img src="../figures/cylindrical_polar_coordinates/particle_in_tube_fbd.JPG" class="img-fluid" style="width:35.0%" alt="Free body diagram."></p>
+<p><img src="../figures/cylindrical_polar_coordinates/particle_in_rotating_tube.png" class="img-fluid" style="width:50.0%" alt="Rotating tube setup."> <img src="../figures/cylindrical_polar_coordinates/particle_in_tube_fbd.JPG" class="img-fluid" style="width:50.0%" alt="Free body diagram."></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -724,13 +723,13 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
 <p>As the particle moves outward, <span class="math inline">\(r\omega\)</span> increases. The tube must supply the <span class="math inline">\({\bf e}_\theta\)</span> acceleration <span class="math inline">\(2\dot{r}\omega\)</span> so the particle stays inside.</p>
 </div>
 </div>
-<p><img src="../figures/cylindrical_polar_coordinates/particle_in_tube_normal.png" class="img-fluid" style="width:45.0%" alt="Normal force on particle in tube."> <img src="../figures/cylindrical_polar_coordinates/rotating_tube_velocity_profile.png" class="img-fluid" style="width:45.0%" alt="Velocity profile in rotating tube."></p>
+<p><img src="../figures/cylindrical_polar_coordinates/particle_in_tube_normal.png" class="img-fluid" style="width:50.0%" alt="Normal force on particle in tube."> <img src="../figures/cylindrical_polar_coordinates/rotating_tube_velocity_profile.png" class="img-fluid" style="width:50.0%" alt="Velocity profile in rotating tube."></p>
 </section>
 <section id="example-particle-pushed-in-a-circle" class="level3" data-number="10.2.2">
 <h3 data-number="10.2.2" class="anchored" data-anchor-id="example-particle-pushed-in-a-circle"><span class="header-section-number">10.2.2</span> Example: Particle Pushed in a Circle</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../figures/cylindrical_polar_coordinates/particle_pushed_on_circle.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<p><img src="../figures/cylindrical_polar_coordinates/particle_pushed_on_circle.png" class="img-fluid figure-img" style="width:50.0%"></p>
 <figcaption>Particle pushed along a circle.</figcaption>
 </figure>
 </div>
@@ -783,6 +782,12 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
 <h2 data-number="10.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">10.6</span> Exercises</h2>
 <p><em>The following problems are from Set 05 – Cylindrical Polar Coordinates.</em></p>
 <p><strong>1.</strong> [MKB 2/121] Take the origin at the satellite; <span class="math inline">\(\mathbf{E}_x\)</span> rightwards, <span class="math inline">\(\mathbf{E}_y\)</span> upwards. Write the position in both cylindrical and Cartesian coordinates. <em>(ans. <span class="math inline">\(v = 360\)</span> m/s, <span class="math inline">\(a = 20.1\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/cylindrical_polar_coordinates/02-121.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 2/121.</figcaption>
+</figure>
+</div>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/wbUBexp8xfc" title="Solution – Problem 02/121" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p><strong>2.</strong> [MKB 02-105] Take <span class="math inline">\(\mathbf{E}_x\)</span> rightwards and <span class="math inline">\(\mathbf{E}_y\)</span> upwards; write the car’s position in both bases. <em>(ans. <span class="math inline">\(\dot r = 47.7\)</span> ft/sec, <span class="math inline">\(\dot\theta = -41.0\)</span> deg/sec)</em></p>
 <p><strong>3.</strong> [MKB 02-126] Write <span class="math inline">\(\mathbf{r}_P = (0.75+\ell)\mathbf{e}_r\)</span> m and differentiate. If the setup is in the vertical plane, find the force applied by the robot arm. <em>(ans. <span class="math inline">\(v=0.296\)</span> m/s, <span class="math inline">\(a=0.345\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
