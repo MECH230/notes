@@ -498,6 +498,12 @@ window.Quarto = {
 <li><span class="math inline">\({\bf e}_r\)</span> points in the direction of increasing <span class="math inline">\(r\)</span>.</li>
 <li><span class="math inline">\({\bf e}_\theta\)</span> points in the direction of increasing <span class="math inline">\(\theta\)</span>.</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/cylindrical_polar_coordinates/polar_basis.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Polar basis <span class="math inline">\(\{{\bf e}_r,{\bf e}_\theta\}\)</span>.</figcaption>
+</figure>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Think!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -528,6 +534,12 @@ window.Quarto = {
 </div>
 </div>
 </div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/cylindrical_polar_coordinates/polar_basis_derivatives.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Derivatives of the polar basis.</figcaption>
+</figure>
 </div>
 <p>The position vector is <span class="math inline">\({\bf r} = r{\bf e}_r\)</span> (with <span class="math inline">\(r\geq 0\)</span>).</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Think!">
@@ -575,6 +587,7 @@ window.Quarto = {
 <section id="example-nonlinear-pendulum" class="level3" data-number="10.1.1">
 <h3 data-number="10.1.1" class="anchored" data-anchor-id="example-nonlinear-pendulum"><span class="header-section-number">10.1.1</span> Example: Nonlinear Pendulum</h3>
 <p>Consider a particle of mass <span class="math inline">\(m\)</span> suspended from a rigid inextensible string of length <span class="math inline">\(\ell\)</span>. Find the equation of motion.</p>
+<p><img src="../figures/cylindrical_polar_coordinates/pendulum_setup.JPG" class="img-fluid" style="width:35.0%" alt="Pendulum setup."> <img src="../figures/cylindrical_polar_coordinates/pendulum_fbd.JPG" class="img-fluid" style="width:35.0%" alt="Pendulum free body diagram."></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -674,9 +687,11 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
 <li><strong>Coriolis</strong> <span class="math inline">\(2\dot{r}\dot{\theta}\)</span>: particle in a tube rotating at constant angular velocity.</li>
 <li><strong>Tangential</strong> <span class="math inline">\(r\ddot{\theta}\)</span>: particle pushed along a circle.</li>
 </ul>
+<p><img src="../figures/cylindrical_polar_coordinates/rddot.png" class="img-fluid" style="width:45.0%" alt="Radial (\ddot{r}) acceleration."> <img src="../figures/cylindrical_polar_coordinates/centripetal_acceleration.png" class="img-fluid" style="width:45.0%" alt="Centripetal (-r\dot\theta^2) acceleration."> <img src="../figures/cylindrical_polar_coordinates/coriolis_acceleration.png" class="img-fluid" style="width:45.0%" alt="Coriolis (2\dot{r}\dot\theta) acceleration."> <img src="../figures/cylindrical_polar_coordinates/tangential_acceleration.png" class="img-fluid" style="width:45.0%" alt="Tangential (r\ddot\theta) acceleration."></p>
 <section id="example-particle-in-a-rotating-tube" class="level3" data-number="10.2.1">
 <h3 data-number="10.2.1" class="anchored" data-anchor-id="example-particle-in-a-rotating-tube"><span class="header-section-number">10.2.1</span> Example: Particle in a Rotating Tube</h3>
 <p><span class="math inline">\(\dot{\theta} = \omega = \text{const.}\)</span>, <span class="math inline">\(\ddot{\theta} = 0\)</span>.</p>
+<p><img src="../figures/cylindrical_polar_coordinates/particle_in_rotating_tube.png" class="img-fluid" style="width:50.0%" alt="Rotating tube setup."> <img src="../figures/cylindrical_polar_coordinates/particle_in_tube_fbd.JPG" class="img-fluid" style="width:35.0%" alt="Free body diagram."></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -709,9 +724,16 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
 <p>As the particle moves outward, <span class="math inline">\(r\omega\)</span> increases. The tube must supply the <span class="math inline">\({\bf e}_\theta\)</span> acceleration <span class="math inline">\(2\dot{r}\omega\)</span> so the particle stays inside.</p>
 </div>
 </div>
+<p><img src="../figures/cylindrical_polar_coordinates/particle_in_tube_normal.png" class="img-fluid" style="width:45.0%" alt="Normal force on particle in tube."> <img src="../figures/cylindrical_polar_coordinates/rotating_tube_velocity_profile.png" class="img-fluid" style="width:45.0%" alt="Velocity profile in rotating tube."></p>
 </section>
 <section id="example-particle-pushed-in-a-circle" class="level3" data-number="10.2.2">
 <h3 data-number="10.2.2" class="anchored" data-anchor-id="example-particle-pushed-in-a-circle"><span class="header-section-number">10.2.2</span> Example: Particle Pushed in a Circle</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/cylindrical_polar_coordinates/particle_pushed_on_circle.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<figcaption>Particle pushed along a circle.</figcaption>
+</figure>
+</div>
 <p><span class="math inline">\({\bf P} = P{\bf e}_\theta\)</span>, <span class="math inline">\(r = R = \text{const.}\)</span>: <span class="math display">\[\begin{align*}
     \lp{\bf F}=\dot{G}\rp\cdot{\bf e}_\theta &amp;\implies P=mR\ddot{\theta} \quad (\text{EOM for }\theta),\\
     \lp{\bf F}=\dot{G}\rp\cdot{\bf e}_r &amp;\implies N_r=mR\dot{\theta}^2 \quad (\text{centripetal}),\\
