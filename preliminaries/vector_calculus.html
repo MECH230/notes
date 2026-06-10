@@ -221,7 +221,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../particle_dynamics/basic_particle_kinematics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Basic Particle Kinematics Concepts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Particle Kinematics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -391,8 +391,7 @@ window.Quarto = {
   <li><a href="#vector-representation-using-bases" id="toc-vector-representation-using-bases" class="nav-link" data-scroll-target="#vector-representation-using-bases"><span class="header-section-number">4.6</span> Vector Representation Using Bases</a></li>
   <li><a href="#differentiation-of-vectors" id="toc-differentiation-of-vectors" class="nav-link" data-scroll-target="#differentiation-of-vectors"><span class="header-section-number">4.7</span> Differentiation of Vectors</a></li>
   <li><a href="#sine-law-and-cosine-law" id="toc-sine-law-and-cosine-law" class="nav-link" data-scroll-target="#sine-law-and-cosine-law"><span class="header-section-number">4.8</span> Sine Law and Cosine Law</a></li>
-  <li><a href="#lecture-videos" id="toc-lecture-videos" class="nav-link" data-scroll-target="#lecture-videos"><span class="header-section-number">4.9</span> Lecture Videos</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">4.10</span> Exercises</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">4.9</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -778,8 +777,10 @@ Figure&nbsp;4.1
 \end{align}\]</span></p>
 <p>We can write the scalar product and cross product of these vectors in terms of their Cartesian components.</p>
 <p><span class="math display">\[\begin{align}
-    {\bf a} \cdot {\bf b} &amp;= a_x b_x + a_y b_y + a_z b_z\\
-    {\bf a} \times {\bf b} &amp;= \ldots
+    {\bf a} \cdot {\bf b} &amp;= (a_x {\bf E}_x + a_y {\bf E}_y + a_z {\bf E}_z)\cdot(b_x {\bf E}_x + b_y {\bf E}_y + b_z {\bf E}_z)\\
+    &amp;= a_x b_x + a_y b_y + a_z b_z\\
+    {\bf a} \times {\bf b} &amp;= (a_x {\bf E}_x + a_y {\bf E}_y + a_z {\bf E}_z)\times (b_x {\bf E}_x + b_y {\bf E}_y + b_z {\bf E}_z)\\
+    &amp;= (a_y b_z - a_z b_y){\bf E}_x + (a_z b_x - a_x b_z){\bf E}_y + (a_x b_y - a_y b_x){\bf E}_z
 \end{align}\]</span></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -821,12 +822,8 @@ Figure&nbsp;4.1
     c^2 &amp;= a^2 + b^2 - 2ab\cos(C).
 \end{align}\]</span></p>
 </section>
-<section id="lecture-videos" class="level2" data-number="4.9">
-<h2 data-number="4.9" class="anchored" data-anchor-id="lecture-videos"><span class="header-section-number">4.9</span> Lecture Videos</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/icrTzMozNgo" width="70%" title="Introduction to Dynamics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</section>
-<section id="exercises" class="level2" data-number="4.10">
-<h2 data-number="4.10" class="anchored" data-anchor-id="exercises"><span class="header-section-number">4.10</span> Exercises</h2>
+<section id="exercises" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">4.9</span> Exercises</h2>
 <p><em>The following problems are from Set 01 – Vector Calculus.</em></p>
 <p><strong>1.</strong> Two chords are pulling on a hook with tensions <span class="math inline">\(T_1 = 100\)</span> N and <span class="math inline">\(T_2 = 50\)</span> N as shown. Using the parallelogram rule, determine the magnitude of the resultant force and the angle it makes with the horizontal. Do not introduce a Cartesian basis.</p>
 <div class="cell" data-layout-align="center">

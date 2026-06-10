@@ -124,7 +124,7 @@
     "href": "preliminaries/vector_calculus.html#vector-representation-using-bases",
     "title": "4  Vector Calculus",
     "section": "4.6 Vector Representation Using Bases",
-    "text": "4.6 Vector Representation Using Bases\nWe can assign a fixed (right handed) Cartesian basis for \\(\\mathbb{E}^3\\) denoted by \\(\\{{\\bf E}_x, {\\bf E}_y, {\\bf E}_z\\}\\). These three vectors are orthonormal (i.e. they each have a unit magnitude and are mutually perpendicular).\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Calculate \\({\\bf E}_x \\times {\\bf E}_x\\), \\({\\bf E}_x \\times {\\bf E}_y\\), etc.\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n…\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Calculate \\({\\bf E}_x \\cdot {\\bf E}_x\\), \\({\\bf E}_x \\cdot {\\bf E}_y\\), etc.\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n…\n\n\n\n\n\nWe can represent any vector \\({\\bf b}\\) as\n\\[\\begin{align}\n    {\\bf a} &= a_x {\\bf E}_x + a_y {\\bf E}_y + a_z {\\bf E}_z,\\\\\n    {\\bf b} &= b_x {\\bf E}_x + b_y {\\bf E}_y + b_z {\\bf E}_z.\n\\end{align}\\]\nWe can write the scalar product and cross product of these vectors in terms of their Cartesian components.\n\\[\\begin{align}\n    {\\bf a} \\cdot {\\bf b} &= a_x b_x + a_y b_y + a_z b_z\\\\\n    {\\bf a} \\times {\\bf b} &= \\ldots\n\\end{align}\\]",
+    "text": "4.6 Vector Representation Using Bases\nWe can assign a fixed (right handed) Cartesian basis for \\(\\mathbb{E}^3\\) denoted by \\(\\{{\\bf E}_x, {\\bf E}_y, {\\bf E}_z\\}\\). These three vectors are orthonormal (i.e. they each have a unit magnitude and are mutually perpendicular).\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Calculate \\({\\bf E}_x \\times {\\bf E}_x\\), \\({\\bf E}_x \\times {\\bf E}_y\\), etc.\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n…\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Calculate \\({\\bf E}_x \\cdot {\\bf E}_x\\), \\({\\bf E}_x \\cdot {\\bf E}_y\\), etc.\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n…\n\n\n\n\n\nWe can represent any vector \\({\\bf b}\\) as\n\\[\\begin{align}\n    {\\bf a} &= a_x {\\bf E}_x + a_y {\\bf E}_y + a_z {\\bf E}_z,\\\\\n    {\\bf b} &= b_x {\\bf E}_x + b_y {\\bf E}_y + b_z {\\bf E}_z.\n\\end{align}\\]\nWe can write the scalar product and cross product of these vectors in terms of their Cartesian components.\n\\[\\begin{align}\n    {\\bf a} \\cdot {\\bf b} &= (a_x {\\bf E}_x + a_y {\\bf E}_y + a_z {\\bf E}_z)\\cdot(b_x {\\bf E}_x + b_y {\\bf E}_y + b_z {\\bf E}_z)\\\\\n    &= a_x b_x + a_y b_y + a_z b_z\\\\\n    {\\bf a} \\times {\\bf b} &= (a_x {\\bf E}_x + a_y {\\bf E}_y + a_z {\\bf E}_z)\\times (b_x {\\bf E}_x + b_y {\\bf E}_y + b_z {\\bf E}_z)\\\\\n    &= (a_y b_z - a_z b_y){\\bf E}_x + (a_z b_x - a_x b_z){\\bf E}_y + (a_x b_y - a_y b_x){\\bf E}_z\n\\end{align}\\]",
     "crumbs": [
       "Preliminaries",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
@@ -153,22 +153,11 @@
     ]
   },
   {
-    "objectID": "preliminaries/vector_calculus.html#lecture-videos",
-    "href": "preliminaries/vector_calculus.html#lecture-videos",
-    "title": "4  Vector Calculus",
-    "section": "4.9 Lecture Videos",
-    "text": "4.9 Lecture Videos",
-    "crumbs": [
-      "Preliminaries",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
-    ]
-  },
-  {
     "objectID": "preliminaries/vector_calculus.html#exercises",
     "href": "preliminaries/vector_calculus.html#exercises",
     "title": "4  Vector Calculus",
-    "section": "4.10 Exercises",
-    "text": "4.10 Exercises\nThe following problems are from Set 01 – Vector Calculus.\n1. Two chords are pulling on a hook with tensions \\(T_1 = 100\\) N and \\(T_2 = 50\\) N as shown. Using the parallelogram rule, determine the magnitude of the resultant force and the angle it makes with the horizontal. Do not introduce a Cartesian basis.\n\n\n\n\n\n\n\n\n\n2. Resolve the horizontal force \\(F\\) into components along the \\(u\\) and \\(v\\) axes and determine the magnitudes of the components.\n\n\n\n\n\n\n\n\n\n3. In Exercise 1, take unit vectors \\(\\mathbf{I}\\) and \\(\\mathbf{J}\\) to point horizontally leftwards and vertically upwards. The unit vector \\(\\mathbf{K}\\) completes the right-handed triad. Repeat Exercise 1 by resolving all forces in the Cartesian \\(\\{\\mathbf{I},\\mathbf{J},\\mathbf{K}\\}\\) basis.\n4. A particle moves in space with velocity \\[\\begin{align}\n    \\mathbf{v}(t) = 2t^2\\mathbf{E}_1 - \\mathbf{E}_2 + (-5t+3)\\mathbf{E}_3 \\quad \\text{m/s}.\n\\end{align}\\] (a) Calculate \\(\\mathbf{v}\\) at \\(t=1\\) s. (b) Calculate \\(\\mathbf{a}(t)\\equiv\\dot{\\mathbf{v}}(t)\\). (c) Given \\(\\mathbf{r}(0)=2\\mathbf{E}_3\\), find \\(\\mathbf{r}(t)\\).\n5. A child at \\(B\\) pulls a chord attached to the wall at \\(A\\) with a force of \\(70\\) N.\n\n\n\n\n\n\n\n\n\n\nExpress the position vector \\(\\mathbf{r}_A\\) in Cartesian coordinates.\nExpress the position vector \\(\\mathbf{r}_B\\) in Cartesian coordinates.\nDraw \\(\\mathbf{r}_{B/A} = \\mathbf{r}_B - \\mathbf{r}_A\\). Does it point from \\(B\\) to \\(A\\) or from \\(A\\) to \\(B\\)?\nDraw \\(\\mathbf{r}_{A/B}\\).\nWhat is the tension force \\(\\mathbf{T}\\) in the cable?\n\n6. Referring to Exercises 1 and 3:\n\nCalculate \\(\\mathbf{T}_1\\times\\mathbf{T}_2\\) without using a basis.\nExpress \\(\\mathbf{T}_1\\) and \\(\\mathbf{T}_2\\) in the Cartesian basis from Exercise 3 and verify part (a).\nWhat is \\(\\mathbf{T}_2\\times\\mathbf{T}_1\\)?",
+    "section": "4.9 Exercises",
+    "text": "4.9 Exercises\nThe following problems are from Set 01 – Vector Calculus.\n1. Two chords are pulling on a hook with tensions \\(T_1 = 100\\) N and \\(T_2 = 50\\) N as shown. Using the parallelogram rule, determine the magnitude of the resultant force and the angle it makes with the horizontal. Do not introduce a Cartesian basis.\n\n\n\n\n\n\n\n\n\n2. Resolve the horizontal force \\(F\\) into components along the \\(u\\) and \\(v\\) axes and determine the magnitudes of the components.\n\n\n\n\n\n\n\n\n\n3. In Exercise 1, take unit vectors \\(\\mathbf{I}\\) and \\(\\mathbf{J}\\) to point horizontally leftwards and vertically upwards. The unit vector \\(\\mathbf{K}\\) completes the right-handed triad. Repeat Exercise 1 by resolving all forces in the Cartesian \\(\\{\\mathbf{I},\\mathbf{J},\\mathbf{K}\\}\\) basis.\n4. A particle moves in space with velocity \\[\\begin{align}\n    \\mathbf{v}(t) = 2t^2\\mathbf{E}_1 - \\mathbf{E}_2 + (-5t+3)\\mathbf{E}_3 \\quad \\text{m/s}.\n\\end{align}\\] (a) Calculate \\(\\mathbf{v}\\) at \\(t=1\\) s. (b) Calculate \\(\\mathbf{a}(t)\\equiv\\dot{\\mathbf{v}}(t)\\). (c) Given \\(\\mathbf{r}(0)=2\\mathbf{E}_3\\), find \\(\\mathbf{r}(t)\\).\n5. A child at \\(B\\) pulls a chord attached to the wall at \\(A\\) with a force of \\(70\\) N.\n\n\n\n\n\n\n\n\n\n\nExpress the position vector \\(\\mathbf{r}_A\\) in Cartesian coordinates.\nExpress the position vector \\(\\mathbf{r}_B\\) in Cartesian coordinates.\nDraw \\(\\mathbf{r}_{B/A} = \\mathbf{r}_B - \\mathbf{r}_A\\). Does it point from \\(B\\) to \\(A\\) or from \\(A\\) to \\(B\\)?\nDraw \\(\\mathbf{r}_{A/B}\\).\nWhat is the tension force \\(\\mathbf{T}\\) in the cable?\n\n6. Referring to Exercises 1 and 3:\n\nCalculate \\(\\mathbf{T}_1\\times\\mathbf{T}_2\\) without using a basis.\nExpress \\(\\mathbf{T}_1\\) and \\(\\mathbf{T}_2\\) in the Cartesian basis from Exercise 3 and verify part (a).\nWhat is \\(\\mathbf{T}_2\\times\\mathbf{T}_1\\)?",
     "crumbs": [
       "Preliminaries",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vector Calculus</span>"
@@ -366,7 +355,7 @@
     "href": "preliminaries/continuum_mechanics_perspective.html",
     "title": "6  A Continuum Mechanics Perspective",
     "section": "",
-    "text": "Consider a body \\(\\mathcal{B}\\) in three-dimensional Euclidean space \\(\\mathbb{E}^3\\).\n\n\n\n\n\n\n\n\n\nIn general, bodies are deformable continua. We depict continua as in the above figure and refer to them as continuum potatoes.\nPoint or distributed forces or moments can be applied to a body’s surface or throughout its volume. For example, a body resting on a table has contact forces on the surface touching the table, while weight acts on all points in the body.\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: How do we know if a body has moved?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n…\n\n\n\n\n\nConsider a reference configuration for this body. A reference configuration is any configuration that can be physically occupied by the body — it could be the initial configuration, but need not be.\n\n\n\n\n\n\n\n\n\nWe denote the position vector from a chosen fixed origin to a material point in the reference configuration as \\({\\bf R}\\). The position vector to the same material point in the current configuration is \\({\\bf r}\\).\nThe motion of the body is described by \\[\\begin{align}\n    {\\bf r} = \\bchi({\\bf R},t).\n\\end{align}\\]\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: What makes a body rigid?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nIn this class, we consider only rigid bodies. If we choose two points on a rigid body, the distance between them is always constant. Also, angles between material lines on a rigid body are constant.\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Under what conditions do we consider a rigid body to be a particle?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nIn the beginning of the class, we consider particles. Particles are idealized rigid bodies whose rotational inertia is ignored.",
+    "text": "Consider a body \\(\\mathcal{B}\\) in three-dimensional Euclidean space \\(\\mathbb{E}^3\\).\n\n\n\n\n\n\n\n\n\nIn general, bodies are deformable continua. We depict continua as in the above figure and refer to them as continuum potatoes.\nPoint or distributed forces or moments can be applied to a body’s surface or throughout its volume. For example, a body resting on a table has contact forces on the surface touching the table, while weight acts on all points in the body.\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: How do we know if a body has moved or deformed?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n…\n\n\n\n\n\nConsider a reference configuration for this body. A reference configuration is any configuration that can be physically occupied by the body — it could be the initial configuration, but need not be.\n\n\n\n\n\n\n\n\n\nWe denote the position vector from a chosen fixed origin to a material point in the reference configuration as \\({\\bf R}\\). The position vector to the same material point in the current configuration is \\({\\bf r}\\).\nThe motion of the body is described by \\[\\begin{align}\n    {\\bf r} = \\bchi({\\bf R},t).\n\\end{align}\\]\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: What makes a body rigid?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nIn this class, we consider only rigid bodies. If we choose two points on a rigid body, the distance between them is always constant. Also, angles between material lines on a rigid body are constant.\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Under what conditions do we consider a rigid body to be a particle?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nIn the beginning of the class, we consider particles. Particles are idealized rigid bodies whose rotational inertia is ignored.",
     "crumbs": [
       "Preliminaries",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>A Continuum Mechanics Perspective</span>"
@@ -375,78 +364,78 @@
   {
     "objectID": "particle_dynamics/basic_particle_kinematics.html",
     "href": "particle_dynamics/basic_particle_kinematics.html",
-    "title": "7  Basic Particle Kinematics Concepts",
+    "title": "7  Particle Kinematics",
     "section": "",
     "text": "7.1 Position, Velocity, and Acceleration\nConsider a particle moving in \\(\\mathbb{E}^3\\). Its position vector relative to a fixed origin \\(O\\) is denoted by \\({\\bf r} \\in \\mathbb{E}^3\\). As time \\(t\\) evolves, so does \\({\\bf r}(t)\\).\nLet \\(\\Delta t\\) be a finite time elapsed: \\[\\begin{align}\n    \\Delta{\\bf r} = {\\bf r}(t+\\Delta t)-{\\bf r}(t).\n\\end{align}\\] As \\(\\Delta t \\rightarrow 0\\), \\(\\Delta t\\) becomes \\(dt\\) and \\(\\Delta {\\bf r}\\) becomes \\(d{\\bf r}\\).\nThe (absolute) velocity vector \\({\\bf v}\\) of the particle is \\[\\begin{align}\n    {\\bf v} = \\frac{d{\\bf r}}{dt}=\\dot{\\bf r} = \\lim_{\\Delta t \\rightarrow 0}\\frac{{\\bf r}(t+\\Delta t)-{\\bf r}(t)}{\\Delta t}.\n\\end{align}\\]\nThe speed of the particle is the magnitude of the velocity vector \\(v = \\lnorm{\\bf v}\\rnorm\\).\nThe (absolute) acceleration is \\[\\begin{align}\n    {\\bf a} = \\frac{d{\\bf v}}{dt} = \\dot{\\bf v} = \\ddot{\\bf r} = \\frac{d^2{\\bf r}}{dt^2}.\n\\end{align}\\]",
     "crumbs": [
       "Particle Dynamics",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Particle Kinematics Concepts</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Particle Kinematics</span>"
     ]
   },
   {
     "objectID": "particle_dynamics/basic_particle_kinematics.html#position-velocity-and-acceleration",
     "href": "particle_dynamics/basic_particle_kinematics.html#position-velocity-and-acceleration",
-    "title": "7  Basic Particle Kinematics Concepts",
+    "title": "7  Particle Kinematics",
     "section": "",
     "text": "TipThink!\n\n\n\nQuestion: What is the direction of the velocity vector?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n\\({\\bf v}\\) is always tangent to the path.",
     "crumbs": [
       "Particle Dynamics",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Particle Kinematics Concepts</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Particle Kinematics</span>"
     ]
   },
   {
     "objectID": "particle_dynamics/basic_particle_kinematics.html#arc-length-and-the-unit-tangent-vector",
     "href": "particle_dynamics/basic_particle_kinematics.html#arc-length-and-the-unit-tangent-vector",
-    "title": "7  Basic Particle Kinematics Concepts",
+    "title": "7  Particle Kinematics",
     "section": "7.2 Arc-Length and the Unit Tangent Vector",
     "text": "7.2 Arc-Length and the Unit Tangent Vector\nDefine the arc-length parameter \\(s\\) such that \\[\\begin{align}\n    \\frac{ds}{dt} = \\lnorm {\\bf v}\\rnorm.\n\\end{align}\\]\n\\(\\frac{ds}{dt}\\) is the speed of the particle. Recall that \\({\\bf v} = \\frac{d{\\bf r}}{dt}\\), so \\[\\begin{align}\n    \\frac{ds}{dt} = \\lnorm\\frac{d{\\bf r}}{dt}\\rnorm.\n\\end{align}\\]\nSo \\(ds\\) is the length of the differential \\(d{\\bf r}\\) along the curve. Integrating: \\[\\begin{align}\n    s(t)-s_0 = \\int_{t_0}^t\\frac{ds}{dt}(\\tau)d\\tau = \\int_{t_0}^t\\sqrt{{\\bf v}(\\tau)\\cdot{\\bf v}(\\tau)}\\,d\\tau.\n\\end{align}\\]\nNotes:\n\n\\(s(t)-s_0\\) is the distance traveled by the particle along its path \\(\\mathcal{C}\\) during the time interval \\([t_0, t]\\).\n\\(s(t_0)=s_0\\) where \\(t_0\\) and \\(s_0\\) are initial conditions.\nThe dummy variable \\(\\tau\\) is used (as opposed to \\(t\\)) when evaluating this integral because we are integrating the speed as it varies between \\(t_0\\) and \\(t\\).\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Under what conditions is \\(s(t)\\) invertible so that \\(t(s)\\) is well defined?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nIf the function \\(s(t)\\) is one-to-one, it can be inverted, and time can be written in terms of arc-length \\(t = t(s)\\).\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Why is \\[\\begin{align}\n    s(t)-s_0 \\neq \\lnorm {\\bf r}(t)-{\\bf r}_0\\rnorm?\n\\end{align}\\] Under what conditions does the equality hold?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nThe equality holds under rectilinear motion or over an infinitesimal time interval.\n\n\n\n\n\nWe define the unit tangent vector \\({\\bf e}_t\\): \\[\\begin{align}\n    \\frac{\\bf v}{\\lnorm{\\bf v}\\rnorm} = {\\bf e}_t, \\qquad {\\bf v} = \\frac{d{\\bf r}}{dt} = \\frac{d{\\bf r}}{ds}\\frac{ds}{dt} = \\dot{s}{\\bf e}_t.\n\\end{align}\\]\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Verify that \\({\\bf e}_t\\) is a unit vector.\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n…\n\n\n\n\n\nNote the relationships \\[\\begin{align*}\n    {\\bf v} &= \\frac{d{\\bf r}(t)}{dt} = \\frac{d{\\bf r}}{ds}\\frac{ds}{dt},\\\\\n    {\\bf a} &= \\frac{d{\\bf v}(t)}{dt} = \\frac{d^2{\\bf r}}{ds^2}\\lp\\frac{ds}{dt}\\rp^2+\\frac{d{\\bf r}}{ds}\\frac{d^2 s}{dt^2}.\n\\end{align*}\\]\nNotice: the acceleration vector is due to changes in both the magnitude and direction of the velocity vector.\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Is the unit vector \\({\\bf e}_t\\) constant in general? Under what conditions is it constant?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nNo. It is constant only during rectilinear motion in a fixed direction.\n\n\n\n\n\n\n7.2.1 Example\nConsider a particle moving in space with position vector \\[\\begin{align}\n    {\\bf r}(t) = R_0\\lp\\cos(\\omega t){\\bf E}_x+\\sin(\\omega t){\\bf E}_y\\rp.\n\\end{align}\\]\nCalculate and plot \\({\\bf v}\\), \\({\\bf a}\\), \\({\\bf v}\\times {\\bf a}\\), \\(\\lnorm{\\bf r}\\rnorm\\). Show that the motion satisfies: \\[\\begin{align}\n    \\ddot{x}+\\omega^2 x=0, \\qquad \\ddot{y}+\\omega^2 y=0.\n\\end{align}\\]\n\n\n\n\n\n\nWarningExample\n\n\n\nQuestion: Consider a particle \\(P\\) moving in \\(\\mathbb{E}^2\\) with position vector \\[\\begin{align*}\n    {\\bf r} = R_0\\lp\\cos\\lp\\omega t\\rp{\\bf E}_x+\\sin\\lp\\omega t\\rp{\\bf E}_y\\rp.\n\\end{align*}\\] Calculate \\({\\bf r}\\times{\\bf a}\\) and \\({\\bf r}\\cdot{\\bf a}\\). Describe the motion of the particle.\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nThe velocity and acceleration are: \\[\\begin{align*}\n    {\\bf v} &= R_0\\omega\\lp-\\sin\\lp\\omega t\\rp{\\bf E}_x+\\cos\\lp\\omega t\\rp{\\bf E}_y\\rp,\\\\\n    {\\bf a} &= -R_0\\omega^2\\lp\\cos\\lp\\omega t\\rp{\\bf E}_x+\\sin\\lp\\omega t\\rp{\\bf E}_y\\rp.\n\\end{align*}\\] Note that \\(\\dot{\\bf E}_x={\\bf 0}\\) and \\(\\dot{\\bf E}_y={\\bf 0}\\) since the basis is fixed, and the chain rule applies.\nNoting that \\({\\bf a} = -\\omega^2{\\bf r}\\): \\[\\begin{align*}\n    {\\bf r}\\times{\\bf a} = {\\bf r}\\times(-\\omega^2{\\bf r}) = -\\omega^2{\\bf r}\\times{\\bf r} = {\\bf 0}.\n\\end{align*}\\]\nFor \\({\\bf r}\\cdot{\\bf a}\\): \\[\\begin{align*}\n    {\\bf r}\\cdot{\\bf a} &= -R_0^2\\omega^2\\lp\\cos^2(\\omega t)+\\sin^2(\\omega t)\\rp = -R_0^2\\omega^2.\n\\end{align*}\\]",
     "crumbs": [
       "Particle Dynamics",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Particle Kinematics Concepts</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Particle Kinematics</span>"
     ]
   },
   {
     "objectID": "particle_dynamics/basic_particle_kinematics.html#cartesian-coordinates",
     "href": "particle_dynamics/basic_particle_kinematics.html#cartesian-coordinates",
-    "title": "7  Basic Particle Kinematics Concepts",
+    "title": "7  Particle Kinematics",
     "section": "7.3 Cartesian Coordinates",
     "text": "7.3 Cartesian Coordinates\n\\(\\{{\\bf E}_x,{\\bf E}_y,{\\bf E}_z\\}\\) is a basis for \\(\\mathbb{E}^3\\). Since this basis is fixed, we have: \\[\\begin{align}\n    {\\bf r} &= x{\\bf E}_x+y{\\bf E}_y+z{\\bf E}_z,\\\\\n    {\\bf v} &= \\dot{x}{\\bf E}_x+\\dot{y}{\\bf E}_y+\\dot{z}{\\bf E}_z,\\\\\n    {\\bf a} &= \\ddot{x}{\\bf E}_x+\\ddot{y}{\\bf E}_y+\\ddot{z}{\\bf E}_z.\n\\end{align}\\]\nLater we will also use the cylindrical polar basis \\(\\{{\\bf e}_r,{\\bf e}_\\theta,{\\bf E}_z\\}\\) and the Serret-Frenet triad \\(\\{{\\bf e}_t,{\\bf e}_n,{\\bf e}_b\\}\\).",
     "crumbs": [
       "Particle Dynamics",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Particle Kinematics Concepts</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Particle Kinematics</span>"
     ]
   },
   {
     "objectID": "particle_dynamics/basic_particle_kinematics.html#rectilinear-motion",
     "href": "particle_dynamics/basic_particle_kinematics.html#rectilinear-motion",
-    "title": "7  Basic Particle Kinematics Concepts",
+    "title": "7  Particle Kinematics",
     "section": "7.4 Rectilinear Motion",
     "text": "7.4 Rectilinear Motion\n\nrectus = straight, linea = line\n\nDue to constraints or initial conditions, the body moves on a straight line, e.g. a car on a straight road or a ball tossed vertically.\nWe take \\({\\bf E}_x\\) parallel to the line and \\({\\bf c}\\) to be a constant vector. Then: \\[\\begin{align}\n    {\\bf r}(t) &= x(t){\\bf E}_x+{\\bf c},\\\\\n    {\\bf v}(t) &= \\dot{x}{\\bf E}_x = v(t){\\bf E}_x,\\\\\n    {\\bf a}(t) &= \\ddot{x}{\\bf E}_x = a(t){\\bf E}_x.\n\\end{align}\\]\n\\(\\frac{ds}{dt}=\\left|\\frac{dx}{dt}\\right|\\), so unless \\(\\dot{x}&gt;0\\) or \\(\\dot{x}&lt;0\\) throughout, \\(x\\) and \\(s\\) cannot be easily interchanged.\n\n7.4.1 Identities for Rectilinear Motion\nRecall \\(v = \\frac{dx}{dt}\\) and \\(a = \\frac{dv}{dt}\\). Applying the chain rule: \\[\\begin{align}\n    a = \\frac{dv}{dt} = \\frac{dv}{dx}\\frac{dx}{dt} = v\\frac{dv}{dx}.\n\\end{align}\\]\nThree useful identities: \\[\\begin{align}\n    ds &= v\\, dt, \\qquad dv = a\\, dt, \\qquad v\\,dv = a\\,ds.\n\\end{align}\\]\n\n\n7.4.2 Given Acceleration as a Function of Time\nFrom \\(dv = a\\, dt\\): \\[\\begin{align}\n    v(t)-v(t_0) = \\int_{t_0}^{t}a(\\tilde{t})\\,d\\tilde{t}.\n\\end{align}\\] From \\(ds = v\\, dt\\): \\[\\begin{align}\n    s(t_1)-s(t_0) = \\int_{t_0}^{t_1}v(\\tilde{t})\\,d\\tilde{t}.\n\\end{align}\\]\n\n\n7.4.3 Given Acceleration as a Function of Speed\nFrom \\(dv = a\\, dt\\) with \\(a = a(v)\\): \\[\\begin{align}\n    t(v) - t(v_0) = \\int_{v_0}^{v}\\frac{d\\tilde{v}}{a(\\tilde{v})}.\n\\end{align}\\] Using \\(a = v\\frac{dv}{ds}\\): \\[\\begin{align}\n    s(t)-s_0 = \\int_{v_0}^{v}\\frac{\\tilde{v}\\,d\\tilde{v}}{a(\\tilde{v})}.\n\\end{align}\\]\n\n\n7.4.4 Given Acceleration as a Function of Displacement\nUsing \\(v\\,dv = a\\,ds\\) with \\(a = a(s)\\): \\[\\begin{align}\n    \\frac{1}{2}\\lp v^2(s)-v^2(s_0)\\rp = \\int_{s_0}^{s}a(\\tilde{s})\\,d\\tilde{s}.\n\\end{align}\\]\n\n7.4.4.1 Constant Acceleration\nExample: Gravity. Throw a ball up; take the hand as origin. Here \\(a = -g\\).\n\\[\\begin{align}\n    v(t) &= v_0-gt,\\\\\n    s(t) &= s_0+v_0t-\\frac{g}{2}t^2.\n\\end{align}\\]\nExample: Vehicle Braking. Using \\(v\\,dv = a\\,ds\\): \\[\\begin{align}\n    v^2(s)-v^2(s_0) = 2a\\,\\Delta s.\n\\end{align}\\]",
     "crumbs": [
       "Particle Dynamics",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Particle Kinematics Concepts</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Particle Kinematics</span>"
     ]
   },
   {
     "objectID": "particle_dynamics/basic_particle_kinematics.html#summary",
     "href": "particle_dynamics/basic_particle_kinematics.html#summary",
-    "title": "7  Basic Particle Kinematics Concepts",
+    "title": "7  Particle Kinematics",
     "section": "7.5 Summary",
     "text": "7.5 Summary\nKinematics in Cartesian coordinates: \\[\\begin{align}\n    \\mathbf{r} &= x\\mathbf{E}_x + y\\mathbf{E}_y + z\\mathbf{E}_z, \\\\\n    \\mathbf{v} &= \\dot{x}\\mathbf{E}_x + \\dot{y}\\mathbf{E}_y + \\dot{z}\\mathbf{E}_z, \\\\\n    \\mathbf{a} &= \\ddot{x}\\mathbf{E}_x + \\ddot{y}\\mathbf{E}_y + \\ddot{z}\\mathbf{E}_z.\n\\end{align}\\]\nRectilinear motion (along \\(\\mathbf{E}_x\\)): \\(\\mathbf{r}=x\\mathbf{E}_x\\), \\(\\mathbf{v}=\\dot{x}\\mathbf{E}_x\\), \\(\\mathbf{a}=\\ddot{x}\\mathbf{E}_x\\), and \\(a = v\\,dv/dx\\).",
     "crumbs": [
       "Particle Dynamics",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Particle Kinematics Concepts</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Particle Kinematics</span>"
     ]
   },
   {
     "objectID": "particle_dynamics/basic_particle_kinematics.html#exercises",
     "href": "particle_dynamics/basic_particle_kinematics.html#exercises",
-    "title": "7  Basic Particle Kinematics Concepts",
+    "title": "7  Particle Kinematics",
     "section": "7.6 Exercises",
     "text": "7.6 Exercises\nThe following problems are from Set 03 – Rectilinear Motion.\n1. [MKB 2/24] Solve \\(a(x)\\) as a piecewise function. (ans. \\(v = 8\\) ft/sec)\n2. [MKB 2/28] Take \\(\\mathbf{E}_x\\) along the horizontal; origin at the location of the plane when the parachute deploys (\\(v=200\\) mi/hr). Convert mi to ft and hr to sec. (ans. \\(s = 5810\\) ft)\n3. [MKB 2/25] Take \\(\\mathbf{E}_y\\) vertically upwards; origin at the initial position of the rocket. The acceleration is \\[\\begin{align}\n    a = \\begin{cases} 3 \\text{ m/s}^2 & 0\\le t &lt; 8\\,\\text{s} \\\\ -9.81 \\text{ m/s}^2 & 8\\,\\text{s}\\le t &lt; t_{\\mathrm{top}} \\\\ 0 & t_{\\mathrm{top}} &lt; t \\le t_{\\mathrm{end}} \\end{cases}\n\\end{align}\\] (ans. \\(h = 125.4\\) m, total time \\(= 157.9\\) s)\n4. [MKB 2/22] (See problem set for figure.)\n\n\n\nMKB 2/21.",
     "crumbs": [
       "Particle Dynamics",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Particle Kinematics Concepts</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Particle Kinematics</span>"
     ]
   },
   {
