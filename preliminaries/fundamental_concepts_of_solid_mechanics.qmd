@@ -1,4 +1,6 @@
-# Fundamental concepts of solid mechanics
+---
+title: "Fundamental Concepts of Solid Mechanics"
+---
 
 This section is adapted from chapter 1 of [Introduction to Solid Mechanics - An Integrated Approach](https://link.springer.com/book/10.1007/978-1-4614-6768-7) by Lubliner and Papadopoulos [@lubliner2017introduction].
 
@@ -55,8 +57,13 @@ Forces are interactions between bodies that cause them to move, and more specifi
 ## Gravitational force
 All bodies on or near the earth are subject to the earth's gravitational force and, as shown by Galileo in his famous experiments, will fall toward the center of the earth (unless prevented from doing so by other forces) with the same acceleration; the magnitude of this acceleration is denoted by $g$.
 
-## $F = ma$
 It was later shown by Newton, on the basis of Kepler's laws of planetary motion, that the magnitude of the acceleration (with respect to a frame of reference based on the "fixed" stars) due to gravitational force between any two bodies (idealized as particles) is inversely proportional to the square of the distance between them, and for each body it is proportional to the quantity of matter (or mass) of the other body. The product of mass and acceleration is therefore equal and opposite for the two bodies and may be identified with the force exerted on each body by the other.
+
+{{< video https://youtu.be/icrTzMozNgo title="Introduction to Dynamics" >}}
 
 ## Equilibrium
 If a body's acceleration is zero, then it is at rest or in a uniform motion. In this case, the forces is said to be in equilibrium. The study of equilibrium is known as statics and constitutes one of the main subjects of this book. Traditionally, statics deals only (or at least primarily) with rigid bodies, while deformable bodies are studied in courses historically called strength of materials (or, more recently, mechanics of materials). In this book [@lubliner2017introduction], the statics of rigid and deformable solid bodies will be studied in an integrated manner.
+
+
+
+

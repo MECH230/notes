@@ -126,3 +126,45 @@ If instead a follower force ${\bf P}$ is applied perpendicular to the bar at its
 ## Energy Conservation
 
 As with particles and systems of particles, this theorem can be used to establish conservation of the total mechanical energy of a rigid body, $E = T + U$, when all work-doing forces and moments are conservative.
+
+
+## Summary
+
+**Koenig decomposition** of kinetic energy:
+\begin{align}
+    T = \tfrac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C + \tfrac{1}{2}\mathbf{H}^C\cdot\boldsymbol{\omega}.
+\end{align}
+If a point $O$ has zero velocity: $T = \tfrac{1}{2}\mathbf{H}^O\cdot\boldsymbol{\omega}$.
+
+**Work–energy theorem for a rigid body**:
+\begin{align}
+    \frac{dT}{dt} = \mathbf{F}\cdot\mathbf{v}_C + \mathbf{M}\cdot\boldsymbol{\omega} = \sum_i \mathbf{F}_i\cdot\mathbf{v}_i + M_e\omega.
+\end{align}
+
+## Lecture Videos
+
+{{< video https://youtu.be/acmYFwl8rRo title="Introducing the work–energy theorem for a rigid body" width="70%" >}}
+
+{{< video https://youtu.be/3HRYCW7wiRs title="Deriving the kinetic energy of a rigid body" width="70%" >}}
+
+{{< video https://youtube.com/shorts/3bu7kY8JLpM title="Kinetic energy – rigid body rotating about a fixed point" width="70%" >}}
+
+{{< video https://youtu.be/vCROTYHJRow title="Deriving the work–energy theorem for a rigid body" width="70%" >}}
+
+
+## Exercises
+
+*The following problems are from Set 23 – Work–Energy Theorem for Rigid Bodies.*
+
+**1.** [MKB 06-096] *(ans. $v_A=\sqrt{2gx\sin\theta}$, $v_B=\sqrt{gx\sin\theta}$)*
+
+**2.** [MKB 06-099] *(ans. $\omega_{\max}=0.861\sqrt{g/b}$)*
+
+**3.** [06-108] *(ans. (a) $k=93.3$ N/m; (b) $\omega=1.484$ rad/s CW)*
+
+**4.** [06-112] *(ans. $x=0.211l$, $\omega_{\max}=1.861\sqrt{g/l}$ CW)*
+
+**5.** [06-118] *(ans. $v_A=\sqrt{3}\sqrt{\frac{M\theta}{m}-gb(1-\cos\theta)}$ right)*
+
+{{< video https://youtu.be/-jdslhyHAIY title="Solution – Problem 06/118" width="70%" >}}
+

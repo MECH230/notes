@@ -73,3 +73,9 @@ Earth's parameters:
 
 - $M_e = 5.972 \times 10^{24}$ kg
 - $R_e = 6.371 \times 10^6$ m
+
+
+## Lecture Videos
+
+{{< video https://youtu.be/nHnDuCWtacY title="Gravitational force model" width="70%" >}}
+

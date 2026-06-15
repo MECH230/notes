@@ -7,14 +7,16 @@ title: "Collisions"
 ::: {.callout-tip title="Think!"}
 **Question:** What happens in reality when two cars collide?
 
-**Answer:** In reality, colliding bodies deform — possibly permanently — and their rotational inertia may change.
+::: {.callout-note title="Answer" collapse="true"}
+In reality, colliding bodies deform — possibly permanently — and their rotational inertia may change.
+:::
 :::
 
 Ignoring rotational motion, the simplest model uses a mass particle for each body. Since particles do not deform, we introduce the **coefficient of restitution** $e$.
 
 ## Frictionless, Oblique, Central Impact of Two Bodies
 
-![Figure from O. M. O'Reilly's Dynamics Primer](../figures/collisions/collision-stages.png){width=75%}
+![Figure from O. M. O'Reilly's Dynamics Primer](../figures/collisions/collision-stages.png){width=50%}
 
 ### Assumptions
 
@@ -35,11 +37,12 @@ Let ${\bf n}$ be the common unit normal between the bodies at contact. Define $\
 ::: {.callout-tip title="Think!"}
 **Question:** Draw the FBDs of $m_1$ and $m_2$ separately during compression and restitution.
 
-**Answer:**
+::: {.callout-note title="Answer" collapse="true"}
 - ${\bf F}_{1_d} = F_{1_d}{\bf n}$: force exerted by body 2 on body 1 during compression.
 - ${\bf F}_{1_r} = F_{1_r}{\bf n}$: force exerted by body 2 on body 1 during restitution.
 - ${\bf F}_{2_d}$, ${\bf F}_{2_r}$: reaction forces by body 1 on body 2.
 - All other forces have resultants ${\bf R}_1$ and ${\bf R}_2$.
+:::
 :::
 
 Since the collision duration is very small, the impulses of ${\bf R}_1$ and ${\bf R}_2$ vanish. Approximating:
@@ -57,10 +60,11 @@ With equal and opposite collisional forces (${\bf F}_{1_d}=-{\bf F}_{2_d}$, ${\b
 ::: {.callout-tip title="Think!"}
 **Question:** What does $e=0$ and $e=1$ mean?
 
-**Answer:**
+::: {.callout-note title="Answer" collapse="true"}
 - $e=1$: perfectly **elastic** collision — compression impulse equals restitution impulse.
 - $e=0$: perfectly **plastic** collision — no restitution impulse.
 - In general $0\leq e\leq 1$, determined experimentally.
+:::
 :::
 
 ### The Coefficient of Restitution in Terms of Velocities
@@ -89,7 +93,9 @@ When one object impacts a massive constrained object (e.g. a wall), the velocity
 ::: {.callout-warning title="Example"}
 **Question:** Given particles $m_1$ and $m_2$ with pre-impact velocities ${\bf v}_1$ and ${\bf v}_2$, find the post-impact velocities. The coefficient of restitution $e$ is given.
 
-**Answer:** There are 4 unknowns (components of ${\bf v}_1'$ and ${\bf v}_2'$ along ${\bf n}$, ${\bf t}_1$, ${\bf t}_2$). Along the tangent directions: velocities are unchanged. Along ${\bf n}$: we have the conservation of linear momentum and the restitution equation.
+::: {.callout-note title="Answer" collapse="true"}
+There are 4 unknowns (components of ${\bf v}_1'$ and ${\bf v}_2'$ along ${\bf n}$, ${\bf t}_1$, ${\bf t}_2$). Along the tangent directions: velocities are unchanged. Along ${\bf n}$: we have the conservation of linear momentum and the restitution equation.
+:::
 :::
 
 ## Energy Loss During Impact
@@ -112,5 +118,15 @@ Hence, for $0\leq e\leq 1$, kinetic energy cannot increase as a result of impact
 ::: {.callout-tip title="Think!"}
 **Question:** What does a negative $e$ mean for a ball impacting a wall?
 
-**Answer:** When $e < 0$, ${\bf v}_1'\cdot{\bf n}-{\bf v}_2'\cdot{\bf n}$ has the same sign as ${\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}$, meaning the bodies pass through each other during impact. To prevent this, we generally require $e \geq 0$.
+::: {.callout-note title="Answer" collapse="true"}
+When $e < 0$, ${\bf v}_1'\cdot{\bf n}-{\bf v}_2'\cdot{\bf n}$ has the same sign as ${\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}$, meaning the bodies pass through each other during impact. To prevent this, we generally require $e \geq 0$.
 :::
+:::
+
+
+## Lecture Videos
+
+{{< video https://youtu.be/0GcIPJgpwN4 title="Collisions" width="70%" >}}
+
+{{< video https://youtu.be/4zI-bUmKLKI title="Two particles impacting in the plane" width="70%" >}}
+

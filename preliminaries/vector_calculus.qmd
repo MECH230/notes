@@ -1,4 +1,6 @@
-# Vector calculus
+---
+title: "Vector Calculus"
+---
 
 ## Scaling Vectors
 
@@ -8,7 +10,9 @@ We can scale the vector ${\bf a}$.
 
 Question: Consider a vector ${\bf a}$. Plot the vectors $2{\bf a}$, $-{\bf a}$, $\frac{1}{2}{\bf a}$
 
-Answer: ...
+::: {.callout-note title="Answer" collapse="true"}
+...
+:::
 
 :::
 
@@ -16,17 +20,15 @@ Answer: ...
 
 Question: Give the expression for a unit vector in the direction of ${\bf a}$? Opposite to ${\bf a}$.
 
-Answer:
-
+::: {.callout-note title="Answer" collapse="true"}
 - $\frac{\bf a}{\lnorm{\bf a}\rnorm}$ is a unit vector in the direction of ${\bf a}$.
 - $-\frac{\bf a}{\lnorm{\bf a}\rnorm}$ is a unit vector in the direction opposite to that of ${\bf a}$.
-
-:::
 
 ```{r}
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 3
 \begin{tikzpicture}
     \coordinate (O) at (0,0);
     \coordinate (V) at (4,0);
@@ -39,16 +41,24 @@ Answer:
 \end{tikzpicture}
 ```
 
+:::
+
+:::
+
+
+
 ## Vector summation and subtraction
 
 Vectors can be added using the parallelogram law or by placing vectors in a head to tail sequence.
 
 The vector difference ${\bf a}-{\bf b}$ points from the tip of ${\bf b}$ to the tip of ${\bf a}$.
 
+::: {#fig-vec-add-sub layout-ncol=2}
+
 ```{r}
 #| engine: tikz
 #| echo: false
-#| fig-align: center
+#| fig-cap: "Vector addition via parallelogram law and tip to tail."
 \usetikzlibrary{arrows}
 \begin{tikzpicture}[>=stealth, scale=1.0]
     \draw[->, thick, blue] (0,0) -- (2,2) node[midway, above left] {${\bf a}$};
@@ -66,7 +76,7 @@ The vector difference ${\bf a}-{\bf b}$ points from the tip of ${\bf b}$ to the 
 ```{r}
 #| engine: tikz
 #| echo: false
-#| fig-align: center
+#| fig-cap: "Vector subtraction as $\\mathbf{a}-\\mathbf{b}$ using the parallelogram law. This can be also done using head to tail."
 \usetikzlibrary{arrows}
 \begin{tikzpicture}[>=stealth, scale=1.0]
     \draw[->, thick, blue] (0,0) -- (2,2) node[midway, above left] {${\bf a}$};
@@ -81,6 +91,8 @@ The vector difference ${\bf a}-{\bf b}$ points from the tip of ${\bf b}$ to the 
 \end{tikzpicture}
 ```
 
+:::
+
 ## The dot (scalar) product
 
 Consider the three dimensional Euclidean space $\mathbb{E}^3 = (\mathbb{R}^3,\cdot)$ which is the three-dimensional space $\mathbb{R}^3$ and a dot product defined as follows.
@@ -89,6 +101,7 @@ Consider the three dimensional Euclidean space $\mathbb{E}^3 = (\mathbb{R}^3,\cd
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 2
 \begin{tikzpicture}
     \coordinate (O) at (0,0);
     \coordinate (A) at (3,0);
@@ -111,11 +124,12 @@ Let ${\bf a}, {\bf b} \in  \mathbb{E}^3$.
 
 Question: What is the result of ${\bf a}\cdot{\bf a}$?
 
-Answer:
+::: {.callout-note title="Answer" collapse="true"}
 The magnitude of a vector ${\bf a}$ is given by
 \begin{align}
     {\bf a}\cdot{\bf a} = \lnorm{\bf a}\rnorm^2 \implies \lnorm{\bf a}\rnorm = \sqrt{{\bf a}\cdot{\bf a}}.
 \end{align}
+:::
 
 :::
 
@@ -123,7 +137,9 @@ The magnitude of a vector ${\bf a}$ is given by
 
 Question: Is ${\bf a}\cdot{\bf b} = {\bf b}\cdot{\bf a}$? Why?
 
-Answer: Yes, the dot product is commutative. This can be shown using the definition of the dot product.
+::: {.callout-note title="Answer" collapse="true"}
+Yes, the dot product is commutative. This can be shown using the definition of the dot product.
+:::
 
 :::
 
@@ -135,6 +151,7 @@ Suppose ${\bf u}$ is a unit vector: ${\bf u}\cdot{\bf u}=1$.
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 3
 \begin{tikzpicture}
     \draw[thick,->] (0,0) -- (4,3) node[above, midway] {${\bf b}$};
     \draw[thick,->] (0,0) -- (1,0) node[above] {${\bf u}$};
@@ -148,12 +165,13 @@ Suppose ${\bf u}$ is a unit vector: ${\bf u}\cdot{\bf u}=1$.
 
 Question: Calculate ${\bf b}\cdot{\bf u}$
 
-Answer:
+::: {.callout-note title="Answer" collapse="true"}
 \begin{align}
     {\bf b}\cdot{\bf u} = \lnorm{\bf b}\rnorm \underbrace{\lnorm{\bf u}\rnorm}_{1}\cos(\theta) = \lnorm{\bf b}\rnorm\cos(\theta).
 \end{align}
 
 Notice the right triangle in the above figure. Verify that ${\bf b}\cdot{\bf u}$ is the orthogonal projection of ${\bf b}$ in the direction of ${\bf u}$.
+:::
 
 :::
 
@@ -172,8 +190,6 @@ This is the projection of ${\bf b}$ in the direction perpendicular to ${\bf u}$.
 
 Remember that $\cos^2(\theta)+\sin^2(\theta)=1$.
 
-![ ](../figures/vector_calculus/cartesian_projection.PNG)
-
 ## Cross Product
 
 We also define the cross product
@@ -188,7 +204,203 @@ where ${\bf n}$ is a unit vector normal to the plane formed by ${\bf a}$ and ${\
 
 Question: Is ${\bf a}\times{\bf b} = {\bf b}\times{\bf a}$?
 
-Answer:
+::: {.callout-note title="Answer" collapse="true"}
 No, the cross product is not commutative. These vectors are opposite.
+:::
 
 :::
+
+## Vector Representation Using Bases
+
+We can assign a fixed (right handed) Cartesian basis for $\mathbb{E}^3$ denoted by $\{{\bf E}_x, {\bf E}_y, {\bf E}_z\}$. These three vectors are orthonormal (i.e. they each have a unit magnitude and are mutually perpendicular). Other common notations for orthonormal bases are $\{{\bf E}_1, {\bf E}_2, {\bf E}_3\}$ and $\{{\bf I}, {\bf J}, {\bf K}\}$. We will reserve upper case letters for fixed bases and lower case letters for moving bases.
+
+![ ](../figures/vector_calculus/cartesian_projection.PNG){width=50%}
+
+::: {.callout-tip title="Think!"}
+
+Question: Calculate ${\bf E}_x \times {\bf E}_x$, ${\bf E}_x \times {\bf E}_y$, etc.
+
+::: {.callout-note title="Answer" collapse="true"}
+...
+:::
+
+:::
+
+::: {.callout-tip title="Think!"}
+
+Question: Calculate ${\bf E}_x \cdot {\bf E}_x$, ${\bf E}_x \cdot {\bf E}_y$, etc.
+
+::: {.callout-note title="Answer" collapse="true"}
+...
+:::
+
+:::
+
+We can represent any vector ${\bf b}$ as
+
+\begin{align}
+    {\bf a} &= a_x {\bf E}_x + a_y {\bf E}_y + a_z {\bf E}_z,\\
+    {\bf b} &= b_x {\bf E}_x + b_y {\bf E}_y + b_z {\bf E}_z.
+\end{align}
+
+We can write the scalar product and cross product of these vectors in terms of their Cartesian components.
+
+\begin{align}
+    {\bf a} \cdot {\bf b} &= (a_x {\bf E}_x + a_y {\bf E}_y + a_z {\bf E}_z)\cdot(b_x {\bf E}_x + b_y {\bf E}_y + b_z {\bf E}_z)\\
+    &= a_x b_x + a_y b_y + a_z b_z\\
+    {\bf a} \times {\bf b} &= (a_x {\bf E}_x + a_y {\bf E}_y + a_z {\bf E}_z)\times (b_x {\bf E}_x + b_y {\bf E}_y + b_z {\bf E}_z)\\
+    &= (a_y b_z - a_z b_y){\bf E}_x + (a_z b_x - a_x b_z){\bf E}_y + (a_x b_y - a_y b_x){\bf E}_z
+\end{align}
+
+
+## Differentiation of Vectors
+
+\begin{align}
+    \frac{d{\bf u}}{dt} &= \frac{du_x}{dt}{\bf E}_x + \frac{du_y}{dt}{\bf E}_y + \frac{du_z}{dt}{\bf E}_z + u_x\frac{d{\bf E}_x}{dt} + u_y\frac{d{\bf E}_y}{dt} + u_z\frac{d{\bf E}_z}{dt}\\
+    &= \frac{du_x}{dt}{\bf E}_x + \frac{du_y}{dt}{\bf E}_y + \frac{du_z}{dt}{\bf E}_z
+\end{align}
+
+\begin{align}
+    \frac{d}{dt}({\bf u}\cdot{\bf v}) = \frac{d{\bf u}}{dt}\cdot{\bf v} + {\bf u}\cdot\frac{d{\bf v}}{dt}
+\end{align}
+
+\begin{align}
+    \frac{d}{dt}({\bf u}\times{\bf v}) = \frac{d{\bf u}}{dt}\times{\bf v} + {\bf u}\times\frac{d{\bf v}}{dt}
+\end{align}
+
+## Sine Law and Cosine Law
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+#| fig-width: 3.5
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[>=stealth, scale=1.2]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (3.5,0);
+    \coordinate (C) at (2.5,1.5);
+    \draw[thick] (A) -- (B) node[midway, below] {$c$};
+    \draw[thick] (B) -- (C) node[midway, right] {$a$};
+    \draw[thick] (C) -- (A) node[midway, above left] {$b$};
+    \node[above right] at (C) {$C$};
+    \node[above left] at (A) {$A$};
+    \node[below right] at (B) {$B$};
+\end{tikzpicture}
+```
+
+Referring to the above triangle with interior angles $A$, $B$, and $C$ and with side lengths $a$, $b$, and $c$, the sine law and cosine law are respectively
+
+\begin{align}
+    \frac{\sin(A)}{a} &= \frac{\sin(B)}{b} = \frac{\sin(C)}{c},\\
+    c^2 &= a^2 + b^2 - 2ab\cos(C).
+\end{align}
+
+## Exercises
+
+*The following problems are from Set 01 – Vector Calculus.*
+
+**1.** Two chords are pulling on a hook with tensions $T_1 = 100$ N and $T_2 = 50$ N as shown. Using the parallelogram rule, determine the magnitude of the resultant force and the angle it makes with the horizontal. Do not introduce a Cartesian basis.
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+#| fig-width: 3
+\begin{tikzpicture}
+    % Draw the hook
+    \draw[thick] (0,0) arc[start angle=-90, end angle=200, radius=0.4cm];
+    \draw[thick] (0,0) -- (0,-1);
+    % tension 1
+    \draw[thick, blue, ->] (0,0.8) -- (2,2) node[right] {${\bf T}_1$};
+    \draw[thick] (0.5, 0.8) arc[start angle=0, end angle=45, radius=0.4cm];
+    \node at (1, 1) {$45^\circ$};
+    % tension 2
+    \draw[thick, blue, ->] (0,0.8) -- (-2, 2.5) node[left] {${\bf T}_2$};
+    \draw[thick] (-0.5, 1.2) arc[start angle=120, end angle=190, radius=0.4cm];
+    \node at (-1, 1) {$60^\circ$};
+    \draw[thick, dashed] (-4, 0.8) -- (4, 0.8);
+\end{tikzpicture}
+```
+
+**2.** Resolve the horizontal force $F$ into components along the $u$ and $v$ axes and determine the magnitudes of the components.
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+#| fig-width: 3
+\begin{tikzpicture}
+    % force F
+    \draw[thick, ->] (0,0) -- (2,0) node[right] {${\bf F}$};
+    % u-axis
+    \draw[thick, dashed] (-1,-1) -- (4, 4);
+    \draw[thick, ->] (1,1) -- (1.72,1.72) node[above, midway] {${\bf u}$};
+    \draw (2,2) -- (3,2) node[midway, below] {$1$};
+    \draw (3,2) -- (3,3) node[midway, right] {$1$};
+    % v-axis
+    \draw[thick, dashed] (-2,1) -- (4,-2);
+    \draw[thick, ->] (1,-0.5) -- (1.72, -0.86) node[below, midway] {${\bf v}$};
+    \draw (2,-1) -- (3,-1) node[midway, above] {$1$};
+    \draw (3,-1) -- (3,-1.5) node[midway, right] {$0.5$};
+\end{tikzpicture}
+```
+
+**3.** In Exercise 1, take unit vectors $\mathbf{I}$ and $\mathbf{J}$ to point horizontally leftwards and vertically upwards. The unit vector $\mathbf{K}$ completes the right-handed triad. Repeat Exercise 1 by resolving all forces in the Cartesian $\{\mathbf{I},\mathbf{J},\mathbf{K}\}$ basis.
+
+**4.** A particle moves in space with velocity
+\begin{align}
+    \mathbf{v}(t) = 2t^2\mathbf{E}_1 - \mathbf{E}_2 + (-5t+3)\mathbf{E}_3 \quad \text{m/s}.
+\end{align}
+(a) Calculate $\mathbf{v}$ at $t=1$ s. (b) Calculate $\mathbf{a}(t)\equiv\dot{\mathbf{v}}(t)$. (c) Given $\mathbf{r}(0)=2\mathbf{E}_3$, find $\mathbf{r}(t)$.
+
+**5.** A child at $B$ pulls a chord attached to the wall at $A$ with a force of $70$ N.
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+#| fig-width: 4
+\begin{tikzpicture}
+    % draw the axes
+    \draw[thick] (0,0) -- (4,0);
+    \draw[thick] (0,0) -- (0,8);
+    \draw[thick] (0,0) -- (-6,-3);
+    % origin and basis
+    \node at (0., -0.3) {$O$};
+    \draw[thick, ->] (3,1) -- (3,2) node[above] {${\bf E}_z$};
+    \draw[thick, ->] (3,1) -- (4,1) node[right] {${\bf E}_y$};
+    \draw[thick, ->] (3,1) -- (2, 0.5) node[left] {${\bf E}_x$};
+    % draw rectangle
+    \draw[dashed] (-5, -2.5) -- (-5, -1);
+    \draw[dashed] (-5, -1) -- (0,1.5);
+    \draw[dashed] (-5,-1) -- (-8,-1);
+    \draw[dashed] (-5,-2.5) -- (-8, -2.5);
+    \draw[dashed] (0,1.5) -- (-3,1.5);
+    \draw[dashed] (-8,-1) -- (-3,1.5);
+    \draw[dashed] (-8,-1) -- (-8,-2.5);
+    % draw rectangle dimensions
+    \draw[<->] (0,0.2) -- (-5,-2.3) node[midway, above] {12 ft};
+    \draw[<->] (-0.2,-0.1) -- (-0.2,1.4) node[midway, left] {6 ft};
+    \draw[<->] (-5, -2.3) -- (-8, -2.3) node[midway, above] {8 ft};
+    \draw[<->] (0.2, 0) -- (0.2, 6) node[midway, right] {30 ft};
+    % draw points A and B
+    \fill[black] (0,6) circle (0.1);
+    \node at (0.4,6) {$A$};
+    \fill[black] (-8,-1) circle (0.1);
+    \node at (-8.5,-1) {$B$};
+    \draw[thick] (0,6) -- (-8,-1) node[midway, right] {chord};
+\end{tikzpicture}
+```
+
+(a) Express the position vector $\mathbf{r}_A$ in Cartesian coordinates.
+(b) Express the position vector $\mathbf{r}_B$ in Cartesian coordinates.
+(c) Draw $\mathbf{r}_{B/A} = \mathbf{r}_B - \mathbf{r}_A$. Does it point from $B$ to $A$ or from $A$ to $B$?
+(d) Draw $\mathbf{r}_{A/B}$.
+(e) What is the tension force $\mathbf{T}$ in the cable?
+
+**6.** Referring to Exercises 1 and 3:
+
+(a) Calculate $\mathbf{T}_1\times\mathbf{T}_2$ without using a basis.
+(b) Express $\mathbf{T}_1$ and $\mathbf{T}_2$ in the Cartesian basis from Exercise 3 and verify part (a).
+(c) What is $\mathbf{T}_2\times\mathbf{T}_1$?

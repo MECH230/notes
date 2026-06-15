@@ -46,7 +46,7 @@ Projectile motion is a curvilinear motion in the plane $\mathbb{E}^2$.
 
 2. Force model:
 
-![FBD](../figures/four_steps_bolm/FBD.png){width=10%}
+![FBD](../figures/four_steps_bolm/FBD.png){width=50%}
 
 \begin{align}
     {\bf W} = mg\lp-{\bf E}_y\rp.
@@ -133,7 +133,7 @@ The terminal velocity: ${\bf v}_{\text{term}} = \frac{mg}{c_s}\lp-{\bf E}_y\rp$.
 
 ## Example: Projectile Motion with Bluff Body Pressure Drag
 
-![Bluff body pressure drag](../figures/four_steps_bolm/bluff_body.jpeg){width=80%}
+![Bluff body pressure drag](../figures/four_steps_bolm/bluff_body.jpeg){width=50%}
 
 \begin{align}
     {\bf F}_D = \frac{1}{2}m C_D v^2\lp-\frac{\bf v}{\lnorm{\bf v}\rnorm}\rp,
@@ -141,3 +141,44 @@ The terminal velocity: ${\bf v}_{\text{term}} = \frac{mg}{c_s}\lp-{\bf E}_y\rp$.
 where $C_D$ is the drag coefficient, $\rho$ is the density of the fluid, and $A$ is the projected area in the direction of motion.
 
 See Section 1.6 in the book for a worked example.
+
+
+## Summary
+
+**Balance of linear momentum (BoLM / Newton's 2nd law / Euler's 1st law):**
+\begin{align}
+    \mathbf{F} = \dot{\mathbf{G}} = m\mathbf{a}.
+\end{align}
+
+**The four steps:**
+
+1. Choose an origin; draw basis vectors; write and differentiate the position vector $\mathbf{r}$.
+2. Draw the free body diagram; write expressions for all forces.
+3. Write the vector BoLM equation $\sum\mathbf{F} = m\mathbf{a}$.
+4. Project along chosen directions and analyse to answer the question.
+
+## Lecture Videos
+
+{{< video https://youtu.be/RMkMK32vqyM title="Solving differential equations numerically in Python" width="70%" >}}
+
+
+## Exercises
+
+*The following problems are from Set 04 – Balance of Linear Momentum.*
+
+**1.** [MKB 2/75] Take $\mathbf{E}_x$ along the incline and $\mathbf{E}_y$ perpendicular to it (upwards); origin at $A$. Follow the 4 steps. *(ans. $\theta = (90^\circ + \alpha)/2$)*
+
+**2.** [MKB 3/004] Consider the whole truck system; follow the 4 steps to find the truck's acceleration, then isolate a trailer to find the drawbar tension. *(ans. $T = 13.33$ kN, $a = 0.667$ m/s$^2$)*
+
+{{< video https://youtu.be/LAl3ZUiUpus title="Solution – Problem 03/004" width="70%" >}}
+
+
+**3.** [MKB 3/005] For each part, determine your system and follow the 4 steps. *(ans. $R = 846$ N, $L = 110.4$ N)*
+
+**4.** [MKB 3/006] Follow the four steps. *(ans. $F = 2890$ N)*
+
+**5.** [OOR Exercise 1.3] *(See O'Reilly Primer for problem statement.)*
+
+**6.** [OOR Exercise 1.5]
+
+**7.** [OOR Exercise 1.8]

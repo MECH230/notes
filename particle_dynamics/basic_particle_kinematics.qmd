@@ -1,5 +1,5 @@
 ---
-title: "Basic Particle Kinematics Concepts"
+title: "Particle Kinematics"
 ---
 
 ## Position, Velocity, and Acceleration
@@ -10,6 +10,7 @@ Consider a particle moving in $\mathbb{E}^3$. Its position vector relative to a 
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 3
 \begin{tikzpicture}
 
     % Draw the random smooth curve
@@ -31,7 +32,7 @@ Let $\Delta t$ be a finite time elapsed:
 \begin{align}
     \Delta{\bf r} = {\bf r}(t+\Delta t)-{\bf r}(t).
 \end{align}
-As $\Delta t \rightarrow 0$, $\Delta t$ becomes $dt$ and $\Delta {\bf r}$ becomes $d{\bf r}$.
+As $\Delta t \rightarrow 0$, $\Delta t$ becomes $dt$ and $\Delta {\bf r}$ becomes $d{\bf r}$. The '$d$' means differential. We denote the time derivative of ${\bf r}$ by $\dot{\bf r}$ or $\frac{d{\bf r}}{dt}$.
 
 ```{r}
 #| engine: tikz
@@ -79,7 +80,7 @@ As $\Delta t \rightarrow 0$, $\Delta t$ becomes $dt$ and $\Delta {\bf r}$ become
 \end{tikzpicture}
 ```
 
-The (absolute) velocity vector ${\bf v}$ of the particle is
+The (absolute) velocity vector ${\bf v}$ of the particle is the time rate of change of the position vector:
 \begin{align}
     {\bf v} = \frac{d{\bf r}}{dt}=\dot{\bf r} = \lim_{\Delta t \rightarrow 0}\frac{{\bf r}(t+\Delta t)-{\bf r}(t)}{\Delta t}.
 \end{align}
@@ -87,7 +88,9 @@ The (absolute) velocity vector ${\bf v}$ of the particle is
 ::: {.callout-tip title="Think!"}
 **Question:** What is the direction of the velocity vector?
 
-**Answer:** ${\bf v}$ is always tangent to the path.
+::: {.callout-note title="Answer" collapse="true"}
+${\bf v}$ is along $d{\bf r}$ which is always tangent to the path.
+:::
 :::
 
 The speed of the particle is the magnitude of the velocity vector $v = \lnorm{\bf v}\rnorm$.
@@ -118,12 +121,14 @@ Notes:
 
 - $s(t)-s_0$ is the distance traveled by the particle along its path $\mathcal{C}$ during the time interval $[t_0, t]$.
 - $s(t_0)=s_0$ where $t_0$ and $s_0$ are initial conditions.
-- The dummy variable $\tau$ is used (as opposed to $t$) when evaluating this integral because we are integrating the speed as it varies between $t_0$ and $t$.
+- The dummy variable $\tau$ is used (as opposed to $t$) when evaluating this integral because we are integrating the speed as it varies between $t_0$ and $t$. The variable of integration is different than the upper limit of integration.
 
 ::: {.callout-tip title="Think!"}
 **Question:** Under what conditions is $s(t)$ invertible so that $t(s)$ is well defined?
 
-**Answer:** If the function $s(t)$ is one-to-one, it can be inverted, and time can be written in terms of arc-length $t = t(s)$.
+::: {.callout-note title="Answer" collapse="true"}
+If the function $s(t)$ is one-to-one, it can be inverted, and time can be written in terms of arc-length $t = t(s)$.
+:::
 :::
 
 ::: {.callout-tip title="Think!"}
@@ -133,7 +138,9 @@ Notes:
 \end{align}
 Under what conditions does the equality hold?
 
-**Answer:** The equality holds under rectilinear motion or over an infinitesimal time interval.
+::: {.callout-note title="Answer" collapse="true"}
+The equality holds under rectilinear motion or over an infinitesimal time interval.
+:::
 :::
 
 We define the unit tangent vector ${\bf e}_t$:
@@ -144,7 +151,9 @@ We define the unit tangent vector ${\bf e}_t$:
 ::: {.callout-tip title="Think!"}
 **Question:** Verify that ${\bf e}_t$ is a unit vector.
 
-**Answer:** …
+::: {.callout-note title="Answer" collapse="true"}
+…
+:::
 :::
 
 Note the relationships
@@ -158,12 +167,15 @@ Notice: the acceleration vector is due to changes in both the magnitude and dire
 ::: {.callout-tip title="Think!"}
 **Question:** Is the unit vector ${\bf e}_t$ constant in general? Under what conditions is it constant?
 
-**Answer:** No. It is constant only during rectilinear motion in a fixed direction.
+::: {.callout-note title="Answer" collapse="true"}
+No. It is constant only during rectilinear motion in a fixed direction.
+:::
 :::
 
 ### Example
 
-Consider a particle moving in space with position vector
+::: {.callout-warning title="Example"}
+**Question:** Consider a particle moving in space with position vector
 \begin{align}
     {\bf r}(t) = R_0\lp\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\rp.
 \end{align}
@@ -172,6 +184,11 @@ Calculate and plot ${\bf v}$, ${\bf a}$, ${\bf v}\times {\bf a}$, $\lnorm{\bf r}
 \begin{align}
     \ddot{x}+\omega^2 x=0, \qquad \ddot{y}+\omega^2 y=0.
 \end{align}
+::: {.callout-note title="Answer" collapse="true"}
+Answer: ...
+:::
+:::
+
 
 ::: {.callout-warning title="Example"}
 **Question:** Consider a particle $P$ moving in $\mathbb{E}^2$ with position vector
@@ -180,7 +197,8 @@ Calculate and plot ${\bf v}$, ${\bf a}$, ${\bf v}\times {\bf a}$, $\lnorm{\bf r}
 \end{align*}
 Calculate ${\bf r}\times{\bf a}$ and ${\bf r}\cdot{\bf a}$. Describe the motion of the particle.
 
-**Answer:** The velocity and acceleration are:
+::: {.callout-note title="Answer" collapse="true"}
+<!-- The velocity and acceleration are:
 \begin{align*}
     {\bf v} &= R_0\omega\lp-\sin\lp\omega t\rp{\bf E}_x+\cos\lp\omega t\rp{\bf E}_y\rp,\\
     {\bf a} &= -R_0\omega^2\lp\cos\lp\omega t\rp{\bf E}_x+\sin\lp\omega t\rp{\bf E}_y\rp.
@@ -195,7 +213,109 @@ Noting that ${\bf a} = -\omega^2{\bf r}$:
 For ${\bf r}\cdot{\bf a}$:
 \begin{align*}
     {\bf r}\cdot{\bf a} &= -R_0^2\omega^2\lp\cos^2(\omega t)+\sin^2(\omega t)\rp = -R_0^2\omega^2.
+\end{align*} -->
+
+We calculate the velocity and acceleration vectors of the particle as follows:
+
+\begin{align*}
+{\bf v} &= \frac{d{\bf r}}{dt}
+= R_0\omega\left(-\sin(\omega t)\,{\bf E}_x+\cos(\omega t)\,{\bf E}_y\right),\\
+{\bf a} &= \frac{d{\bf v}}{dt}
+= -R_0\omega^2\left(\cos(\omega t)\,{\bf E}_x+\sin(\omega t)\,{\bf E}_y\right).
 \end{align*}
+
+As you take these derivatives, remember that:
+
+- $\dot{\bf E}_x={\bf 0}$ and $\dot{\bf E}_y={\bf 0}$ since the basis $\{{\bf E}_x,{\bf E}_y\}$ is fixed.
+- The chain rule: $\frac{d}{dx}f(g(x)) = f'(g(x))g'(x).$
+
+Then,
+
+\begin{align*}
+{\bf r}\times{\bf a}
+&=
+R_0\left(\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\right)
+\times
+\left(
+-R_0\omega^2\left(\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\right)
+\right) \\
+&=
+-R_0^2\omega^2
+\Big(
+\cos^2(\omega t)\underbrace{{\bf E}_x\times{\bf E}_x}_{{\bf 0}}
++\cos(\omega t)\sin(\omega t)
+\left(
+\underbrace{{\bf E}_x\times{\bf E}_y}_{{\bf E}_z}
++
+\underbrace{{\bf E}_y\times{\bf E}_x}_{-{\bf E}_z}
+\right) \\
+&\qquad\qquad
++\sin^2(\omega t)\underbrace{{\bf E}_y\times{\bf E}_y}_{{\bf 0}}
+\Big) \\
+&= {\bf 0}.
+\end{align*}
+
+Alternatively, notice that
+
+\[
+{\bf a} = -\omega^2{\bf r},
+\]
+
+so
+
+\[
+{\bf r}\times{\bf a}
+=
+{\bf r}\times(-\omega^2{\bf r})
+=
+-\omega^2({\bf r}\times{\bf r})
+=
+{\bf 0}.
+\]
+
+For practice, let us also calculate ${\bf r}\cdot{\bf a}$:
+
+\begin{align*}
+{\bf r}\cdot{\bf a}
+&=
+R_0\left(\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\right)
+\cdot
+\left(
+-R_0\omega^2\left(\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\right)
+\right) \\
+&=
+-R_0^2\omega^2
+\Big(
+\cos^2(\omega t)\underbrace{{\bf E}_x\cdot{\bf E}_x}_{1}
++\cos(\omega t)\sin(\omega t)
+\left(
+\underbrace{{\bf E}_x\cdot{\bf E}_y}_{0}
++
+\underbrace{{\bf E}_y\cdot{\bf E}_x}_{0}
+\right)
++\sin^2(\omega t)\underbrace{{\bf E}_y\cdot{\bf E}_y}_{1}
+\Big) \\
+&=
+-R_0^2\omega^2
+\left(\cos^2(\omega t)+\sin^2(\omega t)\right) \\
+&=
+-R_0^2\omega^2.
+\end{align*}
+
+Alternatively,
+
+\begin{align*}
+{\bf r}\cdot{\bf a}
+&=
+{\bf r}\cdot(-\omega^2{\bf r}) \\
+&=
+-\omega^2({\bf r}\cdot{\bf r}) \\
+&=
+-\omega^2\|{\bf r}\|^2 \\
+&=
+-\omega^2R_0^2.
+\end{align*}
+:::
 :::
 
 ## Cartesian Coordinates
@@ -222,59 +342,231 @@ We take ${\bf E}_x$ parallel to the line and ${\bf c}$ to be a constant vector. 
     {\bf a}(t) &= \ddot{x}{\bf E}_x = a(t){\bf E}_x.
 \end{align}
 
-$\frac{ds}{dt}=\left|\frac{dx}{dt}\right|$, so unless $\dot{x}>0$ or $\dot{x}<0$ throughout, $x$ and $s$ cannot be easily interchanged.
+$\frac{ds}{dt}=\left|\frac{dx}{dt}\right|$, so unless $\dot{x}>0$ or $\dot{x}<0$ throughout, $x$ and $s$ cannot be easily interchanged as this convention flips ${\bf e}_t$ based on the motion.
 
 ### Identities for Rectilinear Motion
 
-Recall $v = \frac{dx}{dt}$ and $a = \frac{dv}{dt}$. Applying the chain rule:
+Recall the definitions ${\bf v} = \frac{d{\bf r}}{dt}$ and ${\bf a} = \frac{d{\bf v}}{dt}$. For the case of rectilinear motion along ${\bf E}_x$, projecting these equations along ${\bf E}_x$ yields respectively $v = \frac{dx}{dt}$ and $a = \frac{dv}{dt}$. Applying the chain rule to the latter equation, we obtain
 \begin{align}
     a = \frac{dv}{dt} = \frac{dv}{dx}\frac{dx}{dt} = v\frac{dv}{dx}.
 \end{align}
+where we assumed that $v(t)$ can be written in terms of $x$.
 
-Three useful identities:
+We will now examine three useful identities for rectilinear motion that relate $s$, $v$, and $a$.
 \begin{align}
     ds &= v\, dt, \qquad dv = a\, dt, \qquad v\,dv = a\,ds.
 \end{align}
 
 ### Given Acceleration as a Function of Time
 
-From $dv = a\, dt$:
+From $dv = a\, dt$, we can integrate this equation to get the signed speed as a function of time.
 \begin{align}
     v(t)-v(t_0) = \int_{t_0}^{t}a(\tilde{t})\,d\tilde{t}.
 \end{align}
 From $ds = v\, dt$:
 \begin{align}
-    s(t_1)-s(t_0) = \int_{t_0}^{t_1}v(\tilde{t})\,d\tilde{t}.
+    s(t_1)-s(t_0) = \int_{s(t_0)}^{s(t_1)}d(\tilde{s}) =\int_{t_0}^{t_1}v(\tilde{t})\,d\tilde{t}.
 \end{align}
+Note the use of the dummy variables $\tilde{s}$ and $\tilde{t}$ in the above integrals. 
 
 ### Given Acceleration as a Function of Speed
 
-From $dv = a\, dt$ with $a = a(v)$:
+Given $a=a(v)$, we can use again
 \begin{align}
-    t(v) - t(v_0) = \int_{v_0}^{v}\frac{d\tilde{v}}{a(\tilde{v})}.
+    dv = a dt
 \end{align}
-Using $a = v\frac{dv}{ds}$:
+to get
 \begin{align}
-    s(t)-s_0 = \int_{v_0}^{v}\frac{\tilde{v}\,d\tilde{v}}{a(\tilde{v})}.
+    \begin{split}
+        dt &= \frac{dv}{a(v)}\\
+        t(v) - t(v_0) &= \int_{v_0}^{v}\frac{d\tilde{v}}{a(\tilde{v})}
+    \end{split} 
 \end{align}
+Also, using the chain rule
+\begin{align}
+\begin{split}
+    a &= \frac{dv}{dt} = \frac{dv}{ds}\frac{ds}{dt}=v\frac{dv}{ds}\\
+\end{split}
+\label{vdvads}
+\end{align}
+If $a=a(v)$, then
+\begin{align}
+    \begin{split}
+        ds &= \frac{vdv}{a}\\
+        s(t)-s_0 &=\int_{v_0}^{v}\frac{\tilde{v}d\tilde{v}}{a(\Tilde{v})}.
+    \end{split}
+\end{align}
+
+\subsection{Given Acceleration as a Function of Displacement}
+Using Equation \ref{vdvads}, we get
+\begin{align}
+    vdv = ads
+\end{align}
+ If $a =a(s)$, we can integrate this equation to get the speed as a function of position.
+\begin{equation}
+    \int_{v_(s_0)}^{v(s)} vdv = \int_{s_0}^s ad\Tilde{s} \implies \frac{1}{2}\lp v^2(s)-v^2(s_0)\rp = \int_{s_0}^{s}a(\Tilde{s})d\Tilde{s}.
+\end{equation}
+
+
 
 ### Given Acceleration as a Function of Displacement
 
-Using $v\,dv = a\,ds$ with $a = a(s)$:
+Starting with $a = v\,dv/ds$, if  $a=a(s)$, we can rearrange this equation to get
+\[
+\int_{v(s_0)}^{v(s)} v\,dv
+=
+\int_{s_0}^{s} a(\tilde{s})\,d\tilde{s}.
+\]
+
+Evaluating the left-hand side gives
+
+\[
+\frac{1}{2}\left(v^2(s)-v^2(s_0)\right)
+=
+\int_{s_0}^{s} a(\tilde{s})\,d\tilde{s}.
+\]
+
+Equivalently,
+
+\[
+v^2(s)
+=
+v^2(s_0)
++
+2\int_{s_0}^{s} a(\tilde{s})\,d\tilde{s}.
+\]
+
+### Constant Acceleration
+
+#### Example: Gravity
+
+Throw a ball upward and take your hand to be the origin.
+
+Here,
+
+\[
+{\bf a} = -g\,{\bf e}_t,
+\qquad
+g = 32.2\ \frac{\text{ft/s}}{\text{s}}.
+\]
+
+Note that ${\bf e}_t$ always points in the direction of increasing $s$ (upward). Therefore,
+
+\[
+a=-g.
+\]
+
+Using
+
+\[
+dv=a\,dt,
+\]
+
+we obtain
+
+\begin{align*}
+\int_{v(t_0)}^{v(t)} dv
+&=
+-g\int_{t_0}^{t} d\tilde{t},\\
+v(t)-v(t_0)
+&=
+-g(t-t_0).
+\end{align*}
+
+Letting $v(t_0)=v_0$ and choosing the time origin so that $t_0=0$, we find
+
+\[
+v(t)=v_0-gt.
+\]
+
+To determine the position as a function of time, use
+
+\[
+ds=v\,dt.
+\]
+
+Integrating,
+
+\begin{align*}
+\int_{s_0}^{s(t)} ds
+&=
+\int_{0}^{t}\left(v_0-g\tilde{t}\right)d\tilde{t},\\
+s(t)-s_0
+&=
+v_0t-\frac{g}{2}t^2.
+\end{align*}
+
+Hence,
+
+\[
+s(t)=s_0+v_0t-\frac{g}{2}t^2.
+\]
+
+In this example, $s_0=0$.
+
+#### Example: Vehicle Braking
+
+For constant acceleration, the relation
+
+\[
+v\,dv=a\,ds
+\]
+
+is particularly useful.
+
+Integrating,
+
+\begin{align*}
+\int_{v(s_0)}^{v(s)} v\,dv
+&=
+a\int_{s_0}^{s} d\tilde{s},\\
+\frac{1}{2}\left(v^2(s)-v^2(s_0)\right)
+&=
+a(s-s_0).
+\end{align*}
+
+Therefore,
+
+\[
+v^2(s)-v^2(s_0)
+=
+2a(s-s_0),
+\]
+
+or, in increment notation,
+
+\[
+\Delta(v^2)=2a\,\Delta s.
+\]
+
+This equation is commonly used to determine braking distance when the deceleration is approximately constant.
+
+
+## Summary
+
+**Kinematics in Cartesian coordinates:**
 \begin{align}
-    \frac{1}{2}\lp v^2(s)-v^2(s_0)\rp = \int_{s_0}^{s}a(\tilde{s})\,d\tilde{s}.
+    \mathbf{r} &= x\mathbf{E}_x + y\mathbf{E}_y + z\mathbf{E}_z, \\
+    \mathbf{v} &= \dot{x}\mathbf{E}_x + \dot{y}\mathbf{E}_y + \dot{z}\mathbf{E}_z, \\
+    \mathbf{a} &= \ddot{x}\mathbf{E}_x + \ddot{y}\mathbf{E}_y + \ddot{z}\mathbf{E}_z.
 \end{align}
 
-#### Constant Acceleration
+**Rectilinear motion** (along $\mathbf{E}_x$): $\mathbf{r}=x\mathbf{E}_x$, $\mathbf{v}=\dot{x}\mathbf{E}_x$, $\mathbf{a}=\ddot{x}\mathbf{E}_x$, and $a = v\,dv/dx$.
 
-**Example: Gravity.** Throw a ball up; take the hand as origin. Here $a = -g$.
+## Exercises
 
+*The following problems are from Set 03 – Rectilinear Motion.*
+
+**1.** [MKB 2/24] Solve $a(x)$ as a piecewise function. *(ans. $v = 8$ ft/sec)*
+
+**2.** [MKB 2/28] Take $\mathbf{E}_x$ along the horizontal; origin at the location of the plane when the parachute deploys ($v=200$ mi/hr). Convert mi to ft and hr to sec. *(ans. $s = 5810$ ft)*
+
+**3.** [MKB 2/25] Take $\mathbf{E}_y$ vertically upwards; origin at the initial position of the rocket. The acceleration is
 \begin{align}
-    v(t) &= v_0-gt,\\
-    s(t) &= s_0+v_0t-\frac{g}{2}t^2.
+    a = \begin{cases} 3 \text{ m/s}^2 & 0\le t < 8\,\text{s} \\ -9.81 \text{ m/s}^2 & 8\,\text{s}\le t < t_{\mathrm{top}} \\ 0 & t_{\mathrm{top}} < t \le t_{\mathrm{end}} \end{cases}
 \end{align}
+*(ans. $h = 125.4$ m, total time $= 157.9$ s)*
 
-**Example: Vehicle Braking.** Using $v\,dv = a\,ds$:
-\begin{align}
-    v^2(s)-v^2(s_0) = 2a\,\Delta s.
-\end{align}
+**4.** [MKB 2/22] *(See problem set for figure.)*
+
+![MKB 2/21.](../figures/basic_particle_kinematics/02-021.jpg){width=50%}

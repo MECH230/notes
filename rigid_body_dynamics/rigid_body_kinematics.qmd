@@ -38,11 +38,13 @@ Consider a body $\mathcal{B}$ in motion in 3D space.
 ::: {.callout-tip title="Think!"}
 **Question:** What is a mathematical statement that means that a body is rigid?
 
-**Answer:** For rigid bodies the distance between any two mass particles $X_1$ and $X_2$ remains constant for all motions:
+::: {.callout-note title="Answer" collapse="true"}
+For rigid bodies the distance between any two mass particles $X_1$ and $X_2$ remains constant for all motions:
 \begin{align}
     \lnorm{\bf x}_1-{\bf x}_2\rnorm = \lnorm{\bf X}_1-{\bf X}_2\rnorm.
 \end{align}
 The motion preserves angles between lines on the body (unlike elastic bodies or fluids) and preserves orientation (it is not a reflection).
+:::
 :::
 
 Any rigid body motion can be built in two steps:
@@ -115,7 +117,9 @@ ${\bf Q}(t)$ is a linear map and is called the **rotation tensor**. Both ${\bf Q
 \end{tikzpicture}
 ```
 
-**Answer:** We need the reference configuration to define rotation. The rotation angle $\theta$ is the angular displacement of every material line from reference to current configuration. The axis of rotation is perpendicular to the page.
+::: {.callout-note title="Answer" collapse="true"}
+We need the reference configuration to define rotation. The rotation angle $\theta$ is the angular displacement of every material line from reference to current configuration. The axis of rotation is perpendicular to the page.
+:::
 :::
 
 ## Corotational Bases
@@ -159,13 +163,17 @@ Examples: a rotation tensor ${\bf Q}$, the identity tensor ${\bf I}$, a scaling 
 ::: {.callout-tip title="Think!"}
 **Question:** Is a rotation a linear transformation?
 
-**Answer:** Yes. Rotating $a{\bf X}$ is the same as rotating ${\bf X}$ then scaling by $a$, and rotating ${\bf X}_1+{\bf X}_2$ equals rotating each and adding. So rotations are linear transformations — hence tensors.
+::: {.callout-note title="Answer" collapse="true"}
+Yes. Rotating $a{\bf X}$ is the same as rotating ${\bf X}$ then scaling by $a$, and rotating ${\bf X}_1+{\bf X}_2$ equals rotating each and adding. So rotations are linear transformations — hence tensors.
+:::
 :::
 
 ::: {.callout-tip title="Think!"}
 **Question:** Are vectors and matrices the same?
 
-**Answer:** No. A vector is an abstract object independent of any basis; a matrix is its representation in a specific basis. Similarly, a tensor is not a matrix, but can be expressed as one in a given coordinate system.
+::: {.callout-note title="Answer" collapse="true"}
+No. A vector is an abstract object independent of any basis; a matrix is its representation in a specific basis. Similarly, a tensor is not a matrix, but can be expressed as one in a given coordinate system.
+:::
 :::
 
 ## Tensor (Bun) Product
@@ -179,13 +187,17 @@ This is linear (verifiable directly), so it is a tensor.
 ::: {.callout-tip title="Think!"}
 **Question:** What does $2{\bf E}_1\otimes{\bf E}_1+2{\bf E}_2\otimes{\bf E}_2+2{\bf E}_3\otimes{\bf E}_3$ do to a vector?
 
-**Answer:** It scales it by a factor of two.
+::: {.callout-note title="Answer" collapse="true"}
+It scales it by a factor of two.
+:::
 :::
 
 ::: {.callout-tip title="Think!"}
 **Question:** Show that ${\bf E}_1\otimes{\bf E}_1+{\bf E}_2\otimes{\bf E}_2+{\bf E}_3\otimes{\bf E}_3$ is the identity tensor. Show also that the rotation tensor can be expressed as ${\bf Q} = {\bf e}_x\otimes{\bf E}_x+{\bf e}_y\otimes{\bf E}_y+{\bf e}_z\otimes{\bf E}_z$.
 
-**Answer:** Apply the definition of the tensor product term by term.
+::: {.callout-note title="Answer" collapse="true"}
+Apply the definition of the tensor product term by term.
+:::
 :::
 
 ## Matrix Representation of Tensors
@@ -219,7 +231,9 @@ For $[{\bf Q}(t)]$ to be a rotation matrix: ${\bf Q}{\bf Q}^T = {\bf I}$ and $\d
 \end{align*}
 using ${\bf Q} = {\bf e}_1\otimes{\bf E}_1+{\bf e}_2\otimes{\bf E}_2+{\bf e}_3\otimes{\bf E}_3$ with ${\bf e}_1 = \cos\theta\,{\bf E}_1+\sin\theta\,{\bf E}_2$ and ${\bf e}_2 = -\sin\theta\,{\bf E}_1+\cos\theta\,{\bf E}_2$.
 
-**Answer:** Compute $Q_{ij} = \lp{\bf Q}{\bf E}_j\rp\cdot{\bf E}_i = {\bf e}_j\cdot{\bf E}_i$ to recover the matrix.
+::: {.callout-note title="Answer" collapse="true"}
+Compute $Q_{ij} = \lp{\bf Q}{\bf E}_j\rp\cdot{\bf E}_i = {\bf e}_j\cdot{\bf E}_i$ to recover the matrix.
+:::
 :::
 
 ::: {.callout-important title="Note!"}
@@ -274,10 +288,12 @@ where $\overset{\circ}{\bf x}_{B/A} = \dot{x}{\bf e}_x+\dot{y}{\bf e}_y$ and $\o
 ::: {.callout-tip title="Think!"}
 **Question:** See [this video](https://www.youtube.com/watch?v=mPsLanVS1Q8) of people playing catch on a merry-go-round. A ball is thrown on a merry-go-round rotating about fixed center $O$, with ${\bf r}_0 = -R{\bf E}_x$ and ${\bf v}_0 = v_0{\bf E}_x$. What velocity does the ball appear to have to an observer on the merry-go-round?
 
-**Answer:** The ball is a projectile: ${\bf a} = -g{\bf E}_z$, ${\bf v} = -gt{\bf E}_z+{\bf v}_0$. From ${\bf v} = \bomega\times({\bf r}-{\bf r}_0)+\overset{\circ}{\bf x}_{P/O}$:
+::: {.callout-note title="Answer" collapse="true"}
+The ball is a projectile: ${\bf a} = -g{\bf E}_z$, ${\bf v} = -gt{\bf E}_z+{\bf v}_0$. From ${\bf v} = \bomega\times({\bf r}-{\bf r}_0)+\overset{\circ}{\bf x}_{P/O}$:
 \begin{align}
     \overset{\circ}{\bf x}_{P/O} = -gt{\bf E}_z+v_0{\bf E}_x+\omega(v_0 t-R){\bf E}_y.
 \end{align}
+:::
 :::
 
 ## Classifications of Rigid Body Motions
@@ -299,8 +315,7 @@ The term $\balpha\times{\bf r}_P$ is the tangential acceleration; $\bomega\times
 ::: {.callout-tip title="Think!"}
 **Question:** Draw the velocity profile of a rotating link with a fixed end.
 
-**Answer:**
-
+::: {.callout-note title="Answer" collapse="true"}
 ```{r}
 #| engine: tikz
 #| echo: false
@@ -320,6 +335,7 @@ The term $\balpha\times{\bf r}_P$ is the tangential acceleration; $\bomega\times
     \draw[thick,blue] (0,0) -- (\L,\L*\w*0.5) node[right] {$v = \omega r$};
 \end{tikzpicture}
 ```
+:::
 :::
 
 A body in general plane motion is not rotating about a fixed point, but **instantaneously** it rotates about the **instantaneous center of rotation (IC)** — a point with zero velocity at that instant. If ${\bf v}_{IC} = {\bf 0}$, then for any material point $A$:
@@ -383,7 +399,9 @@ Since $P$ belongs to $\mathcal{B}$:
 ::: {.callout-tip title="Think!"}
 **Question:** What is the IC of a rolling disk?
 
-**Answer:** The contact point with the surface.
+::: {.callout-note title="Answer" collapse="true"}
+The contact point with the surface.
+:::
 :::
 
 ```{r}
@@ -475,7 +493,9 @@ When $\{{\bf e}_x,{\bf e}_y,{\bf e}_z\}$ is an eigenbasis of $[{\bf I}^C]$, the 
 ::: {.callout-tip title="Think!"}
 **Question:** Is my moment of inertia about an axis through my body greater when my arms are closed or open?
 
-**Answer:** Greater when arms are open — mass is farther from the axis. See also: [Professor Walter Lewin rolling cylinders](https://www.youtube.com/watch?v=M_YCWDXCwZM).
+::: {.callout-note title="Answer" collapse="true"}
+Greater when arms are open — mass is farther from the axis. See also: [Professor Walter Lewin rolling cylinders](https://www.youtube.com/watch?v=M_YCWDXCwZM).
+:::
 :::
 
 ### Example: Solid Cylinder
@@ -541,3 +561,64 @@ with special cases ${\bf H}^C = {\bf I}^C\bomega$ and ${\bf H}^O = {\bf I}^O\bom
 \begin{align}
     \dot{\bf H}^P = {\bf I}^P\overset{\circ}{\bomega}+\bomega\times({\bf I}^P\bomega)+\frac{d}{dt}\leb({\bf r}_C-{\bf r}_P)\times m{\bf v}_P\reb.
 \end{align}
+
+
+## Summary
+
+**Corotational basis** $\{\mathbf{e}_x,\mathbf{e}_y,\mathbf{E}_z\}$ fixed to the rigid body:
+\begin{align}
+    \dot{\mathbf{e}}_x = \boldsymbol{\omega}\times\mathbf{e}_x, \qquad
+    \dot{\mathbf{e}}_y = \boldsymbol{\omega}\times\mathbf{e}_y, \qquad
+    \boldsymbol{\omega}=\dot\theta\,\mathbf{E}_z.
+\end{align}
+
+**Velocity/acceleration of two points** $A$, $B$ on a rigid body:
+\begin{align}
+    \mathbf{v}_B - \mathbf{v}_A &= \boldsymbol{\omega}\times(\mathbf{r}_B-\mathbf{r}_A), \\
+    \mathbf{a}_B - \mathbf{a}_A &= \boldsymbol{\alpha}\times(\mathbf{r}_B-\mathbf{r}_A)+\boldsymbol{\omega}\times(\mathbf{v}_B-\mathbf{v}_A).
+\end{align}
+
+**Instantaneous center (IC)**: the point on a body (or its extension) with instantaneous zero velocity. Lies at the intersection of perpendiculars to the velocity vectors of two points.
+
+**Particle in a non-inertial frame** (point $A$ fixed to body, $B$ moving relative to body):
+\begin{align}
+    \mathbf{v}_B - \mathbf{v}_A &= \boldsymbol{\omega}\times(\mathbf{r}_B-\mathbf{r}_A)+\mathbf{v}_{\mathrm{rel}}, \\
+    \mathbf{a}_B - \mathbf{a}_A &= \boldsymbol{\alpha}\times(\mathbf{r}_B-\mathbf{r}_A)+\boldsymbol{\omega}\times(\boldsymbol{\omega}\times(\mathbf{r}_B-\mathbf{r}_A))+2\boldsymbol{\omega}\times\mathbf{v}_{\mathrm{rel}}+\mathbf{a}_{\mathrm{rel}}.
+\end{align}
+The Coriolis acceleration is $2\boldsymbol{\omega}\times\mathbf{v}_{\mathrm{rel}}$.
+
+## Exercises
+
+### Set 15 – Rigid Body Kinematics
+
+**1.** [MKB 05-010] *(ans. $\mathbf{v}_B=-11\mathbf{E}_x$ m/s, $\mathbf{a}_B=22\mathbf{E}_x-220\mathbf{E}_y$ m/s$^2$)*
+
+**2.** [MKB 05-013] *(ans. $\mathbf{v}_A=1.121\mathbf{E}_x+0.838\mathbf{E}_y$ m/s, $\mathbf{a}_B=-4.48\mathbf{E}_x+0.1465\mathbf{E}_y$ m/s$^2$)*
+
+**3.** [05-018] *(ans. $\mathbf{v}_A=-0.374\mathbf{E}_x+0.1905\mathbf{E}_y$ m/s, $\mathbf{a}_A=-0.757\mathbf{E}_x-0.605\mathbf{E}_y$ m/s$^2$)*
+
+**4.** [05-049] *(ans. (a) $N=91.7$ rev/min CCW; (b) $N=45.8$ rev/min CCW; (c) $N=45.8$ rev/min CW)*
+
+**5.** [05-065] *(ans. $\omega=0.722$ rad/s)*
+
+**6.** [05-069] *(ans. $\omega_{AB}=1.725$ rad/s CCW, $\omega_{BC}=4$ rad/s CCW)*
+
+### Set 16 – IC and Particle in Non-inertial Frame
+
+**1.** [MKB 05-102] *(ans. $\alpha=0.286$ rad/s$^2$, $a_A=0.653$ m/s$^2$ down)*
+
+**2.** [MKB 05-125] *(ans. $\mathbf{v}_A=0.1\mathbf{E}_x+0.25\mathbf{E}_y$ m/s, $\beta=68.2^\circ$)*
+
+**3.** [05-143] *(ans. $v_{\mathrm{rel}}=3.93$ m/s, $a_{\mathrm{rel}}=15.22$ m/s$^2$, $\omega_{BC}=1.046$ rad/s CW, $\alpha_{BC}=117.7$ rad/s$^2$ CW)*
+
+### Set 17 – Rolling and Sliding
+
+**1.** [MKB 05-055] *(ans. $v_O=6.93$ m/s, $\omega=21.3$ rad/s CW)*
+
+**2.** [MKB 05-087] *(ans. $v_O=120$ mm/s, $v_P=216$ mm/s)*
+
+**3.** [05-091] *(ans. $v=15.71$ ft/s right, $v_s=6.89$ ft/s left)*
+
+**4.** [05-093] *(ans. $v_A=9.19$ ft/sec left)*
+
+**5.** [05-100] *(ans. $\mathbf{v}_A=5.12\mathbf{E}_x+2.12\mathbf{E}_y$ m/s, $\mathbf{a}_B=-16.25\mathbf{E}_x+2.5\mathbf{E}_y$ m/s$^2$)*

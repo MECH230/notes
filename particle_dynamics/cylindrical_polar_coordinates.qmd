@@ -55,11 +55,12 @@ Define the basis $\{{\bf e}_r,{\bf e}_\theta\}$ as a rotation of $\{{\bf E}_x,{\
 ::: {.callout-tip title="Think!"}
 **Question:** Express ${\bf e}_r$ and ${\bf e}_\theta$ in the Cartesian basis.
 
-**Answer:**
+::: {.callout-note title="Answer" collapse="true"}
 \begin{align}
     {\bf e}_r &= \cos(\theta){\bf E}_x+\sin(\theta){\bf E}_y,\\
     {\bf e}_\theta &= -\sin(\theta){\bf E}_x+\cos(\theta){\bf E}_y.
 \end{align}
+:::
 :::
 
 $\{{\bf e}_r,{\bf e}_\theta\}$ is an orthonormal basis: ${\bf e}_r\cdot{\bf e}_r = 1$, ${\bf e}_\theta\cdot{\bf e}_\theta = 1$, ${\bf e}_r\cdot{\bf e}_\theta=0$.
@@ -67,25 +68,31 @@ $\{{\bf e}_r,{\bf e}_\theta\}$ is an orthonormal basis: ${\bf e}_r\cdot{\bf e}_r
 - ${\bf e}_r$ points in the direction of increasing $r$.
 - ${\bf e}_\theta$ points in the direction of increasing $\theta$.
 
+![Polar basis $\{{\bf e}_r,{\bf e}_\theta\}$.](../figures/cylindrical_polar_coordinates/polar_basis.png){width=50%}
+
 ::: {.callout-tip title="Think!"}
 **Question:** Calculate $\dot{\bf e}_r$ and $\dot{\bf e}_\theta$.
 
-**Answer:**
+::: {.callout-note title="Answer" collapse="true"}
 \begin{align}
     \dot{\bf e}_r = \dot{\theta}{\bf e}_\theta, \qquad \dot{\bf e}_\theta = -\dot{\theta}{\bf e}_r.
 \end{align}
 :::
+:::
+
+![Derivatives of the polar basis.](../figures/cylindrical_polar_coordinates/polar_basis_derivatives.png){width=50%}
 
 The position vector is ${\bf r} = r{\bf e}_r$ (with $r\geq 0$).
 
 ::: {.callout-tip title="Think!"}
 **Question:** Calculate ${\bf v}$ and ${\bf a}$.
 
-**Answer:**
+::: {.callout-note title="Answer" collapse="true"}
 \begin{align*}
     {\bf v} &= \dot{r}{\bf e}_r+r\dot{\theta}{\bf e}_\theta,\\
     {\bf a} &= \lp \ddot{r}-r\dot{\theta}^2\rp{\bf e}_r+\lp 2\dot{r}\dot{\theta}+r\ddot{\theta}\rp{\bf e}_\theta.
 \end{align*}
+:::
 :::
 
 Note the components of acceleration:
@@ -99,11 +106,12 @@ Note the components of acceleration:
 
 For rectilinear motions, Cartesian coordinates are usually easiest. For problems where $r$ is directly measured (e.g. radar tracking), polar coordinates are natural.
 
-![](../figures/cylindrical_polar_coordinates/02-121.jpg){width=40%}
-
 ### Example: Nonlinear Pendulum
 
 Consider a particle of mass $m$ suspended from a rigid inextensible string of length $\ell$. Find the equation of motion.
+
+![Pendulum setup.](../figures/cylindrical_polar_coordinates/pendulum_setup.JPG){width=50%}
+![Pendulum free body diagram.](../figures/cylindrical_polar_coordinates/pendulum_fbd.JPG){width=50%}
 
 ```{r}
 #| engine: tikz
@@ -139,7 +147,9 @@ The constraint on the motion:
 ::: {.callout-tip title="Think!"}
 **Question:** How many degrees of freedom does this system have?
 
-**Answer:** One. A particle in the plane has 2 DOFs, but the constraint $r=\ell$ removes one. Knowing $\theta(t)$ completely describes the motion.
+::: {.callout-note title="Answer" collapse="true"}
+One. A particle in the plane has 2 DOFs, but the constraint $r=\ell$ removes one. Knowing $\theta(t)$ completely describes the motion.
+:::
 :::
 
 Following the four steps:
@@ -186,9 +196,17 @@ Recall:
 - **Coriolis** $2\dot{r}\dot{\theta}$: particle in a tube rotating at constant angular velocity.
 - **Tangential** $r\ddot{\theta}$: particle pushed along a circle.
 
+![Radial ($\ddot{r}$) acceleration.](../figures/cylindrical_polar_coordinates/rddot.png){width=50%}
+![Centripetal ($-r\dot\theta^2$) acceleration.](../figures/cylindrical_polar_coordinates/centripetal_acceleration.png){width=50%}
+![Coriolis ($2\dot{r}\dot\theta$) acceleration.](../figures/cylindrical_polar_coordinates/coriolis_acceleration.png){width=50%}
+![Tangential ($r\ddot\theta$) acceleration.](../figures/cylindrical_polar_coordinates/tangential_acceleration.png){width=50%}
+
 ### Example: Particle in a Rotating Tube
 
 $\dot{\theta} = \omega = \text{const.}$, $\ddot{\theta} = 0$.
+
+![Rotating tube setup.](../figures/cylindrical_polar_coordinates/particle_in_rotating_tube.png){width=50%}
+![Free body diagram.](../figures/cylindrical_polar_coordinates/particle_in_tube_fbd.JPG){width=50%}
 
 ```{r}
 #| engine: tikz
@@ -235,7 +253,12 @@ $\dot{\theta} = \omega = \text{const.}$, $\ddot{\theta} = 0$.
 As the particle moves outward, $r\omega$ increases. The tube must supply the ${\bf e}_\theta$ acceleration $2\dot{r}\omega$ so the particle stays inside.
 :::
 
+![Normal force on particle in tube.](../figures/cylindrical_polar_coordinates/particle_in_tube_normal.png){width=50%}
+![Velocity profile in rotating tube.](../figures/cylindrical_polar_coordinates/rotating_tube_velocity_profile.png){width=50%}
+
 ### Example: Particle Pushed in a Circle
+
+![Particle pushed along a circle.](../figures/cylindrical_polar_coordinates/particle_pushed_on_circle.png){width=50%}
 
 ${\bf P} = P{\bf e}_\theta$, $r = R = \text{const.}$:
 \begin{align*}
@@ -268,3 +291,49 @@ See animation for 03/067 [here](https://drive.google.com/file/d/1d8FJqs0GMQU0FxU
 ![](../figures/cylindrical_polar_coordinates/03-067.png){width=50%}
 
 ![](../figures/cylindrical_polar_coordinates/03-193.png){width=50%}
+
+
+## Summary
+
+**Cylindrical polar basis** $\{\mathbf{e}_r,\mathbf{e}_\theta,\mathbf{E}_z\}$:
+\begin{align}
+    \mathbf{e}_r &= \cos\theta\,\mathbf{E}_x+\sin\theta\,\mathbf{E}_y, &
+    \mathbf{e}_\theta &= -\sin\theta\,\mathbf{E}_x+\cos\theta\,\mathbf{E}_y, \\
+    \dot{\mathbf{e}}_r &= \dot\theta\,\mathbf{e}_\theta, &
+    \dot{\mathbf{e}}_\theta &= -\dot\theta\,\mathbf{e}_r.
+\end{align}
+
+**Position, velocity, acceleration:**
+\begin{align}
+    \mathbf{r} &= r\mathbf{e}_r+z\mathbf{E}_z,\\
+    \mathbf{v} &= \dot r\,\mathbf{e}_r + r\dot\theta\,\mathbf{e}_\theta + \dot z\,\mathbf{E}_z,\\
+    \mathbf{a} &= (\ddot r-r\dot\theta^2)\mathbf{e}_r + (r\ddot\theta+2\dot r\dot\theta)\mathbf{e}_\theta + \ddot z\,\mathbf{E}_z.
+\end{align}
+
+## Lecture Videos
+
+{{< video https://youtu.be/pj7kitk0VcI title="Animating the motion of a pendulum in Python" width="70%" >}}
+
+
+## Exercises
+
+*The following problems are from Set 05 – Cylindrical Polar Coordinates.*
+
+**1.** [MKB 2/121] Take the origin at the satellite; $\mathbf{E}_x$ rightwards, $\mathbf{E}_y$ upwards. Write the position in both cylindrical and Cartesian coordinates. *(ans. $v = 360$ m/s, $a = 20.1$ m/s$^2$)*
+
+![MKB 2/121.](../figures/cylindrical_polar_coordinates/02-121.jpg){width=50%}
+
+{{< video https://youtu.be/wbUBexp8xfc title="Solution – Problem 02/121" width="70%" >}}
+
+
+**2.** [MKB 02-105] Take $\mathbf{E}_x$ rightwards and $\mathbf{E}_y$ upwards; write the car's position in both bases. *(ans. $\dot r = 47.7$ ft/sec, $\dot\theta = -41.0$ deg/sec)*
+
+**3.** [MKB 02-126] Write $\mathbf{r}_P = (0.75+\ell)\mathbf{e}_r$ m and differentiate. If the setup is in the vertical plane, find the force applied by the robot arm. *(ans. $v=0.296$ m/s, $a=0.345$ m/s$^2$)*
+
+**4.** [MKB 03-037] Apply the 4 steps at points $A$ and $B$ independently; origin at the centre of curvature. *(ans. $N_A = 10.89$ N, $N_B = 8.30$ N)*
+
+**5.** [Primer Exercise 2.6] *(See O'Reilly Primer.)*
+
+**6.** [Primer Exercise 2.7]
+
+**7.** [Primer Exercise 2.8]

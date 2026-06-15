@@ -33,7 +33,6 @@ book:
       chapters:
         - particle_dynamics/basic_particle_kinematics.qmd
         - particle_dynamics/particle_kinetics.qmd
-        - particle_dynamics/four_steps_bolm.qmd
         - particle_dynamics/cylindrical_polar_coordinates.qmd
         - particle_dynamics/constrained_motion.qmd
         - particle_dynamics/serret_frenet_triad.qmd

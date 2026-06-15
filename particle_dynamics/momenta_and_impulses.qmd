@@ -20,11 +20,12 @@ The time integral of a force is its **linear impulse**. This form is more genera
 ::: {.callout-tip title="Think!"}
 **Question:** Under what conditions is the linear momentum of a system conserved in a direction ${\bf c}$?
 
-**Answer:**
+::: {.callout-note title="Answer" collapse="true"}
 \begin{align}
     \frac{d}{dt}({\bf G}\cdot{\bf c}) = {\bf F}\cdot{\bf c}+{\bf G}\cdot\dot{\bf c} = 0.
 \end{align}
 For a constant ${\bf c}$, ${\bf G}\cdot{\bf c}$ is conserved if and only if ${\bf F}\cdot{\bf c} = 0$ — i.e., no force in that direction.
+:::
 :::
 
 ### Example
@@ -32,7 +33,9 @@ For a constant ${\bf c}$, ${\bf G}\cdot{\bf c}$ is conserved if and only if ${\b
 ::: {.callout-warning title="Example"}
 **Question:** Is the linear momentum of a projectile conserved? In a certain direction?
 
-**Answer:** With ${\bf W} = -mg{\bf E}_y$, linear momentum is conserved in the ${\bf E}_x$ direction (no force there) but not in ${\bf E}_y$.
+::: {.callout-note title="Answer" collapse="true"}
+With ${\bf W} = -mg{\bf E}_y$, linear momentum is conserved in the ${\bf E}_x$ direction (no force there) but not in ${\bf E}_y$.
+:::
 :::
 
 ## The Moment of a Force
@@ -40,10 +43,12 @@ For a constant ${\bf c}$, ${\bf G}\cdot{\bf c}$ is conserved if and only if ${\b
 ::: {.callout-tip title="Think!"}
 **Question:** How do you calculate the moment of a force about a point?
 
-**Answer:** The moment of force ${\bf F}$ applied at $A$ about point $P$ is:
+::: {.callout-note title="Answer" collapse="true"}
+The moment of force ${\bf F}$ applied at $A$ about point $P$ is:
 \begin{align}
     {\bf M}^P = \lp{\bf r}_A-{\bf r}_P\rp\times {\bf F}.
 \end{align}
+:::
 :::
 
 ::: {.callout-warning title="Example"}
@@ -79,7 +84,9 @@ calculate ${\bf M}^O$ and ${\bf M}^P$.
 \end{tikzpicture}
 ```
 
-**Answer:** ...
+::: {.callout-note title="Answer" collapse="true"}
+...
+:::
 :::
 
 ## Angular Momentum and Its Conservation
@@ -122,7 +129,9 @@ So $\dot{\bf H}^O = {\bf M}^O$ (the angular momentum theorem).
 ::: {.callout-tip title="Think!"}
 **Question:** Under what conditions is ${\bf H}^O\cdot{\bf c}$ conserved?
 
-**Answer:** For a constant ${\bf c}$: if and only if $\lp{\bf r}\times{\bf F}\rp\cdot{\bf c} = 0$.
+::: {.callout-note title="Answer" collapse="true"}
+For a constant ${\bf c}$: if and only if $\lp{\bf r}\times{\bf F}\rp\cdot{\bf c} = 0$.
+:::
 :::
 
 ### Central Force Problems
@@ -152,3 +161,60 @@ Watch this [video on Kepler's laws](https://www.youtube.com/watch?v=pdst6HQkdrc)
 ### Particle on a Smooth Cone
 
 Show that ${\bf H}^O\cdot{\bf E}_z$ is conserved.
+
+
+## Summary
+
+**Linear impulse–momentum**: $\int_{t_A}^{t_B}\mathbf{F}\,dt = \mathbf{G}_B - \mathbf{G}_A$.
+
+**Angular momentum** about fixed $O$: $\mathbf{H}^O = \mathbf{r}\times m\mathbf{v}$.
+
+**BoAM**: $\mathbf{M}^O = \dot{\mathbf{H}}^O$.
+
+**Conservation** of $\mathbf{G}$ if $\mathbf{F}=\mathbf{0}$; conservation of $\mathbf{H}^O$ if $\mathbf{M}^O=\mathbf{0}$.
+
+## Lecture Videos
+
+{{< video https://youtu.be/-AHQOYy3VBk title="Linear momentum and conservation" width="70%" >}}
+
+{{< video https://youtu.be/_3a0CbiLJ18 title="Conservation of linear momentum along a fixed direction" width="70%" >}}
+
+{{< video https://youtu.be/qiFdls4aFsw title="Review – calculating the moment of a force" width="70%" >}}
+
+{{< video https://youtu.be/RohK7Sk-pCg title="Angular momentum definition" width="70%" >}}
+
+{{< video https://youtu.be/5oHdJJfxGvk title="Balance of angular momentum" width="70%" >}}
+
+{{< video https://youtu.be/9TFLI5Tjiv8 title="Conservation of angular momentum" width="70%" >}}
+
+{{< video https://youtu.be/MEwpRoLB7KM title="Conservations – linear vs. angular momentum vs. energy" width="70%" >}}
+
+
+## Exercises
+
+*The following problems are from Set 12 – Impulse and Momentum.*
+
+**1.** [MKB 03-149] Straightforward application of the linear impulse–momentum equation. *(ans. $v=1.218$ m/s down)*
+
+**2.** [MKB 03-159] The block is subjected to a time-varying force $P(t)$ shown in the plot; $P=0$ for $t>3$ s. *(ans. $t_s=3.69$ s)*
+
+{{< video https://youtu.be/ugj4fefUN4c title="Solution – Problem 03/159" width="70%" >}}
+
+
+**3.** [MKB 03-161] Use Newton's third law. Recall $\int_{x_A}^{x_B}f(x)\,dx = F_{\mathrm{avg}}(x_B-x_A)$. *(ans. $v_f=0.00264$ m/s, $F_{\mathrm{avg}}=59.5$ N)*
+
+{{< video https://youtu.be/Q-F7ew3jFuQ title="Solution – Problem 03/161" width="70%" >}}
+
+
+**4.** [03-167] *(ans. $R_x=559$ lb, $R_y=218$ lb)*
+
+**5.** [03-177] Central force problem – what quantities are conserved? *(ans. $v_P=17\,723$ mi/hr)*
+
+**6.** [03-185] *(ans. $v_B=5.43$ m/s)*
+
+{{< video https://youtu.be/V3ussTTlrs8 title="Solution – Problem 03/185" width="70%" >}}
+
+
+**7.** [03-181] *(ans. $|H|=389$ N·m·s, $|M|=260$ N·m)*
+
+**8.** [03-192] Label $r$ as $R$ and the requested angle $\theta$ as $\beta$. The particle moves on a surface of revolution $z^2+(r-1.15R)^2=R^2$. Use conservation of total energy and $\mathbf{E}_z$-component of $\mathbf{H}^O$. *(ans. $\theta=52.9^\circ$)*

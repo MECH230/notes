@@ -45,7 +45,9 @@ The Serret-Frenet basis $\{{\bf e}_t,{\bf e}_n,{\bf e}_b\}$ is defined at the po
 ::: {.callout-tip title="Think!"}
 **Question:** How do we define the unit tangent vector?
 
-**Answer:** …
+::: {.callout-note title="Answer" collapse="true"}
+…
+:::
 :::
 
 Recall the unit tangent vector:
@@ -56,10 +58,12 @@ Recall the unit tangent vector:
 ::: {.callout-tip title="Think!"}
 **Question:** What do we know about $\frac{d\hat{\bf e}_t}{ds}$?
 
-**Answer:** We can show that ${\bf e}_t$ and $\frac{d\hat{\bf e}_t}{ds}$ are perpendicular by differentiating ${\bf e}_t\cdot{\bf e}_t = 1$:
+::: {.callout-note title="Answer" collapse="true"}
+We can show that ${\bf e}_t$ and $\frac{d\hat{\bf e}_t}{ds}$ are perpendicular by differentiating ${\bf e}_t\cdot{\bf e}_t = 1$:
 \begin{align}
     {\bf e}_t\cdot\frac{d{\bf e}_t}{ds} = 0.
 \end{align}
+:::
 :::
 
 ::: {.callout-important title="Note! Derivatives of a unit vector"}
@@ -83,7 +87,9 @@ For any point on a curve, three nearby non-collinear points define the **osculat
 ::: {.callout-tip title="Think!"}
 **Question:** When is ${\bf e}_n$ not uniquely defined?
 
-**Answer:** When $d{\bf e}_t/ds = {\bf 0}$ (i.e. $\kappa = 0$), such as on a straight line, at an inflection point, or at a corner. In this case, ${\bf e}_n$ is defined as any unit vector perpendicular to ${\bf e}_t$.
+::: {.callout-note title="Answer" collapse="true"}
+When $d{\bf e}_t/ds = {\bf 0}$ (i.e. $\kappa = 0$), such as on a straight line, at an inflection point, or at a corner. In this case, ${\bf e}_n$ is defined as any unit vector perpendicular to ${\bf e}_t$.
+:::
 :::
 
 The unit **binormal** vector:
@@ -125,7 +131,9 @@ Note that forces in the binormal direction should always balance.
 ::: {.callout-tip title="Think!"}
 **Question:** Consider the design of a roller coaster that is a circular ring. Comment on its safety.
 
-**Answer:** At the transition between the circular and straight portions, there is a jump in curvature, hence a jump in acceleration, hence a jump in the normal force — producing a jerk. For a circular loop, the normal force goes from 0 to a finite value instantaneously. This could snap the rider's neck. Instead, we use two connected **clothoids** (Euler spirals), whose curvature is proportional to arc length.
+::: {.callout-note title="Answer" collapse="true"}
+At the transition between the circular and straight portions, there is a jump in curvature, hence a jump in acceleration, hence a jump in the normal force — producing a jerk. For a circular loop, the normal force goes from 0 to a finite value instantaneously. This could snap the rider's neck. Instead, we use two connected **clothoids** (Euler spirals), whose curvature is proportional to arc length.
+:::
 :::
 
 ## The Serret-Frenet Formulae
@@ -196,3 +204,51 @@ For plane curves, some texts define the angle $\beta = \beta(s)$ such that:
     {\bf e}_t = \cos(\beta){\bf E}_x+\sin(\beta){\bf E}_y, \qquad \bar{\bf e}_n = \cos(\beta){\bf E}_y-\sin(\beta){\bf E}_x.
 \end{align}
 Then $\kappa = \left|\frac{d\beta}{ds}\right|$ and $\frac{d\beta}{ds}$ is the rate of rotation of the triad about ${\bf E}_z$.
+
+
+## Summary
+
+**Serret–Frenet basis** $\{\mathbf{e}_t,\mathbf{e}_n,\mathbf{e}_b\}$:
+\begin{align}
+    \mathbf{v} &= v\,\mathbf{e}_t, \qquad
+    \mathbf{a} = \dot v\,\mathbf{e}_t + \kappa v^2\,\mathbf{e}_n, \qquad
+    \mathbf{e}_b = \mathbf{e}_t\times\mathbf{e}_n.
+\end{align}
+The curvature is $\kappa=1/\rho$ (radius of curvature $\rho$). The BoLM gives $F_t = m\dot v$ and $F_n = m\kappa v^2$.
+
+## Lecture Videos
+
+{{< video https://youtu.be/XNdP7Nk850s title="Particle on a curve vs. particle on a surface" width="70%" >}}
+
+{{< video https://youtu.be/OB13c0WlUSg title="Derivation of the Serret–Frenet formulae" width="70%" >}}
+
+
+## Exercises
+
+*The following problems are from Set 07 – The Serret–Frenet Basis.*
+
+**1.** [MKB 2/079] Analyse the acceleration vector in the Serret–Frenet basis.
+
+![MKB 2/079.](../figures/serret_frenet_triad/02-079.jpg){width=50%}
+
+**2.** [MKB 02-090] Note that $\dot v \neq \|\mathbf{a}\|$; acceleration has both tangential and normal components. *(ans. $v = 20$ m/s)*
+
+**3.** [MKB 02-091] *(ans. $\rho = 1709$ m)*
+
+**4.** [02-097] Follow the 4 steps; express $\mathbf{e}_t$ and $\mathbf{e}_n$ in the Cartesian basis. *(ans. at $t=1$ s: $\dot v=-6.58$ ft/s$^2$, $\rho=142.2$ ft; at $t=2$ s: $\dot v=8.75$ ft/s$^2$, $\rho=149.7$ ft)*
+
+**5.** [02-103] *(ans. $(x_C,y_C)=(22.5,-22.9)$ m)*
+
+**6.** [02-199] Draw $\mathbf{e}_t$ and $\mathbf{e}_n$ first. *(ans. $\dot r=15$ m/s, $\dot\theta=0.325$ rad/s, $\rho=129.9$ m)*
+
+**7.** [03-040] Note the jump in normal force at the transition from straight to curved path. *(ans. (a) $R=1.177$ N; (b) $R=1.664$ N)*
+
+**8.** [03-041] What does "weightless" mean? *(ans. $\rho=24\,000$ ft)*
+
+**9.** [03-043] Draw the Serret–Frenet basis carefully; the figure hints at the direction of $\mathbf{e}_n$. *(ans. $v=29.1$ m/s, $N=12.36$ kN)*
+
+![Problem 03/043.](../figures/serret_frenet_triad/eg-particle-on-ring.jpg){width=50%}
+
+**10.** [OOR 3.1] *(See O'Reilly Primer.)*
+
+**11.** [OOR 3.2]

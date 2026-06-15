@@ -28,7 +28,9 @@ Notes:
 ::: {.callout-tip title="Think!"}
 **Question:** In what case would the work of a force be zero?
 
-**Answer:** The work is zero if the force is perpendicular to the displacement/velocity, or if the force is applied at a fixed point.
+::: {.callout-note title="Answer" collapse="true"}
+The work is zero if the force is perpendicular to the displacement/velocity, or if the force is applied at a fixed point.
+:::
 :::
 
 ### Example: Particle on a Rail
@@ -57,21 +59,25 @@ Consider two points $A$ and $B$ in the vertical plane connected by a smooth rail
 ::: {.callout-tip title="Think!"}
 **Question:** What is the work done by forces on an object traveling from $A$ to $B$ on (a) a straight rail or (b) a curved path?
 
-**Answer:** In both cases ${\bf F} = {\bf W}+{\bf N}$. Since ${\bf N}\perp d{\bf r}$, the normal force does no work. The work of weight is:
+::: {.callout-note title="Answer" collapse="true"}
+In both cases ${\bf F} = {\bf W}+{\bf N}$. Since ${\bf N}\perp d{\bf r}$, the normal force does no work. The work of weight is:
 \begin{align*}
     W_{{\bf W},1-2} = \int mg{\bf E}_y\cdot d{\bf r} = mg{\bf E}_y\cdot\Delta{\bf r}_{1-2}.
 \end{align*}
 $\Delta{\bf r}_{1-2}$ is the same for both rails, so weight does the same work regardless of path.
 :::
+:::
 
 ::: {.callout-tip title="Think!"}
 **Question:** What changes if the rail is rough?
 
-**Answer:** With friction:
+::: {.callout-note title="Answer" collapse="true"}
+With friction:
 \begin{align*}
     W_{1-2} = W_{{\bf W},1-2} - \mu_k\int_{s_1}^{s_2}\lnorm{\bf N}\rnorm\,ds.
 \end{align*}
 Friction work is path dependent and dissipative ($W_{{\bf F}_f,1-2}<0$).
+:::
 :::
 
 ## Kinetic Energy
@@ -167,3 +173,47 @@ If nonconservative forces also act:
 \begin{align*}
     E(t_2) = E(t_1) + W_{{\bf F}_f,1-2} < E(t_1).
 \end{align*}
+
+
+## Summary
+
+**Power** of force $\mathbf{F}$ on particle with velocity $\mathbf{v}$: $P = \mathbf{F}\cdot\mathbf{v}$.
+
+**Work–energy theorem**: $T_B - T_A = W_{\mathbf{F},AB}$, where $T=\tfrac{1}{2}m\mathbf{v}\cdot\mathbf{v}$.
+
+**Conservative forces** satisfy $W_{F_c,AB}=-(U_B-U_A)$. Including non-conservative work:
+\begin{align}
+    (T_B+U_B)-(T_A+U_A) = W_{\mathbf{F}_{nc},AB}.
+\end{align}
+If all work-doing forces are conservative, **energy is conserved**: $E=T+U=\text{const}$.
+
+## Lecture Videos
+
+{{< video https://youtu.be/nHnDuCWtacY title="Gravitational force model" width="70%" >}}
+
+{{< video https://youtu.be/bjpTKehJV7s title="Work–energy theorem on a simple pendulum" width="70%" >}}
+
+
+## Exercises
+
+*The following problems are from Set 11 – Power, Work and Energy.*
+
+**1.** [MKB 03-128] Only the gravitational force acts on the spacecraft, so energy is conserved. Use conservation of energy. *(ans. $v_B = 26\,300$ km/h)*
+
+**2.** [MKB 03-080] *(ans. (a) no motion; (b) $v_B = 5.62$ m/s)*
+
+**3.** [MKB 03-084] *(ans. (a) $v=2.56$ m/s; (b) $x=98.9$ mm)*
+
+**4.** [MKB 03-094] *(ans. (a) $N_B=48$ N right; (b) $N_B'=29.4$ N right; (c) $N_C=17.63$ N down; (d) $N_D=29.4$ N left)*
+
+**5.** [MKB 03-101] *(ans. (a) $N_B=4mg$; (b) $N_C=7mg$; (c) $s=\frac{4R}{\sqrt{3}(1+\mu_k)}$)*
+
+**6.** [MKB 03-263] *(ans. $R=46.7$ N)*
+
+**7.** [OOR Exercise 5-1] *(See O'Reilly Primer.)*
+
+**8.** [OOR Exercise 5-4]
+
+**9.** [OOR Exercises 5-6 & 5-7]
+
+**10.** [OOR Exercises 5-8 & 5-9]

@@ -59,3 +59,29 @@ The inextensibility constraint $\ell = \text{const.}$ can be written as:
 ```
 
 *See Set 06: Constrained Motion Problem 02/172.*
+
+
+## Summary
+
+For **pulley–chord systems**: (1) choose a datum, (2) define distances from the datum, (3) write a chord equation per chord. Each chord equation and its derivatives give additional constraints.
+
+For constrained particles, watch: [Particle on a curve vs. particle on a surface](https://youtu.be/XNdP7Nk850s).
+
+## Exercises
+
+*The following problems are from Set 06 – Constrained Motion.*
+
+**1.** [MKB 2/099] Determine the $\mathbf{e}_r$ and $\mathbf{e}_\theta$ components of the acceleration of pin $P$; origin at the centre of the circular slot. *(ans. $a_n = 66.0$ mm/s$^2$, $a_t = 29.7$ mm/s$^2$)*
+
+{{< video https://youtu.be/Bt5neJj4Zhc title="Solution – Problem 02/099" width="70%" >}}
+
+
+**2.** [03-056] Set up two polar coordinate systems with origins $O$ and $O'$. Write position vectors of $P$ in each basis. *(ans. $N = 2.89$ N towards $O'$, $R = 1.599$ N)*
+
+**3.** [MKB 02-172] Use $\mathbf{v}_{B/A}=\mathbf{v}_B-\mathbf{v}_A=3.5\mathbf{E}_y$ m/s. *(ans. $\mathbf{v}_A=-0.5\mathbf{E}_y$ m/s, $\mathbf{v}_B=3\mathbf{E}_y$ m/s)*
+
+**4.** [MKB 03-021] Draw FBDs of the massless pulleys to find forces on the 60-lb cylinders. *(ans. (a) $a=10.73$ ft/sec$^2$ up; (b) $a=2.93$ ft/sec$^2$ up)*
+
+**5.** [MKB 2-177] *(See problem set for figure.)*
+
+**6.** [MKB 2-179]
