@@ -389,6 +389,7 @@ window.Quarto = {
   <li><a href="#given-acceleration-as-a-function-of-time" id="toc-given-acceleration-as-a-function-of-time" class="nav-link" data-scroll-target="#given-acceleration-as-a-function-of-time"><span class="header-section-number">7.4.2</span> Given Acceleration as a Function of Time</a></li>
   <li><a href="#given-acceleration-as-a-function-of-speed" id="toc-given-acceleration-as-a-function-of-speed" class="nav-link" data-scroll-target="#given-acceleration-as-a-function-of-speed"><span class="header-section-number">7.4.3</span> Given Acceleration as a Function of Speed</a></li>
   <li><a href="#given-acceleration-as-a-function-of-displacement" id="toc-given-acceleration-as-a-function-of-displacement" class="nav-link" data-scroll-target="#given-acceleration-as-a-function-of-displacement"><span class="header-section-number">7.4.4</span> Given Acceleration as a Function of Displacement</a></li>
+  <li><a href="#constant-acceleration" id="toc-constant-acceleration" class="nav-link" data-scroll-target="#constant-acceleration"><span class="header-section-number">7.4.5</span> Constant Acceleration</a></li>
   </ul></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">7.5</span> Summary</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">7.6</span> Exercises</a></li>
@@ -650,7 +651,7 @@ window.Quarto = {
 \end{align}\]</span></p>
 <p>Calculate and plot <span class="math inline">\({\bf v}\)</span>, <span class="math inline">\({\bf a}\)</span>, <span class="math inline">\({\bf v}\times {\bf a}\)</span>, <span class="math inline">\(\lnorm{\bf r}\rnorm\)</span>. Show that the motion satisfies: <span class="math display">\[\begin{align}
     \ddot{x}+\omega^2 x=0, \qquad \ddot{y}+\omega^2 y=0.
-\end{align}\]</span> ::: {.callout-note title=“Answer” collapse=“true”} …</p>
+\end{align}\]</span> ::: {.callout-note title=“Answer” collapse=“true”} Answer: …</p>
 </div>
 </div>
 <p>:::</p>
@@ -679,15 +680,110 @@ window.Quarto = {
 </div>
 <div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The velocity and acceleration are: <span class="math display">\[\begin{align*}
-    {\bf v} &amp;= R_0\omega\lp-\sin\lp\omega t\rp{\bf E}_x+\cos\lp\omega t\rp{\bf E}_y\rp,\\
-    {\bf a} &amp;= -R_0\omega^2\lp\cos\lp\omega t\rp{\bf E}_x+\sin\lp\omega t\rp{\bf E}_y\rp.
-\end{align*}\]</span> Note that <span class="math inline">\(\dot{\bf E}_x={\bf 0}\)</span> and <span class="math inline">\(\dot{\bf E}_y={\bf 0}\)</span> since the basis is fixed, and the chain rule applies.</p>
-<p>Noting that <span class="math inline">\({\bf a} = -\omega^2{\bf r}\)</span>: <span class="math display">\[\begin{align*}
+<!-- The velocity and acceleration are:
+\begin{align*}
+    {\bf v} &= R_0\omega\lp-\sin\lp\omega t\rp{\bf E}_x+\cos\lp\omega t\rp{\bf E}_y\rp,\\
+    {\bf a} &= -R_0\omega^2\lp\cos\lp\omega t\rp{\bf E}_x+\sin\lp\omega t\rp{\bf E}_y\rp.
+\end{align*}
+Note that $\dot{\bf E}_x={\bf 0}$ and $\dot{\bf E}_y={\bf 0}$ since the basis is fixed, and the chain rule applies.
+
+Noting that ${\bf a} = -\omega^2{\bf r}$:
+\begin{align*}
     {\bf r}\times{\bf a} = {\bf r}\times(-\omega^2{\bf r}) = -\omega^2{\bf r}\times{\bf r} = {\bf 0}.
+\end{align*}
+
+For ${\bf r}\cdot{\bf a}$:
+\begin{align*}
+    {\bf r}\cdot{\bf a} &= -R_0^2\omega^2\lp\cos^2(\omega t)+\sin^2(\omega t)\rp = -R_0^2\omega^2.
+\end{align*} -->
+<p>We calculate the velocity and acceleration vectors of the particle as follows:</p>
+<p><span class="math display">\[\begin{align*}
+{\bf v} &amp;= \frac{d{\bf r}}{dt}
+= R_0\omega\left(-\sin(\omega t)\,{\bf E}_x+\cos(\omega t)\,{\bf E}_y\right),\\
+{\bf a} &amp;= \frac{d{\bf v}}{dt}
+= -R_0\omega^2\left(\cos(\omega t)\,{\bf E}_x+\sin(\omega t)\,{\bf E}_y\right).
 \end{align*}\]</span></p>
-<p>For <span class="math inline">\({\bf r}\cdot{\bf a}\)</span>: <span class="math display">\[\begin{align*}
-    {\bf r}\cdot{\bf a} &amp;= -R_0^2\omega^2\lp\cos^2(\omega t)+\sin^2(\omega t)\rp = -R_0^2\omega^2.
+<p>As you take these derivatives, remember that:</p>
+<ul>
+<li><span class="math inline">\(\dot{\bf E}_x={\bf 0}\)</span> and <span class="math inline">\(\dot{\bf E}_y={\bf 0}\)</span> since the basis <span class="math inline">\(\{{\bf E}_x,{\bf E}_y\}\)</span> is fixed.</li>
+<li>The chain rule: <span class="math inline">\(\frac{d}{dx}f(g(x)) = f'(g(x))g'(x).\)</span></li>
+</ul>
+<p>Then,</p>
+<p><span class="math display">\[\begin{align*}
+{\bf r}\times{\bf a}
+&amp;=
+R_0\left(\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\right)
+\times
+\left(
+-R_0\omega^2\left(\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\right)
+\right) \\
+&amp;=
+-R_0^2\omega^2
+\Big(
+\cos^2(\omega t)\underbrace{{\bf E}_x\times{\bf E}_x}_{{\bf 0}}
++\cos(\omega t)\sin(\omega t)
+\left(
+\underbrace{{\bf E}_x\times{\bf E}_y}_{{\bf E}_z}
++
+\underbrace{{\bf E}_y\times{\bf E}_x}_{-{\bf E}_z}
+\right) \\
+&amp;\qquad\qquad
++\sin^2(\omega t)\underbrace{{\bf E}_y\times{\bf E}_y}_{{\bf 0}}
+\Big) \\
+&amp;= {\bf 0}.
+\end{align*}\]</span></p>
+<p>Alternatively, notice that</p>
+<p><span class="math display">\[\begin{align*}
+{\bf a} = -\omega^2{\bf r},
+\end{align*}\]</span></p>
+<p>so</p>
+<p><span class="math display">\[\begin{align*}
+{\bf r}\times{\bf a}
+=
+{\bf r}\times(-\omega^2{\bf r})
+=
+-\omega^2({\bf r}\times{\bf r})
+=
+{\bf 0}.
+\end{align*}\]</span></p>
+<p>For practice, let us also calculate <span class="math inline">\({\bf r}\cdot{\bf a}\)</span>:</p>
+<p><span class="math display">\[\begin{align*}
+{\bf r}\cdot{\bf a}
+&amp;=
+R_0\left(\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\right)
+\cdot
+\left(
+-R_0\omega^2\left(\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\right)
+\right) \\
+&amp;=
+-R_0^2\omega^2
+\Big(
+\cos^2(\omega t)\underbrace{{\bf E}_x\cdot{\bf E}_x}_{1}
++\cos(\omega t)\sin(\omega t)
+\left(
+\underbrace{{\bf E}_x\cdot{\bf E}_y}_{0}
++
+\underbrace{{\bf E}_y\cdot{\bf E}_x}_{0}
+\right)
++\sin^2(\omega t)\underbrace{{\bf E}_y\cdot{\bf E}_y}_{1}
+\Big) \\
+&amp;=
+-R_0^2\omega^2
+\left(\cos^2(\omega t)+\sin^2(\omega t)\right) \\
+&amp;=
+-R_0^2\omega^2.
+\end{align*}\]</span></p>
+<p>Alternatively,</p>
+<p><span class="math display">\[\begin{align*}
+{\bf r}\cdot{\bf a}
+&amp;=
+{\bf r}\cdot(-\omega^2{\bf r}) \\
+&amp;=
+-\omega^2({\bf r}\cdot{\bf r}) \\
+&amp;=
+-\omega^2\|{\bf r}\|^2 \\
+&amp;=
+-\omega^2R_0^2.
 \end{align*}\]</span></p>
 </div>
 </div>
@@ -716,47 +812,144 @@ window.Quarto = {
     {\bf v}(t) &amp;= \dot{x}{\bf E}_x = v(t){\bf E}_x,\\
     {\bf a}(t) &amp;= \ddot{x}{\bf E}_x = a(t){\bf E}_x.
 \end{align}\]</span></p>
-<p><span class="math inline">\(\frac{ds}{dt}=\left|\frac{dx}{dt}\right|\)</span>, so unless <span class="math inline">\(\dot{x}&gt;0\)</span> or <span class="math inline">\(\dot{x}&lt;0\)</span> throughout, <span class="math inline">\(x\)</span> and <span class="math inline">\(s\)</span> cannot be easily interchanged.</p>
+<p><span class="math inline">\(\frac{ds}{dt}=\left|\frac{dx}{dt}\right|\)</span>, so unless <span class="math inline">\(\dot{x}&gt;0\)</span> or <span class="math inline">\(\dot{x}&lt;0\)</span> throughout, <span class="math inline">\(x\)</span> and <span class="math inline">\(s\)</span> cannot be easily interchanged as this convention flips <span class="math inline">\({\bf e}_t\)</span> based on the motion.</p>
 <section id="identities-for-rectilinear-motion" class="level3" data-number="7.4.1">
 <h3 data-number="7.4.1" class="anchored" data-anchor-id="identities-for-rectilinear-motion"><span class="header-section-number">7.4.1</span> Identities for Rectilinear Motion</h3>
-<p>Recall <span class="math inline">\(v = \frac{dx}{dt}\)</span> and <span class="math inline">\(a = \frac{dv}{dt}\)</span>. Applying the chain rule: <span class="math display">\[\begin{align}
+<p>Recall the definitions <span class="math inline">\({\bf v} = \frac{d{\bf r}}{dt}\)</span> and <span class="math inline">\({\bf a} = \frac{d{\bf v}}{dt}\)</span>. For the case of rectilinear motion along <span class="math inline">\({\bf E}_x\)</span>, projecting these equations along <span class="math inline">\({\bf E}_x\)</span> yields respectively <span class="math inline">\(v = \frac{dx}{dt}\)</span> and <span class="math inline">\(a = \frac{dv}{dt}\)</span>. Applying the chain rule to the latter equation, we obtain <span class="math display">\[\begin{align}
     a = \frac{dv}{dt} = \frac{dv}{dx}\frac{dx}{dt} = v\frac{dv}{dx}.
-\end{align}\]</span></p>
-<p>Three useful identities: <span class="math display">\[\begin{align}
+\end{align}\]</span> where we assumed that <span class="math inline">\(v(t)\)</span> can be written in terms of <span class="math inline">\(x\)</span>.</p>
+<p>We will now examine three useful identities for rectilinear motion that relate <span class="math inline">\(s\)</span>, <span class="math inline">\(v\)</span>, and <span class="math inline">\(a\)</span>. <span class="math display">\[\begin{align}
     ds &amp;= v\, dt, \qquad dv = a\, dt, \qquad v\,dv = a\,ds.
 \end{align}\]</span></p>
 </section>
 <section id="given-acceleration-as-a-function-of-time" class="level3" data-number="7.4.2">
 <h3 data-number="7.4.2" class="anchored" data-anchor-id="given-acceleration-as-a-function-of-time"><span class="header-section-number">7.4.2</span> Given Acceleration as a Function of Time</h3>
-<p>From <span class="math inline">\(dv = a\, dt\)</span>: <span class="math display">\[\begin{align}
+<p>From <span class="math inline">\(dv = a\, dt\)</span>, we can integrate this equation to get the signed speed as a function of time. <span class="math display">\[\begin{align}
     v(t)-v(t_0) = \int_{t_0}^{t}a(\tilde{t})\,d\tilde{t}.
 \end{align}\]</span> From <span class="math inline">\(ds = v\, dt\)</span>: <span class="math display">\[\begin{align}
-    s(t_1)-s(t_0) = \int_{t_0}^{t_1}v(\tilde{t})\,d\tilde{t}.
-\end{align}\]</span></p>
+    s(t_1)-s(t_0) = \int_{s(t_0)}^{s(t_1)}d(\tilde{s}) =\int_{t_0}^{t_1}v(\tilde{t})\,d\tilde{t}.
+\end{align}\]</span> Note the use of the dummy variables <span class="math inline">\(\tilde{s}\)</span> and <span class="math inline">\(\tilde{t}\)</span> in the above integrals.</p>
 </section>
 <section id="given-acceleration-as-a-function-of-speed" class="level3" data-number="7.4.3">
 <h3 data-number="7.4.3" class="anchored" data-anchor-id="given-acceleration-as-a-function-of-speed"><span class="header-section-number">7.4.3</span> Given Acceleration as a Function of Speed</h3>
-<p>From <span class="math inline">\(dv = a\, dt\)</span> with <span class="math inline">\(a = a(v)\)</span>: <span class="math display">\[\begin{align}
-    t(v) - t(v_0) = \int_{v_0}^{v}\frac{d\tilde{v}}{a(\tilde{v})}.
-\end{align}\]</span> Using <span class="math inline">\(a = v\frac{dv}{ds}\)</span>: <span class="math display">\[\begin{align}
-    s(t)-s_0 = \int_{v_0}^{v}\frac{\tilde{v}\,d\tilde{v}}{a(\tilde{v})}.
+<p>Given <span class="math inline">\(a=a(v)\)</span>, we can use again <span class="math display">\[\begin{align}
+    dv = a dt
+\end{align}\]</span> to get <span class="math display">\[\begin{align}
+    \begin{split}
+        dt &amp;= \frac{dv}{a(v)}\\
+        t(v) - t(v_0) &amp;= \int_{v_0}^{v}\frac{d\tilde{v}}{a(\tilde{v})}
+    \end{split}
+\end{align}\]</span> Also, using the chain rule <span class="math display">\[\begin{align}
+\begin{split}
+    a &amp;= \frac{dv}{dt} = \frac{dv}{ds}\frac{ds}{dt}=v\frac{dv}{ds}\\
+\end{split}
+\end{align}\]</span> If <span class="math inline">\(a=a(v)\)</span>, then <span class="math display">\[\begin{align}
+    \begin{split}
+        ds &amp;= \frac{vdv}{a}\\
+        s(t)-s_0 &amp;=\int_{v_0}^{v}\frac{\tilde{v}d\tilde{v}}{a(\Tilde{v})}.
+    \end{split}
 \end{align}\]</span></p>
 </section>
 <section id="given-acceleration-as-a-function-of-displacement" class="level3" data-number="7.4.4">
 <h3 data-number="7.4.4" class="anchored" data-anchor-id="given-acceleration-as-a-function-of-displacement"><span class="header-section-number">7.4.4</span> Given Acceleration as a Function of Displacement</h3>
-<p>Using <span class="math inline">\(v\,dv = a\,ds\)</span> with <span class="math inline">\(a = a(s)\)</span>: <span class="math display">\[\begin{align}
-    \frac{1}{2}\lp v^2(s)-v^2(s_0)\rp = \int_{s_0}^{s}a(\tilde{s})\,d\tilde{s}.
-\end{align}\]</span></p>
-<section id="constant-acceleration" class="level4" data-number="7.4.4.1">
-<h4 data-number="7.4.4.1" class="anchored" data-anchor-id="constant-acceleration"><span class="header-section-number">7.4.4.1</span> Constant Acceleration</h4>
-<p><strong>Example: Gravity.</strong> Throw a ball up; take the hand as origin. Here <span class="math inline">\(a = -g\)</span>.</p>
-<p><span class="math display">\[\begin{align}
-    v(t) &amp;= v_0-gt,\\
-    s(t) &amp;= s_0+v_0t-\frac{g}{2}t^2.
-\end{align}\]</span></p>
-<p><strong>Example: Vehicle Braking.</strong> Using <span class="math inline">\(v\,dv = a\,ds\)</span>: <span class="math display">\[\begin{align}
-    v^2(s)-v^2(s_0) = 2a\,\Delta s.
-\end{align}\]</span></p>
+<p>Starting with <span class="math inline">\(a = v\,dv/ds\)</span>, if <span class="math inline">\(a=a(s)\)</span>, we can rearrange this equation to get <span class="math display">\[\begin{align*}
+\int_{v(s_0)}^{v(s)} v\,dv
+=
+\int_{s_0}^{s} a(\tilde{s})\,d\tilde{s}.
+\end{align*}\]</span></p>
+<p>Evaluating the left-hand side gives</p>
+<p><span class="math display">\[\begin{align*}
+\frac{1}{2}\left(v^2(s)-v^2(s_0)\right)
+=
+\int_{s_0}^{s} a(\tilde{s})\,d\tilde{s}.
+\end{align*}\]</span></p>
+<p>Equivalently,</p>
+<p><span class="math display">\[\begin{align*}
+v^2(s)
+=
+v^2(s_0)
++
+2\int_{s_0}^{s} a(\tilde{s})\,d\tilde{s}.
+\end{align*}\]</span></p>
+</section>
+<section id="constant-acceleration" class="level3" data-number="7.4.5">
+<h3 data-number="7.4.5" class="anchored" data-anchor-id="constant-acceleration"><span class="header-section-number">7.4.5</span> Constant Acceleration</h3>
+<section id="example-gravity" class="level4" data-number="7.4.5.1">
+<h4 data-number="7.4.5.1" class="anchored" data-anchor-id="example-gravity"><span class="header-section-number">7.4.5.1</span> Example: Gravity</h4>
+<p>Throw a ball upward and take your hand to be the origin.</p>
+<p>Here,</p>
+<p><span class="math display">\[\begin{align*}
+{\bf a} = -g\,{\bf e}_t,
+\qquad
+g = 32.2\ \frac{\text{ft/s}}{\text{s}}.
+\end{align*}\]</span></p>
+<p>Note that <span class="math inline">\({\bf e}_t\)</span> always points in the direction of increasing <span class="math inline">\(s\)</span> (upward). Therefore,</p>
+<p><span class="math display">\[\begin{align*}
+a=-g.
+\end{align*}\]</span></p>
+<p>Using</p>
+<p><span class="math display">\[\begin{align*}
+dv=a\,dt,
+\end{align*}\]</span></p>
+<p>we obtain</p>
+<p><span class="math display">\[\begin{align*}
+\int_{v(t_0)}^{v(t)} dv
+&amp;=
+-g\int_{t_0}^{t} d\tilde{t},\\
+v(t)-v(t_0)
+&amp;=
+-g(t-t_0).
+\end{align*}\]</span></p>
+<p>Letting <span class="math inline">\(v(t_0)=v_0\)</span> and choosing the time origin so that <span class="math inline">\(t_0=0\)</span>, we find</p>
+<p><span class="math display">\[\begin{align*}
+v(t)=v_0-gt.
+\end{align*}\]</span></p>
+<p>To determine the position as a function of time, use</p>
+<p><span class="math display">\[\begin{align*}
+ds=v\,dt.
+\end{align*}\]</span></p>
+<p>Integrating,</p>
+<p><span class="math display">\[\begin{align*}
+\int_{s_0}^{s(t)} ds
+&amp;=
+\int_{0}^{t}\left(v_0-g\tilde{t}\right)d\tilde{t},\\
+s(t)-s_0
+&amp;=
+v_0t-\frac{g}{2}t^2.
+\end{align*}\]</span></p>
+<p>Hence,</p>
+<p><span class="math display">\[\begin{align*}
+s(t)=s_0+v_0t-\frac{g}{2}t^2.
+\end{align*}\]</span></p>
+<p>In this example, <span class="math inline">\(s_0=0\)</span>.</p>
+</section>
+<section id="example-vehicle-braking" class="level4" data-number="7.4.5.2">
+<h4 data-number="7.4.5.2" class="anchored" data-anchor-id="example-vehicle-braking"><span class="header-section-number">7.4.5.2</span> Example: Vehicle Braking</h4>
+<p>For constant acceleration, the relation</p>
+<p><span class="math display">\[\begin{align*}
+v\,dv=a\,ds
+\end{align*}\]</span></p>
+<p>is particularly useful.</p>
+<p>Integrating,</p>
+<p><span class="math display">\[\begin{align*}
+\int_{v(s_0)}^{v(s)} v\,dv
+&amp;=
+a\int_{s_0}^{s} d\tilde{s},\\
+\frac{1}{2}\left(v^2(s)-v^2(s_0)\right)
+&amp;=
+a(s-s_0).
+\end{align*}\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[\begin{align*}
+v^2(s)-v^2(s_0)
+=
+2a(s-s_0),
+\end{align*}\]</span></p>
+<p>or, in increment notation,</p>
+<p><span class="math display">\[\begin{align*}
+\Delta(v^2)=2a\,\Delta s.
+\end{align*}\]</span></p>
+<p>This equation is commonly used to determine braking distance when the deceleration is approximately constant.</p>
 </section>
 </section>
 </section>

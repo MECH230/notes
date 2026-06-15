@@ -389,8 +389,7 @@ window.Quarto = {
   <li><a href="#example-projectile-motion-with-bluff-body-pressure-drag" id="toc-example-projectile-motion-with-bluff-body-pressure-drag" class="nav-link" data-scroll-target="#example-projectile-motion-with-bluff-body-pressure-drag"><span class="header-section-number">8.3.3</span> Example: Projectile Motion with Bluff Body Pressure Drag</a></li>
   </ul></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">8.4</span> Summary</a></li>
-  <li><a href="#lecture-videos" id="toc-lecture-videos" class="nav-link" data-scroll-target="#lecture-videos"><span class="header-section-number">8.5</span> Lecture Videos</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">8.6</span> Exercises</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">8.5</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -467,7 +466,7 @@ window.Quarto = {
 </div>
 <p>Then, in our case of interest: <span class="math display">\[\begin{align}
     \dot{\bf G} = m\dot{\bf v} = m{\bf a}.
-\end{align}\]</span> We postulate the following balance law: <span class="math display">\[\begin{align}
+\end{align}\]</span> We postulate the following balance law/axiom/postulate to be true: <span class="math display">\[\begin{align}
     {\bf F} = \dot{\bf G},
 \end{align}\]</span> where <span class="math inline">\({\bf F}\)</span> is the resultant external force acting on the particle. This is known as the <strong>Balance of Linear Momentum</strong>, <strong>Newton’s Second Law</strong>, or <strong>Euler’s First Law</strong>.</p>
 <p><strong>Important:</strong> <span class="math inline">\({\bf a}\)</span> here is the absolute acceleration vector of the particle.</p>
@@ -572,7 +571,7 @@ window.Quarto = {
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../figures/four_steps_bolm/FBD.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="../figures/four_steps_bolm/FBD.png" class="img-fluid figure-img" style="width:10.0%"></p>
 <figcaption>FBD</figcaption>
 </figure>
 </div>
@@ -596,46 +595,71 @@ mg(-{\bf E}_y) = m\lp\ddot{x}{\bf E}_x+\ddot{y}{\bf E}_y\rp.
 <section id="example-projectile-motion-with-viscous-drag" class="level3" data-number="8.3.2">
 <h3 data-number="8.3.2" class="anchored" data-anchor-id="example-projectile-motion-with-viscous-drag"><span class="header-section-number">8.3.2</span> Example: Projectile Motion with Viscous Drag</h3>
 <p><em>(Primer Section 1.5.3)</em></p>
+<p>Going through the four steps, we get</p>
 <ol type="1">
-<li><p>Same kinematics as above.</p></li>
-<li><p>Force model — weight and Stokes drag:</p></li>
+<li>Again,</li>
+</ol>
+<p><span class="math display">\[\begin{align}
+    {\bf r} &amp;= x{\bf E}_x+y{\bf E}_y, \quad {\bf v} = \dot{x}{\bf E}_x+\dot{y}{\bf E}_y, \quad {\bf a} = \ddot{x}{\bf E}_x+\ddot{y}{\bf E}_y.
+\end{align}\]</span></p>
+<ol start="2" type="1">
+<li>Force model — weight and Stokes drag:</li>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="particle_kinetics_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="particle_kinetics_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="96"></p>
 </figure>
 </div>
 </div>
 </div>
 <p><span class="math display">\[\begin{align}
     {\bf W} &amp;= mg(-{\bf E}_y),\\
-    {\bf F}_D &amp;= -c_s{\bf v}.
+    {\bf F}_D &amp;= \underbrace{c_s \lnorm{\bf v}\rnorm}_{\text{magnitude}}\underbrace{\lp-\frac{{\bf v}}{\lnorm{\bf v}\rnorm}\rp}_{\text{unit direction}} = -c_s{\bf v}.
 \end{align}\]</span> The Stokes drag (1851) applies at low speeds in viscous fluids.</p>
 <ol start="3" type="1">
 <li><p>Balance of linear momentum: <span class="math display">\[\begin{align}
+{\bf F} &amp;= \dot{\bf G},\\
 -mg{\bf E}_y -c_s\lp\dot{x}{\bf E}_x+\dot{y}{\bf E}_y\rp &amp;= m\lp\ddot{x}{\bf E}_x+\ddot{y}{\bf E}_y\rp.
 \end{align}\]</span> Projecting: <span class="math display">\[\begin{align}
--c_s\dot{x} &amp;= m\ddot{x},\\
--mg-c_s\dot{y} &amp;= m\ddot{y}.
+\lp{\bf F}=\dot{\bf G}\rp\cdot{\bf E}_x &amp;\implies\quad -c_s\dot{x} = m\ddot{x}\\
+\lp{\bf F}=\dot{\bf G}\rp\cdot{\bf E}_y &amp;\implies\quad -mg-c_s\dot{y} = m\ddot{y}
 \end{align}\]</span> Given initial conditions <span class="math inline">\(x_0, \dot{x}_0, y_0, \dot{y}_0\)</span>, these are an initial value problem (IVP).</p></li>
 <li><p>Solving the <span class="math inline">\(x\)</span>-equation (let <span class="math inline">\(v_x = \dot{x}\)</span>): <span class="math display">\[\begin{align}
-v_x = v_{x_0}e^{-c_s t/m}, \quad \lim_{t\rightarrow\infty} v_x = 0.
-\end{align}\]</span> Thus, the terminal velocity is only along <span class="math inline">\({\bf E}_y\)</span>.</p></li>
+     \lp{\bf F}=\dot{\bf G}\rp\cdot{\bf E}_x &amp;\implies\quad -c_s\dot{x} = m\ddot{x},\\
+     \lp{\bf F}=\dot{\bf G}\rp\cdot{\bf E}_y &amp;\implies\quad -mg-c_s\dot{y} = m\ddot{y}.
+\end{align}\]</span> These equations give ODEs for <span class="math inline">\(x(t)\)</span> and <span class="math inline">\(y(t)\)</span>. Given IC’s <span class="math inline">\(x_0, \dot{x}_0, y_0, \dot{y}_0\)</span>, we have an initial value problem (IVP).</p></li>
 </ol>
+<p>The <span class="math inline">\(x\)</span>-equation is a first order ODE for <span class="math inline">\(v_x = \dot{x}\)</span>: <span class="math display">\[\begin{align}
+    \begin{split}
+        -c_s v_x &amp;= m\Dot{v}_x\\
+        -\frac{c_s}{m}dt &amp;= \frac{d v_x}{v_x}\\
+        -\frac{c_s}{m}\int_0^t d\Tilde{t} &amp;= \int_{v_{x_0}}^{v_c(t)}\frac{d\Tilde{v}_x}{\tilde{v}_x}\\
+        -\frac{c_s}{m}t &amp;= \ln\lp\frac{v_x}{v_{x_0}}\rp\\
+        v_x &amp;= v_{x_0}e^{-\frac{c_s t}{m}}
+    \end{split}
+\end{align}\]</span> Note that <span class="math display">\[\begin{align}
+    \lim_{t\rightarrow\infty} v_x = 0.
+\end{align}\]</span> Thus, the terminal velocity of the particle is only along <span class="math inline">\({\bf E}_y\)</span>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="particle_kinetics_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="particle_kinetics_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="192"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Solving the <span class="math inline">\(y\)</span>-equation: <span class="math display">\[\begin{align}
+    dt &amp;= \frac{m dv_y}{-mg-c_s v_y}\\
+    \int_0^td\tilde{t} &amp;= m\int_{v_{y_0}}^{v_y(t)}\frac{d\Tilde{v}_y}{-mg-c_s\Tilde{v}_y}\\
+    v_y &amp;= -\frac{mg}{c_s}+\frac{1}{c_s}\lp mg+c_s v_{y_0}\rp e^{-c_st/m}
+\end{align}\]</span> As <span class="math inline">\(t\rightarrow\infty\)</span>, <span class="math inline">\(v_y \rightarrow -\frac{mg}{c_s}\)</span>. Thus, the terminal velocity <span class="math display">\[\begin{align}
+    {\bf v}_{\text{term}} = \frac{mg}{c_s}\lp-{\bf E}_y\rp.
+\end{align}\]</span> <span class="math display">\[\begin{align}
     v_y = -\frac{mg}{c_s}+\frac{1}{c_s}\lp mg+c_s v_{y_0}\rp e^{-c_s t/m}.
-\end{align}\]</span> The terminal velocity: <span class="math inline">\({\bf v}_{\text{term}} = \frac{mg}{c_s}\lp-{\bf E}_y\rp\)</span>.</p>
+\end{align}\]</span></p>
 </section>
 <section id="example-projectile-motion-with-bluff-body-pressure-drag" class="level3" data-number="8.3.3">
 <h3 data-number="8.3.3" class="anchored" data-anchor-id="example-projectile-motion-with-bluff-body-pressure-drag"><span class="header-section-number">8.3.3</span> Example: Projectile Motion with Bluff Body Pressure Drag</h3>
@@ -648,7 +672,8 @@ v_x = v_{x_0}e^{-c_s t/m}, \quad \lim_{t\rightarrow\infty} v_x = 0.
 <p><span class="math display">\[\begin{align}
     {\bf F}_D = \frac{1}{2}m C_D v^2\lp-\frac{\bf v}{\lnorm{\bf v}\rnorm}\rp,
 \end{align}\]</span> where <span class="math inline">\(C_D\)</span> is the drag coefficient, <span class="math inline">\(\rho\)</span> is the density of the fluid, and <span class="math inline">\(A\)</span> is the projected area in the direction of motion.</p>
-<p>See Section 1.6 in the book for a worked example.</p>
+<p>The equations of motion in this case (see primer section 1.6) need to be solved numerically. One way to do this is described in the video below.</p>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/RMkMK32vqyM" width="70%" title="Solving differential equations numerically in Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 </section>
 <section id="summary" class="level2" data-number="8.4">
@@ -664,12 +689,8 @@ v_x = v_{x_0}e^{-c_s t/m}, \quad \lim_{t\rightarrow\infty} v_x = 0.
 <li>Project along chosen directions and analyse to answer the question.</li>
 </ol>
 </section>
-<section id="lecture-videos" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="lecture-videos"><span class="header-section-number">8.5</span> Lecture Videos</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/RMkMK32vqyM" width="70%" title="Solving differential equations numerically in Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</section>
-<section id="exercises" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">8.6</span> Exercises</h2>
+<section id="exercises" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="exercises"><span class="header-section-number">8.5</span> Exercises</h2>
 <p><em>The following problems are from Set 04 – Balance of Linear Momentum.</em></p>
 <p><strong>1.</strong> [MKB 2/75] Take <span class="math inline">\(\mathbf{E}_x\)</span> along the incline and <span class="math inline">\(\mathbf{E}_y\)</span> perpendicular to it (upwards); origin at <span class="math inline">\(A\)</span>. Follow the 4 steps. <em>(ans. <span class="math inline">\(\theta = (90^\circ + \alpha)/2\)</span>)</em></p>
 <p><strong>2.</strong> [MKB 3/004] Consider the whole truck system; follow the 4 steps to find the truck’s acceleration, then isolate a trailer to find the drawbar tension. <em>(ans. <span class="math inline">\(T = 13.33\)</span> kN, <span class="math inline">\(a = 0.667\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
