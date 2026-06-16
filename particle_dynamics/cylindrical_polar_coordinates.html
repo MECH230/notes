@@ -377,22 +377,21 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#polar-coordinates" id="toc-polar-coordinates" class="nav-link active" data-scroll-target="#polar-coordinates"><span class="header-section-number">9.1</span> Polar Coordinates</a>
+  <li><a href="#polar-basis" id="toc-polar-basis" class="nav-link active" data-scroll-target="#polar-basis"><span class="header-section-number">9.1</span> Polar Basis</a></li>
+  <li><a href="#kinematics-in-polar-coordinates" id="toc-kinematics-in-polar-coordinates" class="nav-link" data-scroll-target="#kinematics-in-polar-coordinates"><span class="header-section-number">9.2</span> Kinematics in Polar Coordinates</a></li>
+  <li><a href="#example-nonlinear-pendulum" id="toc-example-nonlinear-pendulum" class="nav-link" data-scroll-target="#example-nonlinear-pendulum"><span class="header-section-number">9.3</span> Example: Nonlinear Pendulum</a></li>
+  <li><a href="#types-of-accelerations-explained" id="toc-types-of-accelerations-explained" class="nav-link" data-scroll-target="#types-of-accelerations-explained"><span class="header-section-number">9.4</span> Types of Accelerations Explained</a>
   <ul class="collapse">
-  <li><a href="#example-nonlinear-pendulum" id="toc-example-nonlinear-pendulum" class="nav-link" data-scroll-target="#example-nonlinear-pendulum"><span class="header-section-number">9.1.1</span> Example: Nonlinear Pendulum</a></li>
+  <li><a href="#example-particle-in-a-rotating-tube" id="toc-example-particle-in-a-rotating-tube" class="nav-link" data-scroll-target="#example-particle-in-a-rotating-tube"><span class="header-section-number">9.4.1</span> Example: Particle in a Rotating Tube</a></li>
+  <li><a href="#example-particle-pushed-in-a-circle" id="toc-example-particle-pushed-in-a-circle" class="nav-link" data-scroll-target="#example-particle-pushed-in-a-circle"><span class="header-section-number">9.4.2</span> Example: Particle Pushed in a Circle</a></li>
   </ul></li>
-  <li><a href="#types-of-accelerations-explained" id="toc-types-of-accelerations-explained" class="nav-link" data-scroll-target="#types-of-accelerations-explained"><span class="header-section-number">9.2</span> Types of Accelerations Explained</a>
+  <li><a href="#cylindrical-polar-coordinates" id="toc-cylindrical-polar-coordinates" class="nav-link" data-scroll-target="#cylindrical-polar-coordinates"><span class="header-section-number">9.5</span> Cylindrical-Polar Coordinates</a>
   <ul class="collapse">
-  <li><a href="#example-particle-in-a-rotating-tube" id="toc-example-particle-in-a-rotating-tube" class="nav-link" data-scroll-target="#example-particle-in-a-rotating-tube"><span class="header-section-number">9.2.1</span> Example: Particle in a Rotating Tube</a></li>
-  <li><a href="#example-particle-pushed-in-a-circle" id="toc-example-particle-pushed-in-a-circle" class="nav-link" data-scroll-target="#example-particle-pushed-in-a-circle"><span class="header-section-number">9.2.2</span> Example: Particle Pushed in a Circle</a></li>
+  <li><a href="#example-particle-on-a-cone" id="toc-example-particle-on-a-cone" class="nav-link" data-scroll-target="#example-particle-on-a-cone"><span class="header-section-number">9.5.1</span> Example: Particle on a Cone</a></li>
   </ul></li>
-  <li><a href="#cylindrical-polar-coordinates" id="toc-cylindrical-polar-coordinates" class="nav-link" data-scroll-target="#cylindrical-polar-coordinates"><span class="header-section-number">9.3</span> Cylindrical-Polar Coordinates</a>
-  <ul class="collapse">
-  <li><a href="#example-particle-on-a-cone" id="toc-example-particle-on-a-cone" class="nav-link" data-scroll-target="#example-particle-on-a-cone"><span class="header-section-number">9.3.1</span> Example: Particle on a Cone</a></li>
-  </ul></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">9.4</span> Summary</a></li>
-  <li><a href="#lecture-videos" id="toc-lecture-videos" class="nav-link" data-scroll-target="#lecture-videos"><span class="header-section-number">9.5</span> Lecture Videos</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">9.6</span> Exercises</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">9.6</span> Summary</a></li>
+  <li><a href="#lecture-videos" id="toc-lecture-videos" class="nav-link" data-scroll-target="#lecture-videos"><span class="header-section-number">9.7</span> Lecture Videos</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">9.8</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -431,18 +430,18 @@ window.Quarto = {
 
 
 <p>The cylindrical polar coordinate system is three-dimensional. We start by introducing the two-dimensional polar basis, then extend it to three dimensions.</p>
-<section id="polar-coordinates" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="polar-coordinates"><span class="header-section-number">9.1</span> Polar Coordinates</h2>
+<section id="polar-basis" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="polar-basis"><span class="header-section-number">9.1</span> Polar Basis</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="cylindrical_polar_coordinates_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="cylindrical_polar_coordinates_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="288"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Consider <span class="math inline">\(\mathbb{E}^2\)</span>. Define: <span class="math display">\[\begin{align}
+<p>Consider a particle in motion in the two dimensional Euclidean space <span class="math inline">\(\mathbb{E}^2\)</span>. Define: <span class="math display">\[\begin{align}
     r = \sqrt{x^2+y^2}\geq 0, \qquad \theta = \tan^{-1}\lp\frac{y}{x}\rp.
 \end{align}\]</span> So <span class="math inline">\(x = r\cos(\theta)\)</span> and <span class="math inline">\(y = r\sin(\theta)\)</span>.</p>
 <p>Define the basis <span class="math inline">\(\{{\bf e}_r,{\bf e}_\theta\}\)</span> as a rotation of <span class="math inline">\(\{{\bf E}_x,{\bf E}_y\}\)</span> by angle <span class="math inline">\(\theta\)</span> (positive CCW about <span class="math inline">\({\bf E}_z\)</span>):</p>
@@ -450,7 +449,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="cylindrical_polar_coordinates_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="cylindrical_polar_coordinates_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="96"></p>
 </figure>
 </div>
 </div>
@@ -492,12 +491,6 @@ window.Quarto = {
 <li><span class="math inline">\({\bf e}_r\)</span> points in the direction of increasing <span class="math inline">\(r\)</span>.</li>
 <li><span class="math inline">\({\bf e}_\theta\)</span> points in the direction of increasing <span class="math inline">\(\theta\)</span>.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../figures/cylindrical_polar_coordinates/polar_basis.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>Polar basis <span class="math inline">\(\{{\bf e}_r,{\bf e}_\theta\}\)</span>.</figcaption>
-</figure>
-</div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Think!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -508,7 +501,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Question:</strong> Calculate <span class="math inline">\(\dot{\bf e}_r\)</span> and <span class="math inline">\(\dot{\bf e}_\theta\)</span>.</p>
+<p><strong>Question:</strong> Calculate <span class="math inline">\(\dot{\bf e}_r (=\dot{\theta}{\bf e}_\theta)\)</span> and <span class="math inline">\(\dot{\bf e}_\theta (= \dot{\bf e}_r)\)</span>.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -522,20 +515,36 @@ window.Quarto = {
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align}
-    \dot{\bf e}_r = \dot{\theta}{\bf e}_\theta, \qquad \dot{\bf e}_\theta = -\dot{\theta}{\bf e}_r.
+    \begin{split}
+        {\bf e}_r = {\bf e}_r(\theta) &amp;\implies \frac{d{\bf e}_r}{d\theta} = -\sin(\theta){\bf E}_x+\cos(\theta){\bf E}_y = {\bf e}_\theta\\
+        {\bf e}_\theta = {\bf e}_\theta(\theta) &amp;\implies \frac{d{\bf e}_\theta}{d\theta} = -\cos(\theta){\bf E}_x-\sin(\theta){\bf E}_y = -{\bf e}_r
+    \end{split}
 \end{align}\]</span></p>
 </div>
 </div>
 </div>
 </div>
 </div>
+<p>You can also see this result geometrically,</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../figures/cylindrical_polar_coordinates/polar_basis_derivatives.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>Derivatives of the polar basis.</figcaption>
+<p><img src="cylindrical_polar_coordinates_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="96"></p>
 </figure>
 </div>
-<p>The position vector is <span class="math inline">\({\bf r} = r{\bf e}_r\)</span> (with <span class="math inline">\(r\geq 0\)</span>).</p>
+</div>
+</div>
+<p>Thus, for small <span class="math inline">\(d\theta&gt;0\)</span>, <span class="math display">\[\begin{align}
+    \begin{split}
+        {\bf e}_r(\theta+d\theta)-{\bf e}_r(\theta) &amp;\text{ points in the direction of }{\bf e}_\theta(\theta)\\
+        {\bf e}_\theta(\theta+d\theta)-{\bf e}_\theta(\theta) &amp;\text{ points in the direction of }-{\bf e}_r(\theta)
+    \end{split}
+\end{align}\]</span></p>
+</section>
+<section id="kinematics-in-polar-coordinates" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="kinematics-in-polar-coordinates"><span class="header-section-number">9.2</span> Kinematics in Polar Coordinates</h2>
+<p>We can write the position vector to the particle as <span class="math inline">\({\bf r} = r{\bf e}_r\)</span> (with <span class="math inline">\(r\geq 0\)</span>). Note that <span class="math inline">\({\bf e}_r\)</span> is a function of <span class="math inline">\(\theta\)</span>. Both <span class="math inline">\(r\)</span> and <span class="math inline">\(\theta\)</span> are functions of time <span class="math inline">\(t\)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Think!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -560,14 +569,23 @@ window.Quarto = {
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align*}
-    {\bf v} &amp;= \dot{r}{\bf e}_r+r\dot{\theta}{\bf e}_\theta,\\
-    {\bf a} &amp;= \lp \ddot{r}-r\dot{\theta}^2\rp{\bf e}_r+\lp 2\dot{r}\dot{\theta}+r\ddot{\theta}\rp{\bf e}_\theta.
+    {\bf v} &amp;= \dot{r}{\bf e}_r+r\dot{\bf e}_r\\
+    &amp;= \dot{r}{\bf e}_r+r\frac{d{\bf e}_r}{d\theta}\dot{\theta}\\
+    &amp;= \dot{r}{\bf e}_r+r\dot{\theta}{\bf e}_\theta.\\
+    {\bf a} &amp;= \ddot{r}{\bf e}_r+\dot{r}\dot{\bf e}_r+\dot{r}\dot{\theta}{\bf e}_\theta+r\ddot{\theta}{\bf e}_\theta+r\dot{\theta}\dot{\bf e}_\theta\\
+    &amp;= \lp \ddot{r}-r\dot{\theta}^2\rp{\bf e}_r+\lp 2\dot{r}\dot{\theta}+r\ddot{\theta}\rp{\bf e}_\theta.
 \end{align*}\]</span></p>
 </div>
 </div>
 </div>
 </div>
 </div>
+<p><span class="math display">\[\begin{align*}
+    {\bf r} &amp;= r{\bf e}_r+0{\bf e}_\theta\\
+    {\bf v} &amp;= v_r{\bf e}_r+v_\theta{\bf e}_\theta\\
+    {\bf a} &amp;= a_r{\bf e}_r+a_\theta{\bf e}_\theta
+\end{align*}\]</span></p>
+<p><strong>Remark: <span class="math inline">\(a_r \neq \dot{v}_r\)</span>.</strong> Be careful: <span class="math inline">\(v_r = \dot{r}\)</span> so <span class="math inline">\(\dot{v}_r = \ddot{r}\)</span>, but <span class="math inline">\(a_r = \ddot{r} - r\dot{\theta}^2 \neq \dot{v}_r\)</span> in general.</p>
 <p>Note the components of acceleration:</p>
 <ul>
 <li><span class="math inline">\(r\ddot{\theta}\)</span>: tangential</li>
@@ -575,17 +593,16 @@ window.Quarto = {
 <li><span class="math inline">\(r\dot{\theta}^2\)</span>: centripetal</li>
 <li><span class="math inline">\(2\dot{r}\dot{\theta}\)</span>: Coriolis</li>
 </ul>
-<p><strong>Remark: <span class="math inline">\(a_r \neq \dot{v}_r\)</span>.</strong> Be careful: <span class="math inline">\(v_r = \dot{r}\)</span> so <span class="math inline">\(\dot{v}_r = \ddot{r}\)</span>, but <span class="math inline">\(a_r = \ddot{r} - r\dot{\theta}^2 \neq \dot{v}_r\)</span> in general.</p>
-<p>For rectilinear motions, Cartesian coordinates are usually easiest. For problems where <span class="math inline">\(r\)</span> is directly measured (e.g.&nbsp;radar tracking), polar coordinates are natural.</p>
-<section id="example-nonlinear-pendulum" class="level3" data-number="9.1.1">
-<h3 data-number="9.1.1" class="anchored" data-anchor-id="example-nonlinear-pendulum"><span class="header-section-number">9.1.1</span> Example: Nonlinear Pendulum</h3>
+<p><strong>Remark: When to use polar vs Cartesiancoordinates?</strong> For rectilinear motions, Cartesian coordinates are usually easiest. For problems where <span class="math inline">\(r\)</span> is directly measured (e.g.&nbsp;radar tracking), polar coordinates are natural.</p>
+</section>
+<section id="example-nonlinear-pendulum" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="example-nonlinear-pendulum"><span class="header-section-number">9.3</span> Example: Nonlinear Pendulum</h2>
 <p>Consider a particle of mass <span class="math inline">\(m\)</span> suspended from a rigid inextensible string of length <span class="math inline">\(\ell\)</span>. Find the equation of motion.</p>
-<p><img src="../figures/cylindrical_polar_coordinates/pendulum_setup.JPG" class="img-fluid" style="width:50.0%" alt="Pendulum setup."> <img src="../figures/cylindrical_polar_coordinates/pendulum_fbd.JPG" class="img-fluid" style="width:50.0%" alt="Pendulum free body diagram."></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="cylindrical_polar_coordinates_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="cylindrical_polar_coordinates_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="192"></p>
 </figure>
 </div>
 </div>
@@ -668,9 +685,8 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
 </ol>
 <p>Projecting along <span class="math inline">\({\bf e}_r\)</span> gives the tension: <span class="math inline">\(T = m\lp\ell\dot{\theta}^2+g\cos(\theta)\rp\)</span>.</p>
 </section>
-</section>
-<section id="types-of-accelerations-explained" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="types-of-accelerations-explained"><span class="header-section-number">9.2</span> Types of Accelerations Explained</h2>
+<section id="types-of-accelerations-explained" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="types-of-accelerations-explained"><span class="header-section-number">9.4</span> Types of Accelerations Explained</h2>
 <p>Recall: <span class="math display">\[\begin{align*}
     {\bf a} = \lp\ddot{r}-r\dot{\theta}^2\rp{\bf e}_r+\lp2\dot{r}\dot{\theta}+r\ddot{\theta}\rp{\bf e}_\theta.
 \end{align*}\]</span></p>
@@ -681,15 +697,15 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
 <li><strong>Tangential</strong> <span class="math inline">\(r\ddot{\theta}\)</span>: particle pushed along a circle.</li>
 </ul>
 <p><img src="../figures/cylindrical_polar_coordinates/rddot.png" class="img-fluid" style="width:50.0%" alt="Radial (\ddot{r}) acceleration."> <img src="../figures/cylindrical_polar_coordinates/centripetal_acceleration.png" class="img-fluid" style="width:50.0%" alt="Centripetal (-r\dot\theta^2) acceleration."> <img src="../figures/cylindrical_polar_coordinates/coriolis_acceleration.png" class="img-fluid" style="width:50.0%" alt="Coriolis (2\dot{r}\dot\theta) acceleration."> <img src="../figures/cylindrical_polar_coordinates/tangential_acceleration.png" class="img-fluid" style="width:50.0%" alt="Tangential (r\ddot\theta) acceleration."></p>
-<section id="example-particle-in-a-rotating-tube" class="level3" data-number="9.2.1">
-<h3 data-number="9.2.1" class="anchored" data-anchor-id="example-particle-in-a-rotating-tube"><span class="header-section-number">9.2.1</span> Example: Particle in a Rotating Tube</h3>
+<section id="example-particle-in-a-rotating-tube" class="level3" data-number="9.4.1">
+<h3 data-number="9.4.1" class="anchored" data-anchor-id="example-particle-in-a-rotating-tube"><span class="header-section-number">9.4.1</span> Example: Particle in a Rotating Tube</h3>
 <p><span class="math inline">\(\dot{\theta} = \omega = \text{const.}\)</span>, <span class="math inline">\(\ddot{\theta} = 0\)</span>.</p>
 <p><img src="../figures/cylindrical_polar_coordinates/particle_in_rotating_tube.png" class="img-fluid" style="width:50.0%" alt="Rotating tube setup."> <img src="../figures/cylindrical_polar_coordinates/particle_in_tube_fbd.JPG" class="img-fluid" style="width:50.0%" alt="Free body diagram."></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="cylindrical_polar_coordinates_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="cylindrical_polar_coordinates_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -719,8 +735,8 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
 </div>
 <p><img src="../figures/cylindrical_polar_coordinates/particle_in_tube_normal.png" class="img-fluid" style="width:50.0%" alt="Normal force on particle in tube."> <img src="../figures/cylindrical_polar_coordinates/rotating_tube_velocity_profile.png" class="img-fluid" style="width:50.0%" alt="Velocity profile in rotating tube."></p>
 </section>
-<section id="example-particle-pushed-in-a-circle" class="level3" data-number="9.2.2">
-<h3 data-number="9.2.2" class="anchored" data-anchor-id="example-particle-pushed-in-a-circle"><span class="header-section-number">9.2.2</span> Example: Particle Pushed in a Circle</h3>
+<section id="example-particle-pushed-in-a-circle" class="level3" data-number="9.4.2">
+<h3 data-number="9.4.2" class="anchored" data-anchor-id="example-particle-pushed-in-a-circle"><span class="header-section-number">9.4.2</span> Example: Particle Pushed in a Circle</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../figures/cylindrical_polar_coordinates/particle_pushed_on_circle.png" class="img-fluid figure-img" style="width:50.0%"></p>
@@ -734,8 +750,8 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
 \end{align*}\]</span></p>
 </section>
 </section>
-<section id="cylindrical-polar-coordinates" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="cylindrical-polar-coordinates"><span class="header-section-number">9.3</span> Cylindrical-Polar Coordinates</h2>
+<section id="cylindrical-polar-coordinates" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="cylindrical-polar-coordinates"><span class="header-section-number">9.5</span> Cylindrical-Polar Coordinates</h2>
 <p>In <span class="math inline">\(\mathbb{E}^3\)</span>, the polar system extends by adding <span class="math inline">\(z\)</span>: <span class="math display">\[\begin{align*}
     \begin{bmatrix}{\bf e}_r\\ {\bf e}_\theta\\ {\bf E}_z\end{bmatrix}
     =
@@ -747,15 +763,15 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
     {\bf v} &amp;= \dot{r}{\bf e}_r+r\dot{\theta}{\bf e}_\theta+\dot{z}{\bf E}_z,\\
     {\bf a} &amp;= \lp\ddot{r}-r\dot{\theta}^2\rp{\bf e}_r+\lp2\dot{r}\dot{\theta}+r\ddot{\theta}\rp{\bf e}_\theta+\ddot{z}{\bf E}_z.
 \end{align*}\]</span></p>
-<section id="example-particle-on-a-cone" class="level3" data-number="9.3.1">
-<h3 data-number="9.3.1" class="anchored" data-anchor-id="example-particle-on-a-cone"><span class="header-section-number">9.3.1</span> Example: Particle on a Cone</h3>
+<section id="example-particle-on-a-cone" class="level3" data-number="9.5.1">
+<h3 data-number="9.5.1" class="anchored" data-anchor-id="example-particle-on-a-cone"><span class="header-section-number">9.5.1</span> Example: Particle on a Cone</h3>
 <p>See animation for 03/067 <a href="https://drive.google.com/file/d/1d8FJqs0GMQU0FxUE3R66rfcSTCCHFTOu/view?usp=sharing">here</a>.</p>
 <p><img src="../figures/cylindrical_polar_coordinates/03-067.png" class="img-fluid" style="width:50.0%"></p>
 <p><img src="../figures/cylindrical_polar_coordinates/03-193.png" class="img-fluid" style="width:50.0%"></p>
 </section>
 </section>
-<section id="summary" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="summary"><span class="header-section-number">9.4</span> Summary</h2>
+<section id="summary" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="summary"><span class="header-section-number">9.6</span> Summary</h2>
 <p><strong>Cylindrical polar basis</strong> <span class="math inline">\(\{\mathbf{e}_r,\mathbf{e}_\theta,\mathbf{E}_z\}\)</span>: <span class="math display">\[\begin{align}
     \mathbf{e}_r &amp;= \cos\theta\,\mathbf{E}_x+\sin\theta\,\mathbf{E}_y, &amp;
     \mathbf{e}_\theta &amp;= -\sin\theta\,\mathbf{E}_x+\cos\theta\,\mathbf{E}_y, \\
@@ -768,12 +784,12 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
     \mathbf{a} &amp;= (\ddot r-r\dot\theta^2)\mathbf{e}_r + (r\ddot\theta+2\dot r\dot\theta)\mathbf{e}_\theta + \ddot z\,\mathbf{E}_z.
 \end{align}\]</span></p>
 </section>
-<section id="lecture-videos" class="level2" data-number="9.5">
-<h2 data-number="9.5" class="anchored" data-anchor-id="lecture-videos"><span class="header-section-number">9.5</span> Lecture Videos</h2>
+<section id="lecture-videos" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="lecture-videos"><span class="header-section-number">9.7</span> Lecture Videos</h2>
 <div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/pj7kitk0VcI" width="70%" title="Animating the motion of a pendulum in Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="exercises" class="level2" data-number="9.6">
-<h2 data-number="9.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">9.6</span> Exercises</h2>
+<section id="exercises" class="level2" data-number="9.8">
+<h2 data-number="9.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">9.8</span> Exercises</h2>
 <p><em>The following problems are from Set 05 – Cylindrical Polar Coordinates.</em></p>
 <p><strong>1.</strong> [MKB 2/121] Take the origin at the satellite; <span class="math inline">\(\mathbf{E}_x\)</span> rightwards, <span class="math inline">\(\mathbf{E}_y\)</span> upwards. Write the position in both cylindrical and Cartesian coordinates. <em>(ans. <span class="math inline">\(v = 360\)</span> m/s, <span class="math inline">\(a = 20.1\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
 <div class="quarto-figure quarto-figure-center">
