@@ -735,29 +735,34 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
 <ul>
 <li><strong>Radial</strong> <span class="math inline">\(\ddot{r}\)</span>: particle on a spring in rectilinear motion.</li>
 <li><strong>Centripetal</strong> <span class="math inline">\(-r\dot{\theta}^2\)</span>: particle on a circle at constant speed — the normal force steers the particle.</li>
-<li><strong>Tangential</strong> <span class="math inline">\(r\ddot{\theta}\)</span>: It is not possible to have purely tangential acceleration without a nonzero centripetal acceleration. particle pushed along a circle.</li>
+<li><strong>Tangential</strong> <span class="math inline">\(r\ddot{\theta}\)</span>: It is not possible to have purely tangential acceleration without a nonzero centripetal acceleration. A particle pushed along a circle with varying speed constitutes a minimal example that has both tangential and centripetal acceleration.</li>
 <li><strong>Coriolis</strong> <span class="math inline">\(2\dot{r}\dot{\theta}\)</span>: It is not possible to have purely Coriolis acceleration without a nonzero centripetal acceleration. A minimal example of nonzero Coriolis acceleration is a particle in a tube rotating at constant angular velocity. The Coriolis acceleration is due to both the rotation of the tube and the radial motion of the particle inside the tube.</li>
 </ul>
 <section id="example-particle-in-a-rotating-tube" class="level3" data-number="9.4.1">
 <h3 data-number="9.4.1" class="anchored" data-anchor-id="example-particle-in-a-rotating-tube"><span class="header-section-number">9.4.1</span> Example: Particle in a Rotating Tube</h3>
-<p><span class="math inline">\(\dot{\theta} = \omega = \text{const.}\)</span>, <span class="math inline">\(\ddot{\theta} = 0\)</span>.</p>
+<p>Consider a particle of mass <span class="math inline">\(m\)</span> inside a tube rotating at constant angular velocity <span class="math inline">\(\omega\)</span> about the vertical axis. The tube is horizontal and frictionless. Find the equation of motion for <span class="math inline">\(r(t)\)</span> and the normal force on the particle.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="cylindrical_polar_coordinates_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="cylindrical_polar_coordinates_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
 </figure>
 </div>
 </div>
 </div>
+<p>Following the four steps:</p>
 <ol type="1">
-<li><p>Kinematics: <span class="math display">\[\begin{align*}
+<li><p>Kinematics: Here <span class="math inline">\(\dot{\theta} = \omega = \text{const.}\)</span>, <span class="math inline">\(\ddot{\theta} = 0\)</span>, so <span class="math display">\[\begin{align*}
 {\bf r} = r{\bf e}_r, \quad {\bf v} = \dot{r}{\bf e}_r+r\omega{\bf e}_\theta, \quad {\bf a} = \lp\ddot{r}-r\omega^2\rp{\bf e}_r+2\dot{r}\omega{\bf e}_\theta.
 \end{align*}\]</span></p></li>
-<li><p>Assume no friction: <span class="math inline">\({\bf N} = N{\bf e}_\theta\)</span>.</p></li>
-<li><p>Applying BoLM and projecting: <span class="math display">\[\begin{align*}
+<li><p>Assume no friction: <span class="math inline">\({\bf N} = N_\theta{\bf e}_\theta+N_z{\bf E}_z\)</span>, <span class="math inline">\({\bf W} = -mg{\bf E}_z\)</span>.</p></li>
+<li><p>The balance of linear momentum is <span class="math display">\[\begin{align*}
+{\bf F} &amp;= \dot{\bf G},\\
+N_\theta{\bf e}_\theta+N_z{\bf E}_z - mg{\bf E}_z &amp;= m\lp\ddot{r}-r\omega^2\rp{\bf e}_r+2m\dot{r}\omega{\bf e}_\theta.
+\end{align*}\]</span></p></li>
+<li><p>Projecting this equation along <span class="math inline">\({\bf e}_r\)</span> and <span class="math inline">\({\bf e}_\theta\)</span> gives, <span class="math display">\[\begin{align*}
 \lp{\bf F} = \dot{\bf G}\rp\cdot{\bf e}_r &amp;\implies \ddot{r}-\omega^2 r = 0 \quad (\text{EOM for } r(t)),\\
-\lp{\bf F} = \dot{\bf G}\rp\cdot{\bf e}_\theta &amp;\implies N = 2m\dot{r}\omega \quad (\text{Coriolis reaction}).
+\lp{\bf F} = \dot{\bf G}\rp\cdot{\bf e}_\theta &amp;\implies N_\theta = 2m\dot{r}\omega \quad (\text{Coriolis reaction}).
 \end{align*}\]</span></p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Coriolis acceleration">
@@ -773,37 +778,60 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
 <p>As the particle moves outward, <span class="math inline">\(r\omega\)</span> increases. The tube must supply the <span class="math inline">\({\bf e}_\theta\)</span> acceleration <span class="math inline">\(2\dot{r}\omega\)</span> so the particle stays inside.</p>
 </div>
 </div>
-<p><img src="../figures/cylindrical_polar_coordinates/particle_in_tube_normal.png" class="img-fluid" style="width:50.0%" alt="Normal force on particle in tube."> <img src="../figures/cylindrical_polar_coordinates/rotating_tube_velocity_profile.png" class="img-fluid" style="width:50.0%" alt="Velocity profile in rotating tube."></p>
 </section>
 <section id="example-particle-pushed-in-a-circle" class="level3" data-number="9.4.2">
 <h3 data-number="9.4.2" class="anchored" data-anchor-id="example-particle-pushed-in-a-circle"><span class="header-section-number">9.4.2</span> Example: Particle Pushed in a Circle</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../figures/cylindrical_polar_coordinates/particle_pushed_on_circle.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>Particle pushed along a circle.</figcaption>
-</figure>
-</div>
-<p><span class="math inline">\({\bf P} = P{\bf e}_\theta\)</span>, <span class="math inline">\(r = R = \text{const.}\)</span>: <span class="math display">\[\begin{align*}
-    \lp{\bf F}=\dot{G}\rp\cdot{\bf e}_\theta &amp;\implies P=mR\ddot{\theta} \quad (\text{EOM for }\theta),\\
-    \lp{\bf F}=\dot{G}\rp\cdot{\bf e}_r &amp;\implies N_r=mR\dot{\theta}^2 \quad (\text{centripetal}),\\
-    \lp{\bf F}=\dot{G}\rp\cdot{\bf E}_z &amp;\implies N_z=mg \quad (\text{vertical equilibrium}).
+<p>Consider a particle of mass <span class="math inline">\(m\)</span> on a horizontal circular guide. The particle is pushed by a force <span class="math inline">\({\bf P}\)</span> in the <span class="math inline">\({\bf e}_\theta\)</span> around the circle of radius <span class="math inline">\(R\)</span> at constant angular velocity <span class="math inline">\(\omega\)</span>. Find the normal force on the particle.</p>
+<p>Following the four steps:</p>
+<ol type="1">
+<li></li>
+</ol>
+<p><span class="math display">\[\begin{align*}
+    {\bf r} &amp;= R{\bf e}_r+H{\bf E}_z\\
+    {\bf v} &amp;= R\dot{\theta}{\bf e}_\theta\\
+    {\bf a} &amp;= R\ddot{\theta}{\bf e}_\theta-R\dot{\theta}^2{\bf e}_r
 \end{align*}\]</span></p>
+<ol start="2" type="1">
+<li><p>The normal force <span class="math inline">\({\bf N}\)</span> from the track has components in the <span class="math inline">\({\bf e}_r\)</span> and <span class="math inline">\({\bf E}_z\)</span> directions. <span class="math display">\[\begin{align*}
+{\bf P} &amp;= P{\bf e}_\theta\quad ({\bf P} = P{\bf E}_y \text{ only at initial instant.})\\
+{\bf W} &amp;= mg\lp-{\bf E}_z\rp = -mg{\bf E}_z\\
+{\bf N} &amp;= N_r\lp-{\bf e}_r\rp+N_z{\bf E}_z
+\end{align*}\]</span></p></li>
+<li><p>The balance of linear momentum is <span class="math display">\[\begin{align*}
+-N_r{\bf e}_r+\lp N_z-mg\rp{\bf E}_z+P{\bf e}_\theta = mR\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2{\bf e}_r\rp
+\end{align*}\]</span></p></li>
+<li><p>Projecting along <span class="math inline">\({\bf e}_\theta\)</span>, <span class="math inline">\({\bf e}_r\)</span>, and <span class="math inline">\({\bf E}_z\)</span> gives <span class="math display">\[\begin{align*}
+\lp{\bf F}=\dot{G}\rp\cdot{\bf e}_\theta &amp;\quad P=mR\ddot{\theta}\\
+\lp{\bf F}=\dot{G}\rp\cdot{\bf e}_r &amp;\quad N_r=mR\dot{\theta}^2\\
+\lp{\bf F}=\dot{G}\rp\cdot{\bf E}_z &amp;\quad N_z=mg
+\end{align*}\]</span> The first of these equations hides <span class="math inline">\({\bf N}\)</span> and provides an EOM for <span class="math inline">\(\theta(t)\)</span> that can be solved given the ICs <span class="math inline">\(\theta_0, \dot{\theta}_0\)</span>.</p></li>
+</ol>
+<p>The second and third of these equations provide the constraint force components. <span class="math inline">\(N_r\)</span> supplies the centripetal acceleration which steers the particle. <span class="math inline">\(N_z\)</span> holds up the particle and ensure <span class="math inline">\(\ddot{z}=0\)</span>.</p>
 </section>
 </section>
 <section id="cylindrical-polar-coordinates" class="level2" data-number="9.5">
 <h2 data-number="9.5" class="anchored" data-anchor-id="cylindrical-polar-coordinates"><span class="header-section-number">9.5</span> Cylindrical-Polar Coordinates</h2>
-<p>In <span class="math inline">\(\mathbb{E}^3\)</span>, the polar system extends by adding <span class="math inline">\(z\)</span>: <span class="math display">\[\begin{align*}
+<p>Consider a particle in motion in three-dimensional Euclidean space <span class="math inline">\(\mathbb{E}^3\)</span>. We can extend the polar coordinate system by adding a vertical coordinate <span class="math inline">\(z\)</span> and a vertical basis vector <span class="math inline">\({\bf E}_z\)</span>. The radial unit vector <span class="math inline">\({\bf e}_r\)</span> lies along the projection of <span class="math inline">\({\bf r}\)</span> in the <span class="math inline">\(\{{\bf E}_x,{\bf E}_y\}\)</span> plane.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cylindrical_polar_coordinates_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In summary, <span class="math display">\[\begin{align*}
     \begin{bmatrix}{\bf e}_r\\ {\bf e}_\theta\\ {\bf E}_z\end{bmatrix}
     =
     \begin{bmatrix}\cos(\theta) &amp; \sin(\theta) &amp; 0\\ -\sin(\theta) &amp; \cos(\theta) &amp; 0\\ 0 &amp; 0 &amp; 1\end{bmatrix}
     \begin{bmatrix}{\bf E}_x\\ {\bf E}_y\\ {\bf E}_z\end{bmatrix}.
 \end{align*}\]</span></p>
-<p>Position, velocity, acceleration: <span class="math display">\[\begin{align*}
+<p>The position, velocity, acceleration of the particle are <span class="math display">\[\begin{align*}
     {\bf r} &amp;= r{\bf e}_r+z{\bf E}_z,\\
     {\bf v} &amp;= \dot{r}{\bf e}_r+r\dot{\theta}{\bf e}_\theta+\dot{z}{\bf E}_z,\\
     {\bf a} &amp;= \lp\ddot{r}-r\dot{\theta}^2\rp{\bf e}_r+\lp2\dot{r}\dot{\theta}+r\ddot{\theta}\rp{\bf e}_\theta+\ddot{z}{\bf E}_z.
 \end{align*}\]</span></p>
-<p>See animation for 03/067 <a href="https://drive.google.com/file/d/1d8FJqs0GMQU0FxUE3R66rfcSTCCHFTOu/view?usp=sharing">here</a>.</p>
 </section>
 <section id="summary" class="level2" data-number="9.6">
 <h2 data-number="9.6" class="anchored" data-anchor-id="summary"><span class="header-section-number">9.6</span> Summary</h2>
@@ -821,14 +849,17 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
 </section>
 <section id="lecture-videos" class="level2" data-number="9.7">
 <h2 data-number="9.7" class="anchored" data-anchor-id="lecture-videos"><span class="header-section-number">9.7</span> Lecture Videos</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/pj7kitk0VcI" width="70%" title="Animating the motion of a pendulum in Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/pj7kitk0VcI" width="100%" title="Animating the motion of a pendulum in Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="exercises" class="level2" data-number="9.8">
 <h2 data-number="9.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">9.8</span> Exercises</h2>
-<p><em>The following problems are from Set 05 – Cylindrical Polar Coordinates.</em></p>
-<hr>
+<p>In both the following problems, set up a cylindrical polar coordinate system whose origin is taken to be at the vertex of the cone.</p>
+<p><strong>a.</strong></p>
 <p><img src="../figures/cylindrical_polar_coordinates/03-067.png" class="img-fluid" style="width:50.0%"></p>
+<p>See an animation of the cylindrical-polar basis for a particle moving aroubd a cone <a href="https://drive.google.com/file/d/1d8FJqs0GMQU0FxUE3R66rfcSTCCHFTOu/view?usp=sharing">here</a>.</p>
+<p><strong>b.</strong></p>
 <p><img src="../figures/cylindrical_polar_coordinates/03-193.png" class="img-fluid" style="width:50.0%"></p>
+<p><em>The following problems are from Set 05 – Cylindrical Polar Coordinates.</em></p>
 <p><strong>1.</strong> [MKB 2/121] Take the origin at the satellite; <span class="math inline">\(\mathbf{E}_x\)</span> rightwards, <span class="math inline">\(\mathbf{E}_y\)</span> upwards. Write the position in both cylindrical and Cartesian coordinates. <em>(ans. <span class="math inline">\(v = 360\)</span> m/s, <span class="math inline">\(a = 20.1\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -836,7 +867,7 @@ mg{\bf E}_x-T{\bf e}_r &amp;= m\ell\lp\ddot{\theta}{\bf e}_\theta-\dot{\theta}^2
 <figcaption>MKB 2/121.</figcaption>
 </figure>
 </div>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/wbUBexp8xfc" width="70%" title="Solution – Problem 02/121" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/wbUBexp8xfc" width="100%" title="Solution – Problem 02/121" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p><strong>2.</strong> [MKB 02-105] Take <span class="math inline">\(\mathbf{E}_x\)</span> rightwards and <span class="math inline">\(\mathbf{E}_y\)</span> upwards; write the car’s position in both bases. <em>(ans. <span class="math inline">\(\dot r = 47.7\)</span> ft/sec, <span class="math inline">\(\dot\theta = -41.0\)</span> deg/sec)</em></p>
 <p><strong>3.</strong> [MKB 02-126] Write <span class="math inline">\(\mathbf{r}_P = (0.75+\ell)\mathbf{e}_r\)</span> m and differentiate. If the setup is in the vertical plane, find the force applied by the robot arm. <em>(ans. <span class="math inline">\(v=0.296\)</span> m/s, <span class="math inline">\(a=0.345\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
 <p><strong>4.</strong> [MKB 03-037] Apply the 4 steps at points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> independently; origin at the centre of curvature. <em>(ans. <span class="math inline">\(N_A = 10.89\)</span> N, <span class="math inline">\(N_B = 8.30\)</span> N)</em></p>
