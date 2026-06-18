@@ -773,7 +773,7 @@
     "href": "particle_dynamics/spring_force.html#the-simple-harmonic-oscillator",
     "title": "12  Spring Force",
     "section": "12.2 The Simple Harmonic Oscillator",
-    "text": "12.2 The Simple Harmonic Oscillator\nConsider a block of mass \\(m\\) attached to a linear spring of stiffness \\(k\\) and unstretched length \\(\\ell_0\\). Denote the current length by \\(\\ell\\) and the stretch by \\(\\varepsilon = \\ell-\\ell_0\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: What is the stretch in each case? What is the spring force?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n\nUnstretched: \\(\\varepsilon = 0\\), no spring force.\nExtended: \\(\\varepsilon = \\ell - \\ell_0 &gt; 0\\). Spring force \\({\\bf F}_s = -k\\varepsilon{\\bf E}_x\\) (pointing left, toward equilibrium).\nCompressed: \\(\\varepsilon = \\ell - \\ell_0 &lt; 0\\). Spring force \\({\\bf F}_s = -k\\varepsilon{\\bf E}_x\\) (pointing right, toward equilibrium).\n\n\n\n\n\n\n\n\n\n\n\n\nImportantNote! Prescribing the spring force\n\n\n\nThe spring force always seeks to return the particle to the unstretched state. The same expression applies whether the spring is extended or compressed.",
+    "text": "12.2 The Simple Harmonic Oscillator\nConsider a block of mass \\(m\\) attached to a linear spring of stiffness \\(k\\) and unstretched length \\(\\ell_0\\). Denote the current length by \\(\\ell\\) and the stretch by \\(\\varepsilon = \\ell-\\ell_0\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: What is the stretch in each case? What is the spring force?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n\nUnstretched: Its current length is \\(\\ell_0\\) and its stretch is \\(\\varepsilon =0\\).\nExtended: Its current length is \\(\\ell\\) and its stretch is \\(\\varepsilon = \\ell-\\ell_0&gt;0\\). The spring force is \\({\\bf F}_s = -k\\varepsilon{\\bf E}_x\\) pointing to the left.\nCompressed: Its current length is \\(\\ell\\) and its stretch is \\(\\varepsilon = \\ell-\\ell_0&lt;0\\). The spring force is \\({\\bf F}_s = -k\\varepsilon{\\bf E}_x\\) pointing to the right.\n\n\n\n\n\n\n\n\n\n\n\n\nImportantNote! Prescribing the spring force\n\n\n\nThe spring force always seeks to return the particle to the unstretched state. The same expression applies whether the spring is extended or compressed.",
     "crumbs": [
       "Particle Dynamics",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Spring Force</span>"
@@ -784,7 +784,18 @@
     "href": "particle_dynamics/spring_force.html#formalism",
     "title": "12  Spring Force",
     "section": "12.3 Formalism",
-    "text": "12.3 Formalism\nIn general:\n\n\n\nGeneral spring configuration\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: What is the prescription of the spring force in this general case?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n…\n\n\n\n\n\nThe stretch is: \\[\\begin{align}\n    \\varepsilon = \\lnorm{\\bf r}-{\\bf r}_A\\rnorm-\\ell_0,\n\\end{align}\\] where \\(\\ell_0\\) is the unstretched length. The spring force is: \\[\\begin{align}\n    {\\bf F}_s = -K\\lp\\lnorm{\\bf r}-{\\bf r}_A\\rnorm-\\ell_0\\rp\\frac{{\\bf r}-{\\bf r}_A}{\\lnorm{\\bf r}-{\\bf r}_A\\rnorm}.\n\\end{align}\\] This direction is correct in both tension and compression.\n\n12.3.1 Example: Horizontal Simple Harmonic Oscillator\nDerive the equations of motion with the origin at the fixed end of the spring.\n\n\n\nHorizontal simple harmonic oscillator.\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: How does the equation of motion change if the origin is taken at the free end when the spring is unstretched?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nThe equation of motion is \\[\\begin{align}\n    \\ddot{x}+\\frac{k}{m}x = 0,\n\\end{align}\\] where \\(x\\) is measured from the undeformed position.\n\n\n\n\n\n\n\n12.3.2 Example: Vertical Simple Harmonic Oscillator\nBy analogy, the equation of motion of a vertical harmonic oscillator is: \\[\\begin{align}\n    \\ddot{x}+\\frac{k}{m}x = 0,\n\\end{align}\\] where \\(x\\) is measured from the static equilibrium position.\nSee this video for intuition on static deflection.",
+    "text": "12.3 Formalism\nIn general:\n\n\n\nGeneral spring configuration\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: What is the prescription of the spring force in this general case?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n…\n\n\n\n\n\nThe stretch is: \\[\\begin{align}\n    \\varepsilon = \\lnorm{\\bf r}-{\\bf r}_A\\rnorm-\\ell_0,\n\\end{align}\\] where \\(\\ell_0\\) is the unstretched length. The magnitude the friction force \\({\\bf F}_s\\) is a statement of Hooke’s law. \\[\\begin{align}\n    \\lnorm{\\bf F}_s\\rnorm = |K\\lp\\lnorm{\\bf r}-{\\bf r}_A\\rnorm-\\ell_0\\rp|.\n\\end{align}\\] The spring force is: \\[\\begin{align}\n    {\\bf F}_s = -K\\lp\\lnorm{\\bf r}-{\\bf r}_A\\rnorm-\\ell_0\\rp\\frac{{\\bf r}-{\\bf r}_A}{\\lnorm{\\bf r}-{\\bf r}_A\\rnorm}.\n\\end{align}\\] This direction is correct in both tension and compression.",
+    "crumbs": [
+      "Particle Dynamics",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Spring Force</span>"
+    ]
+  },
+  {
+    "objectID": "particle_dynamics/spring_force.html#choosing-the-origin",
+    "href": "particle_dynamics/spring_force.html#choosing-the-origin",
+    "title": "12  Spring Force",
+    "section": "12.4 Choosing the Origin",
+    "text": "12.4 Choosing the Origin\n\n12.4.1 Horizontal Simple Harmonic Oscillator\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Derive the equations of motion of the harmonic oscillator with the origin at the free end of the spring when it is unstretched.\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nThe equation of motion is \\[\\begin{align}\n    \\ddot{x}+\\frac{k}{m}x = 0,\n\\end{align}\\] where \\(x\\) is measured from the undeformed position.\n\n\n\n\n\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Derive the equations of motion with the origin at the fixed end of the spring.\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n…\n\n\n\n\n\n\n\n12.4.2 Vertical Simple Harmonic Oscillator\nBy analogy, the equation of motion of a vertical harmonic oscillator is: \\[\\begin{align}\n    \\ddot{x}+\\frac{k}{m}x = 0,\n\\end{align}\\] where \\(x\\) is measured from the static equilibrium position.",
     "crumbs": [
       "Particle Dynamics",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Spring Force</span>"
@@ -794,19 +805,8 @@
     "objectID": "particle_dynamics/spring_force.html#summary",
     "href": "particle_dynamics/spring_force.html#summary",
     "title": "12  Spring Force",
-    "section": "12.4 Summary",
-    "text": "12.4 Summary\nThe spring force on a mass \\(m\\) at position \\(\\mathbf{r}\\), attached to a spring (stiffness \\(K\\), unstretched length \\(\\ell_0\\)) with base at \\(\\mathbf{r}_A\\): \\[\\begin{align}\n    \\mathbf{F}_s = -K(\\|\\mathbf{r}-\\mathbf{r}_A\\|-\\ell_0)\\,\\frac{\\mathbf{r}-\\mathbf{r}_A}{\\|\\mathbf{r}-\\mathbf{r}_A\\|}.\n\\end{align}\\] Taking the origin at the static equilibrium position yields \\(\\ddot x + (k/m)x = 0\\) with \\(\\omega_n=\\sqrt{k/m}\\).",
-    "crumbs": [
-      "Particle Dynamics",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Spring Force</span>"
-    ]
-  },
-  {
-    "objectID": "particle_dynamics/spring_force.html#lecture-videos",
-    "href": "particle_dynamics/spring_force.html#lecture-videos",
-    "title": "12  Spring Force",
-    "section": "12.5 Lecture Videos",
-    "text": "12.5 Lecture Videos",
+    "section": "12.5 Summary",
+    "text": "12.5 Summary\nThe spring force on a mass \\(m\\) at position \\(\\mathbf{r}\\), attached to a spring (stiffness \\(K\\), unstretched length \\(\\ell_0\\)) with base at \\(\\mathbf{r}_A\\): \\[\\begin{align}\n    \\mathbf{F}_s = -K(\\|\\mathbf{r}-\\mathbf{r}_A\\|-\\ell_0)\\,\\frac{\\mathbf{r}-\\mathbf{r}_A}{\\|\\mathbf{r}-\\mathbf{r}_A\\|}.\n\\end{align}\\]",
     "crumbs": [
       "Particle Dynamics",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Spring Force</span>"
