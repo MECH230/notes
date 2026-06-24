@@ -432,7 +432,7 @@ window.Quarto = {
 <p>In general, the path of a particle is a curve in space — we refer to such curves as <em>space curves</em>.</p>
 <p>Consider a fixed curve <span class="math inline">\(\mathcal{C}\)</span> embedded in <span class="math inline">\(\mathbb{E}^3\)</span>. Let the position vector of a point <span class="math inline">\(P\in\mathcal{C}\)</span> be <span class="math inline">\({\bf r}\)</span>. In Cartesian coordinates, <span class="math inline">\({\bf r} = x{\bf E}_x+y{\bf E}_y+z{\bf E}_z\)</span>.</p>
 <p>Recall the arc-length parameter <span class="math inline">\(s\)</span> associated with <span class="math inline">\(\mathcal{C}\)</span>: <span class="math display">\[\begin{align*}
-    \lp\frac{ds}{dt}\rp^2 = \frac{d{\bf r}}{dt}\cdot\frac{d{\bf r}}{dt}.
+    \lp\frac{ds}{dt}\rp^2 = \frac{d{\bf r}}{dt}\cdot\frac{d{\bf r}}{dt} = \frac{dx}{dt}\frac{dx}{dt}+\frac{dy}{dt}\frac{dy}{dt}+\frac{dz}{dt}\frac{dz}{dt}.
 \end{align*}\]</span> This parameter uniquely identifies a point <span class="math inline">\(P\)</span> on <span class="math inline">\(\mathcal{C}\)</span>, giving the representation <span class="math inline">\({\bf r} = \hat{\bf r}(s)\)</span>.</p>
 <section id="the-serret-frenet-triad" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="the-serret-frenet-triad"><span class="header-section-number">11.1</span> The Serret-Frenet Triad</h2>
@@ -635,7 +635,9 @@ window.Quarto = {
 <p>A vector can be expressed in the Serret-Frenet basis as in any other basis. The Serret-Frenet basis is not a fixed basis. <span class="math display">\[\begin{align}
     {\bf b} = b_t{\bf e}_t+b_n{\bf e}_n = b_x{\bf E}_x+b_y{\bf E}_y+b_z{\bf E}_z.
 \end{align}\]</span></p>
-<p>Check out <a href="https://www.youtube.com/shorts/NyphZOJggFk?feature=share">this</a> animation showing the osculating circle, and <a href="https://www.youtube.com/watch?v=0ACqRREH180">this</a> video placing the Serret-Frenet basis on a bobsled.</p>
+<p>Check out the following animation showing the osculating circle and video placing the Serret-Frenet basis on a bobsled.</p>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/NyphZOJggFk?feature=share" width="100%" title="animation showing the osculating circle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/0ACqRREH180" title="video placing the Serret-Frenet basis on a bobsled" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="kinematics" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="kinematics"><span class="header-section-number">11.2</span> Kinematics</h2>
@@ -690,11 +692,18 @@ window.Quarto = {
 <p>We already have: <span class="math display">\[\begin{align}
     \frac{d{\bf e}_t}{ds} = \kappa{\bf e}_n.
 \end{align}\]</span></p>
-<p>Since <span class="math inline">\({\bf e}_b\cdot{\bf e}_b = 1\)</span>, we have <span class="math inline">\(\frac{d{\bf e}_b}{ds}\cdot{\bf e}_b = 0\)</span>. Also from <span class="math inline">\({\bf e}_t\cdot{\bf e}_b = 0\)</span>, we get <span class="math inline">\(\frac{d{\bf e}_b}{ds}\cdot{\bf e}_t=0\)</span>. So <span class="math inline">\(\frac{d{\bf e}_b}{ds}\)</span> is parallel to <span class="math inline">\({\bf e}_n\)</span>: <span class="math display">\[\begin{align}
-    \frac{d{\bf e}_b}{ds} = -\tau{\bf e}_n,
-\end{align}\]</span> where <span class="math inline">\(\tau\)</span> is the <strong>torsion</strong> of <span class="math inline">\(\mathcal{C}\)</span> at <span class="math inline">\(P\)</span>.</p>
+<p>Since <span class="math inline">\({\bf e}_b\cdot{\bf e}_b = 1\)</span>, we have <span class="math inline">\(\frac{d{\bf e}_b}{ds}\cdot{\bf e}_b = 0\)</span>.</p>
+<p>Also from <span class="math inline">\({\bf e}_t\cdot{\bf e}_b = 0\)</span>, we get <span class="math inline">\(\frac{d{\bf e}_b}{ds}\cdot{\bf e}_t=0\)</span>. So <span class="math inline">\(\frac{d{\bf e}_b}{ds}\)</span> is parallel to <span class="math inline">\({\bf e}_n\)</span>: <span class="math display">\[\begin{align}
+    &amp; {\bf e}_t\cdot{\bf e}_b = 0\\
+    &amp; \frac{d{\bf e}_t}{ds}\cdot{\bf e}_b+\frac{d{\bf e}_b}{ds}\cdot{\bf e}_t = 0\\
+    &amp; \kappa{\bf e}_n\cdot{\bf e}_b+\frac{d{\bf e}_b}{ds}\cdot{\bf e}_t = 0\\
+    &amp; \frac{d{\bf e}_b}{ds}\cdot{\bf e}_t=0.
+\end{align}\]</span> where <span class="math inline">\(\tau\)</span> is the <strong>torsion</strong> of <span class="math inline">\(\mathcal{C}\)</span> at <span class="math inline">\(P\)</span>. The negative sign in the above formula is a convention.</p>
 <p>Then: <span class="math display">\[\begin{align}
-    \frac{d{\bf e}_n}{ds} = -\kappa{\bf e}_t+\tau{\bf e}_b.
+    \frac{d{\bf e}_n}{ds} &amp;= \frac{d}{ds}\lp{\bf e}_b\times{\bf e}_t\rp\\
+    &amp;= \frac{d{\bf e}_b}{ds}\times{\bf e}_t+{\bf e}_b\times\frac{d{\bf e}_t}{ds}\\
+    &amp;= (-\tau{\bf e}_n)\times{\bf e}_t+{\bf e}_b\times\kappa{\bf e}_n\\
+    &amp;= -\kappa{\bf e}_t+\tau{\bf e}_b.
 \end{align}\]</span></p>
 <p>In summary (the Serret-Frenet formulae): <span class="math display">\[\begin{align}
     \begin{bmatrix}
@@ -717,9 +726,12 @@ window.Quarto = {
 <p>Define the <strong>Darboux vector</strong> <span class="math inline">\(\bomega_{SF} = \kappa{\bf e}_b+\tau{\bf e}_t\)</span> so that: <span class="math display">\[\begin{align}
     \frac{d{\bf e}_i}{ds} = \bomega_{SF}\times{\bf e}_i, \quad i = t, n, b.
 \end{align}\]</span></p>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/OB13c0WlUSg" width="100%" title="A derivation of the Serret-Frenet Formulae" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <section id="example-a-particle-on-a-helix" class="level3" data-number="11.4.1">
 <h3 data-number="11.4.1" class="anchored" data-anchor-id="example-a-particle-on-a-helix"><span class="header-section-number">11.4.1</span> Example: A Particle on a Helix</h3>
 <p>For a helix <span class="math inline">\(x=R\cos(\theta)\)</span>, <span class="math inline">\(y=R\sin(\theta)\)</span>, <span class="math inline">\(z=\alpha R\theta\)</span>: <span class="math display">\[\begin{align}
+    {\bf r} = R{\bf e}_r+\alpha R\theta{\bf E}_z = x{\bf E}_x+y{\bf E}_y+z{\bf E}_z.
+\end{align}\]</span> <span class="math display">\[\begin{align}
     \kappa = \frac{1}{R(1+\alpha^2)}, \qquad \tau = \frac{\alpha}{(1+\alpha^2)R}.
 \end{align}\]</span></p>
 </section>
