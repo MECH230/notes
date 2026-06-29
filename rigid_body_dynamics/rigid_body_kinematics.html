@@ -47,6 +47,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-ea8ef702a3f84812c808b1cddcfad5b3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -902,6 +904,7 @@ window.Quarto = {
 <p><strong>Remarks:</strong> the IC generally migrates through space; for a translating rigid body the IC is at infinity; the IC can only be used for velocity analysis since its acceleration is nonzero.</p>
 <p><strong>Procedure:</strong> use geometry to find the IC; find <span class="math inline">\(|\omega|\)</span> via <span class="math inline">\({\bf v}_P = \bomega\times{\bf r}_{P/IC}\)</span>; obtain <span class="math inline">\({\bf v}_P\)</span> for any point.</p>
 <p><em>Examples: <a href="https://www.youtube.com/watch?v=RDixpdSGERQ">Crank slider</a>, rod falling on a corner.</em></p>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="IC of crank slider"><source src="https://drive.google.com/file/d/1L8b1ugg4xQuPK5m5tOVo0bzk16HRia5a/view?usp=sharing"></video></div>
 </section>
 <section id="doing-kinematics-geometrically" class="level2" data-number="19.10">
 <h2 data-number="19.10" class="anchored" data-anchor-id="doing-kinematics-geometrically"><span class="header-section-number">19.10</span> Doing Kinematics Geometrically</h2>
@@ -992,6 +995,7 @@ window.Quarto = {
 <p><span class="math display">\[\begin{align}
     {\bf G} = \int_{\mathcal{B}}{\bf v}\,dm = m{\bf v}_C.
 \end{align}\]</span></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/101EriK4HIQ" title="Center of mass and linear momentum of a rigid body" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="angular-momenta" class="level2" data-number="19.14">
 <h2 data-number="19.14" class="anchored" data-anchor-id="angular-momenta"><span class="header-section-number">19.14</span> Angular Momenta</h2>
@@ -1000,6 +1004,7 @@ window.Quarto = {
 \end{align}\]</span> and the relationship between angular momenta about <span class="math inline">\(O\)</span> and <span class="math inline">\(C\)</span> is <span class="math display">\[\begin{align}
     {\bf H}^O = {\bf H}^C+{\bf r}_C\times{\bf G}.
 \end{align}\]</span></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/BGa_d4LscWQ" title="Angular momentum of a rigid body" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <section id="inertia-tensor" class="level3" data-number="19.14.1">
 <h3 data-number="19.14.1" class="anchored" data-anchor-id="inertia-tensor"><span class="header-section-number">19.14.1</span> Inertia Tensor</h3>
 <p>With <span class="math inline">\(\bpi = {\bf r}-{\bf r}_C\)</span> and using the BAC-CAB identity: <span class="math display">\[\begin{align}
@@ -1048,6 +1053,8 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/BP1N9zFeY98" title="Moments and products of inertia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/M_YCWDXCwZM" title="Cylinders Rolling Down Incline - Professor Walter Lewin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="example-solid-cylinder" class="level3" data-number="19.14.2">
 <h3 data-number="19.14.2" class="anchored" data-anchor-id="example-solid-cylinder"><span class="header-section-number">19.14.2</span> Example: Solid Cylinder</h3>
@@ -1063,6 +1070,8 @@ window.Quarto = {
 <p>With <span class="math inline">\(dm = \rho\,r\,dr\,d\theta\,dz\)</span>: <span class="math display">\[\begin{align}
     I^C_{zz} = \rho\int_{-\ell/2}^{\ell/2}\int_0^{2\pi}\int_0^R r^3\,dr\,d\theta\,dz = \frac{1}{2}\rho\pi\ell R^4 = \frac{mR^2}{2}.
 \end{align}\]</span></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/Z5ugvTjmLys" title="Example - inertias of a solid cylinder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Example - parallel axis theorem on a solid cylinder"><source src="https://youtube.com/shorts/0CfRKuqjZ7YU"></video></div>
 </section>
 <section id="example-cylindrical-hoop" class="level3" data-number="19.14.3">
 <h3 data-number="19.14.3" class="anchored" data-anchor-id="example-cylindrical-hoop"><span class="header-section-number">19.14.3</span> Example: Cylindrical Hoop</h3>
@@ -1092,10 +1101,12 @@ window.Quarto = {
 <p>The parallel axis theorem applies only between the center of mass <span class="math inline">\(C\)</span> and another material point — not between any two arbitrary material points. The moment of inertia always increases when moving away from <span class="math inline">\(C\)</span>.</p>
 </div>
 </div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/8R_cF2e_9nU" title="The parallel axis theorem" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="radius-of-gyration" class="level2" data-number="19.16">
 <h2 data-number="19.16" class="anchored" data-anchor-id="radius-of-gyration"><span class="header-section-number">19.16</span> Radius of Gyration</h2>
 <p>The radius of gyration <span class="math inline">\(k_z\)</span> about the <span class="math inline">\(z\)</span>-axis satisfies <span class="math inline">\(mk_z^2 = I_{zz}\)</span>.</p>
+<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="The radius of gyration"><source src="https://youtube.com/shorts/pRxOpqpKq78"></video></div>
 </section>
 <section id="angular-momentum-about-a-moving-point-p" class="level2" data-number="19.17">
 <h2 data-number="19.17" class="anchored" data-anchor-id="angular-momentum-about-a-moving-point-p"><span class="header-section-number">19.17</span> Angular Momentum About a Moving Point <span class="math inline">\(P\)</span></h2>
@@ -1565,6 +1576,9 @@ window.Quarto = {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>videojs(video_shortcode_videojs_video1);</script>
+<script>videojs(video_shortcode_videojs_video2);</script>
+<script>videojs(video_shortcode_videojs_video3);</script>
 
 
 

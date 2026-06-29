@@ -725,22 +725,11 @@
     ]
   },
   {
-    "objectID": "particle_dynamics/serret_frenet_triad.html#lecture-videos",
-    "href": "particle_dynamics/serret_frenet_triad.html#lecture-videos",
-    "title": "11  The Serret-Frenet Basis",
-    "section": "11.8 Lecture Videos",
-    "text": "11.8 Lecture Videos",
-    "crumbs": [
-      "Particle Dynamics",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>The Serret-Frenet Basis</span>"
-    ]
-  },
-  {
     "objectID": "particle_dynamics/serret_frenet_triad.html#exercises",
     "href": "particle_dynamics/serret_frenet_triad.html#exercises",
     "title": "11  The Serret-Frenet Basis",
-    "section": "11.9 Exercises",
-    "text": "11.9 Exercises\nThe following problems are from Set 07 – The Serret–Frenet Basis.\n1. [MKB 2/079] Analyse the acceleration vector in the Serret–Frenet basis.\n\n\n\nMKB 2/079.\n\n\n2. [MKB 02-090] Note that \\(\\dot v \\neq \\|\\mathbf{a}\\|\\); acceleration has both tangential and normal components. (ans. \\(v = 20\\) m/s)\n3. [MKB 02-091] (ans. \\(\\rho = 1709\\) m)\n4. [02-097] Follow the 4 steps; express \\(\\mathbf{e}_t\\) and \\(\\mathbf{e}_n\\) in the Cartesian basis. (ans. at \\(t=1\\) s: \\(\\dot v=-6.58\\) ft/s\\(^2\\), \\(\\rho=142.2\\) ft; at \\(t=2\\) s: \\(\\dot v=8.75\\) ft/s\\(^2\\), \\(\\rho=149.7\\) ft)\n5. [02-103] (ans. \\((x_C,y_C)=(22.5,-22.9)\\) m)\n6. [02-199] Draw \\(\\mathbf{e}_t\\) and \\(\\mathbf{e}_n\\) first. (ans. \\(\\dot r=15\\) m/s, \\(\\dot\\theta=0.325\\) rad/s, \\(\\rho=129.9\\) m)\n7. [03-040] Note the jump in normal force at the transition from straight to curved path. (ans. (a) \\(R=1.177\\) N; (b) \\(R=1.664\\) N)\n8. [03-041] What does “weightless” mean? (ans. \\(\\rho=24\\,000\\) ft)\n9. [03-043] Draw the Serret–Frenet basis carefully; the figure hints at the direction of \\(\\mathbf{e}_n\\). (ans. \\(v=29.1\\) m/s, \\(N=12.36\\) kN)\n\n\n\nProblem 03/043.\n\n\n10. [OOR 3.1] (See O’Reilly Primer.)\n11. [OOR 3.2]",
+    "section": "11.8 Exercises",
+    "text": "11.8 Exercises\nThe following problems are from Set 07 – The Serret–Frenet Basis.\n1. [MKB 2/079] Analyse the acceleration vector in the Serret–Frenet basis.\n\n\n\nMKB 2/079.\n\n\n2. [MKB 02-090] Note that \\(\\dot v \\neq \\|\\mathbf{a}\\|\\); acceleration has both tangential and normal components. (ans. \\(v = 20\\) m/s)\n3. [MKB 02-091] (ans. \\(\\rho = 1709\\) m)\n4. [02-097] Follow the 4 steps; express \\(\\mathbf{e}_t\\) and \\(\\mathbf{e}_n\\) in the Cartesian basis. (ans. at \\(t=1\\) s: \\(\\dot v=-6.58\\) ft/s\\(^2\\), \\(\\rho=142.2\\) ft; at \\(t=2\\) s: \\(\\dot v=8.75\\) ft/s\\(^2\\), \\(\\rho=149.7\\) ft)\n5. [02-103] (ans. \\((x_C,y_C)=(22.5,-22.9)\\) m)\n6. [02-199] Draw \\(\\mathbf{e}_t\\) and \\(\\mathbf{e}_n\\) first. (ans. \\(\\dot r=15\\) m/s, \\(\\dot\\theta=0.325\\) rad/s, \\(\\rho=129.9\\) m)\n7. [03-040] Note the jump in normal force at the transition from straight to curved path. (ans. (a) \\(R=1.177\\) N; (b) \\(R=1.664\\) N)\n8. [03-041] What does “weightless” mean? (ans. \\(\\rho=24\\,000\\) ft)\n9. [03-043] Draw the Serret–Frenet basis carefully; the figure hints at the direction of \\(\\mathbf{e}_n\\). (ans. \\(v=29.1\\) m/s, \\(N=12.36\\) kN)\n\n\n\nProblem 03/043.\n\n\n10. [OOR 3.1] (See O’Reilly Primer.)\n11. [OOR 3.2]",
     "crumbs": [
       "Particle Dynamics",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>The Serret-Frenet Basis</span>"
@@ -917,17 +906,6 @@
     "title": "14  Gravitational Force Model",
     "section": "",
     "text": "\\(M_e = 5.972 \\times 10^{24}\\) kg\n\\(R_e = 6.371 \\times 10^6\\) m",
-    "crumbs": [
-      "Particle Dynamics",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Gravitational Force Model</span>"
-    ]
-  },
-  {
-    "objectID": "particle_dynamics/gravitational_force_model.html#lecture-videos",
-    "href": "particle_dynamics/gravitational_force_model.html#lecture-videos",
-    "title": "14  Gravitational Force Model",
-    "section": "14.2 Lecture Videos",
-    "text": "14.2 Lecture Videos",
     "crumbs": [
       "Particle Dynamics",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Gravitational Force Model</span>"
@@ -1147,7 +1125,7 @@
     "href": "particle_dynamics/collisions.html#frictionless-oblique-central-impact-of-two-bodies",
     "title": "17  Collisions",
     "section": "17.2 Frictionless, Oblique, Central Impact of Two Bodies",
-    "text": "17.2 Frictionless, Oblique, Central Impact of Two Bodies\n\n\n\nFigure from O. M. O’Reilly’s Dynamics Primer\n\n\n\n17.2.1 Assumptions\n\nModel each body as a mass particle.\nWe ignore the rotational inertias of bodies (purely translational motion).\nAll points on a body have the same velocity.\nNo friction between particles during collision — all impact forces are along \\({\\bf n}\\).\nThe duration of compression (\\(t_1-t_0\\)) and restitution (\\(t_2-t_1\\)) are very small.\nAt time \\(t_1\\), both particles have the same velocity along \\({\\bf n}\\): \\(v_{II}\\).\n\\({\\bf F}_{1C} = -{\\bf F}_{2C}\\), \\({\\bf F}_{1R} = -{\\bf F}_{2R}\\).\n\n\n\n17.2.2 Impact Stages\nLet \\({\\bf n}\\) be the common unit normal between the bodies at contact. Define \\(\\{{\\bf n},{\\bf t}_1,{\\bf t}_2\\}\\) as an orthonormal set. These vectors are assumed constant for the duration of impact.\n\n\n17.2.3 Linear Impulses During Impact\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Draw the FBDs of \\(m_1\\) and \\(m_2\\) separately during compression and restitution.\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n\n\\({\\bf F}_{1_d} = F_{1_d}{\\bf n}\\): force exerted by body 2 on body 1 during compression.\n\\({\\bf F}_{1_r} = F_{1_r}{\\bf n}\\): force exerted by body 2 on body 1 during restitution.\n\\({\\bf F}_{2_d}\\), \\({\\bf F}_{2_r}\\): reaction forces by body 1 on body 2.\nAll other forces have resultants \\({\\bf R}_1\\) and \\({\\bf R}_2\\).\n\n\n\n\n\n\nSince the collision duration is very small, the impulses of \\({\\bf R}_1\\) and \\({\\bf R}_2\\) vanish. Approximating: \\[\\begin{align}\n    \\int_{t_0}^{t_1}\\lp{\\bf F}_{1_d}+{\\bf R}_1\\rp d\\tau &\\approx \\int_{t_0}^{t_1}{\\bf F}_{1_d}\\,d\\tau,\\\\\n    \\int_{t_1}^{t_2}\\lp{\\bf F}_{1_r}+{\\bf R}_1\\rp d\\tau &\\approx \\int_{t_1}^{t_2}{\\bf F}_{1_r}\\,d\\tau,\n\\end{align}\\] and similarly for body 2.\nWith equal and opposite collisional forces (\\({\\bf F}_{1_d}=-{\\bf F}_{2_d}\\), \\({\\bf F}_{1_r}=-{\\bf F}_{2_r}\\)), we define the coefficient of restitution: \\[\\begin{align}\n    e = \\frac{\\int_{t_1}^{t_2}{\\bf F}_{1_r}\\cdot{\\bf n}\\,d\\tau}{\\int_{t_0}^{t_1}{\\bf F}_{1_d}\\cdot{\\bf n}\\,d\\tau}.\n\\end{align}\\]\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: What does \\(e=0\\) and \\(e=1\\) mean?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n\n\\(e=1\\): perfectly elastic collision — compression impulse equals restitution impulse.\n\\(e=0\\): perfectly plastic collision — no restitution impulse.\nIn general \\(0\\leq e\\leq 1\\), determined experimentally.\n\n\n\n\n\n\n\n\n17.2.4 The Coefficient of Restitution in Terms of Velocities\nFrom the linear impulse-momentum equations for each particle and stage: \\[\\begin{align}\n    \\begin{split}\n        m_1 v_{II} - m_1{\\bf v}_1\\cdot{\\bf n} &= \\int_{t_0}^{t_1}{\\bf F}_{1_d}\\cdot{\\bf n}\\,d\\tau,\\\\\n        m_2 v_{II} - m_2{\\bf v}_2\\cdot{\\bf n} &= \\int_{t_0}^{t_1}{\\bf F}_{2_d}\\cdot{\\bf n}\\,d\\tau,\\\\\n        m_1{\\bf v}_1'\\cdot{\\bf n}-m_1 v_{II} &= e\\int_{t_0}^{t_1}{\\bf F}_{1_d}\\cdot{\\bf n}\\,d\\tau,\\\\\n        m_2{\\bf v}_2'\\cdot{\\bf n}-m_2 v_{II} &= e\\int_{t_0}^{t_1}{\\bf F}_{2_d}\\cdot{\\bf n}\\,d\\tau.\n    \\end{split}\n\\end{align}\\]\nEliminating \\(v_{II}\\) yields the familiar expression: \\[\\begin{align}\n    e = \\frac{{\\bf v}_2'\\cdot{\\bf n}-{\\bf v}_1'\\cdot{\\bf n}}{{\\bf v}_1\\cdot{\\bf n}-{\\bf v}_2\\cdot{\\bf n}}.\n\\end{align}\\]\n\n\n\n\n\n\nImportantNote!\n\n\n\nWhen one object impacts a massive constrained object (e.g. a wall), the velocity of the massive object is unaffected by the collision.",
+    "text": "17.2 Frictionless, Oblique, Central Impact of Two Bodies\n\n\n\nFigure from O. M. O’Reilly’s Dynamics Primer\n\n\n\n17.2.1 Assumptions\n\nModel each body as a mass particle.\nWe ignore the rotational inertias of bodies (purely translational motion).\nAll points on a body have the same velocity.\nNo friction between particles during collision — all impact forces are along \\({\\bf n}\\).\nThe duration of compression (\\(t_1-t_0\\)) and restitution (\\(t_2-t_1\\)) are very small.\nAt time \\(t_1\\), both particles have the same velocity along \\({\\bf n}\\): \\(v_{II}\\).\n\\({\\bf F}_{1C} = -{\\bf F}_{2C}\\), \\({\\bf F}_{1R} = -{\\bf F}_{2R}\\).\n\n\n\n17.2.2 Impact Stages\nLet \\({\\bf n}\\) be the common unit normal between the bodies at contact. Define \\(\\{{\\bf n},{\\bf t}_1,{\\bf t}_2\\}\\) as an orthonormal set. These vectors are assumed constant for the duration of impact.\n\n\n17.2.3 Linear Impulses During Impact\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Draw the FBDs of \\(m_1\\) and \\(m_2\\) separately during compression and restitution.\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n\n\\({\\bf F}_{1_d} = F_{1_d}{\\bf n}\\): force exerted by body 2 on body 1 during compression.\n\\({\\bf F}_{1_r} = F_{1_r}{\\bf n}\\): force exerted by body 2 on body 1 during restitution.\n\\({\\bf F}_{2_d}\\), \\({\\bf F}_{2_r}\\): reaction forces by body 1 on body 2.\nAll other forces have resultants \\({\\bf R}_1\\) and \\({\\bf R}_2\\).\n\n\n\n\n\n\nSince the collision duration is very small, the impulses of \\({\\bf R}_1\\) and \\({\\bf R}_2\\) vanish. Approximating: \\[\\begin{align}\n    \\int_{t_0}^{t_1}\\lp{\\bf F}_{1_d}+{\\bf R}_1\\rp d\\tau &\\approx \\int_{t_0}^{t_1}{\\bf F}_{1_d}\\,d\\tau,\\\\\n    \\int_{t_1}^{t_2}\\lp{\\bf F}_{1_r}+{\\bf R}_1\\rp d\\tau &\\approx \\int_{t_1}^{t_2}{\\bf F}_{1_r}\\,d\\tau,\n\\end{align}\\] and similarly for body 2.\nWith equal and opposite collisional forces (\\({\\bf F}_{1_d}=-{\\bf F}_{2_d}\\), \\({\\bf F}_{1_r}=-{\\bf F}_{2_r}\\)), we define the coefficient of restitution: \\[\\begin{align}\n    e = \\frac{\\int_{t_1}^{t_2}{\\bf F}_{1_r}\\cdot{\\bf n}\\,d\\tau}{\\int_{t_0}^{t_1}{\\bf F}_{1_d}\\cdot{\\bf n}\\,d\\tau}.\n\\end{align}\\]\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: What does \\(e=0\\) and \\(e=1\\) mean?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\n\n\\(e=1\\): perfectly elastic collision — compression impulse equals restitution impulse.\n\\(e=0\\): perfectly plastic collision — no restitution impulse.\nIn general \\(0\\leq e\\leq 1\\), determined experimentally.\n\n\n\n\n\n\n\n\n17.2.4 The Coefficient of Restitution in Terms of Velocities\nFrom the linear impulse-momentum equations for each particle and stage: \\[\\begin{align}\n    \\begin{split}\n        m_1 v_{II} - m_1{\\bf v}_1\\cdot{\\bf n} &= \\int_{t_0}^{t_1}{\\bf F}_{1_d}\\cdot{\\bf n}\\,d\\tau,\\\\\n        m_2 v_{II} - m_2{\\bf v}_2\\cdot{\\bf n} &= \\int_{t_0}^{t_1}{\\bf F}_{2_d}\\cdot{\\bf n}\\,d\\tau,\\\\\n        m_1{\\bf v}_1'\\cdot{\\bf n}-m_1 v_{II} &= e\\int_{t_0}^{t_1}{\\bf F}_{1_d}\\cdot{\\bf n}\\,d\\tau,\\\\\n        m_2{\\bf v}_2'\\cdot{\\bf n}-m_2 v_{II} &= e\\int_{t_0}^{t_1}{\\bf F}_{2_d}\\cdot{\\bf n}\\,d\\tau.\n    \\end{split}\n\\end{align}\\]\nEliminating \\(v_{II}\\) yields the familiar expression: \\[\\begin{align}\n    e = \\frac{{\\bf v}_2'\\cdot{\\bf n}-{\\bf v}_1'\\cdot{\\bf n}}{{\\bf v}_1\\cdot{\\bf n}-{\\bf v}_2\\cdot{\\bf n}}.\n\\end{align}\\]\n\n\n\n\n\n\n\nImportantNote!\n\n\n\nWhen one object impacts a massive constrained object (e.g. a wall), the velocity of the massive object is unaffected by the collision.",
     "crumbs": [
       "Particle Dynamics",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Collisions</span>"
@@ -1181,17 +1159,6 @@
     "title": "17  Collisions",
     "section": "17.5 Negative Values of the Coefficient of Restitution",
     "text": "17.5 Negative Values of the Coefficient of Restitution\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: What does a negative \\(e\\) mean for a ball impacting a wall?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nWhen \\(e &lt; 0\\), \\({\\bf v}_1'\\cdot{\\bf n}-{\\bf v}_2'\\cdot{\\bf n}\\) has the same sign as \\({\\bf v}_1\\cdot{\\bf n}-{\\bf v}_2\\cdot{\\bf n}\\), meaning the bodies pass through each other during impact. To prevent this, we generally require \\(e \\geq 0\\).",
-    "crumbs": [
-      "Particle Dynamics",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Collisions</span>"
-    ]
-  },
-  {
-    "objectID": "particle_dynamics/collisions.html#lecture-videos",
-    "href": "particle_dynamics/collisions.html#lecture-videos",
-    "title": "17  Collisions",
-    "section": "17.6 Lecture Videos",
-    "text": "17.6 Lecture Videos",
     "crumbs": [
       "Particle Dynamics",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Collisions</span>"
@@ -1455,7 +1422,7 @@
     "href": "rigid_body_dynamics/rigid_body_kinematics.html#angular-momenta",
     "title": "19  Kinematics of Rigid Bodies",
     "section": "19.14 Angular Momenta",
-    "text": "19.14 Angular Momenta\nThe angular momentum about a point \\(P\\) is \\[\\begin{align}\n    {\\bf H}^P = \\int_{\\mathcal{B}}({\\bf r}-{\\bf r}_P)\\times{\\bf v}\\,dm,\n\\end{align}\\] and the relationship between angular momenta about \\(O\\) and \\(C\\) is \\[\\begin{align}\n    {\\bf H}^O = {\\bf H}^C+{\\bf r}_C\\times{\\bf G}.\n\\end{align}\\]\n\n19.14.1 Inertia Tensor\nWith \\(\\bpi = {\\bf r}-{\\bf r}_C\\) and using the BAC-CAB identity: \\[\\begin{align}\n    {\\bf H}^C = \\int_{\\mathcal{B}}\\lp(\\bpi\\cdot\\bpi)\\bomega-(\\bpi\\cdot\\bomega)\\bpi\\rp dm = {\\bf I}^C\\bomega.\n\\end{align}\\] The inertia matrix on the corotational basis: \\[\\begin{align}\n    [{\\bf I}^C] =\n    \\begin{bmatrix}\n        I^C_{xx} & I^C_{xy} & I^C_{xz}\\\\\n        I^C_{xy} & I^C_{yy} & I^C_{yz}\\\\\n        I^C_{xz} & I^C_{yz} & I^C_{zz}\n    \\end{bmatrix},\n\\end{align}\\] with diagonal entries (moments of inertia) and off-diagonal entries (products of inertia): \\[\\begin{align}\n    I^C_{xx} &= \\int_{\\mathcal{B}}(y^2+z^2)\\,dm, \\qquad\n    I^C_{yy} = \\int_{\\mathcal{B}}(x^2+z^2)\\,dm, \\qquad\n    I^C_{zz} = \\int_{\\mathcal{B}}(x^2+y^2)\\,dm,\\\\\n    I^C_{xy} &= -\\int_{\\mathcal{B}}xy\\,dm, \\qquad\n    I^C_{xz} = -\\int_{\\mathcal{B}}xz\\,dm, \\qquad\n    I^C_{yz} = -\\int_{\\mathcal{B}}yz\\,dm.\n\\end{align}\\] When \\(\\{{\\bf e}_x,{\\bf e}_y,{\\bf e}_z\\}\\) is an eigenbasis of \\([{\\bf I}^C]\\), the products of inertia vanish.\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Is my moment of inertia about an axis through my body greater when my arms are closed or open?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nGreater when arms are open — mass is farther from the axis. See also: Professor Walter Lewin rolling cylinders.\n\n\n\n\n\n\n\n19.14.2 Example: Solid Cylinder\n\n\n\n\n\n\n\n\n\nWith \\(dm = \\rho\\,r\\,dr\\,d\\theta\\,dz\\): \\[\\begin{align}\n    I^C_{zz} = \\rho\\int_{-\\ell/2}^{\\ell/2}\\int_0^{2\\pi}\\int_0^R r^3\\,dr\\,d\\theta\\,dz = \\frac{1}{2}\\rho\\pi\\ell R^4 = \\frac{mR^2}{2}.\n\\end{align}\\]\n\n\n19.14.3 Example: Cylindrical Hoop\nEvery \\(dm\\) has \\(r = R\\), so: \\[\\begin{align}\n    I^C_{zz} = R^2\\int_{\\mathcal{B}}dm = mR^2.\n\\end{align}\\]",
+    "text": "19.14 Angular Momenta\nThe angular momentum about a point \\(P\\) is \\[\\begin{align}\n    {\\bf H}^P = \\int_{\\mathcal{B}}({\\bf r}-{\\bf r}_P)\\times{\\bf v}\\,dm,\n\\end{align}\\] and the relationship between angular momenta about \\(O\\) and \\(C\\) is \\[\\begin{align}\n    {\\bf H}^O = {\\bf H}^C+{\\bf r}_C\\times{\\bf G}.\n\\end{align}\\]\n\n\n19.14.1 Inertia Tensor\nWith \\(\\bpi = {\\bf r}-{\\bf r}_C\\) and using the BAC-CAB identity: \\[\\begin{align}\n    {\\bf H}^C = \\int_{\\mathcal{B}}\\lp(\\bpi\\cdot\\bpi)\\bomega-(\\bpi\\cdot\\bomega)\\bpi\\rp dm = {\\bf I}^C\\bomega.\n\\end{align}\\] The inertia matrix on the corotational basis: \\[\\begin{align}\n    [{\\bf I}^C] =\n    \\begin{bmatrix}\n        I^C_{xx} & I^C_{xy} & I^C_{xz}\\\\\n        I^C_{xy} & I^C_{yy} & I^C_{yz}\\\\\n        I^C_{xz} & I^C_{yz} & I^C_{zz}\n    \\end{bmatrix},\n\\end{align}\\] with diagonal entries (moments of inertia) and off-diagonal entries (products of inertia): \\[\\begin{align}\n    I^C_{xx} &= \\int_{\\mathcal{B}}(y^2+z^2)\\,dm, \\qquad\n    I^C_{yy} = \\int_{\\mathcal{B}}(x^2+z^2)\\,dm, \\qquad\n    I^C_{zz} = \\int_{\\mathcal{B}}(x^2+y^2)\\,dm,\\\\\n    I^C_{xy} &= -\\int_{\\mathcal{B}}xy\\,dm, \\qquad\n    I^C_{xz} = -\\int_{\\mathcal{B}}xz\\,dm, \\qquad\n    I^C_{yz} = -\\int_{\\mathcal{B}}yz\\,dm.\n\\end{align}\\] When \\(\\{{\\bf e}_x,{\\bf e}_y,{\\bf e}_z\\}\\) is an eigenbasis of \\([{\\bf I}^C]\\), the products of inertia vanish.\n\n\n\n\n\n\nTipThink!\n\n\n\nQuestion: Is my moment of inertia about an axis through my body greater when my arms are closed or open?\n\n\n\n\n\n\nNoteAnswer\n\n\n\n\n\nGreater when arms are open — mass is farther from the axis. See also: Professor Walter Lewin rolling cylinders.\n\n\n\n\n\n\n\n\n\n19.14.2 Example: Solid Cylinder\n\n\n\n\n\n\n\n\n\nWith \\(dm = \\rho\\,r\\,dr\\,d\\theta\\,dz\\): \\[\\begin{align}\n    I^C_{zz} = \\rho\\int_{-\\ell/2}^{\\ell/2}\\int_0^{2\\pi}\\int_0^R r^3\\,dr\\,d\\theta\\,dz = \\frac{1}{2}\\rho\\pi\\ell R^4 = \\frac{mR^2}{2}.\n\\end{align}\\]\n\n\n\n\n19.14.3 Example: Cylindrical Hoop\nEvery \\(dm\\) has \\(r = R\\), so: \\[\\begin{align}\n    I^C_{zz} = R^2\\int_{\\mathcal{B}}dm = mR^2.\n\\end{align}\\]",
     "crumbs": [
       "Rigid Body Dynamics",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Kinematics of Rigid Bodies</span>"
@@ -1543,7 +1510,7 @@
     "href": "rigid_body_dynamics/rigid_body_kinetics.html#equivalence-of-the-boam-forms",
     "title": "20  Kinetics of Rigid Bodies",
     "section": "20.3 Equivalence of the BoAM Forms",
-    "text": "20.3 Equivalence of the BoAM Forms\n\n20.3.1 BoAM About Any Point \\(P\\)\nStarting from \\({\\bf M}^C = \\dot{\\bf H}^C\\) and replacing \\({\\bf M}^P = {\\bf M}^C+({\\bf r}_C-{\\bf r}_P)\\times{\\bf F}\\): \\[\\begin{align}\n    {\\bf M}^P = \\dot{\\bf H}^C+({\\bf r}_C-{\\bf r}_P)\\times{\\bf F}.\n\\end{align}\\] Substituting \\(\\dot{\\bf H}^C = \\dot{\\bf H}^P+({\\bf v}_P-{\\bf v}_C)\\times{\\bf G}+({\\bf r}_P-{\\bf r}_C)\\times m{\\bf a}_C\\) and simplifying: \\[\\begin{align}\n    {\\bf M}^P = \\dot{\\bf H}^P+({\\bf v}_P-{\\bf v}_C)\\times{\\bf G},\n\\end{align}\\] recovering the BoAM about a general material point \\(P\\).\n\n\n20.3.2 BoAM About a Fixed Point \\(O\\)\nIf \\(P\\) is a fixed point \\(O\\) (so \\({\\bf v}_O = {\\bf 0}\\)), the above simplifies to \\({\\bf M}^O = \\dot{\\bf H}^O\\).",
+    "text": "20.3 Equivalence of the BoAM Forms\n\n20.3.1 BoAM About Any Point \\(P\\)\nStarting from \\({\\bf M}^C = \\dot{\\bf H}^C\\) and replacing \\({\\bf M}^P = {\\bf M}^C+({\\bf r}_C-{\\bf r}_P)\\times{\\bf F}\\): \\[\\begin{align}\n    {\\bf M}^P = \\dot{\\bf H}^C+({\\bf r}_C-{\\bf r}_P)\\times{\\bf F}.\n\\end{align}\\] Substituting \\(\\dot{\\bf H}^C = \\dot{\\bf H}^P+({\\bf v}_P-{\\bf v}_C)\\times{\\bf G}+({\\bf r}_P-{\\bf r}_C)\\times m{\\bf a}_C\\) and simplifying: \\[\\begin{align}\n    {\\bf M}^P = \\dot{\\bf H}^P+({\\bf v}_P-{\\bf v}_C)\\times{\\bf G},\n\\end{align}\\] recovering the BoAM about a general material point \\(P\\).\n\n\n\n\n20.3.2 BoAM About a Fixed Point \\(O\\)\nIf \\(P\\) is a fixed point \\(O\\) (so \\({\\bf v}_O = {\\bf 0}\\)), the above simplifies to \\({\\bf M}^O = \\dot{\\bf H}^O\\).",
     "crumbs": [
       "Rigid Body Dynamics",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Kinetics of Rigid Bodies</span>"
@@ -1605,22 +1572,11 @@
     ]
   },
   {
-    "objectID": "rigid_body_dynamics/rigid_body_kinetics.html#lecture-videos",
-    "href": "rigid_body_dynamics/rigid_body_kinetics.html#lecture-videos",
-    "title": "20  Kinetics of Rigid Bodies",
-    "section": "20.9 Lecture Videos",
-    "text": "20.9 Lecture Videos",
-    "crumbs": [
-      "Rigid Body Dynamics",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Kinetics of Rigid Bodies</span>"
-    ]
-  },
-  {
     "objectID": "rigid_body_dynamics/rigid_body_kinetics.html#exercises",
     "href": "rigid_body_dynamics/rigid_body_kinetics.html#exercises",
     "title": "20  Kinetics of Rigid Bodies",
-    "section": "20.10 Exercises",
-    "text": "20.10 Exercises\n\n20.10.1 Set 18 – Moments of Inertia\n1. [MKB B-004] Integration required. (ans. \\(I_{xx}=\\frac{3}{10}mr^2\\), \\(I_{yy}=\\frac{2}{5}m(r^4+h^2)/(r^2)\\))\n2. [MKB B-029] Treat the hollow cylinder as a full cylinder of radius \\(r_2\\) minus a cylinder of radius \\(r_1\\). (ans. \\(I_{xx}=\\frac{1}{2}m(r_1^2+r_2^2)\\))\n3. [B-032] (ans. \\(L=r\\sqrt{2\\sqrt{3}}\\))\n4. [B-034] (ans. \\(I_{yy}=\\rho L^3\\left(\\frac{43}{192}+\\frac{83\\pi}{128}\\right)\\))\n\n\n20.10.2 Set 19 – Rigid Body Translation\n1. [MKB 06-006] (ans. \\(a=5.66\\) m/s\\(^2\\))\n2. [06-012] (ans. \\(a=16.43\\) ft/sec\\(^2\\))\n3. [06-013] (ans. \\(N_A=6.85\\) kN up, \\(N_B=9.34\\) kN up)\n4. [06-022] (ans. \\(N=257\\) kN up)\n\n\n20.10.3 Set 20 – Fixed Point Rotation\n1. [06-051] (See problem set for figure.)\n\n\n\n20.10.4 Set 21 – General Plane Motion\n1. [MKB 06-061] (ans. \\(\\alpha=48.8\\) rad/s\\(^2\\) CW, \\(\\bar a_x=0\\), \\(\\bar a_y=5\\) m/s\\(^2\\))\n2. [MKB 06-062] (ans. A: \\(\\alpha_A=\\frac{g}{r}\\sin\\theta\\), \\(\\mu_s=0\\); B: \\(\\alpha_B=\\frac{g}{2r}\\sin\\theta\\), \\(\\mu_s=\\frac{1}{2}\\tan\\theta\\))\n3. [06-063] (ans. \\(\\bar a=13.80\\) ft/sec\\(^2\\) down incline, \\(F=1.714\\) lb up incline)\n4. [06-070] (ans. \\(a=\\frac{8(m+M)g}{3\\pi(m+3M)}\\) left, \\(\\alpha=\\frac{8mg}{3\\pi r(m+3M)}\\) CW)\n\n5. [06-076] (ans. \\(s=\\frac{3d}{2}\\))\n6. [06-077] (ans. \\(N_B=36.4\\) N up)\n\n\n20.10.5 Set 22 – Impulse and Momentum for Rigid Bodies\n1. [MKB 06-136] (ans. \\(\\omega=1.811\\) rad/s CCW)\n2. [MKB 06-142] (ans. \\(\\mathbf{v}=\\frac{Mu_M\\mathbf{E}_x+m\\mathbf{v}_m}{M+m}\\), \\(\\omega=\\frac{12vm}{L(4M+7m)}\\) CCW)\n3. [06-145] (ans. \\(\\omega=\\frac{3mv_1}{(M+m)L}\\) CW)\n4. [06-146] (ans. \\(N=2.04\\) rev/s)\n5. [06-148] (ans. \\(\\omega=1.593\\) rad/s CCW, \\(n=91.7\\%\\))\n6. [06-155] (ans. \\(t=\\frac{2v_0}{g(7\\mu_k\\cos\\theta-2\\sin\\theta)}\\))",
+    "section": "20.9 Exercises",
+    "text": "20.9 Exercises\n\n20.9.1 Set 18 – Moments of Inertia\n1. [MKB B-004] Integration required. (ans. \\(I_{xx}=\\frac{3}{10}mr^2\\), \\(I_{yy}=\\frac{2}{5}m(r^4+h^2)/(r^2)\\))\n2. [MKB B-029] Treat the hollow cylinder as a full cylinder of radius \\(r_2\\) minus a cylinder of radius \\(r_1\\). (ans. \\(I_{xx}=\\frac{1}{2}m(r_1^2+r_2^2)\\))\n3. [B-032] (ans. \\(L=r\\sqrt{2\\sqrt{3}}\\))\n4. [B-034] (ans. \\(I_{yy}=\\rho L^3\\left(\\frac{43}{192}+\\frac{83\\pi}{128}\\right)\\))\n\n\n20.9.2 Set 19 – Rigid Body Translation\n1. [MKB 06-006] (ans. \\(a=5.66\\) m/s\\(^2\\))\n2. [06-012] (ans. \\(a=16.43\\) ft/sec\\(^2\\))\n3. [06-013] (ans. \\(N_A=6.85\\) kN up, \\(N_B=9.34\\) kN up)\n4. [06-022] (ans. \\(N=257\\) kN up)\n\n\n20.9.3 Set 20 – Fixed Point Rotation\n1. [06-051] (See problem set for figure.)\n\n\n\n20.9.4 Set 21 – General Plane Motion\n1. [MKB 06-061] (ans. \\(\\alpha=48.8\\) rad/s\\(^2\\) CW, \\(\\bar a_x=0\\), \\(\\bar a_y=5\\) m/s\\(^2\\))\n2. [MKB 06-062] (ans. A: \\(\\alpha_A=\\frac{g}{r}\\sin\\theta\\), \\(\\mu_s=0\\); B: \\(\\alpha_B=\\frac{g}{2r}\\sin\\theta\\), \\(\\mu_s=\\frac{1}{2}\\tan\\theta\\))\n3. [06-063] (ans. \\(\\bar a=13.80\\) ft/sec\\(^2\\) down incline, \\(F=1.714\\) lb up incline)\n4. [06-070] (ans. \\(a=\\frac{8(m+M)g}{3\\pi(m+3M)}\\) left, \\(\\alpha=\\frac{8mg}{3\\pi r(m+3M)}\\) CW)\n\n5. [06-076] (ans. \\(s=\\frac{3d}{2}\\))\n6. [06-077] (ans. \\(N_B=36.4\\) N up)\n\n\n20.9.5 Set 22 – Impulse and Momentum for Rigid Bodies\n1. [MKB 06-136] (ans. \\(\\omega=1.811\\) rad/s CCW)\n2. [MKB 06-142] (ans. \\(\\mathbf{v}=\\frac{Mu_M\\mathbf{E}_x+m\\mathbf{v}_m}{M+m}\\), \\(\\omega=\\frac{12vm}{L(4M+7m)}\\) CCW)\n3. [06-145] (ans. \\(\\omega=\\frac{3mv_1}{(M+m)L}\\) CW)\n4. [06-146] (ans. \\(N=2.04\\) rev/s)\n5. [06-148] (ans. \\(\\omega=1.593\\) rad/s CCW, \\(n=91.7\\%\\))\n6. [06-155] (ans. \\(t=\\frac{2v_0}{g(7\\mu_k\\cos\\theta-2\\sin\\theta)}\\))",
     "crumbs": [
       "Rigid Body Dynamics",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Kinetics of Rigid Bodies</span>"
@@ -1704,22 +1660,11 @@
     ]
   },
   {
-    "objectID": "rigid_body_dynamics/work_energy_theorem.html#lecture-videos",
-    "href": "rigid_body_dynamics/work_energy_theorem.html#lecture-videos",
-    "title": "21  The Work-Energy Theorem for a Rigid Body",
-    "section": "21.7 Lecture Videos",
-    "text": "21.7 Lecture Videos",
-    "crumbs": [
-      "Rigid Body Dynamics",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>The Work-Energy Theorem for a Rigid Body</span>"
-    ]
-  },
-  {
     "objectID": "rigid_body_dynamics/work_energy_theorem.html#exercises",
     "href": "rigid_body_dynamics/work_energy_theorem.html#exercises",
     "title": "21  The Work-Energy Theorem for a Rigid Body",
-    "section": "21.8 Exercises",
-    "text": "21.8 Exercises\nThe following problems are from Set 23 – Work–Energy Theorem for Rigid Bodies.\n1. [MKB 06-096] (ans. \\(v_A=\\sqrt{2gx\\sin\\theta}\\), \\(v_B=\\sqrt{gx\\sin\\theta}\\))\n2. [MKB 06-099] (ans. \\(\\omega_{\\max}=0.861\\sqrt{g/b}\\))\n3. [06-108] (ans. (a) \\(k=93.3\\) N/m; (b) \\(\\omega=1.484\\) rad/s CW)\n4. [06-112] (ans. \\(x=0.211l\\), \\(\\omega_{\\max}=1.861\\sqrt{g/l}\\) CW)\n5. [06-118] (ans. \\(v_A=\\sqrt{3}\\sqrt{\\frac{M\\theta}{m}-gb(1-\\cos\\theta)}\\) right)",
+    "section": "21.7 Exercises",
+    "text": "21.7 Exercises\nThe following problems are from Set 23 – Work–Energy Theorem for Rigid Bodies.\n1. [MKB 06-096] (ans. \\(v_A=\\sqrt{2gx\\sin\\theta}\\), \\(v_B=\\sqrt{gx\\sin\\theta}\\))\n2. [MKB 06-099] (ans. \\(\\omega_{\\max}=0.861\\sqrt{g/b}\\))\n3. [06-108] (ans. (a) \\(k=93.3\\) N/m; (b) \\(\\omega=1.484\\) rad/s CW)\n4. [06-112] (ans. \\(x=0.211l\\), \\(\\omega_{\\max}=1.861\\sqrt{g/l}\\) CW)\n5. [06-118] (ans. \\(v_A=\\sqrt{3}\\sqrt{\\frac{M\\theta}{m}-gb(1-\\cos\\theta)}\\) right)",
     "crumbs": [
       "Rigid Body Dynamics",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>The Work-Energy Theorem for a Rigid Body</span>"
