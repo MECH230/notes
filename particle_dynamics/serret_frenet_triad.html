@@ -699,6 +699,8 @@ window.Quarto = {
     &amp; \frac{d{\bf e}_t}{ds}\cdot{\bf e}_b+\frac{d{\bf e}_b}{ds}\cdot{\bf e}_t = 0\\
     &amp; \kappa{\bf e}_n\cdot{\bf e}_b+\frac{d{\bf e}_b}{ds}\cdot{\bf e}_t = 0\\
     &amp; \frac{d{\bf e}_b}{ds}\cdot{\bf e}_t=0.
+\end{align}\]</span> Consequently, we define <span class="math display">\[\begin{align}
+    \frac{d{\bf e}_b}{ds} = -\tau{\bf e}_n,
 \end{align}\]</span> where <span class="math inline">\(\tau\)</span> is the <strong>torsion</strong> of <span class="math inline">\(\mathcal{C}\)</span> at <span class="math inline">\(P\)</span>. The negative sign in the above formula is a convention.</p>
 <p>Then: <span class="math display">\[\begin{align}
     \frac{d{\bf e}_n}{ds} &amp;= \frac{d}{ds}\lp{\bf e}_b\times{\bf e}_t\rp\\
@@ -739,9 +741,32 @@ window.Quarto = {
 </section>
 <section id="the-curvature-formula-for-a-plane-curve" class="level2" data-number="11.5">
 <h2 data-number="11.5" class="anchored" data-anchor-id="the-curvature-formula-for-a-plane-curve"><span class="header-section-number">11.5</span> The Curvature Formula for a Plane Curve</h2>
-<p>For a plane curve <span class="math inline">\(y = f(x)\)</span>, <span class="math inline">\(z = z_0\)</span>: <span class="math display">\[\begin{align}
-    \kappa = \kappa(x) = \frac{\left|\frac{d^2 f}{dx^2}\right|}{\lp\sqrt{1+\lp\frac{df}{dx}\rp^2}\rp^3}.
+<p>Consider a point <span class="math inline">\(P\)</span> tracing a plane curve with <span class="math inline">\(y = f(x)\)</span>, <span class="math inline">\(z = z_0\)</span>, so that <span class="math display">\[\begin{align}
+    {\bf r} = x{\bf E}_x+f(x){\bf E}_y+z_0{\bf E}_z.
 \end{align}\]</span></p>
+<p>Determining the arc-length parameter <span class="math inline">\(s\)</span>: <span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; \frac{d{\bf r}}{dt} = \frac{dx}{dt}{\bf E}_x+\frac{df}{dx}\frac{dx}{dt}{\bf E}_y,\\
+        &amp; \lp\frac{ds}{dt}\rp^2 = \lp 1+\lp\frac{df}{dx}\rp^2\rp\lp\frac{dx}{dt}\rp^2,\\
+        &amp; \frac{ds}{dt} = \frac{dx}{dt}\sqrt{1+\lp\frac{df}{dx}\rp^2},\\
+        &amp; s = s(x) = \int_{x_0}^x\sqrt{1+\lp\frac{df}{du}\rp^2}\,du+s(x_0).
+    \end{split}
+\end{align}\]</span></p>
+<p>The tangent vector: <span class="math display">\[\begin{align}
+    {\bf e}_t = \frac{d{\bf r}}{ds} = \frac{d{\bf r}}{dx}\frac{dx}{ds} = \frac{1}{\sqrt{1+\lp\frac{df}{dx}\rp^2}}\lp{\bf E}_x+\frac{df}{dx}{\bf E}_y\rp.
+\end{align}\]</span></p>
+<p>The <span class="math inline">\(\kappa{\bf e}_n\)</span> expression: <span class="math display">\[\begin{align}
+    \kappa{\bf e}_n = \frac{d{\bf e}_t}{ds} = \frac{d{\bf e}_t}{dx}\frac{dx}{ds} = \frac{\frac{d^2 f}{dx^2}}{\lp1+\lp \frac{df}{dx}\rp^2\rp^2}\lp{\bf E}_y-\frac{df}{dx}{\bf E}_x\rp.
+\end{align}\]</span></p>
+<p>Recalling that <span class="math inline">\({\bf e}_n\)</span> is a unit vector and <span class="math inline">\(\kappa \geq 0\)</span>: <span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; \kappa = \kappa(x) = \frac{\left|\frac{d^2 f}{dx^2}\right|}{\lp\sqrt{1+\lp\frac{df}{dx}\rp^2}\rp^3},\\
+        &amp; {\bf e}_n = \frac{\text{sgn}\lp\frac{d^2 f}{dx^2}\rp}{\sqrt{1+\lp\frac{df}{dx}\rp^2}}\lp{\bf E}_y-\frac{df}{dx}{\bf E}_x\rp,
+    \end{split}
+\end{align}\]</span> where <span class="math inline">\(\text{sgn}(a)=1\)</span> if <span class="math inline">\(a&gt;0\)</span> and <span class="math inline">\(-1\)</span> if <span class="math inline">\(a&lt;0\)</span>.</p>
+<p>The binormal vector and torsion: <span class="math display">\[\begin{align}
+    {\bf e}_b = {\bf e}_t\times{\bf e}_n = \text{sgn}\lp\frac{d^2 f}{dx^2}\rp{\bf E}_z,
+\end{align}\]</span> and because this vector is piecewise constant, the torsion of the plane curve is <span class="math inline">\(\tau = 0\)</span>.</p>
 </section>
 <section id="alternative-notation-for-plane-curves" class="level2" data-number="11.6">
 <h2 data-number="11.6" class="anchored" data-anchor-id="alternative-notation-for-plane-curves"><span class="header-section-number">11.6</span> Alternative Notation for Plane Curves</h2>

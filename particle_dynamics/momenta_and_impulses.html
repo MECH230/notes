@@ -589,6 +589,10 @@ window.Quarto = {
 <h2 data-number="16.3" class="anchored" data-anchor-id="angular-momentum-and-its-conservation"><span class="header-section-number">16.3</span> Angular Momentum and Its Conservation</h2>
 <p>Let <span class="math inline">\({\bf r}\)</span> be the position vector of a particle relative to a fixed point <span class="math inline">\(O\)</span>, and <span class="math inline">\({\bf v}\)</span> its absolute velocity. The <strong>angular momentum</strong> relative to <span class="math inline">\(O\)</span>: <span class="math display">\[\begin{align}
     {\bf H}^O = {\bf r}\times m{\bf v} = {\bf r}\times{\bf G}.
+\end{align}\]</span> In Cartesian coordinates: <span class="math display">\[\begin{align}
+    {\bf H}^O = m\lp y\dot{z}-z\dot{y}\rp{\bf E}_x+m\lp z\dot{x}-x\dot{z}\rp{\bf E}_y+m\lp x\dot{y}-y\dot{x}\rp{\bf E}_z.
+\end{align}\]</span> In cylindrical-polar coordinates: <span class="math display">\[\begin{align}
+    {\bf H}^O = -mzr\dot{\theta}{\bf e}_r+m\lp z\dot{r}-r\dot{z}\rp{\bf e}_\theta+mr^2\dot{\theta}{\bf E}_z.
 \end{align}\]</span></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -649,6 +653,12 @@ window.Quarto = {
 <p>The gravitational force on a planet of mass <span class="math inline">\(m\)</span> by the sun of mass <span class="math inline">\(M\)</span>: <span class="math display">\[\begin{align}
     {\bf F} = -\frac{GmM}{\lnorm{\bf r}\rnorm^3}{\bf r}, \qquad U = -\frac{GmM}{\lnorm{\bf r}\rnorm}.
 \end{align}\]</span></p>
+<p>The BoLM in cylindrical polar coordinates yields: <span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; m\ddot{r}-mr\dot{\theta}^2 = -\frac{GMm}{r^2},\\
+        &amp; mr\ddot{\theta}+2m\dot{r}\dot{\theta} = 0.
+    \end{split}
+\end{align}\]</span></p>
 <p>Two conserved quantities: <span class="math display">\[\begin{align}
     E &amp;= \frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2)-\frac{GMm}{r},\\
     h &amp;= {\bf H}^O\cdot{\bf E}_z = mr^2\dot{\theta}.
@@ -682,13 +692,13 @@ window.Quarto = {
 <p><em>The following problems are from Set 12 – Impulse and Momentum.</em></p>
 <p><strong>1.</strong> [MKB 03-149] Straightforward application of the linear impulse–momentum equation. <em>(ans. <span class="math inline">\(v=1.218\)</span> m/s down)</em></p>
 <p><strong>2.</strong> [MKB 03-159] The block is subjected to a time-varying force <span class="math inline">\(P(t)\)</span> shown in the plot; <span class="math inline">\(P=0\)</span> for <span class="math inline">\(t&gt;3\)</span> s. <em>(ans. <span class="math inline">\(t_s=3.69\)</span> s)</em></p>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/ugj4fefUN4c" width="70%" title="Solution – Problem 03/159" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/ugj4fefUN4c" width="100%" title="Solution – Problem 03/159" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p><strong>3.</strong> [MKB 03-161] Use Newton’s third law. Recall <span class="math inline">\(\int_{x_A}^{x_B}f(x)\,dx = F_{\mathrm{avg}}(x_B-x_A)\)</span>. <em>(ans. <span class="math inline">\(v_f=0.00264\)</span> m/s, <span class="math inline">\(F_{\mathrm{avg}}=59.5\)</span> N)</em></p>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/Q-F7ew3jFuQ" width="70%" title="Solution – Problem 03/161" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/Q-F7ew3jFuQ" width="100%" title="Solution – Problem 03/161" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p><strong>4.</strong> [03-167] <em>(ans. <span class="math inline">\(R_x=559\)</span> lb, <span class="math inline">\(R_y=218\)</span> lb)</em></p>
 <p><strong>5.</strong> [03-177] Central force problem – what quantities are conserved? <em>(ans. <span class="math inline">\(v_P=17\,723\)</span> mi/hr)</em></p>
 <p><strong>6.</strong> [03-185] <em>(ans. <span class="math inline">\(v_B=5.43\)</span> m/s)</em></p>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/V3ussTTlrs8" width="70%" title="Solution – Problem 03/185" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/V3ussTTlrs8" width="100%" title="Solution – Problem 03/185" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p><strong>7.</strong> [03-181] <em>(ans. <span class="math inline">\(|H|=389\)</span> N·m·s, <span class="math inline">\(|M|=260\)</span> N·m)</em></p>
 <p><strong>8.</strong> [03-192] Label <span class="math inline">\(r\)</span> as <span class="math inline">\(R\)</span> and the requested angle <span class="math inline">\(\theta\)</span> as <span class="math inline">\(\beta\)</span>. The particle moves on a surface of revolution <span class="math inline">\(z^2+(r-1.15R)^2=R^2\)</span>. Use conservation of total energy and <span class="math inline">\(\mathbf{E}_z\)</span>-component of <span class="math inline">\(\mathbf{H}^O\)</span>. <em>(ans. <span class="math inline">\(\theta=52.9^\circ\)</span>)</em></p>
 
