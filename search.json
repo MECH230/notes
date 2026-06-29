@@ -806,7 +806,7 @@
     "href": "particle_dynamics/spring_force.html#exercises",
     "title": "12  Spring Force",
     "section": "12.6 Exercises",
-    "text": "12.6 Exercises\nThe following problems are from Set 09 – Spring Force (Chapter 8 of MKB). In each problem, find the equation of motion of the block.\n1. [08-002] (ans. \\(\\omega_n = 12\\) rad/s, \\(f_n = 1.910\\) Hz)\n2. [08-004] First determine the static deflection of the spring; take the origin at the statically deflected position. (ans. \\(\\delta_{st} = 0.200\\) m, \\(\\tau = 0.898\\) s, \\(v_{\\max} = 0.7\\) m/s)\n\n3. [08-019] (ans. \\(\\ddot y + \\frac{3k}{mL^2}y = 0\\))",
+    "text": "12.6 Exercises\nComplete this introduction to vibrations.\nThe following problems are from Set 09 – Spring Force (Chapter 8 of MKB). In each problem, find the equation of motion of the block.\n1. [08-002] (ans. \\(\\omega_n = 12\\) rad/s, \\(f_n = 1.910\\) Hz)\n2. [08-004] First determine the static deflection of the spring; take the origin at the statically deflected position. (ans. \\(\\delta_{st} = 0.200\\) m, \\(\\tau = 0.898\\) s, \\(v_{\\max} = 0.7\\) m/s)\n\n3. [08-019] (ans. \\(\\ddot y + \\frac{3k}{mL^2}y = 0\\))",
     "crumbs": [
       "Particle Dynamics",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Spring Force</span>"
