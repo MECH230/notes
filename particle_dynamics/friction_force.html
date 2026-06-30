@@ -501,7 +501,7 @@ window.Quarto = {
 </section>
 <section id="example-crate-pushed-with-incremental-force" class="level3" data-number="13.2.3">
 <h3 data-number="13.2.3" class="anchored" data-anchor-id="example-crate-pushed-with-incremental-force"><span class="header-section-number">13.2.3</span> Example: Crate Pushed with Incremental Force</h3>
-<p>Consider a block on a rough horizontal surface pushed with force <span class="math inline">\({\bf P} = P{\bf E}_x\)</span>.</p>
+<p>Consider a block on a rough horizontal surface pushed with force <span class="math inline">\({\bf P} = P{\bf E}_x\)</span>. At <span class="math inline">\(t=0\)</span>, the block is initially at rest and <span class="math inline">\(P=0\)</span>, then <span class="math inline">\(P\)</span> is increased linearly.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -531,7 +531,7 @@ P{\bf E}_x-mg{\bf E}_y+N{\bf E}_y-F_f{\bf E}_x = m\ddot{x}{\bf E}_x.
 \end{align}\]</span></p></li>
 <li><p>Let <span class="math inline">\(P&gt;0\)</span>.</p></li>
 </ol>
-<p>Initially at rest (static friction). Setting <span class="math inline">\(\ddot{x}=0\)</span>: <span class="math display">\[\begin{align}
+<p>Initially, when the block is at rest, static friction is acting on it. Setting <span class="math inline">\(\ddot{x}=0\)</span>: <span class="math display">\[\begin{align}
     P = F_f, \quad N = mg.
 \end{align}\]</span> The block stays at rest while <span class="math inline">\(P \leq \mu_s mg\)</span>. The maximum static value is <span class="math inline">\(P^* = \mu_s mg\)</span>.</p>
 <p>If <span class="math inline">\(P\)</span> exeeds this value <span class="math inline">\(P^*\)</span>, then sliding begins, and the friction force becomes kinetic <span class="math inline">\({\bf F}_f = -\mu_k mg{\bf E}_x\)</span> and: <span class="math display">\[\begin{align}
@@ -547,13 +547,35 @@ P{\bf E}_x-mg{\bf E}_y+N{\bf E}_y-F_f{\bf E}_x = m\ddot{x}{\bf E}_x.
 <p>When it is unknown whether the block is in motion:</p>
 <ol type="1">
 <li>Assume sticking: <span class="math inline">\({\bf v}_{rel} = {\bf 0}\)</span>.</li>
-<li>Calculate the static friction force.</li>
+<li>Calculate the static friction force <span class="math inline">\({\bf F}_{trial}\)</span>.</li>
 <li>Check the static friction criterion.
 <ul>
 <li>If satisfied: the block sticks. Analysis complete.</li>
 <li>If not satisfied: the block slides. Apply kinetic friction and resolve.</li>
 </ul></li>
 </ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the block is initially placed with zero velocity on the ramp, and the static friction criterion is found to be violated, then <span class="math inline">\({\bf v}_{rel}=0\)</span> and we have an issue prescribing the kinetic friction force. At this transitional case, we take the kinetic friction force to point in the same direction as the static friction force had the static friction criterion not been violated.</p>
+<p>In summary, if we</p>
+<p><span class="math display">\[\begin{align}
+    {\bf F}_f =
+    \begin{cases}
+        {\bf F}_{trial}, \text{ solved by BoLM and satisfying } ||{\bf F}_{trial}||\leq \mu_s{\bf N} &amp; {\bf v}_{rel} = 0 \text{ (friction is static)},\\
+        -\mu_k||{\bf N}||\frac{{\bf F}_{trial}}{||{\bf F}_{trial}||} &amp; {\bf v}_{rel} = 0 \text{ but } ||{\bf F}_{trial}||\geq \mu_s{\bf N} \text{ (friction is kinetic)},\\
+        -\mu_k||{\bf N}||\frac{{\bf v}_{rel}}{||{\bf v}_{rel}||} &amp; {\bf v}_{rel} \neq 0 \text{ (friction is kinetic)}
+    \end{cases}
+\end{align}\]</span></p>
+</div>
+</div>
 </section>
 </section>
 <section id="relative-velocity" class="level2" data-number="13.3">
