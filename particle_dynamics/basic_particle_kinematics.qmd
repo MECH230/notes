@@ -257,13 +257,13 @@ R_0\left(\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\right)
 
 Alternatively, notice that
 
-\[
+\begin{align*}
 {\bf a} = -\omega^2{\bf r},
-\]
+\end{align*}
 
 so
 
-\[
+\begin{align*}
 {\bf r}\times{\bf a}
 =
 {\bf r}\times(-\omega^2{\bf r})
@@ -271,7 +271,7 @@ so
 -\omega^2({\bf r}\times{\bf r})
 =
 {\bf 0}.
-\]
+\end{align*}
 
 For practice, let us also calculate ${\bf r}\cdot{\bf a}$:
 
@@ -387,7 +387,6 @@ Also, using the chain rule
 \begin{split}
     a &= \frac{dv}{dt} = \frac{dv}{ds}\frac{ds}{dt}=v\frac{dv}{ds}\\
 \end{split}
-\label{vdvads}
 \end{align}
 If $a=a(v)$, then
 \begin{align}
@@ -397,44 +396,32 @@ If $a=a(v)$, then
     \end{split}
 \end{align}
 
-\subsection{Given Acceleration as a Function of Displacement}
-Using Equation \ref{vdvads}, we get
-\begin{align}
-    vdv = ads
-\end{align}
- If $a =a(s)$, we can integrate this equation to get the speed as a function of position.
-\begin{equation}
-    \int_{v_(s_0)}^{v(s)} vdv = \int_{s_0}^s ad\Tilde{s} \implies \frac{1}{2}\lp v^2(s)-v^2(s_0)\rp = \int_{s_0}^{s}a(\Tilde{s})d\Tilde{s}.
-\end{equation}
-
-
-
 ### Given Acceleration as a Function of Displacement
 
 Starting with $a = v\,dv/ds$, if  $a=a(s)$, we can rearrange this equation to get
-\[
+\begin{align*}
 \int_{v(s_0)}^{v(s)} v\,dv
 =
 \int_{s_0}^{s} a(\tilde{s})\,d\tilde{s}.
-\]
+\end{align*}
 
 Evaluating the left-hand side gives
 
-\[
+\begin{align*}
 \frac{1}{2}\left(v^2(s)-v^2(s_0)\right)
 =
 \int_{s_0}^{s} a(\tilde{s})\,d\tilde{s}.
-\]
+\end{align*}
 
 Equivalently,
 
-\[
+\begin{align*}
 v^2(s)
 =
 v^2(s_0)
 +
 2\int_{s_0}^{s} a(\tilde{s})\,d\tilde{s}.
-\]
+\end{align*}
 
 ### Constant Acceleration
 
@@ -444,23 +431,23 @@ Throw a ball upward and take your hand to be the origin.
 
 Here,
 
-\[
+\begin{align*}
 {\bf a} = -g\,{\bf e}_t,
 \qquad
 g = 32.2\ \frac{\text{ft/s}}{\text{s}}.
-\]
+\end{align*}
 
 Note that ${\bf e}_t$ always points in the direction of increasing $s$ (upward). Therefore,
 
-\[
+\begin{align*}
 a=-g.
-\]
+\end{align*}
 
 Using
 
-\[
+\begin{align*}
 dv=a\,dt,
-\]
+\end{align*}
 
 we obtain
 
@@ -475,15 +462,15 @@ v(t)-v(t_0)
 
 Letting $v(t_0)=v_0$ and choosing the time origin so that $t_0=0$, we find
 
-\[
+\begin{align*}
 v(t)=v_0-gt.
-\]
+\end{align*}
 
 To determine the position as a function of time, use
 
-\[
+\begin{align*}
 ds=v\,dt.
-\]
+\end{align*}
 
 Integrating,
 
@@ -498,9 +485,9 @@ v_0t-\frac{g}{2}t^2.
 
 Hence,
 
-\[
+\begin{align*}
 s(t)=s_0+v_0t-\frac{g}{2}t^2.
-\]
+\end{align*}
 
 In this example, $s_0=0$.
 
@@ -508,9 +495,9 @@ In this example, $s_0=0$.
 
 For constant acceleration, the relation
 
-\[
+\begin{align*}
 v\,dv=a\,ds
-\]
+\end{align*}
 
 is particularly useful.
 
@@ -527,17 +514,17 @@ a(s-s_0).
 
 Therefore,
 
-\[
+\begin{align*}
 v^2(s)-v^2(s_0)
 =
 2a(s-s_0),
-\]
+\end{align*}
 
 or, in increment notation,
 
-\[
+\begin{align*}
 \Delta(v^2)=2a\,\Delta s.
-\]
+\end{align*}
 
 This equation is commonly used to determine braking distance when the deceleration is approximately constant.
 

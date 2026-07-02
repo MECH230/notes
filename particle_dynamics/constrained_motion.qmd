@@ -19,13 +19,18 @@ Examples:
 
 The inextensibility constraint $\ell = \text{const.}$ can be written as:
 \begin{align}
-    \ell &= s_A+c+s_B \implies \Delta s_B = -\Delta s_A \implies \dot{s}_B=-\dot{s}_A.
+    & \ell = s_A+c+s_B\\
+    & \Delta \ell = 0 = \Delta_{t_1\rightarrow t_2} s_A+\Delta_{t_1\rightarrow t_2} s_B\\
+    & \implies \Delta s_B = -\Delta s_A\\
+    & \dot{\ell} = 0 = \dot{s}_A+\dot{s}_B\\
+    & \implies \dot{s}_B=-\dot{s}_A.
 \end{align}
 
 ```{r}
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 3
 \begin{tikzpicture}
     % Draw the pulley
     \draw (0,4) circle (1);
@@ -58,14 +63,10 @@ The inextensibility constraint $\ell = \text{const.}$ can be written as:
 \end{tikzpicture}
 ```
 
-*See Set 06: Constrained Motion Problem 02/172.*
-
 
 ## Summary
 
 For **pulley–chord systems**: (1) choose a datum, (2) define distances from the datum, (3) write a chord equation per chord. Each chord equation and its derivatives give additional constraints.
-
-For constrained particles, watch: [Particle on a curve vs. particle on a surface](https://youtu.be/XNdP7Nk850s).
 
 ## Exercises
 
@@ -73,7 +74,7 @@ For constrained particles, watch: [Particle on a curve vs. particle on a surface
 
 **1.** [MKB 2/099] Determine the $\mathbf{e}_r$ and $\mathbf{e}_\theta$ components of the acceleration of pin $P$; origin at the centre of the circular slot. *(ans. $a_n = 66.0$ mm/s$^2$, $a_t = 29.7$ mm/s$^2$)*
 
-{{< video https://youtu.be/Bt5neJj4Zhc title="Solution – Problem 02/099" width="70%" >}}
+{{< video https://youtu.be/Bt5neJj4Zhc title="Solution – Problem 02/099" width="100%" >}}
 
 
 **2.** [03-056] Set up two polar coordinate systems with origins $O$ and $O'$. Write position vectors of $P$ in each basis. *(ans. $N = 2.89$ N towards $O'$, $R = 1.599$ N)*

@@ -651,7 +651,7 @@ window.Quarto = {
 \end{align}\]</span></p>
 <p>Calculate and plot <span class="math inline">\({\bf v}\)</span>, <span class="math inline">\({\bf a}\)</span>, <span class="math inline">\({\bf v}\times {\bf a}\)</span>, <span class="math inline">\(\lnorm{\bf r}\rnorm\)</span>. Show that the motion satisfies: <span class="math display">\[\begin{align}
     \ddot{x}+\omega^2 x=0, \qquad \ddot{y}+\omega^2 y=0.
-\end{align}\]</span> ::: {.callout-note title=“Answer” collapse=“true”} …</p>
+\end{align}\]</span> ::: {.callout-note title=“Answer” collapse=“true”} Answer: …</p>
 </div>
 </div>
 <p>:::</p>
@@ -706,7 +706,7 @@ For ${\bf r}\cdot{\bf a}$:
 <p>As you take these derivatives, remember that:</p>
 <ul>
 <li><span class="math inline">\(\dot{\bf E}_x={\bf 0}\)</span> and <span class="math inline">\(\dot{\bf E}_y={\bf 0}\)</span> since the basis <span class="math inline">\(\{{\bf E}_x,{\bf E}_y\}\)</span> is fixed.</li>
-<li>The chain rule: [ f(g(x)) = f’(g(x))g’(x). ]</li>
+<li>The chain rule: <span class="math inline">\(\frac{d}{dx}f(g(x)) = f'(g(x))g'(x).\)</span></li>
 </ul>
 <p>Then,</p>
 <p><span class="math display">\[\begin{align*}
@@ -733,9 +733,19 @@ R_0\left(\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\right)
 &amp;= {\bf 0}.
 \end{align*}\]</span></p>
 <p>Alternatively, notice that</p>
-<p>[ {} = -^2{}, ]</p>
+<p><span class="math display">\[\begin{align*}
+{\bf a} = -\omega^2{\bf r},
+\end{align*}\]</span></p>
 <p>so</p>
-<p>[ {} = {}(-^2{}) = -^2({}) = {}. ]</p>
+<p><span class="math display">\[\begin{align*}
+{\bf r}\times{\bf a}
+=
+{\bf r}\times(-\omega^2{\bf r})
+=
+-\omega^2({\bf r}\times{\bf r})
+=
+{\bf 0}.
+\end{align*}\]</span></p>
 <p>For practice, let us also calculate <span class="math inline">\({\bf r}\cdot{\bf a}\)</span>:</p>
 <p><span class="math display">\[\begin{align*}
 {\bf r}\cdot{\bf a}
@@ -833,26 +843,34 @@ R_0\left(\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\right)
 \begin{split}
     a &amp;= \frac{dv}{dt} = \frac{dv}{ds}\frac{ds}{dt}=v\frac{dv}{ds}\\
 \end{split}
-\label{vdvads}
 \end{align}\]</span> If <span class="math inline">\(a=a(v)\)</span>, then <span class="math display">\[\begin{align}
     \begin{split}
         ds &amp;= \frac{vdv}{a}\\
         s(t)-s_0 &amp;=\int_{v_0}^{v}\frac{\tilde{v}d\tilde{v}}{a(\Tilde{v})}.
     \end{split}
 \end{align}\]</span></p>
-<p>Using Equation <span class="math inline">\(\ref{vdvads}\)</span>, we get <span class="math display">\[\begin{align}
-    vdv = ads
-\end{align}\]</span> If <span class="math inline">\(a =a(s)\)</span>, we can integrate this equation to get the speed as a function of position. <span class="math display">\[\begin{equation}
-    \int_{v_(s_0)}^{v(s)} vdv = \int_{s_0}^s ad\Tilde{s} \implies \frac{1}{2}\lp v^2(s)-v^2(s_0)\rp = \int_{s_0}^{s}a(\Tilde{s})d\Tilde{s}.
-\end{equation}\]</span></p>
 </section>
 <section id="given-acceleration-as-a-function-of-displacement" class="level3" data-number="7.4.4">
 <h3 data-number="7.4.4" class="anchored" data-anchor-id="given-acceleration-as-a-function-of-displacement"><span class="header-section-number">7.4.4</span> Given Acceleration as a Function of Displacement</h3>
-<p>Starting with <span class="math inline">\(a = v\,dv/ds\)</span>, if <span class="math inline">\(a=a(s)\)</span>, we can rearrange this equation to get [ <em>{v(s_0)}^{v(s)} v,dv = </em>{s_0}^{s} a(),d. ]</p>
+<p>Starting with <span class="math inline">\(a = v\,dv/ds\)</span>, if <span class="math inline">\(a=a(s)\)</span>, we can rearrange this equation to get <span class="math display">\[\begin{align*}
+\int_{v(s_0)}^{v(s)} v\,dv
+=
+\int_{s_0}^{s} a(\tilde{s})\,d\tilde{s}.
+\end{align*}\]</span></p>
 <p>Evaluating the left-hand side gives</p>
-<p>[ (v<sup>2(s)-v</sup>2(s_0)) = _{s_0}^{s} a(),d. ]</p>
+<p><span class="math display">\[\begin{align*}
+\frac{1}{2}\left(v^2(s)-v^2(s_0)\right)
+=
+\int_{s_0}^{s} a(\tilde{s})\,d\tilde{s}.
+\end{align*}\]</span></p>
 <p>Equivalently,</p>
-<p>[ v^2(s) = v^2(s_0) + 2_{s_0}^{s} a(),d. ]</p>
+<p><span class="math display">\[\begin{align*}
+v^2(s)
+=
+v^2(s_0)
++
+2\int_{s_0}^{s} a(\tilde{s})\,d\tilde{s}.
+\end{align*}\]</span></p>
 </section>
 <section id="constant-acceleration" class="level3" data-number="7.4.5">
 <h3 data-number="7.4.5" class="anchored" data-anchor-id="constant-acceleration"><span class="header-section-number">7.4.5</span> Constant Acceleration</h3>
@@ -860,11 +878,19 @@ R_0\left(\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\right)
 <h4 data-number="7.4.5.1" class="anchored" data-anchor-id="example-gravity"><span class="header-section-number">7.4.5.1</span> Example: Gravity</h4>
 <p>Throw a ball upward and take your hand to be the origin.</p>
 <p>Here,</p>
-<p>[ {} = -g,{}_t, g = 32.2&nbsp;. ]</p>
+<p><span class="math display">\[\begin{align*}
+{\bf a} = -g\,{\bf e}_t,
+\qquad
+g = 32.2\ \frac{\text{ft/s}}{\text{s}}.
+\end{align*}\]</span></p>
 <p>Note that <span class="math inline">\({\bf e}_t\)</span> always points in the direction of increasing <span class="math inline">\(s\)</span> (upward). Therefore,</p>
-<p>[ a=-g. ]</p>
+<p><span class="math display">\[\begin{align*}
+a=-g.
+\end{align*}\]</span></p>
 <p>Using</p>
-<p>[ dv=a,dt, ]</p>
+<p><span class="math display">\[\begin{align*}
+dv=a\,dt,
+\end{align*}\]</span></p>
 <p>we obtain</p>
 <p><span class="math display">\[\begin{align*}
 \int_{v(t_0)}^{v(t)} dv
@@ -875,9 +901,13 @@ v(t)-v(t_0)
 -g(t-t_0).
 \end{align*}\]</span></p>
 <p>Letting <span class="math inline">\(v(t_0)=v_0\)</span> and choosing the time origin so that <span class="math inline">\(t_0=0\)</span>, we find</p>
-<p>[ v(t)=v_0-gt. ]</p>
+<p><span class="math display">\[\begin{align*}
+v(t)=v_0-gt.
+\end{align*}\]</span></p>
 <p>To determine the position as a function of time, use</p>
-<p>[ ds=v,dt. ]</p>
+<p><span class="math display">\[\begin{align*}
+ds=v\,dt.
+\end{align*}\]</span></p>
 <p>Integrating,</p>
 <p><span class="math display">\[\begin{align*}
 \int_{s_0}^{s(t)} ds
@@ -888,13 +918,17 @@ s(t)-s_0
 v_0t-\frac{g}{2}t^2.
 \end{align*}\]</span></p>
 <p>Hence,</p>
-<p>[ s(t)=s_0+v_0t-t^2. ]</p>
+<p><span class="math display">\[\begin{align*}
+s(t)=s_0+v_0t-\frac{g}{2}t^2.
+\end{align*}\]</span></p>
 <p>In this example, <span class="math inline">\(s_0=0\)</span>.</p>
 </section>
 <section id="example-vehicle-braking" class="level4" data-number="7.4.5.2">
 <h4 data-number="7.4.5.2" class="anchored" data-anchor-id="example-vehicle-braking"><span class="header-section-number">7.4.5.2</span> Example: Vehicle Braking</h4>
 <p>For constant acceleration, the relation</p>
-<p>[ v,dv=a,ds ]</p>
+<p><span class="math display">\[\begin{align*}
+v\,dv=a\,ds
+\end{align*}\]</span></p>
 <p>is particularly useful.</p>
 <p>Integrating,</p>
 <p><span class="math display">\[\begin{align*}
@@ -906,9 +940,15 @@ a\int_{s_0}^{s} d\tilde{s},\\
 a(s-s_0).
 \end{align*}\]</span></p>
 <p>Therefore,</p>
-<p>[ v<sup>2(s)-v</sup>2(s_0) = 2a(s-s_0), ]</p>
+<p><span class="math display">\[\begin{align*}
+v^2(s)-v^2(s_0)
+=
+2a(s-s_0),
+\end{align*}\]</span></p>
 <p>or, in increment notation,</p>
-<p>[ (v^2)=2a,s. ]</p>
+<p><span class="math display">\[\begin{align*}
+\Delta(v^2)=2a\,\Delta s.
+\end{align*}\]</span></p>
 <p>This equation is commonly used to determine braking distance when the deceleration is approximately constant.</p>
 </section>
 </section>

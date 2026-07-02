@@ -370,6 +370,8 @@ For the IC:
 
 *Examples: [Crank slider](https://www.youtube.com/watch?v=RDixpdSGERQ), rod falling on a corner.*
 
+{{< video https://drive.google.com/file/d/1L8b1ugg4xQuPK5m5tOVo0bzk16HRia5a/view?usp=sharing title="IC of crank slider" >}}
+
 ## Doing Kinematics Geometrically
 
 In some problems, geometric laws that hold for all time can be differentiated:
@@ -453,6 +455,8 @@ For rigid bodies, $C$ behaves as a material point:
     {\bf G} = \int_{\mathcal{B}}{\bf v}\,dm = m{\bf v}_C.
 \end{align}
 
+{{< video https://youtu.be/101EriK4HIQ title="Center of mass and linear momentum of a rigid body" >}}
+
 ## Angular Momenta
 
 The angular momentum about a point $P$ is
@@ -463,6 +467,8 @@ and the relationship between angular momenta about $O$ and $C$ is
 \begin{align}
     {\bf H}^O = {\bf H}^C+{\bf r}_C\times{\bf G}.
 \end{align}
+
+{{< video https://youtu.be/BGa_d4LscWQ title="Angular momentum of a rigid body" >}}
 
 ### Inertia Tensor
 
@@ -498,6 +504,10 @@ Greater when arms are open — mass is farther from the axis. See also: [Profess
 :::
 :::
 
+{{< video https://youtu.be/BP1N9zFeY98 title="Moments and products of inertia" >}}
+
+{{< video https://www.youtube.com/watch?v=M_YCWDXCwZM&t=152s title="Cylinders Rolling Down Incline - Professor Walter Lewin" >}}
+
 ### Example: Solid Cylinder
 
 ```{r}
@@ -524,6 +534,10 @@ With $dm = \rho\,r\,dr\,d\theta\,dz$:
     I^C_{zz} = \rho\int_{-\ell/2}^{\ell/2}\int_0^{2\pi}\int_0^R r^3\,dr\,d\theta\,dz = \frac{1}{2}\rho\pi\ell R^4 = \frac{mR^2}{2}.
 \end{align}
 
+{{< video https://youtu.be/Z5ugvTjmLys title="Example - inertias of a solid cylinder" >}}
+
+{{< video https://youtube.com/shorts/0CfRKuqjZ7YU title="Example - parallel axis theorem on a solid cylinder" >}}
+
 ### Example: Cylindrical Hoop
 
 Every $dm$ has $r = R$, so:
@@ -547,9 +561,13 @@ In tensor form:
 The parallel axis theorem applies only between the center of mass $C$ and another material point — not between any two arbitrary material points. The moment of inertia always increases when moving away from $C$.
 :::
 
+{{< video https://youtu.be/8R_cF2e_9nU title="The parallel axis theorem" >}}
+
 ## Radius of Gyration
 
 The radius of gyration $k_z$ about the $z$-axis satisfies $mk_z^2 = I_{zz}$.
+
+{{< video https://youtube.com/shorts/pRxOpqpKq78 title="The radius of gyration" >}}
 
 ## Angular Momentum About a Moving Point $P$
 

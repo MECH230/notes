@@ -12,6 +12,7 @@ Consider a block on a rough horizontal surface pushed with force ${\bf P} = P{\b
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 4
 \begin{tikzpicture}
     \draw[thick] (0,0) rectangle (3,1.5);
     \draw (-1,0) -- (6,0);
@@ -34,7 +35,7 @@ We distinguish two types of friction: static and kinetic.
 
 ### Static Friction
 
-When the relative velocity is zero (${\bf v}_{rel} = {\bf 0}$), the friction force ${\bf F}_f$ is **unknown** and lies along the contact surface. We must solve for both its magnitude and direction. We say the static friction force points in the direction that **impedes motion**.
+When the relative velocity between two surfacesis zero (${\bf v}_{rel} = {\bf 0}$), the friction force ${\bf F}_f$ is **unknown** and lies along the contact surface. We must solve for both its magnitude and direction. We say the static friction force points in the direction that **impedes motion**.
 
 ::: {.callout-tip title="Think!"}
 **Question:** Consider a block on a rough inclined surface that is not moving. Draw the FBD and write the equation of motion. Do you have as many equations as unknowns?
@@ -44,7 +45,7 @@ Yes. The friction and normal forces have unknown magnitudes, but the block's acc
 :::
 :::
 
-The static friction criterion:
+The magnitude of the static friction force satisfies the **static friction criterion**:
 \begin{align}
     \lnorm{\bf F}_f\rnorm \leq \mu_s\lnorm{\bf N}\rnorm,
 \end{align}
@@ -52,11 +53,11 @@ where $\mu_s$ is the static friction coefficient.
 
 ### Kinetic Friction
 
-When two bodies are in relative motion (${\bf v}_{rel} \neq {\bf 0}$), the friction force is **known**:
+When two bodies are in relative motion (${\bf v}_{rel} \neq {\bf 0}$), the friction force is **known** (both in magnitude and direction):
 \begin{align}
     {\bf F}_f = \mu_k\lnorm{\bf N}\rnorm\lp-\frac{{\bf v}_{rel}}{\lnorm{\bf v}_{rel}\rnorm}\rp,
 \end{align}
-where $\mu_k$ is the kinetic friction coefficient.
+where $\mu_k$ is the kinetic friction coefficient. This prescription is used to solve for the motion of the system.
 
 Remarks:
 
@@ -64,12 +65,17 @@ Remarks:
 - Kinetic friction is a prescription, not a constraint force.
 - The magnitude of kinetic friction does not depend on speed.
 
+{{< video https://youtu.be/_fvCFtpL3c8 title="Explaining the friction force" >}}
+
 ### Example: Crate Pushed with Incremental Force
+
+Consider a block on a rough horizontal surface pushed with force ${\bf P} = P{\bf E}_x$. At $t=0$, the block is initially at rest and $P=0$, then $P$ is increased linearly.
 
 ```{r}
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 4
 \begin{tikzpicture}
     \draw[thick] (0,0) rectangle (3,1.5);
     \draw (-1,0) -- (6,0);
@@ -85,22 +91,47 @@ Remarks:
 
    When kinetic: ${\bf F}_f = -\mu_k\lnorm{\bf N}\rnorm\,\text{sgn}(\dot{x}){\bf E}_x$.
 
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+#| fig-width: 4
+\begin{tikzpicture}
+        \draw[thick] (0,0) rectangle (3,1.5);
+        \draw[->] (1.5,-1.5) -- (1.5,0) node[midway, right] {${\bf N}$};
+        \draw[->] (1.5,2) -- (1.5,0.75) node[right] {${\bf W}$};
+        \draw[->] (2.5,-0.2) -- (0.5,-0.2) node[left, below] {${\bf F}_f$};
+        \draw[->] (3,0.75) -- (5,0.75) node[right] {$\mathbf{P}$};
+        \draw[->] (-2,0) -- (-1,0) node[right, above] {${\bf E}_x$};
+        \draw[->] (-2,0) -- (-2,1) node[above] {${\bf E}_y$};
+\end{tikzpicture}
+```
+
+
 3. BoLM:
 \begin{align}
     P{\bf E}_x-mg{\bf E}_y+N{\bf E}_y-F_f{\bf E}_x = m\ddot{x}{\bf E}_x.
 \end{align}
 
-4. Initially at rest (static friction). Setting $\ddot{x}=0$:
+4. Let $P>0$.
+
+Initially, when the block is at rest, static friction is acting on it. Setting $\ddot{x}=0$:
 \begin{align}
     P = F_f, \quad N = mg.
 \end{align}
 The block stays at rest while $P \leq \mu_s mg$. The maximum static value is $P^* = \mu_s mg$.
 
-Once sliding, ${\bf F}_f = -\mu_k mg{\bf E}_x$ and:
+If $P$ exeeds this value $P^*$, then sliding begins, and the friction force becomes kinetic ${\bf F}_f = -\mu_k mg{\bf E}_x$ and:
 \begin{align}
     \ddot{x} = \frac{P}{m}-\mu_k g.
 \end{align}
-For constant speed, $P^{**} = \mu_k mg$.
+Here, we assumed that $\text{sgn}(\dot{x})\geq 0$ because ${\bf P}$ always points to the right.
+The acceleration vector of the box is:
+\begin{align}
+    {\bf a} = \ddot{x}{\bf E}_x = \lp\frac{P}{m}-\mu_k g\rp{\bf E}_x.
+\end{align}
+
+If the block moves at constant speed, then $\ddot{x}=0$ and $P^{**} = \mu_k mg$.
 
 ### Example: A Box on a Ramp
 
@@ -109,18 +140,33 @@ For constant speed, $P^{**} = \mu_k mg$.
 When it is unknown whether the block is in motion:
 
 1. Assume sticking: ${\bf v}_{rel} = {\bf 0}$.
-2. Calculate the static friction force.
+2. Calculate the static friction force ${\bf F}_{trial}$.
 3. Check the static friction criterion.
    - If satisfied: the block sticks. Analysis complete.
    - If not satisfied: the block slides. Apply kinetic friction and resolve.
+
+::: {.callout-tip title="Think!"}
+If the block is initially placed with zero velocity on the ramp, and the static friction criterion is found to be violated, then ${\bf v}_{rel}=0$ and we have an issue prescribing the kinetic friction force. At this transitional case, we take the kinetic friction force to point in the same direction as the static friction force had the static friction criterion not been violated.
+
+In summary, if we
+
+\begin{align}
+    {\bf F}_f =
+    \begin{cases}
+        {\bf F}_{trial}, \text{ solved by BoLM and satisfying } ||{\bf F}_{trial}||\leq \mu_s{\bf N} & {\bf v}_{rel} = 0 \text{ (friction is static)},\\
+        -\mu_k||{\bf N}||\frac{{\bf F}_{trial}}{||{\bf F}_{trial}||} & {\bf v}_{rel} = 0 \text{ but } ||{\bf F}_{trial}||\geq \mu_s{\bf N} \text{ (friction is kinetic)},\\
+        -\mu_k||{\bf N}||\frac{{\bf v}_{rel}}{||{\bf v}_{rel}||} & {\bf v}_{rel} \neq 0 \text{ (friction is kinetic)}
+    \end{cases}
+\end{align}
+
+:::   
 
 ## Relative Velocity
 
 A common misconception: if an object is moving, the friction acting on it must be kinetic. Counter-example: a crate on a moving truck. If the crate moves with the truck (same velocity), the friction between them is **static**. Only if the crate slides on the truck bed is the friction kinetic.
 
-Similar examples include a person in an elevator and a person riding a bus.
 
-### Example: Nonzero Relative Velocity
+Other examples:
 
 - **Box held fixed on a moving conveyor belt:** The belt moves, so ${\bf v}_{rel} = -{\bf v}_c \neq {\bf 0}$ — friction is kinetic. The box is stationary in space but moving relative to the belt.
 
@@ -128,6 +174,7 @@ Similar examples include a person in an elevator and a person riding a bus.
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 3
 \begin{tikzpicture}
     \draw[thick] (0,0) rectangle (3,1.5);
     \draw (-1,0) -- (6,0);
@@ -144,10 +191,10 @@ Similar examples include a person in an elevator and a person riding a bus.
 
 ## Normal and Friction Force Prescription
 
-See [this video](https://www.youtube.com/watch?v=XNdP7Nk850s).
-
 - For a particle moving on a **space curve**: ${\bf N} = N_n{\bf e}_n+N_b{\bf e}_b$ and ${\bf F}_f = F_f{\bf e}_t$.
 - For a particle moving on a **surface** with normal ${\bf n}$ and tangent directions ${\bf t}_1$, ${\bf t}_2$: ${\bf N} = N{\bf n}$ and ${\bf F}_f = F_{f1}{\bf t}_1+F_{f2}{\bf t}_2$.
+
+{{< video https://www.youtube.com/watch?v=XNdP7Nk850s title="Particle moving on a curve vs surface" >}}
 
 
 ## Summary
@@ -156,10 +203,6 @@ See [this video](https://www.youtube.com/watch?v=XNdP7Nk850s).
 - **Kinetic (Coulomb) friction**: $\mathbf{F}_f = -\mu_k\|\mathbf{N}\|\dfrac{\mathbf{v}_{\mathrm{rel}}}{\|\mathbf{v}_{\mathrm{rel}}\|}$.
 
 Strategy: assume sticking; check the static criterion. If violated, resolve with kinetic friction.
-
-## Lecture Videos
-
-{{< video https://youtu.be/_fvCFtpL3c8 title="Explaining the friction force" width="70%" >}}
 
 
 ## Exercises
@@ -178,5 +221,5 @@ Strategy: assume sticking; check the static criterion. If violated, resolve with
 
 **6.** [03-071] Polar coordinate system with origin at the centre of the disk. *(ans. $N=\frac{\mu_s g}{4\pi^2}\left(\frac{1}{r\alpha}-1\right)$)*
 
-{{< video https://youtu.be/RDFfE0tFTnk title="Solution – Problem 03/071" width="70%" >}}
+{{< video https://youtu.be/RDFfE0tFTnk title="Solution – Problem 03/071" width="100%" >}}
 

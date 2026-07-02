@@ -159,7 +159,7 @@ See Section 1.6 in the book for a worked example.
 
 ## Lecture Videos
 
-{{< video https://youtu.be/RMkMK32vqyM title="Solving differential equations numerically in Python" width="70%" >}}
+{{< video https://youtu.be/RMkMK32vqyM title="Solving differential equations numerically in Python" width="100%" >}}
 
 
 ## Exercises
@@ -170,7 +170,7 @@ See Section 1.6 in the book for a worked example.
 
 **2.** [MKB 3/004] Consider the whole truck system; follow the 4 steps to find the truck's acceleration, then isolate a trailer to find the drawbar tension. *(ans. $T = 13.33$ kN, $a = 0.667$ m/s$^2$)*
 
-{{< video https://youtu.be/LAl3ZUiUpus title="Solution – Problem 03/004" width="70%" >}}
+{{< video https://youtu.be/LAl3ZUiUpus title="Solution – Problem 03/004" width="100%" >}}
 
 
 **3.** [MKB 3/005] For each part, determine your system and follow the 4 steps. *(ans. $R = 846$ N, $L = 110.4$ N)*

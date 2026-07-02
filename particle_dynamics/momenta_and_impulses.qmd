@@ -18,13 +18,28 @@ The time integral of a force is its **linear impulse**. This form is more genera
 ### Conservation of Linear Momentum
 
 ::: {.callout-tip title="Think!"}
+**Question:** Under what conditions is the linear momentum of a system conserved?
+
+::: {.callout-note title="Answer" collapse="true"}
+…
+:::
+:::
+
+::: {.callout-tip title="Think!"}
 **Question:** Under what conditions is the linear momentum of a system conserved in a direction ${\bf c}$?
 
 ::: {.callout-note title="Answer" collapse="true"}
+Suppose that the component of ${\bf G}$ in the direction of a given vector ${\bf c}$ is conserved:
 \begin{align}
-    \frac{d}{dt}({\bf G}\cdot{\bf c}) = {\bf F}\cdot{\bf c}+{\bf G}\cdot\dot{\bf c} = 0.
+    \frac{d}{dt}({\bf G}\cdot{\bf c}) = 0.
 \end{align}
-For a constant ${\bf c}$, ${\bf G}\cdot{\bf c}$ is conserved if and only if ${\bf F}\cdot{\bf c} = 0$ — i.e., no force in that direction.
+This means that
+\begin{align}
+    \dot{\bf G}\cdot{\bf c}+{\bf G}\cdot\dot{\bf c} = {\bf F}\cdot{\bf c}+{\bf G}\cdot\dot{\bf c} = 0.
+\end{align}
+Thus, given a vector ${\bf c}$,
+$${\bf G}\cdot{\bf c} \text{ is conserved if, and only if, } {\bf F}\cdot{\bf c}+{\bf G}\cdot\dot{\bf c} = 0.$$
+If ${\bf c}$ is a constant vector, ${\bf G}\cdot{\bf c}$ is conserved if, and only if, ${\bf F}\cdot{\bf c} = 0$. From the BoLM, this means that there is no force in this constant direction.
 :::
 :::
 
@@ -95,6 +110,14 @@ Let ${\bf r}$ be the position vector of a particle relative to a fixed point $O$
 \begin{align}
     {\bf H}^O = {\bf r}\times m{\bf v} = {\bf r}\times{\bf G}.
 \end{align}
+In Cartesian coordinates:
+\begin{align}
+    {\bf H}^O = m\lp y\dot{z}-z\dot{y}\rp{\bf E}_x+m\lp z\dot{x}-x\dot{z}\rp{\bf E}_y+m\lp x\dot{y}-y\dot{x}\rp{\bf E}_z.
+\end{align}
+In cylindrical-polar coordinates:
+\begin{align}
+    {\bf H}^O = -mzr\dot{\theta}{\bf e}_r+m\lp z\dot{r}-r\dot{z}\rp{\bf e}_\theta+mr^2\dot{\theta}{\bf E}_z.
+\end{align}
 
 ```{r}
 #| engine: tikz
@@ -127,27 +150,68 @@ So $\dot{\bf H}^O = {\bf M}^O$ (the angular momentum theorem).
 ### Conservation of Angular Momentum
 
 ::: {.callout-tip title="Think!"}
+**Question:** Under what conditions is the angular momentum of a system conserved?
+
+::: {.callout-note title="Answer" collapse="true"}
+…
+:::
+:::
+
+::: {.callout-tip title="Think!"}
 **Question:** Under what conditions is ${\bf H}^O\cdot{\bf c}$ conserved?
 
 ::: {.callout-note title="Answer" collapse="true"}
-For a constant ${\bf c}$: if and only if $\lp{\bf r}\times{\bf F}\rp\cdot{\bf c} = 0$.
+Suppose that the component of ${\bf H}^O$ in the direction of a given vector ${\bf c}$ is conserved:
+\begin{align}
+    \frac{d}{dt}\lp{\bf H}^O\cdot{\bf c}\rp = 0.
+\end{align}
+Then,
+\begin{align}
+    \frac{d}{dt}\lp{\bf H}^O\cdot{\bf c}\rp = \dot{\bf H}^O\cdot{\bf c}+{\bf H}^O\cdot\dot{\bf c} = \lp{\bf r}\times{\bf F}\rp\cdot{\bf c}+{\bf H}^O\cdot\dot{\bf c}.
+\end{align}
+Consequently, for a given vector ${\bf c}$,
+$${\bf H}^O\cdot{\bf c} \text{ is conserved if, and only if, } \lp{\bf r}\times{\bf F}\rp\cdot{\bf c}+{\bf H}^O\cdot\dot{\bf c}=0.$$
+If ${\bf c}$ is a constant vector, then ${\bf H}^O\cdot{\bf c}$ is conserved if, and only if, $\lp{\bf r}\times {\bf F}\rp\cdot{\bf c} = 0$.
 :::
 :::
 
 ### Central Force Problems
 
-A **central force** problem has ${\bf F}$ parallel to ${\bf r}$, so $\dot{\bf H}^O = {\bf 0}$ and ${\bf H}^O = h{\bf h}$ = constant.
+::: {.callout-warning title="Example"}
+**Question:** Consider the motion of the Earth and the Moon. What are the forces acting on the Moon? Are any quantities conserved?
 
-The vectors ${\bf r}$ and ${\bf v}$ remain in a fixed plane through $O$. Choosing ${\bf E}_z = {\bf h}$:
+::: {.callout-note title="Answer" collapse="true"}
+Yes. Energy and angular momentum are conserved.
+:::
+:::
+
+A **central force** problem is one where ${\bf F}$ is parallel to ${\bf r}$. The angular momentum theorem implies $\dot{\bf H}^O = {\bf r}\times{\bf F} = {\bf 0}$, so
+\begin{align}
+    {\bf H}^O = h{\bf h} = \text{constant} = {\bf r}\times m{\bf v},
+\end{align}
+where $h$ and ${\bf h}$ are constant.
+
+The vectors ${\bf r}$ and ${\bf v}$ form a plane with constant unit normal ${\bf h}$. This plane passes through $O$ and is fixed. Given initial conditions ${\bf r}(t_0)$ and ${\bf v}(t_0)$, we can choose a cylindrical polar coordinate system such that ${\bf E}_z = {\bf h}$, ${\bf r} = r{\bf e}_r$, and ${\bf v} = \dot{r}{\bf e}_r+r\dot{\theta}{\bf e}_\theta$. To do this, it suffices to choose ${\bf E}_z$ so that
 \begin{align}
     {\bf H}^O = h{\bf E}_z = {\bf r}(t_0)\times m{\bf v}(t_0).
 \end{align}
 
 ### Kepler's Problem
 
-The gravitational force on a planet of mass $m$ by the sun of mass $M$:
+The gravitational force on a planet of mass $m$ by the sun of mass $M$ is conservative:
 \begin{align}
-    {\bf F} = -\frac{GmM}{\lnorm{\bf r}\rnorm^3}{\bf r}, \qquad U = -\frac{GmM}{\lnorm{\bf r}\rnorm}.
+    \begin{split}
+        & {\bf F} = -\frac{GmM}{\lnorm{\bf r}\rnorm^2}\frac{\bf r}{\lnorm{\bf r}\rnorm} = -\frac{\partial U}{\partial {\bf r}},\\
+        & U = -\frac{GmM}{\lnorm{\bf r}\rnorm}.
+    \end{split}
+\end{align}
+
+The BoLM in cylindrical polar coordinates yields:
+\begin{align}
+    \begin{split}
+        & m\ddot{r}-mr\dot{\theta}^2 = -\frac{GMm}{r^2},\\
+        & mr\ddot{\theta}+2m\dot{r}\dot{\theta} = 0.
+    \end{split}
 \end{align}
 
 Two conserved quantities:
@@ -175,19 +239,19 @@ Show that ${\bf H}^O\cdot{\bf E}_z$ is conserved.
 
 ## Lecture Videos
 
-{{< video https://youtu.be/-AHQOYy3VBk title="Linear momentum and conservation" width="70%" >}}
+{{< video https://youtu.be/-AHQOYy3VBk title="Linear momentum and conservation" >}}
 
-{{< video https://youtu.be/_3a0CbiLJ18 title="Conservation of linear momentum along a fixed direction" width="70%" >}}
+{{< video https://youtu.be/_3a0CbiLJ18 title="Conservation of linear momentum along a fixed direction" >}}
 
-{{< video https://youtu.be/qiFdls4aFsw title="Review – calculating the moment of a force" width="70%" >}}
+{{< video https://youtu.be/qiFdls4aFsw title="Review – calculating the moment of a force" >}}
 
-{{< video https://youtu.be/RohK7Sk-pCg title="Angular momentum definition" width="70%" >}}
+{{< video https://youtu.be/RohK7Sk-pCg title="Angular momentum definition" >}}
 
-{{< video https://youtu.be/5oHdJJfxGvk title="Balance of angular momentum" width="70%" >}}
+{{< video https://youtu.be/5oHdJJfxGvk title="Balance of angular momentum" >}}
 
-{{< video https://youtu.be/9TFLI5Tjiv8 title="Conservation of angular momentum" width="70%" >}}
+{{< video https://youtu.be/9TFLI5Tjiv8 title="Conservation of angular momentum" >}}
 
-{{< video https://youtu.be/MEwpRoLB7KM title="Conservations – linear vs. angular momentum vs. energy" width="70%" >}}
+{{< video https://youtu.be/MEwpRoLB7KM title="Conservations – linear vs. angular momentum vs. energy" >}}
 
 
 ## Exercises
@@ -198,12 +262,12 @@ Show that ${\bf H}^O\cdot{\bf E}_z$ is conserved.
 
 **2.** [MKB 03-159] The block is subjected to a time-varying force $P(t)$ shown in the plot; $P=0$ for $t>3$ s. *(ans. $t_s=3.69$ s)*
 
-{{< video https://youtu.be/ugj4fefUN4c title="Solution – Problem 03/159" width="70%" >}}
+{{< video https://youtu.be/ugj4fefUN4c title="Solution – Problem 03/159" width="100%" >}}
 
 
 **3.** [MKB 03-161] Use Newton's third law. Recall $\int_{x_A}^{x_B}f(x)\,dx = F_{\mathrm{avg}}(x_B-x_A)$. *(ans. $v_f=0.00264$ m/s, $F_{\mathrm{avg}}=59.5$ N)*
 
-{{< video https://youtu.be/Q-F7ew3jFuQ title="Solution – Problem 03/161" width="70%" >}}
+{{< video https://youtu.be/Q-F7ew3jFuQ title="Solution – Problem 03/161" width="100%" >}}
 
 
 **4.** [03-167] *(ans. $R_x=559$ lb, $R_y=218$ lb)*
@@ -212,7 +276,7 @@ Show that ${\bf H}^O\cdot{\bf E}_z$ is conserved.
 
 **6.** [03-185] *(ans. $v_B=5.43$ m/s)*
 
-{{< video https://youtu.be/V3ussTTlrs8 title="Solution – Problem 03/185" width="70%" >}}
+{{< video https://youtu.be/V3ussTTlrs8 title="Solution – Problem 03/185" width="100%" >}}
 
 
 **7.** [03-181] *(ans. $|H|=389$ N·m·s, $|M|=260$ N·m)*

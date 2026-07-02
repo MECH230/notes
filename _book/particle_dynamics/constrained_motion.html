@@ -429,28 +429,30 @@ window.Quarto = {
 <hr>
 <p><strong>Example:</strong> Consider two particles in smooth vertical slots. If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> move independently, the system has 2 DOFs. If connected by an inextensible cable, the system has 1 DOF.</p>
 <p>The inextensibility constraint <span class="math inline">\(\ell = \text{const.}\)</span> can be written as: <span class="math display">\[\begin{align}
-    \ell &amp;= s_A+c+s_B \implies \Delta s_B = -\Delta s_A \implies \dot{s}_B=-\dot{s}_A.
+    &amp; \ell = s_A+c+s_B\\
+    &amp; \Delta \ell = 0 = \Delta_{t_1\rightarrow t_2} s_A+\Delta_{t_1\rightarrow t_2} s_B\\
+    &amp; \implies \Delta s_B = -\Delta s_A\\
+    &amp; \dot{\ell} = 0 = \dot{s}_A+\dot{s}_B\\
+    &amp; \implies \dot{s}_B=-\dot{s}_A.
 \end{align}\]</span></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="constrained_motion_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="constrained_motion_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="288"></p>
 </figure>
 </div>
 </div>
 </div>
-<p><em>See Set 06: Constrained Motion Problem 02/172.</em></p>
 <section id="summary" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">10.1</span> Summary</h2>
 <p>For <strong>pulley–chord systems</strong>: (1) choose a datum, (2) define distances from the datum, (3) write a chord equation per chord. Each chord equation and its derivatives give additional constraints.</p>
-<p>For constrained particles, watch: <a href="https://youtu.be/XNdP7Nk850s">Particle on a curve vs.&nbsp;particle on a surface</a>.</p>
 </section>
 <section id="exercises" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="exercises"><span class="header-section-number">10.2</span> Exercises</h2>
 <p><em>The following problems are from Set 06 – Constrained Motion.</em></p>
 <p><strong>1.</strong> [MKB 2/099] Determine the <span class="math inline">\(\mathbf{e}_r\)</span> and <span class="math inline">\(\mathbf{e}_\theta\)</span> components of the acceleration of pin <span class="math inline">\(P\)</span>; origin at the centre of the circular slot. <em>(ans. <span class="math inline">\(a_n = 66.0\)</span> mm/s<span class="math inline">\(^2\)</span>, <span class="math inline">\(a_t = 29.7\)</span> mm/s<span class="math inline">\(^2\)</span>)</em></p>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/Bt5neJj4Zhc" width="70%" title="Solution – Problem 02/099" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/Bt5neJj4Zhc" width="100%" title="Solution – Problem 02/099" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p><strong>2.</strong> [03-056] Set up two polar coordinate systems with origins <span class="math inline">\(O\)</span> and <span class="math inline">\(O'\)</span>. Write position vectors of <span class="math inline">\(P\)</span> in each basis. <em>(ans. <span class="math inline">\(N = 2.89\)</span> N towards <span class="math inline">\(O'\)</span>, <span class="math inline">\(R = 1.599\)</span> N)</em></p>
 <p><strong>3.</strong> [MKB 02-172] Use <span class="math inline">\(\mathbf{v}_{B/A}=\mathbf{v}_B-\mathbf{v}_A=3.5\mathbf{E}_y\)</span> m/s. <em>(ans. <span class="math inline">\(\mathbf{v}_A=-0.5\mathbf{E}_y\)</span> m/s, <span class="math inline">\(\mathbf{v}_B=3\mathbf{E}_y\)</span> m/s)</em></p>
 <p><strong>4.</strong> [MKB 03-021] Draw FBDs of the massless pulleys to find forces on the 60-lb cylinders. <em>(ans. (a) <span class="math inline">\(a=10.73\)</span> ft/sec<span class="math inline">\(^2\)</span> up; (b) <span class="math inline">\(a=2.93\)</span> ft/sec<span class="math inline">\(^2\)</span> up)</em></p>

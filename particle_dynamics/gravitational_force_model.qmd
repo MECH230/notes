@@ -6,6 +6,7 @@ title: "Gravitational Force Model"
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 2
 \begin{tikzpicture}
 
 \coordinate (O) at (0,0);
@@ -25,9 +26,10 @@ title: "Gravitational Force Model"
 
 Call ${\bf r}_2 - {\bf r}_1 = {\bf r}_{2/1}$. According to Newton's law of gravitation, the force on $m_1$ due to $m_2$ is:
 \begin{align}
-    {\bf F}_1 = G \frac{m_1 m_2}{\lnorm{\bf r}_{2/1}\rnorm^3}{\bf r}_{2/1},
+    {\bf F}_1 = G \frac{m_1 m_2}{\lnorm{\bf r}_{2/1}\rnorm^2}\frac{{\bf r}_{2/1}}{\lnorm{\bf r}_{2/1}\rnorm} = G\frac{m_1 m_2}{\lnorm{\bf r}_{2/1}\rnorm^3}{\bf r}_{2/1}.
 \end{align}
 where $G = 6.67408\times10^{-11}$ m$^3$ kg$^{-1}$ s$^{-2}$ is the gravitational constant.
+
 
 ## Example: Attraction Between Earth and an Object of Mass $m$
 
@@ -35,6 +37,7 @@ where $G = 6.67408\times10^{-11}$ m$^3$ kg$^{-1}$ s$^{-2}$ is the gravitational 
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 2
 \begin{tikzpicture}
 
 \draw[thick] (0,0) circle (3);
@@ -74,8 +77,5 @@ Earth's parameters:
 - $M_e = 5.972 \times 10^{24}$ kg
 - $R_e = 6.371 \times 10^6$ m
 
-
-## Lecture Videos
-
-{{< video https://youtu.be/nHnDuCWtacY title="Gravitational force model" width="70%" >}}
+{{< video https://youtu.be/nHnDuCWtacY title="Gravitational force model" >}}
 

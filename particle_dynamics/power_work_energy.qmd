@@ -33,14 +33,23 @@ The work is zero if the force is perpendicular to the displacement/velocity, or 
 :::
 :::
 
+::: {.callout-tip title="Think!"}
+**Question:** When is the work of a force positive? When is it negative?
+
+::: {.callout-note title="Answer" collapse="true"}
+...
+:::
+:::
+
 ### Example: Particle on a Rail
 
-Consider two points $A$ and $B$ in the vertical plane connected by a smooth rail.
+Consider two points $A$ and $B$ in the vertical plane connected by a smooth rail. A particle slides along the rail from $B$ to $A$.
 
 ```{r}
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 5
 \begin{tikzpicture}
 
 \draw[thick] (0,0) -- (3,5);
@@ -62,7 +71,7 @@ Consider two points $A$ and $B$ in the vertical plane connected by a smooth rail
 ::: {.callout-note title="Answer" collapse="true"}
 In both cases ${\bf F} = {\bf W}+{\bf N}$. Since ${\bf N}\perp d{\bf r}$, the normal force does no work. The work of weight is:
 \begin{align*}
-    W_{{\bf W},1-2} = \int mg{\bf E}_y\cdot d{\bf r} = mg{\bf E}_y\cdot\Delta{\bf r}_{1-2}.
+    W_{{\bf W},1-2} = \int_{{\bf r}_1}^{{\bf r}_2} mg{\bf E}_y\cdot d{\bf r} = mg {\bf E}_y\cdot \int_{{\bf r}_1}^{{\bf r}_2} d{\bf r} = mg{\bf E}_y\cdot\Delta {\bf r}_{1-2}.
 \end{align*}
 $\Delta{\bf r}_{1-2}$ is the same for both rails, so weight does the same work regardless of path.
 :::
@@ -74,9 +83,17 @@ $\Delta{\bf r}_{1-2}$ is the same for both rails, so weight does the same work r
 ::: {.callout-note title="Answer" collapse="true"}
 With friction:
 \begin{align*}
-    W_{1-2} = W_{{\bf W},1-2} - \mu_k\int_{s_1}^{s_2}\lnorm{\bf N}\rnorm\,ds.
+    W_{1-2} = W_{{\bf W},1-2}+\int_{s_1}^{s_2}\mu_k||{\bf N}||(-{\bf e}_t)\cdot ds\,{\bf e}_t = W_{{\bf W},1-2}-\mu_k\int_{s_1}^{s_2}||{\bf N}||ds.
 \end{align*}
-Friction work is path dependent and dissipative ($W_{{\bf F}_f,1-2}<0$).
+Friction work is path dependent and dissipative ($W_{{\bf F}_f,1-2}<0$). On the other hand, the work of the weight is positive.
+:::
+:::
+
+::: {.callout-tip title="Think!"}
+**Question:** Can you think of a situation where the normal force is not workless?
+
+::: {.callout-note title="Answer" collapse="true"}
+A particle in an elevator is a common example. In this case, the normal force is not perpendicular to the motion, and it does work.
 :::
 :::
 
@@ -98,7 +115,7 @@ Energy is defined as the ability to perform work.
 
 ## The Work-Energy Theorem
 
-The rate of change of kinetic energy equals the mechanical power of the resultant force:
+The rate of change of kinetic energy equals the mechanical power of the resultant force ${\bf F}$ acting on the particle:
 \begin{align}
     \frac{dT}{dt} = {\bf F}\cdot{\bf v} = \mathcal{P}.
 \end{align}
@@ -108,23 +125,64 @@ Proof:
     \frac{d}{dt}T = \frac{d}{dt}\lp\frac{1}{2}m{\bf v}\cdot{\bf v}\rp = m{\bf a}\cdot{\bf v} = {\bf F}\cdot{\bf v}.
 \end{align*}
 
-Integral form:
+Integral form (with respect to time):
 \begin{align}
     T_2 - T_1 = W_{{\bf F},12} = \int_{{\bf r}_1}^{{\bf r}_2}{\bf F}\cdot d{\bf r}.
 \end{align}
 
+{{< video https://www.youtube.com/watch?v=bjpTKehJV7s title="Work-Energy theorem on simple pendulum" >}}
+
+## Implications of $\dot{T} = {\bf F}\cdot{\bf v}$ through examples
+
+- Consider a free falling particle. The weight is the only force acting on it. If the particle is going up (opposite to the weight), $\dot{T}<0$. If the particle is going down (same direction of the weight), $\dot{T}>0$.
+
+- Consider a person standing on a train while the train is accelerating:
+$$\begin{align}
+& {\bf F} = {\bf W}+{\bf F}_f+{\bf N}\\
+& {\bf F}\cdot{\bf v} = {\bf F}_f\cdot{\bf v} \geq 0 \implies \dot{T}>0.
+\end{align}$$
+The kinetic energy of the person is increasing.
+
+- Consider a box sliding on a rough surface:
+$$\begin{align}
+& {\bf F} = {\bf F}_f+{\bf W}+{\bf N}\\
+& {\bf F}\cdot{\bf v} = {\bf F}_f\cdot{\bf v} < 0 \implies \dot{T}<0.
+\end{align}$$
+The kinetic energy of the box is decreasing until it stops.
+
+- Consider a particle on a smooth rail in the horizontal plane:
+$$\begin{align}
+& {\bf F} = {\bf W}+{\bf N}\\
+& {\bf F}\cdot{\bf v} = 0\implies\dot{T}=0.
+\end{align}$$
+The kinetic energy of the particle is conserved.
+
+The same analysis/conclusions can be achieved using the work-energy theorem.
+
+## Another way to derive the Work-Energy theorem
+
+Starting with the balance of linear momentum we can derive the work-energy theorem:
+$$\begin{align}
+{\bf F} &= m{\bf a}\\
+{\bf F}\cdot d{\bf r} &= m{\bf a}\cdot d{\bf r}\\
+\int_{r_1}^{r_2} {\bf F}\cdot d{\bf r} &= \int_{r_1}^{r_2} m{\bf a}\cdot d{\bf r}\\
+W_{1-2} &= \int_{t_1}^{t_2} m{\bf a}\cdot {\bf v}\, dt = \int_{t_1}^{t_2}\dot{T}\, dt = T_2-T_1,
+\end{align}$$
+where the work of a force is
+$$W_{1-2} = \int_{r_1}^{r_2} {\bf F}\cdot d{\bf r}.$$
+
 ## Conservative Forces
 
-Forces whose work depends only on the endpoints of a path are **conservative**. Weight (constant force) is conservative; friction is not.
+Forces whose work depends only on the endpoints of a path are **conservative**. From the previous examples, weight (constant force) is conservative; friction is not.
 
-A force ${\bf F}_c$ is conservative if there exists a scalar **potential energy** $U = U({\bf r})$ such that:
+A force ${\bf F}_c$ is conservative if there exists a scalar **potential energy** function $U = U({\bf r})$ such that:
 \begin{align}
-    {\bf F}_c = -\frac{\partial U}{\partial {\bf r}} = -\nabla U.
+    {\bf F}_c = -\frac{\partial U}{\partial {\bf r}} = -\text{grad}_{\bf r}U.
 \end{align}
 
 Then:
 \begin{align}
-    W_{1-2} = -U_2+U_1 = -\Delta U.
+    W_{1-2} = \int_{{\bf r}(t_1)}^{{\bf r}(t_2)}{\bf F}_c\cdot d{\bf r} = -\int_{{\bf r}(t_1)}^{{\bf r}(t_2)}\frac{\partial U}{\partial {\bf r}}\cdot d{\bf r} = -U_2+U_1 = -\Delta_{1-2}U.
 \end{align}
 
 If potential energy decreases ($U_2 \leq U_1$), the work is positive and kinetic energy increases.
@@ -132,6 +190,12 @@ If potential energy decreases ($U_2 \leq U_1$), the work is positive and kinetic
 ### Constant Forces
 
 Constant force ${\bf C}$ is conservative with potential $U = -{\bf C}\cdot{\bf r}$.
+
+Proof: Propose $U = -{\bf C}\cdot{\bf r} = U({\bf r}) = -C_x x-C_y y-C_z z$.
+\begin{align}
+    -\text{grad}_r{U} = C_x{\bf E}_x+C_y{\bf E}_y+C_z{\bf E}_z = {\bf C}.
+\end{align}
+We found a $U$ from which ${\bf C}$ is derivable.
 
 The weight near Earth's surface: $U_{\bf W} = mgy$.
 
@@ -143,9 +207,14 @@ The spring force is conservative with potential:
 \end{align*}
 $U_s > 0$ in both compression and tension — it represents the spring's capacity to do work.
 
+Proof: 
+\begin{align*}
+    & -\frac{\partial U_s}{\partial {\bf r}} = K\varepsilon\frac{{\bf r}_A-{\bf r}}{||{\bf r}_A-{\bf r}||} = {\bf F}_s.
+\end{align*}
+
 ### Gravitational Force
 
-The gravitational force is conservative with:
+The gravitational force ${\bf F}_G = G\frac{M_e m}{\lp R_e+h\rp^2}\lp-{\bf e}_r\rp$ is conservative with:
 \begin{align*}
     U = -\frac{GM_e m}{r}.
 \end{align*}
@@ -186,12 +255,6 @@ If nonconservative forces also act:
     (T_B+U_B)-(T_A+U_A) = W_{\mathbf{F}_{nc},AB}.
 \end{align}
 If all work-doing forces are conservative, **energy is conserved**: $E=T+U=\text{const}$.
-
-## Lecture Videos
-
-{{< video https://youtu.be/nHnDuCWtacY title="Gravitational force model" width="70%" >}}
-
-{{< video https://youtu.be/bjpTKehJV7s title="Work–energy theorem on a simple pendulum" width="70%" >}}
 
 
 ## Exercises

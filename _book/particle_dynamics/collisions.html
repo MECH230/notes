@@ -388,7 +388,6 @@ window.Quarto = {
   <li><a href="#example-the-most-general-planar-impact-problem" id="toc-example-the-most-general-planar-impact-problem" class="nav-link" data-scroll-target="#example-the-most-general-planar-impact-problem"><span class="header-section-number">17.3</span> Example: The Most General Planar Impact Problem</a></li>
   <li><a href="#energy-loss-during-impact" id="toc-energy-loss-during-impact" class="nav-link" data-scroll-target="#energy-loss-during-impact"><span class="header-section-number">17.4</span> Energy Loss During Impact</a></li>
   <li><a href="#negative-values-of-the-coefficient-of-restitution" id="toc-negative-values-of-the-coefficient-of-restitution" class="nav-link" data-scroll-target="#negative-values-of-the-coefficient-of-restitution"><span class="header-section-number">17.5</span> Negative Values of the Coefficient of Restitution</a></li>
-  <li><a href="#lecture-videos" id="toc-lecture-videos" class="nav-link" data-scroll-target="#lecture-videos"><span class="header-section-number">17.6</span> Lecture Videos</a></li>
   </ul>
 </nav>
     </div>
@@ -473,6 +472,7 @@ window.Quarto = {
 <li>Model each body as a mass particle.</li>
 <li>We ignore the rotational inertias of bodies (purely translational motion).</li>
 <li>All points on a body have the same velocity.</li>
+<li>The position vector of the mass particle is defined to coincide with the center of mass of the body it models.</li>
 <li>No friction between particles during collision — all impact forces are along <span class="math inline">\({\bf n}\)</span>.</li>
 <li>The duration of compression (<span class="math inline">\(t_1-t_0\)</span>) and restitution (<span class="math inline">\(t_2-t_1\)</span>) are very small.</li>
 <li>At time <span class="math inline">\(t_1\)</span>, both particles have the same velocity along <span class="math inline">\({\bf n}\)</span>: <span class="math inline">\(v_{II}\)</span>.</li>
@@ -481,7 +481,7 @@ window.Quarto = {
 </section>
 <section id="impact-stages" class="level3" data-number="17.2.2">
 <h3 data-number="17.2.2" class="anchored" data-anchor-id="impact-stages"><span class="header-section-number">17.2.2</span> Impact Stages</h3>
-<p>Let <span class="math inline">\({\bf n}\)</span> be the common unit normal between the bodies at contact. Define <span class="math inline">\(\{{\bf n},{\bf t}_1,{\bf t}_2\}\)</span> as an orthonormal set. These vectors are assumed constant for the duration of impact.</p>
+<p>Let <span class="math inline">\({\bf n}\)</span> be the common unit normal between the bodies when they collide. This vector is normal to the lateral surfaces of both bodies at the unique point of contact. Define a set of orthonormal vectors <span class="math inline">\(\{{\bf n},{\bf t}_1,{\bf t}_2\}\)</span> by selecting <span class="math inline">\({\bf t}_1\)</span> and <span class="math inline">\({\bf t}_2\)</span> to be unit tangent vectors to the lateral surface of both bodies at the point of contact. The impact is assumed to be such that these vectors are constant for the duration of the impact. At the end of stage II, the velocities of the bodies in the direction of <span class="math inline">\({\bf n}\)</span> are assumed to be equal <span class="math inline">\((=v_{II})\)</span>.</p>
 </section>
 <section id="linear-impulses-during-impact" class="level3" data-number="17.2.3">
 <h3 data-number="17.2.3" class="anchored" data-anchor-id="linear-impulses-during-impact"><span class="header-section-number">17.2.3</span> Linear Impulses During Impact</h3>
@@ -519,12 +519,28 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>Since the collision duration is very small, the impulses of <span class="math inline">\({\bf R}_1\)</span> and <span class="math inline">\({\bf R}_2\)</span> vanish. Approximating: <span class="math display">\[\begin{align}
-    \int_{t_0}^{t_1}\lp{\bf F}_{1_d}+{\bf R}_1\rp d\tau &amp;\approx \int_{t_0}^{t_1}{\bf F}_{1_d}\,d\tau,\\
-    \int_{t_1}^{t_2}\lp{\bf F}_{1_r}+{\bf R}_1\rp d\tau &amp;\approx \int_{t_1}^{t_2}{\bf F}_{1_r}\,d\tau,
-\end{align}\]</span> and similarly for body 2.</p>
-<p>With equal and opposite collisional forces (<span class="math inline">\({\bf F}_{1_d}=-{\bf F}_{2_d}\)</span>, <span class="math inline">\({\bf F}_{1_r}=-{\bf F}_{2_r}\)</span>), we define the <strong>coefficient of restitution</strong>: <span class="math display">\[\begin{align}
-    e = \frac{\int_{t_1}^{t_2}{\bf F}_{1_r}\cdot{\bf n}\,d\tau}{\int_{t_0}^{t_1}{\bf F}_{1_d}\cdot{\bf n}\,d\tau}.
+<p>Since the collision duration is very small, the impulses of <span class="math inline">\({\bf R}_1\)</span> and <span class="math inline">\({\bf R}_2\)</span> vanish. Define the time instants:</p>
+<ul>
+<li><span class="math inline">\(t_0\)</span>: time just before collision</li>
+<li><span class="math inline">\(t_1\)</span>: time at the end of compression</li>
+<li><span class="math inline">\(t_2\)</span>: time at the end of restitution</li>
+</ul>
+<p>Approximating: <span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; \int_{t_0}^{t_1}\lp{\bf F}_{1_d}(\tau)+{\bf R}_1(\tau)\rp d\tau \approx \int_{t_0}^{t_1}{\bf F}_{1_d}(\tau)\,d\tau,\\
+        &amp; \int_{t_1}^{t_2}\lp{\bf F}_{1_r}(\tau)+{\bf R}_1(\tau)\rp d\tau \approx \int_{t_1}^{t_2}{\bf F}_{1_r}(\tau)\,d\tau,\\
+        &amp; \int_{t_0}^{t_1}\lp{\bf F}_{2_d}(\tau)+{\bf R}_2(\tau)\rp d\tau \approx \int_{t_0}^{t_1}{\bf F}_{2_d}(\tau)\,d\tau,\\
+        &amp; \int_{t_1}^{t_2}\lp{\bf F}_{2_r}(\tau)+{\bf R}_2(\tau)\rp d\tau \approx \int_{t_1}^{t_2}{\bf F}_{2_r}(\tau)\,d\tau.
+    \end{split}
+\end{align}\]</span></p>
+<p>We assume equal and opposite collisional forces: <span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; {\bf F}_{1_r} = -{\bf F}_{2_r},\\
+        &amp; {\bf F}_{1_d} = -{\bf F}_{2_d}.
+    \end{split}
+\end{align}\]</span></p>
+<p>We now define the <strong>coefficient of restitution</strong>: <span class="math display">\[\begin{align}
+    e = \frac{\int_{t_1}^{t_2}{\bf F}_{1_r}(\tau)\cdot{\bf n}\,d\tau}{\int_{t_0}^{t_1}{\bf F}_{1_d}(\tau)\cdot{\bf n}\,d\tau} = \frac{\int_{t_1}^{t_2}{\bf F}_{2_r}(\tau)\cdot{\bf n}\,d\tau}{\int_{t_0}^{t_1}{\bf F}_{2_d}(\tau)\cdot{\bf n}\,d\tau}.
 \end{align}\]</span></p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Think!">
 <div class="callout-header d-flex align-content-center">
@@ -562,17 +578,50 @@ window.Quarto = {
 </section>
 <section id="the-coefficient-of-restitution-in-terms-of-velocities" class="level3" data-number="17.2.4">
 <h3 data-number="17.2.4" class="anchored" data-anchor-id="the-coefficient-of-restitution-in-terms-of-velocities"><span class="header-section-number">17.2.4</span> The Coefficient of Restitution in Terms of Velocities</h3>
-<p>From the linear impulse-momentum equations for each particle and stage: <span class="math display">\[\begin{align}
+<p>To write the coefficient of restitution in a more convenient form using velocities, we first write the linear impulse-linear momentum equations.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> For the above impulses, complete the linear impulse-linear momentum equations.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\begin{align}
     \begin{split}
-        m_1 v_{II} - m_1{\bf v}_1\cdot{\bf n} &amp;= \int_{t_0}^{t_1}{\bf F}_{1_d}\cdot{\bf n}\,d\tau,\\
-        m_2 v_{II} - m_2{\bf v}_2\cdot{\bf n} &amp;= \int_{t_0}^{t_1}{\bf F}_{2_d}\cdot{\bf n}\,d\tau,\\
-        m_1{\bf v}_1'\cdot{\bf n}-m_1 v_{II} &amp;= e\int_{t_0}^{t_1}{\bf F}_{1_d}\cdot{\bf n}\,d\tau,\\
-        m_2{\bf v}_2'\cdot{\bf n}-m_2 v_{II} &amp;= e\int_{t_0}^{t_1}{\bf F}_{2_d}\cdot{\bf n}\,d\tau.
+        &amp; m_1 v_{II} - m_1{\bf v}_1\cdot{\bf n} = \int_{t_0}^{t_1}{\bf F}_{1_d}(\tau)\cdot{\bf n}\,d\tau,\\
+        &amp; m_2 v_{II} - m_2{\bf v}_2\cdot{\bf n} = \int_{t_0}^{t_1}{\bf F}_{2_d}(\tau)\cdot{\bf n}\,d\tau,\\
+        &amp; m_1{\bf v}_1'\cdot{\bf n}-m_1 v_{II} = \int_{t_1}^{t_2}{\bf F}_{1_r}(\tau)\cdot{\bf n}\,d\tau = e\int_{t_0}^{t_1}{\bf F}_{1_d}(\tau)\cdot{\bf n}\,d\tau,\\
+        &amp; m_2{\bf v}_2'\cdot{\bf n}-m_2 v_{II} = \int_{t_1}^{t_2}{\bf F}_{2_r}(\tau)\cdot{\bf n}\,d\tau = e\int_{t_0}^{t_1}{\bf F}_{2_d}(\tau)\cdot{\bf n}\,d\tau.
     \end{split}
 \end{align}\]</span></p>
-<p>Eliminating <span class="math inline">\(v_{II}\)</span> yields the familiar expression: <span class="math display">\[\begin{align}
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>From these 4 equations, we can isolate the common velocity <span class="math inline">\(v_{II}\)</span> of the particles along <span class="math inline">\({\bf n}\)</span> at time <span class="math inline">\(t_1\)</span>: <span class="math display">\[\begin{align}
+    v_{II} = \frac{{\bf v}_1'\cdot{\bf n}+e{\bf v}_1\cdot{\bf n}}{1+e} = \frac{{\bf v}_2'\cdot{\bf n}+e{\bf v}_2\cdot{\bf n}}{1+e}.
+\end{align}\]</span></p>
+<p>From this, we get the familiar expression for the coefficient of restitution: <span class="math display">\[\begin{align}
     e = \frac{{\bf v}_2'\cdot{\bf n}-{\bf v}_1'\cdot{\bf n}}{{\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}}.
 \end{align}\]</span></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/0GcIPJgpwN4" title="Collisions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <div class="callout callout-style-default callout-important callout-titled" title="Note!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -602,7 +651,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> Given particles <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> with pre-impact velocities <span class="math inline">\({\bf v}_1\)</span> and <span class="math inline">\({\bf v}_2\)</span>, find the post-impact velocities. The coefficient of restitution <span class="math inline">\(e\)</span> is given.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -611,7 +660,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>There are 4 unknowns (components of <span class="math inline">\({\bf v}_1'\)</span> and <span class="math inline">\({\bf v}_2'\)</span> along <span class="math inline">\({\bf n}\)</span>, <span class="math inline">\({\bf t}_1\)</span>, <span class="math inline">\({\bf t}_2\)</span>). Along the tangent directions: velocities are unchanged. Along <span class="math inline">\({\bf n}\)</span>: we have the conservation of linear momentum and the restitution equation.</p>
 </div>
@@ -619,6 +668,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/4zI-bUmKLKI" title="Two particles impacting in the plane" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="energy-loss-during-impact" class="level2" data-number="17.4">
 <h2 data-number="17.4" class="anchored" data-anchor-id="energy-loss-during-impact"><span class="header-section-number">17.4</span> Energy Loss During Impact</h2>
@@ -627,7 +677,10 @@ window.Quarto = {
     T' &amp;= \frac{1}{2}m_1{\bf v}_1'\cdot{\bf v}_1'+\frac{1}{2}m_2{\bf v}_2'\cdot{\bf v}_2'.
 \end{align}\]</span></p>
 <p>The energy lost: <span class="math display">\[\begin{align}
-    T-T' = \frac{m_1 m_2}{2(m_1+m_2)}\lp{\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}\rp^2(1-e^2).
+    \begin{split}
+        T-T' &amp;= \frac{1}{2}m_1\lp({\bf v}_1\cdot{\bf n})^2-({\bf v}_1'\cdot{\bf n})^2\rp+\frac{1}{2}m_2\lp({\bf v}_2\cdot{\bf n})^2-({\bf v}_2'\cdot{\bf n})^2\rp\\
+        &amp;= \frac{m_1 m_2}{2(m_1+m_2)}\lp{\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}\rp^2(1-e^2).
+    \end{split}
 \end{align}\]</span></p>
 <p>Hence, for <span class="math inline">\(0\leq e\leq 1\)</span>, kinetic energy cannot increase as a result of impact.</p>
 </section>
@@ -645,7 +698,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> What does a negative <span class="math inline">\(e\)</span> mean for a ball impacting a wall?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -654,19 +707,16 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>When <span class="math inline">\(e &lt; 0\)</span>, <span class="math inline">\({\bf v}_1'\cdot{\bf n}-{\bf v}_2'\cdot{\bf n}\)</span> has the same sign as <span class="math inline">\({\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}\)</span>, meaning the bodies pass through each other during impact. To prevent this, we generally require <span class="math inline">\(e \geq 0\)</span>.</p>
+<p>When the coefficient of restitution is negative, <span class="math display">\[\begin{align}
+    e = \frac{{\bf v}_2'\cdot{\bf n}-{\bf v}_1'\cdot{\bf n}}{{\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}} \leq 0,
+\end{align}\]</span> and hence <span class="math inline">\({\bf v}_1'\cdot{\bf n}-{\bf v}_2'\cdot{\bf n}\)</span> and <span class="math inline">\({\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}\)</span> have the same sign. As a result, the colliding bodies pass through each other during the course of the impact. To eliminate this behavior, it is generally assumed that <span class="math inline">\(e\)</span> is positive.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="lecture-videos" class="level2" data-number="17.6">
-<h2 data-number="17.6" class="anchored" data-anchor-id="lecture-videos"><span class="header-section-number">17.6</span> Lecture Videos</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/0GcIPJgpwN4" width="70%" title="Collisions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/4zI-bUmKLKI" width="70%" title="Two particles impacting in the plane" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
 
 </section>

@@ -184,12 +184,12 @@ Given initial conditions $x_0, \dot{x}_0, y_0, \dot{y}_0$, these are an initial 
 
 4. Solving the $x$-equation (let $v_x = \dot{x}$):
 \begin{align}
-        \lp{\bf F}=\dot{\bf G}\rp\cdot{\bf E}_x &\implies\quad -c_s\dot{x} = m\ddot{x} \label{x_proj2}\\
-        \lp{\bf F}=\dot{\bf G}\rp\cdot{\bf E}_y &\implies\quad -mg-c_s\dot{y} = m\ddot{y} \label{y_proj2}
+        \lp{\bf F}=\dot{\bf G}\rp\cdot{\bf E}_x &\implies\quad -c_s\dot{x} = m\ddot{x},\\
+        \lp{\bf F}=\dot{\bf G}\rp\cdot{\bf E}_y &\implies\quad -mg-c_s\dot{y} = m\ddot{y}.
 \end{align}
-These equations give ODE's for $x(t)$ and $y(t)$. Given IC's $x_0, \dot{x}_0, y_0, \dot{y}_0$, we have an initial value problem (IVP).
+These equations give ODEs for $x(t)$ and $y(t)$. Given IC's $x_0, \dot{x}_0, y_0, \dot{y}_0$, we have an initial value problem (IVP).
 
-\item Equation (\ref{x_proj2}) is a first order ODE for $\dot{x}(t)$. Call $\dot{x}$ as $v_x$. $\Dot{v}_x = \frac{dv_x}{dt}$.
+The $x$-equation is a first order ODE for $v_x = \dot{x}$:
 \begin{align}
     \begin{split}
         -c_s v_x &= m\Dot{v}_x\\
@@ -244,7 +244,7 @@ where $C_D$ is the drag coefficient, $\rho$ is the density of the fluid, and $A$
 
 The equations of motion in this case (see primer section 1.6) need to be solved numerically. One way to do this is described in the video below.
 
-{{< video https://youtu.be/RMkMK32vqyM title="Solving differential equations numerically in Python" width="70%" >}}
+{{< video https://youtu.be/RMkMK32vqyM title="Solving differential equations numerically in Python" width="100%" >}}
 
 
 ## Summary
@@ -270,7 +270,7 @@ The equations of motion in this case (see primer section 1.6) need to be solved 
 
 **2.** [MKB 3/004] Consider the whole truck system; follow the 4 steps to find the truck's acceleration, then isolate a trailer to find the drawbar tension. *(ans. $T = 13.33$ kN, $a = 0.667$ m/s$^2$)*
 
-{{< video https://youtu.be/LAl3ZUiUpus title="Solution – Problem 03/004" width="70%" >}}
+{{< video https://youtu.be/LAl3ZUiUpus title="Solution – Problem 03/004" >}}
 
 
 **3.** [MKB 3/005] For each part, determine your system and follow the 4 steps. *(ans. $R = 846$ N, $L = 110.4$ N)*

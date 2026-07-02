@@ -72,6 +72,10 @@ Substituting $\dot{\bf H}^C = \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G}+(
 \end{align}
 recovering the BoAM about a general material point $P$.
 
+{{< video https://www.youtube.com/shorts/VmeM0BNnGR0 title="Ice skater conservation of angular momentum" >}}
+
+{{< video https://www.youtube.com/watch?v=64t-dVtDwkQ title="Angular momentum conservation on Hoberman Sphere - Dr. Boyd F. Edwards" >}}
+
 ### BoAM About a Fixed Point $O$
 
 If $P$ is a fixed point $O$ (so ${\bf v}_O = {\bf 0}$), the above simplifies to ${\bf M}^O = \dot{\bf H}^O$.
@@ -168,22 +172,6 @@ Four classes of applications: (1) purely translational motion ($\bomega=\balpha=
 
 **Parallel axis theorem**: $I^A_{zz} = I^C_{zz} + m d^2$ where $d$ is the distance from $C$ to $A$.
 
-## Lecture Videos
-
-{{< video https://youtu.be/101EriK4HIQ title="Center of mass and linear momentum of a rigid body" width="70%" >}}
-
-{{< video https://youtu.be/BGa_d4LscWQ title="Angular momentum of a rigid body" width="70%" >}}
-
-{{< video https://youtu.be/BP1N9zFeY98 title="Moments and products of inertia" width="70%" >}}
-
-{{< video https://youtu.be/Z5ugvTjmLys title="Example – inertias of a solid cylinder" width="70%" >}}
-
-{{< video https://youtube.com/shorts/pRxOpqpKq78 title="The radius of gyration" width="70%" >}}
-
-{{< video https://youtu.be/8R_cF2e_9nU title="The parallel axis theorem" width="70%" >}}
-
-{{< video https://youtube.com/shorts/0CfRKuqjZ7YU title="Example – parallel axis theorem on a solid cylinder" width="70%" >}}
-
 
 ## Exercises
 
@@ -211,7 +199,7 @@ Four classes of applications: (1) purely translational motion ($\bomega=\balpha=
 
 **1.** [06-051] *(See problem set for figure.)*
 
-{{< video https://youtu.be/Q7PV2pxBuwc title="Solution – Problem 06/051" width="70%" >}}
+{{< video https://youtu.be/Q7PV2pxBuwc title="Solution – Problem 06/051" width="100%" >}}
 
 
 ### Set 21 – General Plane Motion
@@ -224,7 +212,7 @@ Four classes of applications: (1) purely translational motion ($\bomega=\balpha=
 
 **4.** [06-070] *(ans. $a=\frac{8(m+M)g}{3\pi(m+3M)}$ left, $\alpha=\frac{8mg}{3\pi r(m+3M)}$ CW)*
 
-{{< video https://youtu.be/0_wB2JnICLc title="Solution – Problem 06/070" width="70%" >}}
+{{< video https://youtu.be/0_wB2JnICLc title="Solution – Problem 06/070" width="100%" >}}
 
 
 **5.** [06-076] *(ans. $s=\frac{3d}{2}$)*
@@ -245,5 +233,5 @@ Four classes of applications: (1) purely translational motion ($\bomega=\balpha=
 
 **6.** [06-155] *(ans. $t=\frac{2v_0}{g(7\mu_k\cos\theta-2\sin\theta)}$)*
 
-{{< video https://youtu.be/0N8tDgnrXNA title="Solution – Problem 06/155" width="70%" >}}
+{{< video https://youtu.be/0N8tDgnrXNA title="Solution – Problem 06/155" width="100%" >}}
 

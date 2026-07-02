@@ -384,19 +384,20 @@ window.Quarto = {
   <li><a href="#kinetic-energy" id="toc-kinetic-energy" class="nav-link" data-scroll-target="#kinetic-energy"><span class="header-section-number">15.2</span> Kinetic Energy</a></li>
   <li><a href="#energy" id="toc-energy" class="nav-link" data-scroll-target="#energy"><span class="header-section-number">15.3</span> Energy</a></li>
   <li><a href="#the-work-energy-theorem" id="toc-the-work-energy-theorem" class="nav-link" data-scroll-target="#the-work-energy-theorem"><span class="header-section-number">15.4</span> The Work-Energy Theorem</a></li>
-  <li><a href="#conservative-forces" id="toc-conservative-forces" class="nav-link" data-scroll-target="#conservative-forces"><span class="header-section-number">15.5</span> Conservative Forces</a>
+  <li><a href="#implications-of-dott-bf-fcdotbf-v-through-examples" id="toc-implications-of-dott-bf-fcdotbf-v-through-examples" class="nav-link" data-scroll-target="#implications-of-dott-bf-fcdotbf-v-through-examples"><span class="header-section-number">15.5</span> Implications of <span class="math inline">\(\dot{T} = {\bf F}\cdot{\bf v}\)</span> through examples</a></li>
+  <li><a href="#another-way-to-derive-the-work-energy-theorem" id="toc-another-way-to-derive-the-work-energy-theorem" class="nav-link" data-scroll-target="#another-way-to-derive-the-work-energy-theorem"><span class="header-section-number">15.6</span> Another way to derive the Work-Energy theorem</a></li>
+  <li><a href="#conservative-forces" id="toc-conservative-forces" class="nav-link" data-scroll-target="#conservative-forces"><span class="header-section-number">15.7</span> Conservative Forces</a>
   <ul class="collapse">
-  <li><a href="#constant-forces" id="toc-constant-forces" class="nav-link" data-scroll-target="#constant-forces"><span class="header-section-number">15.5.1</span> Constant Forces</a></li>
-  <li><a href="#spring-force" id="toc-spring-force" class="nav-link" data-scroll-target="#spring-force"><span class="header-section-number">15.5.2</span> Spring Force</a></li>
-  <li><a href="#gravitational-force" id="toc-gravitational-force" class="nav-link" data-scroll-target="#gravitational-force"><span class="header-section-number">15.5.3</span> Gravitational Force</a></li>
+  <li><a href="#constant-forces" id="toc-constant-forces" class="nav-link" data-scroll-target="#constant-forces"><span class="header-section-number">15.7.1</span> Constant Forces</a></li>
+  <li><a href="#spring-force" id="toc-spring-force" class="nav-link" data-scroll-target="#spring-force"><span class="header-section-number">15.7.2</span> Spring Force</a></li>
+  <li><a href="#gravitational-force" id="toc-gravitational-force" class="nav-link" data-scroll-target="#gravitational-force"><span class="header-section-number">15.7.3</span> Gravitational Force</a></li>
   </ul></li>
-  <li><a href="#energy-and-its-conservation" id="toc-energy-and-its-conservation" class="nav-link" data-scroll-target="#energy-and-its-conservation"><span class="header-section-number">15.6</span> Energy and Its Conservation</a>
+  <li><a href="#energy-and-its-conservation" id="toc-energy-and-its-conservation" class="nav-link" data-scroll-target="#energy-and-its-conservation"><span class="header-section-number">15.8</span> Energy and Its Conservation</a>
   <ul class="collapse">
-  <li><a href="#example-smooth-vs.-rough-rail" id="toc-example-smooth-vs.-rough-rail" class="nav-link" data-scroll-target="#example-smooth-vs.-rough-rail"><span class="header-section-number">15.6.1</span> Example: Smooth vs.&nbsp;Rough Rail</a></li>
+  <li><a href="#example-smooth-vs.-rough-rail" id="toc-example-smooth-vs.-rough-rail" class="nav-link" data-scroll-target="#example-smooth-vs.-rough-rail"><span class="header-section-number">15.8.1</span> Example: Smooth vs.&nbsp;Rough Rail</a></li>
   </ul></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">15.7</span> Summary</a></li>
-  <li><a href="#lecture-videos" id="toc-lecture-videos" class="nav-link" data-scroll-target="#lecture-videos"><span class="header-section-number">15.8</span> Lecture Videos</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">15.9</span> Exercises</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">15.9</span> Summary</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">15.10</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -482,14 +483,43 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> When is the work of a force positive? When is it negative?</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>…</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 <section id="example-particle-on-a-rail" class="level3" data-number="15.1.1">
 <h3 data-number="15.1.1" class="anchored" data-anchor-id="example-particle-on-a-rail"><span class="header-section-number">15.1.1</span> Example: Particle on a Rail</h3>
-<p>Consider two points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> in the vertical plane connected by a smooth rail.</p>
+<p>Consider two points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> in the vertical plane connected by a smooth rail. A particle slides along the rail from <span class="math inline">\(B\)</span> to <span class="math inline">\(A\)</span>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="power_work_energy_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="power_work_energy_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="480"></p>
 </figure>
 </div>
 </div>
@@ -506,7 +536,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> What is the work done by forces on an object traveling from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> on (a) a straight rail or (b) a curved path?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -515,10 +545,10 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>In both cases <span class="math inline">\({\bf F} = {\bf W}+{\bf N}\)</span>. Since <span class="math inline">\({\bf N}\perp d{\bf r}\)</span>, the normal force does no work. The work of weight is: <span class="math display">\[\begin{align*}
-    W_{{\bf W},1-2} = \int mg{\bf E}_y\cdot d{\bf r} = mg{\bf E}_y\cdot\Delta{\bf r}_{1-2}.
+    W_{{\bf W},1-2} = \int_{{\bf r}_1}^{{\bf r}_2} mg{\bf E}_y\cdot d{\bf r} = mg {\bf E}_y\cdot \int_{{\bf r}_1}^{{\bf r}_2} d{\bf r} = mg{\bf E}_y\cdot\Delta {\bf r}_{1-2}.
 \end{align*}\]</span> <span class="math inline">\(\Delta{\bf r}_{1-2}\)</span> is the same for both rails, so weight does the same work regardless of path.</p>
 </div>
 </div>
@@ -537,7 +567,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> What changes if the rail is rough?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -546,11 +576,40 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>With friction: <span class="math display">\[\begin{align*}
-    W_{1-2} = W_{{\bf W},1-2} - \mu_k\int_{s_1}^{s_2}\lnorm{\bf N}\rnorm\,ds.
-\end{align*}\]</span> Friction work is path dependent and dissipative (<span class="math inline">\(W_{{\bf F}_f,1-2}&lt;0\)</span>).</p>
+    W_{1-2} = W_{{\bf W},1-2}+\int_{s_1}^{s_2}\mu_k||{\bf N}||(-{\bf e}_t)\cdot ds\,{\bf e}_t = W_{{\bf W},1-2}-\mu_k\int_{s_1}^{s_2}||{\bf N}||ds.
+\end{align*}\]</span> Friction work is path dependent and dissipative (<span class="math inline">\(W_{{\bf F}_f,1-2}&lt;0\)</span>). On the other hand, the work of the weight is positive.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Can you think of a situation where the normal force is not workless?</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A particle in an elevator is a common example. In this case, the normal force is not perpendicular to the motion, and it does work.</p>
 </div>
 </div>
 </div>
@@ -573,76 +632,106 @@ window.Quarto = {
 </section>
 <section id="the-work-energy-theorem" class="level2" data-number="15.4">
 <h2 data-number="15.4" class="anchored" data-anchor-id="the-work-energy-theorem"><span class="header-section-number">15.4</span> The Work-Energy Theorem</h2>
-<p>The rate of change of kinetic energy equals the mechanical power of the resultant force: <span class="math display">\[\begin{align}
+<p>The rate of change of kinetic energy equals the mechanical power of the resultant force <span class="math inline">\({\bf F}\)</span> acting on the particle: <span class="math display">\[\begin{align}
     \frac{dT}{dt} = {\bf F}\cdot{\bf v} = \mathcal{P}.
 \end{align}\]</span></p>
 <p>Proof: <span class="math display">\[\begin{align*}
     \frac{d}{dt}T = \frac{d}{dt}\lp\frac{1}{2}m{\bf v}\cdot{\bf v}\rp = m{\bf a}\cdot{\bf v} = {\bf F}\cdot{\bf v}.
 \end{align*}\]</span></p>
-<p>Integral form: <span class="math display">\[\begin{align}
+<p>Integral form (with respect to time): <span class="math display">\[\begin{align}
     T_2 - T_1 = W_{{\bf F},12} = \int_{{\bf r}_1}^{{\bf r}_2}{\bf F}\cdot d{\bf r}.
 \end{align}\]</span></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/bjpTKehJV7s" title="Work-Energy theorem on simple pendulum" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="conservative-forces" class="level2" data-number="15.5">
-<h2 data-number="15.5" class="anchored" data-anchor-id="conservative-forces"><span class="header-section-number">15.5</span> Conservative Forces</h2>
-<p>Forces whose work depends only on the endpoints of a path are <strong>conservative</strong>. Weight (constant force) is conservative; friction is not.</p>
-<p>A force <span class="math inline">\({\bf F}_c\)</span> is conservative if there exists a scalar <strong>potential energy</strong> <span class="math inline">\(U = U({\bf r})\)</span> such that: <span class="math display">\[\begin{align}
-    {\bf F}_c = -\frac{\partial U}{\partial {\bf r}} = -\nabla U.
+<section id="implications-of-dott-bf-fcdotbf-v-through-examples" class="level2" data-number="15.5">
+<h2 data-number="15.5" class="anchored" data-anchor-id="implications-of-dott-bf-fcdotbf-v-through-examples"><span class="header-section-number">15.5</span> Implications of <span class="math inline">\(\dot{T} = {\bf F}\cdot{\bf v}\)</span> through examples</h2>
+<ul>
+<li><p>Consider a free falling particle. The weight is the only force acting on it. If the particle is going up (opposite to the weight), <span class="math inline">\(\dot{T}&lt;0\)</span>. If the particle is going down (same direction of the weight), <span class="math inline">\(\dot{T}&gt;0\)</span>.</p></li>
+<li><p>Consider a person standing on a train while the train is accelerating: <span class="math display">\[\begin{align}
+&amp; {\bf F} = {\bf W}+{\bf F}_f+{\bf N}\\
+&amp; {\bf F}\cdot{\bf v} = {\bf F}_f\cdot{\bf v} \geq 0 \implies \dot{T}&gt;0.
+\end{align}\]</span> The kinetic energy of the person is increasing.</p></li>
+<li><p>Consider a box sliding on a rough surface: <span class="math display">\[\begin{align}
+&amp; {\bf F} = {\bf F}_f+{\bf W}+{\bf N}\\
+&amp; {\bf F}\cdot{\bf v} = {\bf F}_f\cdot{\bf v} &lt; 0 \implies \dot{T}&lt;0.
+\end{align}\]</span> The kinetic energy of the box is decreasing until it stops.</p></li>
+<li><p>Consider a particle on a smooth rail in the horizontal plane: <span class="math display">\[\begin{align}
+&amp; {\bf F} = {\bf W}+{\bf N}\\
+&amp; {\bf F}\cdot{\bf v} = 0\implies\dot{T}=0.
+\end{align}\]</span> The kinetic energy of the particle is conserved.</p></li>
+</ul>
+<p>The same analysis/conclusions can be achieved using the work-energy theorem.</p>
+</section>
+<section id="another-way-to-derive-the-work-energy-theorem" class="level2" data-number="15.6">
+<h2 data-number="15.6" class="anchored" data-anchor-id="another-way-to-derive-the-work-energy-theorem"><span class="header-section-number">15.6</span> Another way to derive the Work-Energy theorem</h2>
+<p>Starting with the balance of linear momentum we can derive the work-energy theorem: <span class="math display">\[\begin{align}
+{\bf F} &amp;= m{\bf a}\\
+{\bf F}\cdot d{\bf r} &amp;= m{\bf a}\cdot d{\bf r}\\
+\int_{r_1}^{r_2} {\bf F}\cdot d{\bf r} &amp;= \int_{r_1}^{r_2} m{\bf a}\cdot d{\bf r}\\
+W_{1-2} &amp;= \int_{t_1}^{t_2} m{\bf a}\cdot {\bf v}\, dt = \int_{t_1}^{t_2}\dot{T}\, dt = T_2-T_1,
+\end{align}\]</span> where the work of a force is <span class="math display">\[W_{1-2} = \int_{r_1}^{r_2} {\bf F}\cdot d{\bf r}.\]</span></p>
+</section>
+<section id="conservative-forces" class="level2" data-number="15.7">
+<h2 data-number="15.7" class="anchored" data-anchor-id="conservative-forces"><span class="header-section-number">15.7</span> Conservative Forces</h2>
+<p>Forces whose work depends only on the endpoints of a path are <strong>conservative</strong>. From the previous examples, weight (constant force) is conservative; friction is not.</p>
+<p>A force <span class="math inline">\({\bf F}_c\)</span> is conservative if there exists a scalar <strong>potential energy</strong> function <span class="math inline">\(U = U({\bf r})\)</span> such that: <span class="math display">\[\begin{align}
+    {\bf F}_c = -\frac{\partial U}{\partial {\bf r}} = -\text{grad}_{\bf r}U.
 \end{align}\]</span></p>
 <p>Then: <span class="math display">\[\begin{align}
-    W_{1-2} = -U_2+U_1 = -\Delta U.
+    W_{1-2} = \int_{{\bf r}(t_1)}^{{\bf r}(t_2)}{\bf F}_c\cdot d{\bf r} = -\int_{{\bf r}(t_1)}^{{\bf r}(t_2)}\frac{\partial U}{\partial {\bf r}}\cdot d{\bf r} = -U_2+U_1 = -\Delta_{1-2}U.
 \end{align}\]</span></p>
 <p>If potential energy decreases (<span class="math inline">\(U_2 \leq U_1\)</span>), the work is positive and kinetic energy increases.</p>
-<section id="constant-forces" class="level3" data-number="15.5.1">
-<h3 data-number="15.5.1" class="anchored" data-anchor-id="constant-forces"><span class="header-section-number">15.5.1</span> Constant Forces</h3>
+<section id="constant-forces" class="level3" data-number="15.7.1">
+<h3 data-number="15.7.1" class="anchored" data-anchor-id="constant-forces"><span class="header-section-number">15.7.1</span> Constant Forces</h3>
 <p>Constant force <span class="math inline">\({\bf C}\)</span> is conservative with potential <span class="math inline">\(U = -{\bf C}\cdot{\bf r}\)</span>.</p>
+<p>Proof: Propose <span class="math inline">\(U = -{\bf C}\cdot{\bf r} = U({\bf r}) = -C_x x-C_y y-C_z z\)</span>. <span class="math display">\[\begin{align}
+    -\text{grad}_r{U} = C_x{\bf E}_x+C_y{\bf E}_y+C_z{\bf E}_z = {\bf C}.
+\end{align}\]</span> We found a <span class="math inline">\(U\)</span> from which <span class="math inline">\({\bf C}\)</span> is derivable.</p>
 <p>The weight near Earth’s surface: <span class="math inline">\(U_{\bf W} = mgy\)</span>.</p>
 </section>
-<section id="spring-force" class="level3" data-number="15.5.2">
-<h3 data-number="15.5.2" class="anchored" data-anchor-id="spring-force"><span class="header-section-number">15.5.2</span> Spring Force</h3>
+<section id="spring-force" class="level3" data-number="15.7.2">
+<h3 data-number="15.7.2" class="anchored" data-anchor-id="spring-force"><span class="header-section-number">15.7.2</span> Spring Force</h3>
 <p>The spring force is conservative with potential: <span class="math display">\[\begin{align*}
     U_s = \frac{1}{2}K\varepsilon^2.
 \end{align*}\]</span> <span class="math inline">\(U_s &gt; 0\)</span> in both compression and tension — it represents the spring’s capacity to do work.</p>
+<p>Proof: <span class="math display">\[\begin{align*}
+    &amp; -\frac{\partial U_s}{\partial {\bf r}} = K\varepsilon\frac{{\bf r}_A-{\bf r}}{||{\bf r}_A-{\bf r}||} = {\bf F}_s.
+\end{align*}\]</span></p>
 </section>
-<section id="gravitational-force" class="level3" data-number="15.5.3">
-<h3 data-number="15.5.3" class="anchored" data-anchor-id="gravitational-force"><span class="header-section-number">15.5.3</span> Gravitational Force</h3>
-<p>The gravitational force is conservative with: <span class="math display">\[\begin{align*}
+<section id="gravitational-force" class="level3" data-number="15.7.3">
+<h3 data-number="15.7.3" class="anchored" data-anchor-id="gravitational-force"><span class="header-section-number">15.7.3</span> Gravitational Force</h3>
+<p>The gravitational force <span class="math inline">\({\bf F}_G = G\frac{M_e m}{\lp R_e+h\rp^2}\lp-{\bf e}_r\rp\)</span> is conservative with: <span class="math display">\[\begin{align*}
     U = -\frac{GM_e m}{r}.
 \end{align*}\]</span></p>
 <p>Drag, friction, tension in inextensible cables, and normal forces are nonconservative.</p>
 </section>
 </section>
-<section id="energy-and-its-conservation" class="level2" data-number="15.6">
-<h2 data-number="15.6" class="anchored" data-anchor-id="energy-and-its-conservation"><span class="header-section-number">15.6</span> Energy and Its Conservation</h2>
+<section id="energy-and-its-conservation" class="level2" data-number="15.8">
+<h2 data-number="15.8" class="anchored" data-anchor-id="energy-and-its-conservation"><span class="header-section-number">15.8</span> Energy and Its Conservation</h2>
 <p>If only conservative forces act, define total mechanical energy <span class="math inline">\(E = T + U\)</span>. Then: <span class="math display">\[\begin{align*}
     \dot{T} = -\dot{U} \implies \dot{E} = \dot{T}+\dot{U} = 0.
 \end{align*}\]</span> <span class="math inline">\(E\)</span> is conserved when all work-doing forces are conservative.</p>
 <p>If nonconservative forces also act: <span class="math display">\[\begin{align}
     E_B - E_A = W_{{\bf F}_{nc},AB}.
 \end{align}\]</span></p>
-<section id="example-smooth-vs.-rough-rail" class="level3" data-number="15.6.1">
-<h3 data-number="15.6.1" class="anchored" data-anchor-id="example-smooth-vs.-rough-rail"><span class="header-section-number">15.6.1</span> Example: Smooth vs.&nbsp;Rough Rail</h3>
+<section id="example-smooth-vs.-rough-rail" class="level3" data-number="15.8.1">
+<h3 data-number="15.8.1" class="anchored" data-anchor-id="example-smooth-vs.-rough-rail"><span class="header-section-number">15.8.1</span> Example: Smooth vs.&nbsp;Rough Rail</h3>
 <p><em>Smooth rail:</em> <span class="math inline">\({\bf F}\cdot{\bf v} = {\bf W}\cdot{\bf v}+{\bf N}\cdot{\bf v} = {\bf W}\cdot{\bf v} = -\dot{U}\)</span>, so <span class="math inline">\(\dot{E} = 0\)</span>.</p>
 <p><em>Rough rail:</em> <span class="math inline">\(\dot{E} = {\bf F}_f\cdot{\bf v} &lt; 0\)</span>, so energy bleeds off over time. Integrating: <span class="math display">\[\begin{align*}
     E(t_2) = E(t_1) + W_{{\bf F}_f,1-2} &lt; E(t_1).
 \end{align*}\]</span></p>
 </section>
 </section>
-<section id="summary" class="level2" data-number="15.7">
-<h2 data-number="15.7" class="anchored" data-anchor-id="summary"><span class="header-section-number">15.7</span> Summary</h2>
+<section id="summary" class="level2" data-number="15.9">
+<h2 data-number="15.9" class="anchored" data-anchor-id="summary"><span class="header-section-number">15.9</span> Summary</h2>
 <p><strong>Power</strong> of force <span class="math inline">\(\mathbf{F}\)</span> on particle with velocity <span class="math inline">\(\mathbf{v}\)</span>: <span class="math inline">\(P = \mathbf{F}\cdot\mathbf{v}\)</span>.</p>
 <p><strong>Work–energy theorem</strong>: <span class="math inline">\(T_B - T_A = W_{\mathbf{F},AB}\)</span>, where <span class="math inline">\(T=\tfrac{1}{2}m\mathbf{v}\cdot\mathbf{v}\)</span>.</p>
 <p><strong>Conservative forces</strong> satisfy <span class="math inline">\(W_{F_c,AB}=-(U_B-U_A)\)</span>. Including non-conservative work: <span class="math display">\[\begin{align}
     (T_B+U_B)-(T_A+U_A) = W_{\mathbf{F}_{nc},AB}.
 \end{align}\]</span> If all work-doing forces are conservative, <strong>energy is conserved</strong>: <span class="math inline">\(E=T+U=\text{const}\)</span>.</p>
 </section>
-<section id="lecture-videos" class="level2" data-number="15.8">
-<h2 data-number="15.8" class="anchored" data-anchor-id="lecture-videos"><span class="header-section-number">15.8</span> Lecture Videos</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/nHnDuCWtacY" width="70%" title="Gravitational force model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/bjpTKehJV7s" width="70%" title="Work–energy theorem on a simple pendulum" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</section>
-<section id="exercises" class="level2" data-number="15.9">
-<h2 data-number="15.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">15.9</span> Exercises</h2>
+<section id="exercises" class="level2" data-number="15.10">
+<h2 data-number="15.10" class="anchored" data-anchor-id="exercises"><span class="header-section-number">15.10</span> Exercises</h2>
 <p><em>The following problems are from Set 11 – Power, Work and Energy.</em></p>
 <p><strong>1.</strong> [MKB 03-128] Only the gravitational force acts on the spacecraft, so energy is conserved. Use conservation of energy. <em>(ans. <span class="math inline">\(v_B = 26\,300\)</span> km/h)</em></p>
 <p><strong>2.</strong> [MKB 03-080] <em>(ans. (a) no motion; (b) <span class="math inline">\(v_B = 5.62\)</span> m/s)</em></p>

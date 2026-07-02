@@ -378,10 +378,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#the-serret-frenet-triad" id="toc-the-serret-frenet-triad" class="nav-link active" data-scroll-target="#the-serret-frenet-triad"><span class="header-section-number">11.1</span> The Serret-Frenet Triad</a></li>
-  <li><a href="#kinematics" id="toc-kinematics" class="nav-link" data-scroll-target="#kinematics"><span class="header-section-number">11.2</span> Kinematics</a>
-  <ul class="collapse">
-  <li><a href="#example-problem-02279" id="toc-example-problem-02279" class="nav-link" data-scroll-target="#example-problem-02279"><span class="header-section-number">11.2.1</span> Example: Problem 02/279</a></li>
-  </ul></li>
+  <li><a href="#kinematics" id="toc-kinematics" class="nav-link" data-scroll-target="#kinematics"><span class="header-section-number">11.2</span> Kinematics</a></li>
   <li><a href="#kinetics" id="toc-kinetics" class="nav-link" data-scroll-target="#kinetics"><span class="header-section-number">11.3</span> Kinetics</a>
   <ul class="collapse">
   <li><a href="#example-problem-03040-and-roller-coaster-design" id="toc-example-problem-03040-and-roller-coaster-design" class="nav-link" data-scroll-target="#example-problem-03040-and-roller-coaster-design"><span class="header-section-number">11.3.1</span> Example: Problem 03/040 and Roller Coaster Design</a></li>
@@ -393,8 +390,7 @@ window.Quarto = {
   <li><a href="#the-curvature-formula-for-a-plane-curve" id="toc-the-curvature-formula-for-a-plane-curve" class="nav-link" data-scroll-target="#the-curvature-formula-for-a-plane-curve"><span class="header-section-number">11.5</span> The Curvature Formula for a Plane Curve</a></li>
   <li><a href="#alternative-notation-for-plane-curves" id="toc-alternative-notation-for-plane-curves" class="nav-link" data-scroll-target="#alternative-notation-for-plane-curves"><span class="header-section-number">11.6</span> Alternative Notation for Plane Curves</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">11.7</span> Summary</a></li>
-  <li><a href="#lecture-videos" id="toc-lecture-videos" class="nav-link" data-scroll-target="#lecture-videos"><span class="header-section-number">11.8</span> Lecture Videos</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">11.9</span> Exercises</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">11.8</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -435,7 +431,7 @@ window.Quarto = {
 <p>In general, the path of a particle is a curve in space — we refer to such curves as <em>space curves</em>.</p>
 <p>Consider a fixed curve <span class="math inline">\(\mathcal{C}\)</span> embedded in <span class="math inline">\(\mathbb{E}^3\)</span>. Let the position vector of a point <span class="math inline">\(P\in\mathcal{C}\)</span> be <span class="math inline">\({\bf r}\)</span>. In Cartesian coordinates, <span class="math inline">\({\bf r} = x{\bf E}_x+y{\bf E}_y+z{\bf E}_z\)</span>.</p>
 <p>Recall the arc-length parameter <span class="math inline">\(s\)</span> associated with <span class="math inline">\(\mathcal{C}\)</span>: <span class="math display">\[\begin{align*}
-    \lp\frac{ds}{dt}\rp^2 = \frac{d{\bf r}}{dt}\cdot\frac{d{\bf r}}{dt}.
+    \lp\frac{ds}{dt}\rp^2 = \frac{d{\bf r}}{dt}\cdot\frac{d{\bf r}}{dt} = \frac{dx}{dt}\frac{dx}{dt}+\frac{dy}{dt}\frac{dy}{dt}+\frac{dz}{dt}\frac{dz}{dt}.
 \end{align*}\]</span> This parameter uniquely identifies a point <span class="math inline">\(P\)</span> on <span class="math inline">\(\mathcal{C}\)</span>, giving the representation <span class="math inline">\({\bf r} = \hat{\bf r}(s)\)</span>.</p>
 <section id="the-serret-frenet-triad" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="the-serret-frenet-triad"><span class="header-section-number">11.1</span> The Serret-Frenet Triad</h2>
@@ -443,7 +439,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="serret_frenet_triad_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="serret_frenet_triad_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="480"></p>
 </figure>
 </div>
 </div>
@@ -472,15 +468,30 @@ window.Quarto = {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>…</p>
-</div>
-</div>
-</div>
-</div>
-</div>
 <p>Recall the unit tangent vector: <span class="math display">\[\begin{align}
     {\bf e}_t = \hat{\bf e}_t(s) = \frac{d{\bf r}}{ds} = \lim_{\Delta s\rightarrow 0}\frac{\hat{\bf r}(s+\Delta s)-\hat{\bf r}(s)}{\Delta s}.
 \end{align}\]</span></p>
+<p>The hat (<span class="math inline">\(\hat{.}\)</span>) indicates that this function is now expressed in terms of another variable, <span class="math inline">\(s\)</span>. <span class="math inline">\({\bf e}_t\)</span> is known as the unit tangent vector to <span class="math inline">\(\mathcal{C}\)</span> at the point <span class="math inline">\(P\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>For general motion, <span class="math inline">\(||\Delta{\bf r}||\neq ds\)</span> except in the infinitesimal sense: <span class="math inline">\(\hat{\bf r}(s+\Delta s)-\hat{\bf r}(s) \rightarrow \Delta s{\bf e}_t\)</span> as <span class="math inline">\(\Delta s\rightarrow 0\)</span> and <span class="math inline">\(d{\bf r}\)</span> is tangent to the curve.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="serret_frenet_triad_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="192"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We need to determine the expression for the acceleration in the Serret-Frenet basis. <span class="math display">\[\begin{align}
+    {\bf a} = \dot{\bf v} = \dot{v}{\bf e}_t+v\dot{\bf e}_t
+\end{align}\]</span> where <span class="math display">\[\begin{align}
+    \dot{\bf e}_t = \frac{d\hat{\bf e}_t}{ds}\frac{ds}{dt} = v\frac{d{\bf e}_t}{ds}.
+\end{align}\]</span> The derivative <span class="math inline">\(\frac{d\hat{\bf e}_t}{ds}\)</span> only depends on the curve that the particle is tracing.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Think!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -491,7 +502,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Question:</strong> What do we know about <span class="math inline">\(\frac{d\hat{\bf e}_t}{ds}\)</span>?</p>
+<p><strong>Question:</strong> What do we know about the direction of <span class="math inline">\(\frac{d\hat{\bf e}_t}{ds}\)</span>?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -505,8 +516,48 @@ window.Quarto = {
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>We can show that <span class="math inline">\({\bf e}_t\)</span> and <span class="math inline">\(\frac{d\hat{\bf e}_t}{ds}\)</span> are perpendicular by differentiating <span class="math inline">\({\bf e}_t\cdot{\bf e}_t = 1\)</span>: <span class="math display">\[\begin{align}
-    {\bf e}_t\cdot\frac{d{\bf e}_t}{ds} = 0.
+    \frac{d}{ds}\lp{\bf e}_t\cdot{\bf e}_t \rp = {\bf e}_t\cdot\frac{d{\bf e}_t}{ds} = 0.
 \end{align}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> What do we know about the magnitude of <span class="math inline">\(\frac{d\hat{\bf e}_t}{ds}\)</span>?</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Consider two curves. Draw the unit tangent vectors at the same distance along the curve, <span class="math inline">\(ds\)</span>, apart and draw their difference, <span class="math inline">\(\Delta {\bf e}_t\)</span>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="serret_frenet_triad_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>For which of these two curves is the magnitude of <span class="math inline">\(\frac{\Delta \hat{\bf e}_t}{\Delta s}\)</span> higher?</p>
+<p>As the curve begins to resemble a line, the magnitude of <span class="math inline">\(\frac{d\hat{\bf e}_t}{ds}\)</span> becomes smaller. As the <em>curvature</em> of a curve increases, so does the magnitude of <span class="math inline">\(\frac{d\hat{\bf e}_t}{ds}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -552,7 +603,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> When is <span class="math inline">\({\bf e}_n\)</span> not uniquely defined?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -561,9 +612,10 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>When <span class="math inline">\(d{\bf e}_t/ds = {\bf 0}\)</span> (i.e.&nbsp;<span class="math inline">\(\kappa = 0\)</span>), such as on a straight line, at an inflection point, or at a corner. In this case, <span class="math inline">\({\bf e}_n\)</span> is defined as any unit vector perpendicular to <span class="math inline">\({\bf e}_t\)</span>.</p>
+<p>Example: In problem 03/040, we choose the Serret-Frenet basis on the straight portion of the curve to be such that it transitions smoothly to the curved portion of the curve.</p>
 </div>
 </div>
 </div>
@@ -579,18 +631,22 @@ window.Quarto = {
 <li>The <strong>rectifying plane</strong> is spanned by <span class="math inline">\({\bf e}_t\)</span> and <span class="math inline">\({\bf e}_b\)</span>.</li>
 <li>The <strong>normal plane</strong> is spanned by <span class="math inline">\({\bf e}_n\)</span> and <span class="math inline">\({\bf e}_b\)</span>.</li>
 </ul>
-<p>Check out <a href="https://www.youtube.com/shorts/NyphZOJggFk?feature=share">this</a> animation showing the osculating circle, and <a href="https://www.youtube.com/watch?v=0ACqRREH180">this</a> video placing the Serret-Frenet basis on a bobsled.</p>
+<p>A vector can be expressed in the Serret-Frenet basis as in any other basis. The Serret-Frenet basis is not a fixed basis. <span class="math display">\[\begin{align}
+    {\bf b} = b_t{\bf e}_t+b_n{\bf e}_n = b_x{\bf E}_x+b_y{\bf E}_y+b_z{\bf E}_z.
+\end{align}\]</span></p>
+<p>Check out the following animation showing the osculating circle and video placing the Serret-Frenet basis on a bobsled.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/q2I1oHxPgaQ" title="Rollercoaster Animation Clothoid Loop with Serret Frenet Basis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/NyphZOJggFk?feature=share" title="animation showing the osculating circle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/0ACqRREH180" title="video placing the Serret-Frenet basis on a bobsled" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/j2PnkdtIdQ8" title="The Serret-Frenet basis and the osculating circle on a 3D curve" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="kinematics" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="kinematics"><span class="header-section-number">11.2</span> Kinematics</h2>
 <p>Position, velocity, and acceleration in the Serret-Frenet basis: <span class="math display">\[\begin{align*}
-    {\bf v} &amp;= \frac{ds}{dt}{\bf e}_t = v{\bf e}_t,\\
-    {\bf a} &amp;= \dot{v}{\bf e}_t+\kappa v^2{\bf e}_n.
+    &amp; {\bf r} = x{\bf E}_x+y{\bf E}_y+z{\bf E}_z = {\bf r}(t) = \hat{{\bf r}(s(t))}.\\
+    &amp; {\bf v} = \dot{x}{\bf E}_x+\dot{y}{\bf E}_y+\dot{z}{\bf E}_z = \frac{d{\bf r}}{ds}\frac{ds}{dt} = \frac{ds}{dt}{\bf e}_t = v{\bf e}_t.\\
+    &amp; {\bf a} = \dot{\bf v} = \frac{d}{dt}\lp\frac{ds}{dt}{\bf e}_t\rp = \frac{d^2}{dt^2}{\bf e}_t+\frac{ds}{dt}\frac{d{\bf e}_s}{ds} = \frac{d^2}{dt^2}{\bf e}_t+\frac{ds}{dt}\frac{d{\bf e}_t}{ds}\frac{ds}{dt} = \dot{v}{\bf e}_t+\kappa v^2{\bf e}_n.
 \end{align*}\]</span></p>
-<section id="example-problem-02279" class="level3" data-number="11.2.1">
-<h3 data-number="11.2.1" class="anchored" data-anchor-id="example-problem-02279"><span class="header-section-number">11.2.1</span> Example: Problem 02/279</h3>
-<p>Draw the Serret-Frenet basis. Indicate whether the car is accelerating or decelerating and its direction of motion.</p>
-</section>
 </section>
 <section id="kinetics" class="level2" data-number="11.3">
 <h2 data-number="11.3" class="anchored" data-anchor-id="kinetics"><span class="header-section-number">11.3</span> Kinetics</h2>
@@ -612,7 +668,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> Consider the design of a roller coaster that is a circular ring. Comment on its safety.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -621,7 +677,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>At the transition between the circular and straight portions, there is a jump in curvature, hence a jump in acceleration, hence a jump in the normal force — producing a jerk. For a circular loop, the normal force goes from 0 to a finite value instantaneously. This could snap the rider’s neck. Instead, we use two connected <strong>clothoids</strong> (Euler spirals), whose curvature is proportional to arc length.</p>
 </div>
@@ -637,11 +693,20 @@ window.Quarto = {
 <p>We already have: <span class="math display">\[\begin{align}
     \frac{d{\bf e}_t}{ds} = \kappa{\bf e}_n.
 \end{align}\]</span></p>
-<p>Since <span class="math inline">\({\bf e}_b\cdot{\bf e}_b = 1\)</span>, we have <span class="math inline">\(\frac{d{\bf e}_b}{ds}\cdot{\bf e}_b = 0\)</span>. Also from <span class="math inline">\({\bf e}_t\cdot{\bf e}_b = 0\)</span>, we get <span class="math inline">\(\frac{d{\bf e}_b}{ds}\cdot{\bf e}_t=0\)</span>. So <span class="math inline">\(\frac{d{\bf e}_b}{ds}\)</span> is parallel to <span class="math inline">\({\bf e}_n\)</span>: <span class="math display">\[\begin{align}
+<p>Since <span class="math inline">\({\bf e}_b\cdot{\bf e}_b = 1\)</span>, we have <span class="math inline">\(\frac{d{\bf e}_b}{ds}\cdot{\bf e}_b = 0\)</span>.</p>
+<p>Also from <span class="math inline">\({\bf e}_t\cdot{\bf e}_b = 0\)</span>, we get <span class="math inline">\(\frac{d{\bf e}_b}{ds}\cdot{\bf e}_t=0\)</span>. So <span class="math inline">\(\frac{d{\bf e}_b}{ds}\)</span> is parallel to <span class="math inline">\({\bf e}_n\)</span>: <span class="math display">\[\begin{align}
+    &amp; {\bf e}_t\cdot{\bf e}_b = 0\\
+    &amp; \frac{d{\bf e}_t}{ds}\cdot{\bf e}_b+\frac{d{\bf e}_b}{ds}\cdot{\bf e}_t = 0\\
+    &amp; \kappa{\bf e}_n\cdot{\bf e}_b+\frac{d{\bf e}_b}{ds}\cdot{\bf e}_t = 0\\
+    &amp; \frac{d{\bf e}_b}{ds}\cdot{\bf e}_t=0.
+\end{align}\]</span> Consequently, we define <span class="math display">\[\begin{align}
     \frac{d{\bf e}_b}{ds} = -\tau{\bf e}_n,
-\end{align}\]</span> where <span class="math inline">\(\tau\)</span> is the <strong>torsion</strong> of <span class="math inline">\(\mathcal{C}\)</span> at <span class="math inline">\(P\)</span>.</p>
+\end{align}\]</span> where <span class="math inline">\(\tau\)</span> is the <strong>torsion</strong> of <span class="math inline">\(\mathcal{C}\)</span> at <span class="math inline">\(P\)</span>. The negative sign in the above formula is a convention.</p>
 <p>Then: <span class="math display">\[\begin{align}
-    \frac{d{\bf e}_n}{ds} = -\kappa{\bf e}_t+\tau{\bf e}_b.
+    \frac{d{\bf e}_n}{ds} &amp;= \frac{d}{ds}\lp{\bf e}_b\times{\bf e}_t\rp\\
+    &amp;= \frac{d{\bf e}_b}{ds}\times{\bf e}_t+{\bf e}_b\times\frac{d{\bf e}_t}{ds}\\
+    &amp;= (-\tau{\bf e}_n)\times{\bf e}_t+{\bf e}_b\times\kappa{\bf e}_n\\
+    &amp;= -\kappa{\bf e}_t+\tau{\bf e}_b.
 \end{align}\]</span></p>
 <p>In summary (the Serret-Frenet formulae): <span class="math display">\[\begin{align}
     \begin{bmatrix}
@@ -664,18 +729,44 @@ window.Quarto = {
 <p>Define the <strong>Darboux vector</strong> <span class="math inline">\(\bomega_{SF} = \kappa{\bf e}_b+\tau{\bf e}_t\)</span> so that: <span class="math display">\[\begin{align}
     \frac{d{\bf e}_i}{ds} = \bomega_{SF}\times{\bf e}_i, \quad i = t, n, b.
 \end{align}\]</span></p>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/OB13c0WlUSg" width="100%" title="A derivation of the Serret-Frenet Formulae" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <section id="example-a-particle-on-a-helix" class="level3" data-number="11.4.1">
 <h3 data-number="11.4.1" class="anchored" data-anchor-id="example-a-particle-on-a-helix"><span class="header-section-number">11.4.1</span> Example: A Particle on a Helix</h3>
 <p>For a helix <span class="math inline">\(x=R\cos(\theta)\)</span>, <span class="math inline">\(y=R\sin(\theta)\)</span>, <span class="math inline">\(z=\alpha R\theta\)</span>: <span class="math display">\[\begin{align}
+    {\bf r} = R{\bf e}_r+\alpha R\theta{\bf E}_z = x{\bf E}_x+y{\bf E}_y+z{\bf E}_z.
+\end{align}\]</span> <span class="math display">\[\begin{align}
     \kappa = \frac{1}{R(1+\alpha^2)}, \qquad \tau = \frac{\alpha}{(1+\alpha^2)R}.
 \end{align}\]</span></p>
 </section>
 </section>
 <section id="the-curvature-formula-for-a-plane-curve" class="level2" data-number="11.5">
 <h2 data-number="11.5" class="anchored" data-anchor-id="the-curvature-formula-for-a-plane-curve"><span class="header-section-number">11.5</span> The Curvature Formula for a Plane Curve</h2>
-<p>For a plane curve <span class="math inline">\(y = f(x)\)</span>, <span class="math inline">\(z = z_0\)</span>: <span class="math display">\[\begin{align}
-    \kappa = \kappa(x) = \frac{\left|\frac{d^2 f}{dx^2}\right|}{\lp\sqrt{1+\lp\frac{df}{dx}\rp^2}\rp^3}.
+<p>Consider a point <span class="math inline">\(P\)</span> tracing a plane curve with <span class="math inline">\(y = f(x)\)</span>, <span class="math inline">\(z = z_0\)</span>, so that <span class="math display">\[\begin{align}
+    {\bf r} = x{\bf E}_x+f(x){\bf E}_y+z_0{\bf E}_z.
 \end{align}\]</span></p>
+<p>Determining the arc-length parameter <span class="math inline">\(s\)</span>: <span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; \frac{d{\bf r}}{dt} = \frac{dx}{dt}{\bf E}_x+\frac{df}{dx}\frac{dx}{dt}{\bf E}_y,\\
+        &amp; \lp\frac{ds}{dt}\rp^2 = \lp 1+\lp\frac{df}{dx}\rp^2\rp\lp\frac{dx}{dt}\rp^2,\\
+        &amp; \frac{ds}{dt} = \frac{dx}{dt}\sqrt{1+\lp\frac{df}{dx}\rp^2},\\
+        &amp; s = s(x) = \int_{x_0}^x\sqrt{1+\lp\frac{df}{du}\rp^2}\,du+s(x_0).
+    \end{split}
+\end{align}\]</span></p>
+<p>The tangent vector: <span class="math display">\[\begin{align}
+    {\bf e}_t = \frac{d{\bf r}}{ds} = \frac{d{\bf r}}{dx}\frac{dx}{ds} = \frac{1}{\sqrt{1+\lp\frac{df}{dx}\rp^2}}\lp{\bf E}_x+\frac{df}{dx}{\bf E}_y\rp.
+\end{align}\]</span></p>
+<p>The <span class="math inline">\(\kappa{\bf e}_n\)</span> expression: <span class="math display">\[\begin{align}
+    \kappa{\bf e}_n = \frac{d{\bf e}_t}{ds} = \frac{d{\bf e}_t}{dx}\frac{dx}{ds} = \frac{\frac{d^2 f}{dx^2}}{\lp1+\lp \frac{df}{dx}\rp^2\rp^2}\lp{\bf E}_y-\frac{df}{dx}{\bf E}_x\rp.
+\end{align}\]</span></p>
+<p>Recalling that <span class="math inline">\({\bf e}_n\)</span> is a unit vector and <span class="math inline">\(\kappa \geq 0\)</span>: <span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; \kappa = \kappa(x) = \frac{\left|\frac{d^2 f}{dx^2}\right|}{\lp\sqrt{1+\lp\frac{df}{dx}\rp^2}\rp^3},\\
+        &amp; {\bf e}_n = \frac{\text{sgn}\lp\frac{d^2 f}{dx^2}\rp}{\sqrt{1+\lp\frac{df}{dx}\rp^2}}\lp{\bf E}_y-\frac{df}{dx}{\bf E}_x\rp,
+    \end{split}
+\end{align}\]</span> where <span class="math inline">\(\text{sgn}(a)=1\)</span> if <span class="math inline">\(a&gt;0\)</span> and <span class="math inline">\(-1\)</span> if <span class="math inline">\(a&lt;0\)</span>.</p>
+<p>The binormal vector and torsion: <span class="math display">\[\begin{align}
+    {\bf e}_b = {\bf e}_t\times{\bf e}_n = \text{sgn}\lp\frac{d^2 f}{dx^2}\rp{\bf E}_z,
+\end{align}\]</span> and because this vector is piecewise constant, the torsion of the plane curve is <span class="math inline">\(\tau = 0\)</span>.</p>
 </section>
 <section id="alternative-notation-for-plane-curves" class="level2" data-number="11.6">
 <h2 data-number="11.6" class="anchored" data-anchor-id="alternative-notation-for-plane-curves"><span class="header-section-number">11.6</span> Alternative Notation for Plane Curves</h2>
@@ -692,13 +783,8 @@ window.Quarto = {
     \mathbf{e}_b = \mathbf{e}_t\times\mathbf{e}_n.
 \end{align}\]</span> The curvature is <span class="math inline">\(\kappa=1/\rho\)</span> (radius of curvature <span class="math inline">\(\rho\)</span>). The BoLM gives <span class="math inline">\(F_t = m\dot v\)</span> and <span class="math inline">\(F_n = m\kappa v^2\)</span>.</p>
 </section>
-<section id="lecture-videos" class="level2" data-number="11.8">
-<h2 data-number="11.8" class="anchored" data-anchor-id="lecture-videos"><span class="header-section-number">11.8</span> Lecture Videos</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/XNdP7Nk850s" width="70%" title="Particle on a curve vs. particle on a surface" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/OB13c0WlUSg" width="70%" title="Derivation of the Serret–Frenet formulae" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</section>
-<section id="exercises" class="level2" data-number="11.9">
-<h2 data-number="11.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">11.9</span> Exercises</h2>
+<section id="exercises" class="level2" data-number="11.8">
+<h2 data-number="11.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">11.8</span> Exercises</h2>
 <p><em>The following problems are from Set 07 – The Serret–Frenet Basis.</em></p>
 <p><strong>1.</strong> [MKB 2/079] Analyse the acceleration vector in the Serret–Frenet basis.</p>
 <div class="quarto-figure quarto-figure-center">
