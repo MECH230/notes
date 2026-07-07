@@ -101,12 +101,12 @@ A particle in an elevator is a common example. In this case, the normal force is
 
 The **kinetic energy** of a particle:
 \begin{align}
-    T = \frac{m}{2}{\bf v}\cdot{\bf v} = \frac{1}{2}mv^2.
+    T = \frac{m}{2}{\bf v}\cdot{\bf v}.
 \end{align}
 
 In different bases:
 \begin{align*}
-    T = \frac{1}{2}m(v_x^2+v_y^2+v_z^2) = \frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2+\dot{z}^2).
+    T = \frac{1}{2}m(v_x^2+v_y^2+v_z^2) = \frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2+\dot{z}^2) = \frac{1}{2}mv^2.
 \end{align*}
 
 ## Energy
@@ -187,6 +187,14 @@ Then:
 
 If potential energy decreases ($U_2 \leq U_1$), the work is positive and kinetic energy increases.
 
+::: {.callout-tip title="Think!"}
+**Question:** Consider a particle thrown from the top of a building. Describe the changes in kinetic and potential energy of the particle during its motion.
+
+::: {.callout-note title="Answer" collapse="true"}
+When the particle is still high, its potential energy is high and its kinetic energy is low. When the particle has traveled downward, its potential energy is low and its kinetic energy is high.
+:::
+:::
+
 ### Constant Forces
 
 Constant force ${\bf C}$ is conservative with potential $U = -{\bf C}\cdot{\bf r}$.
@@ -225,9 +233,10 @@ Drag, friction, tension in inextensible cables, and normal forces are nonconserv
 
 If only conservative forces act, define total mechanical energy $E = T + U$. Then:
 \begin{align*}
-    \dot{T} = -\dot{U} \implies \dot{E} = \dot{T}+\dot{U} = 0.
+    & \dot{T} = {\bf F}_c\cdot{\bf V} = -\frac{\partial U}{\partial {\bf r}}\cdot\dot{\bf r} = -\dot{U}\\
+    & \dot{T} = -\dot{U} \implies \dot{E} = \dot{T}+\dot{U} = 0.
 \end{align*}
-$E$ is conserved when all work-doing forces are conservative.
+$E$ is conserved when all work-doing forces are conservative, ie. ${\bf F}\cdot{\bf v}={\bf F}_c\cdot{\bf v}$.
 
 If nonconservative forces also act:
 \begin{align}

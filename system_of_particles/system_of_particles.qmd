@@ -6,6 +6,7 @@ title: "System of Particles"
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 4
 \begin{tikzpicture}
     \draw[thick,->] (0,0) -- (0,1) node[above] {${\bf E}_z$};
     \draw[thick,->] (0,0) -- (-1.3,-1) node[left] {${\bf E}_x$};
@@ -27,7 +28,7 @@ title: "System of Particles"
 \end{tikzpicture}
 ```
 
-Consider a system of $n$ particles. A typical particle has mass $m_i$, position vector ${\bf r}_i$ relative to $O$, velocity ${\bf v}_i = \dot{\bf r}_i$, acceleration ${\bf a}_i = \dot{\bf v}_i$, linear momentum ${\bf G}_i = m_i{\bf v}_i$, angular momentum ${\bf H}^P_i = ({\bf r}_i-{\bf r}_P)\times{\bf G}_i$, and kinetic energy $T_i = \frac{1}{2}m_i{\bf v}_i\cdot{\bf v}_i$.
+Consider a system of $n$ particles. A typical particle has mass $m_i$, position vector ${\bf r}_i$ relative to $O$, velocity ${\bf v}_i = \dot{\bf r}_i$, acceleration ${\bf a}_i = \dot{\bf v}_i$, linear momentum ${\bf G}_i = m_i{\bf v}_i$, angular momentum relative to some point $P$ ${\bf H}^P_i = ({\bf r}_i-{\bf r}_P)\times{\bf G}_i$, and kinetic energy $T_i = \frac{1}{2}m_i{\bf v}_i\cdot{\bf v}_i$.
 
 In this chapter, we define analogous system-level quantities and derive the balance laws for the system from the balance law for each individual particle.
 
@@ -56,6 +57,7 @@ Calculate ${\bf r}_C$. Is $C$ located on the dumbbell?
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 2
 \begin{tikzpicture}
     \fill[gray!50] (2,2) circle (0.2);
     \fill[gray!50] (4,0) circle (0.5);
@@ -73,7 +75,9 @@ Calculate ${\bf r}_C$. Is $C$ located on the dumbbell?
 \begin{align*}
     {\bf r}_C = \frac{m{\bf r}_1+3m{\bf r}_2}{m+3m} = \frac{{\bf r}_1+3{\bf r}_2}{4} = \frac{7}{4}{\bf E}_x+\frac{1}{4}{\bf E}_y.
 \end{align*}
-We can check that $C$ lies on the line connecting $m_1$ and $m_2$.
+We can check mathematically that $C$ lies on the line connecting $m_1$ and $m_2$ by calculating the equation of that line and checking at $C$ belongs to it.
+
+Alternatively, we can define a new basis, $\{{\bf u},{\bf v}\}$ and calculate the position of $C$ relative to $m_1$ on that basis. This should be along ${\bf u}$. 
 :::
 :::
 
@@ -94,20 +98,29 @@ Differentiating the position of the center of mass:
 \begin{align}
     {\bf v}_C = \frac{1}{m}\sum_{k=1}^n m_k{\bf v}_k = \frac{1}{m}\sum_{k=1}^n{\bf G}_k.
 \end{align}
+Notice that the velocity of the center of mass is the weighted sum of the velocities of the particles.
+
+::: {.callout-tip title="Think!"}
+**Question:** Show that $\sum_{k=1}^nm_k({\bf r}_C-{\bf r}_k) = {\bf 0}$ and $\sum_{k=1}^nm_k({\bf v}_C-{\bf v}_k) = {\bf 0}$.
+
+::: {.callout-note title="Answer" collapse="true"}
+...
+:::
+:::
 
 ## Linear Momentum
 
 The linear momentum of the system is
 \begin{align}
-    {\bf G} = \sum_{k=1}^n{\bf G}_k = m{\bf v}_C.
+    {\bf G} = m\frac{d{\bf r}}{dt} = \sum_{k=1}^n m_k\frac{d{\bf r}_k}{dt} = \sum_{k=1}^n{\bf G}_k.
 \end{align}
 The linear momentum of the system equals that of its center of mass.
 
 ## Angular Momentum
 
-The angular momentum ${\bf H}^P$ of the system relative to a point $P$ is:
+The angular momentum ${\bf H}^P$ of the system of particles relative to a point $P$, whose position vector relative to $O$ is ${\bf r}_P$, is the sum of the individual angular momenta:
 \begin{align}
-    {\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k = {\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf G},
+    {\bf H}^P = \sum_{k=1}^n{\bf H}^{P_K} = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k = {\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf G},
 \end{align}
 where
 \begin{align}
@@ -154,7 +167,12 @@ The conditions for conservation of linear momentum of a system (completely or al
 
 Starting from ${\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k$, the time derivative is:
 \begin{align}
-    \dot{\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times{\bf F}_k-{\bf v}_P\times{\bf G} = {\bf M}^P-{\bf v}_P\times{\bf G}.
+    \dot{\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times{\bf F}_k-{\bf v}_P\times{\bf G} = {\bf M}^P-{\bf v}_P\times{\bf G},
+\end{align}
+where the resultant moment of the system of forces relative to $P$ is ${\bf M}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times{\bf F}_k$.
+The angular momentum theorem becomes
+\begin{align}
+    \dot{\bf H}^P = {\bf M}^P-{\bf v}_P\times{\bf G}.
 \end{align}
 
 ::: {.callout-important title="Note!"}
@@ -178,10 +196,11 @@ The work-energy theorem for a system of particles is:
 \begin{align}
     \dot{T} = \sum_{k=1}^n{\bf F}_k\cdot{\bf v}_k,
 \end{align}
-and for energy conservation (with nonconservative forces ${\bf F}_{nc_k}$):
+and
 \begin{align}
     \dot{E} = \sum_{k=1}^n{\bf F}_{nc_k}\cdot{\bf v}_k.
 \end{align}
+where ${\bf F}_{nc_k}$ is the nonconservative force acting on the $k$th particle and $E$ is the total energy of the system of particles.
 Integrating:
 \begin{align}
     T(t_2)-T(t_1) = \sum_{k=1}^n W_{{\bf F}_k,12}, \qquad W_{{\bf F}_k,12} = \int_{t_1}^{t_2}{\bf F}_k\cdot{\bf v}_k\,dt.
@@ -195,7 +214,7 @@ The work of a force is the integral of the force dotted with the velocity of the
 **Question:** Consider the unsymmetrical dumbbell (particle 1 of mass $m$, particle 2 of mass $3m$, massless rod) moving in the smooth $\{{\bf E}_x,{\bf E}_y\}$ plane with gravity along $-{\bf E}_z$. Is the energy conserved?
 
 ::: {.callout-note title="Answer" collapse="true"}
-Drawing the FBDs of both masses: the only forces are gravity (conservative) and the constraint force in the rod (does no work on the system, since it is internal and the rod is rigid). Hence the total energy is conserved.
+Drawing the FBDs of both masses: ...
 :::
 :::
 
@@ -216,11 +235,7 @@ Drawing the FBDs of both masses: the only forces are gravity (conservative) and 
 
 **1.** [MKB 03-168] Show that during the (very brief) collision, the linear momentum of the bullet–pendulum system is conserved. *(ans. $\theta=20.7^\circ$, $n=99.8\%$)*
 
-![MKB 03-168.](../figures/system_of_particles/SOP_1.png){width=50%}
-
 **2.** [MKB 03-178] Use the integral form of the BoAM; choose the origin at the green base. *(ans. $\dot\theta=26.0$ rad/s)*
-
-![MKB 03-178.](../figures/system_of_particles/SOP_2.png){width=50%}
 
 **3.** [04-008] Take an appropriate cut in the rope. *(ans. $T=58.3$ lb)*
 

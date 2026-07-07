@@ -22,7 +22,7 @@ Ignoring rotational motion, the simplest model uses a mass particle for each bod
 
 - Model each body as a mass particle.
 - We ignore the rotational inertias of bodies (purely translational motion).
-- All points on a body have the same velocity.
+- As the bodies are in a state of purely translational motion, all the points on the body have the same velocity.
 - The position vector of the mass particle is defined to coincide with the center of mass of the body it models.
 - No friction between particles during collision — all impact forces are along ${\bf n}$.
 - The duration of compression ($t_1-t_0$) and restitution ($t_2-t_1$) are very small.

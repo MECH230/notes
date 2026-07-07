@@ -427,12 +427,12 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="system_of_particles_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="system_of_particles_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Consider a system of <span class="math inline">\(n\)</span> particles. A typical particle has mass <span class="math inline">\(m_i\)</span>, position vector <span class="math inline">\({\bf r}_i\)</span> relative to <span class="math inline">\(O\)</span>, velocity <span class="math inline">\({\bf v}_i = \dot{\bf r}_i\)</span>, acceleration <span class="math inline">\({\bf a}_i = \dot{\bf v}_i\)</span>, linear momentum <span class="math inline">\({\bf G}_i = m_i{\bf v}_i\)</span>, angular momentum <span class="math inline">\({\bf H}^P_i = ({\bf r}_i-{\bf r}_P)\times{\bf G}_i\)</span>, and kinetic energy <span class="math inline">\(T_i = \frac{1}{2}m_i{\bf v}_i\cdot{\bf v}_i\)</span>.</p>
+<p>Consider a system of <span class="math inline">\(n\)</span> particles. A typical particle has mass <span class="math inline">\(m_i\)</span>, position vector <span class="math inline">\({\bf r}_i\)</span> relative to <span class="math inline">\(O\)</span>, velocity <span class="math inline">\({\bf v}_i = \dot{\bf r}_i\)</span>, acceleration <span class="math inline">\({\bf a}_i = \dot{\bf v}_i\)</span>, linear momentum <span class="math inline">\({\bf G}_i = m_i{\bf v}_i\)</span>, angular momentum relative to some point <span class="math inline">\(P\)</span> <span class="math inline">\({\bf H}^P_i = ({\bf r}_i-{\bf r}_P)\times{\bf G}_i\)</span>, and kinetic energy <span class="math inline">\(T_i = \frac{1}{2}m_i{\bf v}_i\cdot{\bf v}_i\)</span>.</p>
 <p>In this chapter, we define analogous system-level quantities and derive the balance laws for the system from the balance law for each individual particle.</p>
 <section id="center-of-mass" class="level2" data-number="18.1">
 <h2 data-number="18.1" class="anchored" data-anchor-id="center-of-mass"><span class="header-section-number">18.1</span> Center of Mass</h2>
@@ -484,7 +484,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="system_of_particles_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="system_of_particles_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="192"></p>
 </figure>
 </div>
 </div>
@@ -503,7 +503,8 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align*}
     {\bf r}_C = \frac{m{\bf r}_1+3m{\bf r}_2}{m+3m} = \frac{{\bf r}_1+3{\bf r}_2}{4} = \frac{7}{4}{\bf E}_x+\frac{1}{4}{\bf E}_y.
-\end{align*}\]</span> We can check that <span class="math inline">\(C\)</span> lies on the line connecting <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span>.</p>
+\end{align*}\]</span> We can check mathematically that <span class="math inline">\(C\)</span> lies on the line connecting <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> by calculating the equation of that line and checking at <span class="math inline">\(C\)</span> belongs to it.</p>
+<p>Alternatively, we can define a new basis, <span class="math inline">\(\{{\bf u},{\bf v}\}\)</span> and calculate the position of <span class="math inline">\(C\)</span> relative to <span class="math inline">\(m_1\)</span> on that basis. This should be along <span class="math inline">\({\bf u}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -543,18 +544,47 @@ window.Quarto = {
 </div>
 <p>Differentiating the position of the center of mass: <span class="math display">\[\begin{align}
     {\bf v}_C = \frac{1}{m}\sum_{k=1}^n m_k{\bf v}_k = \frac{1}{m}\sum_{k=1}^n{\bf G}_k.
-\end{align}\]</span></p>
+\end{align}\]</span> Notice that the velocity of the center of mass is the weighted sum of the velocities of the particles.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Show that <span class="math inline">\(\sum_{k=1}^nm_k({\bf r}_C-{\bf r}_k) = {\bf 0}\)</span> and <span class="math inline">\(\sum_{k=1}^nm_k({\bf v}_C-{\bf v}_k) = {\bf 0}\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>…</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="linear-momentum" class="level2" data-number="18.2">
 <h2 data-number="18.2" class="anchored" data-anchor-id="linear-momentum"><span class="header-section-number">18.2</span> Linear Momentum</h2>
 <p>The linear momentum of the system is <span class="math display">\[\begin{align}
-    {\bf G} = \sum_{k=1}^n{\bf G}_k = m{\bf v}_C.
+    {\bf G} = m\frac{d{\bf r}}{dt} = \sum_{k=1}^n m_k\frac{d{\bf r}_k}{dt} = \sum_{k=1}^n{\bf G}_k.
 \end{align}\]</span> The linear momentum of the system equals that of its center of mass.</p>
 </section>
 <section id="angular-momentum" class="level2" data-number="18.3">
 <h2 data-number="18.3" class="anchored" data-anchor-id="angular-momentum"><span class="header-section-number">18.3</span> Angular Momentum</h2>
-<p>The angular momentum <span class="math inline">\({\bf H}^P\)</span> of the system relative to a point <span class="math inline">\(P\)</span> is: <span class="math display">\[\begin{align}
-    {\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k = {\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf G},
+<p>The angular momentum <span class="math inline">\({\bf H}^P\)</span> of the system of particles relative to a point <span class="math inline">\(P\)</span>, whose position vector relative to <span class="math inline">\(O\)</span> is <span class="math inline">\({\bf r}_P\)</span>, is the sum of the individual angular momenta: <span class="math display">\[\begin{align}
+    {\bf H}^P = \sum_{k=1}^n{\bf H}^{P_K} = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k = {\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf G},
 \end{align}\]</span> where <span class="math display">\[\begin{align}
     {\bf H}^C = \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times m_k{\bf v}_k = \sum_{k=1}^n({\bf r}_k-{\bf r}_C)\times m_k({\bf v}_k-{\bf v}_C).
 \end{align}\]</span></p>
@@ -570,7 +600,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> Show that <span class="math inline">\(\sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k = {\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf G}\)</span>.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -579,7 +609,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Introduce <span class="math inline">\({\bf r}_C-{\bf r}_C\)</span> inside the sum and expand.</p>
 </div>
@@ -605,7 +635,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> Prove <span class="math inline">\(\sum_{k=1}^n\frac{1}{2}m_k{\bf v}_k\cdot{\bf v}_k = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}\sum_{k=1}^n m_k({\bf v}_k-{\bf v}_C)\cdot({\bf v}_k-{\bf v}_C)\)</span>.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -614,7 +644,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Add <span class="math inline">\({\bf v}_C-{\bf v}_C\)</span> to each <span class="math inline">\({\bf v}_k\)</span>, expand, and use <span class="math inline">\(\sum m_k({\bf v}_k-{\bf v}_C) = {\bf 0}\)</span>.</p>
 </div>
@@ -645,7 +675,9 @@ window.Quarto = {
 <section id="kinetics-balance-of-angular-momentum" class="level2" data-number="18.6">
 <h2 data-number="18.6" class="anchored" data-anchor-id="kinetics-balance-of-angular-momentum"><span class="header-section-number">18.6</span> Kinetics: Balance of Angular Momentum</h2>
 <p>Starting from <span class="math inline">\({\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times m_k{\bf v}_k\)</span>, the time derivative is: <span class="math display">\[\begin{align}
-    \dot{\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times{\bf F}_k-{\bf v}_P\times{\bf G} = {\bf M}^P-{\bf v}_P\times{\bf G}.
+    \dot{\bf H}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times{\bf F}_k-{\bf v}_P\times{\bf G} = {\bf M}^P-{\bf v}_P\times{\bf G},
+\end{align}\]</span> where the resultant moment of the system of forces relative to <span class="math inline">\(P\)</span> is <span class="math inline">\({\bf M}^P = \sum_{k=1}^n({\bf r}_k-{\bf r}_P)\times{\bf F}_k\)</span>. The angular momentum theorem becomes <span class="math display">\[\begin{align}
+    \dot{\bf H}^P = {\bf M}^P-{\bf v}_P\times{\bf G}.
 \end{align}\]</span></p>
 <div class="callout callout-style-default callout-important callout-titled" title="Note!">
 <div class="callout-header d-flex align-content-center">
@@ -684,9 +716,9 @@ window.Quarto = {
 <h2 data-number="18.7" class="anchored" data-anchor-id="work-energy-theorem"><span class="header-section-number">18.7</span> Work-Energy Theorem</h2>
 <p>The work-energy theorem for a system of particles is: <span class="math display">\[\begin{align}
     \dot{T} = \sum_{k=1}^n{\bf F}_k\cdot{\bf v}_k,
-\end{align}\]</span> and for energy conservation (with nonconservative forces <span class="math inline">\({\bf F}_{nc_k}\)</span>): <span class="math display">\[\begin{align}
+\end{align}\]</span> and <span class="math display">\[\begin{align}
     \dot{E} = \sum_{k=1}^n{\bf F}_{nc_k}\cdot{\bf v}_k.
-\end{align}\]</span> Integrating: <span class="math display">\[\begin{align}
+\end{align}\]</span> where <span class="math inline">\({\bf F}_{nc_k}\)</span> is the nonconservative force acting on the <span class="math inline">\(k\)</span>th particle and <span class="math inline">\(E\)</span> is the total energy of the system of particles. Integrating: <span class="math display">\[\begin{align}
     T(t_2)-T(t_1) = \sum_{k=1}^n W_{{\bf F}_k,12}, \qquad W_{{\bf F}_k,12} = \int_{t_1}^{t_2}{\bf F}_k\cdot{\bf v}_k\,dt.
 \end{align}\]</span></p>
 <div class="callout callout-style-default callout-important callout-titled" title="Note!">
@@ -714,7 +746,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> Consider the unsymmetrical dumbbell (particle 1 of mass <span class="math inline">\(m\)</span>, particle 2 of mass <span class="math inline">\(3m\)</span>, massless rod) moving in the smooth <span class="math inline">\(\{{\bf E}_x,{\bf E}_y\}\)</span> plane with gravity along <span class="math inline">\(-{\bf E}_z\)</span>. Is the energy conserved?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -723,9 +755,9 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Drawing the FBDs of both masses: the only forces are gravity (conservative) and the constraint force in the rod (does no work on the system, since it is internal and the rod is rigid). Hence the total energy is conserved.</p>
+<p>Drawing the FBDs of both masses: …</p>
 </div>
 </div>
 </div>
@@ -743,19 +775,7 @@ window.Quarto = {
 <h2 data-number="18.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">18.9</span> Exercises</h2>
 <p><em>The following problems are from Set 14 – System of Particles.</em></p>
 <p><strong>1.</strong> [MKB 03-168] Show that during the (very brief) collision, the linear momentum of the bullet–pendulum system is conserved. <em>(ans. <span class="math inline">\(\theta=20.7^\circ\)</span>, <span class="math inline">\(n=99.8\%\)</span>)</em></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../figures/system_of_particles/SOP_1.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>MKB 03-168.</figcaption>
-</figure>
-</div>
 <p><strong>2.</strong> [MKB 03-178] Use the integral form of the BoAM; choose the origin at the green base. <em>(ans. <span class="math inline">\(\dot\theta=26.0\)</span> rad/s)</em></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../figures/system_of_particles/SOP_2.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>MKB 03-178.</figcaption>
-</figure>
-</div>
 <p><strong>3.</strong> [04-008] Take an appropriate cut in the rope. <em>(ans. <span class="math inline">\(T=58.3\)</span> lb)</em></p>
 <p><strong>4.</strong> [04-009] <em>(ans. <span class="math inline">\(D_x=1.288\)</span> lb left, <span class="math inline">\(D_y=35.5\)</span> lb up, <span class="math inline">\(N_E=25.6\)</span> lb up)</em></p>
 <p><strong>5.</strong> [04-019] Identify a direction of linear momentum conservation; the center of mass remains stationary. <em>(ans. <span class="math inline">\(s=\frac{(m_1+m_2)x_{10}-m_2 l}{m_0+m_1+m_2}\)</span>)</em></p>

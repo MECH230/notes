@@ -384,7 +384,9 @@ window.Quarto = {
   <li><a href="#tensor-bun-product" id="toc-tensor-bun-product" class="nav-link" data-scroll-target="#tensor-bun-product"><span class="header-section-number">19.3</span> Tensor (Bun) Product</a></li>
   <li><a href="#matrix-representation-of-tensors" id="toc-matrix-representation-of-tensors" class="nav-link" data-scroll-target="#matrix-representation-of-tensors"><span class="header-section-number">19.4</span> Matrix Representation of Tensors</a>
   <ul class="collapse">
-  <li><a href="#rigid-body-motion" id="toc-rigid-body-motion" class="nav-link" data-scroll-target="#rigid-body-motion"><span class="header-section-number">19.4.1</span> Rigid Body Motion</a></li>
+  <li><a href="#perspective-1-from-the-dyadic-expansion" id="toc-perspective-1-from-the-dyadic-expansion" class="nav-link" data-scroll-target="#perspective-1-from-the-dyadic-expansion"><span class="header-section-number">19.4.1</span> Perspective 1: From the Dyadic Expansion</a></li>
+  <li><a href="#perspective-2-from-the-action-on-a-general-vector" id="toc-perspective-2-from-the-action-on-a-general-vector" class="nav-link" data-scroll-target="#perspective-2-from-the-action-on-a-general-vector"><span class="header-section-number">19.4.2</span> Perspective 2: From the Action on a General Vector</a></li>
+  <li><a href="#rigid-body-motion" id="toc-rigid-body-motion" class="nav-link" data-scroll-target="#rigid-body-motion"><span class="header-section-number">19.4.3</span> Rigid Body Motion</a></li>
   </ul></li>
   <li><a href="#the-angular-velocity-vector" id="toc-the-angular-velocity-vector" class="nav-link" data-scroll-target="#the-angular-velocity-vector"><span class="header-section-number">19.5</span> The Angular Velocity Vector</a></li>
   <li><a href="#velocity-and-acceleration-of-two-material-points" id="toc-velocity-and-acceleration-of-two-material-points" class="nav-link" data-scroll-target="#velocity-and-acceleration-of-two-material-points"><span class="header-section-number">19.6</span> Velocity and Acceleration of Two Material Points</a></li>
@@ -457,7 +459,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
 </figure>
 </div>
 </div>
@@ -512,13 +514,13 @@ window.Quarto = {
 </div>
 </div>
 <ol type="1">
-<li><strong>Rotate</strong> the object about <span class="math inline">\(O\)</span> to the desired orientation: <span class="math inline">\({\bf x}_I = {\bf Q}(t){\bf X}\)</span> with <span class="math inline">\(\lnorm{\bf Q}(t){\bf X}\rnorm = \lnorm{\bf X}\rnorm\)</span>.</li>
-<li><strong>Translate</strong> via the translation vector <span class="math inline">\({\bf y}(t)\)</span>.</li>
+<li><strong>Rotate</strong> the object about <span class="math inline">\(O\)</span> until it has the desired orientation (but likely the wrong position). This motion maps every point <span class="math inline">\({\bf X}\)</span> to an intermediate position <span class="math inline">\({\bf x}_I\)</span>: <span class="math inline">\({\bf x}_I = {\bf Q}(t){\bf X}\)</span> with <span class="math inline">\(\lnorm{\bf Q}(t){\bf X}\rnorm = \lnorm{\bf X}\rnorm\)</span>.</li>
+<li><strong>Translate</strong> via the translation vector <span class="math inline">\({\bf y}(t)\)</span> (without further rotation) from an intermediate configuration to a current configuration; <span class="math inline">\({\bf y}(t)\)</span> is the <strong>translation vector</strong>. It moves all points to the desired positioning at time <span class="math inline">\(t\)</span>.</li>
 </ol>
 <p>Then every rigid motion is: <span class="math display">\[\begin{align}
     {\bf x} = \bchi({\bf X},t) = {\bf Q}(t){\bf X}+{\bf y}(t).
 \end{align}\]</span></p>
-<p><span class="math inline">\({\bf Q}(t)\)</span> is a linear map and is called the <strong>rotation tensor</strong>. Both <span class="math inline">\({\bf Q}\)</span> and <span class="math inline">\({\bf y}\)</span> are the same for all material points (functions of <span class="math inline">\(t\)</span> only). In this class we consider <strong>general plane motion</strong>, where <span class="math inline">\(\bomega = \dot{\theta}{\bf E}_3\)</span> and <span class="math inline">\(\balpha = \dot{\bomega}\)</span>.</p>
+<p><span class="math inline">\({\bf Q}(t)\)</span> is an object that acts on a vector to produce another vector. If <span class="math inline">\({\bf Q}\)</span> is also linear, then we call it a <strong>tensor</strong>. We will show that <span class="math inline">\({\bf Q}(t)\)</span> is a linear map and is called the <strong>rotation tensor</strong>. Both <span class="math inline">\({\bf Q}\)</span> and <span class="math inline">\({\bf y}\)</span> are the same for all material points (functions of <span class="math inline">\(t\)</span> only). In this class we consider <strong>general plane motion</strong>, where <span class="math inline">\(\bomega = \dot{\theta}{\bf E}_3\)</span> and <span class="math inline">\(\balpha = \dot{\bomega}\)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Think!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -534,7 +536,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
 </figure>
 </div>
 </div>
@@ -571,12 +573,12 @@ window.Quarto = {
 </div>
 <p>For a rigid body, the components of a material vector <span class="math inline">\({\bf v}\)</span> along the corotational basis are constant throughout the motion: <span class="math display">\[\begin{align}
     {\bf v} = a{\bf e}_1+b{\bf e}_2,
-\end{align}\]</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constant and <span class="math inline">\({\bf e}_1(t)\)</span>, <span class="math inline">\({\bf e}_2(t)\)</span> evolve with the body. The corotational basis is unaffected by translation.</p>
+\end{align}\]</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constant and <span class="math inline">\({\bf e}_1(t)\)</span>, <span class="math inline">\({\bf e}_2(t)\)</span> evolve with the body. Since initially <span class="math inline">\({\bf e}_1 = {\bf E}_1\)</span> and <span class="math inline">\({\bf e}_2 = {\bf E}_2\)</span>, we can write <span class="math inline">\({\bf v}(t=0) = a{\bf E}_1+b{\bf E}_2\)</span>.The corotational basis is unaffected by translation.</p>
 </section>
 <section id="tensors" class="level2" data-number="19.2">
 <h2 data-number="19.2" class="anchored" data-anchor-id="tensors"><span class="header-section-number">19.2</span> Tensors</h2>
 <p>A tensor <span class="math inline">\({\bf T}\)</span> is a <em>linear transformation</em> that transforms a vector into another vector: <span class="math inline">\({\bf T}{\bf u} = {\bf v}\)</span>. A tensor exists independent of any basis and is defined by its action on vectors.</p>
-<p>Examples: a rotation tensor <span class="math inline">\({\bf Q}\)</span>, the identity tensor <span class="math inline">\({\bf I}\)</span>, a scaling tensor <span class="math inline">\({\bf S}\)</span>.</p>
+<p>Examples: - A rotation tensor <span class="math inline">\({\bf Q}\)</span> acting on some vector <span class="math inline">\({\bf v}\)</span> returns a vector <span class="math inline">\({\bf u}\)</span> that is a rotation of <span class="math inline">\({\bf v}\)</span> by some angle <span class="math inline">\(\theta\)</span>. - The identity tensor <span class="math inline">\({\bf I}\)</span> acting on any vector <span class="math inline">\({\bf v}\)</span> returns the same vector <span class="math inline">\({\bf v}\)</span>. - A scaling tensor <span class="math inline">\({\bf S}\)</span> acting on some vector <span class="math inline">\({\bf v}\)</span> returns another the scaled vector <span class="math inline">\(k{\bf v}\)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Think!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -600,7 +602,7 @@ window.Quarto = {
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Yes. Rotating <span class="math inline">\(a{\bf X}\)</span> is the same as rotating <span class="math inline">\({\bf X}\)</span> then scaling by <span class="math inline">\(a\)</span>, and rotating <span class="math inline">\({\bf X}_1+{\bf X}_2\)</span> equals rotating each and adding. So rotations are linear transformations — hence tensors.</p>
+<p>Yes. To be a linear transformation, a rotation would have to satisfy two rules: - Rotating <span class="math inline">\(a{\bf X}\)</span> is the same as rotating <span class="math inline">\({\bf X}\)</span> and then scaling by <span class="math inline">\(a\)</span>. - Rotating <span class="math inline">\({\bf X}_1\)</span> and <span class="math inline">\({\bf X}_2\)</span> is the same as rotating <span class="math inline">\({\bf X}_1\)</span>, rotating <span class="math inline">\({\bf X}_2\)</span>, and then adding the results together. Since both of these propositions are true for rotations, we conclude that rotations are linear transformations. Thus, rotations are tensors.</p>
 </div>
 </div>
 </div>
@@ -630,6 +632,10 @@ window.Quarto = {
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>No.&nbsp;A vector is an abstract object independent of any basis; a matrix is its representation in a specific basis. Similarly, a tensor is not a matrix, but can be expressed as one in a given coordinate system.</p>
+<p>We can further answer this question using an analogous one: are vectors and arrays the same?</p>
+<p>We can represent a vector as an array of numbers if we have chosen a basis or coordinate system, but a vector is an abstract object that exists independent of any basis.</p>
+<p>Consider for example a position vector <span class="math inline">\({\bf r}\)</span> to a particle <span class="math inline">\(P\)</span>. This vector encodes the position of <span class="math inline">\(P\)</span> relative to the origin (distance and direction) independent of any basis. We could however express this vector in the Cartesian basis as <span class="math inline">\(x{\bf E}_x+y{\bf E}_y+z{\bf E}_z\)</span>. In this basis, we could write the array <span class="math inline">\([x,y,z]\)</span> to represent this vector.</p>
+<p>Analogously, a tensor is not a matrix, but a tensor can be expressed as a matrix in a given coordinate system.</p>
 </div>
 </div>
 </div>
@@ -638,9 +644,21 @@ window.Quarto = {
 </section>
 <section id="tensor-bun-product" class="level2" data-number="19.3">
 <h2 data-number="19.3" class="anchored" data-anchor-id="tensor-bun-product"><span class="header-section-number">19.3</span> Tensor (Bun) Product</h2>
-<p>The <strong>tensor product</strong> <span class="math inline">\({\bf a}\otimes{\bf b}\)</span> acts on vectors by: <span class="math display">\[\begin{align}
-    \lp{\bf a}\otimes{\bf b}\rp{\bf u} = \lp{\bf b}\cdot{\bf u}\rp{\bf a}.
-\end{align}\]</span> This is linear (verifiable directly), so it is a tensor.</p>
+<p>Consider the mathematical object, termed the <strong>tensor product</strong> of two vectors: <span class="math display">\[\begin{align}
+    {\bf a}\otimes{\bf b},
+\end{align}\]</span> where <span class="math inline">\({\bf a}\)</span> and <span class="math inline">\({\bf b}\)</span> are vectors. This object is defined to act on vectors to produce a vector as follows: <span class="math display">\[\begin{align}
+    \lp {\bf a}\otimes{\bf b} \rp{\bf u} = \lp {\bf b}\cdot{\bf u}\rp{\bf v}.
+\end{align}\]</span> If this object is also linear, then it is a tensor. To verify that this object is linear, we need to show that <span class="math display">\[\begin{align}
+    &amp;\lp {\bf a}\otimes{\bf b}\rp({\bf u}+{\bf v}) = \lp{\bf a}\otimes{\bf b}\rp{\bf u}+\lp{\bf a}\otimes{\bf b}\rp{\bf v},\\
+    &amp;\lp {\bf a}\otimes{\bf b}\rp(k{\bf u}) = k(\lp{\bf a}\otimes{\bf b}\rp{\bf u}).
+\end{align}\]</span></p>
+<p>For the first, <span class="math display">\[\begin{align*}
+    \lp {\bf a}\otimes{\bf b}\rp({\bf u}+{\bf v}) &amp;= \lp({\bf u}+{\bf v})\cdot{\bf b}\rp{\bf a}
+    = {\bf u}\cdot{\bf b}{\bf a}+{\bf v}\cdot{\bf b}{\bf a}
+    = \lp{\bf a}\otimes{\bf b}\rp{\bf u}+\lp{\bf a}\otimes{\bf b}\rp{\bf v}.
+\end{align*}\]</span> For the second, <span class="math display">\[\begin{align}
+        \lp{\bf a}\otimes{\bf b}\rp(k{\bf u}) &amp;= (k{\bf u})\cdot{\bf b}{\bf a} = k({\bf u}\cdot{\bf b}{\bf a}) = k(\lp{\bf a}\otimes{\bf b}\rp{\bf u}).
+\end{align}\]</span></p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Think!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -702,14 +720,49 @@ window.Quarto = {
 </section>
 <section id="matrix-representation-of-tensors" class="level2" data-number="19.4">
 <h2 data-number="19.4" class="anchored" data-anchor-id="matrix-representation-of-tensors"><span class="header-section-number">19.4</span> Matrix Representation of Tensors</h2>
-<p>Given a basis <span class="math inline">\(\{{\bf e}_1,{\bf e}_2,{\bf e}_3\}\)</span>, define <span class="math inline">\(Q_{ij} \equiv \lp{\bf Q}{\bf e}_j\rp\cdot{\bf e}_i\)</span>. Then the action of <span class="math inline">\({\bf Q}\)</span> in matrix form is: <span class="math display">\[\begin{align}
+<p>Given a basis <span class="math inline">\(\{{\bf e}_1,{\bf e}_2,{\bf e}_3\}\)</span>, any tensor <span class="math inline">\({\bf Q}\)</span> can be written as a sum of dyads (tensor products) on that basis: <span class="math display">\[\begin{align}
+    {\bf Q} = \sum_{k=1}^3\sum_{\ell=1}^3 C_{k\ell}\,{\bf e}_k\otimes{\bf e}_\ell.
+\end{align}\]</span> There are two equivalent perspectives for arriving at the matrix representation of <span class="math inline">\({\bf Q}\)</span>, and both lead to the same components <span class="math inline">\(Q_{ij}\)</span>.</p>
+<section id="perspective-1-from-the-dyadic-expansion" class="level3" data-number="19.4.1">
+<h3 data-number="19.4.1" class="anchored" data-anchor-id="perspective-1-from-the-dyadic-expansion"><span class="header-section-number">19.4.1</span> Perspective 1: From the Dyadic Expansion</h3>
+<p>Acting with <span class="math inline">\({\bf Q}\)</span> on a basis vector <span class="math inline">\({\bf e}_j\)</span> and using <span class="math inline">\({\bf e}_\ell\cdot{\bf e}_j = 1\)</span> if <span class="math inline">\(\ell=j\)</span> and <span class="math inline">\(0\)</span> otherwise: <span class="math display">\[\begin{align}
+    {\bf Q}{\bf e}_j = \lp\sum_{k=1}^3\sum_{\ell=1}^3 C_{k\ell}\,{\bf e}_k\otimes{\bf e}_\ell\rp{\bf e}_j = \sum_{k=1}^3\sum_{\ell=1}^3 C_{k\ell}\lp{\bf e}_\ell\cdot{\bf e}_j\rp{\bf e}_k = \sum_{k=1}^3 C_{kj}\,{\bf e}_k.
+\end{align}\]</span> Taking the dot product with <span class="math inline">\({\bf e}_i\)</span>: <span class="math display">\[\begin{align}
+    \lp{\bf Q}{\bf e}_j\rp\cdot{\bf e}_i = \sum_{k=1}^3 C_{kj}\lp{\bf e}_k\cdot{\bf e}_i\rp = C_{ij}.
+\end{align}\]</span> So the coefficient <span class="math inline">\(C_{ij}\)</span> in the dyadic expansion of <span class="math inline">\({\bf Q}\)</span> is exactly the matrix entry in row <span class="math inline">\(i\)</span>, column <span class="math inline">\(j\)</span>.</p>
+</section>
+<section id="perspective-2-from-the-action-on-a-general-vector" class="level3" data-number="19.4.2">
+<h3 data-number="19.4.2" class="anchored" data-anchor-id="perspective-2-from-the-action-on-a-general-vector"><span class="header-section-number">19.4.2</span> Perspective 2: From the Action on a General Vector</h3>
+<p>Given a basis <span class="math inline">\(\{{\bf e}_1,{\bf e}_2,{\bf e}_3\}\)</span>, every vector <span class="math inline">\({\bf X}\)</span> can be written uniquely as <span class="math inline">\({\bf X} = X_1{\bf e}_1+X_2{\bf e}_2+X_3{\bf e}_3\)</span> with components <span class="math inline">\(X_i = {\bf X}\cdot{\bf e}_i\)</span>. By linearity of <span class="math inline">\({\bf Q}\)</span>: <span class="math display">\[\begin{align}
+    {\bf Q}{\bf X} = X_1({\bf Q}{\bf e}_1)+X_2({\bf Q}{\bf e}_2)+X_3({\bf Q}{\bf e}_3).
+\end{align}\]</span> Writing the output vector <span class="math inline">\({\bf x}\equiv{\bf Q}{\bf X}\)</span> in the same basis, <span class="math inline">\({\bf x} = x_1{\bf e}_1+x_2{\bf e}_2+x_3{\bf e}_3\)</span> with <span class="math inline">\(x_i = {\bf x}\cdot{\bf e}_i = ({\bf Q}{\bf X})\cdot{\bf e}_i\)</span>, and defining <span class="math display">\[\begin{align}
+    Q_{ij} \equiv \lp{\bf Q}{\bf e}_j\rp\cdot{\bf e}_i,
+\end{align}\]</span> we get <span class="math display">\[\begin{align}
+    x_1 &amp;= Q_{11}X_1+Q_{12}X_2+Q_{13}X_3,\\
+    x_2 &amp;= Q_{21}X_1+Q_{22}X_2+Q_{23}X_3,\\
+    x_3 &amp;= Q_{31}X_1+Q_{32}X_2+Q_{33}X_3,
+\end{align}\]</span> which is exactly the matrix equation <span class="math display">\[\begin{align}
     \begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}
     =
     \begin{bmatrix}Q_{11}&amp;Q_{12}&amp;Q_{13}\\Q_{21}&amp;Q_{22}&amp;Q_{23}\\Q_{31}&amp;Q_{32}&amp;Q_{33}\end{bmatrix}
     \begin{bmatrix}X_1\\X_2\\X_3\end{bmatrix}.
-\end{align}\]</span> The matrix representation depends on the chosen basis, but the tensor itself is basis-independent.</p>
-<section id="rigid-body-motion" class="level3" data-number="19.4.1">
-<h3 data-number="19.4.1" class="anchored" data-anchor-id="rigid-body-motion"><span class="header-section-number">19.4.1</span> Rigid Body Motion</h3>
+\end{align}\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Note!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Note!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Both perspectives agree on the same definition <span class="math inline">\(Q_{ij}=\lp{\bf Q}{\bf e}_j\rp\cdot{\bf e}_i\)</span>. Perspective 1 identifies <span class="math inline">\(Q_{ij}\)</span> as the coefficient of <span class="math inline">\({\bf e}_i\otimes{\bf e}_j\)</span> in the dyadic expansion of <span class="math inline">\({\bf Q}\)</span> itself; Perspective 2 identifies it as the entry that makes ordinary matrix-vector multiplication reproduce the action of <span class="math inline">\({\bf Q}\)</span> on components. The matrix representation depends on the chosen basis, but the tensor itself is basis-independent. Transpose, symmetry, and skew-symmetry of a tensor can be defined without reference to any basis, but in practice we identify them through the matrix representation: <span class="math inline">\({\bf T}\)</span> is symmetric if <span class="math inline">\([{\bf T}]=[{\bf T}]^T\)</span> and skew if <span class="math inline">\([{\bf T}]=-[{\bf T}]^T\)</span>.</p>
+</div>
+</div>
+</section>
+<section id="rigid-body-motion" class="level3" data-number="19.4.3">
+<h3 data-number="19.4.3" class="anchored" data-anchor-id="rigid-body-motion"><span class="header-section-number">19.4.3</span> Rigid Body Motion</h3>
 <p>In matrix form, rigid body motion is: <span class="math display">\[\begin{align}
     \begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}
     =
@@ -732,7 +785,7 @@ window.Quarto = {
     \mathtt{Q} = \begin{bmatrix}\cos\theta &amp; -\sin\theta &amp; 0\\\sin\theta &amp; \cos\theta &amp; 0\\0 &amp; 0 &amp; 1\end{bmatrix}
 \end{align*}\]</span> using <span class="math inline">\({\bf Q} = {\bf e}_1\otimes{\bf E}_1+{\bf e}_2\otimes{\bf E}_2+{\bf e}_3\otimes{\bf E}_3\)</span> with <span class="math inline">\({\bf e}_1 = \cos\theta\,{\bf E}_1+\sin\theta\,{\bf E}_2\)</span> and <span class="math inline">\({\bf e}_2 = -\sin\theta\,{\bf E}_1+\cos\theta\,{\bf E}_2\)</span>.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -741,7 +794,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Compute <span class="math inline">\(Q_{ij} = \lp{\bf Q}{\bf E}_j\rp\cdot{\bf E}_i = {\bf e}_j\cdot{\bf E}_i\)</span> to recover the matrix.</p>
 </div>
@@ -768,7 +821,23 @@ window.Quarto = {
 <h2 data-number="19.5" class="anchored" data-anchor-id="the-angular-velocity-vector"><span class="header-section-number">19.5</span> The Angular Velocity Vector</h2>
 <p>From rigid body motion, for any two material points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>: <span class="math inline">\(({\bf x}_B-{\bf x}_A) = {\bf Q}({\bf X}_B-{\bf X}_A)\)</span>. Differentiating: <span class="math display">\[\begin{align}
     {\bf v}_B-{\bf v}_A = \dot{\bf Q}{\bf Q}^T({\bf x}_B-{\bf x}_A).
-\end{align}\]</span> Since <span class="math inline">\({\bf Q}{\bf Q}^T = {\bf I}\)</span>, <span class="math inline">\(\dot{\bf Q}{\bf Q}^T\)</span> is <strong>skew</strong>. Every skew tensor corresponds to a vector cross product, so: <span class="math display">\[\begin{align}
+\end{align}\]</span> Since <span class="math inline">\({\bf Q}{\bf Q}^T = {\bf I}\)</span>, differentiating gives <span class="math inline">\(\dot{\bf Q}{\bf Q}^T+{\bf Q}\dot{\bf Q}^T={\bf 0}\)</span>, so <span class="math inline">\(\dot{\bf Q}{\bf Q}^T\)</span> is <strong>skew</strong>: <span class="math inline">\([\dot{\bf Q}{\bf Q}^T]=-[\dot{\bf Q}{\bf Q}^T]^T\)</span>.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Note!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Note!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Every skew tensor corresponds to a vector cross product. In the Cartesian basis, if <span class="math inline">\({\bf a} = a_1{\bf E}_1+a_2{\bf E}_2+a_3{\bf E}_3\)</span> and <span class="math inline">\({\bf b} = b_1{\bf E}_1+b_2{\bf E}_2+b_3{\bf E}_3\)</span>, then <span class="math inline">\({\bf a}\times{\bf b}\)</span> has the matrix representation <span class="math display">\[\begin{align}
+    [{\bf a}\times{\bf b}] = \underbrace{\begin{bmatrix}0&amp;-a_3&amp;a_2\\a_3&amp;0&amp;-a_1\\-a_2&amp;a_1&amp;0\end{bmatrix}}_{[{\bf a}]_\times}\begin{bmatrix}b_1\\b_2\\b_3\end{bmatrix}.
+\end{align}\]</span> The skew matrix <span class="math inline">\([{\bf a}]_\times\)</span> built from the components of <span class="math inline">\({\bf a}\)</span> is the matrix representation of the skew tensor whose axial vector is <span class="math inline">\({\bf a}\)</span>. Applying this to <span class="math inline">\(\dot{\bf Q}{\bf Q}^T\)</span> identifies its axial vector as <span class="math inline">\(\bomega\)</span>, so:</p>
+</div>
+</div>
+<p><span class="math display">\[\begin{align}
     {\bf v}_B-{\bf v}_A = \bomega\times({\bf x}_B-{\bf x}_A).
 \end{align}\]</span> The tensor <span class="math inline">\(\bOmega = \dot{\bf Q}{\bf Q}^T\)</span> is the <strong>angular velocity tensor</strong> and <span class="math inline">\(\bomega\)</span> is the <strong>angular velocity vector</strong>. Taking another derivative: <span class="math display">\[\begin{align}
     {\bf a}_B-{\bf a}_A = \balpha\times({\bf x}_B-{\bf x}_A)+\bomega\times(\bomega\times({\bf x}_B-{\bf x}_A))
@@ -817,7 +886,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> See <a href="https://www.youtube.com/watch?v=mPsLanVS1Q8">this video</a> of people playing catch on a merry-go-round. A ball is thrown on a merry-go-round rotating about fixed center <span class="math inline">\(O\)</span>, with <span class="math inline">\({\bf r}_0 = -R{\bf E}_x\)</span> and <span class="math inline">\({\bf v}_0 = v_0{\bf E}_x\)</span>. What velocity does the ball appear to have to an observer on the merry-go-round?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -826,7 +895,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The ball is a projectile: <span class="math inline">\({\bf a} = -g{\bf E}_z\)</span>, <span class="math inline">\({\bf v} = -gt{\bf E}_z+{\bf v}_0\)</span>. From <span class="math inline">\({\bf v} = \bomega\times({\bf r}-{\bf r}_0)+\overset{\circ}{\bf x}_{P/O}\)</span>: <span class="math display">\[\begin{align}
     \overset{\circ}{\bf x}_{P/O} = -gt{\bf E}_z+v_0{\bf E}_x+\omega(v_0 t-R){\bf E}_y.
@@ -860,7 +929,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> Draw the velocity profile of a rotating link with a fixed end.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -869,7 +938,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -948,7 +1017,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> What is the IC of a rolling disk?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -957,7 +1026,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The contact point with the surface.</p>
 </div>
@@ -1024,6 +1093,19 @@ window.Quarto = {
     I^C_{xz} = -\int_{\mathcal{B}}xz\,dm, \qquad
     I^C_{yz} = -\int_{\mathcal{B}}yz\,dm.
 \end{align}\]</span> When <span class="math inline">\(\{{\bf e}_x,{\bf e}_y,{\bf e}_z\}\)</span> is an eigenbasis of <span class="math inline">\([{\bf I}^C]\)</span>, the products of inertia vanish.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Note!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Note!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Some texts (e.g.&nbsp;MKB) instead <em>define</em> <span class="math inline">\(I^C_{xy}=\int_{\mathcal{B}}xy\,dm\)</span> (without the minus sign); with that convention the off-diagonal entries of the inertia matrix above must be negated to match.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Think!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1036,7 +1118,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> Is my moment of inertia about an axis through my body greater when my arms are closed or open?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1045,7 +1127,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Greater when arms are open — mass is farther from the axis. See also: <a href="https://www.youtube.com/watch?v=M_YCWDXCwZM">Professor Walter Lewin rolling cylinders</a>.</p>
 </div>
@@ -1105,7 +1187,7 @@ window.Quarto = {
 </section>
 <section id="radius-of-gyration" class="level2" data-number="19.16">
 <h2 data-number="19.16" class="anchored" data-anchor-id="radius-of-gyration"><span class="header-section-number">19.16</span> Radius of Gyration</h2>
-<p>The radius of gyration <span class="math inline">\(k_z\)</span> about the <span class="math inline">\(z\)</span>-axis satisfies <span class="math inline">\(mk_z^2 = I_{zz}\)</span>.</p>
+<p>The radius of gyration <span class="math inline">\(k_z\)</span> about the <span class="math inline">\(z\)</span>-axis satisfies <span class="math inline">\(mk_z^2 = I_{zz}\)</span>. Similarly, <span class="math inline">\(k_x\)</span> and <span class="math inline">\(k_y\)</span> are defined by <span class="math inline">\(mk_x^2 = I_{xx}\)</span> and <span class="math inline">\(mk_y^2=I_{yy}\)</span>.</p>
 <div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="The radius of gyration"><source src="https://youtube.com/shorts/pRxOpqpKq78"></video></div>
 </section>
 <section id="angular-momentum-about-a-moving-point-p" class="level2" data-number="19.17">
@@ -1115,6 +1197,19 @@ window.Quarto = {
 \end{align}\]</span> with special cases <span class="math inline">\({\bf H}^C = {\bf I}^C\bomega\)</span> and <span class="math inline">\({\bf H}^O = {\bf I}^O\bomega\)</span> (fixed <span class="math inline">\(O\)</span>). In general: <span class="math display">\[\begin{align}
     \dot{\bf H}^P = {\bf I}^P\overset{\circ}{\bomega}+\bomega\times({\bf I}^P\bomega)+\frac{d}{dt}\leb({\bf r}_C-{\bf r}_P)\times m{\bf v}_P\reb.
 \end{align}\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Note!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Note!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As the body moves, the components of <span class="math inline">\({\bf I}^O\)</span>, <span class="math inline">\({\bf I}^C\)</span>, and <span class="math inline">\({\bf I}^P\)</span> expressed on a corotational basis remain constant.</p>
+</div>
+</div>
 </section>
 <section id="summary" class="level2" data-number="19.18">
 <h2 data-number="19.18" class="anchored" data-anchor-id="summary"><span class="header-section-number">19.18</span> Summary</h2>

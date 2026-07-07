@@ -15,6 +15,8 @@ The integral form of the balance of linear momentum:
 
 The time integral of a force is its **linear impulse**. This form is more general than ${\bf F}=m{\bf a}$ because it does not require ${\bf v}$ to be differentiable.
 
+{{< video https://youtu.be/-AHQOYy3VBk title="Linear momentum and conservation" >}}
+
 ### Conservation of Linear Momentum
 
 ::: {.callout-tip title="Think!"}
@@ -42,6 +44,8 @@ $${\bf G}\cdot{\bf c} \text{ is conserved if, and only if, } {\bf F}\cdot{\bf c}
 If ${\bf c}$ is a constant vector, ${\bf G}\cdot{\bf c}$ is conserved if, and only if, ${\bf F}\cdot{\bf c} = 0$. From the BoLM, this means that there is no force in this constant direction.
 :::
 :::
+
+{{< video https://youtu.be/_3a0CbiLJ18 title="Conservation of linear momentum along a fixed direction" >}}
 
 ### Example
 
@@ -79,6 +83,7 @@ calculate ${\bf M}^O$ and ${\bf M}^P$.
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 4
 \begin{tikzpicture}
     \draw[thick,->] (0,0) -- (0,1) node[above] {${\bf E}_z$};
     \draw[thick,->] (0,0) -- (-1.3,-1) node[left] {${\bf E}_x$};
@@ -104,6 +109,8 @@ calculate ${\bf M}^O$ and ${\bf M}^P$.
 :::
 :::
 
+{{< video https://youtu.be/qiFdls4aFsw title="Review – calculating the moment of a force" >}}
+
 ## Angular Momentum and Its Conservation
 
 Let ${\bf r}$ be the position vector of a particle relative to a fixed point $O$, and ${\bf v}$ its absolute velocity. The **angular momentum** relative to $O$:
@@ -123,6 +130,7 @@ In cylindrical-polar coordinates:
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 4
 \begin{tikzpicture}
     \draw[thick,->] (0,0) -- (0,1) node[above] {${\bf E}_z$};
     \draw[thick,->] (0,0) -- (-1.3,-1) node[left] {${\bf E}_x$};
@@ -139,6 +147,8 @@ In cylindrical-polar coordinates:
 \end{tikzpicture}
 ```
 
+{{< video https://youtu.be/RohK7Sk-pCg title="Angular momentum definition" >}}
+
 ### Angular Momentum Theorem
 
 From the BoLM:
@@ -146,6 +156,8 @@ From the BoLM:
     \dot{\bf H}^O = \frac{d}{dt}\lp{\bf r}\times m{\bf v}\rp = \underbrace{{\bf v}\times m{\bf v}}_{{\bf 0}}+{\bf r}\times m\dot{\bf v} = {\bf r}\times {\bf F}.
 \end{align}
 So $\dot{\bf H}^O = {\bf M}^O$ (the angular momentum theorem).
+
+{{< video https://youtu.be/5oHdJJfxGvk title="Balance of angular momentum" >}}
 
 ### Conservation of Angular Momentum
 
@@ -174,6 +186,8 @@ $${\bf H}^O\cdot{\bf c} \text{ is conserved if, and only if, } \lp{\bf r}\times{
 If ${\bf c}$ is a constant vector, then ${\bf H}^O\cdot{\bf c}$ is conserved if, and only if, $\lp{\bf r}\times {\bf F}\rp\cdot{\bf c} = 0$.
 :::
 :::
+
+{{< video https://youtu.be/9TFLI5Tjiv8 title="Conservation of angular momentum" >}}
 
 ### Central Force Problems
 
@@ -237,20 +251,6 @@ Show that ${\bf H}^O\cdot{\bf E}_z$ is conserved.
 
 **Conservation** of $\mathbf{G}$ if $\mathbf{F}=\mathbf{0}$; conservation of $\mathbf{H}^O$ if $\mathbf{M}^O=\mathbf{0}$.
 
-## Lecture Videos
-
-{{< video https://youtu.be/-AHQOYy3VBk title="Linear momentum and conservation" >}}
-
-{{< video https://youtu.be/_3a0CbiLJ18 title="Conservation of linear momentum along a fixed direction" >}}
-
-{{< video https://youtu.be/qiFdls4aFsw title="Review – calculating the moment of a force" >}}
-
-{{< video https://youtu.be/RohK7Sk-pCg title="Angular momentum definition" >}}
-
-{{< video https://youtu.be/5oHdJJfxGvk title="Balance of angular momentum" >}}
-
-{{< video https://youtu.be/9TFLI5Tjiv8 title="Conservation of angular momentum" >}}
-
 {{< video https://youtu.be/MEwpRoLB7KM title="Conservations – linear vs. angular momentum vs. energy" >}}
 
 
@@ -262,12 +262,12 @@ Show that ${\bf H}^O\cdot{\bf E}_z$ is conserved.
 
 **2.** [MKB 03-159] The block is subjected to a time-varying force $P(t)$ shown in the plot; $P=0$ for $t>3$ s. *(ans. $t_s=3.69$ s)*
 
-{{< video https://youtu.be/ugj4fefUN4c title="Solution – Problem 03/159" width="100%" >}}
+{{< video https://youtu.be/ugj4fefUN4c title="Solution – Problem 03/159" >}}
 
 
 **3.** [MKB 03-161] Use Newton's third law. Recall $\int_{x_A}^{x_B}f(x)\,dx = F_{\mathrm{avg}}(x_B-x_A)$. *(ans. $v_f=0.00264$ m/s, $F_{\mathrm{avg}}=59.5$ N)*
 
-{{< video https://youtu.be/Q-F7ew3jFuQ title="Solution – Problem 03/161" width="100%" >}}
+{{< video https://youtu.be/Q-F7ew3jFuQ title="Solution – Problem 03/161" >}}
 
 
 **4.** [03-167] *(ans. $R_x=559$ lb, $R_y=218$ lb)*
@@ -276,7 +276,7 @@ Show that ${\bf H}^O\cdot{\bf E}_z$ is conserved.
 
 **6.** [03-185] *(ans. $v_B=5.43$ m/s)*
 
-{{< video https://youtu.be/V3ussTTlrs8 title="Solution – Problem 03/185" width="100%" >}}
+{{< video https://youtu.be/V3ussTTlrs8 title="Solution – Problem 03/185" >}}
 
 
 **7.** [03-181] *(ans. $|H|=389$ N·m·s, $|M|=260$ N·m)*
