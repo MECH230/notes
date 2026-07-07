@@ -10,7 +10,7 @@ Consider a body $\mathcal{B}$ in motion in 3D space.
 #| engine: tikz
 #| echo: false
 #| fig-align: center
-#| fig-width: 4
+#| fig-width: 5
 \begin{tikzpicture}
     \draw plot[thick,smooth cycle, tension=1] coordinates {(0, 0) (2, 1) (2.5, 3.5) (1.5, 4) (0.5, 3) (-1, 2)};
     \begin{scope}[shift={(10,0)}, rotate=90, transform shape]
@@ -54,6 +54,7 @@ Any rigid body motion can be built in two steps:
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 6
 \begin{tikzpicture}
     \begin{scope}
         \draw[fill=yellow!30] (0,0) circle(2);
@@ -132,6 +133,7 @@ A *corotational basis* $\{{\bf e}_1,{\bf e}_2\}$ is a pair of vectors embedded i
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 6
 \begin{tikzpicture}
     \draw[dashed] (0,0) rectangle (2,3);
     \draw[->,thick] (0.5,0.5) -- (1.5,2) node[midway,left] {$\bf v$};
@@ -161,8 +163,11 @@ where $a$ and $b$ are constant and ${\bf e}_1(t)$, ${\bf e}_2(t)$ evolve with th
 A tensor ${\bf T}$ is a *linear transformation* that transforms a vector into another vector: ${\bf T}{\bf u} = {\bf v}$. A tensor exists independent of any basis and is defined by its action on vectors.
 
 Examples: 
+
 - A rotation tensor ${\bf Q}$ acting on some vector ${\bf v}$ returns a vector ${\bf u}$ that is a rotation of ${\bf v}$ by some angle $\theta$.
+
 - The identity tensor ${\bf I}$ acting on any vector ${\bf v}$ returns the same vector ${\bf v}$.
+
 - A scaling tensor ${\bf S}$ acting on some vector ${\bf v}$ returns another the scaled vector $k{\bf v}$.
 
 ::: {.callout-tip title="Think!"}
@@ -170,19 +175,22 @@ Examples:
 
 ::: {.callout-note title="Answer" collapse="true"}
 Yes. To be a linear transformation, a rotation would have to satisfy two rules:
+
 - Rotating $a{\bf X}$ is the same as rotating ${\bf X}$ and then scaling by $a$.
+
 - Rotating ${\bf X}_1$ and ${\bf X}_2$ is the same as rotating ${\bf X}_1$, rotating ${\bf X}_2$, and then adding the results together.
+
 Since both of these propositions are true for rotations, we conclude that rotations are linear transformations. Thus, rotations are tensors.
 :::
 :::
 
 ::: {.callout-tip title="Think!"}
-**Question:** Are vectors and matrices the same?
+**Question:** Are tensors and matrices the same?
 
 ::: {.callout-note title="Answer" collapse="true"}
-No. A vector is an abstract object independent of any basis; a matrix is its representation in a specific basis. Similarly, a tensor is not a matrix, but can be expressed as one in a given coordinate system.
+We can answer this question using an analogous one: are vectors and arrays the same?
 
-We can further answer this question using an analogous one: are vectors and arrays the same?
+No. A vector is an abstract object independent of any basis; an array is its representation in a specific basis. Similarly, a tensor is not a matrix, but can be expressed as one in a given coordinate system.
 
 We can represent a vector as an array of numbers if we have chosen a basis or coordinate system, but a vector is an abstract object that exists independent of any basis.
 

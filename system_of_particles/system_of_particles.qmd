@@ -6,7 +6,7 @@ title: "System of Particles"
 #| engine: tikz
 #| echo: false
 #| fig-align: center
-#| fig-width: 4
+#| fig-width: 5
 \begin{tikzpicture}
     \draw[thick,->] (0,0) -- (0,1) node[above] {${\bf E}_z$};
     \draw[thick,->] (0,0) -- (-1.3,-1) node[left] {${\bf E}_x$};
@@ -28,7 +28,7 @@ title: "System of Particles"
 \end{tikzpicture}
 ```
 
-Consider a system of $n$ particles. A typical particle has mass $m_i$, position vector ${\bf r}_i$ relative to $O$, velocity ${\bf v}_i = \dot{\bf r}_i$, acceleration ${\bf a}_i = \dot{\bf v}_i$, linear momentum ${\bf G}_i = m_i{\bf v}_i$, angular momentum relative to some point $P$ ${\bf H}^P_i = ({\bf r}_i-{\bf r}_P)\times{\bf G}_i$, and kinetic energy $T_i = \frac{1}{2}m_i{\bf v}_i\cdot{\bf v}_i$.
+Consider a system of $n$ particles. A typical particle has mass $m_i$, position vector ${\bf r}_i$ relative to $O$, velocity ${\bf v}_i = \dot{\bf r}_i,$ acceleration ${\bf a}_i = \dot{\bf v}_i$, linear momentum ${\bf G}_i = m_i{\bf v}_i,$ angular momentum relative to some point $P$ ${\bf H}^P_i = ({\bf r}_i-{\bf r}_P)\times{\bf G}_i,$ and kinetic energy $T_i = \frac{1}{2}m_i{\bf v}_i\cdot{\bf v}_i$.
 
 In this chapter, we define analogous system-level quantities and derive the balance laws for the system from the balance law for each individual particle.
 
@@ -221,13 +221,57 @@ Drawing the FBDs of both masses: ...
 
 ## Summary
 
-**Center of mass**: $\mathbf{r}_C = \frac{\sum m_i \mathbf{r}_i}{m}$.
+**Kinematics of a system of particles**
 
-**BoLM for system**: $\mathbf{F}_{\mathrm{ext}} = m\mathbf{a}_C$.
+Consider a system of $n$ particles each with mass $m_i$ and with position vector ${\bf r}_i$ from the origin.
+The total mass of the system of particles is $m = \sum_{i=1}^n m_i$.
+The center of mass of the system of particles $C$ is defined to be located at
+\begin{align}
+    {\bf r}_C = \frac{\sum_{i=1}^n m_i{\bf r}_i}{m}.
+\end{align}
+The velocity and acceleration of the center of mass are then obtained by differentiation ${\bf r}_C$.
+\begin{align}
+    {\bf v}_C = \frac{\sum_{i=1}^n m_i{\bf v}_i}{m},\quad\text{and}\quad{\bf a}_C = \frac{\sum_{i=1}^n m_i{\bf a}_i}{m}.
+\end{align}
+The linear momentum of a system of particles is the sum of the linear momenta of its constituents which is also the linear momentum of the center of mass
+\begin{align}
+    {\bf G} = \sum_{i=1}^n{\bf G}_i = m{\bf v}_C.
+\end{align}
+The angular momentum of a system of particles about point $P$ is the sum of the angular momenta of its constituents about $P$
+\begin{align}
+    {\bf H}^P = \sum_{i=1}^n\lp{\bf r}_i-{\bf r}_P\rp\times m_i{\bf v}_i.
+\end{align}
+This expression can be rewritten as
+\begin{align}
+    {\bf H}^P = {\bf H} + ({\bf r}-{\bf r}_P)\times {\bf G}.
+\end{align}
+where the angular momentum ${\bf H}^C$ of the system about the center of mass can be written equivalently as
+\begin{align}
+    {\bf H} =  \sum_{i=1}^n({\bf r}_i-{\bf r}_C)\times m_k{\bf v}_i= \sum_{i=1}^n({\bf r}_i-{\bf r}_C)\times m_i({\bf v}_i-{\bf v}_C).
+\end{align}
+The kinetic energy of the system of particles is the sum of the kinetic energies of its constituents. This is not equal to the $\frac{1}{2}m{\bf v}_C\cdot{\bf v}_C$.
+\begin{align}
+    T = \sum_{i=1}^nT_i = \sum_{i=1}^n\frac{1}{2}m_i{\bf v}_i\cdot{\bf v}_i = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C + \frac{1}{2}\sum_{i=1}^nm_k({\bf v}_i-{\bf v}_C)\cdot({\bf v}_i-{\bf v}_C).
+\end{align}
 
-**BoAM for system**: $\dot{\mathbf{H}}^P = \mathbf{M}^P - \mathbf{v}_P\times\mathbf{G}$; simplifies to $\mathbf{M}^O=\dot{\mathbf{H}}^O$ (fixed $O$) or $\mathbf{M}^C=\dot{\mathbf{H}}^C$ (center of mass).
+**Kinetics of a system of particles**
 
-**Kinetic energy**: $T = \tfrac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C + \tfrac{1}{2}\sum m_i(\mathbf{v}_i-\mathbf{v}_C)\cdot(\mathbf{v}_i-\mathbf{v}_C)$.
+The balance of linear momentum for a system of particles is obtained by adding the balance of linear momenta of the individual particles ${\bf F}_i = m_i{\bf a}_i$
+\begin{align}
+    {\bf F} = \sum{\bf F}_i = \sum m_i{\bf a}_i = m{\bf a}_c.
+\end{align}
+Here, ${\bf F}$ is the net external force acting on the system.
+The balance of angular momentum of a system of particles about any point $P$ is
+\begin{align}
+    \dot{\bf H}^P = {\bf M}^P-{\bf v}^P\times{\bf G}.
+\end{align}
+If $P$ is a fixed point $O$, then this equation simplifies to ${\bf M}^O=\dot{\bf H}^O$.
+If $P$ is the center of mass $C$, then this equation simplifies to ${\bf M}^C = \dot{\bf H}^C$.
+The work-energy theorem for a system of particles is the sum of the work-energy theorems of the individual particles
+\begin{align}
+    \sum \dot{T}_i = \sum {\bf F}_i\cdot{\bf v}_i.
+\end{align}
+Now that different points in the system have different displacements/velocities, it is important to note that the work of a force $i$ is obtained by dotting ${\bf F}_i$ with the velocity/displacement of its point of application.
 
 ## Exercises
 
