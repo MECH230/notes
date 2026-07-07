@@ -620,10 +620,10 @@ window.Quarto = {
 <section id="kinetic-energy" class="level2" data-number="15.2">
 <h2 data-number="15.2" class="anchored" data-anchor-id="kinetic-energy"><span class="header-section-number">15.2</span> Kinetic Energy</h2>
 <p>The <strong>kinetic energy</strong> of a particle: <span class="math display">\[\begin{align}
-    T = \frac{m}{2}{\bf v}\cdot{\bf v} = \frac{1}{2}mv^2.
+    T = \frac{m}{2}{\bf v}\cdot{\bf v}.
 \end{align}\]</span></p>
 <p>In different bases: <span class="math display">\[\begin{align*}
-    T = \frac{1}{2}m(v_x^2+v_y^2+v_z^2) = \frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2+\dot{z}^2).
+    T = \frac{1}{2}m(v_x^2+v_y^2+v_z^2) = \frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2+\dot{z}^2) = \frac{1}{2}mv^2.
 \end{align*}\]</span></p>
 </section>
 <section id="energy" class="level2" data-number="15.3">
@@ -681,6 +681,35 @@ W_{1-2} &amp;= \int_{t_1}^{t_2} m{\bf a}\cdot {\bf v}\, dt = \int_{t_1}^{t_2}\do
     W_{1-2} = \int_{{\bf r}(t_1)}^{{\bf r}(t_2)}{\bf F}_c\cdot d{\bf r} = -\int_{{\bf r}(t_1)}^{{\bf r}(t_2)}\frac{\partial U}{\partial {\bf r}}\cdot d{\bf r} = -U_2+U_1 = -\Delta_{1-2}U.
 \end{align}\]</span></p>
 <p>If potential energy decreases (<span class="math inline">\(U_2 \leq U_1\)</span>), the work is positive and kinetic energy increases.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> Consider a particle thrown from the top of a building. Describe the changes in kinetic and potential energy of the particle during its motion.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>When the particle is still high, its potential energy is high and its kinetic energy is low. When the particle has traveled downward, its potential energy is low and its kinetic energy is high.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 <section id="constant-forces" class="level3" data-number="15.7.1">
 <h3 data-number="15.7.1" class="anchored" data-anchor-id="constant-forces"><span class="header-section-number">15.7.1</span> Constant Forces</h3>
 <p>Constant force <span class="math inline">\({\bf C}\)</span> is conservative with potential <span class="math inline">\(U = -{\bf C}\cdot{\bf r}\)</span>.</p>
@@ -709,8 +738,9 @@ W_{1-2} &amp;= \int_{t_1}^{t_2} m{\bf a}\cdot {\bf v}\, dt = \int_{t_1}^{t_2}\do
 <section id="energy-and-its-conservation" class="level2" data-number="15.8">
 <h2 data-number="15.8" class="anchored" data-anchor-id="energy-and-its-conservation"><span class="header-section-number">15.8</span> Energy and Its Conservation</h2>
 <p>If only conservative forces act, define total mechanical energy <span class="math inline">\(E = T + U\)</span>. Then: <span class="math display">\[\begin{align*}
-    \dot{T} = -\dot{U} \implies \dot{E} = \dot{T}+\dot{U} = 0.
-\end{align*}\]</span> <span class="math inline">\(E\)</span> is conserved when all work-doing forces are conservative.</p>
+    &amp; \dot{T} = {\bf F}_c\cdot{\bf V} = -\frac{\partial U}{\partial {\bf r}}\cdot\dot{\bf r} = -\dot{U}\\
+    &amp; \dot{T} = -\dot{U} \implies \dot{E} = \dot{T}+\dot{U} = 0.
+\end{align*}\]</span> <span class="math inline">\(E\)</span> is conserved when all work-doing forces are conservative, ie. <span class="math inline">\({\bf F}\cdot{\bf v}={\bf F}_c\cdot{\bf v}\)</span>.</p>
 <p>If nonconservative forces also act: <span class="math display">\[\begin{align}
     E_B - E_A = W_{{\bf F}_{nc},AB}.
 \end{align}\]</span></p>
