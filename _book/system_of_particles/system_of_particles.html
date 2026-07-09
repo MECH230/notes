@@ -427,12 +427,12 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="system_of_particles_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+<p><img src="system_of_particles_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="480"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Consider a system of <span class="math inline">\(n\)</span> particles. A typical particle has mass <span class="math inline">\(m_i\)</span>, position vector <span class="math inline">\({\bf r}_i\)</span> relative to <span class="math inline">\(O\)</span>, velocity <span class="math inline">\({\bf v}_i = \dot{\bf r}_i\)</span>, acceleration <span class="math inline">\({\bf a}_i = \dot{\bf v}_i\)</span>, linear momentum <span class="math inline">\({\bf G}_i = m_i{\bf v}_i\)</span>, angular momentum relative to some point <span class="math inline">\(P\)</span> <span class="math inline">\({\bf H}^P_i = ({\bf r}_i-{\bf r}_P)\times{\bf G}_i\)</span>, and kinetic energy <span class="math inline">\(T_i = \frac{1}{2}m_i{\bf v}_i\cdot{\bf v}_i\)</span>.</p>
+<p>Consider a system of <span class="math inline">\(n\)</span> particles. A typical particle has mass <span class="math inline">\(m_i\)</span>, position vector <span class="math inline">\({\bf r}_i\)</span> relative to <span class="math inline">\(O\)</span>, velocity <span class="math inline">\({\bf v}_i = \dot{\bf r}_i,\)</span> acceleration <span class="math inline">\({\bf a}_i = \dot{\bf v}_i\)</span>, linear momentum <span class="math inline">\({\bf G}_i = m_i{\bf v}_i,\)</span> angular momentum relative to some point <span class="math inline">\(P\)</span> <span class="math inline">\({\bf H}^P_i = ({\bf r}_i-{\bf r}_P)\times{\bf G}_i,\)</span> and kinetic energy <span class="math inline">\(T_i = \frac{1}{2}m_i{\bf v}_i\cdot{\bf v}_i\)</span>.</p>
 <p>In this chapter, we define analogous system-level quantities and derive the balance laws for the system from the balance law for each individual particle.</p>
 <section id="center-of-mass" class="level2" data-number="18.1">
 <h2 data-number="18.1" class="anchored" data-anchor-id="center-of-mass"><span class="header-section-number">18.1</span> Center of Mass</h2>
@@ -766,10 +766,30 @@ window.Quarto = {
 </section>
 <section id="summary" class="level2" data-number="18.8">
 <h2 data-number="18.8" class="anchored" data-anchor-id="summary"><span class="header-section-number">18.8</span> Summary</h2>
-<p><strong>Center of mass</strong>: <span class="math inline">\(\mathbf{r}_C = \frac{\sum m_i \mathbf{r}_i}{m}\)</span>.</p>
-<p><strong>BoLM for system</strong>: <span class="math inline">\(\mathbf{F}_{\mathrm{ext}} = m\mathbf{a}_C\)</span>.</p>
-<p><strong>BoAM for system</strong>: <span class="math inline">\(\dot{\mathbf{H}}^P = \mathbf{M}^P - \mathbf{v}_P\times\mathbf{G}\)</span>; simplifies to <span class="math inline">\(\mathbf{M}^O=\dot{\mathbf{H}}^O\)</span> (fixed <span class="math inline">\(O\)</span>) or <span class="math inline">\(\mathbf{M}^C=\dot{\mathbf{H}}^C\)</span> (center of mass).</p>
-<p><strong>Kinetic energy</strong>: <span class="math inline">\(T = \tfrac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C + \tfrac{1}{2}\sum m_i(\mathbf{v}_i-\mathbf{v}_C)\cdot(\mathbf{v}_i-\mathbf{v}_C)\)</span>.</p>
+<p><strong>Kinematics of a system of particles</strong></p>
+<p>Consider a system of <span class="math inline">\(n\)</span> particles each with mass <span class="math inline">\(m_i\)</span> and with position vector <span class="math inline">\({\bf r}_i\)</span> from the origin. The total mass of the system of particles is <span class="math inline">\(m = \sum_{i=1}^n m_i\)</span>. The center of mass of the system of particles <span class="math inline">\(C\)</span> is defined to be located at <span class="math display">\[\begin{align}
+    {\bf r}_C = \frac{\sum_{i=1}^n m_i{\bf r}_i}{m}.
+\end{align}\]</span> The velocity and acceleration of the center of mass are then obtained by differentiation <span class="math inline">\({\bf r}_C\)</span>. <span class="math display">\[\begin{align}
+    {\bf v}_C = \frac{\sum_{i=1}^n m_i{\bf v}_i}{m},\quad\text{and}\quad{\bf a}_C = \frac{\sum_{i=1}^n m_i{\bf a}_i}{m}.
+\end{align}\]</span> The linear momentum of a system of particles is the sum of the linear momenta of its constituents which is also the linear momentum of the center of mass <span class="math display">\[\begin{align}
+    {\bf G} = \sum_{i=1}^n{\bf G}_i = m{\bf v}_C.
+\end{align}\]</span> The angular momentum of a system of particles about point <span class="math inline">\(P\)</span> is the sum of the angular momenta of its constituents about <span class="math inline">\(P\)</span> <span class="math display">\[\begin{align}
+    {\bf H}^P = \sum_{i=1}^n\lp{\bf r}_i-{\bf r}_P\rp\times m_i{\bf v}_i.
+\end{align}\]</span> This expression can be rewritten as <span class="math display">\[\begin{align}
+    {\bf H}^P = {\bf H} + ({\bf r}-{\bf r}_P)\times {\bf G}.
+\end{align}\]</span> where the angular momentum <span class="math inline">\({\bf H}^C\)</span> of the system about the center of mass can be written equivalently as <span class="math display">\[\begin{align}
+    {\bf H} =  \sum_{i=1}^n({\bf r}_i-{\bf r}_C)\times m_k{\bf v}_i= \sum_{i=1}^n({\bf r}_i-{\bf r}_C)\times m_i({\bf v}_i-{\bf v}_C).
+\end{align}\]</span> The kinetic energy of the system of particles is the sum of the kinetic energies of its constituents. This is not equal to the <span class="math inline">\(\frac{1}{2}m{\bf v}_C\cdot{\bf v}_C\)</span>. <span class="math display">\[\begin{align}
+    T = \sum_{i=1}^nT_i = \sum_{i=1}^n\frac{1}{2}m_i{\bf v}_i\cdot{\bf v}_i = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C + \frac{1}{2}\sum_{i=1}^nm_k({\bf v}_i-{\bf v}_C)\cdot({\bf v}_i-{\bf v}_C).
+\end{align}\]</span></p>
+<p><strong>Kinetics of a system of particles</strong></p>
+<p>The balance of linear momentum for a system of particles is obtained by adding the balance of linear momenta of the individual particles <span class="math inline">\({\bf F}_i = m_i{\bf a}_i\)</span> <span class="math display">\[\begin{align}
+    {\bf F} = \sum{\bf F}_i = \sum m_i{\bf a}_i = m{\bf a}_c.
+\end{align}\]</span> Here, <span class="math inline">\({\bf F}\)</span> is the net external force acting on the system. The balance of angular momentum of a system of particles about any point <span class="math inline">\(P\)</span> is <span class="math display">\[\begin{align}
+    \dot{\bf H}^P = {\bf M}^P-{\bf v}^P\times{\bf G}.
+\end{align}\]</span> If <span class="math inline">\(P\)</span> is a fixed point <span class="math inline">\(O\)</span>, then this equation simplifies to <span class="math inline">\({\bf M}^O=\dot{\bf H}^O\)</span>. If <span class="math inline">\(P\)</span> is the center of mass <span class="math inline">\(C\)</span>, then this equation simplifies to <span class="math inline">\({\bf M}^C = \dot{\bf H}^C\)</span>. The work-energy theorem for a system of particles is the sum of the work-energy theorems of the individual particles <span class="math display">\[\begin{align}
+    \sum \dot{T}_i = \sum {\bf F}_i\cdot{\bf v}_i.
+\end{align}\]</span> Now that different points in the system have different displacements/velocities, it is important to note that the work of a force <span class="math inline">\(i\)</span> is obtained by dotting <span class="math inline">\({\bf F}_i\)</span> with the velocity/displacement of its point of application.</p>
 </section>
 <section id="exercises" class="level2" data-number="18.9">
 <h2 data-number="18.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">18.9</span> Exercises</h2>

@@ -459,7 +459,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="480"></p>
 </figure>
 </div>
 </div>
@@ -508,7 +508,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576"></p>
 </figure>
 </div>
 </div>
@@ -566,7 +566,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="rigid_body_kinematics_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576"></p>
 </figure>
 </div>
 </div>
@@ -578,7 +578,12 @@ window.Quarto = {
 <section id="tensors" class="level2" data-number="19.2">
 <h2 data-number="19.2" class="anchored" data-anchor-id="tensors"><span class="header-section-number">19.2</span> Tensors</h2>
 <p>A tensor <span class="math inline">\({\bf T}\)</span> is a <em>linear transformation</em> that transforms a vector into another vector: <span class="math inline">\({\bf T}{\bf u} = {\bf v}\)</span>. A tensor exists independent of any basis and is defined by its action on vectors.</p>
-<p>Examples: - A rotation tensor <span class="math inline">\({\bf Q}\)</span> acting on some vector <span class="math inline">\({\bf v}\)</span> returns a vector <span class="math inline">\({\bf u}\)</span> that is a rotation of <span class="math inline">\({\bf v}\)</span> by some angle <span class="math inline">\(\theta\)</span>. - The identity tensor <span class="math inline">\({\bf I}\)</span> acting on any vector <span class="math inline">\({\bf v}\)</span> returns the same vector <span class="math inline">\({\bf v}\)</span>. - A scaling tensor <span class="math inline">\({\bf S}\)</span> acting on some vector <span class="math inline">\({\bf v}\)</span> returns another the scaled vector <span class="math inline">\(k{\bf v}\)</span>.</p>
+<p>Examples:</p>
+<ul>
+<li><p>A rotation tensor <span class="math inline">\({\bf Q}\)</span> acting on some vector <span class="math inline">\({\bf v}\)</span> returns a vector <span class="math inline">\({\bf u}\)</span> that is a rotation of <span class="math inline">\({\bf v}\)</span> by some angle <span class="math inline">\(\theta\)</span>.</p></li>
+<li><p>The identity tensor <span class="math inline">\({\bf I}\)</span> acting on any vector <span class="math inline">\({\bf v}\)</span> returns the same vector <span class="math inline">\({\bf v}\)</span>.</p></li>
+<li><p>A scaling tensor <span class="math inline">\({\bf S}\)</span> acting on some vector <span class="math inline">\({\bf v}\)</span> returns another the scaled vector <span class="math inline">\(k{\bf v}\)</span>.</p></li>
+</ul>
 <div class="callout callout-style-default callout-tip callout-titled" title="Think!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -602,7 +607,12 @@ window.Quarto = {
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Yes. To be a linear transformation, a rotation would have to satisfy two rules: - Rotating <span class="math inline">\(a{\bf X}\)</span> is the same as rotating <span class="math inline">\({\bf X}\)</span> and then scaling by <span class="math inline">\(a\)</span>. - Rotating <span class="math inline">\({\bf X}_1\)</span> and <span class="math inline">\({\bf X}_2\)</span> is the same as rotating <span class="math inline">\({\bf X}_1\)</span>, rotating <span class="math inline">\({\bf X}_2\)</span>, and then adding the results together. Since both of these propositions are true for rotations, we conclude that rotations are linear transformations. Thus, rotations are tensors.</p>
+<p>Yes. To be a linear transformation, a rotation would have to satisfy two rules:</p>
+<ul>
+<li><p>Rotating <span class="math inline">\(a{\bf X}\)</span> is the same as rotating <span class="math inline">\({\bf X}\)</span> and then scaling by <span class="math inline">\(a\)</span>.</p></li>
+<li><p>Rotating <span class="math inline">\({\bf X}_1\)</span> and <span class="math inline">\({\bf X}_2\)</span> is the same as rotating <span class="math inline">\({\bf X}_1\)</span>, rotating <span class="math inline">\({\bf X}_2\)</span>, and then adding the results together.</p></li>
+</ul>
+<p>Since both of these propositions are true for rotations, we conclude that rotations are linear transformations. Thus, rotations are tensors.</p>
 </div>
 </div>
 </div>
@@ -618,7 +628,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Question:</strong> Are vectors and matrices the same?</p>
+<p><strong>Question:</strong> Are tensors and matrices the same?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -631,8 +641,8 @@ window.Quarto = {
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>No.&nbsp;A vector is an abstract object independent of any basis; a matrix is its representation in a specific basis. Similarly, a tensor is not a matrix, but can be expressed as one in a given coordinate system.</p>
-<p>We can further answer this question using an analogous one: are vectors and arrays the same?</p>
+<p>We can answer this question using an analogous one: are vectors and arrays the same?</p>
+<p>No.&nbsp;A vector is an abstract object independent of any basis; an array is its representation in a specific basis. Similarly, a tensor is not a matrix, but can be expressed as one in a given coordinate system.</p>
 <p>We can represent a vector as an array of numbers if we have chosen a basis or coordinate system, but a vector is an abstract object that exists independent of any basis.</p>
 <p>Consider for example a position vector <span class="math inline">\({\bf r}\)</span> to a particle <span class="math inline">\(P\)</span>. This vector encodes the position of <span class="math inline">\(P\)</span> relative to the origin (distance and direction) independent of any basis. We could however express this vector in the Cartesian basis as <span class="math inline">\(x{\bf E}_x+y{\bf E}_y+z{\bf E}_z\)</span>. In this basis, we could write the array <span class="math inline">\([x,y,z]\)</span> to represent this vector.</p>
 <p>Analogously, a tensor is not a matrix, but a tensor can be expressed as a matrix in a given coordinate system.</p>
