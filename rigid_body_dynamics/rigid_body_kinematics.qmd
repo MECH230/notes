@@ -247,7 +247,7 @@ Apply the definition of the tensor product term by term on a vector.
 :::
 
 ::: {.callout-tip title="Think!"}
-**Question:** Show that the rotation tensor ${\bf Q}$ can be expressed as ${\bf Q} = {\bf e}_x\otimes{\bf E}_x+{\bf e}_y\otimes{\bf E}_y+{\bf e}_z\otimes{\bf E}_z$. In other words, show that $\lp {\bf e}_x\otimes{\bf E}_x+{\bf e}_y\otimes{\bf E}_y+{\bf e}_z\otimes{\bf E}_z\rp\lp{\bf X}_A-{\bf X}_B\rp = {\bf x}_A-{\bf x}_B$ where ${\bf X}_A-{\bf X}_B &= a{\bf E}_x+b{\bf E}_y$ and ${\bf x}_A-{\bf x}_B &= a{\bf e}_x+b{\bf e}_y$.
+**Question:** Show that the rotation tensor ${\bf Q}$ can be expressed as ${\bf Q} = {\bf e}_x\otimes{\bf E}_x+{\bf e}_y\otimes{\bf E}_y+{\bf e}_z\otimes{\bf E}_z$. In other words, show that $\lp {\bf e}_x\otimes{\bf E}_x+{\bf e}_y\otimes{\bf E}_y+{\bf e}_z\otimes{\bf E}_z\rp\lp{\bf X}_A-{\bf X}_B\rp = {\bf x}_A-{\bf x}_B$ where ${\bf X}_A-{\bf X}_B = a{\bf E}_x+b{\bf E}_y$ and ${\bf x}_A-{\bf x}_B = a{\bf e}_x+b{\bf e}_y$.
 
 ::: {.callout-note title="Answer" collapse="true"}
 ...
@@ -324,6 +324,7 @@ where $\theta$ is a function of $t$.
 Recall that the rotation tensor can be expressed as
 \begin{align*}
     {\bf Q} = {\bf e}_1\otimes{\bf E}_1+{\bf e}_2\otimes{\bf E}_2+{\bf e}_3\otimes{\bf E}_3,
+\end{align*}
 and for a rotation about ${\bf E}_3$, we have
 \begin{align*}
     {\bf e}_1 &= \cos(\theta){\bf E}_1+\sin(\theta){\bf E}_2,\\
@@ -482,13 +483,21 @@ A noninertial frame is one that accelerates (e.g. an accelerating bus, a merry-g
 where $\overset{\circ}{\bf x}_{B/A} = \dot{x}{\bf e}_x+\dot{y}{\bf e}_y$ and $\overset{\circ\circ}{\bf x}_{B/A} = \ddot{x}{\bf e}_x+\ddot{y}{\bf e}_y$ are the first and second **corotational rates**. The term $2\bomega\times\overset{\circ}{\bf x}_{B/A}$ is the **Coriolis acceleration** and $\bomega\times(\bomega\times{\bf x}_{B/A})$ is the **centripetal acceleration**.
 
 ::: {.callout-important title="Note!"}
-One can view the frame at $A$ with the fixed basis as an interial frame and the frame at $B$ with the corotational basis as a noninertial frame.
+Consider a particle $B$ whose motion is described by a noninertial frame with origin $A$, angular velocity $\bomega$ and angular acceleration $\balpha$. In an inertial frame, the balance of linear momentum for particle $B$ applies:
+\begin{align}
+    {\bf F} &= m{\bf a}_B,\\
+    {\bf F} &= m\left({\bf a}_A+\balpha\times({\bf x}_B-{\bf x}_A)+\bomega\times\lp\bomega\times\lp{\bf x}_B-{\bf x}_A\rp\rp+2\bomega\times\overset{\circ}{\bf x}_{B/A}+\overset{\circ\circ}{\bf x}_{B/A}\right),\\
+    {\bf F}-m\left({\bf a}_A+\balpha\times({\bf x}_B-{\bf x}_A)+\bomega\times\lp\bomega\times\lp{\bf x}_B-{\bf x}_A\rp\rp+2\bomega\times\overset{\circ}{\bf x}_{B/A}\right) = m\overset{\circ\circ}{\bf x}_{B/A}
+\end{align}.
+The balance of linear momentum for particle $B$ in the noninertial frame is the same as in an inertial frame, except that the fictitious forces $-m\left({\bf a}_A+\balpha\times({\bf x}_B-{\bf x}_A)+\bomega\times\lp\bomega\times\lp{\bf x}_B-{\bf x}_A\rp\rp+2\bomega\times\overset{\circ}{\bf x}_{B/A}\right)$ must be included.
+
 :::
 
 ::: {.callout-tip title="Think!"}
 **Question:** Watch the below video of people playing catch on a merry-go-round. A ball is thrown on a merry-go-round rotating about fixed center $O$, with ${\bf r}_0 = -R{\bf E}_x$ and ${\bf v}_0 = v_0{\bf E}_x$. The merry-go-round has an angular velocity $\bomega$ and an angular acceleration $\balpha$. What are the velocity and acceleration of the ball that is appears to have with respect to an observer on the merry-go-round?
 
 {{< video https://www.youtube.com/watch?v=mPsLanVS1Q8 title="National Geographic - Coriolis Effect on Merry-Go-Round" >}}
+
 
 ::: {.callout-note title="Answer" collapse="true"}
 The ball $P$ is a projectile so its absolute acceleration, velocity and position vectors are respectively
@@ -507,6 +516,11 @@ The relative velocity being the only unknown in this equation, we can solve for 
 \end{align}
 :::
 :::
+
+
+Another example of this observed in the Foucault pendulum, where the plane of oscillation of the pendulum appears to rotate with respect to the Earth. The Coriolis effect is responsible for this apparent rotation.
+
+{{< video https://www.youtube.com/shorts/kbHYp3H3mDE title="How A Foucault Pendulum Shows The Earth Is Turning" >}}
 
 ## Classifications of Rigid Body Motions
 
@@ -637,6 +651,7 @@ The contact point with the surface.
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 4
 \begin{tikzpicture}
     \draw (-1,0) -- (7,0);
     \draw (3,3) circle (3);
