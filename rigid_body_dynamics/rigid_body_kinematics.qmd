@@ -813,7 +813,7 @@ The parallel axis theorem applies only between the center of mass $C$ and anothe
 
 The radius of gyration $k_z$ about the $z$-axis satisfies $mk_z^2 = I_{zz}$. Similarly, $k_x$ and $k_y$ are defined by $mk_x^2 = I_{xx}$ and $mk_y^2=I_{yy}$.
 
-{{< video https://youtube.com/shorts/pRxOpqpKq78 title="The radius of gyration" >}}
+{{< video https://www.youtube.com/shorts/pRxOpqpKq78 title="The radius of gyration" >}}
 
 ## Angular Momentum About a Moving Point $P$
 
