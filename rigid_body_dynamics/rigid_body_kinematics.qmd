@@ -1064,9 +1064,15 @@ The Coriolis acceleration is $2\boldsymbol{\omega}\times\mathbf{v}_{\mathrm{rel}
 
 **1.** [MKB 05-102] *(ans. $\alpha=0.286$ rad/s$^2$, $a_A=0.653$ m/s$^2$ down)*
 
+{{< video https://youtu.be/n34Z2jwwnW0 title="Solution – Problem 05/102" >}}
+
 **2.** [MKB 05-125] *(ans. $\mathbf{v}_A=0.1\mathbf{E}_x+0.25\mathbf{E}_y$ m/s, $\beta=68.2^\circ$)*
 
+{{< video https://youtu.be/PyM7KmlPirU title="Solution – Problem 05/125" >}}
+
 **3.** [05-143] *(ans. $v_{\mathrm{rel}}=3.93$ m/s, $a_{\mathrm{rel}}=15.22$ m/s$^2$, $\omega_{BC}=1.046$ rad/s CW, $\alpha_{BC}=117.7$ rad/s$^2$ CW)*
+
+{{< video https://youtu.be/IG7Qtj2TdFQ title="Solution – Problem 05/143" >}}
 
 ### Set 17 – Rolling and Sliding
 

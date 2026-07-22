@@ -73,6 +73,24 @@ Using ${\bf F} = \sum_i{\bf F}_i$ and ${\bf M}^C = {\bf M}_e+\sum_i({\bf r}_i-{\
 \end{align}
 This form is often easier to use in applications: each force is dotted with the velocity of its point of application.
 
+## Conservative Moments
+
+### Torsional Spring
+
+A torsional spring with stiffness $K$ creates a couple ${\bf M}_S = -K\theta{\bf E}_z$. Its power is:
+\begin{align}
+    {\bf M}_S\cdot\bomega = -K\theta\dot{\theta} = -\frac{d}{dt}\lp\frac{K\theta^2}{2}\rp.
+\end{align}
+Hence $U = \frac{1}{2}K\theta^2$ for the torsional spring.
+
+### Constant Couple
+
+A constant couple ${\bf M}_e = M_e{\bf E}_z$ has power ${\bf M}_e\cdot\bomega = M_e\dot{\theta} = -\frac{d}{dt}(-M_e\theta)$. Hence $U = -M_e\theta$.
+
+::: {.callout-important title="Note!"}
+These results apply only for $\bomega = \omega{\bf E}_z$. Constant couples are not conservative in general.
+:::
+
 ## Examples
 
 ### Bar Pendulum Fixed at Its End

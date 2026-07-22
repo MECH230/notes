@@ -4,9 +4,12 @@ title: "Kinetics of Rigid Bodies"
 
 ## Balance Laws for a Rigid Body
 
-The balance laws for a rigid body are **Euler's first law** (Balance of Linear Momentum, BoLM) and **Euler's second law** (Balance of Angular Momentum, BoAM):
+The balance laws for a rigid body are **Euler's first law** (Balance of Linear Momentum, BoLM) 
 \begin{align}
-    {\bf F} &= m{\bf a}_C,\\
+    {\bf F} &= m{\bf a}_C,
+\end{align}
+and **Euler's second law** (Balance of Angular Momentum, BoAM), which can be expressed in three equivalent forms:
+\begin{align}
     {\bf M}^O &= \dot{\bf H}^O \quad\text{about a fixed point }O,\\
     {\bf M}^C &= \dot{\bf H}^C \quad\text{about the center of mass }C,\\
     {\bf M}^P &= \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G} \quad\text{about any material point }P.
@@ -21,7 +24,7 @@ The resultant force ${\bf F}$ is the sum of all external forces. The resultant m
 #| engine: tikz
 #| echo: false
 #| fig-align: center
-#| fig-width: 3
+#| fig-width: 4
 \begin{tikzpicture}[scale=1]
     \draw[thick] plot [smooth cycle, tension=1] coordinates {
         (0,0) (2,3) (5,2.5) (7,1) (4,-2) (1,-3)};
@@ -51,7 +54,9 @@ For $K$ forces ${\bf F}_i$ acting at positions ${\bf r}_i$ plus a pure moment ${
 
 Examples of pure moments: reaction moments ${\bf M}_R$ at joints; torsional spring moments $-K_T(\theta-\theta_0){\bf E}_z$.
 
-### Does Weight Give a Moment About the Center of Mass?
+{{< video https://www.youtube.com/watch?v=Era7OOKyVEw title="Different types of springs & their uses | Skill-Lync" >}}
+
+### Does Weight Result in a Moment About the Center of Mass?
 
 The total weight is ${\bf W} = \int_{\mathcal{B}}{\bf g}\,dm = m{\bf g}$, and its moment about $C$ is:
 \begin{align}
@@ -60,6 +65,8 @@ The total weight is ${\bf W} = \int_{\mathcal{B}}{\bf g}\,dm = m{\bf g}$, and it
 since $\int_{\mathcal{B}}\bpi\,dm = {\bf 0}$ by definition of the center of mass.
 
 ## Equivalence of the BoAM Forms
+
+The following devepments are true for rigid bodies where the inertia matrix is constant in the body frame.
 
 ### BoAM About Any Point $P$
 
@@ -73,61 +80,92 @@ Substituting $\dot{\bf H}^C = \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G}+(
 \end{align}
 recovering the BoAM about a general material point $P$.
 
-{{< video https://www.youtube.com/shorts/VmeM0BNnGR0 title="Ice skater conservation of angular momentum" >}}
-
-{{< video https://www.youtube.com/watch?v=64t-dVtDwkQ title="Angular momentum conservation on Hoberman Sphere - Dr. Boyd F. Edwards" >}}
-
 ### BoAM About a Fixed Point $O$
 
 If $P$ is a fixed point $O$ (so ${\bf v}_O = {\bf 0}$), the above simplifies to ${\bf M}^O = \dot{\bf H}^O$.
 
+::: {.callout-tip title="Think!"}
+**Question:** When is the angular momentum of a rigid body about a fixed point $O$ or about its center of mass $C$ conserved? Under what conditions are these anguar momenta conserved in a certain direction (eg. along ${\bf E}_z$)?
+
+::: {.callout-note title="Answer" collapse="true"}
+
+{{< video https://www.youtube.com/shorts/VmeM0BNnGR0 title="Ice skater conservation of angular momentum" >}}
+
+{{< video https://www.youtube.com/watch?v=64t-dVtDwkQ title="Angular momentum conservation on Hoberman Sphere - Dr. Boyd F. Edwards" >}}
+
+:::
+:::
+
 ## Calculating the Derivative of Angular Momentum
 
-Recall ${\bf H}^C = {\bf I}^C\bomega$ and $\dot{\bf H}^C = \overset{\circ}{\bf H}^C+\bomega\times{\bf H}^C$, where $\overset{\circ}{\bf H}^C$ is the corotational rate (time derivative with ${\bf e}_x,{\bf e}_y,{\bf e}_z$ fixed).
-
-For $\bomega = \omega{\bf E}_z$ (the case exclusively considered in this class):
+Recall that
 \begin{align}
-    {\bf H}^C &= I^C_{xz}\omega_z{\bf e}_x+I^C_{yz}\omega_z{\bf e}_y+I^C_{zz}\omega_z{\bf e}_z,\\
-    \dot{\bf H}^C &= (I^C_{xz}\dot{\omega}-I^C_{yz}\omega^2){\bf e}_x+(I^C_{yz}\dot{\omega}+I^C_{xz}\omega^2){\bf e}_y+I^C_{zz}\dot{\omega}{\bf E}_z.
+    \begin{split}
+        {\bf H}^P = {\bf I}^P\bomega+({\bf r}_C-{\bf r}_P)\times m{\bf v}_P
+    \end{split}
 \end{align}
-Analogously for other reference points.
+if $P$ is taken to be the center of mass $C$ or a fixed point $O$ respectively, we get
+\begin{align}
+    \begin{split}
+        {\bf H}^C = {\bf I}^C\bomega,\\
+        {\bf H}^P = {\bf I}^P\bomega.
+    \end{split}
+\end{align}
+In component form,
+\begin{align}
+    {\bf H}^C = (I_{xx}^C\omega_x+I_{xy}^C\omega_y+I_{xz}^C\omega_z){\bf e}_x+(I_{xy}^C\omega_x+I_{yy}^C\omega_y+I_{yz}^C\omega_z){\bf e}_y+(I_{xz}^C\omega_x+I_{yz}^C\omega_y+I_{zz}^C\omega_z){\bf e}_z.
+\end{align}
+where
+\begin{align}
+    \bomega = \omega_x{\bf e}_x+\omega_y{\bf e}_y+\omega_z{\bf e}_z.
+\end{align}
+We need to calculate $\dot{\bf H}^C$.
+\begin{align}
+    \dot{\bf H}^C=\overset{\circ}{{\bf H}^C}+\bomega\times{\bf H}^C.
+\end{align}
+where $\overset{\circ}{{\bf H}^C}$ is the corotational rate of ${\bf H}$, that is the time derivative of ${\bf H}$ that is obtained while keeping ${\bf e}_x$, ${\bf e}_y$, and ${\bf e}_z$ fixed:
+\begin{align}
+    \overset{\circ}{{\bf H}^C} = (I_{xx}^C\dot{\omega}_x+I_{xy}^C\dot{\omega}_y+I_{xz}^C\dot{\omega}_z){\bf e}_x+(I_{xy}^C\dot{\omega}_x+I_{yy}^C\dot{\omega}_y+I_{yz}^C\dot{\omega}_z){\bf e}_y+(I_{xz}^C\dot{\omega}_x+I_{yz}^C\dot{\omega}_y+I_{zz}^C\dot{\omega}_z){\bf e}_z.
+\end{align}
+For the case where $\bomega=\omega{\bf E}_z$ considered exclusively in this class, the previous expressions simplify to
+\begin{align}
+    \begin{split}
+        {\bf H}^C &= I_{xz}^C\omega_z{\bf e}_x+I_{yz}^C\omega_z{\bf e}_y+I_{zz}^C\omega_z{\bf e}_z,\\
+        \dot{\bf H}^C &= (I_{xz}^C\dot{\omega}-I_{yz}^C\omega^2){\bf e}_x+(I_{yz}^C\dot{\omega}+I_{xz}^C\omega^2){\bf e}_y+I_{zz}^C\dot{\omega}{\bf E}_z.
+    \end{split}
+\end{align}
+Analogous developments yield
+\begin{align}
+    \begin{split}
+        & \dot{\bf H}^O = (I_{xz}^O\dot{\omega}-I_{yz}^O\omega^2){\bf e}_x+(I_{yz}^O\dot{\omega}+I_{xz}^O\omega^2){\bf e}_y+I_{zz}^O\dot{\omega}{\bf E}_z,\\
+        & \dot{\bf H}^C = (I_{xz}^C\dot{\omega}-I_{yz}^C\omega^2){\bf e}_x+(I_{yz}^C\dot{\omega}+I_{xz}^C\omega^2){\bf e}_y+I_{zz}^C\dot{\omega}{\bf E}_z,\\
+        & \dot{\bf H}^P = (I_{xz}^P\dot{\omega}-I_{yz}^P\omega^2){\bf e}_x+(I_{yz}^P\dot{\omega}+I_{xz}^P\omega^2){\bf e}_y+I_{zz}^P\dot{\omega}{\bf E}_z+\frac{d}{dt}\left(({\bf r}_C-{\bf r}_P)\times m{\bf v}_P\right).
+    \end{split}
+\end{align}
+For fixed axis rotation, it is generally better to sum the moments about a fixed point passing through the axis of rotation. For general plane motion, there is no fixed point, so the BoAM is either summed about the center of mass or about a general material point $P$ on the body.
 
 ::: {.callout-important title="Note!"}
-For fixed axis rotation, sum moments about a fixed point on the axis. For general plane motion, sum about $C$ or a general material point $P$ using
+Remember, the BoAM about a general point has additional terms to ${\bf I}^P\bomega$:
 \begin{align}
-    {\bf M}^P = (I^C_{xz}\dot{\omega}-I^C_{yz}\omega^2){\bf e}_x+(I^C_{yz}\dot{\omega}+I^C_{xz}\omega^2){\bf e}_y+I^C_{zz}\dot{\omega}{\bf E}_z+({\bf r}_C-{\bf r}_P)\times m{\bf a}_C.
+    \begin{split}
+        {\bf M}^P &= (I_{xz}^P\dot{\omega}-I_{yz}^P\omega^2){\bf e}_x+(I_{yz}^P\dot{\omega}+I_{xz}^P\omega^2){\bf e}_y+I_{zz}^P\dot{\omega}{\bf E}_z+({\bf v}_P-{\bf v}_C)\times{\bf G},\\
+        &= (I_{xz}^C\dot{\omega}-I_{yz}^C\omega^2){\bf e}_x+(I_{yz}^C\dot{\omega}+I_{xz}^C\omega^2){\bf e}_y+I_{zz}^C\dot{\omega}{\bf E}_z + ({\bf r}_C-{\bf r}_P)\times m{\bf a}_C.
+    \end{split}
 \end{align}
-In most problems, axes are chosen so that $I_{xz}=I_{yz}=0$.
 :::
 
-## Conservative Moments
-
-### Torsional Spring
-
-A torsional spring with stiffness $K$ creates a couple ${\bf M}_S = -K\theta{\bf E}_z$. Its power is:
-\begin{align}
-    {\bf M}_S\cdot\bomega = -K\theta\dot{\theta} = -\frac{d}{dt}\lp\frac{K\theta^2}{2}\rp.
-\end{align}
-Hence $U = \frac{1}{2}K\theta^2$ for the torsional spring.
-
-### Constant Couple
-
-A constant couple ${\bf M}_e = M_e{\bf E}_z$ has power ${\bf M}_e\cdot\bomega = M_e\dot{\theta} = -\frac{d}{dt}(-M_e\theta)$. Hence $U = -M_e\theta$.
-
-::: {.callout-important title="Note!"}
-These results apply only for $\bomega = \omega{\bf E}_z$. Constant couples are not conservative in general.
-:::
 
 ## Impact Problems and Center of Percussion
 
 For rigid bodies, impact ideas are the same as in systems of particles.
 
-*Example:* Consider a projectile fired horizontally at a pendulum (in the horizontal plane, no gravity). Find position $x$ along the pendulum such that the reaction force at the pin is nearly zero during impact.
+*Example:* Consider a projectile fired horizontally at a pendulum (in the horizontal plane, no gravity). Find position $x$ along the pendulum such that the reaction force at the pin is nearly zero during impact. If $x$ is large, the horizontal reaction at $O$ points left; if $x$ is small, it points right. The optimal $x$ that minimizes the reaction is called the **center of percussion**.
 
 ```{r}
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 3
 \begin{tikzpicture}
     \draw[thick] (0,0) -- (0,-4);
     \fill (0,0) circle (0.1);
@@ -137,7 +175,6 @@ For rigid bodies, impact ideas are the same as in systems of particles.
 \end{tikzpicture}
 ```
 
-If $x$ is large, the horizontal reaction at $O$ points left; if $x$ is small, it points right. The optimal $x$ that minimizes the reaction is called the **center of percussion**.
 
 ## Summary
 
@@ -200,7 +237,7 @@ Four classes of applications: (1) purely translational motion ($\bomega=\balpha=
 
 **1.** [06-051] *(See problem set for figure.)*
 
-{{< video https://youtu.be/Q7PV2pxBuwc title="Solution – Problem 06/051" width="100%" >}}
+{{< video https://youtu.be/Q7PV2pxBuwc title="Solution – Problem 06/051" >}}
 
 
 ### Set 21 – General Plane Motion
@@ -213,7 +250,7 @@ Four classes of applications: (1) purely translational motion ($\bomega=\balpha=
 
 **4.** [06-070] *(ans. $a=\frac{8(m+M)g}{3\pi(m+3M)}$ left, $\alpha=\frac{8mg}{3\pi r(m+3M)}$ CW)*
 
-{{< video https://youtu.be/0_wB2JnICLc title="Solution – Problem 06/070" width="100%" >}}
+{{< video https://youtu.be/3UvEbjlaBwc title="Solution – Problem 06/070" >}}
 
 
 **5.** [06-076] *(ans. $s=\frac{3d}{2}$)*
@@ -234,5 +271,11 @@ Four classes of applications: (1) purely translational motion ($\bomega=\balpha=
 
 **6.** [06-155] *(ans. $t=\frac{2v_0}{g(7\mu_k\cos\theta-2\sin\theta)}$)*
 
-{{< video https://youtu.be/0N8tDgnrXNA title="Solution – Problem 06/155" width="100%" >}}
+{{< video https://youtu.be/0N8tDgnrXNA title="Solution – Problem 06/155" >}}
+
+### Other
+
+{{< video https://youtu.be/gvBZyEq_bGo title="Solution – Problem 06/035 Nonzero products of inertia" >}}
+
+{{< video https://youtu.be/HGiVnQbItTI title="Solution – MKB Problem 07/066 A rotating shaft with a mass imbalance" >}}
 
