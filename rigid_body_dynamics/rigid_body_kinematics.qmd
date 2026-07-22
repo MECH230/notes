@@ -586,7 +586,7 @@ So ${\bf r}_{A/IC}$ is perpendicular to ${\bf v}_A$. Knowing the directions of $
 #| engine: tikz
 #| echo: false
 #| fig-align: center
-#| fig-width: 4
+#| fig-width: 5
 \begin{tikzpicture}
     \draw plot[smooth cycle, tension=1] coordinates {(0,0) (2,1) (3,2) (2.5,3.5) (1.5,4) (0.5,3) (-1,2)};
     \draw (6,2) -- (1,1) node[below] {$A$};
@@ -826,15 +826,17 @@ Combining these two results and writing the inertia tensor in matrix form recove
 \end{align}
 with the same component formulas given above.
 
+{{< video https://youtu.be/BP1N9zFeY98 title="Moments and products of inertia" >}}
+
+The moments of inertia are a measure of the mass distribution of a rigid body about the axes of rotation. The greater the moment of inertia, the more difficult it is to change the angular velocity of the rigid body about that axis.
+
 ::: {.callout-tip title="Think!"}
 **Question:** Is my moment of inertia about an axis through my body greater when my arms are closed or open?
 
 ::: {.callout-note title="Answer" collapse="true"}
-Greater when arms are open — mass is farther from the axis. See also: [Professor Walter Lewin rolling cylinders](https://www.youtube.com/watch?v=M_YCWDXCwZM).
+Greater when arms are open — mass is farther from the axis.
 :::
 :::
-
-{{< video https://youtu.be/BP1N9zFeY98 title="Moments and products of inertia" >}}
 
 {{< video https://www.youtube.com/watch?v=M_YCWDXCwZM&t=152s title="Cylinders Rolling Down Incline - Professor Walter Lewin" >}}
 
@@ -846,6 +848,7 @@ Greater when arms are open — mass is farther from the axis. See also: [Profess
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 3
 \begin{tikzpicture}[scale=2]
     \draw[thick] (0,1) ellipse (0.5 and 0.2);
     \draw[thick] (-0.5,1) -- (-0.5,-1);
@@ -873,8 +876,6 @@ Since $V=\pi R^2\ell$ and $m=\rho\pi\ell R^2$, this simplifies to $I^C_{zz} = \d
 
 {{< video https://youtu.be/Z5ugvTjmLys title="Example - inertias of a solid cylinder" >}}
 
-{{< video https://youtube.com/shorts/0CfRKuqjZ7YU title="Example - parallel axis theorem on a solid cylinder" >}}
-
 ### Example: Cylindrical Hoop
 
 Every $dm$ has $r = R$, so:
@@ -890,7 +891,7 @@ Suppose we already know $I^C_{xx}, I^C_{xy}, I^C_{xz}$, etc. about the center of
 #| engine: tikz
 #| echo: false
 #| fig-align: center
-#| fig-width: 5
+#| fig-width: 4
 \begin{tikzpicture}
     \draw[thick] plot[smooth cycle, tension=0.7] coordinates {(0,0) (1,2) (3,3) (5,1) (4,-1) (2,-2)};
     \draw[thick,->] (4,0) -- (2,2) node [above, right] {${\bf r}-{\bf r}_C$};
@@ -920,6 +921,8 @@ The moment of inertia always increases when we move away from the center of mass
 \begin{align}
     I_{xy}^A = -\int_{\mathcal{B}}(x-A_x)(y-A_y)\,dm = I^C_{xy}-mA_xA_y.
 \end{align}
+
+{{< video https://www.youtube.com/shorts/0CfRKuqjZ7Y title="Example - parallel axis theorem on a solid cylinder" >}}
 
 ### Deriving the Parallel Axis Theorem Using Tensors
 
