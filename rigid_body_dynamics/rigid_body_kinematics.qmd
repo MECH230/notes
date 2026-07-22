@@ -475,19 +475,22 @@ The anglar velocity and angular acceleration are properties of the rigid bodies.
 
 ## Particle in a Noninertial Frame
 
-A noninertial frame is one that accelerates (e.g. an accelerating bus, a merry-go-round). If $A$ is fixed to the rigid body and $B$ moves relative to it:
+A noninertial frame is one that accelerates (e.g. an accelerating bus, a merry-go-round). 
+
+Consider two points: $A$ is a material point of a rigid body and $B$ moves relative to it, then
 \begin{align}
+    {\bf x}_B-{\bf x}_A &= x{\bf e}_x+y{\bf e}_y,\\
     {\bf v}_B-{\bf v}_A &= \bomega\times({\bf x}_B-{\bf x}_A)+\overset{\circ}{\bf x}_{B/A},\\
     {\bf a}_B-{\bf a}_A &= \balpha\times({\bf x}_B-{\bf x}_A)+\bomega\times\lp\bomega\times\lp{\bf x}_B-{\bf x}_A\rp\rp+2\bomega\times\overset{\circ}{\bf x}_{B/A}+\overset{\circ\circ}{\bf x}_{B/A},
 \end{align}
-where $\overset{\circ}{\bf x}_{B/A} = \dot{x}{\bf e}_x+\dot{y}{\bf e}_y$ and $\overset{\circ\circ}{\bf x}_{B/A} = \ddot{x}{\bf e}_x+\ddot{y}{\bf e}_y$ are the first and second **corotational rates**. The term $2\bomega\times\overset{\circ}{\bf x}_{B/A}$ is the **Coriolis acceleration** and $\bomega\times(\bomega\times{\bf x}_{B/A})$ is the **centripetal acceleration**.
+where $\overset{\circ}{\bf x}_{B/A} = \dot{x}{\bf e}_x+\dot{y}{\bf e}_y$ and $\overset{\circ\circ}{\bf x}_{B/A} = \ddot{x}{\bf e}_x+\ddot{y}{\bf e}_y$ are the first and second **corotational rates**. These are the velocity and acceleration of $B$ with respect to $A$ as observed from the noninertial frame (ie. an observer fixed to the rigid body). The term $2\bomega\times\overset{\circ}{\bf x}_{B/A}$ is the **Coriolis acceleration** and $\bomega\times(\bomega\times{\bf x}_{B/A})$ is the **centripetal acceleration**.
 
 ::: {.callout-important title="Note!"}
 Consider a particle $B$ whose motion is described by a noninertial frame with origin $A$, angular velocity $\bomega$ and angular acceleration $\balpha$. In an inertial frame, the balance of linear momentum for particle $B$ applies:
 \begin{align}
     {\bf F} &= m{\bf a}_B,\\
     {\bf F} &= m\left({\bf a}_A+\balpha\times({\bf x}_B-{\bf x}_A)+\bomega\times\lp\bomega\times\lp{\bf x}_B-{\bf x}_A\rp\rp+2\bomega\times\overset{\circ}{\bf x}_{B/A}+\overset{\circ\circ}{\bf x}_{B/A}\right),\\
-    {\bf F}-m\left({\bf a}_A+\balpha\times({\bf x}_B-{\bf x}_A)+\bomega\times\lp\bomega\times\lp{\bf x}_B-{\bf x}_A\rp\rp+2\bomega\times\overset{\circ}{\bf x}_{B/A}\right) = m\overset{\circ\circ}{\bf x}_{B/A}
+    {\bf F}-m\left({\bf a}_A+\balpha\times({\bf x}_B-{\bf x}_A)+\bomega\times\lp\bomega\times\lp{\bf x}_B-{\bf x}_A\rp\rp+2\bomega\times\overset{\circ}{\bf x}_{B/A}\right) &= m\overset{\circ\circ}{\bf x}_{B/A}
 \end{align}.
 The balance of linear momentum for particle $B$ in the noninertial frame is the same as in an inertial frame, except that the fictitious forces $-m\left({\bf a}_A+\balpha\times({\bf x}_B-{\bf x}_A)+\bomega\times\lp\bomega\times\lp{\bf x}_B-{\bf x}_A\rp\rp+2\bomega\times\overset{\circ}{\bf x}_{B/A}\right)$ must be included.
 
@@ -596,8 +599,7 @@ So ${\bf r}_{A/IC}$ is perpendicular to ${\bf v}_A$. Knowing the directions of $
 
 For the IC:
 \begin{align}
-    {\bf v}_P = \bomega\times{\bf r}_{P/IC}, \qquad
-    {\bf a}_P = \balpha\times{\bf r}_{P/IC}+\bomega\times(\bomega\times{\bf r}_{P/IC}).
+    {\bf v}_P = \bomega\times{\bf r}_{P/IC}.
 \end{align}
 
 ::: {.callout-important title="Note!"}
@@ -613,12 +615,12 @@ For the IC:
 
 {{< video https://youtu.be/E_5JPTllkDU title="IC of rotation for the link of a crank slider" >}}
 
-## Doing Kinematics Geometrically
+<!-- ## Doing Kinematics Geometrically
 
 In some problems, geometric laws that hold for all time can be differentiated:
 - The law of sines holds at all times.
 - The law of cosines holds at all times.
-- Angle sum relations for a triangle (e.g. $\beta+\alpha+\theta=\pi$) can be differentiated.
+- Angle sum relations for a triangle (e.g. $\beta+\alpha+\theta=\pi$) can be differentiated. -->
 
 ## Kinematics of Rolling and Sliding
 
@@ -647,6 +649,14 @@ The contact point with the surface.
 :::
 :::
 
+::: {.callout-tip title="Think!"}
+**Question:** Draw the velocity profile of a wheel that is rolling without slipping on a road.
+
+::: {.callout-note title="Answer" collapse="true"}
+...
+:::
+:::
+
 ```{r}
 #| engine: tikz
 #| echo: false
@@ -666,18 +676,38 @@ The contact point with the surface.
     \draw[->] (-4,2) -- (3,3) node[midway,above] {${\bf r}_C$};
     \node at (3,2.7) {$C$};
     \node at (3,-0.3) {$P$};
+    \node at (9,0) {Horizontal plane};
+    \node at (8,5) {Circular disk of radius $R$};
 \end{tikzpicture}
 ```
 
-A disk of radius $R$ rolling on a plane with $\bomega = \omega{\bf E}_z$. Since ${\bf v}_P = {\bf 0}$:
+Consider an upright homogeneous disk of radius $R$ rolling on a plane, with angular velocity $\bomega=\omega{\bf E}_z$ and angular acceleration $\balpha=\alpha{\bf E}_z$. The center of mass $C$ moves in rectilinear motion:
 \begin{align}
-    {\bf v}_C = \bomega\times R{\bf E}_y = -\omega R{\bf E}_x \implies \dot{x} = -\omega R, \quad \ddot{x} = -\alpha R.
+    {\bf r}_C = x{\bf E}_x+c{\bf E}_y, \qquad {\bf v}_C = \dot{x}{\bf E}_x, \qquad {\bf a}_C = \ddot{x}{\bf E}_x.
 \end{align}
-The acceleration of the contact point:
+Define a corotational basis for the disk:
 \begin{align}
-    {\bf a}_P = -\omega^2 R{\bf E}_y
+    {\bf e}_x = \cos(\theta){\bf E}_x+\sin(\theta){\bf E}_y, \qquad {\bf e}_y = \cos(\theta){\bf E}_y-\sin(\theta){\bf E}_x, \qquad {\bf e}_z = {\bf E}_z.
 \end{align}
-(purely vertical — toward the center).
+Since the disk is rolling without slipping, ${\bf v}_P={\bf 0}$. Then, using the two-point velocity relation between $C$ and $P$:
+\begin{align}
+    {\bf v}_C-{\bf v}_P = {\bf v}_C = \dot{x}{\bf E}_x = \bomega\times({\bf r}_C-{\bf r}_P) = \omega{\bf E}_z\times R{\bf E}_y = -\omega R{\bf E}_x,
+\end{align}
+so that
+\begin{align}
+    \dot{x} = -\omega R.
+\end{align}
+Differentiating this result with respect to time gives
+\begin{align}
+    \ddot{x} = -\alpha R.
+\end{align}
+Substituting this result into the two-point acceleration relation between $C$ and $P$,
+\begin{align}
+    {\bf a}_C-{\bf a}_P &= \balpha\times({\bf r}_C-{\bf r}_P)+\bomega\times({\bf v}_C-{\bf v}_P),\\
+    -R\alpha{\bf E}_x-{\bf a}_P &= -\alpha R{\bf E}_x-\omega^2 R{\bf E}_y,\\
+    {\bf a}_P &= -\omega^2 R{\bf E}_y.
+\end{align}
+Thus, the acceleration of the contact point $P$ is purely vertical (toward the center).
 
 ## Center of Mass
 
@@ -693,30 +723,66 @@ For rigid bodies, $C$ behaves as a material point:
 
 ## Linear Momentum
 
+By definition, the linear momentum ${\bf G}$ of a body is the sum of the linear momenta of its constituents:
 \begin{align}
-    {\bf G} = \int_{\mathcal{B}}{\bf v}\,dm = m{\bf v}_C.
+    {\bf G} = \int_{\mathcal{B}}{\bf v}\,dm.
+\end{align}
+Equivalently,
+\begin{align}
+    {\bf G} = \int_{\mathcal{B}}{\bf v}\,dm = \int_{\mathcal{B}}\frac{d{\bf r}}{dt}\,dm = \frac{d}{dt}\left(\int_{\mathcal{B}}{\bf r}\,dm\right) = \frac{d}{dt}(m{\bf r}_C) = m{\bf v}_C.
 \end{align}
 
 {{< video https://youtu.be/101EriK4HIQ title="Center of mass and linear momentum of a rigid body" >}}
 
 ## Angular Momenta
 
-The angular momentum about a point $P$ is
+The angular momentum of a system relative to any point $P$ is
 \begin{align}
-    {\bf H}^P = \int_{\mathcal{B}}({\bf r}-{\bf r}_P)\times{\bf v}\,dm,
+    {\bf H}^P = \int_{\mathcal{B}}({\bf r}-{\bf r}_P)\times{\bf v}\,dm.
 \end{align}
-and the relationship between angular momenta about $O$ and $C$ is
+For $P$ being the center of mass $C$ and the fixed origin $O$, respectively, we have
+\begin{align}
+    {\bf H}^C = \int_{\mathcal{B}}({\bf r}-{\bf r}_C)\times{\bf v}\,dm, \qquad {\bf H}^O = \int_{\mathcal{B}}{\bf r}\times{\bf v}\,dm.
+\end{align}
+${\bf H}^P$ and ${\bf H}^C$ are related through
+\begin{align}
+    {\bf H}^P = {\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf G}.
+\end{align}
+For the special case that $P$ is the origin $O$, this gives
 \begin{align}
     {\bf H}^O = {\bf H}^C+{\bf r}_C\times{\bf G}.
 \end{align}
+In other words, the angular momentum of a rigid body relative to a fixed point $O$ is the sum of the angular momentum of the rigid body about its center of mass and the angular momentum of its center of mass relative to $O$.
 
 {{< video https://youtu.be/BGa_d4LscWQ title="Angular momentum of a rigid body" >}}
 
 ### Inertia Tensor
 
-With $\bpi = {\bf r}-{\bf r}_C$ and using the BAC-CAB identity:
+Recall that for any material point on the body, its velocity ${\bf v}$ is
+\begin{align}
+    {\bf v}-{\bf v}_C = \bomega\times({\bf r}-{\bf r}_C).
+\end{align}
+Define $\bpi = {\bf r}-{\bf r}_C = x{\bf e}_x+y{\bf e}_y+z{\bf e}_z$. Then,
+\begin{align}
+    {\bf H}^C &= \int_{\mathcal{B}}({\bf r}-{\bf r}_C)\times{\bf v}\,dm\\
+    &= \int_{\mathcal{B}}({\bf r}-{\bf r}_C)\times({\bf v}_C+\bomega\times({\bf r}-{\bf r}_C))\,dm\\
+    &= \int_{\mathcal{B}}\bpi\times({\bf v}_C+\bomega\times\bpi)\,dm\\
+    &= \int_{\mathcal{B}}\bpi\times{\bf v}_C\,dm+\int_{\mathcal{B}}\bpi\times(\bomega\times\bpi)\,dm.
+\end{align}
+The first integral vanishes (since $\int_{\mathcal{B}}\bpi\,dm={\bf 0}$), and applying the BAC-CAB identity to the second gives
 \begin{align}
     {\bf H}^C = \int_{\mathcal{B}}\lp(\bpi\cdot\bpi)\bomega-(\bpi\cdot\bomega)\bpi\rp dm = {\bf I}^C\bomega.
+\end{align}
+Substituting $\bpi = x{\bf e}_x+y{\bf e}_y+z{\bf e}_z$ and $\bomega=\omega_x{\bf e}_x+\omega_y{\bf e}_y+\omega_z{\bf e}_z$ and expanding component by component,
+\begin{align}
+    {\bf H}^C = (I^C_{xx}\omega_x+I^C_{xy}\omega_y+I^C_{xz}\omega_z){\bf e}_x+(I^C_{xy}\omega_x+I^C_{yy}\omega_y+I^C_{yz}\omega_z){\bf e}_y+(I^C_{xz}\omega_x+I^C_{yz}\omega_y+I^C_{zz}\omega_z){\bf e}_z,
+\end{align}
+or, in matrix-vector form,
+\begin{align}
+    \begin{bmatrix}{\bf H}^C\cdot{\bf e}_x\\{\bf H}^C\cdot{\bf e}_y\\{\bf H}^C\cdot{\bf e}_z\end{bmatrix}
+    =
+    \begin{bmatrix}I^C_{xx}&I^C_{xy}&I^C_{xz}\\I^C_{xy}&I^C_{yy}&I^C_{yz}\\I^C_{xz}&I^C_{yz}&I^C_{zz}\end{bmatrix}
+    \begin{bmatrix}\bomega\cdot{\bf e}_x\\\bomega\cdot{\bf e}_y\\\bomega\cdot{\bf e}_z\end{bmatrix}.
 \end{align}
 The inertia matrix on the corotational basis:
 \begin{align}
@@ -742,6 +808,24 @@ When $\{{\bf e}_x,{\bf e}_y,{\bf e}_z\}$ is an eigenbasis of $[{\bf I}^C]$, the 
 Some texts (e.g. MKB) instead *define* $I^C_{xy}=\int_{\mathcal{B}}xy\,dm$ (without the minus sign); with that convention the off-diagonal entries of the inertia matrix above must be negated to match.
 :::
 
+Using tensors, the same result can be written
+\begin{align}
+    {\bf H}^C &= \int_{\mathcal{B}}\lp(\bpi\cdot\bpi)\bomega-(\bpi\cdot\bomega)\bpi\rp dm\\
+    &= \int_{\mathcal{B}}\lp\bpi\cdot\bpi\,{\bf I}-\bpi\otimes\bpi\rp dm\,\bomega\\
+    &= {\bf I}^C\bomega,
+\end{align}
+where ${\bf I}^C$ is the **inertia tensor** of the rigid body about its center of mass $C$. To find the matrix components of the inertia tensor, first simplify
+\begin{align}
+    \bpi\cdot\bpi\,{\bf I} &= (x^2+y^2+z^2)({\bf e}_x\otimes{\bf e}_x+{\bf e}_y\otimes{\bf e}_y+{\bf e}_z\otimes{\bf e}_z),\\
+    \bpi\otimes\bpi &= x^2{\bf e}_x\otimes{\bf e}_x+xy{\bf e}_x\otimes{\bf e}_y+xz{\bf e}_x\otimes{\bf e}_z+yx{\bf e}_y\otimes{\bf e}_x+y^2{\bf e}_y\otimes{\bf e}_y+yz{\bf e}_y\otimes{\bf e}_z+zx{\bf e}_z\otimes{\bf e}_x+zy{\bf e}_z\otimes{\bf e}_y+z^2{\bf e}_z\otimes{\bf e}_z.
+\end{align}
+Combining these two results and writing the inertia tensor in matrix form recovers
+\begin{align}
+    [{\bf I}^C] =
+    \begin{bmatrix}I^C_{xx}&I^C_{xy}&I^C_{xz}\\I^C_{xy}&I^C_{yy}&I^C_{yz}\\I^C_{xz}&I^C_{yz}&I^C_{zz}\end{bmatrix},
+\end{align}
+with the same component formulas given above.
+
 ::: {.callout-tip title="Think!"}
 **Question:** Is my moment of inertia about an axis through my body greater when my arms are closed or open?
 
@@ -753,6 +837,8 @@ Greater when arms are open — mass is farther from the axis. See also: [Profess
 {{< video https://youtu.be/BP1N9zFeY98 title="Moments and products of inertia" >}}
 
 {{< video https://www.youtube.com/watch?v=M_YCWDXCwZM&t=152s title="Cylinders Rolling Down Incline - Professor Walter Lewin" >}}
+
+**Example: Tight rope walker.** A tight rope walker holds a pole to increase their moment of inertia against rotating off of the rope. This gives the tight rope walker more time to react.
 
 ### Example: Solid Cylinder
 
@@ -775,10 +861,15 @@ Greater when arms are open — mass is farther from the axis. See also: [Profess
 \end{tikzpicture}
 ```
 
-With $dm = \rho\,r\,dr\,d\theta\,dz$:
+With $dm = \rho\,r\,dr\,d\theta\,dz$, we have
 \begin{align}
-    I^C_{zz} = \rho\int_{-\ell/2}^{\ell/2}\int_0^{2\pi}\int_0^R r^3\,dr\,d\theta\,dz = \frac{1}{2}\rho\pi\ell R^4 = \frac{mR^2}{2}.
+    I^C_{zz} &= \int_{\mathcal{B}}(x^2+y^2)\,dm\\
+    &= \int_{\mathcal{B}} r^2\,dm\\
+    &= \rho\int_{-\ell/2}^{\ell/2}\int_0^{2\pi}\int_0^R r^3\,dr\,d\theta\,dz\\
+    &= \rho\,2\pi\ell\int_0^R r^3\,dr\\
+    &= \frac{1}{2}\rho\pi\ell R^4.
 \end{align}
+Since $V=\pi R^2\ell$ and $m=\rho\pi\ell R^2$, this simplifies to $I^C_{zz} = \dfrac{mR^2}{2}$.
 
 {{< video https://youtu.be/Z5ugvTjmLys title="Example - inertias of a solid cylinder" >}}
 
@@ -793,12 +884,97 @@ Every $dm$ has $r = R$, so:
 
 ## Parallel Axis Theorem
 
-Given inertia components about $C$, the inertia about a material point $A$ with ${\bf r}_A - {\bf r}_C = A_x{\bf e}_x+A_y{\bf e}_y+A_z{\bf e}_z$ (axes parallel at $A$ and $C$):
+Suppose we already know $I^C_{xx}, I^C_{xy}, I^C_{xz}$, etc. about the center of mass $C$. We want $I^A_{xx}, I^A_{xy}, I^A_{xz}$, etc. about a fixed material point $A$ on the rigid body, with axes at $A$ parallel to those at $C$.
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+#| fig-width: 5
+\begin{tikzpicture}
+    \draw[thick] plot[smooth cycle, tension=0.7] coordinates {(0,0) (1,2) (3,3) (5,1) (4,-1) (2,-2)};
+    \draw[thick,->] (4,0) -- (2,2) node [above, right] {${\bf r}-{\bf r}_C$};
+    \draw[thick,->] (4,0) -- (3,-1) node [midway, right] {${\bf r}_A-{\bf r}_C$};
+    \draw[thick,->] (3,-1) -- (2,2) node [midway, left] {${\bf r}-{\bf r}_A$};
+    \node at (3,-1.4) {$A$};
+    \node at (4.3,0) {$C$};
+    \fill (3,-1) circle (0.05);
+    \fill (4,0) circle (0.05);
+\end{tikzpicture}
+```
+
+Recall that
 \begin{align}
-    I^A_{xx} &= I^C_{xx}+m(A_y^2+A_z^2),\\
-    I^A_{xy} &= I^C_{xy}-mA_xA_y.
+    I_{xx} = \int_{\mathcal{B}}(x^2+y^2)\,dm, \qquad I_{xy} = -\int_{\mathcal{B}}xy\,dm, \qquad {\bf r}-{\bf r}_C = x{\bf e}_x+y{\bf e}_y+z{\bf e}_z,
 \end{align}
-In tensor form:
+and let ${\bf r}_A-{\bf r}_C = A_x{\bf e}_x+A_y{\bf e}_y+A_z{\bf e}_z$. Then,
+\begin{align}
+    I_{xx}^A &= \int_{\mathcal{B}}\leb(y-A_y)^2+(z-A_z)^2\reb\,dm\\
+    &= I^C_{xx}+(A_y^2+A_z^2)\int_{\mathcal{B}}dm-2A_y\int_{\mathcal{B}}y\,dm-2A_z\int_{\mathcal{B}}z\,dm.
+\end{align}
+Because $\int_{\mathcal{B}}({\bf r}-{\bf r}_C)\,dm={\bf 0}$, we have $\int_{\mathcal{B}}y\,dm=0$ and $\int_{\mathcal{B}}z\,dm=0$, so
+\begin{align}
+    I_{xx}^A = I^C_{xx}+m(A_y^2+A_z^2).
+\end{align}
+The moment of inertia always increases when we move away from the center of mass. Similarly,
+\begin{align}
+    I_{xy}^A = -\int_{\mathcal{B}}(x-A_x)(y-A_y)\,dm = I^C_{xy}-mA_xA_y.
+\end{align}
+
+### Deriving the Parallel Axis Theorem Using Tensors
+
+Analogous to
+\begin{align}
+    {\bf I}^C = \int_{\mathcal{B}}\lp({\bf r}-{\bf r}_C)\cdot({\bf r}-{\bf r}_C)\,{\bf I}-({\bf r}-{\bf r}_C)\otimes({\bf r}-{\bf r}_C)\rp dm,
+\end{align}
+let the inertia tensor of the rigid body $\mathcal{B}$ about any material point $P$ be
+\begin{align}
+    {\bf I}^P = \int_{\mathcal{B}}\lp({\bf r}-{\bf r}_P)\cdot({\bf r}-{\bf r}_P)\,{\bf I}-({\bf r}-{\bf r}_P)\otimes({\bf r}-{\bf r}_P)\rp dm.
+\end{align}
+To write ${\bf I}^P$ in terms of ${\bf I}^C$, introduce ${\bf r}_C-{\bf r}_C$:
+\begin{align}
+    {\bf I}^P &= \int_{\mathcal{B}}\lp({\bf r}+{\bf r}_C-{\bf r}_C-{\bf r}_P)\cdot({\bf r}+{\bf r}_C-{\bf r}_C-{\bf r}_P)\,{\bf I}-({\bf r}+{\bf r}_C-{\bf r}_C-{\bf r}_P)\otimes({\bf r}+{\bf r}_C-{\bf r}_C-{\bf r}_P)\rp dm\\
+    &= \hdots\\
+    &= \lnorm{\bf r}_P-{\bf r}_C\rnorm^2{\bf I}-m({\bf r}_P-{\bf r}_C)\otimes({\bf r}_P-{\bf r}_C).
+\end{align}
+
+A second derivation starts from the relationship between the angular momentum of the body about $P$ and about $C$,
+\begin{align}
+    {\bf H}^P = {\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf G}.
+\end{align}
+Since $C$ and $P$ are both material points on the rigid body, their velocities are related by
+\begin{align}
+    {\bf v}_C = {\bf v}_P+\bomega\times({\bf r}_C-{\bf r}_P).
+\end{align}
+Substituting this into the angular momentum relationship,
+\begin{align}
+    {\bf H}^P &= {\bf H}^C+({\bf r}_C-{\bf r}_P)\times\lp{\bf v}_P+\bomega\times({\bf r}_C-{\bf r}_P)\rp\\
+    &= {\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf v}_P+({\bf r}_C-{\bf r}_P)\times\lp\bomega\times({\bf r}_C-{\bf r}_P)\rp.
+\end{align}
+Using the BAC-CAB identity, ${\bf a}\times({\bf b}\times{\bf c})={\bf b}({\bf a}\cdot{\bf c})-{\bf c}({\bf a}\cdot{\bf b})$, the last term simplifies:
+\begin{align}
+    ({\bf r}_C-{\bf r}_P)\times\lp\bomega\times({\bf r}_C-{\bf r}_P)\rp &= \bomega\lp({\bf r}_C-{\bf r}_P)\cdot({\bf r}_C-{\bf r}_P)\rp-({\bf r}_C-{\bf r}_P)\lp({\bf r}_C-{\bf r}_P)\cdot\bomega\rp\\
+    &= \lp\lnorm{\bf r}_C-{\bf r}_P\rnorm^2{\bf I}-({\bf r}_C-{\bf r}_P)\otimes({\bf r}_C-{\bf r}_P)\rp\bomega\\
+    &= \lp\lnorm{\bf r}_P-{\bf r}_C\rnorm^2{\bf I}-({\bf r}_P-{\bf r}_C)\otimes({\bf r}_P-{\bf r}_C)\rp\bomega.
+\end{align}
+Thus, defining
+\begin{align}
+    {\bf I}^P \equiv {\bf I}^C+m\lnorm{\bf r}_P-{\bf r}_C\rnorm^2{\bf I}-m({\bf r}_P-{\bf r}_C)\otimes({\bf r}_P-{\bf r}_C),
+\end{align}
+we obtain
+\begin{align}
+    {\bf H}^P = {\bf I}^P\bomega+({\bf r}_C-{\bf r}_P)\times m{\bf v}_P.
+\end{align}
+In component form, taking the corotational axes at $P$ and $C$ to be parallel with ${\bf r}_P-{\bf r}_C = A_x{\bf e}_x+A_y{\bf e}_y+A_z{\bf e}_z$,
+\begin{align}
+    [{\bf I}^P] =
+    \begin{bmatrix}I^C_{xx}&I^C_{xy}&I^C_{xz}\\I^C_{xy}&I^C_{yy}&I^C_{yz}\\I^C_{xz}&I^C_{yz}&I^C_{zz}\end{bmatrix}
+    +m\begin{bmatrix}A_x^2+A_y^2+A_z^2&0&0\\0&A_x^2+A_y^2+A_z^2&0\\0&0&A_x^2+A_y^2+A_z^2\end{bmatrix}
+    -m\begin{bmatrix}A_x^2&A_xA_y&A_xA_z\\A_xA_y&A_y^2&A_yA_z\\A_xA_z&A_yA_z&A_z^2\end{bmatrix},
+\end{align}
+recovering the results above.
+
+Combining both derivations, the parallel axis theorem in tensor form is:
 \begin{align}
     {\bf I}^A = {\bf I}^C+m\lnorm{\bf r}_A-{\bf r}_C\rnorm^2{\bf I}-m({\bf r}_A-{\bf r}_C)\otimes({\bf r}_A-{\bf r}_C).
 \end{align}
@@ -819,9 +995,20 @@ The radius of gyration $k_z$ about the $z$-axis satisfies $mk_z^2 = I_{zz}$. Sim
 
 For a material point $P$ on the rigid body:
 \begin{align}
-    {\bf H}^P &= {\bf I}^P\bomega+({\bf r}_C-{\bf r}_P)\times m{\bf v}_P,
+    {\bf H}^P &= \int_{\mathcal{B}}({\bf r}-{\bf r}_P)\times{\bf v}\,dm\\
+    &= \int_{\mathcal{B}}({\bf r}-{\bf r}_P)\times[{\bf v}_P+\bomega\times({\bf r}-{\bf r}_P)]\,dm\\
+    &= \int_{\mathcal{B}}({\bf r}-{\bf r}_P)\times[\bomega\times({\bf r}-{\bf r}_P)]\,dm+\int_{\mathcal{B}}({\bf r}-{\bf r}_P)\times{\bf v}_P\,dm\\
+    &= {\bf I}^P\bomega+({\bf r}_C-{\bf r}_P)\times m{\bf v}_P.
 \end{align}
-with special cases ${\bf H}^C = {\bf I}^C\bomega$ and ${\bf H}^O = {\bf I}^O\bomega$ (fixed $O$). In general:
+This definition of ${\bf I}^P$ agrees with the one derived above. If $P$ is chosen to be the center of mass $C$,
+\begin{align}
+    {\bf H}^C = {\bf I}^C\bomega+({\bf r}_C-{\bf r}_C)\times m{\bf v}_P = {\bf I}^C\bomega.
+\end{align}
+If $P$ is chosen to be a fixed point $O$ (${\bf v}_O={\bf 0}$),
+\begin{align}
+    {\bf H}^O = {\bf I}^O\bomega+({\bf r}_O-{\bf r}_C)\times m{\bf v}_O = {\bf I}^O\bomega.
+\end{align}
+In general:
 \begin{align}
     \dot{\bf H}^P = {\bf I}^P\overset{\circ}{\bomega}+\bomega\times({\bf I}^P\bomega)+\frac{d}{dt}\leb({\bf r}_C-{\bf r}_P)\times m{\bf v}_P\reb.
 \end{align}
