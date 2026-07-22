@@ -385,15 +385,20 @@ window.Quarto = {
   </ul></li>
   <li><a href="#derivation-of-the-work-energy-theorem" id="toc-derivation-of-the-work-energy-theorem" class="nav-link" data-scroll-target="#derivation-of-the-work-energy-theorem"><span class="header-section-number">21.2</span> Derivation of the Work-Energy Theorem</a></li>
   <li><a href="#alternative-form" id="toc-alternative-form" class="nav-link" data-scroll-target="#alternative-form"><span class="header-section-number">21.3</span> Alternative Form</a></li>
-  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">21.4</span> Examples</a>
+  <li><a href="#conservative-moments" id="toc-conservative-moments" class="nav-link" data-scroll-target="#conservative-moments"><span class="header-section-number">21.4</span> Conservative Moments</a>
   <ul class="collapse">
-  <li><a href="#bar-pendulum-fixed-at-its-end" id="toc-bar-pendulum-fixed-at-its-end" class="nav-link" data-scroll-target="#bar-pendulum-fixed-at-its-end"><span class="header-section-number">21.4.1</span> Bar Pendulum Fixed at Its End</a></li>
-  <li><a href="#bar-pendulum-with-end-mass" id="toc-bar-pendulum-with-end-mass" class="nav-link" data-scroll-target="#bar-pendulum-with-end-mass"><span class="header-section-number">21.4.2</span> Bar Pendulum With End Mass</a></li>
-  <li><a href="#follower-force" id="toc-follower-force" class="nav-link" data-scroll-target="#follower-force"><span class="header-section-number">21.4.3</span> Follower Force</a></li>
+  <li><a href="#torsional-spring" id="toc-torsional-spring" class="nav-link" data-scroll-target="#torsional-spring"><span class="header-section-number">21.4.1</span> Torsional Spring</a></li>
+  <li><a href="#constant-couple" id="toc-constant-couple" class="nav-link" data-scroll-target="#constant-couple"><span class="header-section-number">21.4.2</span> Constant Couple</a></li>
   </ul></li>
-  <li><a href="#energy-conservation" id="toc-energy-conservation" class="nav-link" data-scroll-target="#energy-conservation"><span class="header-section-number">21.5</span> Energy Conservation</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">21.6</span> Summary</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">21.7</span> Exercises</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">21.5</span> Examples</a>
+  <ul class="collapse">
+  <li><a href="#bar-pendulum-fixed-at-its-end" id="toc-bar-pendulum-fixed-at-its-end" class="nav-link" data-scroll-target="#bar-pendulum-fixed-at-its-end"><span class="header-section-number">21.5.1</span> Bar Pendulum Fixed at Its End</a></li>
+  <li><a href="#bar-pendulum-with-end-mass" id="toc-bar-pendulum-with-end-mass" class="nav-link" data-scroll-target="#bar-pendulum-with-end-mass"><span class="header-section-number">21.5.2</span> Bar Pendulum With End Mass</a></li>
+  <li><a href="#follower-force" id="toc-follower-force" class="nav-link" data-scroll-target="#follower-force"><span class="header-section-number">21.5.3</span> Follower Force</a></li>
+  </ul></li>
+  <li><a href="#energy-conservation" id="toc-energy-conservation" class="nav-link" data-scroll-target="#energy-conservation"><span class="header-section-number">21.6</span> Energy Conservation</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">21.7</span> Summary</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">21.8</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -479,10 +484,36 @@ window.Quarto = {
     \dot{T} = \sum_{i=1}^K{\bf F}_i\cdot{\bf v}_i+{\bf M}_e\cdot\bomega.
 \end{align}\]</span> This form is often easier to use in applications: each force is dotted with the velocity of its point of application.</p>
 </section>
-<section id="examples" class="level2" data-number="21.4">
-<h2 data-number="21.4" class="anchored" data-anchor-id="examples"><span class="header-section-number">21.4</span> Examples</h2>
-<section id="bar-pendulum-fixed-at-its-end" class="level3" data-number="21.4.1">
-<h3 data-number="21.4.1" class="anchored" data-anchor-id="bar-pendulum-fixed-at-its-end"><span class="header-section-number">21.4.1</span> Bar Pendulum Fixed at Its End</h3>
+<section id="conservative-moments" class="level2" data-number="21.4">
+<h2 data-number="21.4" class="anchored" data-anchor-id="conservative-moments"><span class="header-section-number">21.4</span> Conservative Moments</h2>
+<section id="torsional-spring" class="level3" data-number="21.4.1">
+<h3 data-number="21.4.1" class="anchored" data-anchor-id="torsional-spring"><span class="header-section-number">21.4.1</span> Torsional Spring</h3>
+<p>A torsional spring with stiffness <span class="math inline">\(K\)</span> creates a couple <span class="math inline">\({\bf M}_S = -K\theta{\bf E}_z\)</span>. Its power is: <span class="math display">\[\begin{align}
+    {\bf M}_S\cdot\bomega = -K\theta\dot{\theta} = -\frac{d}{dt}\lp\frac{K\theta^2}{2}\rp.
+\end{align}\]</span> Hence <span class="math inline">\(U = \frac{1}{2}K\theta^2\)</span> for the torsional spring.</p>
+</section>
+<section id="constant-couple" class="level3" data-number="21.4.2">
+<h3 data-number="21.4.2" class="anchored" data-anchor-id="constant-couple"><span class="header-section-number">21.4.2</span> Constant Couple</h3>
+<p>A constant couple <span class="math inline">\({\bf M}_e = M_e{\bf E}_z\)</span> has power <span class="math inline">\({\bf M}_e\cdot\bomega = M_e\dot{\theta} = -\frac{d}{dt}(-M_e\theta)\)</span>. Hence <span class="math inline">\(U = -M_e\theta\)</span>.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Note!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Note!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These results apply only for <span class="math inline">\(\bomega = \omega{\bf E}_z\)</span>. Constant couples are not conservative in general.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="examples" class="level2" data-number="21.5">
+<h2 data-number="21.5" class="anchored" data-anchor-id="examples"><span class="header-section-number">21.5</span> Examples</h2>
+<section id="bar-pendulum-fixed-at-its-end" class="level3" data-number="21.5.1">
+<h3 data-number="21.5.1" class="anchored" data-anchor-id="bar-pendulum-fixed-at-its-end"><span class="header-section-number">21.5.1</span> Bar Pendulum Fixed at Its End</h3>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -497,8 +528,8 @@ window.Quarto = {
     E &amp;= \frac{m\ell^2}{6}\dot{\theta}^2-\frac{mg\ell}{2}\cos\theta = \text{const}.
 \end{align}\]</span></p>
 </section>
-<section id="bar-pendulum-with-end-mass" class="level3" data-number="21.4.2">
-<h3 data-number="21.4.2" class="anchored" data-anchor-id="bar-pendulum-with-end-mass"><span class="header-section-number">21.4.2</span> Bar Pendulum With End Mass</h3>
+<section id="bar-pendulum-with-end-mass" class="level3" data-number="21.5.2">
+<h3 data-number="21.5.2" class="anchored" data-anchor-id="bar-pendulum-with-end-mass"><span class="header-section-number">21.5.2</span> Bar Pendulum With End Mass</h3>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -512,21 +543,21 @@ window.Quarto = {
     U = -\frac{mg\ell}{2}\cos\theta-m_e g\ell\cos\theta.
 \end{align}\]</span></p>
 </section>
-<section id="follower-force" class="level3" data-number="21.4.3">
-<h3 data-number="21.4.3" class="anchored" data-anchor-id="follower-force"><span class="header-section-number">21.4.3</span> Follower Force</h3>
+<section id="follower-force" class="level3" data-number="21.5.3">
+<h3 data-number="21.5.3" class="anchored" data-anchor-id="follower-force"><span class="header-section-number">21.5.3</span> Follower Force</h3>
 <p>If instead a follower force <span class="math inline">\({\bf P}\)</span> is applied perpendicular to the bar at its end, this force is <strong>nonconservative</strong> (its direction actively changes with configuration). Energy is not conserved.</p>
 </section>
 </section>
-<section id="energy-conservation" class="level2" data-number="21.5">
-<h2 data-number="21.5" class="anchored" data-anchor-id="energy-conservation"><span class="header-section-number">21.5</span> Energy Conservation</h2>
+<section id="energy-conservation" class="level2" data-number="21.6">
+<h2 data-number="21.6" class="anchored" data-anchor-id="energy-conservation"><span class="header-section-number">21.6</span> Energy Conservation</h2>
 <p>As with particles and systems of particles, this theorem can be used to establish conservation of the total mechanical energy of a rigid body, <span class="math inline">\(E = T + U\)</span>, when all work-doing forces and moments are conservative.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/acmYFwl8rRo" title="Introducing the work–energy theorem for a rigid body" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/3HRYCW7wiRs" title="Deriving the kinetic energy of a rigid body" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Kinetic energy – rigid body rotating about a fixed point"><source src="https://youtube.com/shorts/3bu7kY8JLpM"></video></div>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/vCROTYHJRow" title="Deriving the work–energy theorem for a rigid body" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="summary" class="level2" data-number="21.6">
-<h2 data-number="21.6" class="anchored" data-anchor-id="summary"><span class="header-section-number">21.6</span> Summary</h2>
+<section id="summary" class="level2" data-number="21.7">
+<h2 data-number="21.7" class="anchored" data-anchor-id="summary"><span class="header-section-number">21.7</span> Summary</h2>
 <p><strong>Koenig decomposition</strong> of kinetic energy: <span class="math display">\[\begin{align}
     T = \tfrac{1}{2}m\mathbf{v}_C\cdot\mathbf{v}_C + \tfrac{1}{2}\mathbf{H}^C\cdot\boldsymbol{\omega}.
 \end{align}\]</span> If a point <span class="math inline">\(O\)</span> has zero velocity: <span class="math inline">\(T = \tfrac{1}{2}\mathbf{H}^O\cdot\boldsymbol{\omega}\)</span>.</p>
@@ -534,8 +565,8 @@ window.Quarto = {
     \frac{dT}{dt} = \mathbf{F}\cdot\mathbf{v}_C + \mathbf{M}\cdot\boldsymbol{\omega} = \sum_i \mathbf{F}_i\cdot\mathbf{v}_i + M_e\omega.
 \end{align}\]</span></p>
 </section>
-<section id="exercises" class="level2" data-number="21.7">
-<h2 data-number="21.7" class="anchored" data-anchor-id="exercises"><span class="header-section-number">21.7</span> Exercises</h2>
+<section id="exercises" class="level2" data-number="21.8">
+<h2 data-number="21.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">21.8</span> Exercises</h2>
 <p><em>The following problems are from Set 23 – Work–Energy Theorem for Rigid Bodies.</em></p>
 <p><strong>1.</strong> [MKB 06-096] <em>(ans. <span class="math inline">\(v_A=\sqrt{2gx\sin\theta}\)</span>, <span class="math inline">\(v_B=\sqrt{gx\sin\theta}\)</span>)</em></p>
 <p><strong>2.</strong> [MKB 06-099] <em>(ans. <span class="math inline">\(\omega_{\max}=0.861\sqrt{g/b}\)</span>)</em></p>

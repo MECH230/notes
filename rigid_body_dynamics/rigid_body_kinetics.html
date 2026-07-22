@@ -380,7 +380,7 @@ window.Quarto = {
   <li><a href="#balance-laws-for-a-rigid-body" id="toc-balance-laws-for-a-rigid-body" class="nav-link active" data-scroll-target="#balance-laws-for-a-rigid-body"><span class="header-section-number">20.1</span> Balance Laws for a Rigid Body</a></li>
   <li><a href="#resultant-forces-and-moments" id="toc-resultant-forces-and-moments" class="nav-link" data-scroll-target="#resultant-forces-and-moments"><span class="header-section-number">20.2</span> Resultant Forces and Moments</a>
   <ul class="collapse">
-  <li><a href="#does-weight-give-a-moment-about-the-center-of-mass" id="toc-does-weight-give-a-moment-about-the-center-of-mass" class="nav-link" data-scroll-target="#does-weight-give-a-moment-about-the-center-of-mass"><span class="header-section-number">20.2.1</span> Does Weight Give a Moment About the Center of Mass?</a></li>
+  <li><a href="#does-weight-result-in-a-moment-about-the-center-of-mass" id="toc-does-weight-result-in-a-moment-about-the-center-of-mass" class="nav-link" data-scroll-target="#does-weight-result-in-a-moment-about-the-center-of-mass"><span class="header-section-number">20.2.1</span> Does Weight Result in a Moment About the Center of Mass?</a></li>
   </ul></li>
   <li><a href="#equivalence-of-the-boam-forms" id="toc-equivalence-of-the-boam-forms" class="nav-link" data-scroll-target="#equivalence-of-the-boam-forms"><span class="header-section-number">20.3</span> Equivalence of the BoAM Forms</a>
   <ul class="collapse">
@@ -388,21 +388,17 @@ window.Quarto = {
   <li><a href="#boam-about-a-fixed-point-o" id="toc-boam-about-a-fixed-point-o" class="nav-link" data-scroll-target="#boam-about-a-fixed-point-o"><span class="header-section-number">20.3.2</span> BoAM About a Fixed Point <span class="math inline">\(O\)</span></a></li>
   </ul></li>
   <li><a href="#calculating-the-derivative-of-angular-momentum" id="toc-calculating-the-derivative-of-angular-momentum" class="nav-link" data-scroll-target="#calculating-the-derivative-of-angular-momentum"><span class="header-section-number">20.4</span> Calculating the Derivative of Angular Momentum</a></li>
-  <li><a href="#conservative-moments" id="toc-conservative-moments" class="nav-link" data-scroll-target="#conservative-moments"><span class="header-section-number">20.5</span> Conservative Moments</a>
+  <li><a href="#impact-problems-and-center-of-percussion" id="toc-impact-problems-and-center-of-percussion" class="nav-link" data-scroll-target="#impact-problems-and-center-of-percussion"><span class="header-section-number">20.5</span> Impact Problems and Center of Percussion</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">20.6</span> Summary</a></li>
+  <li><a href="#summary-1" id="toc-summary-1" class="nav-link" data-scroll-target="#summary-1"><span class="header-section-number">20.7</span> Summary</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">20.8</span> Exercises</a>
   <ul class="collapse">
-  <li><a href="#torsional-spring" id="toc-torsional-spring" class="nav-link" data-scroll-target="#torsional-spring"><span class="header-section-number">20.5.1</span> Torsional Spring</a></li>
-  <li><a href="#constant-couple" id="toc-constant-couple" class="nav-link" data-scroll-target="#constant-couple"><span class="header-section-number">20.5.2</span> Constant Couple</a></li>
-  </ul></li>
-  <li><a href="#impact-problems-and-center-of-percussion" id="toc-impact-problems-and-center-of-percussion" class="nav-link" data-scroll-target="#impact-problems-and-center-of-percussion"><span class="header-section-number">20.6</span> Impact Problems and Center of Percussion</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">20.7</span> Summary</a></li>
-  <li><a href="#summary-1" id="toc-summary-1" class="nav-link" data-scroll-target="#summary-1"><span class="header-section-number">20.8</span> Summary</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">20.9</span> Exercises</a>
-  <ul class="collapse">
-  <li><a href="#set-18-moments-of-inertia" id="toc-set-18-moments-of-inertia" class="nav-link" data-scroll-target="#set-18-moments-of-inertia"><span class="header-section-number">20.9.1</span> Set 18 – Moments of Inertia</a></li>
-  <li><a href="#set-19-rigid-body-translation" id="toc-set-19-rigid-body-translation" class="nav-link" data-scroll-target="#set-19-rigid-body-translation"><span class="header-section-number">20.9.2</span> Set 19 – Rigid Body Translation</a></li>
-  <li><a href="#set-20-fixed-point-rotation" id="toc-set-20-fixed-point-rotation" class="nav-link" data-scroll-target="#set-20-fixed-point-rotation"><span class="header-section-number">20.9.3</span> Set 20 – Fixed Point Rotation</a></li>
-  <li><a href="#set-21-general-plane-motion" id="toc-set-21-general-plane-motion" class="nav-link" data-scroll-target="#set-21-general-plane-motion"><span class="header-section-number">20.9.4</span> Set 21 – General Plane Motion</a></li>
-  <li><a href="#set-22-impulse-and-momentum-for-rigid-bodies" id="toc-set-22-impulse-and-momentum-for-rigid-bodies" class="nav-link" data-scroll-target="#set-22-impulse-and-momentum-for-rigid-bodies"><span class="header-section-number">20.9.5</span> Set 22 – Impulse and Momentum for Rigid Bodies</a></li>
+  <li><a href="#set-18-moments-of-inertia" id="toc-set-18-moments-of-inertia" class="nav-link" data-scroll-target="#set-18-moments-of-inertia"><span class="header-section-number">20.8.1</span> Set 18 – Moments of Inertia</a></li>
+  <li><a href="#set-19-rigid-body-translation" id="toc-set-19-rigid-body-translation" class="nav-link" data-scroll-target="#set-19-rigid-body-translation"><span class="header-section-number">20.8.2</span> Set 19 – Rigid Body Translation</a></li>
+  <li><a href="#set-20-fixed-point-rotation" id="toc-set-20-fixed-point-rotation" class="nav-link" data-scroll-target="#set-20-fixed-point-rotation"><span class="header-section-number">20.8.3</span> Set 20 – Fixed Point Rotation</a></li>
+  <li><a href="#set-21-general-plane-motion" id="toc-set-21-general-plane-motion" class="nav-link" data-scroll-target="#set-21-general-plane-motion"><span class="header-section-number">20.8.4</span> Set 21 – General Plane Motion</a></li>
+  <li><a href="#set-22-impulse-and-momentum-for-rigid-bodies" id="toc-set-22-impulse-and-momentum-for-rigid-bodies" class="nav-link" data-scroll-target="#set-22-impulse-and-momentum-for-rigid-bodies"><span class="header-section-number">20.8.5</span> Set 22 – Impulse and Momentum for Rigid Bodies</a></li>
+  <li><a href="#other" id="toc-other" class="nav-link" data-scroll-target="#other"><span class="header-section-number">20.8.6</span> Other</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -443,8 +439,9 @@ window.Quarto = {
 
 <section id="balance-laws-for-a-rigid-body" class="level2" data-number="20.1">
 <h2 data-number="20.1" class="anchored" data-anchor-id="balance-laws-for-a-rigid-body"><span class="header-section-number">20.1</span> Balance Laws for a Rigid Body</h2>
-<p>The balance laws for a rigid body are <strong>Euler’s first law</strong> (Balance of Linear Momentum, BoLM) and <strong>Euler’s second law</strong> (Balance of Angular Momentum, BoAM): <span class="math display">\[\begin{align}
-    {\bf F} &amp;= m{\bf a}_C,\\
+<p>The balance laws for a rigid body are <strong>Euler’s first law</strong> (Balance of Linear Momentum, BoLM) <span class="math display">\[\begin{align}
+    {\bf F} &amp;= m{\bf a}_C,
+\end{align}\]</span> and <strong>Euler’s second law</strong> (Balance of Angular Momentum, BoAM), which can be expressed in three equivalent forms: <span class="math display">\[\begin{align}
     {\bf M}^O &amp;= \dot{\bf H}^O \quad\text{about a fixed point }O,\\
     {\bf M}^C &amp;= \dot{\bf H}^C \quad\text{about the center of mass }C,\\
     {\bf M}^P &amp;= \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G} \quad\text{about any material point }P.
@@ -457,7 +454,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="rigid_body_kinetics_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="288"></p>
+<p><img src="rigid_body_kinetics_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
 </figure>
 </div>
 </div>
@@ -468,8 +465,9 @@ window.Quarto = {
     {\bf M}^C &amp;= {\bf M}_e+\sum_{i=1}^K({\bf r}_i-{\bf r}_C)\times{\bf F}_i.
 \end{align}\]</span></p>
 <p>Examples of pure moments: reaction moments <span class="math inline">\({\bf M}_R\)</span> at joints; torsional spring moments <span class="math inline">\(-K_T(\theta-\theta_0){\bf E}_z\)</span>.</p>
-<section id="does-weight-give-a-moment-about-the-center-of-mass" class="level3" data-number="20.2.1">
-<h3 data-number="20.2.1" class="anchored" data-anchor-id="does-weight-give-a-moment-about-the-center-of-mass"><span class="header-section-number">20.2.1</span> Does Weight Give a Moment About the Center of Mass?</h3>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/Era7OOKyVEw" title="Different types of springs &amp; their uses | Skill-Lync" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<section id="does-weight-result-in-a-moment-about-the-center-of-mass" class="level3" data-number="20.2.1">
+<h3 data-number="20.2.1" class="anchored" data-anchor-id="does-weight-result-in-a-moment-about-the-center-of-mass"><span class="header-section-number">20.2.1</span> Does Weight Result in a Moment About the Center of Mass?</h3>
 <p>The total weight is <span class="math inline">\({\bf W} = \int_{\mathcal{B}}{\bf g}\,dm = m{\bf g}\)</span>, and its moment about <span class="math inline">\(C\)</span> is: <span class="math display">\[\begin{align}
     {\bf M}^C = \int_{\mathcal{B}}\bpi\times{\bf g}\,dm = \lp\int_{\mathcal{B}}\bpi\,dm\rp\times{\bf g} = {\bf 0},
 \end{align}\]</span> since <span class="math inline">\(\int_{\mathcal{B}}\bpi\,dm = {\bf 0}\)</span> by definition of the center of mass.</p>
@@ -477,6 +475,7 @@ window.Quarto = {
 </section>
 <section id="equivalence-of-the-boam-forms" class="level2" data-number="20.3">
 <h2 data-number="20.3" class="anchored" data-anchor-id="equivalence-of-the-boam-forms"><span class="header-section-number">20.3</span> Equivalence of the BoAM Forms</h2>
+<p>The following devepments are true for rigid bodies where the inertia matrix is constant in the body frame.</p>
 <section id="boam-about-any-point-p" class="level3" data-number="20.3.1">
 <h3 data-number="20.3.1" class="anchored" data-anchor-id="boam-about-any-point-p"><span class="header-section-number">20.3.1</span> BoAM About Any Point <span class="math inline">\(P\)</span></h3>
 <p>Starting from <span class="math inline">\({\bf M}^C = \dot{\bf H}^C\)</span> and replacing <span class="math inline">\({\bf M}^P = {\bf M}^C+({\bf r}_C-{\bf r}_P)\times{\bf F}\)</span>: <span class="math display">\[\begin{align}
@@ -484,21 +483,73 @@ window.Quarto = {
 \end{align}\]</span> Substituting <span class="math inline">\(\dot{\bf H}^C = \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G}+({\bf r}_P-{\bf r}_C)\times m{\bf a}_C\)</span> and simplifying: <span class="math display">\[\begin{align}
     {\bf M}^P = \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G},
 \end{align}\]</span> recovering the BoAM about a general material point <span class="math inline">\(P\)</span>.</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/VmeM0BNnGR0" title="Ice skater conservation of angular momentum" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/64t-dVtDwkQ" title="Angular momentum conservation on Hoberman Sphere - Dr. Boyd F. Edwards" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="boam-about-a-fixed-point-o" class="level3" data-number="20.3.2">
 <h3 data-number="20.3.2" class="anchored" data-anchor-id="boam-about-a-fixed-point-o"><span class="header-section-number">20.3.2</span> BoAM About a Fixed Point <span class="math inline">\(O\)</span></h3>
 <p>If <span class="math inline">\(P\)</span> is a fixed point <span class="math inline">\(O\)</span> (so <span class="math inline">\({\bf v}_O = {\bf 0}\)</span>), the above simplifies to <span class="math inline">\({\bf M}^O = \dot{\bf H}^O\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> When is the angular momentum of a rigid body about a fixed point <span class="math inline">\(O\)</span> or about its center of mass <span class="math inline">\(C\)</span> conserved? Under what conditions are these anguar momenta conserved in a certain direction (eg. along <span class="math inline">\({\bf E}_z\)</span>)?</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/VmeM0BNnGR0" title="Ice skater conservation of angular momentum" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/64t-dVtDwkQ" title="Angular momentum conservation on Hoberman Sphere - Dr. Boyd F. Edwards" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="calculating-the-derivative-of-angular-momentum" class="level2" data-number="20.4">
 <h2 data-number="20.4" class="anchored" data-anchor-id="calculating-the-derivative-of-angular-momentum"><span class="header-section-number">20.4</span> Calculating the Derivative of Angular Momentum</h2>
-<p>Recall <span class="math inline">\({\bf H}^C = {\bf I}^C\bomega\)</span> and <span class="math inline">\(\dot{\bf H}^C = \overset{\circ}{\bf H}^C+\bomega\times{\bf H}^C\)</span>, where <span class="math inline">\(\overset{\circ}{\bf H}^C\)</span> is the corotational rate (time derivative with <span class="math inline">\({\bf e}_x,{\bf e}_y,{\bf e}_z\)</span> fixed).</p>
-<p>For <span class="math inline">\(\bomega = \omega{\bf E}_z\)</span> (the case exclusively considered in this class): <span class="math display">\[\begin{align}
-    {\bf H}^C &amp;= I^C_{xz}\omega_z{\bf e}_x+I^C_{yz}\omega_z{\bf e}_y+I^C_{zz}\omega_z{\bf e}_z,\\
-    \dot{\bf H}^C &amp;= (I^C_{xz}\dot{\omega}-I^C_{yz}\omega^2){\bf e}_x+(I^C_{yz}\dot{\omega}+I^C_{xz}\omega^2){\bf e}_y+I^C_{zz}\dot{\omega}{\bf E}_z.
-\end{align}\]</span> Analogously for other reference points.</p>
+<p>Recall that <span class="math display">\[\begin{align}
+    \begin{split}
+        {\bf H}^P = {\bf I}^P\bomega+({\bf r}_C-{\bf r}_P)\times m{\bf v}_P
+    \end{split}
+\end{align}\]</span> if <span class="math inline">\(P\)</span> is taken to be the center of mass <span class="math inline">\(C\)</span> or a fixed point <span class="math inline">\(O\)</span> respectively, we get <span class="math display">\[\begin{align}
+    \begin{split}
+        {\bf H}^C = {\bf I}^C\bomega,\\
+        {\bf H}^P = {\bf I}^P\bomega.
+    \end{split}
+\end{align}\]</span> In component form, <span class="math display">\[\begin{align}
+    {\bf H}^C = (I_{xx}^C\omega_x+I_{xy}^C\omega_y+I_{xz}^C\omega_z){\bf e}_x+(I_{xy}^C\omega_x+I_{yy}^C\omega_y+I_{yz}^C\omega_z){\bf e}_y+(I_{xz}^C\omega_x+I_{yz}^C\omega_y+I_{zz}^C\omega_z){\bf e}_z.
+\end{align}\]</span> where <span class="math display">\[\begin{align}
+    \bomega = \omega_x{\bf e}_x+\omega_y{\bf e}_y+\omega_z{\bf e}_z.
+\end{align}\]</span> We need to calculate <span class="math inline">\(\dot{\bf H}^C\)</span>. <span class="math display">\[\begin{align}
+    \dot{\bf H}^C=\overset{\circ}{{\bf H}^C}+\bomega\times{\bf H}^C.
+\end{align}\]</span> where <span class="math inline">\(\overset{\circ}{{\bf H}^C}\)</span> is the corotational rate of <span class="math inline">\({\bf H}\)</span>, that is the time derivative of <span class="math inline">\({\bf H}\)</span> that is obtained while keeping <span class="math inline">\({\bf e}_x\)</span>, <span class="math inline">\({\bf e}_y\)</span>, and <span class="math inline">\({\bf e}_z\)</span> fixed: <span class="math display">\[\begin{align}
+    \overset{\circ}{{\bf H}^C} = (I_{xx}^C\dot{\omega}_x+I_{xy}^C\dot{\omega}_y+I_{xz}^C\dot{\omega}_z){\bf e}_x+(I_{xy}^C\dot{\omega}_x+I_{yy}^C\dot{\omega}_y+I_{yz}^C\dot{\omega}_z){\bf e}_y+(I_{xz}^C\dot{\omega}_x+I_{yz}^C\dot{\omega}_y+I_{zz}^C\dot{\omega}_z){\bf e}_z.
+\end{align}\]</span> For the case where <span class="math inline">\(\bomega=\omega{\bf E}_z\)</span> considered exclusively in this class, the previous expressions simplify to <span class="math display">\[\begin{align}
+    \begin{split}
+        {\bf H}^C &amp;= I_{xz}^C\omega_z{\bf e}_x+I_{yz}^C\omega_z{\bf e}_y+I_{zz}^C\omega_z{\bf e}_z,\\
+        \dot{\bf H}^C &amp;= (I_{xz}^C\dot{\omega}-I_{yz}^C\omega^2){\bf e}_x+(I_{yz}^C\dot{\omega}+I_{xz}^C\omega^2){\bf e}_y+I_{zz}^C\dot{\omega}{\bf E}_z.
+    \end{split}
+\end{align}\]</span> Analogous developments yield <span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; \dot{\bf H}^O = (I_{xz}^O\dot{\omega}-I_{yz}^O\omega^2){\bf e}_x+(I_{yz}^O\dot{\omega}+I_{xz}^O\omega^2){\bf e}_y+I_{zz}^O\dot{\omega}{\bf E}_z,\\
+        &amp; \dot{\bf H}^C = (I_{xz}^C\dot{\omega}-I_{yz}^C\omega^2){\bf e}_x+(I_{yz}^C\dot{\omega}+I_{xz}^C\omega^2){\bf e}_y+I_{zz}^C\dot{\omega}{\bf E}_z,\\
+        &amp; \dot{\bf H}^P = (I_{xz}^P\dot{\omega}-I_{yz}^P\omega^2){\bf e}_x+(I_{yz}^P\dot{\omega}+I_{xz}^P\omega^2){\bf e}_y+I_{zz}^P\dot{\omega}{\bf E}_z+\frac{d}{dt}\left(({\bf r}_C-{\bf r}_P)\times m{\bf v}_P\right).
+    \end{split}
+\end{align}\]</span> For fixed axis rotation, it is generally better to sum the moments about a fixed point passing through the axis of rotation. For general plane motion, there is no fixed point, so the BoAM is either summed about the center of mass or about a general material point <span class="math inline">\(P\)</span> on the body.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Note!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -509,55 +560,31 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For fixed axis rotation, sum moments about a fixed point on the axis. For general plane motion, sum about <span class="math inline">\(C\)</span> or a general material point <span class="math inline">\(P\)</span> using <span class="math display">\[\begin{align}
-    {\bf M}^P = (I^C_{xz}\dot{\omega}-I^C_{yz}\omega^2){\bf e}_x+(I^C_{yz}\dot{\omega}+I^C_{xz}\omega^2){\bf e}_y+I^C_{zz}\dot{\omega}{\bf E}_z+({\bf r}_C-{\bf r}_P)\times m{\bf a}_C.
-\end{align}\]</span> In most problems, axes are chosen so that <span class="math inline">\(I_{xz}=I_{yz}=0\)</span>.</p>
+<p>Remember, the BoAM about a general point has additional terms to <span class="math inline">\({\bf I}^P\bomega\)</span>: <span class="math display">\[\begin{align}
+    \begin{split}
+        {\bf M}^P &amp;= (I_{xz}^P\dot{\omega}-I_{yz}^P\omega^2){\bf e}_x+(I_{yz}^P\dot{\omega}+I_{xz}^P\omega^2){\bf e}_y+I_{zz}^P\dot{\omega}{\bf E}_z+({\bf v}_P-{\bf v}_C)\times{\bf G},\\
+        &amp;= (I_{xz}^C\dot{\omega}-I_{yz}^C\omega^2){\bf e}_x+(I_{yz}^C\dot{\omega}+I_{xz}^C\omega^2){\bf e}_y+I_{zz}^C\dot{\omega}{\bf E}_z + ({\bf r}_C-{\bf r}_P)\times m{\bf a}_C.
+    \end{split}
+\end{align}\]</span></p>
 </div>
 </div>
 </section>
-<section id="conservative-moments" class="level2" data-number="20.5">
-<h2 data-number="20.5" class="anchored" data-anchor-id="conservative-moments"><span class="header-section-number">20.5</span> Conservative Moments</h2>
-<section id="torsional-spring" class="level3" data-number="20.5.1">
-<h3 data-number="20.5.1" class="anchored" data-anchor-id="torsional-spring"><span class="header-section-number">20.5.1</span> Torsional Spring</h3>
-<p>A torsional spring with stiffness <span class="math inline">\(K\)</span> creates a couple <span class="math inline">\({\bf M}_S = -K\theta{\bf E}_z\)</span>. Its power is: <span class="math display">\[\begin{align}
-    {\bf M}_S\cdot\bomega = -K\theta\dot{\theta} = -\frac{d}{dt}\lp\frac{K\theta^2}{2}\rp.
-\end{align}\]</span> Hence <span class="math inline">\(U = \frac{1}{2}K\theta^2\)</span> for the torsional spring.</p>
-</section>
-<section id="constant-couple" class="level3" data-number="20.5.2">
-<h3 data-number="20.5.2" class="anchored" data-anchor-id="constant-couple"><span class="header-section-number">20.5.2</span> Constant Couple</h3>
-<p>A constant couple <span class="math inline">\({\bf M}_e = M_e{\bf E}_z\)</span> has power <span class="math inline">\({\bf M}_e\cdot\bomega = M_e\dot{\theta} = -\frac{d}{dt}(-M_e\theta)\)</span>. Hence <span class="math inline">\(U = -M_e\theta\)</span>.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Note!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Note!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>These results apply only for <span class="math inline">\(\bomega = \omega{\bf E}_z\)</span>. Constant couples are not conservative in general.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="impact-problems-and-center-of-percussion" class="level2" data-number="20.6">
-<h2 data-number="20.6" class="anchored" data-anchor-id="impact-problems-and-center-of-percussion"><span class="header-section-number">20.6</span> Impact Problems and Center of Percussion</h2>
+<section id="impact-problems-and-center-of-percussion" class="level2" data-number="20.5">
+<h2 data-number="20.5" class="anchored" data-anchor-id="impact-problems-and-center-of-percussion"><span class="header-section-number">20.5</span> Impact Problems and Center of Percussion</h2>
 <p>For rigid bodies, impact ideas are the same as in systems of particles.</p>
-<p><em>Example:</em> Consider a projectile fired horizontally at a pendulum (in the horizontal plane, no gravity). Find position <span class="math inline">\(x\)</span> along the pendulum such that the reaction force at the pin is nearly zero during impact.</p>
+<p><em>Example:</em> Consider a projectile fired horizontally at a pendulum (in the horizontal plane, no gravity). Find position <span class="math inline">\(x\)</span> along the pendulum such that the reaction force at the pin is nearly zero during impact. If <span class="math inline">\(x\)</span> is large, the horizontal reaction at <span class="math inline">\(O\)</span> points left; if <span class="math inline">\(x\)</span> is small, it points right. The optimal <span class="math inline">\(x\)</span> that minimizes the reaction is called the <strong>center of percussion</strong>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="rigid_body_kinetics_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="rigid_body_kinetics_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="288"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>If <span class="math inline">\(x\)</span> is large, the horizontal reaction at <span class="math inline">\(O\)</span> points left; if <span class="math inline">\(x\)</span> is small, it points right. The optimal <span class="math inline">\(x\)</span> that minimizes the reaction is called the <strong>center of percussion</strong>.</p>
 </section>
-<section id="summary" class="level2" data-number="20.7">
-<h2 data-number="20.7" class="anchored" data-anchor-id="summary"><span class="header-section-number">20.7</span> Summary</h2>
+<section id="summary" class="level2" data-number="20.6">
+<h2 data-number="20.6" class="anchored" data-anchor-id="summary"><span class="header-section-number">20.6</span> Summary</h2>
 <p>For <span class="math inline">\(K\)</span> forces and a moment <span class="math inline">\({\bf M}_e\)</span> acting on a rigid body, the balance laws are: <span class="math display">\[\begin{align}
     {\bf F} = m\frac{d{\bf v}_C}{dt}, \qquad {\bf M}^O = \dot{\bf H}^O \quad (\text{or equivalently } {\bf M}^C = \dot{\bf H}^C).
 \end{align}\]</span></p>
@@ -566,8 +593,8 @@ window.Quarto = {
 \end{align}\]</span></p>
 <p>Four classes of applications: (1) purely translational motion (<span class="math inline">\(\bomega=\balpha={\bf 0}\)</span>), (2) rigid body with a fixed point, (3) rolling and sliding rigid bodies, (4) imbalanced rotors.</p>
 </section>
-<section id="summary-1" class="level2" data-number="20.8">
-<h2 data-number="20.8" class="anchored" data-anchor-id="summary-1"><span class="header-section-number">20.8</span> Summary</h2>
+<section id="summary-1" class="level2" data-number="20.7">
+<h2 data-number="20.7" class="anchored" data-anchor-id="summary-1"><span class="header-section-number">20.7</span> Summary</h2>
 <p><strong>BoLM</strong>: <span class="math inline">\(\mathbf{F}=m\mathbf{a}_C\)</span>.</p>
 <p><strong>BoAM</strong> (three equivalent forms): <span class="math display">\[\begin{align}
     \mathbf{M}^O = \dot{\mathbf{H}}^O \quad &amp;(\text{fixed point } O), \\
@@ -580,46 +607,51 @@ window.Quarto = {
 \end{align}\]</span></p>
 <p><strong>Parallel axis theorem</strong>: <span class="math inline">\(I^A_{zz} = I^C_{zz} + m d^2\)</span> where <span class="math inline">\(d\)</span> is the distance from <span class="math inline">\(C\)</span> to <span class="math inline">\(A\)</span>.</p>
 </section>
-<section id="exercises" class="level2" data-number="20.9">
-<h2 data-number="20.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">20.9</span> Exercises</h2>
-<section id="set-18-moments-of-inertia" class="level3" data-number="20.9.1">
-<h3 data-number="20.9.1" class="anchored" data-anchor-id="set-18-moments-of-inertia"><span class="header-section-number">20.9.1</span> Set 18 – Moments of Inertia</h3>
+<section id="exercises" class="level2" data-number="20.8">
+<h2 data-number="20.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">20.8</span> Exercises</h2>
+<section id="set-18-moments-of-inertia" class="level3" data-number="20.8.1">
+<h3 data-number="20.8.1" class="anchored" data-anchor-id="set-18-moments-of-inertia"><span class="header-section-number">20.8.1</span> Set 18 – Moments of Inertia</h3>
 <p><strong>1.</strong> [MKB B-004] Integration required. <em>(ans. <span class="math inline">\(I_{xx}=\frac{3}{10}mr^2\)</span>, <span class="math inline">\(I_{yy}=\frac{2}{5}m(r^4+h^2)/(r^2)\)</span>)</em></p>
 <p><strong>2.</strong> [MKB B-029] Treat the hollow cylinder as a full cylinder of radius <span class="math inline">\(r_2\)</span> minus a cylinder of radius <span class="math inline">\(r_1\)</span>. <em>(ans. <span class="math inline">\(I_{xx}=\frac{1}{2}m(r_1^2+r_2^2)\)</span>)</em></p>
 <p><strong>3.</strong> [B-032] <em>(ans. <span class="math inline">\(L=r\sqrt{2\sqrt{3}}\)</span>)</em></p>
 <p><strong>4.</strong> [B-034] <em>(ans. <span class="math inline">\(I_{yy}=\rho L^3\left(\frac{43}{192}+\frac{83\pi}{128}\right)\)</span>)</em></p>
 </section>
-<section id="set-19-rigid-body-translation" class="level3" data-number="20.9.2">
-<h3 data-number="20.9.2" class="anchored" data-anchor-id="set-19-rigid-body-translation"><span class="header-section-number">20.9.2</span> Set 19 – Rigid Body Translation</h3>
+<section id="set-19-rigid-body-translation" class="level3" data-number="20.8.2">
+<h3 data-number="20.8.2" class="anchored" data-anchor-id="set-19-rigid-body-translation"><span class="header-section-number">20.8.2</span> Set 19 – Rigid Body Translation</h3>
 <p><strong>1.</strong> [MKB 06-006] <em>(ans. <span class="math inline">\(a=5.66\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
 <p><strong>2.</strong> [06-012] <em>(ans. <span class="math inline">\(a=16.43\)</span> ft/sec<span class="math inline">\(^2\)</span>)</em></p>
 <p><strong>3.</strong> [06-013] <em>(ans. <span class="math inline">\(N_A=6.85\)</span> kN up, <span class="math inline">\(N_B=9.34\)</span> kN up)</em></p>
 <p><strong>4.</strong> [06-022] <em>(ans. <span class="math inline">\(N=257\)</span> kN up)</em></p>
 </section>
-<section id="set-20-fixed-point-rotation" class="level3" data-number="20.9.3">
-<h3 data-number="20.9.3" class="anchored" data-anchor-id="set-20-fixed-point-rotation"><span class="header-section-number">20.9.3</span> Set 20 – Fixed Point Rotation</h3>
+<section id="set-20-fixed-point-rotation" class="level3" data-number="20.8.3">
+<h3 data-number="20.8.3" class="anchored" data-anchor-id="set-20-fixed-point-rotation"><span class="header-section-number">20.8.3</span> Set 20 – Fixed Point Rotation</h3>
 <p><strong>1.</strong> [06-051] <em>(See problem set for figure.)</em></p>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/Q7PV2pxBuwc" width="100%" title="Solution – Problem 06/051" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/Q7PV2pxBuwc" title="Solution – Problem 06/051" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="set-21-general-plane-motion" class="level3" data-number="20.9.4">
-<h3 data-number="20.9.4" class="anchored" data-anchor-id="set-21-general-plane-motion"><span class="header-section-number">20.9.4</span> Set 21 – General Plane Motion</h3>
+<section id="set-21-general-plane-motion" class="level3" data-number="20.8.4">
+<h3 data-number="20.8.4" class="anchored" data-anchor-id="set-21-general-plane-motion"><span class="header-section-number">20.8.4</span> Set 21 – General Plane Motion</h3>
 <p><strong>1.</strong> [MKB 06-061] <em>(ans. <span class="math inline">\(\alpha=48.8\)</span> rad/s<span class="math inline">\(^2\)</span> CW, <span class="math inline">\(\bar a_x=0\)</span>, <span class="math inline">\(\bar a_y=5\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
 <p><strong>2.</strong> [MKB 06-062] <em>(ans. A: <span class="math inline">\(\alpha_A=\frac{g}{r}\sin\theta\)</span>, <span class="math inline">\(\mu_s=0\)</span>; B: <span class="math inline">\(\alpha_B=\frac{g}{2r}\sin\theta\)</span>, <span class="math inline">\(\mu_s=\frac{1}{2}\tan\theta\)</span>)</em></p>
 <p><strong>3.</strong> [06-063] <em>(ans. <span class="math inline">\(\bar a=13.80\)</span> ft/sec<span class="math inline">\(^2\)</span> down incline, <span class="math inline">\(F=1.714\)</span> lb up incline)</em></p>
 <p><strong>4.</strong> [06-070] <em>(ans. <span class="math inline">\(a=\frac{8(m+M)g}{3\pi(m+3M)}\)</span> left, <span class="math inline">\(\alpha=\frac{8mg}{3\pi r(m+3M)}\)</span> CW)</em></p>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/0_wB2JnICLc" width="100%" title="Solution – Problem 06/070" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/3UvEbjlaBwc" title="Solution – Problem 06/070" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p><strong>5.</strong> [06-076] <em>(ans. <span class="math inline">\(s=\frac{3d}{2}\)</span>)</em></p>
 <p><strong>6.</strong> [06-077] <em>(ans. <span class="math inline">\(N_B=36.4\)</span> N up)</em></p>
 </section>
-<section id="set-22-impulse-and-momentum-for-rigid-bodies" class="level3" data-number="20.9.5">
-<h3 data-number="20.9.5" class="anchored" data-anchor-id="set-22-impulse-and-momentum-for-rigid-bodies"><span class="header-section-number">20.9.5</span> Set 22 – Impulse and Momentum for Rigid Bodies</h3>
+<section id="set-22-impulse-and-momentum-for-rigid-bodies" class="level3" data-number="20.8.5">
+<h3 data-number="20.8.5" class="anchored" data-anchor-id="set-22-impulse-and-momentum-for-rigid-bodies"><span class="header-section-number">20.8.5</span> Set 22 – Impulse and Momentum for Rigid Bodies</h3>
 <p><strong>1.</strong> [MKB 06-136] <em>(ans. <span class="math inline">\(\omega=1.811\)</span> rad/s CCW)</em></p>
 <p><strong>2.</strong> [MKB 06-142] <em>(ans. <span class="math inline">\(\mathbf{v}=\frac{Mu_M\mathbf{E}_x+m\mathbf{v}_m}{M+m}\)</span>, <span class="math inline">\(\omega=\frac{12vm}{L(4M+7m)}\)</span> CCW)</em></p>
 <p><strong>3.</strong> [06-145] <em>(ans. <span class="math inline">\(\omega=\frac{3mv_1}{(M+m)L}\)</span> CW)</em></p>
 <p><strong>4.</strong> [06-146] <em>(ans. <span class="math inline">\(N=2.04\)</span> rev/s)</em></p>
 <p><strong>5.</strong> [06-148] <em>(ans. <span class="math inline">\(\omega=1.593\)</span> rad/s CCW, <span class="math inline">\(n=91.7\%\)</span>)</em></p>
 <p><strong>6.</strong> [06-155] <em>(ans. <span class="math inline">\(t=\frac{2v_0}{g(7\mu_k\cos\theta-2\sin\theta)}\)</span>)</em></p>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/0N8tDgnrXNA" width="100%" title="Solution – Problem 06/155" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/0N8tDgnrXNA" title="Solution – Problem 06/155" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="other" class="level3" data-number="20.8.6">
+<h3 data-number="20.8.6" class="anchored" data-anchor-id="other"><span class="header-section-number">20.8.6</span> Other</h3>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/gvBZyEq_bGo" title="Solution – Problem 06/035 Nonzero products of inertia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/HGiVnQbItTI" title="Solution – MKB Problem 07/066 A rotating shaft with a mass imbalance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
 
 </section>
