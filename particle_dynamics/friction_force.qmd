@@ -211,15 +211,27 @@ Strategy: assume sticking; check the static criterion. If violated, resolve with
 
 **1.** [MKB 03-002] Consider taking $\mathbf{E}_x$ along and $\mathbf{E}_y$ perpendicular to the incline. Assume sticking first; check the static criterion. *(ans. (a) $a=1.118$ m/s$^2$ down incline; (b) $a=0$; (c) $a=2.04$ m/s$^2$ up incline)*
 
+![MKB 03-002.](../figures/friction_force/03-002.png){width=50%}
+
 **2.** [MKB 03-030] Apply the 4 steps twice: first for the combined system, then for mass $m_2$ alone. *(ans. $0.0577(m_1+m_2)g \le P \le 0.745(m_1+m_2)g$)*
+
+![MKB 03-030.](../figures/friction_force/03-030.png){width=50%}
 
 **3.** [MKB 03-047] Compare the Serret–Frenet basis here with Problem 03-043 from Set 07. *(ans. $N=156.2$ lb, $a=27.7$ ft/sec$^2$)*
 
+![MKB 03-047.](../figures/friction_force/03-047.png){width=50%}
+
 **4.** [03-049] Set up a cylindrical polar coordinate system with origin at the base of the cylinder axis; apply the 4 steps to the small object $A$. *(ans. $\omega=\sqrt{\mu_s g/r}$)*
+
+![MKB 03-049.](../figures/friction_force/03-049.png){width=50%}
 
 **5.** [03-050] This determines the maximum lateral acceleration before slipping. *(ans. $a_n=0.818g$, $F=2460$ lb)*
 
+![MKB 03-050.](../figures/friction_force/03-050.png){width=50%}
+
 **6.** [03-071] Polar coordinate system with origin at the centre of the disk. *(ans. $N=\frac{\mu_s g}{4\pi^2}\left(\frac{1}{r\alpha}-1\right)$)*
+
+![MKB 03-071.](../figures/friction_force/03-071.png){width=50%}
 
 {{< video https://youtu.be/RDFfE0tFTnk title="Solution – Problem 03/071" width="100%" >}}
 

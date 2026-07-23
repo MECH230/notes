@@ -169,9 +169,15 @@ Complete [this](https://colab.research.google.com/drive/1zIuB6Ovq1QWNSRoEht7LhWr
 
 **1.** [08-002] *(ans. $\omega_n = 12$ rad/s, $f_n = 1.910$ Hz)*
 
+![MKB 08-002.](../figures/spring_force/08-002.png){width=50%}
+
 **2.** [08-004] First determine the static deflection of the spring; take the origin at the statically deflected position. *(ans. $\delta_{st} = 0.200$ m, $\tau = 0.898$ s, $v_{\max} = 0.7$ m/s)*
+
+![MKB 08-004.](../figures/spring_force/08-004.png){width=50%}
 
 {{< video https://youtu.be/YE9N2f2qTqg title="Solution – Problem 08/004" >}}
 
 
 **3.** [08-019] *(ans. $\ddot y + \frac{3k}{mL^2}y = 0$)*
+
+![MKB 08-019.](../figures/spring_force/08-019.png){width=50%}

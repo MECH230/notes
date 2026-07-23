@@ -260,21 +260,33 @@ Show that ${\bf H}^O\cdot{\bf E}_z$ is conserved.
 
 **1.** [MKB 03-149] Straightforward application of the linear impulse–momentum equation. *(ans. $v=1.218$ m/s down)*
 
+![MKB 03-149.](../figures/momenta_and_impulses/03-149.png){width=50%}
+
 **2.** [MKB 03-159] The block is subjected to a time-varying force $P(t)$ shown in the plot; $P=0$ for $t>3$ s. *(ans. $t_s=3.69$ s)*
+
+![MKB 03-159.](../figures/momenta_and_impulses/03-159.png){width=50%}
 
 {{< video https://youtu.be/ugj4fefUN4c title="Solution – Problem 03/159" >}}
 
 
 **3.** [MKB 03-161] Use Newton's third law. Recall $\int_{x_A}^{x_B}f(x)\,dx = F_{\mathrm{avg}}(x_B-x_A)$. *(ans. $v_f=0.00264$ m/s, $F_{\mathrm{avg}}=59.5$ N)*
 
+![MKB 03-161.](../figures/momenta_and_impulses/03-161.png){width=50%}
+
 {{< video https://youtu.be/Q-F7ew3jFuQ title="Solution – Problem 03/161" >}}
 
 
 **4.** [03-167] *(ans. $R_x=559$ lb, $R_y=218$ lb)*
 
+![MKB 03-167.](../figures/momenta_and_impulses/03-167.png){width=50%}
+
 **5.** [03-177] Central force problem – what quantities are conserved? *(ans. $v_P=17\,723$ mi/hr)*
 
+![MKB 03-177.](../figures/momenta_and_impulses/03-177.png){width=50%}
+
 **6.** [03-185] *(ans. $v_B=5.43$ m/s)*
+
+![MKB 03-185.](../figures/momenta_and_impulses/03-185.png){width=50%}
 
 {{< video https://youtu.be/V3ussTTlrs8 title="Solution – Problem 03/185" >}}
 
@@ -282,5 +294,7 @@ Show that ${\bf H}^O\cdot{\bf E}_z$ is conserved.
 **7.** [03-181] *(ans. $|H|=389$ N·m·s, $|M|=260$ N·m)*
 
 **8.** [03-192] Label $r$ as $R$ and the requested angle $\theta$ as $\beta$. The particle moves on a surface of revolution $z^2+(r-1.15R)^2=R^2$. Use conservation of total energy and $\mathbf{E}_z$-component of $\mathbf{H}^O$. *(ans. $\theta=52.9^\circ$)*
+
+![MKB 03-192.](../figures/momenta_and_impulses/03-192.png){width=50%}
 
 {{< video https://youtu.be/jjHTcoIAQmY title="Solution – Problem 03/192" >}}

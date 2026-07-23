@@ -191,51 +191,31 @@ For fixed-axis rotation with $\bomega = \omega{\bf E}_z$ and $I_{xz}=I_{yz}=0$:
 Four classes of applications: (1) purely translational motion ($\bomega=\balpha={\bf 0}$), (2) rigid body with a fixed point, (3) rolling and sliding rigid bodies, (4) imbalanced rotors.
 
 
-## Summary
-
-**BoLM**: $\mathbf{F}=m\mathbf{a}_C$.
-
-**BoAM** (three equivalent forms):
-\begin{align}
-    \mathbf{M}^O = \dot{\mathbf{H}}^O \quad &(\text{fixed point } O), \\
-    \mathbf{M}^C = \dot{\mathbf{H}}^C \quad &(\text{center of mass } C), \\
-    \mathbf{M}^P = \dot{\mathbf{H}}^C + (\mathbf{r}_C-\mathbf{r}_P)\times m\mathbf{a}_C \quad &(\text{any material point } P).
-\end{align}
-
-**Angular momentum and inertia tensor**:
-\begin{align}
-    H^C_z = I^C_{zz}\,\omega, \qquad
-    I^C_{zz} = \int_{\mathcal{B}}(x^2+y^2)\,dm.
-\end{align}
-
-**Parallel axis theorem**: $I^A_{zz} = I^C_{zz} + m d^2$ where $d$ is the distance from $C$ to $A$.
-
-
 ## Exercises
-
-### Set 18 – Moments of Inertia
-
-**1.** [MKB B-004] Integration required. *(ans. $I_{xx}=\frac{3}{10}mr^2$, $I_{yy}=\frac{2}{5}m(r^4+h^2)/(r^2)$)*
-
-**2.** [MKB B-029] Treat the hollow cylinder as a full cylinder of radius $r_2$ minus a cylinder of radius $r_1$. *(ans. $I_{xx}=\frac{1}{2}m(r_1^2+r_2^2)$)*
-
-**3.** [B-032] *(ans. $L=r\sqrt{2\sqrt{3}}$)*
-
-**4.** [B-034] *(ans. $I_{yy}=\rho L^3\left(\frac{43}{192}+\frac{83\pi}{128}\right)$)*
 
 ### Set 19 – Rigid Body Translation
 
 **1.** [MKB 06-006] *(ans. $a=5.66$ m/s$^2$)*
 
+![MKB 06-006.](../figures/rigid_body_kinetics/problems/06-006.png){width=50%}
+
 **2.** [06-012] *(ans. $a=16.43$ ft/sec$^2$)*
+
+![MKB 06-012.](../figures/rigid_body_kinetics/problems/06-012.png){width=50%}
 
 **3.** [06-013] *(ans. $N_A=6.85$ kN up, $N_B=9.34$ kN up)*
 
+![MKB 06-013.](../figures/rigid_body_kinetics/problems/06-013.png){width=50%}
+
 **4.** [06-022] *(ans. $N=257$ kN up)*
+
+![MKB 06-022.](../figures/rigid_body_kinetics/problems/06-022.png){width=50%}
 
 ### Set 20 – Fixed Point Rotation
 
-**1.** [06-051] *(See problem set for figure.)*
+**1.** [06-051]
+
+![MKB 06-051.](../figures/rigid_body_kinetics/problems/06-051.png){width=50%}
 
 {{< video https://youtu.be/Q7PV2pxBuwc title="Solution – Problem 06/051" >}}
 
@@ -244,32 +224,56 @@ Four classes of applications: (1) purely translational motion ($\bomega=\balpha=
 
 **1.** [MKB 06-061] *(ans. $\alpha=48.8$ rad/s$^2$ CW, $\bar a_x=0$, $\bar a_y=5$ m/s$^2$)*
 
+![MKB 06-061.](../figures/rigid_body_kinetics/problems/06-061.png){width=50%}
+
 **2.** [MKB 06-062] *(ans. A: $\alpha_A=\frac{g}{r}\sin\theta$, $\mu_s=0$; B: $\alpha_B=\frac{g}{2r}\sin\theta$, $\mu_s=\frac{1}{2}\tan\theta$)*
+
+![MKB 06-062.](../figures/rigid_body_kinetics/problems/06-062.png){width=50%}
 
 **3.** [06-063] *(ans. $\bar a=13.80$ ft/sec$^2$ down incline, $F=1.714$ lb up incline)*
 
+![MKB 06-063.](../figures/rigid_body_kinetics/problems/06-063.png){width=50%}
+
 **4.** [06-070] *(ans. $a=\frac{8(m+M)g}{3\pi(m+3M)}$ left, $\alpha=\frac{8mg}{3\pi r(m+3M)}$ CW)*
+
+![MKB 06-070.](../figures/rigid_body_kinetics/problems/06-070.png){width=50%}
 
 {{< video https://youtu.be/3UvEbjlaBwc title="Solution – Problem 06/070" >}}
 
 
 **5.** [06-076] *(ans. $s=\frac{3d}{2}$)*
 
+![MKB 06-076.](../figures/rigid_body_kinetics/problems/06-076.png){width=50%}
+
 **6.** [06-077] *(ans. $N_B=36.4$ N up)*
+
+![MKB 06-077.](../figures/rigid_body_kinetics/problems/06-077.png){width=50%}
 
 ### Set 22 – Impulse and Momentum for Rigid Bodies
 
 **1.** [MKB 06-136] *(ans. $\omega=1.811$ rad/s CCW)*
 
+![MKB 06-136.](../figures/rigid_body_kinetics/problems/06-136.png){width=50%}
+
 **2.** [MKB 06-142] *(ans. $\mathbf{v}=\frac{Mu_M\mathbf{E}_x+m\mathbf{v}_m}{M+m}$, $\omega=\frac{12vm}{L(4M+7m)}$ CCW)*
+
+![MKB 06-142.](../figures/rigid_body_kinetics/problems/06-142.png){width=50%}
 
 **3.** [06-145] *(ans. $\omega=\frac{3mv_1}{(M+m)L}$ CW)*
 
+![MKB 06-145.](../figures/rigid_body_kinetics/problems/06-145.png){width=50%}
+
 **4.** [06-146] *(ans. $N=2.04$ rev/s)*
+
+![MKB 06-146.](../figures/rigid_body_kinetics/problems/06-146.png){width=50%}
 
 **5.** [06-148] *(ans. $\omega=1.593$ rad/s CCW, $n=91.7\%$)*
 
+![MKB 06-148.](../figures/rigid_body_kinetics/problems/06-148.png){width=50%}
+
 **6.** [06-155] *(ans. $t=\frac{2v_0}{g(7\mu_k\cos\theta-2\sin\theta)}$)*
+
+![MKB 06-155.](../figures/rigid_body_kinetics/problems/06-155.png){width=50%}
 
 {{< video https://youtu.be/0N8tDgnrXNA title="Solution – Problem 06/155" >}}
 

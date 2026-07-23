@@ -172,13 +172,23 @@ If a point $O$ has zero velocity: $T = \tfrac{1}{2}\mathbf{H}^O\cdot\boldsymbol{
 
 **1.** [MKB 06-096] *(ans. $v_A=\sqrt{2gx\sin\theta}$, $v_B=\sqrt{gx\sin\theta}$)*
 
+![MKB 06-096.](../figures/work_energy_theorem/06-096.png){width=50%}
+
 **2.** [MKB 06-099] *(ans. $\omega_{\max}=0.861\sqrt{g/b}$)*
+
+![MKB 06-099.](../figures/work_energy_theorem/06-099.png){width=50%}
 
 **3.** [06-108] *(ans. (a) $k=93.3$ N/m; (b) $\omega=1.484$ rad/s CW)*
 
+![06-108.](../figures/work_energy_theorem/06-108.png){width=50%}
+
 **4.** [06-112] *(ans. $x=0.211l$, $\omega_{\max}=1.861\sqrt{g/l}$ CW)*
 
+![06-112.](../figures/work_energy_theorem/06-112.png){width=50%}
+
 **5.** [06-118] *(ans. $v_A=\sqrt{3}\sqrt{\frac{M\theta}{m}-gb(1-\cos\theta)}$ right)*
+
+![06-118.](../figures/work_energy_theorem/06-118.png){width=50%}
 
 {{< video https://youtu.be/-jdslhyHAIY title="Solution – Problem 06/118" width="100%" >}}
 

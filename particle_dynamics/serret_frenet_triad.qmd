@@ -344,17 +344,29 @@ The curvature is $\kappa=1/\rho$ (radius of curvature $\rho$). The BoLM gives $F
 
 **2.** [MKB 02-090] Note that $\dot v \neq \|\mathbf{a}\|$; acceleration has both tangential and normal components. *(ans. $v = 20$ m/s)*
 
+![MKB 02-090.](../figures/serret_frenet_triad/02-090.png){width=50%}
+
 **3.** [MKB 02-091] *(ans. $\rho = 1709$ m)*
 
+![MKB 02-091.](../figures/serret_frenet_triad/02-091.png){width=50%}
+
 **4.** [02-097] Follow the 4 steps; express $\mathbf{e}_t$ and $\mathbf{e}_n$ in the Cartesian basis. *(ans. at $t=1$ s: $\dot v=-6.58$ ft/s$^2$, $\rho=142.2$ ft; at $t=2$ s: $\dot v=8.75$ ft/s$^2$, $\rho=149.7$ ft)*
+
+![MKB 02-097.](../figures/serret_frenet_triad/02-097.png){width=50%}
 
 **5.** [02-103] *(ans. $(x_C,y_C)=(22.5,-22.9)$ m)*
 
 **6.** [02-199] Draw $\mathbf{e}_t$ and $\mathbf{e}_n$ first. *(ans. $\dot r=15$ m/s, $\dot\theta=0.325$ rad/s, $\rho=129.9$ m)*
 
+![MKB 02-199.](../figures/serret_frenet_triad/02-199.png){width=50%}
+
 **7.** [03-040] Note the jump in normal force at the transition from straight to curved path. *(ans. (a) $R=1.177$ N; (b) $R=1.664$ N)*
 
+![MKB 03-040.](../figures/serret_frenet_triad/03-040.png){width=50%}
+
 **8.** [03-041] What does "weightless" mean? *(ans. $\rho=24\,000$ ft)*
+
+![MKB 03-041.](../figures/serret_frenet_triad/03-041.png){width=50%}
 
 **9.** [03-043] Draw the Serret–Frenet basis carefully; the figure hints at the direction of $\mathbf{e}_n$. *(ans. $v=29.1$ m/s, $N=12.36$ kN)*
 

@@ -1044,33 +1044,59 @@ As the body moves, the components of ${\bf I}^O$, ${\bf I}^C$, and ${\bf I}^P$ e
 \end{align}
 The Coriolis acceleration is $2\boldsymbol{\omega}\times\mathbf{v}_{\mathrm{rel}}$.
 
+**Angular momentum and inertia tensor**:
+\begin{align}
+    H^C_z = I^C_{zz}\,\omega, \qquad
+    I^C_{zz} = \int_{\mathcal{B}}(x^2+y^2)\,dm.
+\end{align}
+
+**Parallel axis theorem**: $I^A_{zz} = I^C_{zz} + m d^2$ where $d$ is the distance from $C$ to $A$.
+
 ## Exercises
 
 ### Set 15 – Rigid Body Kinematics
 
 **1.** [MKB 05-010] *(ans. $\mathbf{v}_B=-11\mathbf{E}_x$ m/s, $\mathbf{a}_B=22\mathbf{E}_x-220\mathbf{E}_y$ m/s$^2$)*
 
+![MKB 05-010.](../figures/rigid_body_kinematics/problems/05-010.png){width=50%}
+
 **2.** [MKB 05-013] *(ans. $\mathbf{v}_A=1.121\mathbf{E}_x+0.838\mathbf{E}_y$ m/s, $\mathbf{a}_B=-4.48\mathbf{E}_x+0.1465\mathbf{E}_y$ m/s$^2$)*
+
+![MKB 05-013.](../figures/rigid_body_kinematics/problems/05-013.png){width=50%}
 
 **3.** [05-018] *(ans. $\mathbf{v}_A=-0.374\mathbf{E}_x+0.1905\mathbf{E}_y$ m/s, $\mathbf{a}_A=-0.757\mathbf{E}_x-0.605\mathbf{E}_y$ m/s$^2$)*
 
+![MKB 05-018.](../figures/rigid_body_kinematics/problems/05-018.png){width=50%}
+
 **4.** [05-049] *(ans. (a) $N=91.7$ rev/min CCW; (b) $N=45.8$ rev/min CCW; (c) $N=45.8$ rev/min CW)*
+
+![MKB 05-049.](../figures/rigid_body_kinematics/problems/05-049.png){width=50%}
 
 **5.** [05-065] *(ans. $\omega=0.722$ rad/s)*
 
+![MKB 05-065.](../figures/rigid_body_kinematics/problems/05-065.png){width=50%}
+
 **6.** [05-069] *(ans. $\omega_{AB}=1.725$ rad/s CCW, $\omega_{BC}=4$ rad/s CCW)*
+
+![MKB 05-069.](../figures/rigid_body_kinematics/problems/05-069.png){width=50%}
 
 ### Set 16 – IC and Particle in Non-inertial Frame
 
 **1.** [MKB 05-102] *(ans. $\alpha=0.286$ rad/s$^2$, $a_A=0.653$ m/s$^2$ down)*
 
+![MKB 05-102.](../figures/rigid_body_kinematics/problems/05-102.png){width=50%}
+
 {{< video https://youtu.be/n34Z2jwwnW0 title="Solution – Problem 05/102" >}}
 
 **2.** [MKB 05-125] *(ans. $\mathbf{v}_A=0.1\mathbf{E}_x+0.25\mathbf{E}_y$ m/s, $\beta=68.2^\circ$)*
 
+![MKB 05-125.](../figures/rigid_body_kinematics/problems/05-125.png){width=50%}
+
 {{< video https://youtu.be/PyM7KmlPirU title="Solution – Problem 05/125" >}}
 
 **3.** [05-143] *(ans. $v_{\mathrm{rel}}=3.93$ m/s, $a_{\mathrm{rel}}=15.22$ m/s$^2$, $\omega_{BC}=1.046$ rad/s CW, $\alpha_{BC}=117.7$ rad/s$^2$ CW)*
+
+![MKB 05-143.](../figures/rigid_body_kinematics/problems/05-143.png){width=50%}
 
 {{< video https://youtu.be/IG7Qtj2TdFQ title="Solution – Problem 05/143" >}}
 
@@ -1078,10 +1104,38 @@ The Coriolis acceleration is $2\boldsymbol{\omega}\times\mathbf{v}_{\mathrm{rel}
 
 **1.** [MKB 05-055] *(ans. $v_O=6.93$ m/s, $\omega=21.3$ rad/s CW)*
 
+![MKB 05-055.](../figures/rigid_body_kinematics/problems/05-055.png){width=50%}
+
 **2.** [MKB 05-087] *(ans. $v_O=120$ mm/s, $v_P=216$ mm/s)*
+
+![MKB 05-087.](../figures/rigid_body_kinematics/problems/05-087.png){width=50%}
 
 **3.** [05-091] *(ans. $v=15.71$ ft/s right, $v_s=6.89$ ft/s left)*
 
+![MKB 05-091.](../figures/rigid_body_kinematics/problems/05-091.png){width=50%}
+
 **4.** [05-093] *(ans. $v_A=9.19$ ft/sec left)*
 
+![MKB 05-093.](../figures/rigid_body_kinematics/problems/05-093.png){width=50%}
+
 **5.** [05-100] *(ans. $\mathbf{v}_A=5.12\mathbf{E}_x+2.12\mathbf{E}_y$ m/s, $\mathbf{a}_B=-16.25\mathbf{E}_x+2.5\mathbf{E}_y$ m/s$^2$)*
+
+![MKB 05-100.](../figures/rigid_body_kinematics/problems/05-100.png){width=50%}
+
+### Set 18 – Moments of Inertia
+
+**1.** [MKB B-004] Integration required. *(ans. $I_{xx}=\frac{3}{10}mr^2$, $I_{yy}=\frac{2}{5}m(r^4+h^2)/(r^2)$)*
+
+![MKB B-004.](../figures/rigid_body_kinematics/problems/B-004.png){width=50%}
+
+**2.** [MKB B-029] Treat the hollow cylinder as a full cylinder of radius $r_2$ minus a cylinder of radius $r_1$. *(ans. $I_{xx}=\frac{1}{2}m(r_1^2+r_2^2)$)*
+
+![MKB B-029.](../figures/rigid_body_kinematics/problems/B-029.png){width=50%}
+
+**3.** [B-032] *(ans. $L=r\sqrt{2\sqrt{3}}$)*
+
+![MKB B-032.](../figures/rigid_body_kinematics/problems/B-032.png){width=50%}
+
+**4.** [B-034] *(ans. $I_{yy}=\rho L^3\left(\frac{43}{192}+\frac{83\pi}{128}\right)$)*
+
+![MKB B-034.](../figures/rigid_body_kinematics/problems/B-034.png){width=50%}

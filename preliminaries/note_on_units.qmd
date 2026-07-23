@@ -27,4 +27,6 @@ In U.S. customary units, the **slug** is the unit of mass: $1$ slug $= 1$ lb$\cd
 
 **1.** [MKB 1/2] Familiarise yourself with the U.S. unit of mass (slugs). Note that $1$ kg $\approx 0.0685$ slugs. *(ans. $W = 14\,720$ N or $3310$ lb; $m = 102.8$ slugs)*
 
+![MKB 1/2.](../figures/note_on_units/01-002.png){width=50%}
+
 **2.** Read [this article](https://archive.nytimes.com/www.nytimes.com/library/national/science/100199sci-nasa-mars.html) about the Mars Climate Orbiter loss and reflect on the importance of consistent units.

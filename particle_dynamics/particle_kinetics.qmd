@@ -268,14 +268,22 @@ The equations of motion in this case (see primer section 1.6) need to be solved 
 
 **1.** [MKB 2/75] Take $\mathbf{E}_x$ along the incline and $\mathbf{E}_y$ perpendicular to it (upwards); origin at $A$. Follow the 4 steps. *(ans. $\theta = (90^\circ + \alpha)/2$)*
 
+![MKB 2/75.](../figures/particle_kinetics/02-075.png){width=50%}
+
 **2.** [MKB 3/004] Consider the whole truck system; follow the 4 steps to find the truck's acceleration, then isolate a trailer to find the drawbar tension. *(ans. $T = 13.33$ kN, $a = 0.667$ m/s$^2$)*
+
+![MKB 3/004.](../figures/particle_kinetics/03-004.png){width=50%}
 
 {{< video https://youtu.be/LAl3ZUiUpus title="Solution – Problem 03/004" >}}
 
 
 **3.** [MKB 3/005] For each part, determine your system and follow the 4 steps. *(ans. $R = 846$ N, $L = 110.4$ N)*
 
+![MKB 3/005.](../figures/particle_kinetics/03-005.png){width=50%}
+
 **4.** [MKB 3/006] Follow the four steps. *(ans. $F = 2890$ N)*
+
+![MKB 3/006.](../figures/particle_kinetics/03-006.png){width=50%}
 
 **5.** [OOR Exercise 1.3] *(See O'Reilly Primer for problem statement.)*
 

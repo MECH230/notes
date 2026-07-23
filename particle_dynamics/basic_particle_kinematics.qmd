@@ -546,7 +546,11 @@ This equation is commonly used to determine braking distance when the decelerati
 
 **1.** [MKB 2/24] Solve $a(x)$ as a piecewise function. *(ans. $v = 8$ ft/sec)*
 
+![MKB 2/24.](../figures/basic_particle_kinematics/02-024.jpg){width=50%}
+
 **2.** [MKB 2/28] Take $\mathbf{E}_x$ along the horizontal; origin at the location of the plane when the parachute deploys ($v=200$ mi/hr). Convert mi to ft and hr to sec. *(ans. $s = 5810$ ft)*
+
+![MKB 2/28.](../figures/basic_particle_kinematics/02-028.jpg){width=50%}
 
 **3.** [MKB 2/25] Take $\mathbf{E}_y$ vertically upwards; origin at the initial position of the rocket. The acceleration is
 \begin{align}
@@ -554,6 +558,8 @@ This equation is commonly used to determine braking distance when the decelerati
 \end{align}
 *(ans. $h = 125.4$ m, total time $= 157.9$ s)*
 
-**4.** [MKB 2/22] *(See problem set for figure.)*
+![MKB 2/25.](../figures/basic_particle_kinematics/02-025.jpg){width=50%}
 
-![MKB 2/21.](../figures/basic_particle_kinematics/02-021.jpg){width=50%}
+**4.** [MKB 2/22]
+
+![MKB 2/22.](../figures/basic_particle_kinematics/02-022.jpg){width=50%}

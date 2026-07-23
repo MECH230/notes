@@ -272,15 +272,27 @@ If all work-doing forces are conservative, **energy is conserved**: $E=T+U=\text
 
 **1.** [MKB 03-128] Only the gravitational force acts on the spacecraft, so energy is conserved. Use conservation of energy. *(ans. $v_B = 26\,300$ km/h)*
 
+![MKB 03-128.](../figures/power_work_energy/03-128.png){width=50%}
+
 **2.** [MKB 03-080] *(ans. (a) no motion; (b) $v_B = 5.62$ m/s)*
+
+![MKB 03-080.](../figures/power_work_energy/03-080.png){width=50%}
 
 **3.** [MKB 03-084] *(ans. (a) $v=2.56$ m/s; (b) $x=98.9$ mm)*
 
+![MKB 03-084.](../figures/power_work_energy/03-084.png){width=50%}
+
 **4.** [MKB 03-094] *(ans. (a) $N_B=48$ N right; (b) $N_B'=29.4$ N right; (c) $N_C=17.63$ N down; (d) $N_D=29.4$ N left)*
+
+![MKB 03-094.](../figures/power_work_energy/03-094.png){width=50%}
 
 **5.** [MKB 03-101] *(ans. (a) $N_B=4mg$; (b) $N_C=7mg$; (c) $s=\frac{4R}{\sqrt{3}(1+\mu_k)}$)*
 
+![MKB 03-101.](../figures/power_work_energy/03-101.png){width=50%}
+
 **6.** [MKB 03-263] *(ans. $R=46.7$ N)*
+
+![MKB 03-263.](../figures/power_work_energy/03-263.png){width=50%}
 
 **7.** [OOR Exercise 5-1] *(See O'Reilly Primer.)*
 

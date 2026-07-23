@@ -466,9 +466,15 @@ See an animation of the cylindrical-polar basis for a particle moving aroubd a c
 
 **2.** [MKB 02-105] Take $\mathbf{E}_x$ rightwards and $\mathbf{E}_y$ upwards; write the car's position in both bases. *(ans. $\dot r = 47.7$ ft/sec, $\dot\theta = -41.0$ deg/sec)*
 
+![MKB 02-105.](../figures/cylindrical_polar_coordinates/02-105.png){width=50%}
+
 **3.** [MKB 02-126] Write $\mathbf{r}_P = (0.75+\ell)\mathbf{e}_r$ m and differentiate. If the setup is in the vertical plane, find the force applied by the robot arm. *(ans. $v=0.296$ m/s, $a=0.345$ m/s$^2$)*
 
+![MKB 02-126.](../figures/cylindrical_polar_coordinates/02-126.png){width=50%}
+
 **4.** [MKB 03-037] Apply the 4 steps at points $A$ and $B$ independently; origin at the centre of curvature. *(ans. $N_A = 10.89$ N, $N_B = 8.30$ N)*
+
+![MKB 03-037.](../figures/cylindrical_polar_coordinates/03-037.png){width=50%}
 
 **5.** [Primer Exercise 2.6] *(See O'Reilly Primer.)*
 

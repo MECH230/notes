@@ -279,10 +279,20 @@ Now that different points in the system have different displacements/velocities,
 
 **1.** [MKB 03-168] Show that during the (very brief) collision, the linear momentum of the bullet–pendulum system is conserved. *(ans. $\theta=20.7^\circ$, $n=99.8\%$)*
 
+![MKB 03-168.](../figures/system_of_particles/03-168.png){width=50%}
+
 **2.** [MKB 03-178] Use the integral form of the BoAM; choose the origin at the green base. *(ans. $\dot\theta=26.0$ rad/s)*
+
+![MKB 03-178.](../figures/system_of_particles/03-178.png){width=50%}
 
 **3.** [04-008] Take an appropriate cut in the rope. *(ans. $T=58.3$ lb)*
 
+![MKB 04-008.](../figures/system_of_particles/04-008.png){width=50%}
+
 **4.** [04-009] *(ans. $D_x=1.288$ lb left, $D_y=35.5$ lb up, $N_E=25.6$ lb up)*
 
+![MKB 04-009.](../figures/system_of_particles/04-009.png){width=50%}
+
 **5.** [04-019] Identify a direction of linear momentum conservation; the center of mass remains stationary. *(ans. $s=\frac{(m_1+m_2)x_{10}-m_2 l}{m_0+m_1+m_2}$)*
+
+![MKB 04-019.](../figures/system_of_particles/04-019.png){width=50%}
