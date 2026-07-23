@@ -415,6 +415,7 @@ window.Quarto = {
   <li><a href="#set-15-rigid-body-kinematics" id="toc-set-15-rigid-body-kinematics" class="nav-link" data-scroll-target="#set-15-rigid-body-kinematics"><span class="header-section-number">19.18.1</span> Set 15 – Rigid Body Kinematics</a></li>
   <li><a href="#set-16-ic-and-particle-in-non-inertial-frame" id="toc-set-16-ic-and-particle-in-non-inertial-frame" class="nav-link" data-scroll-target="#set-16-ic-and-particle-in-non-inertial-frame"><span class="header-section-number">19.18.2</span> Set 16 – IC and Particle in Non-inertial Frame</a></li>
   <li><a href="#set-17-rolling-and-sliding" id="toc-set-17-rolling-and-sliding" class="nav-link" data-scroll-target="#set-17-rolling-and-sliding"><span class="header-section-number">19.18.3</span> Set 17 – Rolling and Sliding</a></li>
+  <li><a href="#set-18-moments-of-inertia" id="toc-set-18-moments-of-inertia" class="nav-link" data-scroll-target="#set-18-moments-of-inertia"><span class="header-section-number">19.18.4</span> Set 18 – Moments of Inertia</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1586,34 +1587,154 @@ In some problems, geometric laws that hold for all time can be differentiated:
     \mathbf{v}_B - \mathbf{v}_A &amp;= \boldsymbol{\omega}\times(\mathbf{r}_B-\mathbf{r}_A)+\mathbf{v}_{\mathrm{rel}}, \\
     \mathbf{a}_B - \mathbf{a}_A &amp;= \boldsymbol{\alpha}\times(\mathbf{r}_B-\mathbf{r}_A)+\boldsymbol{\omega}\times(\boldsymbol{\omega}\times(\mathbf{r}_B-\mathbf{r}_A))+2\boldsymbol{\omega}\times\mathbf{v}_{\mathrm{rel}}+\mathbf{a}_{\mathrm{rel}}.
 \end{align}\]</span> The Coriolis acceleration is <span class="math inline">\(2\boldsymbol{\omega}\times\mathbf{v}_{\mathrm{rel}}\)</span>.</p>
+<p><strong>Angular momentum and inertia tensor</strong>: <span class="math display">\[\begin{align}
+    H^C_z = I^C_{zz}\,\omega, \qquad
+    I^C_{zz} = \int_{\mathcal{B}}(x^2+y^2)\,dm.
+\end{align}\]</span></p>
+<p><strong>Parallel axis theorem</strong>: <span class="math inline">\(I^A_{zz} = I^C_{zz} + m d^2\)</span> where <span class="math inline">\(d\)</span> is the distance from <span class="math inline">\(C\)</span> to <span class="math inline">\(A\)</span>.</p>
 </section>
 <section id="exercises" class="level2" data-number="19.18">
 <h2 data-number="19.18" class="anchored" data-anchor-id="exercises"><span class="header-section-number">19.18</span> Exercises</h2>
 <section id="set-15-rigid-body-kinematics" class="level3" data-number="19.18.1">
 <h3 data-number="19.18.1" class="anchored" data-anchor-id="set-15-rigid-body-kinematics"><span class="header-section-number">19.18.1</span> Set 15 – Rigid Body Kinematics</h3>
 <p><strong>1.</strong> [MKB 05-010] <em>(ans. <span class="math inline">\(\mathbf{v}_B=-11\mathbf{E}_x\)</span> m/s, <span class="math inline">\(\mathbf{a}_B=22\mathbf{E}_x-220\mathbf{E}_y\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/05-010.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 05-010.</figcaption>
+</figure>
+</div>
 <p><strong>2.</strong> [MKB 05-013] <em>(ans. <span class="math inline">\(\mathbf{v}_A=1.121\mathbf{E}_x+0.838\mathbf{E}_y\)</span> m/s, <span class="math inline">\(\mathbf{a}_B=-4.48\mathbf{E}_x+0.1465\mathbf{E}_y\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/05-013.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 05-013.</figcaption>
+</figure>
+</div>
 <p><strong>3.</strong> [05-018] <em>(ans. <span class="math inline">\(\mathbf{v}_A=-0.374\mathbf{E}_x+0.1905\mathbf{E}_y\)</span> m/s, <span class="math inline">\(\mathbf{a}_A=-0.757\mathbf{E}_x-0.605\mathbf{E}_y\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/05-018.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 05-018.</figcaption>
+</figure>
+</div>
 <p><strong>4.</strong> [05-049] <em>(ans. (a) <span class="math inline">\(N=91.7\)</span> rev/min CCW; (b) <span class="math inline">\(N=45.8\)</span> rev/min CCW; (c) <span class="math inline">\(N=45.8\)</span> rev/min CW)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/05-049.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 05-049.</figcaption>
+</figure>
+</div>
 <p><strong>5.</strong> [05-065] <em>(ans. <span class="math inline">\(\omega=0.722\)</span> rad/s)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/05-065.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 05-065.</figcaption>
+</figure>
+</div>
 <p><strong>6.</strong> [05-069] <em>(ans. <span class="math inline">\(\omega_{AB}=1.725\)</span> rad/s CCW, <span class="math inline">\(\omega_{BC}=4\)</span> rad/s CCW)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/05-069.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 05-069.</figcaption>
+</figure>
+</div>
 </section>
 <section id="set-16-ic-and-particle-in-non-inertial-frame" class="level3" data-number="19.18.2">
 <h3 data-number="19.18.2" class="anchored" data-anchor-id="set-16-ic-and-particle-in-non-inertial-frame"><span class="header-section-number">19.18.2</span> Set 16 – IC and Particle in Non-inertial Frame</h3>
 <p><strong>1.</strong> [MKB 05-102] <em>(ans. <span class="math inline">\(\alpha=0.286\)</span> rad/s<span class="math inline">\(^2\)</span>, <span class="math inline">\(a_A=0.653\)</span> m/s<span class="math inline">\(^2\)</span> down)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/05-102.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 05-102.</figcaption>
+</figure>
+</div>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/n34Z2jwwnW0" title="Solution – Problem 05/102" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p><strong>2.</strong> [MKB 05-125] <em>(ans. <span class="math inline">\(\mathbf{v}_A=0.1\mathbf{E}_x+0.25\mathbf{E}_y\)</span> m/s, <span class="math inline">\(\beta=68.2^\circ\)</span>)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/05-125.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 05-125.</figcaption>
+</figure>
+</div>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/PyM7KmlPirU" title="Solution – Problem 05/125" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p><strong>3.</strong> [05-143] <em>(ans. <span class="math inline">\(v_{\mathrm{rel}}=3.93\)</span> m/s, <span class="math inline">\(a_{\mathrm{rel}}=15.22\)</span> m/s<span class="math inline">\(^2\)</span>, <span class="math inline">\(\omega_{BC}=1.046\)</span> rad/s CW, <span class="math inline">\(\alpha_{BC}=117.7\)</span> rad/s<span class="math inline">\(^2\)</span> CW)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/05-143.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 05-143.</figcaption>
+</figure>
+</div>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/IG7Qtj2TdFQ" title="Solution – Problem 05/143" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="set-17-rolling-and-sliding" class="level3" data-number="19.18.3">
 <h3 data-number="19.18.3" class="anchored" data-anchor-id="set-17-rolling-and-sliding"><span class="header-section-number">19.18.3</span> Set 17 – Rolling and Sliding</h3>
 <p><strong>1.</strong> [MKB 05-055] <em>(ans. <span class="math inline">\(v_O=6.93\)</span> m/s, <span class="math inline">\(\omega=21.3\)</span> rad/s CW)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/05-055.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 05-055.</figcaption>
+</figure>
+</div>
 <p><strong>2.</strong> [MKB 05-087] <em>(ans. <span class="math inline">\(v_O=120\)</span> mm/s, <span class="math inline">\(v_P=216\)</span> mm/s)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/05-087.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 05-087.</figcaption>
+</figure>
+</div>
 <p><strong>3.</strong> [05-091] <em>(ans. <span class="math inline">\(v=15.71\)</span> ft/s right, <span class="math inline">\(v_s=6.89\)</span> ft/s left)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/05-091.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 05-091.</figcaption>
+</figure>
+</div>
 <p><strong>4.</strong> [05-093] <em>(ans. <span class="math inline">\(v_A=9.19\)</span> ft/sec left)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/05-093.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 05-093.</figcaption>
+</figure>
+</div>
 <p><strong>5.</strong> [05-100] <em>(ans. <span class="math inline">\(\mathbf{v}_A=5.12\mathbf{E}_x+2.12\mathbf{E}_y\)</span> m/s, <span class="math inline">\(\mathbf{a}_B=-16.25\mathbf{E}_x+2.5\mathbf{E}_y\)</span> m/s<span class="math inline">\(^2\)</span>)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/05-100.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB 05-100.</figcaption>
+</figure>
+</div>
+</section>
+<section id="set-18-moments-of-inertia" class="level3" data-number="19.18.4">
+<h3 data-number="19.18.4" class="anchored" data-anchor-id="set-18-moments-of-inertia"><span class="header-section-number">19.18.4</span> Set 18 – Moments of Inertia</h3>
+<p><strong>1.</strong> [MKB B-004] Integration required. <em>(ans. <span class="math inline">\(I_{xx}=\frac{3}{10}mr^2\)</span>, <span class="math inline">\(I_{yy}=\frac{2}{5}m(r^4+h^2)/(r^2)\)</span>)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/B-004.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB B-004.</figcaption>
+</figure>
+</div>
+<p><strong>2.</strong> [MKB B-029] Treat the hollow cylinder as a full cylinder of radius <span class="math inline">\(r_2\)</span> minus a cylinder of radius <span class="math inline">\(r_1\)</span>. <em>(ans. <span class="math inline">\(I_{xx}=\frac{1}{2}m(r_1^2+r_2^2)\)</span>)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/B-029.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB B-029.</figcaption>
+</figure>
+</div>
+<p><strong>3.</strong> [B-032] <em>(ans. <span class="math inline">\(L=r\sqrt{2\sqrt{3}}\)</span>)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/B-032.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB B-032.</figcaption>
+</figure>
+</div>
+<p><strong>4.</strong> [B-034] <em>(ans. <span class="math inline">\(I_{yy}=\rho L^3\left(\frac{43}{192}+\frac{83\pi}{128}\right)\)</span>)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/rigid_body_kinematics/problems/B-034.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>MKB B-034.</figcaption>
+</figure>
+</div>
 
 
 </section>
