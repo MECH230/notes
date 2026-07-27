@@ -1,0 +1,123 @@
+---
+title: "Lagrange's Equations"
+---
+
+## D'Alembert's Principle
+
+Newton's second law for particle $i$ is ${\bf F}_i^{\text{tot}} = m_i{\bf a}_i$, where ${\bf F}_i^{\text{tot}}$ includes both applied forces and constraint forces. Rearranging as ${\bf F}_i^{\text{tot}}-m_i{\bf a}_i={\bf 0}$ and dotting with a virtual displacement $\delta{\bf r}_i$, then summing over all particles:
+\begin{align}
+    \sum_{i=1}^N\lp{\bf F}_i^{\text{tot}}-m_i{\bf a}_i\rp\cdot\delta{\bf r}_i = 0.
+\end{align}
+Splitting ${\bf F}_i^{\text{tot}}$ into applied forces ${\bf F}_i$ and constraint forces ${\bf f}_i^c$, and restricting attention to **workless constraints** (rigid smooth guides, inextensible cables, ideal pins) for which $\sum_i{\bf f}_i^c\cdot\delta{\bf r}_i=0$ for every admissible $\delta{\bf r}_i$, we obtain **D'Alembert's principle**:
+\begin{align}
+    \sum_{i=1}^N\lp{\bf F}_i-m_i{\bf a}_i\rp\cdot\delta{\bf r}_i = 0 \qquad \text{for all admissible }\delta{\bf r}_i.
+\end{align}
+This is a virtual-work statement for *dynamics*: the applied forces, together with the fictitious "inertia force" $-m_i{\bf a}_i$, do zero virtual work. Unlike the static case, this holds identically (it is just Newton's law), not as a special condition.
+
+## From D'Alembert's Principle to Lagrange's Equations
+
+Substitute $\delta{\bf r}_i = \sum_j(\partial{\bf r}_i/\partial q_j)\delta q_j$ and use the independence of the $\delta q_j$. The applied-force term is exactly the virtual work from the previous lecture:
+\begin{align}
+    \sum_{i=1}^N{\bf F}_i\cdot\delta{\bf r}_i = \sum_{j=1}^n Q_j\,\delta q_j.
+\end{align}
+The inertia term requires more work:
+\begin{align}
+    \sum_{i=1}^N m_i{\bf a}_i\cdot\delta{\bf r}_i = \sum_{j=1}^n\lp\sum_{i=1}^N m_i{\bf a}_i\cdot\frac{\partial{\bf r}_i}{\partial q_j}\rp\delta q_j.
+\end{align}
+Focus on the bracketed coefficient for a fixed $j$. Using the product rule,
+\begin{align}
+    m_i{\bf a}_i\cdot\frac{\partial{\bf r}_i}{\partial q_j} = \frac{d}{dt}\lp m_i{\bf v}_i\cdot\frac{\partial{\bf r}_i}{\partial q_j}\rp - m_i{\bf v}_i\cdot\frac{d}{dt}\lp\frac{\partial{\bf r}_i}{\partial q_j}\rp.
+\end{align}
+Two identities, both proved by direct differentiation of ${\bf r}_i(q_1,\dots,q_n,t)$, close the derivation:
+\begin{align}
+    \frac{\partial{\bf r}_i}{\partial q_j} = \frac{\partial{\bf v}_i}{\partial \dot q_j} \qquad\text{(cancellation of the dots, Lecture 38)},\qquad
+    \frac{d}{dt}\lp\frac{\partial{\bf r}_i}{\partial q_j}\rp = \frac{\partial {\bf v}_i}{\partial q_j}.
+\end{align}
+Substituting both identities:
+\begin{align}
+    m_i{\bf a}_i\cdot\frac{\partial{\bf r}_i}{\partial q_j} = \frac{d}{dt}\lp m_i{\bf v}_i\cdot\frac{\partial{\bf v}_i}{\partial\dot q_j}\rp-m_i{\bf v}_i\cdot\frac{\partial{\bf v}_i}{\partial q_j}
+    = \frac{d}{dt}\lp\frac{\partial}{\partial\dot q_j}\lp\tfrac12 m_i{\bf v}_i\cdot{\bf v}_i\rp\rp-\frac{\partial}{\partial q_j}\lp\tfrac12 m_i{\bf v}_i\cdot{\bf v}_i\rp.
+\end{align}
+Summing over all particles and recognizing the total kinetic energy $T=\sum_i\tfrac12 m_i{\bf v}_i\cdot{\bf v}_i$:
+\begin{align}
+    \sum_{i=1}^N m_i{\bf a}_i\cdot\frac{\partial{\bf r}_i}{\partial q_j} = \frac{d}{dt}\lp\frac{\partial T}{\partial\dot q_j}\rp-\frac{\partial T}{\partial q_j}.
+\end{align}
+
+::: {.callout-important title="Lagrange's Equations"}
+D'Alembert's principle, $\sum_j\leb Q_j-\lp\frac{d}{dt}\frac{\partial T}{\partial\dot q_j}-\frac{\partial T}{\partial q_j}\rp\reb\delta q_j=0$, holds for arbitrary independent $\delta q_j$, so each bracket must vanish:
+\begin{align}
+    \frac{d}{dt}\lp\frac{\partial T}{\partial\dot q_j}\rp-\frac{\partial T}{\partial q_j} = Q_j, \qquad j=1,\dots,n.
+\end{align}
+This is a set of $n$ second-order ODEs — exactly enough to determine the motion of an $n$-DOF system, and workless constraint forces never appear.
+:::
+
+## Conservative Forces and the Lagrangian
+
+If every applied force is conservative, $Q_j$ derives from a potential energy $U(q_1,\dots,q_n)$ (possibly $t$-dependent) via
+\begin{align}
+    Q_j = -\frac{\partial U}{\partial q_j}.
+\end{align}
+Since $U$ does not depend on $\dot q_j$, $\partial U/\partial\dot q_j = 0$, so we may move it inside the time-derivative term for free. Defining the **Lagrangian**
+\begin{align}
+    L(q,\dot q,t) \equiv T-U,
+\end{align}
+Lagrange's equations for a fully conservative system take their most compact form:
+\begin{align}
+    \boxed{\frac{d}{dt}\lp\frac{\partial L}{\partial\dot q_j}\rp-\frac{\partial L}{\partial q_j} = 0, \qquad j=1,\dots,n.}
+\end{align}
+If some forces are conservative (folded into $U$, hence into $L$) and others are not (springs with damping, applied external moments, friction), the general form is retained for the nonconservative part:
+\begin{align}
+    \frac{d}{dt}\lp\frac{\partial L}{\partial\dot q_j}\rp-\frac{\partial L}{\partial q_j} = Q_j^{\text{nc}}, \qquad j=1,\dots,n.
+\end{align}
+
+## Procedure
+
+::: {.callout-note title="Recipe"}
+1. Choose independent generalized coordinates $q_1,\dots,q_n$ equal in number to the DOF.
+2. Write position vectors ${\bf r}_i(q,t)$, differentiate to get ${\bf v}_i$, and form $T=\sum_i\tfrac12 m_i{\bf v}_i\cdot{\bf v}_i$ (for rigid bodies, use the Koenig decomposition from the rigid-body chapter).
+3. Identify the potential energy $U$ of all conservative forces and any remaining generalized forces $Q_j^{\text{nc}}$ from nonconservative forces (via virtual work, Lecture 38).
+4. Form $L=T-U$ and compute $\partial L/\partial\dot q_j$, then $\frac{d}{dt}(\cdot)$, then subtract $\partial L/\partial q_j$.
+5. Set the result equal to $Q_j^{\text{nc}}$ (zero if the system is fully conservative) for each $j$ to get the equations of motion.
+:::
+
+## Worked Example: Simple Pendulum, Revisited
+
+Return to the pendulum of the previous lecture, $q_1=\theta$. The velocity of the mass is ${\bf v}=\ell\dot\theta\,{\bf e}_\theta$, so
+\begin{align}
+    T = \tfrac12 m\ell^2\dot\theta^2, \qquad U = -mg\ell\cos\theta \quad(\text{measuring from the pivot}).
+\end{align}
+The Lagrangian is $L=T-U=\tfrac12 m\ell^2\dot\theta^2+mg\ell\cos\theta$. Then
+\begin{align}
+    \frac{\partial L}{\partial\dot\theta} = m\ell^2\dot\theta, \qquad
+    \frac{d}{dt}\lp\frac{\partial L}{\partial\dot\theta}\rp = m\ell^2\ddot\theta, \qquad
+    \frac{\partial L}{\partial\theta} = -mg\ell\sin\theta.
+\end{align}
+Lagrange's equation gives
+\begin{align}
+    m\ell^2\ddot\theta+mg\ell\sin\theta = 0 \quad\Longleftrightarrow\quad \ddot\theta+\frac{g}{\ell}\sin\theta=0,
+\end{align}
+identical to the moment equation about the pivot obtained by Newton–Euler methods — but here it fell out of two scalar energy functions, with no free-body diagram and no pin reaction ever computed.
+
+## Why This Works: A Comparison
+
+| | Newton–Euler | Lagrangian |
+|---|---|---|
+| Unknowns tracked | Positions, all forces (including constraints) | Generalized coordinates only |
+| Free-body diagrams | Required for every body | Not required |
+| Constraint forces | Must be solved for for or eliminated by hand | Never appear |
+| Vector/scalar | Vector equations | Scalar equations ($T$, $U$) |
+| Best suited to | Few bodies, forces of direct interest | Many DOF, complex constraints |
+
+Both methods produce the same equations of motion — they must, since Lagrange's equations were derived *from* Newton's second law. The Lagrangian approach simply automates the elimination of workless constraint forces that Newton–Euler methods require you to introduce and then cancel by hand.
+
+## Summary
+
+D'Alembert's principle, $\sum_i({\bf F}_i-m_i{\bf a}_i)\cdot\delta{\bf r}_i=0$, converts dynamics into a virtual-work statement. Expanding in generalized coordinates yields **Lagrange's equations**:
+\begin{align}
+    \frac{d}{dt}\lp\frac{\partial T}{\partial\dot q_j}\rp-\frac{\partial T}{\partial q_j} = Q_j, \qquad j=1,\dots,n.
+\end{align}
+For conservative forces, $Q_j=-\partial U/\partial q_j$, and with $L=T-U$:
+\begin{align}
+    \frac{d}{dt}\lp\frac{\partial L}{\partial\dot q_j}\rp-\frac{\partial L}{\partial q_j} = 0.
+\end{align}
+Nonconservative generalized forces $Q_j^{\text{nc}}$ appear on the right-hand side when present.

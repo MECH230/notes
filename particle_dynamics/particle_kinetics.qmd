@@ -285,8 +285,14 @@ The equations of motion in this case (see primer section 1.6) need to be solved 
 
 ![MKB 3/006.](../figures/particle_kinetics/03-006.png){width=50%}
 
-**5.** [OOR Exercise 1.3] *(See O'Reilly Primer for problem statement.)*
+**5.** [OOR Exercise 1.3]
+
+![O'Reilly Primer, Exercise 1.3.](../figures/particle_kinetics/oor_ex_1_3.png){width=70%}
 
 **6.** [OOR Exercise 1.5]
 
+![O'Reilly Primer, Exercise 1.5.](../figures/particle_kinetics/oor_ex_1_5.png){width=70%}
+
 **7.** [OOR Exercise 1.8]
+
+![O'Reilly Primer, Exercise 1.8.](../figures/particle_kinetics/oor_ex_1_8.png){width=70%}

@@ -372,6 +372,10 @@ The curvature is $\kappa=1/\rho$ (radius of curvature $\rho$). The BoLM gives $F
 
 ![Problem 03/043.](../figures/serret_frenet_triad/eg-particle-on-ring.jpg){width=50%}
 
-**10.** [OOR 3.1] *(See O'Reilly Primer.)*
+**10.** [OOR 3.1]
+
+![O'Reilly Primer, Exercise 3.1.](../figures/serret_frenet_triad/oor_3_1.png){width=70%}
 
 **11.** [OOR 3.2]
+
+![O'Reilly Primer, Exercise 3.2.](../figures/serret_frenet_triad/oor_3_2.png){width=70%}

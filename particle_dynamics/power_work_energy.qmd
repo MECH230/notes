@@ -294,10 +294,18 @@ If all work-doing forces are conservative, **energy is conserved**: $E=T+U=\text
 
 ![MKB 03-263.](../figures/power_work_energy/03-263.png){width=50%}
 
-**7.** [OOR Exercise 5-1] *(See O'Reilly Primer.)*
+**7.** [OOR Exercise 5-1]
+
+![O'Reilly Primer, Exercise 5.1.](../figures/power_work_energy/oor_5_1.png){width=70%}
 
 **8.** [OOR Exercise 5-4]
 
+![O'Reilly Primer, Exercise 5.4.](../figures/power_work_energy/oor_5_4.png){width=70%}
+
 **9.** [OOR Exercises 5-6 & 5-7]
 
+![O'Reilly Primer, Exercises 5.6 and 5.7.](../figures/power_work_energy/oor_5_6_7.png){width=70%}
+
 **10.** [OOR Exercises 5-8 & 5-9]
+
+![O'Reilly Primer, Exercises 5.8 and 5.9.](../figures/power_work_energy/oor_5_8_9.png){width=70%}

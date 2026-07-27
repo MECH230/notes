@@ -50,6 +50,11 @@ book:
         - rigid_body_dynamics/rigid_body_kinematics.qmd
         - rigid_body_dynamics/rigid_body_kinetics.qmd
         - rigid_body_dynamics/work_energy_theorem.qmd
+    - part: "Lagrangian Mechanics"
+      chapters:
+        - lagrangian_mechanics/generalized_coordinates.qmd
+        - lagrangian_mechanics/lagranges_equations.qmd
+        - lagrangian_mechanics/examples_and_applications.qmd
     - references.qmd
     - part: "Appendices"
       chapters:

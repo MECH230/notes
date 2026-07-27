@@ -476,8 +476,14 @@ See an animation of the cylindrical-polar basis for a particle moving aroubd a c
 
 ![MKB 03-037.](../figures/cylindrical_polar_coordinates/03-037.png){width=50%}
 
-**5.** [Primer Exercise 2.6] *(See O'Reilly Primer.)*
+**5.** [Primer Exercise 2.6]
+
+![O'Reilly Primer, Exercise 2.6.](../figures/cylindrical_polar_coordinates/oor_ex_2_6.png){width=70%}
 
 **6.** [Primer Exercise 2.7]
 
+![O'Reilly Primer, Exercise 2.7.](../figures/cylindrical_polar_coordinates/oor_ex_2_7.png){width=70%}
+
 **7.** [Primer Exercise 2.8]
+
+![O'Reilly Primer, Exercise 2.8.](../figures/cylindrical_polar_coordinates/oor_ex_2_8.png){width=70%}
