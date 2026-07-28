@@ -437,7 +437,7 @@ The position, velocity, acceleration of the particle are
 
 ## Lecture Videos
 
-{{< video https://youtu.be/pj7kitk0VcI title="Animating the motion of a pendulum in Python" width="100%" >}}
+{{< video https://youtu.be/pj7kitk0VcI title="Animating the motion of a pendulum in Python" >}}
 
 
 ## Exercises
@@ -461,7 +461,7 @@ See an animation of the cylindrical-polar basis for a particle moving aroubd a c
 
 ![MKB 2/121.](../figures/cylindrical_polar_coordinates/02-121.jpg){width=50%}
 
-{{< video https://youtu.be/wbUBexp8xfc title="Solution – Problem 02/121" width="100%" >}}
+{{< video https://youtu.be/wbUBexp8xfc title="Solution – Problem 02/121" >}}
 
 
 **2.** [MKB 02-105] Take $\mathbf{E}_x$ rightwards and $\mathbf{E}_y$ upwards; write the car's position in both bases. *(ans. $\dot r = 47.7$ ft/sec, $\dot\theta = -41.0$ deg/sec)*

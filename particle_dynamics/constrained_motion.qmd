@@ -76,7 +76,7 @@ For **pulley–chord systems**: (1) choose a datum, (2) define distances from th
 
 ![MKB 2/099.](../figures/constrained_motion/02-099.png){width=50%}
 
-{{< video https://youtu.be/Bt5neJj4Zhc title="Solution – Problem 02/099" width="100%" >}}
+{{< video https://youtu.be/Bt5neJj4Zhc title="Solution – Problem 02/099" >}}
 
 
 **2.** [03-056] Set up two polar coordinate systems with origins $O$ and $O'$. Write position vectors of $P$ in each basis. *(ans. $N = 2.89$ N towards $O'$, $R = 1.599$ N)*

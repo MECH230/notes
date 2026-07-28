@@ -233,5 +233,5 @@ Strategy: assume sticking; check the static criterion. If violated, resolve with
 
 ![MKB 03-071.](../figures/friction_force/03-071.png){width=50%}
 
-{{< video https://youtu.be/RDFfE0tFTnk title="Solution – Problem 03/071" width="100%" >}}
+{{< video https://youtu.be/RDFfE0tFTnk title="Solution – Problem 03/071" >}}
 

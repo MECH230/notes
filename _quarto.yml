@@ -3,8 +3,6 @@ project:
 
 
 title: "MECH230 Dynamics Notes"
-author: "Theresa Honein"
-date: "Spring 2026"
 number-sections: true
 
 engine: knitr

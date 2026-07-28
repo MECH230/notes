@@ -258,7 +258,7 @@ Define the **Darboux vector** $\bomega_{SF} = \kappa{\bf e}_b+\tau{\bf e}_t$ so 
     \frac{d{\bf e}_i}{ds} = \bomega_{SF}\times{\bf e}_i, \quad i = t, n, b.
 \end{align}
 
-{{< video https://youtu.be/OB13c0WlUSg title="A derivation of the Serret-Frenet Formulae" width="100%" >}}
+{{< video https://youtu.be/OB13c0WlUSg title="A derivation of the Serret-Frenet Formulae" >}}
 
 ### Example: A Particle on a Helix
 

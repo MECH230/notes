@@ -219,6 +219,12 @@ Four classes of applications: (1) purely translational motion ($\bomega=\balpha=
 
 {{< video https://youtu.be/Q7PV2pxBuwc title="Solution – Problem 06/051" >}}
 
+**2.** [MKB 07-066] *Dynamic imbalance of a rotating shaft carrying two offset point masses.*
+
+![MKB 07-066.](../figures/rigid_body_kinetics/problems/07-066.png){width=50%}
+
+{{< video https://youtu.be/HGiVnQbItTI title="Solution – MKB Problem 07/066 A rotating shaft with a mass imbalance" >}}
+
 
 ### Set 21 – General Plane Motion
 
@@ -280,6 +286,4 @@ Four classes of applications: (1) purely translational motion ($\bomega=\balpha=
 ### Other
 
 {{< video https://youtu.be/gvBZyEq_bGo title="Solution – Problem 06/035 Nonzero products of inertia" >}}
-
-{{< video https://youtu.be/HGiVnQbItTI title="Solution – MKB Problem 07/066 A rotating shaft with a mass imbalance" >}}
 
