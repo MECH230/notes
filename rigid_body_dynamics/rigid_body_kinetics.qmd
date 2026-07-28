@@ -213,13 +213,33 @@ Four classes of applications: (1) purely translational motion ($\bomega=\balpha=
 
 ### Set 20 – Fixed Point Rotation
 
-**1.** [06-051]
+**1.** [MKB 06-029] *(ans. $\alpha=1.193$ rad/s$^2$ CCW, $F_A=769$ N)*
+
+![MKB 06-029.](../figures/rigid_body_kinetics/problems/06-029.png){width=50%}
+
+**2.** [MKB 06-035] *(ans. $R=3.57$ lb)*
+
+![MKB 06-035.](../figures/rigid_body_kinetics/problems/06-035.png){width=50%}
+
+**3.** [06-037] *(ans. $A=56.3$ N)*
+
+![MKB 06-037.](../figures/rigid_body_kinetics/problems/06-037.png){width=50%}
+
+**4.** [06-039] *(ans. (a) $\alpha=7.85$ rad/s$^2$ CCW, (b) $\alpha=6.28$ rad/s$^2$ CCW)*
+
+![MKB 06-039.](../figures/rigid_body_kinetics/problems/06-039.png){width=50%}
+
+**5.** [06-051] *(ans. $b=40.7$ mm, $R=167.8$ N)*
 
 ![MKB 06-051.](../figures/rigid_body_kinetics/problems/06-051.png){width=50%}
 
 {{< video https://youtu.be/Q7PV2pxBuwc title="Solution – Problem 06/051" >}}
 
-**2.** [MKB 07-066] *Dynamic imbalance of a rotating shaft carrying two offset point masses.*
+**6.** [06-054] *(ans. $\alpha=\frac{6g}{7l}-\frac{12k}{7m}(\sqrt{5}-\sqrt{3})$)*
+
+![MKB 06-054.](../figures/rigid_body_kinetics/problems/06-054.png){width=50%}
+
+**7.** [MKB 07-066] *Dynamic imbalance of a rotating shaft carrying two offset point masses.*
 
 ![MKB 07-066.](../figures/rigid_body_kinetics/problems/07-066.png){width=50%}
 
