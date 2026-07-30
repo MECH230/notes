@@ -1477,7 +1477,7 @@
     "href": "rigid_body_dynamics/rigid_body_kinematics.html#exercises",
     "title": "19  Kinematics of Rigid Bodies",
     "section": "19.18 Exercises",
-    "text": "19.18 Exercises\n\n19.18.1 Set 15 – Rigid Body Kinematics\n1. [MKB 05-010] (ans. \\(\\mathbf{v}_B=-11\\mathbf{E}_x\\) m/s, \\(\\mathbf{a}_B=22\\mathbf{E}_x-220\\mathbf{E}_y\\) m/s\\(^2\\))\n\n\n\nMKB 05-010.\n\n\n2. [MKB 05-013] (ans. \\(\\mathbf{v}_A=1.121\\mathbf{E}_x+0.838\\mathbf{E}_y\\) m/s, \\(\\mathbf{a}_B=-4.48\\mathbf{E}_x+0.1465\\mathbf{E}_y\\) m/s\\(^2\\))\n\n\n\nMKB 05-013.\n\n\n3. [05-018] (ans. \\(\\mathbf{v}_A=-0.374\\mathbf{E}_x+0.1905\\mathbf{E}_y\\) m/s, \\(\\mathbf{a}_A=-0.757\\mathbf{E}_x-0.605\\mathbf{E}_y\\) m/s\\(^2\\))\n\n\n\nMKB 05-018.\n\n\n4. [05-049] (ans. (a) \\(N=91.7\\) rev/min CCW; (b) \\(N=45.8\\) rev/min CCW; (c) \\(N=45.8\\) rev/min CW)\n\n\n\nMKB 05-049.\n\n\n5. [05-065] (ans. \\(\\omega=0.722\\) rad/s)\n\n\n\nMKB 05-065.\n\n\n6. [05-069] (ans. \\(\\omega_{AB}=1.725\\) rad/s CCW, \\(\\omega_{BC}=4\\) rad/s CCW)\n\n\n\nMKB 05-069.\n\n\n\n\n19.18.2 Set 16 – IC and Particle in Non-inertial Frame\n1. [MKB 05-102] (ans. \\(\\alpha=0.286\\) rad/s\\(^2\\), \\(a_A=0.653\\) m/s\\(^2\\) down)\n\n\n\nMKB 05-102.\n\n\n\n2. [MKB 05-125] (ans. \\(\\mathbf{v}_A=0.1\\mathbf{E}_x+0.25\\mathbf{E}_y\\) m/s, \\(\\beta=68.2^\\circ\\))\n\n\n\nMKB 05-125.\n\n\n\n3. [05-143] (ans. \\(v_{\\mathrm{rel}}=3.93\\) m/s, \\(a_{\\mathrm{rel}}=15.22\\) m/s\\(^2\\), \\(\\omega_{BC}=1.046\\) rad/s CW, \\(\\alpha_{BC}=117.7\\) rad/s\\(^2\\) CW)\n\n\n\nMKB 05-143.\n\n\n\n\n\n19.18.3 Set 17 – Rolling and Sliding\n1. [MKB 05-055] (ans. \\(v_O=6.93\\) m/s, \\(\\omega=21.3\\) rad/s CW)\n\n\n\nMKB 05-055.\n\n\n2. [MKB 05-087] (ans. \\(v_O=120\\) mm/s, \\(v_P=216\\) mm/s)\n\n\n\nMKB 05-087.\n\n\n3. [05-091] (ans. \\(v=15.71\\) ft/s right, \\(v_s=6.89\\) ft/s left)\n\n\n\nMKB 05-091.\n\n\n4. [05-093] (ans. \\(v_A=9.19\\) ft/sec left)\n\n\n\nMKB 05-093.\n\n\n5. [05-100] (ans. \\(\\mathbf{v}_A=5.12\\mathbf{E}_x+2.12\\mathbf{E}_y\\) m/s, \\(\\mathbf{a}_B=-16.25\\mathbf{E}_x+2.5\\mathbf{E}_y\\) m/s\\(^2\\))\n\n\n\nMKB 05-100.\n\n\n\n\n19.18.4 Set 18 – Moments of Inertia\n1. [MKB B-004] Integration required. (ans. \\(I_{xx}=\\frac{3}{10}mr^2\\), \\(I_{yy}=\\frac{2}{5}m(r^4+h^2)/(r^2)\\))\n\n\n\nMKB B-004.\n\n\n2. [MKB B-029] Treat the hollow cylinder as a full cylinder of radius \\(r_2\\) minus a cylinder of radius \\(r_1\\). (ans. \\(I_{xx}=\\frac{1}{2}m(r_1^2+r_2^2)\\))\n\n\n\nMKB B-029.\n\n\n3. [B-032] (ans. \\(L=r\\sqrt{2\\sqrt{3}}\\))\n\n\n\nMKB B-032.\n\n\n4. [B-034] (ans. \\(I_{yy}=\\rho L^3\\left(\\frac{43}{192}+\\frac{83\\pi}{128}\\right)\\))\n\n\n\nMKB B-034.",
+    "text": "19.18 Exercises\n\n19.18.1 Set 15 – Rigid Body Kinematics\n1. [MKB 05-010] (ans. \\(\\mathbf{v}_B=-11\\mathbf{E}_x\\) m/s, \\(\\mathbf{a}_B=22\\mathbf{E}_x-220\\mathbf{E}_y\\) m/s\\(^2\\))\n\n\n\nMKB 05-010.\n\n\n2. [MKB 05-013] (ans. \\(\\mathbf{v}_A=1.121\\mathbf{E}_x+0.838\\mathbf{E}_y\\) m/s, \\(\\mathbf{a}_B=-4.48\\mathbf{E}_x+0.1465\\mathbf{E}_y\\) m/s\\(^2\\))\n\n\n\nMKB 05-013.\n\n\n3. [05-018] (ans. \\(\\mathbf{v}_A=-0.374\\mathbf{E}_x+0.1905\\mathbf{E}_y\\) m/s, \\(\\mathbf{a}_A=-0.757\\mathbf{E}_x-0.605\\mathbf{E}_y\\) m/s\\(^2\\))\n\n\n\nMKB 05-018.\n\n\n4. [05-049] (ans. (a) \\(N=91.7\\) rev/min CCW; (b) \\(N=45.8\\) rev/min CCW; (c) \\(N=45.8\\) rev/min CW)\n\n\n\nMKB 05-049.\n\n\n5. [05-065] (ans. \\(\\omega=0.722\\) rad/s)\n\n\n\nMKB 05-065.\n\n\n6. [05-069] (ans. \\(\\omega_{AB}=1.725\\) rad/s CCW, \\(\\omega_{BC}=4\\) rad/s CCW)\n\n\n\nMKB 05-069.\n\n\n\n\n19.18.2 Set 16 – IC and Particle in Non-inertial Frame\n1. [MKB 05-102] (ans. \\(\\alpha=0.286\\) rad/s\\(^2\\), \\(a_A=0.653\\) m/s\\(^2\\) down)\n\n\n\nMKB 05-102.\n\n\n\n2. [MKB 05-125] (ans. \\(\\mathbf{v}_A=0.1\\mathbf{E}_x+0.25\\mathbf{E}_y\\) m/s, \\(\\beta=68.2^\\circ\\))\n\n\n\nMKB 05-125.\n\n\n\n3. [05-143] (ans. \\(v_{\\mathrm{rel}}=3.93\\) m/s at \\(19.11^\\circ\\), \\(a_{\\mathrm{rel}}=15.22\\) m/s\\(^2\\) at \\(19.11^\\circ\\), \\(\\omega_{BC}=1.429\\) rad/s CW, \\(\\alpha_{BC}=170.0\\) rad/s\\(^2\\) CW)\n\n\n\nMKB 05-143.\n\n\n\n\n\n19.18.3 Set 17 – Rolling and Sliding\n1. [MKB 05-055] (ans. \\(v_O=6.93\\) m/s, \\(\\omega=21.3\\) rad/s CW)\n\n\n\nMKB 05-055.\n\n\n2. [MKB 05-087] (ans. \\(v_O=120\\) mm/s, \\(v_P=216\\) mm/s)\n\n\n\nMKB 05-087.\n\n\n3. [05-091] (ans. \\(v=15.71\\) ft/s right, \\(v_s=6.89\\) ft/s left)\n\n\n\nMKB 05-091.\n\n\n4. [05-093] (ans. \\(v_A=9.19\\) ft/sec left)\n\n\n\nMKB 05-093.\n\n\n5. [05-100] (ans. \\(\\mathbf{v}_A=5.12\\mathbf{E}_x+2.12\\mathbf{E}_y\\) m/s, \\(\\mathbf{a}_B=-16.25\\mathbf{E}_x+2.5\\mathbf{E}_y\\) m/s\\(^2\\))\n\n\n\nMKB 05-100.\n\n\n\n\n19.18.4 Set 18 – Moments of Inertia\n1. [MKB B-004] Integration required. (ans. \\(I_{xx}=\\frac{3}{10}mr^2\\), \\(I_{yy}=\\frac{2}{5}m(r^4+h^2)/(r^2)\\))\n\n\n\nMKB B-004.\n\n\n2. [MKB B-029] Treat the hollow cylinder as a full cylinder of radius \\(r_2\\) minus a cylinder of radius \\(r_1\\). (ans. \\(I_{xx}=\\frac{1}{2}m(r_1^2+r_2^2)\\))\n\n\n\nMKB B-029.\n\n\n3. [B-032] (ans. \\(L=r\\sqrt{2\\sqrt{3}}\\))\n\n\n\nMKB B-032.\n\n\n4. [B-034] (ans. \\(I_{yy}=\\rho L^3\\left(\\frac{43}{192}+\\frac{83\\pi}{128}\\right)\\))\n\n\n\nMKB B-034.",
     "crumbs": [
       "Rigid Body Dynamics",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Kinematics of Rigid Bodies</span>"
@@ -1539,11 +1539,33 @@
     ]
   },
   {
+    "objectID": "rigid_body_dynamics/rigid_body_kinetics.html#impulse-and-momentum-for-rigid-bodies",
+    "href": "rigid_body_dynamics/rigid_body_kinetics.html#impulse-and-momentum-for-rigid-bodies",
+    "title": "20  Kinetics of Rigid Bodies",
+    "section": "20.6 Impulse and Momentum for Rigid Bodies",
+    "text": "20.6 Impulse and Momentum for Rigid Bodies\nThe linear impulse - linear momentum equation is \\[\\begin{align}\n    \\int_{t_A}^{t^B}{\\bf F}dt = {\\bf G}(t_B)-{\\bf G}(t_A).\n\\end{align}\\] The angular impulse - angular momentum equations are equivalently \\[\\begin{align}\n    & \\int_{t_A}^{t_B}{\\bf M}^C dt = {\\bf H}^C(t_B)-{\\bf H}^C(t_A)\\quad\\text{where $C$ is the center of mass},\\\\\n    & \\int_{t_A}^{t_B}{\\bf M}^O dt = {\\bf H}^O(t_B)-{\\bf H}^O(t_A)\\quad\\text{if there is a fixed point }O.\n\\end{align}\\]",
+    "crumbs": [
+      "Rigid Body Dynamics",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Kinetics of Rigid Bodies</span>"
+    ]
+  },
+  {
+    "objectID": "rigid_body_dynamics/rigid_body_kinetics.html#moment-free-motion-of-a-rigid-body",
+    "href": "rigid_body_dynamics/rigid_body_kinetics.html#moment-free-motion-of-a-rigid-body",
+    "title": "20  Kinetics of Rigid Bodies",
+    "section": "20.7 Moment-Free Motion of a Rigid Body",
+    "text": "20.7 Moment-Free Motion of a Rigid Body\nThe Tennis Racket Problem: A tennis racket is thrown in the air with a certain angular velocity. The racket rotates about its center of mass, and the angular momentum is conserved. The racket has three principal axes of rotation, and the stability of rotation depends on which axis is used. Rotation about the axis with the largest or smallest moment of inertia is stable, while rotation about the intermediate axis is unstable.\nThis is also known as the Dzhanibekov effect.\nYou can learn more about this here and here.\nhttps://www.youtube.com/watch?v=1VPfZ_XzisU&t=22s",
+    "crumbs": [
+      "Rigid Body Dynamics",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Kinetics of Rigid Bodies</span>"
+    ]
+  },
+  {
     "objectID": "rigid_body_dynamics/rigid_body_kinetics.html#summary",
     "href": "rigid_body_dynamics/rigid_body_kinetics.html#summary",
     "title": "20  Kinetics of Rigid Bodies",
-    "section": "20.6 Summary",
-    "text": "20.6 Summary\nFor \\(K\\) forces and a moment \\({\\bf M}_e\\) acting on a rigid body, the balance laws are: \\[\\begin{align}\n    {\\bf F} = m\\frac{d{\\bf v}_C}{dt}, \\qquad {\\bf M}^O = \\dot{\\bf H}^O \\quad (\\text{or equivalently } {\\bf M}^C = \\dot{\\bf H}^C).\n\\end{align}\\]\nFor fixed-axis rotation with \\(\\bomega = \\omega{\\bf E}_z\\) and \\(I_{xz}=I_{yz}=0\\): \\[\\begin{align}\n    {\\bf F} = m\\dot{\\bf v}_C, \\qquad {\\bf M} = I_{zz}\\dot{\\omega}{\\bf E}_z.\n\\end{align}\\]\nFour classes of applications: (1) purely translational motion (\\(\\bomega=\\balpha={\\bf 0}\\)), (2) rigid body with a fixed point, (3) rolling and sliding rigid bodies, (4) imbalanced rotors.",
+    "section": "20.8 Summary",
+    "text": "20.8 Summary\nFor \\(K\\) forces and a moment \\({\\bf M}_e\\) acting on a rigid body, the balance laws are: \\[\\begin{align}\n    {\\bf F} = m\\frac{d{\\bf v}_C}{dt}, \\qquad {\\bf M}^O = \\dot{\\bf H}^O \\quad (\\text{or equivalently } {\\bf M}^C = \\dot{\\bf H}^C).\n\\end{align}\\]\nFor fixed-axis rotation with \\(\\bomega = \\omega{\\bf E}_z\\) and \\(I_{xz}=I_{yz}=0\\): \\[\\begin{align}\n    {\\bf F} = m\\dot{\\bf v}_C, \\qquad {\\bf M} = I_{zz}\\dot{\\omega}{\\bf E}_z.\n\\end{align}\\]\nFour classes of applications: (1) purely translational motion (\\(\\bomega=\\balpha={\\bf 0}\\)), (2) rigid body with a fixed point, (3) rolling and sliding rigid bodies, (4) imbalanced rotors.",
     "crumbs": [
       "Rigid Body Dynamics",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Kinetics of Rigid Bodies</span>"
@@ -1553,8 +1575,8 @@
     "objectID": "rigid_body_dynamics/rigid_body_kinetics.html#exercises",
     "href": "rigid_body_dynamics/rigid_body_kinetics.html#exercises",
     "title": "20  Kinetics of Rigid Bodies",
-    "section": "20.7 Exercises",
-    "text": "20.7 Exercises\n\n20.7.1 Set 19 – Rigid Body Translation\n1. [MKB 06-006] (ans. \\(a=5.66\\) m/s\\(^2\\))\n\n\n\nMKB 06-006.\n\n\n2. [06-012] (ans. \\(a=16.43\\) ft/sec\\(^2\\))\n\n\n\nMKB 06-012.\n\n\n3. [06-013] (ans. \\(N_A=6.85\\) kN up, \\(N_B=9.34\\) kN up)\n\n\n\nMKB 06-013.\n\n\n4. [06-022] (ans. \\(N=257\\) kN up)\n\n\n\nMKB 06-022.\n\n\n\n\n20.7.2 Set 20 – Fixed Point Rotation\n1. [MKB 06-029] (ans. \\(\\alpha=1.193\\) rad/s\\(^2\\) CCW, \\(F_A=769\\) N)\n\n\n\nMKB 06-029.\n\n\n2. [MKB 06-035] (ans. \\(R=3.57\\) lb)\n\n\n\nMKB 06-035.\n\n\n3. [06-037] (ans. \\(A=56.3\\) N)\n\n\n\nMKB 06-037.\n\n\n4. [06-039] (ans. (a) \\(\\alpha=7.85\\) rad/s\\(^2\\) CCW, (b) \\(\\alpha=6.28\\) rad/s\\(^2\\) CCW)\n\n\n\nMKB 06-039.\n\n\n5. [06-051] (ans. \\(b=40.7\\) mm, \\(R=167.8\\) N)\n\n\n\nMKB 06-051.\n\n\n\n6. [06-054] (ans. \\(\\alpha=\\frac{6g}{7l}-\\frac{12k}{7m}(\\sqrt{5}-\\sqrt{3})\\))\n\n\n\nMKB 06-054.\n\n\n7. [MKB 07-066] Dynamic imbalance of a rotating shaft carrying two offset point masses.\n\n\n\nMKB 07-066.\n\n\n\n\n\n20.7.3 Set 21 – General Plane Motion\n1. [MKB 06-061] (ans. \\(\\alpha=48.8\\) rad/s\\(^2\\) CW, \\(\\bar a_x=0\\), \\(\\bar a_y=5\\) m/s\\(^2\\))\n\n\n\nMKB 06-061.\n\n\n2. [MKB 06-062] (ans. A: \\(\\alpha_A=\\frac{g}{r}\\sin\\theta\\), \\(\\mu_s=0\\); B: \\(\\alpha_B=\\frac{g}{2r}\\sin\\theta\\), \\(\\mu_s=\\frac{1}{2}\\tan\\theta\\))\n\n\n\nMKB 06-062.\n\n\n3. [06-063] (ans. \\(\\bar a=13.80\\) ft/sec\\(^2\\) down incline, \\(F=1.714\\) lb up incline)\n\n\n\nMKB 06-063.\n\n\n4. [06-070] (ans. \\(a=\\frac{8(m+M)g}{3\\pi(m+3M)}\\) left, \\(\\alpha=\\frac{8mg}{3\\pi r(m+3M)}\\) CW)\n\n\n\nMKB 06-070.\n\n\n\n5. [06-076] (ans. \\(s=\\frac{3d}{2}\\))\n\n\n\nMKB 06-076.\n\n\n6. [06-077] (ans. \\(N_B=36.4\\) N up)\n\n\n\nMKB 06-077.\n\n\n\n\n20.7.4 Set 22 – Impulse and Momentum for Rigid Bodies\n1. [MKB 06-136] (ans. \\(\\omega=1.811\\) rad/s CCW)\n\n\n\nMKB 06-136.\n\n\n2. [MKB 06-142] (ans. \\(\\mathbf{v}=\\frac{Mu_M\\mathbf{E}_x+m\\mathbf{v}_m}{M+m}\\), \\(\\omega=\\frac{12vm}{L(4M+7m)}\\) CCW)\n\n\n\nMKB 06-142.\n\n\n3. [06-145] (ans. \\(\\omega=\\frac{3mv_1}{(M+m)L}\\) CW)\n\n\n\nMKB 06-145.\n\n\n4. [06-146] (ans. \\(N=2.04\\) rev/s)\n\n\n\nMKB 06-146.\n\n\n5. [06-148] (ans. \\(\\omega=1.593\\) rad/s CCW, \\(n=91.7\\%\\))\n\n\n\nMKB 06-148.\n\n\n6. [06-155] (ans. \\(t=\\frac{2v_0}{g(7\\mu_k\\cos\\theta-2\\sin\\theta)}\\))\n\n\n\nMKB 06-155.\n\n\n\n\n\n20.7.5 Other",
+    "section": "20.9 Exercises",
+    "text": "20.9 Exercises\n\n20.9.1 Set 19 – Rigid Body Translation\n1. [MKB 06-006] (ans. \\(a=5.66\\) m/s\\(^2\\))\n\n\n\nMKB 06-006.\n\n\n2. [06-012] (ans. \\(a=16.43\\) ft/sec\\(^2\\))\n\n\n\nMKB 06-012.\n\n\n3. [06-013] (ans. \\(N_A=6.85\\) kN up, \\(N_B=9.34\\) kN up)\n\n\n\nMKB 06-013.\n\n\n4. [06-022] (ans. \\(N=257\\) kN up)\n\n\n\nMKB 06-022.\n\n\n\n\n20.9.2 Set 20 – Fixed Point Rotation\n1. [MKB 06-029] (ans. \\(\\alpha=1.193\\) rad/s\\(^2\\) CCW, \\(F_A=769\\) N)\n\n\n\nMKB 06-029.\n\n\n2. [MKB 06-035] (ans. \\(R=3.57\\) lb)\n\n\n\nMKB 06-035.\n\n\n\n3. [06-037] (ans. \\(A=56.3\\) N)\n\n\n\nMKB 06-037.\n\n\n4. [06-039] (ans. (a) \\(\\alpha=7.85\\) rad/s\\(^2\\) CCW, (b) \\(\\alpha=6.28\\) rad/s\\(^2\\) CCW)\n\n\n\nMKB 06-039.\n\n\n5. [06-051] (ans. \\(b=40.7\\) mm, \\(R=167.8\\) N)\n\n\n\nMKB 06-051.\n\n\n\n6. [06-054] (ans. \\(\\alpha=\\frac{6g}{7l}-\\frac{12k}{7m}(\\sqrt{5}-\\sqrt{3})\\))\n\n\n\nMKB 06-054.\n\n\n7. [MKB 07-066] Dynamic imbalance of a rotating shaft carrying two offset point masses.\n\n\n\nMKB 07-066.\n\n\n\n\n\n20.9.3 Set 21 – General Plane Motion\n1. [MKB 06-061] (ans. \\(\\alpha=48.8\\) rad/s\\(^2\\) CW, \\(\\bar a_x=0\\), \\(\\bar a_y=5\\) m/s\\(^2\\))\n\n\n\nMKB 06-061.\n\n\n2. [MKB 06-062] (ans. A: \\(\\alpha_A=\\frac{g}{r}\\sin\\theta\\), \\(\\mu_s=0\\); B: \\(\\alpha_B=\\frac{g}{2r}\\sin\\theta\\), \\(\\mu_s=\\frac{1}{2}\\tan\\theta\\))\n\n\n\nMKB 06-062.\n\n\n3. [06-063] (ans. \\(\\bar a=13.80\\) ft/sec\\(^2\\) down incline, \\(F=1.714\\) lb up incline)\n\n\n\nMKB 06-063.\n\n\n4. [06-070] (ans. \\(a=\\frac{8(m+M)g}{3\\pi(m+3M)}\\) left, \\(\\alpha=\\frac{8mg}{3\\pi r(m+3M)}\\) CW)\n\n\n\nMKB 06-070.\n\n\n\n5. [06-076] (ans. \\(s=\\frac{3d}{2}\\))\n\n\n\nMKB 06-076.\n\n\n6. [06-077] (ans. \\(N_B=36.4\\) N up)\n\n\n\nMKB 06-077.\n\n\n\n\n20.9.4 Set 22 – Impulse and Momentum for Rigid Bodies\n1. [MKB 06-136] (ans. \\(\\omega=1.811\\) rad/s CCW)\n\n\n\nMKB 06-136.\n\n\n2. [MKB 06-142] (ans. \\(\\mathbf{v}=\\frac{Mu_M\\mathbf{E}_x+m\\mathbf{v}_m}{M+m}\\), \\(\\omega=\\frac{12vm}{L(4M+7m)}\\) CCW)\n\n\n\nMKB 06-142.\n\n\n3. [06-145] (ans. \\(\\omega=\\frac{3mv_1}{(M+m)L}\\) CW)\n\n\n\nMKB 06-145.\n\n\n4. [06-146] (ans. \\(N=2.04\\) rev/s)\n\n\n\nMKB 06-146.\n\n\n5. [06-148] (ans. \\(\\omega=1.593\\) rad/s CCW, \\(n=91.7\\%\\))\n\n\n\nMKB 06-148.\n\n\n6. [06-155] (ans. \\(t=\\frac{2v_0}{g(7\\mu_k\\cos\\theta-2\\sin\\theta)}\\))\n\n\n\nMKB 06-155.",
     "crumbs": [
       "Rigid Body Dynamics",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Kinetics of Rigid Bodies</span>"
@@ -1660,256 +1682,278 @@
     ]
   },
   {
+    "objectID": "rigid_body_dynamics/systems_of_particles_and_rigid_bodies.html",
+    "href": "rigid_body_dynamics/systems_of_particles_and_rigid_bodies.html",
+    "title": "22  Systems of Particles and Rigid Bodies",
+    "section": "",
+    "text": "22.1 Example: BB8\nThe balance laws developed separately for particles, systems of particles, and rigid bodies apply just as well to combinations of these — assemblies of rigid bodies and particles connected by pins, rods, or motors. The following example illustrates how to set up such a problem: identifying the kinematic constraints between the bodies, drawing free-body diagrams of the combined system and of its parts, and applying the balance laws to each.\nConsider a spherical robot composed of a spherical shell of mass \\(m\\) and radius \\(R\\) and a bar of mass \\(2m\\) and length \\(\\ell&lt;2R\\) pinned at point \\(A\\), its center, to the center of the shell as shown in the figure below. A geared motor drive at \\(A\\) provides an internal moment which rotates the bar. The friction between the robot and the ground is sufficient to prevent slipping.\nThroughout the motion, the position vector from the origin to the center of the robot is \\({\\bf r}_A = x{\\bf E}_x+R{\\bf E}_y\\).\nThe angular velocity of the spherical shell is \\(\\bomega_1 = \\dot{\\theta}_1{\\bf E}_z\\) and the angular velocity of the bar of length \\(\\ell\\) is \\(\\bomega_2 = \\dot{\\theta}_2{\\bf E}_z\\).",
+    "crumbs": [
+      "Rigid Body Dynamics",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Systems of Particles and Rigid Bodies</span>"
+    ]
+  },
+  {
+    "objectID": "rigid_body_dynamics/systems_of_particles_and_rigid_bodies.html#example-bb8",
+    "href": "rigid_body_dynamics/systems_of_particles_and_rigid_bodies.html#example-bb8",
+    "title": "22  Systems of Particles and Rigid Bodies",
+    "section": "",
+    "text": "Draw the free-body diagram of (1) the combined system of the spherical shell and the bar of length \\(\\ell\\), (2) the spherical shell with its massless diameter alone, and (3) the bar of length \\(\\ell\\) alone.\nWe wish to determine the motion of the robot, i.e., we want to find \\(x(t)\\), \\(\\theta_1(t)\\), \\(\\theta_2(t)\\), resulting from the moments applied by the motor. How do we proceed?\n\n\n22.1.1 Free-Body Diagrams\nCombined system (shell + bar):\n\n\n\n\n\n\n\n\n\nSpherical shell alone:\n\n\n\n\n\n\n\n\n\nBar alone:\n\n\n\n\n\n\n\n\n\nwhere \\[\\begin{align}\n    {\\bf F}_f = F_f{\\bf E}_x.\n\\end{align}\\]\n\n\n22.1.2 Kinematics\nBy differentiating \\({\\bf r}_A\\), we get \\[\\begin{align}\n    \\begin{split}\n        {\\bf v}_A &= \\dot{x}{\\bf E}_x,\\\\\n        {\\bf a}_A &= \\ddot{x}{\\bf E}_x.\n    \\end{split}\n\\end{align}\\]\nThe roll-without-slip condition between the sphere and the ground, \\({\\bf v}_P={\\bf 0}\\), yields a relationship between \\(x\\) and \\(\\theta_1\\): \\[\\begin{align}\n    \\begin{split}\n        {\\bf v}_C &= \\bomega_1\\times R{\\bf E}_y,\\\\\n        \\dot{x} &= -R\\dot{\\theta}_1.\n    \\end{split}\n\\end{align}\\]\n\n\n22.1.3 Balance of Linear Momentum (Combined System)\n\\[\\begin{align}\n    {\\bf F} = (m_1+m_2){\\bf a}_A.\n\\end{align}\\]\n\n\n\n\n\n\nNoteNote\n\n\n\nThis example is left as a set-up exercise: complete the balance of linear momentum in components, then use the balance of angular momentum (about \\(A\\) or about \\(P\\)) for the combined system, the shell alone, and the bar alone, together with the kinematic constraint above, to solve for \\(x(t)\\), \\(\\theta_1(t)\\), \\(\\theta_2(t)\\).",
+    "crumbs": [
+      "Rigid Body Dynamics",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Systems of Particles and Rigid Bodies</span>"
+    ]
+  },
+  {
     "objectID": "lagrangian_mechanics/generalized_coordinates.html",
     "href": "lagrangian_mechanics/generalized_coordinates.html",
-    "title": "22  Generalized Coordinates and Virtual Work",
+    "title": "23  Generalized Coordinates and Virtual Work",
     "section": "",
-    "text": "22.1 Configuration Space and Generalized Coordinates\nSo far, every equation of motion in this course has come from Newton’s second law or its rotational counterpart, applied directly to free-body diagrams. For systems with several moving parts and constraints, this bookkeeping becomes heavy: every constraint force (pins, rollers, rods, cables) must be introduced explicitly, even though these forces do no work and never appear in the final answer. Lagrangian mechanics reformulates dynamics in terms of energy rather than force, and automatically eliminates workless constraint forces from the equations of motion.\nA system with \\(N\\) particles has, in principle, \\(3N\\) Cartesian coordinates. If the system is subject to \\(m\\) independent holonomic constraints (equations of the form \\(\\phi_k({\\bf r}_1,\\dots,{\\bf r}_N,t) = 0\\)), the number of independent coordinates needed to specify the configuration drops to \\[\\begin{align}\n    n = 3N-m.\n\\end{align}\\] This number \\(n\\) is the system’s number of degrees of freedom (DOF). Any set of \\(n\\) independent parameters \\(q_1,\\dots,q_n\\) that uniquely fixes the configuration of the system is called a set of generalized coordinates. They need not have units of length — an angle, an arc length, or a stretch are all valid choices.\nEvery position vector in the system can then be written as a function of the generalized coordinates (and possibly time, if a constraint is itself time-dependent): \\[\\begin{align}\n    {\\bf r}_i = {\\bf r}_i(q_1,q_2,\\dots,q_n,t), \\qquad i=1,\\dots,N.\n\\end{align}\\]",
+    "text": "23.1 Configuration Space and Generalized Coordinates\nSo far, every equation of motion in this course has come from Newton’s second law or its rotational counterpart, applied directly to free-body diagrams. For systems with several moving parts and constraints, this bookkeeping becomes heavy: every constraint force (pins, rollers, rods, cables) must be introduced explicitly, even though these forces do no work and never appear in the final answer. Lagrangian mechanics reformulates dynamics in terms of energy rather than force, and automatically eliminates workless constraint forces from the equations of motion.\nA system with \\(N\\) particles has, in principle, \\(3N\\) Cartesian coordinates. If the system is subject to \\(m\\) independent holonomic constraints (equations of the form \\(\\phi_k({\\bf r}_1,\\dots,{\\bf r}_N,t) = 0\\)), the number of independent coordinates needed to specify the configuration drops to \\[\\begin{align}\n    n = 3N-m.\n\\end{align}\\] This number \\(n\\) is the system’s number of degrees of freedom (DOF). Any set of \\(n\\) independent parameters \\(q_1,\\dots,q_n\\) that uniquely fixes the configuration of the system is called a set of generalized coordinates. They need not have units of length — an angle, an arc length, or a stretch are all valid choices.\nEvery position vector in the system can then be written as a function of the generalized coordinates (and possibly time, if a constraint is itself time-dependent): \\[\\begin{align}\n    {\\bf r}_i = {\\bf r}_i(q_1,q_2,\\dots,q_n,t), \\qquad i=1,\\dots,N.\n\\end{align}\\]",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/generalized_coordinates.html#configuration-space-and-generalized-coordinates",
     "href": "lagrangian_mechanics/generalized_coordinates.html#configuration-space-and-generalized-coordinates",
-    "title": "22  Generalized Coordinates and Virtual Work",
+    "title": "23  Generalized Coordinates and Virtual Work",
     "section": "",
     "text": "NoteNote\n\n\n\nA constraint is holonomic if it can be written as an algebraic equation among the coordinates (and time). Rolling without slipping in one dimension is holonomic; a general nonholonomic constraint restricts velocities without reducing the accessible configurations, and is beyond the scope of this course.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/generalized_coordinates.html#generalized-velocities",
     "href": "lagrangian_mechanics/generalized_coordinates.html#generalized-velocities",
-    "title": "22  Generalized Coordinates and Virtual Work",
-    "section": "22.2 Generalized Velocities",
-    "text": "22.2 Generalized Velocities\nDifferentiating \\({\\bf r}_i(q_1,\\dots,q_n,t)\\) with the chain rule gives the velocity of particle \\(i\\) in terms of the generalized velocities \\(\\dot{q}_1,\\dots,\\dot{q}_n\\): \\[\\begin{align}\n    {\\bf v}_i = \\frac{d{\\bf r}_i}{dt} = \\sum_{j=1}^n\\frac{\\partial {\\bf r}_i}{\\partial q_j}\\dot{q}_j+\\frac{\\partial {\\bf r}_i}{\\partial t}.\n\\end{align}\\] The last term is present only when the constraints defining \\({\\bf r}_i\\) depend explicitly on time (e.g., a bead on a wire that is itself being driven by a motor).\nA useful identity follows immediately by inspection: since \\({\\bf v}_i\\) is linear in the \\(\\dot q_j\\)’s with coefficients \\(\\partial{\\bf r}_i/\\partial q_j\\) that do not involve any \\(\\dot q_k\\), \\[\\begin{align}\n    \\frac{\\partial {\\bf v}_i}{\\partial \\dot{q}_j} = \\frac{\\partial {\\bf r}_i}{\\partial q_j}.\n\\end{align}\\] This “cancellation of the dots” identity is the key algebraic step used to derive Lagrange’s equations in the next lecture.",
+    "title": "23  Generalized Coordinates and Virtual Work",
+    "section": "23.2 Generalized Velocities",
+    "text": "23.2 Generalized Velocities\nDifferentiating \\({\\bf r}_i(q_1,\\dots,q_n,t)\\) with the chain rule gives the velocity of particle \\(i\\) in terms of the generalized velocities \\(\\dot{q}_1,\\dots,\\dot{q}_n\\): \\[\\begin{align}\n    {\\bf v}_i = \\frac{d{\\bf r}_i}{dt} = \\sum_{j=1}^n\\frac{\\partial {\\bf r}_i}{\\partial q_j}\\dot{q}_j+\\frac{\\partial {\\bf r}_i}{\\partial t}.\n\\end{align}\\] The last term is present only when the constraints defining \\({\\bf r}_i\\) depend explicitly on time (e.g., a bead on a wire that is itself being driven by a motor).\nA useful identity follows immediately by inspection: since \\({\\bf v}_i\\) is linear in the \\(\\dot q_j\\)’s with coefficients \\(\\partial{\\bf r}_i/\\partial q_j\\) that do not involve any \\(\\dot q_k\\), \\[\\begin{align}\n    \\frac{\\partial {\\bf v}_i}{\\partial \\dot{q}_j} = \\frac{\\partial {\\bf r}_i}{\\partial q_j}.\n\\end{align}\\] This “cancellation of the dots” identity is the key algebraic step used to derive Lagrange’s equations in the next lecture.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/generalized_coordinates.html#virtual-displacements",
     "href": "lagrangian_mechanics/generalized_coordinates.html#virtual-displacements",
-    "title": "22  Generalized Coordinates and Virtual Work",
-    "section": "22.3 Virtual Displacements",
-    "text": "22.3 Virtual Displacements\nA virtual displacement \\(\\delta{\\bf r}_i\\) is an infinitesimal, instantaneous, imaginary displacement consistent with the constraints at a frozen instant of time \\(t\\). Because time is held fixed, the \\(\\partial{\\bf r}_i/\\partial t\\) term does not appear: \\[\\begin{align}\n    \\delta {\\bf r}_i = \\sum_{j=1}^n\\frac{\\partial {\\bf r}_i}{\\partial q_j}\\delta q_j.\n\\end{align}\\] Here \\(\\delta q_1,\\dots,\\delta q_n\\) are arbitrary, independent infinitesimal variations of the generalized coordinates. This is the essential distinction between a virtual displacement \\(\\delta{\\bf r}_i\\) and an actual (kinematically realized) infinitesimal displacement \\(d{\\bf r}_i\\), which does include the \\(\\partial{\\bf r}_i/\\partial t\\,dt\\) term when constraints are time-dependent.",
+    "title": "23  Generalized Coordinates and Virtual Work",
+    "section": "23.3 Virtual Displacements",
+    "text": "23.3 Virtual Displacements\nA virtual displacement \\(\\delta{\\bf r}_i\\) is an infinitesimal, instantaneous, imaginary displacement consistent with the constraints at a frozen instant of time \\(t\\). Because time is held fixed, the \\(\\partial{\\bf r}_i/\\partial t\\) term does not appear: \\[\\begin{align}\n    \\delta {\\bf r}_i = \\sum_{j=1}^n\\frac{\\partial {\\bf r}_i}{\\partial q_j}\\delta q_j.\n\\end{align}\\] Here \\(\\delta q_1,\\dots,\\delta q_n\\) are arbitrary, independent infinitesimal variations of the generalized coordinates. This is the essential distinction between a virtual displacement \\(\\delta{\\bf r}_i\\) and an actual (kinematically realized) infinitesimal displacement \\(d{\\bf r}_i\\), which does include the \\(\\partial{\\bf r}_i/\\partial t\\,dt\\) term when constraints are time-dependent.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/generalized_coordinates.html#virtual-work-and-generalized-forces",
     "href": "lagrangian_mechanics/generalized_coordinates.html#virtual-work-and-generalized-forces",
-    "title": "22  Generalized Coordinates and Virtual Work",
-    "section": "22.4 Virtual Work and Generalized Forces",
-    "text": "22.4 Virtual Work and Generalized Forces\nThe virtual work done by the applied forces \\({\\bf F}_i\\) (excluding workless constraint forces such as normal forces from rigid, frictionless guides, and tensions in inextensible cables) through a virtual displacement is \\[\\begin{align}\n    \\delta W = \\sum_{i=1}^N {\\bf F}_i\\cdot\\delta{\\bf r}_i = \\sum_{i=1}^N {\\bf F}_i\\cdot\\sum_{j=1}^n\\frac{\\partial {\\bf r}_i}{\\partial q_j}\\delta q_j\n    = \\sum_{j=1}^n\\lp\\sum_{i=1}^N {\\bf F}_i\\cdot\\frac{\\partial {\\bf r}_i}{\\partial q_j}\\rp\\delta q_j.\n\\end{align}\\] Collecting the coefficient of each \\(\\delta q_j\\) defines the generalized force conjugate to \\(q_j\\): \\[\\begin{align}\n    Q_j = \\sum_{i=1}^N {\\bf F}_i\\cdot\\frac{\\partial {\\bf r}_i}{\\partial q_j}, \\qquad \\delta W = \\sum_{j=1}^n Q_j\\,\\delta q_j.\n\\end{align}\\] Note that \\(Q_j\\) need not have units of force — its units are such that \\(Q_j\\,\\delta q_j\\) has units of work. If \\(q_j\\) is an angle, \\(Q_j\\) is a moment.\n\n\n\n\n\n\nImportantPrinciple of Virtual Work (statics)\n\n\n\nA system is in static equilibrium if and only if the virtual work of the applied forces vanishes for every admissible virtual displacement: \\[\\begin{align}\n    \\delta W = \\sum_{j=1}^n Q_j\\,\\delta q_j = 0 \\quad\\text{for all }\\delta q_j \\implies Q_j = 0,\\ \\ j=1,\\dots,n.\n\\end{align}\\] Because the \\(\\delta q_j\\) are independent, each generalized force must vanish separately. Workless constraint forces (pin reactions, normal forces on rigid smooth guides, tension in an inextensible cable) never enter \\(Q_j\\) and so never need to be found.",
+    "title": "23  Generalized Coordinates and Virtual Work",
+    "section": "23.4 Virtual Work and Generalized Forces",
+    "text": "23.4 Virtual Work and Generalized Forces\nThe virtual work done by the applied forces \\({\\bf F}_i\\) (excluding workless constraint forces such as normal forces from rigid, frictionless guides, and tensions in inextensible cables) through a virtual displacement is \\[\\begin{align}\n    \\delta W = \\sum_{i=1}^N {\\bf F}_i\\cdot\\delta{\\bf r}_i = \\sum_{i=1}^N {\\bf F}_i\\cdot\\sum_{j=1}^n\\frac{\\partial {\\bf r}_i}{\\partial q_j}\\delta q_j\n    = \\sum_{j=1}^n\\lp\\sum_{i=1}^N {\\bf F}_i\\cdot\\frac{\\partial {\\bf r}_i}{\\partial q_j}\\rp\\delta q_j.\n\\end{align}\\] Collecting the coefficient of each \\(\\delta q_j\\) defines the generalized force conjugate to \\(q_j\\): \\[\\begin{align}\n    Q_j = \\sum_{i=1}^N {\\bf F}_i\\cdot\\frac{\\partial {\\bf r}_i}{\\partial q_j}, \\qquad \\delta W = \\sum_{j=1}^n Q_j\\,\\delta q_j.\n\\end{align}\\] Note that \\(Q_j\\) need not have units of force — its units are such that \\(Q_j\\,\\delta q_j\\) has units of work. If \\(q_j\\) is an angle, \\(Q_j\\) is a moment.\n\n\n\n\n\n\nImportantPrinciple of Virtual Work (statics)\n\n\n\nA system is in static equilibrium if and only if the virtual work of the applied forces vanishes for every admissible virtual displacement: \\[\\begin{align}\n    \\delta W = \\sum_{j=1}^n Q_j\\,\\delta q_j = 0 \\quad\\text{for all }\\delta q_j \\implies Q_j = 0,\\ \\ j=1,\\dots,n.\n\\end{align}\\] Because the \\(\\delta q_j\\) are independent, each generalized force must vanish separately. Workless constraint forces (pin reactions, normal forces on rigid smooth guides, tension in an inextensible cable) never enter \\(Q_j\\) and so never need to be found.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/generalized_coordinates.html#worked-example-simple-pendulum",
     "href": "lagrangian_mechanics/generalized_coordinates.html#worked-example-simple-pendulum",
-    "title": "22  Generalized Coordinates and Virtual Work",
-    "section": "22.5 Worked Example: Simple Pendulum",
-    "text": "22.5 Worked Example: Simple Pendulum\nA particle of mass \\(m\\) swings on a rigid, massless rod of length \\(\\ell\\) pinned at \\(O\\). This system has \\(n=1\\) DOF; take \\(q_1=\\theta\\), the angle from the downward vertical.\n\n\n\n\n\n\n\n\n\nThe position of the mass relative to \\(O\\) is \\({\\bf r} = \\ell\\sin\\theta\\,{\\bf E}_x-\\ell\\cos\\theta\\,{\\bf E}_y\\) (with \\({\\bf E}_y\\) pointing up), so a virtual displacement is \\[\\begin{align}\n    \\delta{\\bf r} = \\ell\\cos\\theta\\,\\delta\\theta\\,{\\bf E}_x+\\ell\\sin\\theta\\,\\delta\\theta\\,{\\bf E}_y.\n\\end{align}\\] The only applied force is gravity, \\({\\bf F} = -mg{\\bf E}_y\\) (the pin reaction is workless and is excluded). The generalized force conjugate to \\(\\theta\\) is \\[\\begin{align}\n    Q_\\theta = {\\bf F}\\cdot\\frac{\\partial {\\bf r}}{\\partial \\theta} = -mg\\lp\\ell\\sin\\theta\\rp = -mg\\ell\\sin\\theta.\n\\end{align}\\] This matches the restoring moment about \\(O\\) found from a free-body diagram, obtained here without ever drawing the pin reaction.",
+    "title": "23  Generalized Coordinates and Virtual Work",
+    "section": "23.5 Worked Example: Simple Pendulum",
+    "text": "23.5 Worked Example: Simple Pendulum\nA particle of mass \\(m\\) swings on a rigid, massless rod of length \\(\\ell\\) pinned at \\(O\\). This system has \\(n=1\\) DOF; take \\(q_1=\\theta\\), the angle from the downward vertical.\n\n\n\n\n\n\n\n\n\nThe position of the mass relative to \\(O\\) is \\({\\bf r} = \\ell\\sin\\theta\\,{\\bf E}_x-\\ell\\cos\\theta\\,{\\bf E}_y\\) (with \\({\\bf E}_y\\) pointing up), so a virtual displacement is \\[\\begin{align}\n    \\delta{\\bf r} = \\ell\\cos\\theta\\,\\delta\\theta\\,{\\bf E}_x+\\ell\\sin\\theta\\,\\delta\\theta\\,{\\bf E}_y.\n\\end{align}\\] The only applied force is gravity, \\({\\bf F} = -mg{\\bf E}_y\\) (the pin reaction is workless and is excluded). The generalized force conjugate to \\(\\theta\\) is \\[\\begin{align}\n    Q_\\theta = {\\bf F}\\cdot\\frac{\\partial {\\bf r}}{\\partial \\theta} = -mg\\lp\\ell\\sin\\theta\\rp = -mg\\ell\\sin\\theta.\n\\end{align}\\] This matches the restoring moment about \\(O\\) found from a free-body diagram, obtained here without ever drawing the pin reaction.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/generalized_coordinates.html#worked-example-two-degrees-of-freedom",
     "href": "lagrangian_mechanics/generalized_coordinates.html#worked-example-two-degrees-of-freedom",
-    "title": "22  Generalized Coordinates and Virtual Work",
-    "section": "22.6 Worked Example: Two Degrees of Freedom",
-    "text": "22.6 Worked Example: Two Degrees of Freedom\nFor a double pendulum (two rods of length \\(\\ell_1,\\ell_2\\) and point masses \\(m_1,m_2\\), both hinged in series), a natural choice is \\(q_1=\\theta_1\\), \\(q_2=\\theta_2\\), the absolute angles of each rod from the vertical. The position vectors are \\[\\begin{align}\n    {\\bf r}_1 &= \\ell_1\\sin\\theta_1\\,{\\bf E}_x-\\ell_1\\cos\\theta_1\\,{\\bf E}_y,\\\\\n    {\\bf r}_2 &= {\\bf r}_1+\\ell_2\\sin\\theta_2\\,{\\bf E}_x-\\ell_2\\cos\\theta_2\\,{\\bf E}_y,\n\\end{align}\\] so that \\(\\partial{\\bf r}_1/\\partial\\theta_2={\\bf 0}\\), while \\(\\partial{\\bf r}_2/\\partial\\theta_1\\) and \\(\\partial{\\bf r}_2/\\partial\\theta_2\\) are both nonzero — each mass’s position generally depends on every generalized coordinate “upstream” of it in the kinematic chain. This bookkeeping of partial derivatives, done once, is all that is needed to build \\(Q_1\\) and \\(Q_2\\), and — as the next lecture shows — the kinetic energy \\(T\\).",
+    "title": "23  Generalized Coordinates and Virtual Work",
+    "section": "23.6 Worked Example: Two Degrees of Freedom",
+    "text": "23.6 Worked Example: Two Degrees of Freedom\nFor a double pendulum (two rods of length \\(\\ell_1,\\ell_2\\) and point masses \\(m_1,m_2\\), both hinged in series), a natural choice is \\(q_1=\\theta_1\\), \\(q_2=\\theta_2\\), the absolute angles of each rod from the vertical. The position vectors are \\[\\begin{align}\n    {\\bf r}_1 &= \\ell_1\\sin\\theta_1\\,{\\bf E}_x-\\ell_1\\cos\\theta_1\\,{\\bf E}_y,\\\\\n    {\\bf r}_2 &= {\\bf r}_1+\\ell_2\\sin\\theta_2\\,{\\bf E}_x-\\ell_2\\cos\\theta_2\\,{\\bf E}_y,\n\\end{align}\\] so that \\(\\partial{\\bf r}_1/\\partial\\theta_2={\\bf 0}\\), while \\(\\partial{\\bf r}_2/\\partial\\theta_1\\) and \\(\\partial{\\bf r}_2/\\partial\\theta_2\\) are both nonzero — each mass’s position generally depends on every generalized coordinate “upstream” of it in the kinematic chain. This bookkeeping of partial derivatives, done once, is all that is needed to build \\(Q_1\\) and \\(Q_2\\), and — as the next lecture shows — the kinetic energy \\(T\\).",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/generalized_coordinates.html#looking-ahead",
     "href": "lagrangian_mechanics/generalized_coordinates.html#looking-ahead",
-    "title": "22  Generalized Coordinates and Virtual Work",
-    "section": "22.7 Looking Ahead",
-    "text": "22.7 Looking Ahead\nVirtual work handles equilibrium. To get the equations of motion, we need one more ingredient: D’Alembert’s principle, which treats \\(-m_i{\\bf a}_i\\) as an additional “inertial force” and reduces dynamics to a virtual-work problem. That is the subject of the next lecture, where the generalized-force formalism above is combined with the kinetic energy to produce Lagrange’s equations.",
+    "title": "23  Generalized Coordinates and Virtual Work",
+    "section": "23.7 Looking Ahead",
+    "text": "23.7 Looking Ahead\nVirtual work handles equilibrium. To get the equations of motion, we need one more ingredient: D’Alembert’s principle, which treats \\(-m_i{\\bf a}_i\\) as an additional “inertial force” and reduces dynamics to a virtual-work problem. That is the subject of the next lecture, where the generalized-force formalism above is combined with the kinetic energy to produce Lagrange’s equations.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/generalized_coordinates.html#summary",
     "href": "lagrangian_mechanics/generalized_coordinates.html#summary",
-    "title": "22  Generalized Coordinates and Virtual Work",
-    "section": "22.8 Summary",
-    "text": "22.8 Summary\nGeneralized coordinates \\(q_1,\\dots,q_n\\) parametrize the configuration of a system with \\(n\\) DOF via \\({\\bf r}_i(q_1,\\dots,q_n,t)\\). Virtual displacements hold \\(t\\) fixed: \\[\\begin{align}\n    \\delta{\\bf r}_i = \\sum_{j=1}^n\\frac{\\partial{\\bf r}_i}{\\partial q_j}\\delta q_j.\n\\end{align}\\] The generalized force conjugate to \\(q_j\\) is \\[\\begin{align}\n    Q_j = \\sum_{i=1}^N {\\bf F}_i\\cdot\\frac{\\partial {\\bf r}_i}{\\partial q_j},\n\\end{align}\\] and workless constraint forces are automatically excluded from this sum. The “cancellation of the dots” identity \\(\\partial{\\bf v}_i/\\partial\\dot q_j = \\partial{\\bf r}_i/\\partial q_j\\) will be the key tool for the next lecture.",
+    "title": "23  Generalized Coordinates and Virtual Work",
+    "section": "23.8 Summary",
+    "text": "23.8 Summary\nGeneralized coordinates \\(q_1,\\dots,q_n\\) parametrize the configuration of a system with \\(n\\) DOF via \\({\\bf r}_i(q_1,\\dots,q_n,t)\\). Virtual displacements hold \\(t\\) fixed: \\[\\begin{align}\n    \\delta{\\bf r}_i = \\sum_{j=1}^n\\frac{\\partial{\\bf r}_i}{\\partial q_j}\\delta q_j.\n\\end{align}\\] The generalized force conjugate to \\(q_j\\) is \\[\\begin{align}\n    Q_j = \\sum_{i=1}^N {\\bf F}_i\\cdot\\frac{\\partial {\\bf r}_i}{\\partial q_j},\n\\end{align}\\] and workless constraint forces are automatically excluded from this sum. The “cancellation of the dots” identity \\(\\partial{\\bf v}_i/\\partial\\dot q_j = \\partial{\\bf r}_i/\\partial q_j\\) will be the key tool for the next lecture.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Generalized Coordinates and Virtual Work</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/lagranges_equations.html",
     "href": "lagrangian_mechanics/lagranges_equations.html",
-    "title": "23  Lagrange’s Equations",
+    "title": "24  Lagrange’s Equations",
     "section": "",
-    "text": "23.1 D’Alembert’s Principle\nNewton’s second law for particle \\(i\\) is \\({\\bf F}_i^{\\text{tot}} = m_i{\\bf a}_i\\), where \\({\\bf F}_i^{\\text{tot}}\\) includes both applied forces and constraint forces. Rearranging as \\({\\bf F}_i^{\\text{tot}}-m_i{\\bf a}_i={\\bf 0}\\) and dotting with a virtual displacement \\(\\delta{\\bf r}_i\\), then summing over all particles: \\[\\begin{align}\n    \\sum_{i=1}^N\\lp{\\bf F}_i^{\\text{tot}}-m_i{\\bf a}_i\\rp\\cdot\\delta{\\bf r}_i = 0.\n\\end{align}\\] Splitting \\({\\bf F}_i^{\\text{tot}}\\) into applied forces \\({\\bf F}_i\\) and constraint forces \\({\\bf f}_i^c\\), and restricting attention to workless constraints (rigid smooth guides, inextensible cables, ideal pins) for which \\(\\sum_i{\\bf f}_i^c\\cdot\\delta{\\bf r}_i=0\\) for every admissible \\(\\delta{\\bf r}_i\\), we obtain D’Alembert’s principle: \\[\\begin{align}\n    \\sum_{i=1}^N\\lp{\\bf F}_i-m_i{\\bf a}_i\\rp\\cdot\\delta{\\bf r}_i = 0 \\qquad \\text{for all admissible }\\delta{\\bf r}_i.\n\\end{align}\\] This is a virtual-work statement for dynamics: the applied forces, together with the fictitious “inertia force” \\(-m_i{\\bf a}_i\\), do zero virtual work. Unlike the static case, this holds identically (it is just Newton’s law), not as a special condition.",
+    "text": "24.1 D’Alembert’s Principle\nNewton’s second law for particle \\(i\\) is \\({\\bf F}_i^{\\text{tot}} = m_i{\\bf a}_i\\), where \\({\\bf F}_i^{\\text{tot}}\\) includes both applied forces and constraint forces. Rearranging as \\({\\bf F}_i^{\\text{tot}}-m_i{\\bf a}_i={\\bf 0}\\) and dotting with a virtual displacement \\(\\delta{\\bf r}_i\\), then summing over all particles: \\[\\begin{align}\n    \\sum_{i=1}^N\\lp{\\bf F}_i^{\\text{tot}}-m_i{\\bf a}_i\\rp\\cdot\\delta{\\bf r}_i = 0.\n\\end{align}\\] Splitting \\({\\bf F}_i^{\\text{tot}}\\) into applied forces \\({\\bf F}_i\\) and constraint forces \\({\\bf f}_i^c\\), and restricting attention to workless constraints (rigid smooth guides, inextensible cables, ideal pins) for which \\(\\sum_i{\\bf f}_i^c\\cdot\\delta{\\bf r}_i=0\\) for every admissible \\(\\delta{\\bf r}_i\\), we obtain D’Alembert’s principle: \\[\\begin{align}\n    \\sum_{i=1}^N\\lp{\\bf F}_i-m_i{\\bf a}_i\\rp\\cdot\\delta{\\bf r}_i = 0 \\qquad \\text{for all admissible }\\delta{\\bf r}_i.\n\\end{align}\\] This is a virtual-work statement for dynamics: the applied forces, together with the fictitious “inertia force” \\(-m_i{\\bf a}_i\\), do zero virtual work. Unlike the static case, this holds identically (it is just Newton’s law), not as a special condition.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Lagrange's Equations</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Lagrange's Equations</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/lagranges_equations.html#from-dalemberts-principle-to-lagranges-equations",
     "href": "lagrangian_mechanics/lagranges_equations.html#from-dalemberts-principle-to-lagranges-equations",
-    "title": "23  Lagrange’s Equations",
-    "section": "23.2 From D’Alembert’s Principle to Lagrange’s Equations",
-    "text": "23.2 From D’Alembert’s Principle to Lagrange’s Equations\nSubstitute \\(\\delta{\\bf r}_i = \\sum_j(\\partial{\\bf r}_i/\\partial q_j)\\delta q_j\\) and use the independence of the \\(\\delta q_j\\). The applied-force term is exactly the virtual work from the previous lecture: \\[\\begin{align}\n    \\sum_{i=1}^N{\\bf F}_i\\cdot\\delta{\\bf r}_i = \\sum_{j=1}^n Q_j\\,\\delta q_j.\n\\end{align}\\] The inertia term requires more work: \\[\\begin{align}\n    \\sum_{i=1}^N m_i{\\bf a}_i\\cdot\\delta{\\bf r}_i = \\sum_{j=1}^n\\lp\\sum_{i=1}^N m_i{\\bf a}_i\\cdot\\frac{\\partial{\\bf r}_i}{\\partial q_j}\\rp\\delta q_j.\n\\end{align}\\] Focus on the bracketed coefficient for a fixed \\(j\\). Using the product rule, \\[\\begin{align}\n    m_i{\\bf a}_i\\cdot\\frac{\\partial{\\bf r}_i}{\\partial q_j} = \\frac{d}{dt}\\lp m_i{\\bf v}_i\\cdot\\frac{\\partial{\\bf r}_i}{\\partial q_j}\\rp - m_i{\\bf v}_i\\cdot\\frac{d}{dt}\\lp\\frac{\\partial{\\bf r}_i}{\\partial q_j}\\rp.\n\\end{align}\\] Two identities, both proved by direct differentiation of \\({\\bf r}_i(q_1,\\dots,q_n,t)\\), close the derivation: \\[\\begin{align}\n    \\frac{\\partial{\\bf r}_i}{\\partial q_j} = \\frac{\\partial{\\bf v}_i}{\\partial \\dot q_j} \\qquad\\text{(cancellation of the dots, Lecture 38)},\\qquad\n    \\frac{d}{dt}\\lp\\frac{\\partial{\\bf r}_i}{\\partial q_j}\\rp = \\frac{\\partial {\\bf v}_i}{\\partial q_j}.\n\\end{align}\\] Substituting both identities: \\[\\begin{align}\n    m_i{\\bf a}_i\\cdot\\frac{\\partial{\\bf r}_i}{\\partial q_j} = \\frac{d}{dt}\\lp m_i{\\bf v}_i\\cdot\\frac{\\partial{\\bf v}_i}{\\partial\\dot q_j}\\rp-m_i{\\bf v}_i\\cdot\\frac{\\partial{\\bf v}_i}{\\partial q_j}\n    = \\frac{d}{dt}\\lp\\frac{\\partial}{\\partial\\dot q_j}\\lp\\tfrac12 m_i{\\bf v}_i\\cdot{\\bf v}_i\\rp\\rp-\\frac{\\partial}{\\partial q_j}\\lp\\tfrac12 m_i{\\bf v}_i\\cdot{\\bf v}_i\\rp.\n\\end{align}\\] Summing over all particles and recognizing the total kinetic energy \\(T=\\sum_i\\tfrac12 m_i{\\bf v}_i\\cdot{\\bf v}_i\\): \\[\\begin{align}\n    \\sum_{i=1}^N m_i{\\bf a}_i\\cdot\\frac{\\partial{\\bf r}_i}{\\partial q_j} = \\frac{d}{dt}\\lp\\frac{\\partial T}{\\partial\\dot q_j}\\rp-\\frac{\\partial T}{\\partial q_j}.\n\\end{align}\\]\n\n\n\n\n\n\nImportantLagrange’s Equations\n\n\n\nD’Alembert’s principle, \\(\\sum_j\\leb Q_j-\\lp\\frac{d}{dt}\\frac{\\partial T}{\\partial\\dot q_j}-\\frac{\\partial T}{\\partial q_j}\\rp\\reb\\delta q_j=0\\), holds for arbitrary independent \\(\\delta q_j\\), so each bracket must vanish: \\[\\begin{align}\n    \\frac{d}{dt}\\lp\\frac{\\partial T}{\\partial\\dot q_j}\\rp-\\frac{\\partial T}{\\partial q_j} = Q_j, \\qquad j=1,\\dots,n.\n\\end{align}\\] This is a set of \\(n\\) second-order ODEs — exactly enough to determine the motion of an \\(n\\)-DOF system, and workless constraint forces never appear.",
+    "title": "24  Lagrange’s Equations",
+    "section": "24.2 From D’Alembert’s Principle to Lagrange’s Equations",
+    "text": "24.2 From D’Alembert’s Principle to Lagrange’s Equations\nSubstitute \\(\\delta{\\bf r}_i = \\sum_j(\\partial{\\bf r}_i/\\partial q_j)\\delta q_j\\) and use the independence of the \\(\\delta q_j\\). The applied-force term is exactly the virtual work from the previous lecture: \\[\\begin{align}\n    \\sum_{i=1}^N{\\bf F}_i\\cdot\\delta{\\bf r}_i = \\sum_{j=1}^n Q_j\\,\\delta q_j.\n\\end{align}\\] The inertia term requires more work: \\[\\begin{align}\n    \\sum_{i=1}^N m_i{\\bf a}_i\\cdot\\delta{\\bf r}_i = \\sum_{j=1}^n\\lp\\sum_{i=1}^N m_i{\\bf a}_i\\cdot\\frac{\\partial{\\bf r}_i}{\\partial q_j}\\rp\\delta q_j.\n\\end{align}\\] Focus on the bracketed coefficient for a fixed \\(j\\). Using the product rule, \\[\\begin{align}\n    m_i{\\bf a}_i\\cdot\\frac{\\partial{\\bf r}_i}{\\partial q_j} = \\frac{d}{dt}\\lp m_i{\\bf v}_i\\cdot\\frac{\\partial{\\bf r}_i}{\\partial q_j}\\rp - m_i{\\bf v}_i\\cdot\\frac{d}{dt}\\lp\\frac{\\partial{\\bf r}_i}{\\partial q_j}\\rp.\n\\end{align}\\] Two identities, both proved by direct differentiation of \\({\\bf r}_i(q_1,\\dots,q_n,t)\\), close the derivation: \\[\\begin{align}\n    \\frac{\\partial{\\bf r}_i}{\\partial q_j} = \\frac{\\partial{\\bf v}_i}{\\partial \\dot q_j} \\qquad\\text{(cancellation of the dots, Lecture 38)},\\qquad\n    \\frac{d}{dt}\\lp\\frac{\\partial{\\bf r}_i}{\\partial q_j}\\rp = \\frac{\\partial {\\bf v}_i}{\\partial q_j}.\n\\end{align}\\] Substituting both identities: \\[\\begin{align}\n    m_i{\\bf a}_i\\cdot\\frac{\\partial{\\bf r}_i}{\\partial q_j} = \\frac{d}{dt}\\lp m_i{\\bf v}_i\\cdot\\frac{\\partial{\\bf v}_i}{\\partial\\dot q_j}\\rp-m_i{\\bf v}_i\\cdot\\frac{\\partial{\\bf v}_i}{\\partial q_j}\n    = \\frac{d}{dt}\\lp\\frac{\\partial}{\\partial\\dot q_j}\\lp\\tfrac12 m_i{\\bf v}_i\\cdot{\\bf v}_i\\rp\\rp-\\frac{\\partial}{\\partial q_j}\\lp\\tfrac12 m_i{\\bf v}_i\\cdot{\\bf v}_i\\rp.\n\\end{align}\\] Summing over all particles and recognizing the total kinetic energy \\(T=\\sum_i\\tfrac12 m_i{\\bf v}_i\\cdot{\\bf v}_i\\): \\[\\begin{align}\n    \\sum_{i=1}^N m_i{\\bf a}_i\\cdot\\frac{\\partial{\\bf r}_i}{\\partial q_j} = \\frac{d}{dt}\\lp\\frac{\\partial T}{\\partial\\dot q_j}\\rp-\\frac{\\partial T}{\\partial q_j}.\n\\end{align}\\]\n\n\n\n\n\n\nImportantLagrange’s Equations\n\n\n\nD’Alembert’s principle, \\(\\sum_j\\leb Q_j-\\lp\\frac{d}{dt}\\frac{\\partial T}{\\partial\\dot q_j}-\\frac{\\partial T}{\\partial q_j}\\rp\\reb\\delta q_j=0\\), holds for arbitrary independent \\(\\delta q_j\\), so each bracket must vanish: \\[\\begin{align}\n    \\frac{d}{dt}\\lp\\frac{\\partial T}{\\partial\\dot q_j}\\rp-\\frac{\\partial T}{\\partial q_j} = Q_j, \\qquad j=1,\\dots,n.\n\\end{align}\\] This is a set of \\(n\\) second-order ODEs — exactly enough to determine the motion of an \\(n\\)-DOF system, and workless constraint forces never appear.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Lagrange's Equations</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Lagrange's Equations</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/lagranges_equations.html#conservative-forces-and-the-lagrangian",
     "href": "lagrangian_mechanics/lagranges_equations.html#conservative-forces-and-the-lagrangian",
-    "title": "23  Lagrange’s Equations",
-    "section": "23.3 Conservative Forces and the Lagrangian",
-    "text": "23.3 Conservative Forces and the Lagrangian\nIf every applied force is conservative, \\(Q_j\\) derives from a potential energy \\(U(q_1,\\dots,q_n)\\) (possibly \\(t\\)-dependent) via \\[\\begin{align}\n    Q_j = -\\frac{\\partial U}{\\partial q_j}.\n\\end{align}\\] Since \\(U\\) does not depend on \\(\\dot q_j\\), \\(\\partial U/\\partial\\dot q_j = 0\\), so we may move it inside the time-derivative term for free. Defining the Lagrangian \\[\\begin{align}\n    L(q,\\dot q,t) \\equiv T-U,\n\\end{align}\\] Lagrange’s equations for a fully conservative system take their most compact form: \\[\\begin{align}\n    \\boxed{\\frac{d}{dt}\\lp\\frac{\\partial L}{\\partial\\dot q_j}\\rp-\\frac{\\partial L}{\\partial q_j} = 0, \\qquad j=1,\\dots,n.}\n\\end{align}\\] If some forces are conservative (folded into \\(U\\), hence into \\(L\\)) and others are not (springs with damping, applied external moments, friction), the general form is retained for the nonconservative part: \\[\\begin{align}\n    \\frac{d}{dt}\\lp\\frac{\\partial L}{\\partial\\dot q_j}\\rp-\\frac{\\partial L}{\\partial q_j} = Q_j^{\\text{nc}}, \\qquad j=1,\\dots,n.\n\\end{align}\\]",
+    "title": "24  Lagrange’s Equations",
+    "section": "24.3 Conservative Forces and the Lagrangian",
+    "text": "24.3 Conservative Forces and the Lagrangian\nIf every applied force is conservative, \\(Q_j\\) derives from a potential energy \\(U(q_1,\\dots,q_n)\\) (possibly \\(t\\)-dependent) via \\[\\begin{align}\n    Q_j = -\\frac{\\partial U}{\\partial q_j}.\n\\end{align}\\] Since \\(U\\) does not depend on \\(\\dot q_j\\), \\(\\partial U/\\partial\\dot q_j = 0\\), so we may move it inside the time-derivative term for free. Defining the Lagrangian \\[\\begin{align}\n    L(q,\\dot q,t) \\equiv T-U,\n\\end{align}\\] Lagrange’s equations for a fully conservative system take their most compact form: \\[\\begin{align}\n    \\boxed{\\frac{d}{dt}\\lp\\frac{\\partial L}{\\partial\\dot q_j}\\rp-\\frac{\\partial L}{\\partial q_j} = 0, \\qquad j=1,\\dots,n.}\n\\end{align}\\] If some forces are conservative (folded into \\(U\\), hence into \\(L\\)) and others are not (springs with damping, applied external moments, friction), the general form is retained for the nonconservative part: \\[\\begin{align}\n    \\frac{d}{dt}\\lp\\frac{\\partial L}{\\partial\\dot q_j}\\rp-\\frac{\\partial L}{\\partial q_j} = Q_j^{\\text{nc}}, \\qquad j=1,\\dots,n.\n\\end{align}\\]",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Lagrange's Equations</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Lagrange's Equations</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/lagranges_equations.html#procedure",
     "href": "lagrangian_mechanics/lagranges_equations.html#procedure",
-    "title": "23  Lagrange’s Equations",
-    "section": "23.4 Procedure",
-    "text": "23.4 Procedure\n\n\n\n\n\n\nNoteRecipe\n\n\n\n\nChoose independent generalized coordinates \\(q_1,\\dots,q_n\\) equal in number to the DOF.\nWrite position vectors \\({\\bf r}_i(q,t)\\), differentiate to get \\({\\bf v}_i\\), and form \\(T=\\sum_i\\tfrac12 m_i{\\bf v}_i\\cdot{\\bf v}_i\\) (for rigid bodies, use the Koenig decomposition from the rigid-body chapter).\nIdentify the potential energy \\(U\\) of all conservative forces and any remaining generalized forces \\(Q_j^{\\text{nc}}\\) from nonconservative forces (via virtual work, Lecture 38).\nForm \\(L=T-U\\) and compute \\(\\partial L/\\partial\\dot q_j\\), then \\(\\frac{d}{dt}(\\cdot)\\), then subtract \\(\\partial L/\\partial q_j\\).\nSet the result equal to \\(Q_j^{\\text{nc}}\\) (zero if the system is fully conservative) for each \\(j\\) to get the equations of motion.",
+    "title": "24  Lagrange’s Equations",
+    "section": "24.4 Procedure",
+    "text": "24.4 Procedure\n\n\n\n\n\n\nNoteRecipe\n\n\n\n\nChoose independent generalized coordinates \\(q_1,\\dots,q_n\\) equal in number to the DOF.\nWrite position vectors \\({\\bf r}_i(q,t)\\), differentiate to get \\({\\bf v}_i\\), and form \\(T=\\sum_i\\tfrac12 m_i{\\bf v}_i\\cdot{\\bf v}_i\\) (for rigid bodies, use the Koenig decomposition from the rigid-body chapter).\nIdentify the potential energy \\(U\\) of all conservative forces and any remaining generalized forces \\(Q_j^{\\text{nc}}\\) from nonconservative forces (via virtual work, Lecture 38).\nForm \\(L=T-U\\) and compute \\(\\partial L/\\partial\\dot q_j\\), then \\(\\frac{d}{dt}(\\cdot)\\), then subtract \\(\\partial L/\\partial q_j\\).\nSet the result equal to \\(Q_j^{\\text{nc}}\\) (zero if the system is fully conservative) for each \\(j\\) to get the equations of motion.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Lagrange's Equations</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Lagrange's Equations</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/lagranges_equations.html#worked-example-simple-pendulum-revisited",
     "href": "lagrangian_mechanics/lagranges_equations.html#worked-example-simple-pendulum-revisited",
-    "title": "23  Lagrange’s Equations",
-    "section": "23.5 Worked Example: Simple Pendulum, Revisited",
-    "text": "23.5 Worked Example: Simple Pendulum, Revisited\nReturn to the pendulum of the previous lecture, \\(q_1=\\theta\\). The velocity of the mass is \\({\\bf v}=\\ell\\dot\\theta\\,{\\bf e}_\\theta\\), so \\[\\begin{align}\n    T = \\tfrac12 m\\ell^2\\dot\\theta^2, \\qquad U = -mg\\ell\\cos\\theta \\quad(\\text{measuring from the pivot}).\n\\end{align}\\] The Lagrangian is \\(L=T-U=\\tfrac12 m\\ell^2\\dot\\theta^2+mg\\ell\\cos\\theta\\). Then \\[\\begin{align}\n    \\frac{\\partial L}{\\partial\\dot\\theta} = m\\ell^2\\dot\\theta, \\qquad\n    \\frac{d}{dt}\\lp\\frac{\\partial L}{\\partial\\dot\\theta}\\rp = m\\ell^2\\ddot\\theta, \\qquad\n    \\frac{\\partial L}{\\partial\\theta} = -mg\\ell\\sin\\theta.\n\\end{align}\\] Lagrange’s equation gives \\[\\begin{align}\n    m\\ell^2\\ddot\\theta+mg\\ell\\sin\\theta = 0 \\quad\\Longleftrightarrow\\quad \\ddot\\theta+\\frac{g}{\\ell}\\sin\\theta=0,\n\\end{align}\\] identical to the moment equation about the pivot obtained by Newton–Euler methods — but here it fell out of two scalar energy functions, with no free-body diagram and no pin reaction ever computed.",
+    "title": "24  Lagrange’s Equations",
+    "section": "24.5 Worked Example: Simple Pendulum, Revisited",
+    "text": "24.5 Worked Example: Simple Pendulum, Revisited\nReturn to the pendulum of the previous lecture, \\(q_1=\\theta\\). The velocity of the mass is \\({\\bf v}=\\ell\\dot\\theta\\,{\\bf e}_\\theta\\), so \\[\\begin{align}\n    T = \\tfrac12 m\\ell^2\\dot\\theta^2, \\qquad U = -mg\\ell\\cos\\theta \\quad(\\text{measuring from the pivot}).\n\\end{align}\\] The Lagrangian is \\(L=T-U=\\tfrac12 m\\ell^2\\dot\\theta^2+mg\\ell\\cos\\theta\\). Then \\[\\begin{align}\n    \\frac{\\partial L}{\\partial\\dot\\theta} = m\\ell^2\\dot\\theta, \\qquad\n    \\frac{d}{dt}\\lp\\frac{\\partial L}{\\partial\\dot\\theta}\\rp = m\\ell^2\\ddot\\theta, \\qquad\n    \\frac{\\partial L}{\\partial\\theta} = -mg\\ell\\sin\\theta.\n\\end{align}\\] Lagrange’s equation gives \\[\\begin{align}\n    m\\ell^2\\ddot\\theta+mg\\ell\\sin\\theta = 0 \\quad\\Longleftrightarrow\\quad \\ddot\\theta+\\frac{g}{\\ell}\\sin\\theta=0,\n\\end{align}\\] identical to the moment equation about the pivot obtained by Newton–Euler methods — but here it fell out of two scalar energy functions, with no free-body diagram and no pin reaction ever computed.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Lagrange's Equations</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Lagrange's Equations</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/lagranges_equations.html#why-this-works-a-comparison",
     "href": "lagrangian_mechanics/lagranges_equations.html#why-this-works-a-comparison",
-    "title": "23  Lagrange’s Equations",
-    "section": "23.6 Why This Works: A Comparison",
-    "text": "23.6 Why This Works: A Comparison\n\n\n\n\n\n\n\n\n\nNewton–Euler\nLagrangian\n\n\n\n\nUnknowns tracked\nPositions, all forces (including constraints)\nGeneralized coordinates only\n\n\nFree-body diagrams\nRequired for every body\nNot required\n\n\nConstraint forces\nMust be solved for for or eliminated by hand\nNever appear\n\n\nVector/scalar\nVector equations\nScalar equations (\\(T\\), \\(U\\))\n\n\nBest suited to\nFew bodies, forces of direct interest\nMany DOF, complex constraints\n\n\n\nBoth methods produce the same equations of motion — they must, since Lagrange’s equations were derived from Newton’s second law. The Lagrangian approach simply automates the elimination of workless constraint forces that Newton–Euler methods require you to introduce and then cancel by hand.",
+    "title": "24  Lagrange’s Equations",
+    "section": "24.6 Why This Works: A Comparison",
+    "text": "24.6 Why This Works: A Comparison\n\n\n\n\n\n\n\n\n\nNewton–Euler\nLagrangian\n\n\n\n\nUnknowns tracked\nPositions, all forces (including constraints)\nGeneralized coordinates only\n\n\nFree-body diagrams\nRequired for every body\nNot required\n\n\nConstraint forces\nMust be solved for for or eliminated by hand\nNever appear\n\n\nVector/scalar\nVector equations\nScalar equations (\\(T\\), \\(U\\))\n\n\nBest suited to\nFew bodies, forces of direct interest\nMany DOF, complex constraints\n\n\n\nBoth methods produce the same equations of motion — they must, since Lagrange’s equations were derived from Newton’s second law. The Lagrangian approach simply automates the elimination of workless constraint forces that Newton–Euler methods require you to introduce and then cancel by hand.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Lagrange's Equations</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Lagrange's Equations</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/lagranges_equations.html#summary",
     "href": "lagrangian_mechanics/lagranges_equations.html#summary",
-    "title": "23  Lagrange’s Equations",
-    "section": "23.7 Summary",
-    "text": "23.7 Summary\nD’Alembert’s principle, \\(\\sum_i({\\bf F}_i-m_i{\\bf a}_i)\\cdot\\delta{\\bf r}_i=0\\), converts dynamics into a virtual-work statement. Expanding in generalized coordinates yields Lagrange’s equations: \\[\\begin{align}\n    \\frac{d}{dt}\\lp\\frac{\\partial T}{\\partial\\dot q_j}\\rp-\\frac{\\partial T}{\\partial q_j} = Q_j, \\qquad j=1,\\dots,n.\n\\end{align}\\] For conservative forces, \\(Q_j=-\\partial U/\\partial q_j\\), and with \\(L=T-U\\): \\[\\begin{align}\n    \\frac{d}{dt}\\lp\\frac{\\partial L}{\\partial\\dot q_j}\\rp-\\frac{\\partial L}{\\partial q_j} = 0.\n\\end{align}\\] Nonconservative generalized forces \\(Q_j^{\\text{nc}}\\) appear on the right-hand side when present.",
+    "title": "24  Lagrange’s Equations",
+    "section": "24.7 Summary",
+    "text": "24.7 Summary\nD’Alembert’s principle, \\(\\sum_i({\\bf F}_i-m_i{\\bf a}_i)\\cdot\\delta{\\bf r}_i=0\\), converts dynamics into a virtual-work statement. Expanding in generalized coordinates yields Lagrange’s equations: \\[\\begin{align}\n    \\frac{d}{dt}\\lp\\frac{\\partial T}{\\partial\\dot q_j}\\rp-\\frac{\\partial T}{\\partial q_j} = Q_j, \\qquad j=1,\\dots,n.\n\\end{align}\\] For conservative forces, \\(Q_j=-\\partial U/\\partial q_j\\), and with \\(L=T-U\\): \\[\\begin{align}\n    \\frac{d}{dt}\\lp\\frac{\\partial L}{\\partial\\dot q_j}\\rp-\\frac{\\partial L}{\\partial q_j} = 0.\n\\end{align}\\] Nonconservative generalized forces \\(Q_j^{\\text{nc}}\\) appear on the right-hand side when present.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Lagrange's Equations</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Lagrange's Equations</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/examples_and_applications.html",
     "href": "lagrangian_mechanics/examples_and_applications.html",
-    "title": "24  Applications of Lagrange’s Equations",
+    "title": "25  Applications of Lagrange’s Equations",
     "section": "",
-    "text": "24.1 Worked Example: Spring-Mass System on a Cart\nThis lecture works through multi-DOF examples, introduces cyclic coordinates and their conservation laws, and shows how to handle nonconservative forces such as damping.\nA cart of mass \\(M\\) slides horizontally without friction and carries a mass \\(m\\) connected to it by a spring of stiffness \\(k\\) and natural length \\(\\ell_0\\), constrained to move only horizontally relative to the cart. Let \\(q_1=x\\) (cart position) and \\(q_2=s\\) (stretch of the spring, i.e., mass position relative to the cart is \\(x+s\\)).\nPositions: \\({\\bf r}_M = x\\,{\\bf E}_x\\), \\({\\bf r}_m=(x+s)\\,{\\bf E}_x\\). Velocities: \\(\\dot{\\bf r}_M=\\dot x\\,{\\bf E}_x\\), \\(\\dot{\\bf r}_m=(\\dot x+\\dot s)\\,{\\bf E}_x\\). The kinetic and potential energies are \\[\\begin{align}\n    T = \\tfrac12 M\\dot x^2+\\tfrac12 m(\\dot x+\\dot s)^2, \\qquad U=\\tfrac12 k s^2.\n\\end{align}\\] Lagrangian \\(L=T-U\\). For \\(q_1=x\\): \\[\\begin{align}\n    \\frac{\\partial L}{\\partial\\dot x} = M\\dot x+m(\\dot x+\\dot s), \\qquad\n    \\frac{\\partial L}{\\partial x} = 0\n    \\implies \\frac{d}{dt}\\leb M\\dot x+m(\\dot x+\\dot s)\\reb = 0.\n\\end{align}\\] This is simply conservation of total horizontal momentum — no external horizontal force acts on the system, so \\(x\\) is a cyclic coordinate (see below). For \\(q_2=s\\): \\[\\begin{align}\n    \\frac{\\partial L}{\\partial\\dot s} = m(\\dot x+\\dot s), \\qquad \\frac{\\partial L}{\\partial s}=-ks\n    \\implies m(\\ddot x+\\ddot s)+ks = 0.\n\\end{align}\\] Two coupled equations, obtained without ever introducing the (unknown, and ultimately irrelevant) normal force between cart and ground or the internal force in the spring’s guide rail.",
+    "text": "25.1 Worked Example: Spring-Mass System on a Cart\nThis lecture works through multi-DOF examples, introduces cyclic coordinates and their conservation laws, and shows how to handle nonconservative forces such as damping.\nA cart of mass \\(M\\) slides horizontally without friction and carries a mass \\(m\\) connected to it by a spring of stiffness \\(k\\) and natural length \\(\\ell_0\\), constrained to move only horizontally relative to the cart. Let \\(q_1=x\\) (cart position) and \\(q_2=s\\) (stretch of the spring, i.e., mass position relative to the cart is \\(x+s\\)).\nPositions: \\({\\bf r}_M = x\\,{\\bf E}_x\\), \\({\\bf r}_m=(x+s)\\,{\\bf E}_x\\). Velocities: \\(\\dot{\\bf r}_M=\\dot x\\,{\\bf E}_x\\), \\(\\dot{\\bf r}_m=(\\dot x+\\dot s)\\,{\\bf E}_x\\). The kinetic and potential energies are \\[\\begin{align}\n    T = \\tfrac12 M\\dot x^2+\\tfrac12 m(\\dot x+\\dot s)^2, \\qquad U=\\tfrac12 k s^2.\n\\end{align}\\] Lagrangian \\(L=T-U\\). For \\(q_1=x\\): \\[\\begin{align}\n    \\frac{\\partial L}{\\partial\\dot x} = M\\dot x+m(\\dot x+\\dot s), \\qquad\n    \\frac{\\partial L}{\\partial x} = 0\n    \\implies \\frac{d}{dt}\\leb M\\dot x+m(\\dot x+\\dot s)\\reb = 0.\n\\end{align}\\] This is simply conservation of total horizontal momentum — no external horizontal force acts on the system, so \\(x\\) is a cyclic coordinate (see below). For \\(q_2=s\\): \\[\\begin{align}\n    \\frac{\\partial L}{\\partial\\dot s} = m(\\dot x+\\dot s), \\qquad \\frac{\\partial L}{\\partial s}=-ks\n    \\implies m(\\ddot x+\\ddot s)+ks = 0.\n\\end{align}\\] Two coupled equations, obtained without ever introducing the (unknown, and ultimately irrelevant) normal force between cart and ground or the internal force in the spring’s guide rail.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Applications of Lagrange's Equations</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Applications of Lagrange's Equations</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/examples_and_applications.html#cyclic-coordinates-and-conservation",
     "href": "lagrangian_mechanics/examples_and_applications.html#cyclic-coordinates-and-conservation",
-    "title": "24  Applications of Lagrange’s Equations",
-    "section": "24.2 Cyclic Coordinates and Conservation",
-    "text": "24.2 Cyclic Coordinates and Conservation\nIf the Lagrangian does not depend explicitly on a coordinate \\(q_j\\) (i.e., \\(\\partial L/\\partial q_j=0\\)), that coordinate is called cyclic (or ignorable). Lagrange’s equation for it reduces to \\[\\begin{align}\n    \\frac{d}{dt}\\lp\\frac{\\partial L}{\\partial\\dot q_j}\\rp = 0 \\implies p_j\\equiv\\frac{\\partial L}{\\partial\\dot q_j} = \\text{const}.\n\\end{align}\\] The quantity \\(p_j\\) is the generalized momentum conjugate to \\(q_j\\). In the example above, \\(x\\) was cyclic and \\(p_x=M\\dot x+m(\\dot x+\\dot s)\\) — the total linear momentum — was conserved. If a generalized coordinate is an angle \\(\\phi\\) about which the system is symmetric, its conjugate momentum is an angular momentum, conserved for the same reason. Recognizing cyclic coordinates is often the fastest route to a first integral of the motion, before ever writing the full equations of motion.",
+    "title": "25  Applications of Lagrange’s Equations",
+    "section": "25.2 Cyclic Coordinates and Conservation",
+    "text": "25.2 Cyclic Coordinates and Conservation\nIf the Lagrangian does not depend explicitly on a coordinate \\(q_j\\) (i.e., \\(\\partial L/\\partial q_j=0\\)), that coordinate is called cyclic (or ignorable). Lagrange’s equation for it reduces to \\[\\begin{align}\n    \\frac{d}{dt}\\lp\\frac{\\partial L}{\\partial\\dot q_j}\\rp = 0 \\implies p_j\\equiv\\frac{\\partial L}{\\partial\\dot q_j} = \\text{const}.\n\\end{align}\\] The quantity \\(p_j\\) is the generalized momentum conjugate to \\(q_j\\). In the example above, \\(x\\) was cyclic and \\(p_x=M\\dot x+m(\\dot x+\\dot s)\\) — the total linear momentum — was conserved. If a generalized coordinate is an angle \\(\\phi\\) about which the system is symmetric, its conjugate momentum is an angular momentum, conserved for the same reason. Recognizing cyclic coordinates is often the fastest route to a first integral of the motion, before ever writing the full equations of motion.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Applications of Lagrange's Equations</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Applications of Lagrange's Equations</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/examples_and_applications.html#worked-example-bead-on-a-rotating-rod",
     "href": "lagrangian_mechanics/examples_and_applications.html#worked-example-bead-on-a-rotating-rod",
-    "title": "24  Applications of Lagrange’s Equations",
-    "section": "24.3 Worked Example: Bead on a Rotating Rod",
-    "text": "24.3 Worked Example: Bead on a Rotating Rod\nA bead of mass \\(m\\) slides without friction along a straight rigid rod that is forced to rotate in a horizontal plane at constant angular rate \\(\\Omega\\) (a motor enforces \\(\\theta=\\Omega t\\) exactly; this is a time-dependent, rheonomic constraint). Let \\(q_1=r\\), the bead’s distance from the pivot, be the only generalized coordinate (\\(n=1\\); \\(\\theta\\) is prescribed, not free).\nPosition: \\({\\bf r}=r\\,{\\bf e}_r\\) with \\(\\dot\\theta=\\Omega\\). Velocity in polar coordinates: \\({\\bf v}=\\dot r\\,{\\bf e}_r+r\\Omega\\,{\\bf e}_\\theta\\), so \\[\\begin{align}\n    T = \\tfrac12 m\\lp\\dot r^2+r^2\\Omega^2\\rp.\n\\end{align}\\] There is no potential energy change (motion is horizontal) and the rod’s normal force on the bead does no work (perpendicular to \\({\\bf e}_r\\)), so \\(U=0\\), \\(Q_r^{\\text{nc}}=0\\), and \\(L=T\\). Then \\[\\begin{align}\n    \\frac{\\partial L}{\\partial\\dot r}=m\\dot r, \\qquad \\frac{\\partial L}{\\partial r}=mr\\Omega^2\n    \\implies \\ddot r-\\Omega^2 r = 0.\n\\end{align}\\] The bead accelerates outward exponentially — this is the familiar centrifugal effect, recovered here purely from differentiating \\(T=\\tfrac12 m\\dot r^2+\\tfrac12 mr^2\\Omega^2\\); the \\(\\tfrac12 mr^2\\Omega^2\\) term behaves like an inverted potential well, \\(-\\partial(-\\tfrac12 mr^2\\Omega^2)/\\partial r\\), which is exactly the centrifugal “force” \\(mr\\Omega^2\\).",
+    "title": "25  Applications of Lagrange’s Equations",
+    "section": "25.3 Worked Example: Bead on a Rotating Rod",
+    "text": "25.3 Worked Example: Bead on a Rotating Rod\nA bead of mass \\(m\\) slides without friction along a straight rigid rod that is forced to rotate in a horizontal plane at constant angular rate \\(\\Omega\\) (a motor enforces \\(\\theta=\\Omega t\\) exactly; this is a time-dependent, rheonomic constraint). Let \\(q_1=r\\), the bead’s distance from the pivot, be the only generalized coordinate (\\(n=1\\); \\(\\theta\\) is prescribed, not free).\nPosition: \\({\\bf r}=r\\,{\\bf e}_r\\) with \\(\\dot\\theta=\\Omega\\). Velocity in polar coordinates: \\({\\bf v}=\\dot r\\,{\\bf e}_r+r\\Omega\\,{\\bf e}_\\theta\\), so \\[\\begin{align}\n    T = \\tfrac12 m\\lp\\dot r^2+r^2\\Omega^2\\rp.\n\\end{align}\\] There is no potential energy change (motion is horizontal) and the rod’s normal force on the bead does no work (perpendicular to \\({\\bf e}_r\\)), so \\(U=0\\), \\(Q_r^{\\text{nc}}=0\\), and \\(L=T\\). Then \\[\\begin{align}\n    \\frac{\\partial L}{\\partial\\dot r}=m\\dot r, \\qquad \\frac{\\partial L}{\\partial r}=mr\\Omega^2\n    \\implies \\ddot r-\\Omega^2 r = 0.\n\\end{align}\\] The bead accelerates outward exponentially — this is the familiar centrifugal effect, recovered here purely from differentiating \\(T=\\tfrac12 m\\dot r^2+\\tfrac12 mr^2\\Omega^2\\); the \\(\\tfrac12 mr^2\\Omega^2\\) term behaves like an inverted potential well, \\(-\\partial(-\\tfrac12 mr^2\\Omega^2)/\\partial r\\), which is exactly the centrifugal “force” \\(mr\\Omega^2\\).",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Applications of Lagrange's Equations</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Applications of Lagrange's Equations</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/examples_and_applications.html#nonconservative-generalized-forces-damping",
     "href": "lagrangian_mechanics/examples_and_applications.html#nonconservative-generalized-forces-damping",
-    "title": "24  Applications of Lagrange’s Equations",
-    "section": "24.4 Nonconservative Generalized Forces: Damping",
-    "text": "24.4 Nonconservative Generalized Forces: Damping\nSuppose a linear dashpot with damping coefficient \\(c\\) acts on generalized coordinate \\(q_j\\), exerting a force \\(-c\\dot q_j\\) opposing its motion. This force is nonconservative (it depends on velocity, not position) and does not fit into \\(U\\). Its contribution to \\(Q_j^{\\text{nc}}\\) is found directly from virtual work, \\(\\delta W = (-c\\dot q_j)\\,\\delta q_j\\), so \\(Q_j^{\\text{nc}}=-c\\dot q_j\\), and it is appended to the right-hand side of Lagrange’s equation for that coordinate.\nA convenient bookkeeping device for several dashpots is the Rayleigh dissipation function \\[\\begin{align}\n    \\mathcal{F} = \\tfrac12\\sum_j c_j\\dot q_j^2,\n\\end{align}\\] from which \\(Q_j^{\\text{nc}} = -\\partial\\mathcal{F}/\\partial\\dot q_j\\), and Lagrange’s equations become \\[\\begin{align}\n    \\frac{d}{dt}\\lp\\frac{\\partial L}{\\partial\\dot q_j}\\rp-\\frac{\\partial L}{\\partial q_j}+\\frac{\\partial \\mathcal{F}}{\\partial \\dot q_j} = 0.\n\\end{align}\\]\n\n24.4.1 Damped Pendulum\nAdding a rotational dashpot of coefficient \\(c\\) at the pivot of the simple pendulum from the previous lecture: \\(\\mathcal{F}=\\tfrac12 c\\dot\\theta^2\\), so \\(Q_\\theta^{\\text{nc}}=-c\\dot\\theta\\), giving \\[\\begin{align}\n    m\\ell^2\\ddot\\theta+c\\dot\\theta+mg\\ell\\sin\\theta = 0.\n\\end{align}\\]",
+    "title": "25  Applications of Lagrange’s Equations",
+    "section": "25.4 Nonconservative Generalized Forces: Damping",
+    "text": "25.4 Nonconservative Generalized Forces: Damping\nSuppose a linear dashpot with damping coefficient \\(c\\) acts on generalized coordinate \\(q_j\\), exerting a force \\(-c\\dot q_j\\) opposing its motion. This force is nonconservative (it depends on velocity, not position) and does not fit into \\(U\\). Its contribution to \\(Q_j^{\\text{nc}}\\) is found directly from virtual work, \\(\\delta W = (-c\\dot q_j)\\,\\delta q_j\\), so \\(Q_j^{\\text{nc}}=-c\\dot q_j\\), and it is appended to the right-hand side of Lagrange’s equation for that coordinate.\nA convenient bookkeeping device for several dashpots is the Rayleigh dissipation function \\[\\begin{align}\n    \\mathcal{F} = \\tfrac12\\sum_j c_j\\dot q_j^2,\n\\end{align}\\] from which \\(Q_j^{\\text{nc}} = -\\partial\\mathcal{F}/\\partial\\dot q_j\\), and Lagrange’s equations become \\[\\begin{align}\n    \\frac{d}{dt}\\lp\\frac{\\partial L}{\\partial\\dot q_j}\\rp-\\frac{\\partial L}{\\partial q_j}+\\frac{\\partial \\mathcal{F}}{\\partial \\dot q_j} = 0.\n\\end{align}\\]\n\n25.4.1 Damped Pendulum\nAdding a rotational dashpot of coefficient \\(c\\) at the pivot of the simple pendulum from the previous lecture: \\(\\mathcal{F}=\\tfrac12 c\\dot\\theta^2\\), so \\(Q_\\theta^{\\text{nc}}=-c\\dot\\theta\\), giving \\[\\begin{align}\n    m\\ell^2\\ddot\\theta+c\\dot\\theta+mg\\ell\\sin\\theta = 0.\n\\end{align}\\]",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Applications of Lagrange's Equations</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Applications of Lagrange's Equations</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/examples_and_applications.html#worked-example-double-pendulum",
     "href": "lagrangian_mechanics/examples_and_applications.html#worked-example-double-pendulum",
-    "title": "24  Applications of Lagrange’s Equations",
-    "section": "24.5 Worked Example: Double Pendulum",
-    "text": "24.5 Worked Example: Double Pendulum\nReturning to the double pendulum of Lecture 38 (\\(q_1=\\theta_1\\), \\(q_2=\\theta_2\\), masses \\(m_1,m_2\\), rod lengths \\(\\ell_1,\\ell_2\\)), the velocities are found by differentiating \\({\\bf r}_1,{\\bf r}_2\\): \\[\\begin{align}\n    {\\bf v}_1 &= \\ell_1\\dot\\theta_1\\cos\\theta_1{\\bf E}_x+\\ell_1\\dot\\theta_1\\sin\\theta_1{\\bf E}_y,\\\\\n    {\\bf v}_2 &= {\\bf v}_1+\\ell_2\\dot\\theta_2\\cos\\theta_2{\\bf E}_x+\\ell_2\\dot\\theta_2\\sin\\theta_2{\\bf E}_y.\n\\end{align}\\] After expanding \\({\\bf v}_2\\cdot{\\bf v}_2\\) and using \\(\\cos\\theta_1\\cos\\theta_2+\\sin\\theta_1\\sin\\theta_2=\\cos(\\theta_1-\\theta_2)\\): \\[\\begin{align}\n    T &= \\tfrac12 m_1\\ell_1^2\\dot\\theta_1^2+\\tfrac12 m_2\\leb\\ell_1^2\\dot\\theta_1^2+\\ell_2^2\\dot\\theta_2^2+2\\ell_1\\ell_2\\dot\\theta_1\\dot\\theta_2\\cos(\\theta_1-\\theta_2)\\reb,\\\\\n    U &= -(m_1+m_2)g\\ell_1\\cos\\theta_1-m_2g\\ell_2\\cos\\theta_2.\n\\end{align}\\] This \\(T\\) contains a coupling term in \\(\\dot\\theta_1\\dot\\theta_2\\) — impossible to avoid physically (the motion of rod 2’s mass is tied to rod 1) but completely routine to differentiate. Forming \\(L=T-U\\) and applying Lagrange’s equation to \\(\\theta_1\\) and \\(\\theta_2\\) in turn produces two coupled, nonlinear, second-order ODEs. Deriving these same two equations by Newton–Euler methods requires four scalar equations (two per body) plus elimination of the unknown internal pin force between the rods — the Lagrangian approach needs none of that elimination step.\n\n\n\n\n\n\nNoteNote\n\n\n\nWriting out the full double-pendulum equations of motion explicitly is a standard homework exercise; the point of working through \\(T\\) and \\(U\\) here is the pattern: every additional rigid link adds one generalized coordinate and one coupling term in \\(T\\), but never requires a new free-body diagram.",
+    "title": "25  Applications of Lagrange’s Equations",
+    "section": "25.5 Worked Example: Double Pendulum",
+    "text": "25.5 Worked Example: Double Pendulum\nReturning to the double pendulum of Lecture 38 (\\(q_1=\\theta_1\\), \\(q_2=\\theta_2\\), masses \\(m_1,m_2\\), rod lengths \\(\\ell_1,\\ell_2\\)), the velocities are found by differentiating \\({\\bf r}_1,{\\bf r}_2\\): \\[\\begin{align}\n    {\\bf v}_1 &= \\ell_1\\dot\\theta_1\\cos\\theta_1{\\bf E}_x+\\ell_1\\dot\\theta_1\\sin\\theta_1{\\bf E}_y,\\\\\n    {\\bf v}_2 &= {\\bf v}_1+\\ell_2\\dot\\theta_2\\cos\\theta_2{\\bf E}_x+\\ell_2\\dot\\theta_2\\sin\\theta_2{\\bf E}_y.\n\\end{align}\\] After expanding \\({\\bf v}_2\\cdot{\\bf v}_2\\) and using \\(\\cos\\theta_1\\cos\\theta_2+\\sin\\theta_1\\sin\\theta_2=\\cos(\\theta_1-\\theta_2)\\): \\[\\begin{align}\n    T &= \\tfrac12 m_1\\ell_1^2\\dot\\theta_1^2+\\tfrac12 m_2\\leb\\ell_1^2\\dot\\theta_1^2+\\ell_2^2\\dot\\theta_2^2+2\\ell_1\\ell_2\\dot\\theta_1\\dot\\theta_2\\cos(\\theta_1-\\theta_2)\\reb,\\\\\n    U &= -(m_1+m_2)g\\ell_1\\cos\\theta_1-m_2g\\ell_2\\cos\\theta_2.\n\\end{align}\\] This \\(T\\) contains a coupling term in \\(\\dot\\theta_1\\dot\\theta_2\\) — impossible to avoid physically (the motion of rod 2’s mass is tied to rod 1) but completely routine to differentiate. Forming \\(L=T-U\\) and applying Lagrange’s equation to \\(\\theta_1\\) and \\(\\theta_2\\) in turn produces two coupled, nonlinear, second-order ODEs. Deriving these same two equations by Newton–Euler methods requires four scalar equations (two per body) plus elimination of the unknown internal pin force between the rods — the Lagrangian approach needs none of that elimination step.\n\n\n\n\n\n\nNoteNote\n\n\n\nWriting out the full double-pendulum equations of motion explicitly is a standard homework exercise; the point of working through \\(T\\) and \\(U\\) here is the pattern: every additional rigid link adds one generalized coordinate and one coupling term in \\(T\\), but never requires a new free-body diagram.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Applications of Lagrange's Equations</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Applications of Lagrange's Equations</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/examples_and_applications.html#comparing-the-three-lectures",
     "href": "lagrangian_mechanics/examples_and_applications.html#comparing-the-three-lectures",
-    "title": "24  Applications of Lagrange’s Equations",
-    "section": "24.6 Comparing the Three Lectures",
-    "text": "24.6 Comparing the Three Lectures\nLecture 38 built the kinematic and virtual-work machinery: generalized coordinates, virtual displacements, generalized forces. Lecture 39 combined this with D’Alembert’s principle to derive Lagrange’s equations and specialized them to the Lagrangian \\(L=T-U\\) for conservative systems. This lecture applied the method to multi-DOF systems, showed how cyclic coordinates give conserved momenta “for free,” and extended the framework to nonconservative forces via \\(Q_j^{\\text{nc}}\\) or the Rayleigh dissipation function.",
+    "title": "25  Applications of Lagrange’s Equations",
+    "section": "25.6 Comparing the Three Lectures",
+    "text": "25.6 Comparing the Three Lectures\nLecture 38 built the kinematic and virtual-work machinery: generalized coordinates, virtual displacements, generalized forces. Lecture 39 combined this with D’Alembert’s principle to derive Lagrange’s equations and specialized them to the Lagrangian \\(L=T-U\\) for conservative systems. This lecture applied the method to multi-DOF systems, showed how cyclic coordinates give conserved momenta “for free,” and extended the framework to nonconservative forces via \\(Q_j^{\\text{nc}}\\) or the Rayleigh dissipation function.",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Applications of Lagrange's Equations</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Applications of Lagrange's Equations</span>"
     ]
   },
   {
     "objectID": "lagrangian_mechanics/examples_and_applications.html#summary",
     "href": "lagrangian_mechanics/examples_and_applications.html#summary",
-    "title": "24  Applications of Lagrange’s Equations",
-    "section": "24.7 Summary",
-    "text": "24.7 Summary\nFor a system with generalized coordinates \\(q_1,\\dots,q_n\\): \\[\\begin{align}\n    \\frac{d}{dt}\\lp\\frac{\\partial L}{\\partial\\dot q_j}\\rp-\\frac{\\partial L}{\\partial q_j} = Q_j^{\\text{nc}}, \\qquad L=T-U.\n\\end{align}\\] If \\(q_j\\) is cyclic (\\(\\partial L/\\partial q_j=0\\)), its conjugate momentum \\(p_j=\\partial L/\\partial\\dot q_j\\) is conserved. Linear damping is handled either as a direct generalized force \\(Q_j^{\\text{nc}}=-c\\dot q_j\\) or via the Rayleigh dissipation function \\(\\mathcal{F}=\\tfrac12\\sum_j c_j\\dot q_j^2\\), with \\(Q_j^{\\text{nc}}=-\\partial\\mathcal{F}/\\partial\\dot q_j\\).",
+    "title": "25  Applications of Lagrange’s Equations",
+    "section": "25.7 Summary",
+    "text": "25.7 Summary\nFor a system with generalized coordinates \\(q_1,\\dots,q_n\\): \\[\\begin{align}\n    \\frac{d}{dt}\\lp\\frac{\\partial L}{\\partial\\dot q_j}\\rp-\\frac{\\partial L}{\\partial q_j} = Q_j^{\\text{nc}}, \\qquad L=T-U.\n\\end{align}\\] If \\(q_j\\) is cyclic (\\(\\partial L/\\partial q_j=0\\)), its conjugate momentum \\(p_j=\\partial L/\\partial\\dot q_j\\) is conserved. Linear damping is handled either as a direct generalized force \\(Q_j^{\\text{nc}}=-c\\dot q_j\\) or via the Rayleigh dissipation function \\(\\mathcal{F}=\\tfrac12\\sum_j c_j\\dot q_j^2\\), with \\(Q_j^{\\text{nc}}=-\\partial\\mathcal{F}/\\partial\\dot q_j\\).",
     "crumbs": [
       "Lagrangian Mechanics",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Applications of Lagrange's Equations</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Applications of Lagrange's Equations</span>"
     ]
   },
   {
@@ -1925,89 +1969,89 @@
   {
     "objectID": "appendices/conservative_forces.html",
     "href": "appendices/conservative_forces.html",
-    "title": "25  Mathematical Background for Conservative Forces",
+    "title": "26  Mathematical Background for Conservative Forces",
     "section": "",
-    "text": "25.1 Gradient\nIn coordinate-free terms, the gradient of a function \\(f({\\bf r})\\) is defined by \\[\\begin{align}\n    df = \\nabla f\\cdot d{\\bf r},\n\\end{align}\\] where \\(df\\) is the total infinitesimal change in \\(f\\) for an infinitesimal displacement \\(d{\\bf r}\\).",
+    "text": "26.1 Gradient\nIn coordinate-free terms, the gradient of a function \\(f({\\bf r})\\) is defined by \\[\\begin{align}\n    df = \\nabla f\\cdot d{\\bf r},\n\\end{align}\\] where \\(df\\) is the total infinitesimal change in \\(f\\) for an infinitesimal displacement \\(d{\\bf r}\\).",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Mathematical Background for Conservative Forces</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Mathematical Background for Conservative Forces</span>"
     ]
   },
   {
     "objectID": "appendices/conservative_forces.html#gradient",
     "href": "appendices/conservative_forces.html#gradient",
-    "title": "25  Mathematical Background for Conservative Forces",
+    "title": "26  Mathematical Background for Conservative Forces",
     "section": "",
-    "text": "25.1.1 Cartesian Coordinates\nFor \\(f = f(x,y,z)\\) with \\(d{\\bf r} = dx{\\bf E}_x+dy{\\bf E}_y+dz{\\bf E}_z\\): \\[\\begin{align}\n    df = \\frac{\\partial f}{\\partial x}dx+\\frac{\\partial f}{\\partial y}dy+\\frac{\\partial f}{\\partial z}dz.\n\\end{align}\\] Since this must hold for all independent variations \\(dx\\), \\(dy\\), \\(dz\\): \\[\\begin{align}\n    \\nabla f = \\frac{\\partial f}{\\partial x}{\\bf E}_x+\\frac{\\partial f}{\\partial y}{\\bf E}_y+\\frac{\\partial f}{\\partial z}{\\bf E}_z.\n\\end{align}\\]\n\n\n25.1.2 Cylindrical-Polar Coordinates\nFor \\(f = f(r,\\theta,z)\\) with \\(d{\\bf r} = dr{\\bf e}_r+r\\,d\\theta{\\bf e}_\\theta+dz{\\bf E}_z\\): \\[\\begin{align}\n    df = \\frac{\\partial f}{\\partial r}dr+\\frac{\\partial f}{\\partial \\theta}d\\theta+\\frac{\\partial f}{\\partial z}dz = \\nabla f\\cdot(dr{\\bf e}_r+r\\,d\\theta{\\bf e}_\\theta+dz{\\bf E}_z).\n\\end{align}\\] Matching coefficients: \\[\\begin{align}\n    \\nabla f = \\frac{\\partial f}{\\partial r}{\\bf e}_r+\\frac{1}{r}\\frac{\\partial f}{\\partial \\theta}{\\bf e}_\\theta+\\frac{\\partial f}{\\partial z}{\\bf E}_z.\n\\end{align}\\]\n\n\n25.1.3 Curvilinear Coordinates\n\n\n\n\n\n\nNoteNote\n\n\n\nThis section is beyond the scope of this course. See O. M. O’Reilly’s Intermediate Dynamics Section 1.6 for more information.\n\n\nConsider a curvilinear coordinate system \\(\\{q^1,q^2,q^3\\}\\) defined by \\(q^i = \\hat{q}^i(x_1,x_2,x_3)\\), assumed locally invertible. The covariant basis vectors are: \\[\\begin{align}\n    {\\bf a}_i = \\frac{\\partial{\\bf r}}{\\partial q^i} = \\sum_{k=1}^3\\frac{\\partial\\hat{x}^k}{\\partial q^i}{\\bf E}_k.\n\\end{align}\\] The contravariant basis vectors are the gradients of the curvilinear coordinates: \\[\\begin{align}\n    {\\bf a}^k = \\nabla q^k = \\sum_{i=1}^3\\frac{\\partial\\hat{q}^k}{\\partial x_i}{\\bf E}_i.\n\\end{align}\\]",
+    "text": "26.1.1 Cartesian Coordinates\nFor \\(f = f(x,y,z)\\) with \\(d{\\bf r} = dx{\\bf E}_x+dy{\\bf E}_y+dz{\\bf E}_z\\): \\[\\begin{align}\n    df = \\frac{\\partial f}{\\partial x}dx+\\frac{\\partial f}{\\partial y}dy+\\frac{\\partial f}{\\partial z}dz.\n\\end{align}\\] Since this must hold for all independent variations \\(dx\\), \\(dy\\), \\(dz\\): \\[\\begin{align}\n    \\nabla f = \\frac{\\partial f}{\\partial x}{\\bf E}_x+\\frac{\\partial f}{\\partial y}{\\bf E}_y+\\frac{\\partial f}{\\partial z}{\\bf E}_z.\n\\end{align}\\]\n\n\n26.1.2 Cylindrical-Polar Coordinates\nFor \\(f = f(r,\\theta,z)\\) with \\(d{\\bf r} = dr{\\bf e}_r+r\\,d\\theta{\\bf e}_\\theta+dz{\\bf E}_z\\): \\[\\begin{align}\n    df = \\frac{\\partial f}{\\partial r}dr+\\frac{\\partial f}{\\partial \\theta}d\\theta+\\frac{\\partial f}{\\partial z}dz = \\nabla f\\cdot(dr{\\bf e}_r+r\\,d\\theta{\\bf e}_\\theta+dz{\\bf E}_z).\n\\end{align}\\] Matching coefficients: \\[\\begin{align}\n    \\nabla f = \\frac{\\partial f}{\\partial r}{\\bf e}_r+\\frac{1}{r}\\frac{\\partial f}{\\partial \\theta}{\\bf e}_\\theta+\\frac{\\partial f}{\\partial z}{\\bf E}_z.\n\\end{align}\\]\n\n\n26.1.3 Curvilinear Coordinates\n\n\n\n\n\n\nNoteNote\n\n\n\nThis section is beyond the scope of this course. See O. M. O’Reilly’s Intermediate Dynamics Section 1.6 for more information.\n\n\nConsider a curvilinear coordinate system \\(\\{q^1,q^2,q^3\\}\\) defined by \\(q^i = \\hat{q}^i(x_1,x_2,x_3)\\), assumed locally invertible. The covariant basis vectors are: \\[\\begin{align}\n    {\\bf a}_i = \\frac{\\partial{\\bf r}}{\\partial q^i} = \\sum_{k=1}^3\\frac{\\partial\\hat{x}^k}{\\partial q^i}{\\bf E}_k.\n\\end{align}\\] The contravariant basis vectors are the gradients of the curvilinear coordinates: \\[\\begin{align}\n    {\\bf a}^k = \\nabla q^k = \\sum_{i=1}^3\\frac{\\partial\\hat{q}^k}{\\partial x_i}{\\bf E}_i.\n\\end{align}\\]",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Mathematical Background for Conservative Forces</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Mathematical Background for Conservative Forces</span>"
     ]
   },
   {
     "objectID": "appendices/conservative_forces.html#condition-for-a-vector-field-to-be-conservative",
     "href": "appendices/conservative_forces.html#condition-for-a-vector-field-to-be-conservative",
-    "title": "25  Mathematical Background for Conservative Forces",
-    "section": "25.2 Condition for a Vector Field to Be Conservative",
-    "text": "25.2 Condition for a Vector Field to Be Conservative\nA force \\({\\bf F} = F_x{\\bf E}_x+F_y{\\bf E}_y+F_z{\\bf E}_z\\) is derivable from a potential if \\(F_x = \\partial f/\\partial x\\), \\(F_y = \\partial f/\\partial y\\), \\(F_z = \\partial f/\\partial z\\). This requires: \\[\\begin{align}\n    \\frac{\\partial F_x}{\\partial y} = \\frac{\\partial F_y}{\\partial x}, \\qquad\n    \\frac{\\partial F_x}{\\partial z} = \\frac{\\partial F_z}{\\partial x}, \\qquad\n    \\frac{\\partial F_y}{\\partial z} = \\frac{\\partial F_z}{\\partial y},\n\\end{align}\\] summarized by \\(\\text{curl}\\,{\\bf F} = {\\bf 0}\\).\nThis condition is both necessary and sufficient for \\({\\bf F}\\) to be derivable from a potential (see this proof).",
+    "title": "26  Mathematical Background for Conservative Forces",
+    "section": "26.2 Condition for a Vector Field to Be Conservative",
+    "text": "26.2 Condition for a Vector Field to Be Conservative\nA force \\({\\bf F} = F_x{\\bf E}_x+F_y{\\bf E}_y+F_z{\\bf E}_z\\) is derivable from a potential if \\(F_x = \\partial f/\\partial x\\), \\(F_y = \\partial f/\\partial y\\), \\(F_z = \\partial f/\\partial z\\). This requires: \\[\\begin{align}\n    \\frac{\\partial F_x}{\\partial y} = \\frac{\\partial F_y}{\\partial x}, \\qquad\n    \\frac{\\partial F_x}{\\partial z} = \\frac{\\partial F_z}{\\partial x}, \\qquad\n    \\frac{\\partial F_y}{\\partial z} = \\frac{\\partial F_z}{\\partial y},\n\\end{align}\\] summarized by \\(\\text{curl}\\,{\\bf F} = {\\bf 0}\\).\nThis condition is both necessary and sufficient for \\({\\bf F}\\) to be derivable from a potential (see this proof).",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Mathematical Background for Conservative Forces</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Mathematical Background for Conservative Forces</span>"
     ]
   },
   {
     "objectID": "appendices/conservative_forces.html#conservative-forces",
     "href": "appendices/conservative_forces.html#conservative-forces",
-    "title": "25  Mathematical Background for Conservative Forces",
-    "section": "25.3 Conservative Forces",
-    "text": "25.3 Conservative Forces\nA conservative force \\({\\bf F}_c\\) is derivable from a potential \\(U\\): \\[\\begin{align}\n    {\\bf F}_c = -\\nabla U.\n\\end{align}\\] The work of a conservative force depends only on the endpoints: \\[\\begin{align}\n    W_{{\\bf F}_c,AB} = \\int_{{\\bf r}(t_A)}^{{\\bf r}(t_B)}{\\bf F}_c\\cdot d{\\bf r} = -(U_B-U_A) = U_A-U_B.\n\\end{align}\\]\n\n25.3.1 Constant Force\nFor a constant force \\({\\bf C}\\), the potential is \\(U = -{\\bf C}\\cdot{\\bf r}\\). In Cartesians: \\[\\begin{align}\n    \\nabla({\\bf C}\\cdot{\\bf r}) = \\frac{\\partial{\\bf C}\\cdot{\\bf r}}{\\partial x}{\\bf E}_x+\\frac{\\partial{\\bf C}\\cdot{\\bf r}}{\\partial y}{\\bf E}_y+\\frac{\\partial{\\bf C}\\cdot{\\bf r}}{\\partial z}{\\bf E}_z = {\\bf C}.\n\\end{align}\\] Hence \\({\\bf C} = -\\nabla(-{\\bf C}\\cdot{\\bf r})\\). ✓\n\n\n25.3.2 Spring Force\nFor the spring force \\({\\bf F}_s = -K(r-\\ell_0){\\bf e}_r\\) (taking the anchor at the origin), the potential is \\(U = \\frac{1}{2}K(r-\\ell_0)^2\\). Using the polar gradient: \\[\\begin{align}\n    \\nabla\\lp\\frac{1}{2}K(r-\\ell_0)^2\\rp = K(r-\\ell_0){\\bf e}_r,\n\\end{align}\\] so \\({\\bf F}_s = -\\nabla U\\). ✓\n\n\n25.3.3 Gravitational Force\nFor Newton’s law of gravitation, the force on particle 1 due to particle 2 is \\[\\begin{align}\n    {\\bf F}_1 = G\\frac{m_1 m_2}{\\lnorm{\\bf r}_{2/1}\\rnorm^3}{\\bf r}_{2/1}.\n\\end{align}\\] Using the polar gradient with \\({\\bf r}_{2/1} = r{\\bf e}_r\\), one can show that \\(U = -Gm_1m_2/r\\) is the corresponding potential.",
+    "title": "26  Mathematical Background for Conservative Forces",
+    "section": "26.3 Conservative Forces",
+    "text": "26.3 Conservative Forces\nA conservative force \\({\\bf F}_c\\) is derivable from a potential \\(U\\): \\[\\begin{align}\n    {\\bf F}_c = -\\nabla U.\n\\end{align}\\] The work of a conservative force depends only on the endpoints: \\[\\begin{align}\n    W_{{\\bf F}_c,AB} = \\int_{{\\bf r}(t_A)}^{{\\bf r}(t_B)}{\\bf F}_c\\cdot d{\\bf r} = -(U_B-U_A) = U_A-U_B.\n\\end{align}\\]\n\n26.3.1 Constant Force\nFor a constant force \\({\\bf C}\\), the potential is \\(U = -{\\bf C}\\cdot{\\bf r}\\). In Cartesians: \\[\\begin{align}\n    \\nabla({\\bf C}\\cdot{\\bf r}) = \\frac{\\partial{\\bf C}\\cdot{\\bf r}}{\\partial x}{\\bf E}_x+\\frac{\\partial{\\bf C}\\cdot{\\bf r}}{\\partial y}{\\bf E}_y+\\frac{\\partial{\\bf C}\\cdot{\\bf r}}{\\partial z}{\\bf E}_z = {\\bf C}.\n\\end{align}\\] Hence \\({\\bf C} = -\\nabla(-{\\bf C}\\cdot{\\bf r})\\). ✓\n\n\n26.3.2 Spring Force\nFor the spring force \\({\\bf F}_s = -K(r-\\ell_0){\\bf e}_r\\) (taking the anchor at the origin), the potential is \\(U = \\frac{1}{2}K(r-\\ell_0)^2\\). Using the polar gradient: \\[\\begin{align}\n    \\nabla\\lp\\frac{1}{2}K(r-\\ell_0)^2\\rp = K(r-\\ell_0){\\bf e}_r,\n\\end{align}\\] so \\({\\bf F}_s = -\\nabla U\\). ✓\n\n\n26.3.3 Gravitational Force\nFor Newton’s law of gravitation, the force on particle 1 due to particle 2 is \\[\\begin{align}\n    {\\bf F}_1 = G\\frac{m_1 m_2}{\\lnorm{\\bf r}_{2/1}\\rnorm^3}{\\bf r}_{2/1}.\n\\end{align}\\] Using the polar gradient with \\({\\bf r}_{2/1} = r{\\bf e}_r\\), one can show that \\(U = -Gm_1m_2/r\\) is the corresponding potential.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Mathematical Background for Conservative Forces</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Mathematical Background for Conservative Forces</span>"
     ]
   },
   {
     "objectID": "appendices/sets_linear_function_spaces.html",
     "href": "appendices/sets_linear_function_spaces.html",
-    "title": "26  Sets and Linear Function Spaces",
+    "title": "27  Sets and Linear Function Spaces",
     "section": "",
-    "text": "26.1 Sets\nA set \\(\\mathcal{U}\\) is a collection of elements. Elements of the set are denoted \\(u \\in \\mathcal{U}\\). A set can be finite or infinite, and may have algebraic structure imposed on it.",
+    "text": "27.1 Sets\nA set \\(\\mathcal{U}\\) is a collection of elements. Elements of the set are denoted \\(u \\in \\mathcal{U}\\). A set can be finite or infinite, and may have algebraic structure imposed on it.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Sets and Linear Function Spaces</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Sets and Linear Function Spaces</span>"
     ]
   },
   {
     "objectID": "appendices/sets_linear_function_spaces.html#linear-vector-spaces",
     "href": "appendices/sets_linear_function_spaces.html#linear-vector-spaces",
-    "title": "26  Sets and Linear Function Spaces",
-    "section": "26.2 Linear (Vector) Spaces",
-    "text": "26.2 Linear (Vector) Spaces\nA set \\(\\mathcal{V}\\) is a linear space (or vector space) over the real numbers \\(\\mathbb{R}\\) if it is equipped with two operations:\n\nAddition: \\({\\bf u}+{\\bf v} \\in \\mathcal{V}\\) for all \\({\\bf u},{\\bf v} \\in \\mathcal{V}\\),\nScalar multiplication: \\(\\alpha{\\bf u} \\in \\mathcal{V}\\) for all \\(\\alpha \\in \\mathbb{R}\\), \\({\\bf u} \\in \\mathcal{V}\\),\n\nsatisfying the standard axioms (commutativity, associativity, existence of zero element, existence of additive inverse, distributivity).\nExamples of linear spaces: \\(\\mathbb{R}^n\\); the space of continuous functions on an interval; the space of \\(n\\times n\\) matrices.",
+    "title": "27  Sets and Linear Function Spaces",
+    "section": "27.2 Linear (Vector) Spaces",
+    "text": "27.2 Linear (Vector) Spaces\nA set \\(\\mathcal{V}\\) is a linear space (or vector space) over the real numbers \\(\\mathbb{R}\\) if it is equipped with two operations:\n\nAddition: \\({\\bf u}+{\\bf v} \\in \\mathcal{V}\\) for all \\({\\bf u},{\\bf v} \\in \\mathcal{V}\\),\nScalar multiplication: \\(\\alpha{\\bf u} \\in \\mathcal{V}\\) for all \\(\\alpha \\in \\mathbb{R}\\), \\({\\bf u} \\in \\mathcal{V}\\),\n\nsatisfying the standard axioms (commutativity, associativity, existence of zero element, existence of additive inverse, distributivity).\nExamples of linear spaces: \\(\\mathbb{R}^n\\); the space of continuous functions on an interval; the space of \\(n\\times n\\) matrices.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Sets and Linear Function Spaces</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Sets and Linear Function Spaces</span>"
     ]
   },
   {
     "objectID": "appendices/sets_linear_function_spaces.html#linear-transformations",
     "href": "appendices/sets_linear_function_spaces.html#linear-transformations",
-    "title": "26  Sets and Linear Function Spaces",
-    "section": "26.3 Linear Transformations",
-    "text": "26.3 Linear Transformations\nA map \\({\\bf T}: \\mathcal{V} \\to \\mathcal{W}\\) between two linear spaces is a linear transformation if: \\[\\begin{align}\n    {\\bf T}({\\bf u}+{\\bf v}) &= {\\bf T}{\\bf u}+{\\bf T}{\\bf v} \\quad \\text{for all } {\\bf u},{\\bf v} \\in \\mathcal{V},\\\\\n    {\\bf T}(\\alpha{\\bf u}) &= \\alpha{\\bf T}{\\bf u} \\quad \\text{for all } \\alpha \\in \\mathbb{R},\\; {\\bf u} \\in \\mathcal{V}.\n\\end{align}\\]\nWhen \\(\\mathcal{V} = \\mathcal{W}\\) is the space of 3D vectors \\(\\mathbb{E}^3\\), a linear transformation from \\(\\mathbb{E}^3\\) to \\(\\mathbb{E}^3\\) is called a tensor.\n\n\n\n\n\n\nImportantNote!\n\n\n\nThe rotation \\({\\bf Q}\\) is a linear transformation from \\(\\mathbb{E}^3\\) to \\(\\mathbb{E}^3\\), so it is a tensor. This justifies calling it the rotation tensor throughout the kinematics of rigid bodies chapter.",
+    "title": "27  Sets and Linear Function Spaces",
+    "section": "27.3 Linear Transformations",
+    "text": "27.3 Linear Transformations\nA map \\({\\bf T}: \\mathcal{V} \\to \\mathcal{W}\\) between two linear spaces is a linear transformation if: \\[\\begin{align}\n    {\\bf T}({\\bf u}+{\\bf v}) &= {\\bf T}{\\bf u}+{\\bf T}{\\bf v} \\quad \\text{for all } {\\bf u},{\\bf v} \\in \\mathcal{V},\\\\\n    {\\bf T}(\\alpha{\\bf u}) &= \\alpha{\\bf T}{\\bf u} \\quad \\text{for all } \\alpha \\in \\mathbb{R},\\; {\\bf u} \\in \\mathcal{V}.\n\\end{align}\\]\nWhen \\(\\mathcal{V} = \\mathcal{W}\\) is the space of 3D vectors \\(\\mathbb{E}^3\\), a linear transformation from \\(\\mathbb{E}^3\\) to \\(\\mathbb{E}^3\\) is called a tensor.\n\n\n\n\n\n\nImportantNote!\n\n\n\nThe rotation \\({\\bf Q}\\) is a linear transformation from \\(\\mathbb{E}^3\\) to \\(\\mathbb{E}^3\\), so it is a tensor. This justifies calling it the rotation tensor throughout the kinematics of rigid bodies chapter.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Sets and Linear Function Spaces</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Sets and Linear Function Spaces</span>"
     ]
   },
   {
     "objectID": "appendices/sets_linear_function_spaces.html#basis-and-dimension",
     "href": "appendices/sets_linear_function_spaces.html#basis-and-dimension",
-    "title": "26  Sets and Linear Function Spaces",
-    "section": "26.4 Basis and Dimension",
-    "text": "26.4 Basis and Dimension\nA set \\(\\{{\\bf e}_1,\\ldots,{\\bf e}_n\\}\\) is a basis for \\(\\mathcal{V}\\) if: - The vectors are linearly independent: \\(\\sum_i \\alpha_i{\\bf e}_i = {\\bf 0}\\) implies \\(\\alpha_i = 0\\) for all \\(i\\). - They span \\(\\mathcal{V}\\): every \\({\\bf v} \\in \\mathcal{V}\\) can be written as \\({\\bf v} = \\sum_i v_i{\\bf e}_i\\).\nThe number of basis vectors is the dimension of the space.\nFor 3D Euclidean space \\(\\mathbb{E}^3\\), any orthonormal set \\(\\{{\\bf E}_1,{\\bf E}_2,{\\bf E}_3\\}\\) with \\({\\bf E}_i\\cdot{\\bf E}_j = \\delta_{ij}\\) is a basis.",
+    "title": "27  Sets and Linear Function Spaces",
+    "section": "27.4 Basis and Dimension",
+    "text": "27.4 Basis and Dimension\nA set \\(\\{{\\bf e}_1,\\ldots,{\\bf e}_n\\}\\) is a basis for \\(\\mathcal{V}\\) if: - The vectors are linearly independent: \\(\\sum_i \\alpha_i{\\bf e}_i = {\\bf 0}\\) implies \\(\\alpha_i = 0\\) for all \\(i\\). - They span \\(\\mathcal{V}\\): every \\({\\bf v} \\in \\mathcal{V}\\) can be written as \\({\\bf v} = \\sum_i v_i{\\bf e}_i\\).\nThe number of basis vectors is the dimension of the space.\nFor 3D Euclidean space \\(\\mathbb{E}^3\\), any orthonormal set \\(\\{{\\bf E}_1,{\\bf E}_2,{\\bf E}_3\\}\\) with \\({\\bf E}_i\\cdot{\\bf E}_j = \\delta_{ij}\\) is a basis.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Sets and Linear Function Spaces</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Sets and Linear Function Spaces</span>"
     ]
   }
 ]

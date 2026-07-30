@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>23&nbsp; Lagrange’s Equations</title>
+<title>24&nbsp; Lagrange’s Equations</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -134,7 +134,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lagrangian_mechanics/generalized_coordinates.html">Lagrangian Mechanics</a></li><li class="breadcrumb-item"><a href="../lagrangian_mechanics/lagranges_equations.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lagrange’s Equations</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lagrangian_mechanics/generalized_coordinates.html">Lagrangian Mechanics</a></li><li class="breadcrumb-item"><a href="../lagrangian_mechanics/lagranges_equations.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lagrange’s Equations</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -328,6 +328,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The Work-Energy Theorem for a Rigid Body</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../rigid_body_dynamics/systems_of_particles_and_rigid_bodies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Systems of Particles and Rigid Bodies</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -342,19 +348,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lagrangian_mechanics/generalized_coordinates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Generalized Coordinates and Virtual Work</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Generalized Coordinates and Virtual Work</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lagrangian_mechanics/lagranges_equations.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lagrange’s Equations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lagrange’s Equations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lagrangian_mechanics/examples_and_applications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Applications of Lagrange’s Equations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Applications of Lagrange’s Equations</span></span></a>
   </div>
 </li>
       </ul>
@@ -377,13 +383,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/conservative_forces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Mathematical Background for Conservative Forces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Mathematical Background for Conservative Forces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/sets_linear_function_spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Sets and Linear Function Spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Sets and Linear Function Spaces</span></span></a>
   </div>
 </li>
       </ul>
@@ -398,22 +404,22 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#dalemberts-principle" id="toc-dalemberts-principle" class="nav-link active" data-scroll-target="#dalemberts-principle"><span class="header-section-number">23.1</span> D’Alembert’s Principle</a></li>
-  <li><a href="#from-dalemberts-principle-to-lagranges-equations" id="toc-from-dalemberts-principle-to-lagranges-equations" class="nav-link" data-scroll-target="#from-dalemberts-principle-to-lagranges-equations"><span class="header-section-number">23.2</span> From D’Alembert’s Principle to Lagrange’s Equations</a></li>
-  <li><a href="#conservative-forces-and-the-lagrangian" id="toc-conservative-forces-and-the-lagrangian" class="nav-link" data-scroll-target="#conservative-forces-and-the-lagrangian"><span class="header-section-number">23.3</span> Conservative Forces and the Lagrangian</a></li>
-  <li><a href="#procedure" id="toc-procedure" class="nav-link" data-scroll-target="#procedure"><span class="header-section-number">23.4</span> Procedure</a></li>
-  <li><a href="#worked-example-simple-pendulum-revisited" id="toc-worked-example-simple-pendulum-revisited" class="nav-link" data-scroll-target="#worked-example-simple-pendulum-revisited"><span class="header-section-number">23.5</span> Worked Example: Simple Pendulum, Revisited</a></li>
-  <li><a href="#why-this-works-a-comparison" id="toc-why-this-works-a-comparison" class="nav-link" data-scroll-target="#why-this-works-a-comparison"><span class="header-section-number">23.6</span> Why This Works: A Comparison</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">23.7</span> Summary</a></li>
+  <li><a href="#dalemberts-principle" id="toc-dalemberts-principle" class="nav-link active" data-scroll-target="#dalemberts-principle"><span class="header-section-number">24.1</span> D’Alembert’s Principle</a></li>
+  <li><a href="#from-dalemberts-principle-to-lagranges-equations" id="toc-from-dalemberts-principle-to-lagranges-equations" class="nav-link" data-scroll-target="#from-dalemberts-principle-to-lagranges-equations"><span class="header-section-number">24.2</span> From D’Alembert’s Principle to Lagrange’s Equations</a></li>
+  <li><a href="#conservative-forces-and-the-lagrangian" id="toc-conservative-forces-and-the-lagrangian" class="nav-link" data-scroll-target="#conservative-forces-and-the-lagrangian"><span class="header-section-number">24.3</span> Conservative Forces and the Lagrangian</a></li>
+  <li><a href="#procedure" id="toc-procedure" class="nav-link" data-scroll-target="#procedure"><span class="header-section-number">24.4</span> Procedure</a></li>
+  <li><a href="#worked-example-simple-pendulum-revisited" id="toc-worked-example-simple-pendulum-revisited" class="nav-link" data-scroll-target="#worked-example-simple-pendulum-revisited"><span class="header-section-number">24.5</span> Worked Example: Simple Pendulum, Revisited</a></li>
+  <li><a href="#why-this-works-a-comparison" id="toc-why-this-works-a-comparison" class="nav-link" data-scroll-target="#why-this-works-a-comparison"><span class="header-section-number">24.6</span> Why This Works: A Comparison</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">24.7</span> Summary</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lagrangian_mechanics/generalized_coordinates.html">Lagrangian Mechanics</a></li><li class="breadcrumb-item"><a href="../lagrangian_mechanics/lagranges_equations.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lagrange’s Equations</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lagrangian_mechanics/generalized_coordinates.html">Lagrangian Mechanics</a></li><li class="breadcrumb-item"><a href="../lagrangian_mechanics/lagranges_equations.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lagrange’s Equations</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lagrange’s Equations</span></h1>
+<h1 class="title"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lagrange’s Equations</span></h1>
 </div>
 
 
@@ -430,16 +436,16 @@ window.Quarto = {
 </header>
 
 
-<section id="dalemberts-principle" class="level2" data-number="23.1">
-<h2 data-number="23.1" class="anchored" data-anchor-id="dalemberts-principle"><span class="header-section-number">23.1</span> D’Alembert’s Principle</h2>
+<section id="dalemberts-principle" class="level2" data-number="24.1">
+<h2 data-number="24.1" class="anchored" data-anchor-id="dalemberts-principle"><span class="header-section-number">24.1</span> D’Alembert’s Principle</h2>
 <p>Newton’s second law for particle <span class="math inline">\(i\)</span> is <span class="math inline">\({\bf F}_i^{\text{tot}} = m_i{\bf a}_i\)</span>, where <span class="math inline">\({\bf F}_i^{\text{tot}}\)</span> includes both applied forces and constraint forces. Rearranging as <span class="math inline">\({\bf F}_i^{\text{tot}}-m_i{\bf a}_i={\bf 0}\)</span> and dotting with a virtual displacement <span class="math inline">\(\delta{\bf r}_i\)</span>, then summing over all particles: <span class="math display">\[\begin{align}
     \sum_{i=1}^N\lp{\bf F}_i^{\text{tot}}-m_i{\bf a}_i\rp\cdot\delta{\bf r}_i = 0.
 \end{align}\]</span> Splitting <span class="math inline">\({\bf F}_i^{\text{tot}}\)</span> into applied forces <span class="math inline">\({\bf F}_i\)</span> and constraint forces <span class="math inline">\({\bf f}_i^c\)</span>, and restricting attention to <strong>workless constraints</strong> (rigid smooth guides, inextensible cables, ideal pins) for which <span class="math inline">\(\sum_i{\bf f}_i^c\cdot\delta{\bf r}_i=0\)</span> for every admissible <span class="math inline">\(\delta{\bf r}_i\)</span>, we obtain <strong>D’Alembert’s principle</strong>: <span class="math display">\[\begin{align}
     \sum_{i=1}^N\lp{\bf F}_i-m_i{\bf a}_i\rp\cdot\delta{\bf r}_i = 0 \qquad \text{for all admissible }\delta{\bf r}_i.
 \end{align}\]</span> This is a virtual-work statement for <em>dynamics</em>: the applied forces, together with the fictitious “inertia force” <span class="math inline">\(-m_i{\bf a}_i\)</span>, do zero virtual work. Unlike the static case, this holds identically (it is just Newton’s law), not as a special condition.</p>
 </section>
-<section id="from-dalemberts-principle-to-lagranges-equations" class="level2" data-number="23.2">
-<h2 data-number="23.2" class="anchored" data-anchor-id="from-dalemberts-principle-to-lagranges-equations"><span class="header-section-number">23.2</span> From D’Alembert’s Principle to Lagrange’s Equations</h2>
+<section id="from-dalemberts-principle-to-lagranges-equations" class="level2" data-number="24.2">
+<h2 data-number="24.2" class="anchored" data-anchor-id="from-dalemberts-principle-to-lagranges-equations"><span class="header-section-number">24.2</span> From D’Alembert’s Principle to Lagrange’s Equations</h2>
 <p>Substitute <span class="math inline">\(\delta{\bf r}_i = \sum_j(\partial{\bf r}_i/\partial q_j)\delta q_j\)</span> and use the independence of the <span class="math inline">\(\delta q_j\)</span>. The applied-force term is exactly the virtual work from the previous lecture: <span class="math display">\[\begin{align}
     \sum_{i=1}^N{\bf F}_i\cdot\delta{\bf r}_i = \sum_{j=1}^n Q_j\,\delta q_j.
 \end{align}\]</span> The inertia term requires more work: <span class="math display">\[\begin{align}
@@ -471,8 +477,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="conservative-forces-and-the-lagrangian" class="level2" data-number="23.3">
-<h2 data-number="23.3" class="anchored" data-anchor-id="conservative-forces-and-the-lagrangian"><span class="header-section-number">23.3</span> Conservative Forces and the Lagrangian</h2>
+<section id="conservative-forces-and-the-lagrangian" class="level2" data-number="24.3">
+<h2 data-number="24.3" class="anchored" data-anchor-id="conservative-forces-and-the-lagrangian"><span class="header-section-number">24.3</span> Conservative Forces and the Lagrangian</h2>
 <p>If every applied force is conservative, <span class="math inline">\(Q_j\)</span> derives from a potential energy <span class="math inline">\(U(q_1,\dots,q_n)\)</span> (possibly <span class="math inline">\(t\)</span>-dependent) via <span class="math display">\[\begin{align}
     Q_j = -\frac{\partial U}{\partial q_j}.
 \end{align}\]</span> Since <span class="math inline">\(U\)</span> does not depend on <span class="math inline">\(\dot q_j\)</span>, <span class="math inline">\(\partial U/\partial\dot q_j = 0\)</span>, so we may move it inside the time-derivative term for free. Defining the <strong>Lagrangian</strong> <span class="math display">\[\begin{align}
@@ -483,8 +489,8 @@ window.Quarto = {
     \frac{d}{dt}\lp\frac{\partial L}{\partial\dot q_j}\rp-\frac{\partial L}{\partial q_j} = Q_j^{\text{nc}}, \qquad j=1,\dots,n.
 \end{align}\]</span></p>
 </section>
-<section id="procedure" class="level2" data-number="23.4">
-<h2 data-number="23.4" class="anchored" data-anchor-id="procedure"><span class="header-section-number">23.4</span> Procedure</h2>
+<section id="procedure" class="level2" data-number="24.4">
+<h2 data-number="24.4" class="anchored" data-anchor-id="procedure"><span class="header-section-number">24.4</span> Procedure</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="Recipe">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -505,8 +511,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="worked-example-simple-pendulum-revisited" class="level2" data-number="23.5">
-<h2 data-number="23.5" class="anchored" data-anchor-id="worked-example-simple-pendulum-revisited"><span class="header-section-number">23.5</span> Worked Example: Simple Pendulum, Revisited</h2>
+<section id="worked-example-simple-pendulum-revisited" class="level2" data-number="24.5">
+<h2 data-number="24.5" class="anchored" data-anchor-id="worked-example-simple-pendulum-revisited"><span class="header-section-number">24.5</span> Worked Example: Simple Pendulum, Revisited</h2>
 <p>Return to the pendulum of the previous lecture, <span class="math inline">\(q_1=\theta\)</span>. The velocity of the mass is <span class="math inline">\({\bf v}=\ell\dot\theta\,{\bf e}_\theta\)</span>, so <span class="math display">\[\begin{align}
     T = \tfrac12 m\ell^2\dot\theta^2, \qquad U = -mg\ell\cos\theta \quad(\text{measuring from the pivot}).
 \end{align}\]</span> The Lagrangian is <span class="math inline">\(L=T-U=\tfrac12 m\ell^2\dot\theta^2+mg\ell\cos\theta\)</span>. Then <span class="math display">\[\begin{align}
@@ -517,8 +523,8 @@ window.Quarto = {
     m\ell^2\ddot\theta+mg\ell\sin\theta = 0 \quad\Longleftrightarrow\quad \ddot\theta+\frac{g}{\ell}\sin\theta=0,
 \end{align}\]</span> identical to the moment equation about the pivot obtained by Newton–Euler methods — but here it fell out of two scalar energy functions, with no free-body diagram and no pin reaction ever computed.</p>
 </section>
-<section id="why-this-works-a-comparison" class="level2" data-number="23.6">
-<h2 data-number="23.6" class="anchored" data-anchor-id="why-this-works-a-comparison"><span class="header-section-number">23.6</span> Why This Works: A Comparison</h2>
+<section id="why-this-works-a-comparison" class="level2" data-number="24.6">
+<h2 data-number="24.6" class="anchored" data-anchor-id="why-this-works-a-comparison"><span class="header-section-number">24.6</span> Why This Works: A Comparison</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -562,8 +568,8 @@ window.Quarto = {
 </table>
 <p>Both methods produce the same equations of motion — they must, since Lagrange’s equations were derived <em>from</em> Newton’s second law. The Lagrangian approach simply automates the elimination of workless constraint forces that Newton–Euler methods require you to introduce and then cancel by hand.</p>
 </section>
-<section id="summary" class="level2" data-number="23.7">
-<h2 data-number="23.7" class="anchored" data-anchor-id="summary"><span class="header-section-number">23.7</span> Summary</h2>
+<section id="summary" class="level2" data-number="24.7">
+<h2 data-number="24.7" class="anchored" data-anchor-id="summary"><span class="header-section-number">24.7</span> Summary</h2>
 <p>D’Alembert’s principle, <span class="math inline">\(\sum_i({\bf F}_i-m_i{\bf a}_i)\cdot\delta{\bf r}_i=0\)</span>, converts dynamics into a virtual-work statement. Expanding in generalized coordinates yields <strong>Lagrange’s equations</strong>: <span class="math display">\[\begin{align}
     \frac{d}{dt}\lp\frac{\partial T}{\partial\dot q_j}\rp-\frac{\partial T}{\partial q_j} = Q_j, \qquad j=1,\dots,n.
 \end{align}\]</span> For conservative forces, <span class="math inline">\(Q_j=-\partial U/\partial q_j\)</span>, and with <span class="math inline">\(L=T-U\)</span>: <span class="math display">\[\begin{align}
@@ -977,12 +983,12 @@ window.Quarto = {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../lagrangian_mechanics/generalized_coordinates.html" class="pagination-link" aria-label="Generalized Coordinates and Virtual Work">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Generalized Coordinates and Virtual Work</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Generalized Coordinates and Virtual Work</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../lagrangian_mechanics/examples_and_applications.html" class="pagination-link" aria-label="Applications of Lagrange's Equations">
-        <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Applications of Lagrange’s Equations</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Applications of Lagrange’s Equations</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
