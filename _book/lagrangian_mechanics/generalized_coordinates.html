@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>22&nbsp; Generalized Coordinates and Virtual Work</title>
+<title>23&nbsp; Generalized Coordinates and Virtual Work</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,7 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../lagrangian_mechanics/lagranges_equations.html" rel="next">
-<link href="../rigid_body_dynamics/work_energy_theorem.html" rel="prev">
+<link href="../rigid_body_dynamics/systems_of_particles_and_rigid_bodies.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -134,7 +134,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lagrangian_mechanics/generalized_coordinates.html">Lagrangian Mechanics</a></li><li class="breadcrumb-item"><a href="../lagrangian_mechanics/generalized_coordinates.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Generalized Coordinates and Virtual Work</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lagrangian_mechanics/generalized_coordinates.html">Lagrangian Mechanics</a></li><li class="breadcrumb-item"><a href="../lagrangian_mechanics/generalized_coordinates.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Generalized Coordinates and Virtual Work</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -328,6 +328,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The Work-Energy Theorem for a Rigid Body</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../rigid_body_dynamics/systems_of_particles_and_rigid_bodies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Systems of Particles and Rigid Bodies</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -342,19 +348,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lagrangian_mechanics/generalized_coordinates.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Generalized Coordinates and Virtual Work</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Generalized Coordinates and Virtual Work</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lagrangian_mechanics/lagranges_equations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lagrange’s Equations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lagrange’s Equations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lagrangian_mechanics/examples_and_applications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Applications of Lagrange’s Equations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Applications of Lagrange’s Equations</span></span></a>
   </div>
 </li>
       </ul>
@@ -377,13 +383,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/conservative_forces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Mathematical Background for Conservative Forces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Mathematical Background for Conservative Forces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/sets_linear_function_spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Sets and Linear Function Spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Sets and Linear Function Spaces</span></span></a>
   </div>
 </li>
       </ul>
@@ -398,23 +404,23 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#configuration-space-and-generalized-coordinates" id="toc-configuration-space-and-generalized-coordinates" class="nav-link active" data-scroll-target="#configuration-space-and-generalized-coordinates"><span class="header-section-number">22.1</span> Configuration Space and Generalized Coordinates</a></li>
-  <li><a href="#generalized-velocities" id="toc-generalized-velocities" class="nav-link" data-scroll-target="#generalized-velocities"><span class="header-section-number">22.2</span> Generalized Velocities</a></li>
-  <li><a href="#virtual-displacements" id="toc-virtual-displacements" class="nav-link" data-scroll-target="#virtual-displacements"><span class="header-section-number">22.3</span> Virtual Displacements</a></li>
-  <li><a href="#virtual-work-and-generalized-forces" id="toc-virtual-work-and-generalized-forces" class="nav-link" data-scroll-target="#virtual-work-and-generalized-forces"><span class="header-section-number">22.4</span> Virtual Work and Generalized Forces</a></li>
-  <li><a href="#worked-example-simple-pendulum" id="toc-worked-example-simple-pendulum" class="nav-link" data-scroll-target="#worked-example-simple-pendulum"><span class="header-section-number">22.5</span> Worked Example: Simple Pendulum</a></li>
-  <li><a href="#worked-example-two-degrees-of-freedom" id="toc-worked-example-two-degrees-of-freedom" class="nav-link" data-scroll-target="#worked-example-two-degrees-of-freedom"><span class="header-section-number">22.6</span> Worked Example: Two Degrees of Freedom</a></li>
-  <li><a href="#looking-ahead" id="toc-looking-ahead" class="nav-link" data-scroll-target="#looking-ahead"><span class="header-section-number">22.7</span> Looking Ahead</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">22.8</span> Summary</a></li>
+  <li><a href="#configuration-space-and-generalized-coordinates" id="toc-configuration-space-and-generalized-coordinates" class="nav-link active" data-scroll-target="#configuration-space-and-generalized-coordinates"><span class="header-section-number">23.1</span> Configuration Space and Generalized Coordinates</a></li>
+  <li><a href="#generalized-velocities" id="toc-generalized-velocities" class="nav-link" data-scroll-target="#generalized-velocities"><span class="header-section-number">23.2</span> Generalized Velocities</a></li>
+  <li><a href="#virtual-displacements" id="toc-virtual-displacements" class="nav-link" data-scroll-target="#virtual-displacements"><span class="header-section-number">23.3</span> Virtual Displacements</a></li>
+  <li><a href="#virtual-work-and-generalized-forces" id="toc-virtual-work-and-generalized-forces" class="nav-link" data-scroll-target="#virtual-work-and-generalized-forces"><span class="header-section-number">23.4</span> Virtual Work and Generalized Forces</a></li>
+  <li><a href="#worked-example-simple-pendulum" id="toc-worked-example-simple-pendulum" class="nav-link" data-scroll-target="#worked-example-simple-pendulum"><span class="header-section-number">23.5</span> Worked Example: Simple Pendulum</a></li>
+  <li><a href="#worked-example-two-degrees-of-freedom" id="toc-worked-example-two-degrees-of-freedom" class="nav-link" data-scroll-target="#worked-example-two-degrees-of-freedom"><span class="header-section-number">23.6</span> Worked Example: Two Degrees of Freedom</a></li>
+  <li><a href="#looking-ahead" id="toc-looking-ahead" class="nav-link" data-scroll-target="#looking-ahead"><span class="header-section-number">23.7</span> Looking Ahead</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">23.8</span> Summary</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lagrangian_mechanics/generalized_coordinates.html">Lagrangian Mechanics</a></li><li class="breadcrumb-item"><a href="../lagrangian_mechanics/generalized_coordinates.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Generalized Coordinates and Virtual Work</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lagrangian_mechanics/generalized_coordinates.html">Lagrangian Mechanics</a></li><li class="breadcrumb-item"><a href="../lagrangian_mechanics/generalized_coordinates.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Generalized Coordinates and Virtual Work</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Generalized Coordinates and Virtual Work</span></h1>
+<h1 class="title"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Generalized Coordinates and Virtual Work</span></h1>
 </div>
 
 
@@ -432,8 +438,8 @@ window.Quarto = {
 
 
 <p>So far, every equation of motion in this course has come from Newton’s second law or its rotational counterpart, applied directly to free-body diagrams. For systems with several moving parts and constraints, this bookkeeping becomes heavy: every constraint force (pins, rollers, rods, cables) must be introduced explicitly, even though these forces do no work and never appear in the final answer. <strong>Lagrangian mechanics</strong> reformulates dynamics in terms of energy rather than force, and automatically eliminates workless constraint forces from the equations of motion.</p>
-<section id="configuration-space-and-generalized-coordinates" class="level2" data-number="22.1">
-<h2 data-number="22.1" class="anchored" data-anchor-id="configuration-space-and-generalized-coordinates"><span class="header-section-number">22.1</span> Configuration Space and Generalized Coordinates</h2>
+<section id="configuration-space-and-generalized-coordinates" class="level2" data-number="23.1">
+<h2 data-number="23.1" class="anchored" data-anchor-id="configuration-space-and-generalized-coordinates"><span class="header-section-number">23.1</span> Configuration Space and Generalized Coordinates</h2>
 <p>A system with <span class="math inline">\(N\)</span> particles has, in principle, <span class="math inline">\(3N\)</span> Cartesian coordinates. If the system is subject to <span class="math inline">\(m\)</span> independent <strong>holonomic constraints</strong> (equations of the form <span class="math inline">\(\phi_k({\bf r}_1,\dots,{\bf r}_N,t) = 0\)</span>), the number of independent coordinates needed to specify the configuration drops to <span class="math display">\[\begin{align}
     n = 3N-m.
 \end{align}\]</span> This number <span class="math inline">\(n\)</span> is the system’s number of <strong>degrees of freedom (DOF)</strong>. Any set of <span class="math inline">\(n\)</span> independent parameters <span class="math inline">\(q_1,\dots,q_n\)</span> that uniquely fixes the configuration of the system is called a set of <strong>generalized coordinates</strong>. They need not have units of length — an angle, an arc length, or a stretch are all valid choices.</p>
@@ -454,8 +460,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="generalized-velocities" class="level2" data-number="22.2">
-<h2 data-number="22.2" class="anchored" data-anchor-id="generalized-velocities"><span class="header-section-number">22.2</span> Generalized Velocities</h2>
+<section id="generalized-velocities" class="level2" data-number="23.2">
+<h2 data-number="23.2" class="anchored" data-anchor-id="generalized-velocities"><span class="header-section-number">23.2</span> Generalized Velocities</h2>
 <p>Differentiating <span class="math inline">\({\bf r}_i(q_1,\dots,q_n,t)\)</span> with the chain rule gives the velocity of particle <span class="math inline">\(i\)</span> in terms of the <strong>generalized velocities</strong> <span class="math inline">\(\dot{q}_1,\dots,\dot{q}_n\)</span>: <span class="math display">\[\begin{align}
     {\bf v}_i = \frac{d{\bf r}_i}{dt} = \sum_{j=1}^n\frac{\partial {\bf r}_i}{\partial q_j}\dot{q}_j+\frac{\partial {\bf r}_i}{\partial t}.
 \end{align}\]</span> The last term is present only when the constraints defining <span class="math inline">\({\bf r}_i\)</span> depend explicitly on time (e.g., a bead on a wire that is itself being driven by a motor).</p>
@@ -463,14 +469,14 @@ window.Quarto = {
     \frac{\partial {\bf v}_i}{\partial \dot{q}_j} = \frac{\partial {\bf r}_i}{\partial q_j}.
 \end{align}\]</span> This “cancellation of the dots” identity is the key algebraic step used to derive Lagrange’s equations in the next lecture.</p>
 </section>
-<section id="virtual-displacements" class="level2" data-number="22.3">
-<h2 data-number="22.3" class="anchored" data-anchor-id="virtual-displacements"><span class="header-section-number">22.3</span> Virtual Displacements</h2>
+<section id="virtual-displacements" class="level2" data-number="23.3">
+<h2 data-number="23.3" class="anchored" data-anchor-id="virtual-displacements"><span class="header-section-number">23.3</span> Virtual Displacements</h2>
 <p>A <strong>virtual displacement</strong> <span class="math inline">\(\delta{\bf r}_i\)</span> is an infinitesimal, instantaneous, imaginary displacement consistent with the constraints at a frozen instant of time <span class="math inline">\(t\)</span>. Because time is held fixed, the <span class="math inline">\(\partial{\bf r}_i/\partial t\)</span> term does <strong>not</strong> appear: <span class="math display">\[\begin{align}
     \delta {\bf r}_i = \sum_{j=1}^n\frac{\partial {\bf r}_i}{\partial q_j}\delta q_j.
 \end{align}\]</span> Here <span class="math inline">\(\delta q_1,\dots,\delta q_n\)</span> are arbitrary, independent infinitesimal variations of the generalized coordinates. This is the essential distinction between a virtual displacement <span class="math inline">\(\delta{\bf r}_i\)</span> and an actual (kinematically realized) infinitesimal displacement <span class="math inline">\(d{\bf r}_i\)</span>, which does include the <span class="math inline">\(\partial{\bf r}_i/\partial t\,dt\)</span> term when constraints are time-dependent.</p>
 </section>
-<section id="virtual-work-and-generalized-forces" class="level2" data-number="22.4">
-<h2 data-number="22.4" class="anchored" data-anchor-id="virtual-work-and-generalized-forces"><span class="header-section-number">22.4</span> Virtual Work and Generalized Forces</h2>
+<section id="virtual-work-and-generalized-forces" class="level2" data-number="23.4">
+<h2 data-number="23.4" class="anchored" data-anchor-id="virtual-work-and-generalized-forces"><span class="header-section-number">23.4</span> Virtual Work and Generalized Forces</h2>
 <p>The <strong>virtual work</strong> done by the applied forces <span class="math inline">\({\bf F}_i\)</span> (excluding workless constraint forces such as normal forces from rigid, frictionless guides, and tensions in inextensible cables) through a virtual displacement is <span class="math display">\[\begin{align}
     \delta W = \sum_{i=1}^N {\bf F}_i\cdot\delta{\bf r}_i = \sum_{i=1}^N {\bf F}_i\cdot\sum_{j=1}^n\frac{\partial {\bf r}_i}{\partial q_j}\delta q_j
     = \sum_{j=1}^n\lp\sum_{i=1}^N {\bf F}_i\cdot\frac{\partial {\bf r}_i}{\partial q_j}\rp\delta q_j.
@@ -493,8 +499,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="worked-example-simple-pendulum" class="level2" data-number="22.5">
-<h2 data-number="22.5" class="anchored" data-anchor-id="worked-example-simple-pendulum"><span class="header-section-number">22.5</span> Worked Example: Simple Pendulum</h2>
+<section id="worked-example-simple-pendulum" class="level2" data-number="23.5">
+<h2 data-number="23.5" class="anchored" data-anchor-id="worked-example-simple-pendulum"><span class="header-section-number">23.5</span> Worked Example: Simple Pendulum</h2>
 <p>A particle of mass <span class="math inline">\(m\)</span> swings on a rigid, massless rod of length <span class="math inline">\(\ell\)</span> pinned at <span class="math inline">\(O\)</span>. This system has <span class="math inline">\(n=1\)</span> DOF; take <span class="math inline">\(q_1=\theta\)</span>, the angle from the downward vertical.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -511,19 +517,19 @@ window.Quarto = {
     Q_\theta = {\bf F}\cdot\frac{\partial {\bf r}}{\partial \theta} = -mg\lp\ell\sin\theta\rp = -mg\ell\sin\theta.
 \end{align}\]</span> This matches the restoring moment about <span class="math inline">\(O\)</span> found from a free-body diagram, obtained here without ever drawing the pin reaction.</p>
 </section>
-<section id="worked-example-two-degrees-of-freedom" class="level2" data-number="22.6">
-<h2 data-number="22.6" class="anchored" data-anchor-id="worked-example-two-degrees-of-freedom"><span class="header-section-number">22.6</span> Worked Example: Two Degrees of Freedom</h2>
+<section id="worked-example-two-degrees-of-freedom" class="level2" data-number="23.6">
+<h2 data-number="23.6" class="anchored" data-anchor-id="worked-example-two-degrees-of-freedom"><span class="header-section-number">23.6</span> Worked Example: Two Degrees of Freedom</h2>
 <p>For a double pendulum (two rods of length <span class="math inline">\(\ell_1,\ell_2\)</span> and point masses <span class="math inline">\(m_1,m_2\)</span>, both hinged in series), a natural choice is <span class="math inline">\(q_1=\theta_1\)</span>, <span class="math inline">\(q_2=\theta_2\)</span>, the absolute angles of each rod from the vertical. The position vectors are <span class="math display">\[\begin{align}
     {\bf r}_1 &amp;= \ell_1\sin\theta_1\,{\bf E}_x-\ell_1\cos\theta_1\,{\bf E}_y,\\
     {\bf r}_2 &amp;= {\bf r}_1+\ell_2\sin\theta_2\,{\bf E}_x-\ell_2\cos\theta_2\,{\bf E}_y,
 \end{align}\]</span> so that <span class="math inline">\(\partial{\bf r}_1/\partial\theta_2={\bf 0}\)</span>, while <span class="math inline">\(\partial{\bf r}_2/\partial\theta_1\)</span> and <span class="math inline">\(\partial{\bf r}_2/\partial\theta_2\)</span> are both nonzero — each mass’s position generally depends on every generalized coordinate “upstream” of it in the kinematic chain. This bookkeeping of partial derivatives, done once, is all that is needed to build <span class="math inline">\(Q_1\)</span> and <span class="math inline">\(Q_2\)</span>, and — as the next lecture shows — the kinetic energy <span class="math inline">\(T\)</span>.</p>
 </section>
-<section id="looking-ahead" class="level2" data-number="22.7">
-<h2 data-number="22.7" class="anchored" data-anchor-id="looking-ahead"><span class="header-section-number">22.7</span> Looking Ahead</h2>
+<section id="looking-ahead" class="level2" data-number="23.7">
+<h2 data-number="23.7" class="anchored" data-anchor-id="looking-ahead"><span class="header-section-number">23.7</span> Looking Ahead</h2>
 <p>Virtual work handles equilibrium. To get the <em>equations of motion</em>, we need one more ingredient: <strong>D’Alembert’s principle</strong>, which treats <span class="math inline">\(-m_i{\bf a}_i\)</span> as an additional “inertial force” and reduces dynamics to a virtual-work problem. That is the subject of the next lecture, where the generalized-force formalism above is combined with the kinetic energy to produce <strong>Lagrange’s equations</strong>.</p>
 </section>
-<section id="summary" class="level2" data-number="22.8">
-<h2 data-number="22.8" class="anchored" data-anchor-id="summary"><span class="header-section-number">22.8</span> Summary</h2>
+<section id="summary" class="level2" data-number="23.8">
+<h2 data-number="23.8" class="anchored" data-anchor-id="summary"><span class="header-section-number">23.8</span> Summary</h2>
 <p>Generalized coordinates <span class="math inline">\(q_1,\dots,q_n\)</span> parametrize the configuration of a system with <span class="math inline">\(n\)</span> DOF via <span class="math inline">\({\bf r}_i(q_1,\dots,q_n,t)\)</span>. Virtual displacements hold <span class="math inline">\(t\)</span> fixed: <span class="math display">\[\begin{align}
     \delta{\bf r}_i = \sum_{j=1}^n\frac{\partial{\bf r}_i}{\partial q_j}\delta q_j.
 \end{align}\]</span> The generalized force conjugate to <span class="math inline">\(q_j\)</span> is <span class="math display">\[\begin{align}
@@ -936,13 +942,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../rigid_body_dynamics/work_energy_theorem.html" class="pagination-link" aria-label="The Work-Energy Theorem for a Rigid Body">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The Work-Energy Theorem for a Rigid Body</span></span>
+      <a href="../rigid_body_dynamics/systems_of_particles_and_rigid_bodies.html" class="pagination-link" aria-label="Systems of Particles and Rigid Bodies">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Systems of Particles and Rigid Bodies</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../lagrangian_mechanics/lagranges_equations.html" class="pagination-link" aria-label="Lagrange's Equations">
-        <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lagrange’s Equations</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lagrange’s Equations</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
