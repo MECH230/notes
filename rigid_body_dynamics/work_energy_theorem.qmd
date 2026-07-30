@@ -30,6 +30,8 @@ where
 \end{align}
 Notice: the work of a force uses the velocity of its **point of application**.
 
+{{< video https://youtu.be/acmYFwl8rRo title="Introducing the work–energy theorem for a rigid body" >}}
+
 ## Koenig's Decomposition
 
 By definition, the kinetic energy of a rigid body is:
@@ -45,6 +47,8 @@ The first term integrates to $\frac{1}{2}m{\bf v}_C\cdot{\bf v}_C$, the second v
     T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}^C\cdot\bomega.
 \end{align}
 
+{{< video https://youtu.be/3HRYCW7wiRs title="Deriving the kinetic energy of a rigid body" >}}
+
 ### Fixed Point Rotation
 
 For fixed point rotation about $O$ (${\bf v}_O = {\bf 0}$), using the cyclic property of the scalar triple product:
@@ -53,6 +57,8 @@ For fixed point rotation about $O$ (${\bf v}_O = {\bf 0}$), using the cyclic pro
     = \frac{1}{2}({\bf r}_{C/O}\times{\bf G}+{\bf H}^C)\cdot\bomega
     = \frac{1}{2}{\bf H}^O\cdot\bomega.
 \end{align}
+
+{{< video https://youtube.com/shorts/3bu7kY8JLpM title="Kinetic energy – rigid body rotating about a fixed point" >}}
 
 ## Derivation of the Work-Energy Theorem
 
@@ -64,6 +70,8 @@ Invoking the BoLM and BoAM:
 \begin{align}
     \dot{T} = {\bf F}\cdot{\bf v}_C+{\bf M}^C\cdot\bomega.
 \end{align}
+
+{{< video https://youtu.be/vCROTYHJRow title="Deriving the work–energy theorem for a rigid body" >}}
 
 ## Alternative Form
 
@@ -99,6 +107,7 @@ These results apply only for $\bomega = \omega{\bf E}_z$. Constant couples are n
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 3
 \begin{tikzpicture}
     \draw[thick] (0,0) -- (3,-4);
     \fill[black] (0,0) circle (0.1);
@@ -121,6 +130,7 @@ A bar of length $\ell$ and mass $m$ pinned at its end. The energy is conserved:
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 3
 \begin{tikzpicture}
     \draw[thick] (0,0) -- (3,-4);
     \fill[black] (0,0) circle (0.1);
@@ -145,13 +155,6 @@ If instead a follower force ${\bf P}$ is applied perpendicular to the bar at its
 
 As with particles and systems of particles, this theorem can be used to establish conservation of the total mechanical energy of a rigid body, $E = T + U$, when all work-doing forces and moments are conservative.
 
-{{< video https://youtu.be/acmYFwl8rRo title="Introducing the work–energy theorem for a rigid body" >}}
-
-{{< video https://youtu.be/3HRYCW7wiRs title="Deriving the kinetic energy of a rigid body" >}}
-
-{{< video https://youtube.com/shorts/3bu7kY8JLpM title="Kinetic energy – rigid body rotating about a fixed point" >}}
-
-{{< video https://youtu.be/vCROTYHJRow title="Deriving the work–energy theorem for a rigid body" >}}
 
 ## Summary
 
@@ -190,5 +193,5 @@ If a point $O$ has zero velocity: $T = \tfrac{1}{2}\mathbf{H}^O\cdot\boldsymbol{
 
 ![06-118.](../figures/work_energy_theorem/06-118.png){width=50%}
 
-{{< video https://youtu.be/-jdslhyHAIY title="Solution – Problem 06/118" width="100%" >}}
+{{< video https://youtu.be/-jdslhyHAIY title="Solution – Problem 06/118" >}}
 

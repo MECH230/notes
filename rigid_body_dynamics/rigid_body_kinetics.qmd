@@ -176,6 +176,28 @@ For rigid bodies, impact ideas are the same as in systems of particles.
 ```
 
 
+## Impulse and Momentum for Rigid Bodies
+The **linear impulse - linear momentum equation** is
+\begin{align}
+    \int_{t_A}^{t^B}{\bf F}dt = {\bf G}(t_B)-{\bf G}(t_A).
+\end{align}
+The **angular impulse - angular momentum equations** are equivalently
+\begin{align}
+    & \int_{t_A}^{t_B}{\bf M}^C dt = {\bf H}^C(t_B)-{\bf H}^C(t_A)\quad\text{where $C$ is the center of mass},\\
+    & \int_{t_A}^{t_B}{\bf M}^O dt = {\bf H}^O(t_B)-{\bf H}^O(t_A)\quad\text{if there is a fixed point }O.
+\end{align}
+
+## Moment-Free Motion of a Rigid Body
+The Tennis Racket Problem: A tennis racket is thrown in the air with a certain angular velocity. The racket rotates about its center of mass, and the angular momentum is conserved. The racket has three principal axes of rotation, and the stability of rotation depends on which axis is used. Rotation about the axis with the largest or smallest moment of inertia is stable, while rotation about the intermediate axis is unstable.
+
+This is also known as the Dzhanibekov effect.
+
+You can learn more about this [here](https://rotations.berkeley.edu/a-tumbling-t-handle-in-space/) and [here](https://rotations.berkeley.edu/a-book-tossed-in-the-air/).
+
+https://www.youtube.com/watch?v=1VPfZ_XzisU&t=22s
+
+{{< video https://www.youtube.com/watch?v=1VPfZ_XzisU&t=22s title="Veritasium: The Bizarre Behavior of Rotating Bodies" >}}
+
 ## Summary
 
 For $K$ forces and a moment ${\bf M}_e$ acting on a rigid body, the balance laws are:
@@ -220,6 +242,8 @@ Four classes of applications: (1) purely translational motion ($\bomega=\balpha=
 **2.** [MKB 06-035] *(ans. $R=3.57$ lb)*
 
 ![MKB 06-035.](../figures/rigid_body_kinetics/problems/06-035.png){width=50%}
+
+{{< video https://youtu.be/gvBZyEq_bGo title="Solution – Problem 06/035 Nonzero products of inertia" >}}
 
 **3.** [06-037] *(ans. $A=56.3$ N)*
 
@@ -303,7 +327,5 @@ Four classes of applications: (1) purely translational motion ($\bomega=\balpha=
 
 {{< video https://youtu.be/0N8tDgnrXNA title="Solution – Problem 06/155" >}}
 
-### Other
 
-{{< video https://youtu.be/gvBZyEq_bGo title="Solution – Problem 06/035 Nonzero products of inertia" >}}
 

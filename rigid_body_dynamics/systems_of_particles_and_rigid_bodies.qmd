@@ -1,0 +1,186 @@
+---
+title: "Systems of Particles and Rigid Bodies"
+---
+
+The balance laws developed separately for particles, systems of particles, and rigid bodies apply just as well to *combinations* of these — assemblies of rigid bodies and particles connected by pins, rods, or motors. The following example illustrates how to set up such a problem: identifying the kinematic constraints between the bodies, drawing free-body diagrams of the combined system and of its parts, and applying the balance laws to each.
+
+## Example: BB8
+
+Consider a spherical robot composed of a spherical shell of mass $m$ and radius $R$ and a bar of mass $2m$ and length $\ell<2R$ pinned at point $A$, its center, to the center of the shell as shown in the figure below. A geared motor drive at $A$ provides an internal moment which rotates the bar. The friction between the robot and the ground is sufficient to prevent slipping.
+
+Throughout the motion, the position vector from the origin to the center of the robot is ${\bf r}_A = x{\bf E}_x+R{\bf E}_y$.
+
+The angular velocity of the spherical shell is $\bomega_1 = \dot{\theta}_1{\bf E}_z$ and the angular velocity of the bar of length $\ell$ is $\bomega_2 = \dot{\theta}_2{\bf E}_z$.
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+    % spherical shell
+    \draw[thick] (0,3) circle (3);
+    % massless bar
+    \draw[thick] (-2.1213,0.8787) -- (2.1213,5.1213);
+    \draw[<-] (1.4142,4.4142) -- (5, 4.4142) node[right] {massless rod};
+
+    % driving bar
+    \begin{scope}[rotate around={30:(0,3)}]
+        \draw[fill=blue!20] (-2,2.8) rectangle (2,3.2);
+    \end{scope}
+
+    % pin at center of sphere
+    \fill (0,3) circle (0.08);
+    \node at (-0.25,3.4) {$A$};
+
+    % point P
+    \fill (0,0) circle (0.05);
+    \node at (0,0.3) {$P$};
+
+    % draw ground
+    \draw[thick] (-8,0) -- (8,0);
+    \foreach \x in {-8,-7.8,...,8} {
+        \draw[thick] (\x,0) -- (\x+0.4,-0.3);
+    }
+
+    % draw the angle theta
+    \draw[dashed] (0,3) -- (2,3);
+    \path[->] (1,3) edge[bend right] (1,3.3);
+    \node at (1.3,3.25) {$\theta_2$};
+
+    \path[->] (1.6,3) edge[bend right] (1.2,4.2);
+    \node at (1.9,3.4) {$\theta_1$};
+
+    % draw the fixed basis
+    \fill (-6,0.1) circle (0.05);
+    \node at (-6.25,0.25) {$O$};
+    \draw[thick,->] (-6,0.1) -- (-5,0.1) node[right, above] {${\bf E}_x$};
+    \draw[thick,->] (-6,0.1) -- (-6,1.1) node[above] {${\bf E}_y$};
+\end{tikzpicture}
+```
+
+(a) Draw the free-body diagram of (1) the combined system of the spherical shell and the bar of length $\ell$, (2) the spherical shell with its massless diameter alone, and (3) the bar of length $\ell$ alone.
+
+(b) We wish to determine the motion of the robot, i.e., we want to find $x(t)$, $\theta_1(t)$, $\theta_2(t)$, resulting from the moments applied by the motor. How do we proceed?
+
+### Free-Body Diagrams
+
+**Combined system** (shell + bar):
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+    % spherical shell
+    \draw[thick] (0,3) circle (3);
+    % massless bar
+    \draw[thick] (-2.1213,0.8787) -- (2.1213,5.1213);
+
+    % driving bar
+    \begin{scope}[rotate around={30:(0,3)}]
+        \draw[fill=blue!20] (-2,2.8) rectangle (2,3.2);
+    \end{scope}
+
+    % pin at center of sphere
+    \fill (0,3) circle (0.08);
+    \node at (-0.25,3.4) {$A$};
+
+    % point P
+    \fill (0,0) circle (0.05);
+    \node at (0,0.3) {$P$};
+
+    % draw the forces
+    \draw[thick,->] (0,-1) -- (0,0) node[midway,right] {${\bf N}$};
+    \draw[thick,->] (-1,0) -- (0,0) node[midway,below] {${\bf F}_f$};
+    \draw[thick,->] (0,3) -- (0,2) node[below, right] {${\bf W}_1+{\bf W}_2$};
+\end{tikzpicture}
+```
+
+**Spherical shell alone:**
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+    % spherical shell
+    \draw[thick] (0,3) circle (3);
+    % massless bar
+    \draw[thick] (-2.1213,0.8787) -- (2.1213,5.1213);
+
+    % pin at center of sphere
+    \fill (0,3) circle (0.08);
+    \node at (-0.25,3.4) {$A$};
+
+    % point P
+    \fill (0,0) circle (0.05);
+    \node at (0,0.3) {$P$};
+
+    % draw the forces
+    \draw[thick,->] (0,-1) -- (0,0) node[midway,right] {${\bf N}$};
+    \draw[thick,->] (-1,0) -- (0,0) node[midway,below] {${\bf F}_f$};
+    \draw[thick,->] (0,3) -- (0,2) node[below, right] {${\bf W}_1$};
+    \draw[thick,->] (0,3) -- (1,3.5) node[right] {${\bf R}$};
+
+    % draw the internal moment
+    \draw[->, thick] (-0.3,2.5) arc[start angle=-120, end angle=180, radius=0.6cm] node {${\bf M}_{int}$};
+\end{tikzpicture}
+```
+
+**Bar alone:**
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+    % driving bar
+    \begin{scope}[rotate around={30:(0,3)}]
+        \draw[fill=blue!20] (-2,2.8) rectangle (2,3.2);
+    \end{scope}
+
+    % pin at center of sphere
+    \fill (0,3) circle (0.08);
+    \node at (-0.25,3.4) {$A$};
+
+    % draw the forces
+    \draw[thick,->] (0,3) -- (0,2) node[below, right] {${\bf W}_2$};
+    \draw[thick,<-] (0,3) -- (1,3.5) node[midway,right] {$-{\bf R}$};
+
+    % draw the internal moment
+    \draw[<-, thick] (-0.3,2.5) arc[start angle=-120, end angle=180, radius=0.6cm] node {$-{\bf M}_{int}$};
+\end{tikzpicture}
+```
+
+where
+\begin{align}
+    {\bf F}_f = F_f{\bf E}_x.
+\end{align}
+
+### Kinematics
+
+By differentiating ${\bf r}_A$, we get
+\begin{align}
+    \begin{split}
+        {\bf v}_A &= \dot{x}{\bf E}_x,\\
+        {\bf a}_A &= \ddot{x}{\bf E}_x.
+    \end{split}
+\end{align}
+
+The roll-without-slip condition between the sphere and the ground, ${\bf v}_P={\bf 0}$, yields a relationship between $x$ and $\theta_1$:
+\begin{align}
+    \begin{split}
+        {\bf v}_C &= \bomega_1\times R{\bf E}_y,\\
+        \dot{x} &= -R\dot{\theta}_1.
+    \end{split}
+\end{align}
+
+### Balance of Linear Momentum (Combined System)
+
+\begin{align}
+    {\bf F} = (m_1+m_2){\bf a}_A.
+\end{align}
+
+::: {.callout-note title="Note"}
+This example is left as a set-up exercise: complete the balance of linear momentum in components, then use the balance of angular momentum (about $A$ or about $P$) for the combined system, the shell alone, and the bar alone, together with the kinematic constraint above, to solve for $x(t)$, $\theta_1(t)$, $\theta_2(t)$.
+:::

@@ -1094,7 +1094,7 @@ The Coriolis acceleration is $2\boldsymbol{\omega}\times\mathbf{v}_{\mathrm{rel}
 
 {{< video https://youtu.be/PyM7KmlPirU title="Solution – Problem 05/125" >}}
 
-**3.** [05-143] *(ans. $v_{\mathrm{rel}}=3.93$ m/s, $a_{\mathrm{rel}}=15.22$ m/s$^2$, $\omega_{BC}=1.046$ rad/s CW, $\alpha_{BC}=117.7$ rad/s$^2$ CW)*
+**3.** [05-143] *(ans. $v_{\mathrm{rel}}=3.93$ m/s at $19.11^\circ$, $a_{\mathrm{rel}}=15.22$ m/s$^2$ at $19.11^\circ$, $\omega_{BC}=1.429$ rad/s CW, $\alpha_{BC}=170.0$ rad/s$^2$ CW)*
 
 ![MKB 05-143.](../figures/rigid_body_kinematics/problems/05-143.png){width=50%}
 

@@ -48,6 +48,7 @@ book:
         - rigid_body_dynamics/rigid_body_kinematics.qmd
         - rigid_body_dynamics/rigid_body_kinetics.qmd
         - rigid_body_dynamics/work_energy_theorem.qmd
+        - rigid_body_dynamics/systems_of_particles_and_rigid_bodies.qmd
     - part: "Lagrangian Mechanics"
       chapters:
         - lagrangian_mechanics/generalized_coordinates.qmd
