@@ -455,9 +455,9 @@ window.Quarto = {
     T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}^C\cdot\bomega.
 \end{align}\]</span> In this class, <span class="math inline">\(\bomega = \omega{\bf E}_z\)</span>, so <span class="math inline">\(\frac{1}{2}{\bf H}^C\cdot\bomega = \frac{1}{2}I_{zz}\omega^2\)</span>.</p>
 <p>For fixed point rotation about <span class="math inline">\(O\)</span>, the kinetic energy simplifies to: <span class="math display">\[\begin{align}
-    T = \frac{1}{2}{\bf H}^O\cdot\bomega = \frac{1}{2}I^O_{zz}\omega^2.
-\end{align}\]</span></p>
-<p>The <strong>work-energy theorem</strong> for a rigid body is: <span class="math display">\[\begin{align}
+    T = \frac{1}{2}{\bf H}^O\cdot\bomega
+\end{align}\]</span> which further simplifies to <span class="math inline">\(T = \frac{1}{2}I^O_{zz}\omega^2\)</span> if <span class="math inline">\(\bomega = \omega{\bf E}_z\)</span>.</p>
+<p>The <strong>work-energy theorem</strong> for a rigid body has two equivalent forms: <span class="math display">\[\begin{align}
     \frac{dT}{dt} = {\bf F}\cdot{\bf v}_C+{\bf M}^C\cdot\bomega = \sum_{i=1}^N{\bf F}_i\cdot{\bf v}_i+{\bf M}_e\cdot\bomega.
 \end{align}\]</span> Integrating from <span class="math inline">\(t_A\)</span> to <span class="math inline">\(t_B\)</span>: <span class="math display">\[\begin{align}
     T_B-T_A = W_{{\bf F},AB}+W_{{\bf M},AB} = \sum_{i=1}^N W_{{\bf F}_i,AB}+W_{{\bf M}_e,AB},
@@ -470,38 +470,100 @@ window.Quarto = {
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/acmYFwl8rRo" title="Introducing the work–energy theorem for a rigid body" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <section id="koenigs-decomposition" class="level2" data-number="21.1">
 <h2 data-number="21.1" class="anchored" data-anchor-id="koenigs-decomposition"><span class="header-section-number">21.1</span> Koenig’s Decomposition</h2>
-<p>By definition, the kinetic energy of a rigid body is: <span class="math display">\[\begin{align}
+<p>By definition, the kinetic energy <span class="math inline">\(T\)</span> of a rigid body is the (continuous) sum of the kinetic energies of the differential masses composing it: <span class="math display">\[\begin{align}
     T = \frac{1}{2}\int_{\mathcal{B}}{\bf v}\cdot{\bf v}\,\rho\,dv.
-\end{align}\]</span> Using <span class="math inline">\({\bf v} = {\bf v}_C+\bomega\times\bpi\)</span> with <span class="math inline">\(\bpi = {\bf r}-{\bf r}_C\)</span>: <span class="math display">\[\begin{align}
+\end{align}\]</span> We can introduce the <span class="math inline">\({\bf v}_C\)</span> term through <span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; {\bf v} = {\bf v}_C+\bomega\times\bpi,\\
+        &amp; \bpi = {\bf r}-{\bf r}_C,\\
+        &amp; \bomega = \omega_x{\bf e}_x+\omega_y{\bf e}_y+\omega_z{\bf e}_z.
+    \end{split}
+\end{align}\]</span> Since <span class="math display">\[\begin{align}
+    {\bf v}\cdot{\bf v} = ({\bf v}_C+\bomega\times\bpi)\cdot({\bf v}_C+\bomega\times\bpi) = {\bf v}_C\cdot{\bf v}_C+{\bf v}_C\cdot(\bomega\times\bpi)+(\bomega\times\bpi)\cdot{\bf v}_C+(\bomega\times\bpi)\cdot(\bomega\times\bpi),
+\end{align}\]</span> and the two middle terms are equal by commutativity of the dot product, substituting the above expressions in the kinetic energy integral, we get <span class="math display">\[\begin{align}
     T = \frac{1}{2}\int_{\mathcal{B}}\lp{\bf v}_C\cdot{\bf v}_C+2{\bf v}_C\cdot(\bomega\times\bpi)+(\bomega\times\bpi)\cdot(\bomega\times\bpi)\rp dm.
-\end{align}\]</span> The first term integrates to <span class="math inline">\(\frac{1}{2}m{\bf v}_C\cdot{\bf v}_C\)</span>, the second vanishes (since <span class="math inline">\(\int\bpi\,dm = {\bf 0}\)</span>), and using the BAC-CAB identity for the third: <span class="math display">\[\begin{align}
+\end{align}\]</span> For the first two terms in the above integral, <span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; \frac{1}{2}\int_{\mathcal{B}}{\bf v}_C\cdot{\bf v}_C\,dm = \frac{{\bf v}_C\cdot{\bf v}_C}{2}\int dm = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C,\\
+        &amp; \int_{\mathcal{B}}{\bf v}_C\cdot(\bomega\times\bpi)\,dm = {\bf v}_C\cdot\lp\bomega\times\int\bpi\,dm\rp = 0.
+    \end{split}
+\end{align}\]</span> Thus, <span class="math display">\[\begin{align}
+    T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}\int_{\mathcal{B}}(\bomega\times\bpi)\cdot(\bomega\times\bpi)\,dm.
+\end{align}\]</span> We can simplify <span class="math inline">\((\bomega\times\bpi)\cdot(\bomega\times\bpi)\)</span> using the scalar triple product identity <span class="math inline">\(({\bf A}\times{\bf B})\cdot{\bf C}={\bf A}\cdot({\bf B}\times{\bf C})\)</span> with <span class="math inline">\({\bf A}=\bomega\)</span>, <span class="math inline">\({\bf B}=\bpi\)</span>, <span class="math inline">\({\bf C}=\bomega\times\bpi\)</span>: <span class="math display">\[\begin{align}
+    (\bomega\times\bpi)\cdot(\bomega\times\bpi) = \bomega\cdot\lp\bpi\times(\bomega\times\bpi)\rp.
+\end{align}\]</span> The inner cross product expands via the BAC-CAB identity, <span class="math inline">\({\bf a}\times({\bf b}\times{\bf c}) = {\bf b}({\bf a}\cdot{\bf c})-{\bf c}({\bf a}\cdot{\bf b})\)</span>, with <span class="math inline">\({\bf a}=\bpi,{\bf b}=\bomega,{\bf c}=\bpi\)</span>: <span class="math display">\[\begin{align}
+    \bpi\times(\bomega\times\bpi) = (\bpi\cdot\bpi)\bomega-(\bpi\cdot\bomega)\bpi.
+\end{align}\]</span> Recall that <span class="math display">\[\begin{align}
+    {\bf H}^C = \int_{\mathcal{B}}\bpi\times(\bomega\times\bpi)\,dm = \int_{\mathcal{B}}\lp(\bpi\cdot\bpi)\bomega-(\bpi\cdot\bomega)\bpi\rp dm.
+\end{align}\]</span> Putting the last two results together, and pulling <span class="math inline">\(\bomega\)</span> out of the integral since it is the same for every material point of the rigid body: <span class="math display">\[\begin{align}
+    \frac{1}{2}\int_{\mathcal{B}}(\bomega\times\bpi)\cdot(\bomega\times\bpi)\,dm = \frac{1}{2}\bomega\cdot\int_{\mathcal{B}}\bpi\times(\bomega\times\bpi)\,dm = \frac{1}{2}\bomega\cdot{\bf H}^C = \frac{1}{2}{\bf H}^C\cdot\bomega.
+\end{align}\]</span> Hence, we obtain the Koenig decomposition: <span class="math display">\[\begin{align}
     T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}^C\cdot\bomega.
 \end{align}\]</span></p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/3HRYCW7wiRs" title="Deriving the kinetic energy of a rigid body" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <section id="fixed-point-rotation" class="level3" data-number="21.1.1">
 <h3 data-number="21.1.1" class="anchored" data-anchor-id="fixed-point-rotation"><span class="header-section-number">21.1.1</span> Fixed Point Rotation</h3>
-<p>For fixed point rotation about <span class="math inline">\(O\)</span> (<span class="math inline">\({\bf v}_O = {\bf 0}\)</span>), using the cyclic property of the scalar triple product: <span class="math display">\[\begin{align}
-    T &amp;= \frac{1}{2}{\bf G}\cdot(\bomega\times{\bf r}_{C/O})+\frac{1}{2}{\bf H}^C\cdot\bomega
-    = \frac{1}{2}({\bf r}_{C/O}\times{\bf G}+{\bf H}^C)\cdot\bomega
-    = \frac{1}{2}{\bf H}^O\cdot\bomega.
-\end{align}\]</span></p>
+<p>In the case of fixed point rotation, <span class="math inline">\({\bf v}_C = \bomega\times({\bf r}_C-{\bf r}_O)\)</span> and <span class="math inline">\({\bf v}_O = {\bf 0}\)</span>. Since <span class="math inline">\({\bf G}=m{\bf v}_C\)</span> is the linear momentum, <span class="math display">\[\begin{align}
+    \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C = \frac{1}{2}(m{\bf v}_C)\cdot{\bf v}_C = \frac{1}{2}{\bf G}\cdot{\bf v}_C = \frac{1}{2}{\bf G}\cdot(\bomega\times{\bf r}_{C/O}),
+\end{align}\]</span> so, using the cyclical property of the scalar triple product, <span class="math inline">\({\bf a}\cdot({\bf b}\times{\bf c}) = {\bf b}\cdot({\bf c}\times{\bf a}) = {\bf c}\cdot({\bf a}\times{\bf b})\)</span>: <span class="math display">\[\begin{align}
+    \begin{split}
+        T &amp;= \frac{1}{2}{\bf G}\cdot(\bomega\times{\bf r}_{C/O})+\frac{1}{2}{\bf H}^C\cdot\bomega\\
+        &amp;= \frac{1}{2}\bomega\cdot({\bf r}_{C/O}\times{\bf G})+\frac{1}{2}{\bf H}^C\cdot\bomega\\
+        &amp;= \frac{1}{2}({\bf r}_{C/O}\times{\bf G}+{\bf H}^C)\cdot\bomega\\
+        &amp;= \frac{1}{2}{\bf H}^O\cdot\bomega,
+    \end{split}
+\end{align}\]</span> where the second line follows from the cyclical identity, the third line factors <span class="math inline">\(\bomega\)</span> out of the sum of two dot products, and the last line uses the identity <span class="math display">\[\begin{align}
+    {\bf H}^O = {\bf H}^C+{\bf r}_{C/O}\times{\bf G},
+\end{align}\]</span> obtained by writing <span class="math display">\[\begin{align}
+    {\bf H}^O=\int_{\mathcal{B}}({\bf r}-{\bf r}_O)\times{\bf v}\,dm=\int_{\mathcal{B}}(\bpi+{\bf r}_{C/O})\times{\bf v}\,dm=\int_{\mathcal{B}}\bpi\times{\bf v}\,dm+{\bf r}_{C/O}\times\int_{\mathcal{B}}{\bf v}\,dm,
+\end{align}\]</span> and noting that <span class="math inline">\(\int_{\mathcal{B}}\bpi\times{\bf v}\,dm={\bf H}^C\)</span> (by the same steps used above, since <span class="math inline">\(\int\bpi\,dm={\bf 0}\)</span>) while <span class="math inline">\(\int_{\mathcal{B}}{\bf v}\,dm=m{\bf v}_C={\bf G}\)</span>.</p>
 <div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Kinetic energy – rigid body rotating about a fixed point"><source src="https://youtube.com/shorts/3bu7kY8JLpM"></video></div>
 </section>
 </section>
 <section id="derivation-of-the-work-energy-theorem" class="level2" data-number="21.2">
 <h2 data-number="21.2" class="anchored" data-anchor-id="derivation-of-the-work-energy-theorem"><span class="header-section-number">21.2</span> Derivation of the Work-Energy Theorem</h2>
-<p>From <span class="math inline">\(T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}^C\cdot\bomega\)</span>, taking the time derivative and using the fact that <span class="math inline">\(\dot{\bf H}^C\cdot\bomega = {\bf H}^C\cdot\dot{\bomega}\)</span> (verified by direct calculation): <span class="math display">\[\begin{align}
+<p>Taking the time derivative of <span class="math inline">\(T = \frac{1}{2}m{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}{\bf H}^C\cdot\bomega\)</span>: <span class="math display">\[\begin{align}
+    \dot{T} = \frac{1}{2}m\dot{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}m{\bf v}_C\cdot\dot{\bf v}_C+\frac{1}{2}\dot{\bf H}^C\cdot\bomega+\frac{1}{2}{\bf H}^C\cdot\dot{\bomega}.
+\end{align}\]</span> We need to show that <span class="math inline">\(\dot{\bf H}^C\cdot\bomega = {\bf H}^C\cdot\dot{\bomega}\)</span>. <span class="math display">\[\begin{align}
+    \begin{split}
+        \balpha = \dot{\bomega} &amp;= \frac{d}{dt}(\omega_x{\bf e}_x+\omega_y{\bf e}_y+\omega_z{\bf e}_z)\\
+        &amp;= \dot{\omega}_x{\bf e}_x+\dot{\omega}_y{\bf e}_y+\dot{\omega}_z{\bf e}_z+\omega_x\dot{\bf e}_x+\omega_y\dot{\bf e}_y+\omega_z\dot{\bf e}_z\\
+        &amp;= \dot{\omega}_x{\bf e}_x+\dot{\omega}_y{\bf e}_y+\dot{\omega}_z{\bf e}_z+\bomega\times(\omega_x{\bf e}_x+\omega_y{\bf e}_y+\omega_z{\bf e}_z)\\
+        &amp;= \dot{\omega}_x{\bf e}_x+\dot{\omega}_y{\bf e}_y+\dot{\omega}_z{\bf e}_z.
+    \end{split}
+\end{align}\]</span> A direct calculation using this expression for <span class="math inline">\(\balpha\)</span> shows that <span class="math display">\[\begin{align}
+    {\bf H}^C\cdot\dot{\bomega} = (I_{xx}\omega_x+I_{xy}\omega_y+I_{xz}\omega_z)\dot{\omega}_x+(I_{xy}\omega_x+I_{yy}\omega_y+I_{yz}\omega_z)\dot{\omega}_y+(I_{xz}\omega_x+I_{yz}\omega_y+I_{zz}\omega_z)\dot{\omega}_z.
+\end{align}\]</span> To compute the corresponding expression for <span class="math inline">\(\dot{\bf H}^C\cdot\bomega\)</span>, recall <span class="math inline">\(\dot{\bf H}^C=\overset{\circ}{{\bf H}^C}+\bomega\times{\bf H}^C\)</span>, so <span class="math display">\[\begin{align}
+    \dot{\bf H}^C\cdot\bomega = \overset{\circ}{{\bf H}^C}\cdot\bomega+(\bomega\times{\bf H}^C)\cdot\bomega = \overset{\circ}{{\bf H}^C}\cdot\bomega,
+\end{align}\]</span> since <span class="math inline">\((\bomega\times{\bf H}^C)\cdot\bomega=0\)</span> (the vector <span class="math inline">\(\bomega\times{\bf H}^C\)</span> is perpendicular to <span class="math inline">\(\bomega\)</span>). Using the component expression for <span class="math inline">\(\overset{\circ}{{\bf H}^C}\)</span> and dotting with <span class="math inline">\(\bomega\)</span>: <span class="math display">\[\begin{align}
+    \overset{\circ}{{\bf H}^C}\cdot\bomega = (I_{xx}\dot{\omega}_x+I_{xy}\dot{\omega}_y+I_{xz}\dot{\omega}_z)\omega_x+(I_{xy}\dot{\omega}_x+I_{yy}\dot{\omega}_y+I_{yz}\dot{\omega}_z)\omega_y+(I_{xz}\dot{\omega}_x+I_{yz}\dot{\omega}_y+I_{zz}\dot{\omega}_z)\omega_z.
+\end{align}\]</span> Comparing this term by term with the expression for <span class="math inline">\({\bf H}^C\cdot\dot{\bomega}\)</span> above, and using the symmetry of the inertia tensor (<span class="math inline">\(I_{xy}=I_{yx}\)</span>, <span class="math inline">\(I_{xz}=I_{zx}\)</span>, <span class="math inline">\(I_{yz}=I_{zy}\)</span>), every term matches (e.g.&nbsp;<span class="math inline">\(I_{xy}\dot{\omega}_x\omega_y = I_{xy}\omega_x\dot{\omega}_y\)</span>). Hence <span class="math inline">\(\dot{\bf H}^C\cdot\bomega = {\bf H}^C\cdot\dot{\bomega}\)</span>. Consequently, <span class="math display">\[\begin{align}
+    \dot{T} = \frac{1}{2}m\dot{\bf v}_C\cdot{\bf v}_C+\frac{1}{2}m{\bf v}_C\cdot\dot{\bf v}_C+\frac{1}{2}\dot{\bf H}^C\cdot\bomega+\frac{1}{2}\dot{\bf H}^C\cdot\bomega,
+\end{align}\]</span> which implies that <span class="math display">\[\begin{align}
     \dot{T} = m\dot{\bf v}_C\cdot{\bf v}_C+\dot{\bf H}^C\cdot\bomega.
-\end{align}\]</span> Invoking the BoLM and BoAM: <span class="math display">\[\begin{align}
+\end{align}\]</span> Invoking the balance of linear momentum and the balance of angular momentum, we obtain the work-energy theorem: <span class="math display">\[\begin{align}
     \dot{T} = {\bf F}\cdot{\bf v}_C+{\bf M}^C\cdot\bomega.
-\end{align}\]</span></p>
+\end{align}\]</span> This is a natural extension of the work-energy theorem for a single particle.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/vCROTYHJRow" title="Deriving the work–energy theorem for a rigid body" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="alternative-form" class="level2" data-number="21.3">
 <h2 data-number="21.3" class="anchored" data-anchor-id="alternative-form"><span class="header-section-number">21.3</span> Alternative Form</h2>
-<p>Using <span class="math inline">\({\bf F} = \sum_i{\bf F}_i\)</span> and <span class="math inline">\({\bf M}^C = {\bf M}_e+\sum_i({\bf r}_i-{\bf r}_C)\times{\bf F}_i\)</span>, and noting that <span class="math inline">\({\bf v}_i = {\bf v}_C+\bomega\times({\bf r}_i-{\bf r}_C)\)</span>: <span class="math display">\[\begin{align}
+<p>Recall, <span class="math display">\[\begin{align}
+    \begin{split}
+        &amp; {\bf F} = \sum_{i=1}^K{\bf F}_i\\
+        &amp; {\bf M}^C = {\bf M}_e+\sum_{i=1}^K({\bf r}_i-{\bf r}_C)\times{\bf F}_i
+    \end{split}
+\end{align}\]</span> Hence, the mechanical power of the resultant forces and moments can be written as <span class="math display">\[\begin{align}
+    {\bf F}\cdot{\bf v}_C+{\bf M}^C\cdot\bomega = \lp\sum_{i=1}^K{\bf F}_i\rp\cdot{\bf v}_C+{\bf M}_e\cdot\bomega+\lp\sum_{i=1}^K({\bf r}_i-{\bf r}_C)\times{\bf F}_i\rp\cdot\bomega.
+\end{align}\]</span> With <span class="math inline">\({\bf a}=\bomega\)</span>, <span class="math inline">\({\bf b}={\bf r}_i-{\bf r}_C\)</span>, <span class="math inline">\({\bf c}={\bf F}_i\)</span>, the identity <span class="math inline">\({\bf a}\cdot({\bf b}\times{\bf c}) = {\bf c}\cdot({\bf a}\times{\bf b})\)</span> gives <span class="math display">\[\begin{align}
+    \lp({\bf r}_i-{\bf r}_C)\times{\bf F}_i\rp\cdot\bomega = \bomega\cdot\lp({\bf r}_i-{\bf r}_C)\times{\bf F}_i\rp = {\bf F}_i\cdot\lp\bomega\times({\bf r}_i-{\bf r}_C)\rp.
+\end{align}\]</span> Substituting this into the expression for <span class="math inline">\({\bf F}\cdot{\bf v}_C+{\bf M}^C\cdot\bomega\)</span> above: <span class="math display">\[\begin{align}
+    {\bf F}\cdot{\bf v}_C+{\bf M}^C\cdot\bomega = \sum_{i=1}^K{\bf F}_i\cdot{\bf v}_C+{\bf M}_e\cdot\bomega+\sum_{i=1}^K{\bf F}_i\cdot\lp\bomega\times({\bf r}_i-{\bf r}_C)\rp = \sum_{i=1}^K{\bf F}_i\cdot\lp{\bf v}_C+\bomega\times({\bf r}_i-{\bf r}_C)\rp+{\bf M}_e\cdot\bomega.
+\end{align}\]</span> Noting that <span class="math inline">\({\bf v}_i = {\bf v}_C+\bomega\times({\bf r}_i-{\bf r}_C)\)</span>, we find that <span class="math display">\[\begin{align}
+    {\bf F}\cdot{\bf v}_C+{\bf M}^C\cdot\bomega = \sum_{i=1}^K{\bf F}_i\cdot{\bf v}_i+{\bf M}_e\cdot\bomega.
+\end{align}\]</span> In conclusion, we have an alternative form of the work-energy theorem that proves to be far easier to use in applications: <span class="math display">\[\begin{align}
     \dot{T} = \sum_{i=1}^K{\bf F}_i\cdot{\bf v}_i+{\bf M}_e\cdot\bomega.
-\end{align}\]</span> This form is often easier to use in applications: each force is dotted with the velocity of its point of application.</p>
+\end{align}\]</span> Each force is dotted with the velocity of its point of application.</p>
 </section>
 <section id="conservative-moments" class="level2" data-number="21.4">
 <h2 data-number="21.4" class="anchored" data-anchor-id="conservative-moments"><span class="header-section-number">21.4</span> Conservative Moments</h2>
