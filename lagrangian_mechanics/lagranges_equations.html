@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>24&nbsp; Lagrange’s Equations of Motion for a System of Particles</title>
+<title>23&nbsp; Lagrange’s Equations of Motion for a System of Particles</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lagrangian_mechanics/examples_and_applications.html" rel="next">
-<link href="../lagrangian_mechanics/generalized_coordinates.html" rel="prev">
+<link href="../references.html" rel="next">
+<link href="../rigid_body_dynamics/systems_of_particles_and_rigid_bodies.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -134,7 +134,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lagrangian_mechanics/generalized_coordinates.html">Lagrangian Mechanics</a></li><li class="breadcrumb-item"><a href="../lagrangian_mechanics/lagranges_equations.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lagrange’s Equations of Motion for a System of Particles</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lagrangian_mechanics/lagranges_equations.html">Lagrangian Mechanics</a></li><li class="breadcrumb-item"><a href="../lagrangian_mechanics/lagranges_equations.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lagrange’s Equations of Motion for a System of Particles</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -347,20 +347,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lagrangian_mechanics/generalized_coordinates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Generalized Coordinates and Virtual Work</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../lagrangian_mechanics/lagranges_equations.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lagrange’s Equations of Motion for a System of Particles</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lagrangian_mechanics/examples_and_applications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Applications of Lagrange’s Equations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lagrange’s Equations of Motion for a System of Particles</span></span></a>
   </div>
 </li>
       </ul>
@@ -383,13 +371,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/conservative_forces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Mathematical Background for Conservative Forces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Mathematical Background for Conservative Forces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/sets_linear_function_spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Sets and Linear Function Spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Sets and Linear Function Spaces</span></span></a>
   </div>
 </li>
       </ul>
@@ -404,31 +392,32 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#constraints" id="toc-constraints" class="nav-link active" data-scroll-target="#constraints"><span class="header-section-number">24.1</span> Constraints</a></li>
-  <li><a href="#lagranges-prescription-on-constraints" id="toc-lagranges-prescription-on-constraints" class="nav-link" data-scroll-target="#lagranges-prescription-on-constraints"><span class="header-section-number">24.2</span> Lagrange’s Prescription on Constraints</a></li>
-  <li><a href="#unconstrained-equations" id="toc-unconstrained-equations" class="nav-link" data-scroll-target="#unconstrained-equations"><span class="header-section-number">24.3</span> Unconstrained Equations</a>
+  <li><a href="#constraints" id="toc-constraints" class="nav-link active" data-scroll-target="#constraints"><span class="header-section-number">23.1</span> Constraints</a></li>
+  <li><a href="#lagranges-prescription-on-constraints" id="toc-lagranges-prescription-on-constraints" class="nav-link" data-scroll-target="#lagranges-prescription-on-constraints"><span class="header-section-number">23.2</span> Lagrange’s Prescription on Constraints</a></li>
+  <li><a href="#unconstrained-equations" id="toc-unconstrained-equations" class="nav-link" data-scroll-target="#unconstrained-equations"><span class="header-section-number">23.3</span> Unconstrained Equations</a>
   <ul class="collapse">
-  <li><a href="#advantage-of-lagranges-equations" id="toc-advantage-of-lagranges-equations" class="nav-link" data-scroll-target="#advantage-of-lagranges-equations"><span class="header-section-number">24.3.1</span> Advantage of Lagrange’s Equations</a></li>
+  <li><a href="#advantage-of-lagranges-equations" id="toc-advantage-of-lagranges-equations" class="nav-link" data-scroll-target="#advantage-of-lagranges-equations"><span class="header-section-number">23.3.1</span> Advantage of Lagrange’s Equations</a></li>
   </ul></li>
-  <li><a href="#constrained-equations" id="toc-constrained-equations" class="nav-link" data-scroll-target="#constrained-equations"><span class="header-section-number">24.4</span> Constrained Equations</a></li>
-  <li><a href="#example-simple-harmonic-oscillator" id="toc-example-simple-harmonic-oscillator" class="nav-link" data-scroll-target="#example-simple-harmonic-oscillator"><span class="header-section-number">24.5</span> Example: Simple Harmonic Oscillator</a></li>
-  <li><a href="#example-simple-pendulum" id="toc-example-simple-pendulum" class="nav-link" data-scroll-target="#example-simple-pendulum"><span class="header-section-number">24.6</span> Example: Simple Pendulum</a></li>
-  <li><a href="#example-double-pendulum" id="toc-example-double-pendulum" class="nav-link" data-scroll-target="#example-double-pendulum"><span class="header-section-number">24.7</span> Example: Double Pendulum</a></li>
-  <li><a href="#alternative-principles-of-dynamics" id="toc-alternative-principles-of-dynamics" class="nav-link" data-scroll-target="#alternative-principles-of-dynamics"><span class="header-section-number">24.8</span> Alternative Principles of Dynamics</a>
+  <li><a href="#constrained-equations" id="toc-constrained-equations" class="nav-link" data-scroll-target="#constrained-equations"><span class="header-section-number">23.4</span> Constrained Equations</a></li>
+  <li><a href="#example-simple-harmonic-oscillator" id="toc-example-simple-harmonic-oscillator" class="nav-link" data-scroll-target="#example-simple-harmonic-oscillator"><span class="header-section-number">23.5</span> Example: Simple Harmonic Oscillator</a></li>
+  <li><a href="#example-simple-pendulum" id="toc-example-simple-pendulum" class="nav-link" data-scroll-target="#example-simple-pendulum"><span class="header-section-number">23.6</span> Example: Simple Pendulum</a></li>
+  <li><a href="#example-double-pendulum" id="toc-example-double-pendulum" class="nav-link" data-scroll-target="#example-double-pendulum"><span class="header-section-number">23.7</span> Example: Double Pendulum</a></li>
+  <li><a href="#alternative-principles-of-dynamics" id="toc-alternative-principles-of-dynamics" class="nav-link" data-scroll-target="#alternative-principles-of-dynamics"><span class="header-section-number">23.8</span> Alternative Principles of Dynamics</a>
   <ul class="collapse">
-  <li><a href="#principle-of-virtual-work-and-dalemberts-principle" id="toc-principle-of-virtual-work-and-dalemberts-principle" class="nav-link" data-scroll-target="#principle-of-virtual-work-and-dalemberts-principle"><span class="header-section-number">24.8.1</span> Principle of Virtual Work and D’Alembert’s Principle</a></li>
-  <li><a href="#gauss-principle-of-least-action" id="toc-gauss-principle-of-least-action" class="nav-link" data-scroll-target="#gauss-principle-of-least-action"><span class="header-section-number">24.8.2</span> Gauss’ Principle of Least Action</a></li>
-  <li><a href="#hamiltons-principle" id="toc-hamiltons-principle" class="nav-link" data-scroll-target="#hamiltons-principle"><span class="header-section-number">24.8.3</span> Hamilton’s Principle</a></li>
+  <li><a href="#principle-of-virtual-work-and-dalemberts-principle" id="toc-principle-of-virtual-work-and-dalemberts-principle" class="nav-link" data-scroll-target="#principle-of-virtual-work-and-dalemberts-principle"><span class="header-section-number">23.8.1</span> Principle of Virtual Work and D’Alembert’s Principle</a></li>
+  <li><a href="#gauss-principle-of-least-action" id="toc-gauss-principle-of-least-action" class="nav-link" data-scroll-target="#gauss-principle-of-least-action"><span class="header-section-number">23.8.2</span> Gauss’ Principle of Least Action</a></li>
+  <li><a href="#hamiltons-principle" id="toc-hamiltons-principle" class="nav-link" data-scroll-target="#hamiltons-principle"><span class="header-section-number">23.8.3</span> Hamilton’s Principle</a></li>
   </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">23.9</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lagrangian_mechanics/generalized_coordinates.html">Lagrangian Mechanics</a></li><li class="breadcrumb-item"><a href="../lagrangian_mechanics/lagranges_equations.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lagrange’s Equations of Motion for a System of Particles</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lagrangian_mechanics/lagranges_equations.html">Lagrangian Mechanics</a></li><li class="breadcrumb-item"><a href="../lagrangian_mechanics/lagranges_equations.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lagrange’s Equations of Motion for a System of Particles</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lagrange’s Equations of Motion for a System of Particles</span></h1>
+<h1 class="title"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lagrange’s Equations of Motion for a System of Particles</span></h1>
 </div>
 
 
@@ -445,51 +434,267 @@ window.Quarto = {
 </header>
 
 
-<section id="constraints" class="level2" data-number="24.1">
-<h2 data-number="24.1" class="anchored" data-anchor-id="constraints"><span class="header-section-number">24.1</span> Constraints</h2>
+<section id="constraints" class="level2" data-number="23.1">
+<h2 data-number="23.1" class="anchored" data-anchor-id="constraints"><span class="header-section-number">23.1</span> Constraints</h2>
 <p>Put in simple terms, a holonomic constraint is a constraint which can be written in terms of position coordinates, e.g.&nbsp;<span class="math inline">\(x=0\)</span>. A nonholonomic constraint is one which cannot be written in terms of position coordinates, e.g.&nbsp;<span class="math inline">\({\bf v}\cdot{\bf e}_\theta = 0\)</span>.</p>
-<p>There is a method, Frobenius’ integrability criteria, which may be used to determine if a constraint or a system of constraints is holonomic or not. The criterion is beyond the scope of the class. Here, we restrict our attention to holonomic constraints.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Question: Consider a particle constrained to move on a horizontal surface <span class="math inline">\(z=0\)</span>. Is this constraint holonomic?</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>…</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Question: Consider two particles connected by a rigid massless rod of length <span class="math inline">\(\ell\)</span>. What constraint is this system of two particles subject to? Is this constraint holonomic or nonholonomic?</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>…</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Question: Consider the system in the previous question where <span class="math inline">\(m_2\)</span> is subject to a knife-edge constraint <span class="math inline">\({\bf v}_2\cdot{\bf e}_2=0\)</span>. Is this constraint holonomic or nonholonomic.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lagranges_equations_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>…</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Frobenius’ integrability criteria may be used to determine definitely if a constraint or a system of constraints is holonomic or not. The criterion is beyond the scope of the class. Here, we restrict our attention to holonomic constraints.</p>
 </section>
-<section id="lagranges-prescription-on-constraints" class="level2" data-number="24.2">
-<h2 data-number="24.2" class="anchored" data-anchor-id="lagranges-prescription-on-constraints"><span class="header-section-number">24.2</span> Lagrange’s Prescription on Constraints</h2>
+<section id="lagranges-prescription-on-constraints" class="level2" data-number="23.2">
+<h2 data-number="23.2" class="anchored" data-anchor-id="lagranges-prescription-on-constraints"><span class="header-section-number">23.2</span> Lagrange’s Prescription on Constraints</h2>
 <p>Consider a constraint of the form <span class="math display">\[\begin{align*}
     {\bf f}_1\cdot{\bf v}_1+\hdots+{\bf f}_N\cdot{\bf v}_N + e = 0,
 \end{align*}\]</span> then the associated Lagrange prescription of the constraint force is <span class="math inline">\(\mu{\bf f}_K\)</span> applied at particle <span class="math inline">\(K\)</span>, <span class="math inline">\(K=1,\hdots,n\)</span>.</p>
-<p><em>Example:</em> A particle constrained on a plane <span class="math inline">\(z = 0\)</span>. This constraint may be written as <span class="math inline">\({\bf v}\cdot{\bf E}_z = 0\)</span> and the constraint force acting on the particle is <span class="math inline">\({\bf F} = \mu{\bf E}_z.\)</span></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Question: Prescribe the constraint force for a particle constrained on a plane <span class="math inline">\(z = 0\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This constraint may be written as <span class="math inline">\({\bf v}\cdot{\bf E}_z = 0\)</span> and the constraint force acting on the particle is <span class="math inline">\({\bf F} = \mu{\bf E}_z.\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Question: Prescribe the constraint force acting on a simple pendulum associated with the constraint that the length of the pendulum is constant.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>A simple pendulum has the constraint <span class="math inline">\({\bf r} = 0\)</span> which may be written as <span class="math inline">\({\bf v}\cdot{\bf e}_r = 0\)</span>, then the constraint force acting on the particle is <span class="math inline">\({\bf F} = \mu{\bf e}_r\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="unconstrained-equations" class="level2" data-number="24.3">
-<h2 data-number="24.3" class="anchored" data-anchor-id="unconstrained-equations"><span class="header-section-number">24.3</span> Unconstrained Equations</h2>
-<p>Consider a system of <span class="math inline">\(n\)</span> particles with <span class="math inline">\(3n\)</span> degrees of freedom. The generalized coordinates of the system may be listed as <span class="math display">\[\begin{align}
+<section id="unconstrained-equations" class="level2" data-number="23.3">
+<h2 data-number="23.3" class="anchored" data-anchor-id="unconstrained-equations"><span class="header-section-number">23.3</span> Unconstrained Equations</h2>
+<p>Consider a system of <span class="math inline">\(n\)</span> particles with <span class="math inline">\(3n\)</span> coordinates. The system is subject to <span class="math inline">\(m\)</span> holonomic constraints, so the number of degrees of freedom of the system is <span class="math inline">\(3n-m\)</span>. The generalized coordinates of the system may be listed as <span class="math display">\[\begin{align}
     q =
     \begin{bmatrix}
         x^1 &amp; y^1 &amp; z^1 &amp; \cdots &amp; x^n &amp; y^n &amp; z^n
     \end{bmatrix}^T
-\end{align}\]</span> and their derivatives may be written as <span class="math display">\[\begin{align}
+\end{align}\]</span> and the corresponding generalized velocities are <span class="math display">\[\begin{align}
     u =
     \begin{bmatrix}
         v^{x1} &amp; v^{y1} &amp; v^{z1} &amp; \cdots &amp; v^{xn} &amp; v^{yn} &amp; v^{zn}
     \end{bmatrix}^T
-\end{align}\]</span> and the kinetic energy of the system is <span class="math inline">\(T\)</span>, then Lagrange’s equations of motion of the system are <span class="math display">\[\begin{align}
-    \frac{d}{dt}\lp\frac{\partial T}{\partial u^i}\rp-\frac{\partial T}{\partial q^i} = {\bf F}\cdot{\bf a}_i
+\end{align}\]</span> We define <span class="math inline">\(u\)</span> so that later we set <span class="math inline">\(u = \dot{q}\)</span>.</p>
+<p>We arrange the generalized coordinates such that the first <span class="math inline">\(3n-m\)</span> coordinates are the unconstrained degrees of freedom and the last <span class="math inline">\(m\)</span> coordinates are equal to the holonomic constraints, and can be later set to zero.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Question: Generalized coordinates for simple harmonic oscillator.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(q = [x\ y\ z]\)</span>, <span class="math inline">\(u = [v_x\ v_y\ v_z]\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Question: Generalized coordinates for simple pendulum.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(q = [\theta\ \beta\ z]\)</span>, <span class="math inline">\(u = [u_\theta\ u_\beta\ u_z]\)</span> where <span class="math inline">\(\beta = r-\ell\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The kinetic energy of the system is <span class="math inline">\(T\)</span>, then Lagrange’s equations of motion of the system are <span class="math display">\[\begin{align}
+    \frac{d}{dt}\lp\frac{\partial T}{\partial u^i}\rp-\frac{\partial T}{\partial q^i} = \sum_{K=1}^n{\bf F}^K\cdot \frac{\partial {\bf r}^K}{\partial q^i}
 \end{align}\]</span> Equivalently, using the Lagrangian <span class="math inline">\(L = T-U\)</span>, where <span class="math inline">\(U\)</span> is the potential energy, the equations of motion of the system may be written as <span class="math display">\[\begin{align}
-    \frac{d}{dt}\lp\frac{\partial L}{\partial u^i}\rp-\frac{\partial L}{\partial q^i} = {\bf F}_{nconc}\cdot{\bf a}_i.
-\end{align}\]</span> <span class="math inline">\({\bf a}_i = \dfrac{\partial {\bf r}}{\partial q^i}\)</span></p>
-<section id="advantage-of-lagranges-equations" class="level3" data-number="24.3.1">
-<h3 data-number="24.3.1" class="anchored" data-anchor-id="advantage-of-lagranges-equations"><span class="header-section-number">24.3.1</span> Advantage of Lagrange’s Equations</h3>
+    \frac{d}{dt}\lp\frac{\partial L}{\partial u^i}\rp-\frac{\partial L}{\partial q^i} = \sum_{K=1}^n{\bf F}_{nonc}^K\cdot \frac{\partial {\bf r}^K}{\partial q^i}
+\end{align}\]</span> where <span class="math inline">\({\bf F}^K\)</span> is the sum of external forces acting on particle <span class="math inline">\(K\)</span> while <span class="math inline">\({\bf F}_{nonc}^K\)</span> is the sum of nonconservative forces acting on <span class="math inline">\(K\)</span>.</p>
+<section id="advantage-of-lagranges-equations" class="level3" data-number="23.3.1">
+<h3 data-number="23.3.1" class="anchored" data-anchor-id="advantage-of-lagranges-equations"><span class="header-section-number">23.3.1</span> Advantage of Lagrange’s Equations</h3>
 <p>If the system is subject to <span class="math inline">\(m\)</span> holonomic constraints, if you choose the last <span class="math inline">\(m\)</span> generalized coordinates to be equal to the constraints, then the first <span class="math inline">\(m-n\)</span> Lagrange’s equations of motion will be uncoupled from the holonomic constraint forces, these are the equations of motion. The last <span class="math inline">\(n-m\)</span> equations can be solved for the holonomic constraint forces. If one does not wish to solve for these forces, one can just use the constrained kinetic energy.</p>
 </section>
 </section>
-<section id="constrained-equations" class="level2" data-number="24.4">
-<h2 data-number="24.4" class="anchored" data-anchor-id="constrained-equations"><span class="header-section-number">24.4</span> Constrained Equations</h2>
+<section id="constrained-equations" class="level2" data-number="23.4">
+<h2 data-number="23.4" class="anchored" data-anchor-id="constrained-equations"><span class="header-section-number">23.4</span> Constrained Equations</h2>
 <p>Consider a system of <span class="math inline">\(n\)</span> particles with <span class="math inline">\(3n\)</span> degrees of freedom and <span class="math inline">\(m\)</span> holonomic constraints prescribed using Lagrange’s equations of motion. The unconstrained degrees of freedom of the system are arranged in an array of generalized coordinates <span class="math inline">\(q\)</span> and generalized velocities <span class="math inline">\(u\)</span>, and the constrained kinetic energy of the system is <span class="math inline">\(\tilde{T}\)</span>, then Lagrange’s equations of motion of the system are <span class="math display">\[\begin{align}
     \frac{d}{dt}\lp\frac{\partial \tilde{T}}{\partial u^i}\rp-\frac{\partial \tilde{T}}{\partial q^i} = {\bf F}\cdot{\bf a}_i.
 \end{align}\]</span> Equivalently, using the constrained Lagrangian <span class="math inline">\(\tilde{L} = \tilde{T}-\tilde{U}\)</span>, where <span class="math inline">\(\tilde{U}\)</span> is the constrained potential energy, the equations of motion of the system may be written as <span class="math display">\[\begin{align}
     \frac{d}{dt}\lp\frac{\partial \tilde{L}}{\partial u^i}\rp-\frac{\partial \tilde{L}}{\partial q^i} = {\bf F}_{nconc}\cdot{\bf a}_i.
-\end{align}\]</span> If the forces are prescribed with Lagrange’s prescription, <span class="math inline">\({\bf F}\cdot{\bf a}_i = 0\)</span></p>
+\end{align}\]</span> If the forces are prescribed with Lagrange’s prescription, then <span class="math inline">\({\bf F}\cdot{\bf a}_i\)</span> and <span class="math inline">\({\bf F}_{nconc}\cdot{\bf a}_i\)</span> reduce to <span class="math inline">\({\bf F}_{applied}\cdot{\bf a}_i\)</span> and <span class="math inline">\({\bf F}_{applied, nconc}\cdot{\bf a}_i\)</span> respectively, that is the applied forces and the nonconservative applied forces.</p>
+<p>In many cases, the nonconservative applied forces are zero, hence the commonly known homogeneous form of Lagrange’s equation <span class="math display">\[\begin{align}
+    \frac{d}{dt}\lp\frac{\partial \tilde{L}}{\partial u^i}\rp-\frac{\partial \tilde{L}}{\partial q^i} = 0.
+\end{align}\]</span></p>
 </section>
-<section id="example-simple-harmonic-oscillator" class="level2" data-number="24.5">
-<h2 data-number="24.5" class="anchored" data-anchor-id="example-simple-harmonic-oscillator"><span class="header-section-number">24.5</span> Example: Simple Harmonic Oscillator</h2>
+<section id="example-simple-harmonic-oscillator" class="level2" data-number="23.5">
+<h2 data-number="23.5" class="anchored" data-anchor-id="example-simple-harmonic-oscillator"><span class="header-section-number">23.5</span> Example: Simple Harmonic Oscillator</h2>
+<p>Consider a simple harmonic oscillator of mass <span class="math inline">\(m\)</span> connected to a linear spring of unstretched length <span class="math inline">\(\ell_0\)</span> and stiffness <span class="math inline">\(k\)</span>. The origin is taken at the location of <span class="math inline">\(m\)</span> when the spring is unstretched so that the position vector of <span class="math inline">\(m\)</span> is <span class="math inline">\({\bf r} = x{\bf E}_x\)</span> and <span class="math inline">\(x\)</span> denotes the stretch of the spring. The velocity of <span class="math inline">\(m\)</span> is <span class="math inline">\({\bf v} = v{\bf E}_x\)</span>. Find the equation of motion of the mass <span class="math inline">\(m\)</span>.</p>
 <p>Using unconstrained Lagrangian: <span class="math display">\[\begin{align}
     \begin{split}
         &amp; q^1 = x,\qquad q^2 = y, \qquad q^3 = z,\\
@@ -504,11 +709,10 @@ window.Quarto = {
     \end{split}
 \end{align}\]</span></p>
 <p>Using constrained Lagrangian:</p>
-<p>Consider a simple harmonic oscillator of mass <span class="math inline">\(m\)</span> connected to a linear spring of unstretched length <span class="math inline">\(\ell_0\)</span> and stiffness <span class="math inline">\(k\)</span>. The origin is taken at the location of <span class="math inline">\(m\)</span> when the spring is unstretched so that the position vector of <span class="math inline">\(m\)</span> is <span class="math inline">\({\bf r} = x{\bf E}_x\)</span> and <span class="math inline">\(x\)</span> denotes the stretch of the spring. The velocity of <span class="math inline">\(m\)</span> is <span class="math inline">\({\bf v} = v{\bf E}_x\)</span></p>
 <p>The kinetic energy of the spring is <span class="math inline">\(\tilde{T} = \frac{1}{2}v^2\)</span> and potential energy is <span class="math inline">\(\tilde{U} = \frac{1}{2}kx^2\)</span>, thus the Lagrangian is <span class="math inline">\(\tilde{L} = \frac{1}{2}v^2-\frac{1}{2}kx^2\)</span>. Here, <span class="math inline">\(m\)</span> has one degree of freedom, so <span class="math inline">\(q = [x]\)</span> and <span class="math inline">\(u = [v]\)</span>, so the equation of motion of the system is obtained …</p>
 </section>
-<section id="example-simple-pendulum" class="level2" data-number="24.6">
-<h2 data-number="24.6" class="anchored" data-anchor-id="example-simple-pendulum"><span class="header-section-number">24.6</span> Example: Simple Pendulum</h2>
+<section id="example-simple-pendulum" class="level2" data-number="23.6">
+<h2 data-number="23.6" class="anchored" data-anchor-id="example-simple-pendulum"><span class="header-section-number">23.6</span> Example: Simple Pendulum</h2>
 <p><span class="math display">\[\begin{align}
     \begin{split}
         {\bf r} &amp;= \ell{\bf e}_x,\\
@@ -516,8 +720,8 @@ window.Quarto = {
     \end{split}
 \end{align}\]</span> Gravitational potential energy</p>
 </section>
-<section id="example-double-pendulum" class="level2" data-number="24.7">
-<h2 data-number="24.7" class="anchored" data-anchor-id="example-double-pendulum"><span class="header-section-number">24.7</span> Example: Double Pendulum</h2>
+<section id="example-double-pendulum" class="level2" data-number="23.7">
+<h2 data-number="23.7" class="anchored" data-anchor-id="example-double-pendulum"><span class="header-section-number">23.7</span> Example: Double Pendulum</h2>
 <p><span class="math display">\[\begin{align}
     \begin{split}
         {\bf r}_1 &amp;= \ell_1\,{}_{1}{\bf e}_x,\\
@@ -527,8 +731,8 @@ window.Quarto = {
     \end{split}
 \end{align}\]</span> Gravitational potential energy</p>
 </section>
-<section id="alternative-principles-of-dynamics" class="level2" data-number="24.8">
-<h2 data-number="24.8" class="anchored" data-anchor-id="alternative-principles-of-dynamics"><span class="header-section-number">24.8</span> Alternative Principles of Dynamics</h2>
+<section id="alternative-principles-of-dynamics" class="level2" data-number="23.8">
+<h2 data-number="23.8" class="anchored" data-anchor-id="alternative-principles-of-dynamics"><span class="header-section-number">23.8</span> Alternative Principles of Dynamics</h2>
 <p>Source: O’Reilly’s textbook on Intermediate Dynamics, second edition, Section 4.12</p>
 <ul>
 <li>Jean Bernoulli’s principle of virtual work (1717) - for statics</li>
@@ -536,8 +740,8 @@ window.Quarto = {
 <li>Gauss’ principle of least constraint (1829)</li>
 <li>Hamilton’s principle (1835)</li>
 </ul>
-<section id="principle-of-virtual-work-and-dalemberts-principle" class="level3" data-number="24.8.1">
-<h3 data-number="24.8.1" class="anchored" data-anchor-id="principle-of-virtual-work-and-dalemberts-principle"><span class="header-section-number">24.8.1</span> Principle of Virtual Work and D’Alembert’s Principle</h3>
+<section id="principle-of-virtual-work-and-dalemberts-principle" class="level3" data-number="23.8.1">
+<h3 data-number="23.8.1" class="anchored" data-anchor-id="principle-of-virtual-work-and-dalemberts-principle"><span class="header-section-number">23.8.1</span> Principle of Virtual Work and D’Alembert’s Principle</h3>
 <p>Consider the principle of virtual work and D’Alembert’s Principle applied to a system of particles. We assume that the particles are subject to a single constraint: <span class="math display">\[\begin{align*}
     {\bf f}_1\cdot{\bf v}_1+\hdots+{\bf f}_N\cdot{\bf v}_N + e = 0.
 \end{align*}\]</span> The principle of virtual work and D’Alembert’s principle collectively state that the motion of the system of particles is such that the following equation is satisfied: <span class="math display">\[\begin{align}
@@ -564,14 +768,14 @@ window.Quarto = {
     \end{split}
 \end{align}\]</span></p>
 </section>
-<section id="gauss-principle-of-least-action" class="level3" data-number="24.8.2">
-<h3 data-number="24.8.2" class="anchored" data-anchor-id="gauss-principle-of-least-action"><span class="header-section-number">24.8.2</span> Gauss’ Principle of Least Action</h3>
+<section id="gauss-principle-of-least-action" class="level3" data-number="23.8.2">
+<h3 data-number="23.8.2" class="anchored" data-anchor-id="gauss-principle-of-least-action"><span class="header-section-number">23.8.2</span> Gauss’ Principle of Least Action</h3>
 <p>Suppose we have a system of <span class="math inline">\(N\)</span> particles that are subject to the constraint <span class="math display">\[\begin{align*}
     {\bf f}_1\cdot{\bf v}_1+\hdots+{\bf f}_N\cdot{\bf v}_N + e = 0.
 \end{align*}\]</span> and suppose that the constraint forces are prescribed by using Lagrange’s prescription <span class="math inline">\({\bf F}_{cK} = \mu{\bf f}_K\)</span>, <span class="math inline">\((K=1,\hdots,N)\)</span>. Then, in any motion of the system that satisfies the constraint, the constraint forces <span class="math inline">\({\bf F}_{cK} = \mu{\bf f}_K\)</span> are the least needed to ensure that the constraint is satisfied. That is, Lagrange’s prescription is in a sense optimal!</p>
 </section>
-<section id="hamiltons-principle" class="level3" data-number="24.8.3">
-<h3 data-number="24.8.3" class="anchored" data-anchor-id="hamiltons-principle"><span class="header-section-number">24.8.3</span> Hamilton’s Principle</h3>
+<section id="hamiltons-principle" class="level3" data-number="23.8.3">
+<h3 data-number="23.8.3" class="anchored" data-anchor-id="hamiltons-principle"><span class="header-section-number">23.8.3</span> Hamilton’s Principle</h3>
 <p>For ease of exposition, we restrict our discussion to a single particle of mass <span class="math inline">\(m\)</span> and suppose that the coordinates <span class="math inline">\(q = (q^1,q^2,q^2)\)</span> are used to parametrize the position vector. Hamilton’s principle states that the motion of the system between a given initial configuration <span class="math inline">\(q(t_0)\)</span> and a given final configuration <span class="math inline">\(q(t_1)\)</span> is such that it extremizes the integral: <span class="math display">\[\begin{align}
     \begin{split}
         I = \int_{t_0}^{t_1}Ldt
@@ -585,14 +789,27 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="lagranges_equations_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="432"></p>
+<p><img src="lagranges_equations_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="432"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="exercises" class="level2" data-number="23.9">
+<h2 data-number="23.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">23.9</span> Exercises</h2>
+<p>Double pendulum</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lagranges_equations_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -998,13 +1215,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lagrangian_mechanics/generalized_coordinates.html" class="pagination-link" aria-label="Generalized Coordinates and Virtual Work">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Generalized Coordinates and Virtual Work</span></span>
+      <a href="../rigid_body_dynamics/systems_of_particles_and_rigid_bodies.html" class="pagination-link" aria-label="Systems of Particles and Rigid Bodies">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Systems of Particles and Rigid Bodies</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lagrangian_mechanics/examples_and_applications.html" class="pagination-link" aria-label="Applications of Lagrange's Equations">
-        <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Applications of Lagrange’s Equations</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../references.html" class="pagination-link" aria-label="MECH230 Dynamics Notes">
+        <span class="nav-page-text">MECH230 Dynamics Notes</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
