@@ -1,123 +1,241 @@
 ---
-title: "Lagrange's Equations"
+title: "Lagrange's Equations of Motion for a System of Particles"
 ---
 
-## D'Alembert's Principle
+## Constraints
 
-Newton's second law for particle $i$ is ${\bf F}_i^{\text{tot}} = m_i{\bf a}_i$, where ${\bf F}_i^{\text{tot}}$ includes both applied forces and constraint forces. Rearranging as ${\bf F}_i^{\text{tot}}-m_i{\bf a}_i={\bf 0}$ and dotting with a virtual displacement $\delta{\bf r}_i$, then summing over all particles:
-\begin{align}
-    \sum_{i=1}^N\lp{\bf F}_i^{\text{tot}}-m_i{\bf a}_i\rp\cdot\delta{\bf r}_i = 0.
-\end{align}
-Splitting ${\bf F}_i^{\text{tot}}$ into applied forces ${\bf F}_i$ and constraint forces ${\bf f}_i^c$, and restricting attention to **workless constraints** (rigid smooth guides, inextensible cables, ideal pins) for which $\sum_i{\bf f}_i^c\cdot\delta{\bf r}_i=0$ for every admissible $\delta{\bf r}_i$, we obtain **D'Alembert's principle**:
-\begin{align}
-    \sum_{i=1}^N\lp{\bf F}_i-m_i{\bf a}_i\rp\cdot\delta{\bf r}_i = 0 \qquad \text{for all admissible }\delta{\bf r}_i.
-\end{align}
-This is a virtual-work statement for *dynamics*: the applied forces, together with the fictitious "inertia force" $-m_i{\bf a}_i$, do zero virtual work. Unlike the static case, this holds identically (it is just Newton's law), not as a special condition.
+Put in simple terms, a holonomic constraint is a constraint which can be written in terms of position coordinates, e.g. $x=0$. A nonholonomic constraint is one which cannot be written in terms of position coordinates, e.g. ${\bf v}\cdot{\bf e}_\theta = 0$.
 
-## From D'Alembert's Principle to Lagrange's Equations
+There is a method, Frobenius' integrability criteria, which may be used to determine if a constraint or a system of constraints is holonomic or not. The criterion is beyond the scope of the class. Here, we restrict our attention to holonomic constraints.
 
-Substitute $\delta{\bf r}_i = \sum_j(\partial{\bf r}_i/\partial q_j)\delta q_j$ and use the independence of the $\delta q_j$. The applied-force term is exactly the virtual work from the previous lecture:
+## Lagrange's Prescription on Constraints
+
+Consider a constraint of the form
+\begin{align*}
+    {\bf f}_1\cdot{\bf v}_1+\hdots+{\bf f}_N\cdot{\bf v}_N + e = 0,
+\end{align*}
+then the associated Lagrange prescription of the constraint force is $\mu{\bf f}_K$ applied at particle $K$, $K=1,\hdots,n$.
+
+*Example:* A particle constrained on a plane $z = 0$. This constraint may be written as ${\bf v}\cdot{\bf E}_z = 0$ and the constraint force acting on the particle is ${\bf F} = \mu{\bf E}_z.$
+
+A simple pendulum has the constraint ${\bf r} = 0$ which may be written as ${\bf v}\cdot{\bf e}_r = 0$, then the constraint force acting on the particle is ${\bf F} = \mu{\bf e}_r$.
+
+## Unconstrained Equations
+
+Consider a system of $n$ particles with $3n$ degrees of freedom. The generalized coordinates of the system may be listed as
 \begin{align}
-    \sum_{i=1}^N{\bf F}_i\cdot\delta{\bf r}_i = \sum_{j=1}^n Q_j\,\delta q_j.
+    q =
+    \begin{bmatrix}
+        x^1 & y^1 & z^1 & \cdots & x^n & y^n & z^n
+    \end{bmatrix}^T
 \end{align}
-The inertia term requires more work:
+and their derivatives may be written as
 \begin{align}
-    \sum_{i=1}^N m_i{\bf a}_i\cdot\delta{\bf r}_i = \sum_{j=1}^n\lp\sum_{i=1}^N m_i{\bf a}_i\cdot\frac{\partial{\bf r}_i}{\partial q_j}\rp\delta q_j.
+    u =
+    \begin{bmatrix}
+        v^{x1} & v^{y1} & v^{z1} & \cdots & v^{xn} & v^{yn} & v^{zn}
+    \end{bmatrix}^T
 \end{align}
-Focus on the bracketed coefficient for a fixed $j$. Using the product rule,
+and the kinetic energy of the system is $T$, then Lagrange's equations of motion of the system are
 \begin{align}
-    m_i{\bf a}_i\cdot\frac{\partial{\bf r}_i}{\partial q_j} = \frac{d}{dt}\lp m_i{\bf v}_i\cdot\frac{\partial{\bf r}_i}{\partial q_j}\rp - m_i{\bf v}_i\cdot\frac{d}{dt}\lp\frac{\partial{\bf r}_i}{\partial q_j}\rp.
+    \frac{d}{dt}\lp\frac{\partial T}{\partial u^i}\rp-\frac{\partial T}{\partial q^i} = {\bf F}\cdot{\bf a}_i
 \end{align}
-Two identities, both proved by direct differentiation of ${\bf r}_i(q_1,\dots,q_n,t)$, close the derivation:
+Equivalently, using the Lagrangian $L = T-U$, where $U$ is the potential energy, the equations of motion of the system may be written as
 \begin{align}
-    \frac{\partial{\bf r}_i}{\partial q_j} = \frac{\partial{\bf v}_i}{\partial \dot q_j} \qquad\text{(cancellation of the dots, Lecture 38)},\qquad
-    \frac{d}{dt}\lp\frac{\partial{\bf r}_i}{\partial q_j}\rp = \frac{\partial {\bf v}_i}{\partial q_j}.
+    \frac{d}{dt}\lp\frac{\partial L}{\partial u^i}\rp-\frac{\partial L}{\partial q^i} = {\bf F}_{nconc}\cdot{\bf a}_i.
 \end{align}
-Substituting both identities:
+${\bf a}_i = \dfrac{\partial {\bf r}}{\partial q^i}$
+
+### Advantage of Lagrange's Equations
+
+If the system is subject to $m$ holonomic constraints, if you choose the last $m$ generalized coordinates to be equal to the constraints, then the first $m-n$ Lagrange's equations of motion will be uncoupled from the holonomic constraint forces, these are the equations of motion. The last $n-m$ equations can be solved for the holonomic constraint forces. If one does not wish to solve for these forces, one can just use the constrained kinetic energy.
+
+## Constrained Equations
+
+Consider a system of $n$ particles with $3n$ degrees of freedom and $m$ holonomic constraints prescribed using Lagrange's equations of motion. The unconstrained degrees of freedom of the system are arranged in an array of generalized coordinates $q$ and generalized velocities $u$, and the constrained kinetic energy of the system is $\tilde{T}$, then Lagrange's equations of motion of the system are
 \begin{align}
-    m_i{\bf a}_i\cdot\frac{\partial{\bf r}_i}{\partial q_j} = \frac{d}{dt}\lp m_i{\bf v}_i\cdot\frac{\partial{\bf v}_i}{\partial\dot q_j}\rp-m_i{\bf v}_i\cdot\frac{\partial{\bf v}_i}{\partial q_j}
-    = \frac{d}{dt}\lp\frac{\partial}{\partial\dot q_j}\lp\tfrac12 m_i{\bf v}_i\cdot{\bf v}_i\rp\rp-\frac{\partial}{\partial q_j}\lp\tfrac12 m_i{\bf v}_i\cdot{\bf v}_i\rp.
+    \frac{d}{dt}\lp\frac{\partial \tilde{T}}{\partial u^i}\rp-\frac{\partial \tilde{T}}{\partial q^i} = {\bf F}\cdot{\bf a}_i.
 \end{align}
-Summing over all particles and recognizing the total kinetic energy $T=\sum_i\tfrac12 m_i{\bf v}_i\cdot{\bf v}_i$:
+Equivalently, using the constrained Lagrangian $\tilde{L} = \tilde{T}-\tilde{U}$, where $\tilde{U}$ is the constrained potential energy, the equations of motion of the system may be written as
 \begin{align}
-    \sum_{i=1}^N m_i{\bf a}_i\cdot\frac{\partial{\bf r}_i}{\partial q_j} = \frac{d}{dt}\lp\frac{\partial T}{\partial\dot q_j}\rp-\frac{\partial T}{\partial q_j}.
+    \frac{d}{dt}\lp\frac{\partial \tilde{L}}{\partial u^i}\rp-\frac{\partial \tilde{L}}{\partial q^i} = {\bf F}_{nconc}\cdot{\bf a}_i.
+\end{align}
+If the forces are prescribed with Lagrange's prescription, ${\bf F}\cdot{\bf a}_i = 0$
+
+## Example: Simple Harmonic Oscillator
+
+Using unconstrained Lagrangian:
+\begin{align}
+    \begin{split}
+        & q^1 = x,\qquad q^2 = y, \qquad q^3 = z,\\
+        & u^1 = v_x,\qquad u^2 = v_y, \qquad u^3 = v_z,\\
+    \end{split}
+\end{align}
+Lagrangian
+\begin{align}
+    L = T-U  = \frac{m}{2}\lp v_x^2+v_y^2+v_z^2\rp-mgz
+\end{align}
+Constraint forces $\mu_1{\bf E}_y$, $\mu_2{\bf E}_z$.
+
+Equation along $z$,
+\begin{align}
+    \begin{split}
+        \dot{\bf v}_z+mg = \mu_2.
+    \end{split}
 \end{align}
 
-::: {.callout-important title="Lagrange's Equations"}
-D'Alembert's principle, $\sum_j\leb Q_j-\lp\frac{d}{dt}\frac{\partial T}{\partial\dot q_j}-\frac{\partial T}{\partial q_j}\rp\reb\delta q_j=0$, holds for arbitrary independent $\delta q_j$, so each bracket must vanish:
+Using constrained Lagrangian:
+
+Consider a simple harmonic oscillator of mass $m$ connected to a linear spring of unstretched length $\ell_0$ and stiffness $k$. The origin is taken at the location of $m$ when the spring is unstretched so that the position vector of $m$ is ${\bf r} = x{\bf E}_x$ and $x$ denotes the stretch of the spring. The velocity of $m$ is ${\bf v} = v{\bf E}_x$
+
+The kinetic energy of the spring is $\tilde{T} = \frac{1}{2}v^2$ and potential energy is $\tilde{U} = \frac{1}{2}kx^2$, thus the Lagrangian is $\tilde{L} = \frac{1}{2}v^2-\frac{1}{2}kx^2$. Here, $m$ has one degree of freedom, so $q = [x]$ and $u = [v]$, so the equation of motion of the system is obtained ...
+
+## Example: Simple Pendulum
+
 \begin{align}
-    \frac{d}{dt}\lp\frac{\partial T}{\partial\dot q_j}\rp-\frac{\partial T}{\partial q_j} = Q_j, \qquad j=1,\dots,n.
+    \begin{split}
+        {\bf r} &= \ell{\bf e}_x,\\
+        {\bf v} &= \ell\dot{\theta}{\bf e}_y
+    \end{split}
 \end{align}
-This is a set of $n$ second-order ODEs — exactly enough to determine the motion of an $n$-DOF system, and workless constraint forces never appear.
-:::
+Gravitational potential energy
 
-## Conservative Forces and the Lagrangian
+## Example: Double Pendulum
 
-If every applied force is conservative, $Q_j$ derives from a potential energy $U(q_1,\dots,q_n)$ (possibly $t$-dependent) via
 \begin{align}
-    Q_j = -\frac{\partial U}{\partial q_j}.
+    \begin{split}
+        {\bf r}_1 &= \ell_1\,{}_{1}{\bf e}_x,\\
+        {\bf v}_1 &= \ell_1\dot{\theta}_1\,{}_{1}{\bf e}_y,\\
+        {\bf r}_2 &= {\bf r}_1+\ell_2\,{}_{2}{\bf e}_x,\\
+        {\bf v}_2 &= {\bf v}_1+\ell_2\dot{\theta}_2\,{}_{2}{\bf e}_y
+    \end{split}
 \end{align}
-Since $U$ does not depend on $\dot q_j$, $\partial U/\partial\dot q_j = 0$, so we may move it inside the time-derivative term for free. Defining the **Lagrangian**
+Gravitational potential energy
+
+## Alternative Principles of Dynamics
+
+Source: O'Reilly's textbook on Intermediate Dynamics, second edition, Section 4.12
+
+- Jean Bernoulli's principle of virtual work (1717) - for statics
+- D'Alembert's principle (1743) - extension of the principle of virtual work for dynamics
+- Gauss' principle of least constraint (1829)
+- Hamilton's principle (1835)
+
+### Principle of Virtual Work and D'Alembert's Principle
+
+Consider the principle of virtual work and D'Alembert's Principle applied to a system of particles. We assume that the particles are subject to a single constraint:
+\begin{align*}
+    {\bf f}_1\cdot{\bf v}_1+\hdots+{\bf f}_N\cdot{\bf v}_N + e = 0.
+\end{align*}
+The principle of virtual work and D'Alembert's principle collectively state that the motion of the system of particles is such that the following equation is satisfied:
 \begin{align}
-    L(q,\dot q,t) \equiv T-U,
+    \begin{split}
+        \lp {\bf F}_{a1}-m_1\ddot{\bf r}_1\rp\cdot{\bf d}_1+\hdots+\lp {\bf F}_{aN}-m_N\ddot{\bf r}_N\rp\cdot{\bf d}_N = 0,
+    \end{split}
 \end{align}
-Lagrange's equations for a fully conservative system take their most compact form:
+for all possible choices of the vectors ${\bf d}_1, \hdots, {\bf d}_N$ that satisfy the condition
 \begin{align}
-    \boxed{\frac{d}{dt}\lp\frac{\partial L}{\partial\dot q_j}\rp-\frac{\partial L}{\partial q_j} = 0, \qquad j=1,\dots,n.}
+    \begin{split}
+        {\bf f}_1\cdot{\bf d}_1+\hdots+{\bf f}_N\cdot{\bf d}_N = 0.
+    \end{split}
 \end{align}
-If some forces are conservative (folded into $U$, hence into $L$) and others are not (springs with damping, applied external moments, friction), the general form is retained for the nonconservative part:
+The vectors ${\bf d}_K$ are known as the virtual displacements and are usually denoted by $\delta {\bf r}_K$. The virtual work performed by the applied force ${\bf F}_{ak}$ is defined as ${\bf F}_{ak}\cdot{\bf d}_K$; thus the equation above states that the combined virtual work of the applied forces ${\bf F}_{aK}$ and the inertial forces $-m_K\ddot{\bf r}_K$ is zero.
+
+How to obtain the equations of motion of the system of particles from the equation above?
+
+Introduce a Lagrange multiplier, which we denote by the scalar function $\mu = \mu(t)$, to accommodate the single constraint on the vectors ${\bf d}_K$:
 \begin{align}
-    \frac{d}{dt}\lp\frac{\partial L}{\partial\dot q_j}\rp-\frac{\partial L}{\partial q_j} = Q_j^{\text{nc}}, \qquad j=1,\dots,n.
+    \begin{split}
+        \sum_{K=1}^N\lp{\bf F}_{aK}-m\ddot{\bf r}_N\rp\cdot{\bf d}_K+\mu\sum_{K=1}^N{\bf f}_K\cdot{\bf d}_K = 0.
+    \end{split}
 \end{align}
-
-## Procedure
-
-::: {.callout-note title="Recipe"}
-1. Choose independent generalized coordinates $q_1,\dots,q_n$ equal in number to the DOF.
-2. Write position vectors ${\bf r}_i(q,t)$, differentiate to get ${\bf v}_i$, and form $T=\sum_i\tfrac12 m_i{\bf v}_i\cdot{\bf v}_i$ (for rigid bodies, use the Koenig decomposition from the rigid-body chapter).
-3. Identify the potential energy $U$ of all conservative forces and any remaining generalized forces $Q_j^{\text{nc}}$ from nonconservative forces (via virtual work, Lecture 38).
-4. Form $L=T-U$ and compute $\partial L/\partial\dot q_j$, then $\frac{d}{dt}(\cdot)$, then subtract $\partial L/\partial q_j$.
-5. Set the result equal to $Q_j^{\text{nc}}$ (zero if the system is fully conservative) for each $j$ to get the equations of motion.
-:::
-
-## Worked Example: Simple Pendulum, Revisited
-
-Return to the pendulum of the previous lecture, $q_1=\theta$. The velocity of the mass is ${\bf v}=\ell\dot\theta\,{\bf e}_\theta$, so
+As a consequence of the Lagrange multiplier $\mu$, the vectors ${\bf d}_K$ can be varied independently. For the previous equation to hold for all such displacements, it is necessary and sufficient that
 \begin{align}
-    T = \tfrac12 m\ell^2\dot\theta^2, \qquad U = -mg\ell\cos\theta \quad(\text{measuring from the pivot}).
+    \begin{split}
+        m_K\ddot{\bf r}_K = {\bf F}_{aK}+\mu{\bf f}_K \qquad (K=1,\hdots,N).
+    \end{split}
 \end{align}
-The Lagrangian is $L=T-U=\tfrac12 m\ell^2\dot\theta^2+mg\ell\cos\theta$. Then
+These equations are none other than the balances of linear momenta for a system of particles subject to the above constraint, for which the constraint forces are prescribed by use of Lagrange's prescription:
 \begin{align}
-    \frac{\partial L}{\partial\dot\theta} = m\ell^2\dot\theta, \qquad
-    \frac{d}{dt}\lp\frac{\partial L}{\partial\dot\theta}\rp = m\ell^2\ddot\theta, \qquad
-    \frac{\partial L}{\partial\theta} = -mg\ell\sin\theta.
+    \begin{split}
+        {\bf F}_{cK} = \mu{\bf f}_K\qquad (K=1,\dots,N).
+    \end{split}
 \end{align}
-Lagrange's equation gives
+
+### Gauss' Principle of Least Action
+
+Suppose we have a system of $N$ particles that are subject to the constraint
+\begin{align*}
+    {\bf f}_1\cdot{\bf v}_1+\hdots+{\bf f}_N\cdot{\bf v}_N + e = 0.
+\end{align*}
+and suppose that the constraint forces are prescribed by using Lagrange's prescription ${\bf F}_{cK} = \mu{\bf f}_K$, $(K=1,\hdots,N)$. Then, in any motion of the system that satisfies the constraint, the constraint forces ${\bf F}_{cK} = \mu{\bf f}_K$ are the least needed to ensure that the constraint is satisfied. That is, Lagrange's prescription is in a sense optimal!
+
+### Hamilton's Principle
+
+For ease of exposition, we restrict our discussion to a single particle of mass $m$ and suppose that the coordinates $q = (q^1,q^2,q^2)$ are used to parametrize the position vector. Hamilton's principle states that the motion of the system between a given initial configuration $q(t_0)$ and a given final configuration $q(t_1)$ is such that it extremizes the integral:
 \begin{align}
-    m\ell^2\ddot\theta+mg\ell\sin\theta = 0 \quad\Longleftrightarrow\quad \ddot\theta+\frac{g}{\ell}\sin\theta=0,
+    \begin{split}
+        I = \int_{t_0}^{t_1}Ldt
+    \end{split}
 \end{align}
-identical to the moment equation about the pivot obtained by Newton–Euler methods — but here it fell out of two scalar energy functions, with no free-body diagram and no pin reaction ever computed.
+where the Lagrangian $L = T(q^i,u^i)-U(q^i)$ and $t_0$ and $t_1$ are fixed instances of time.
 
-## Why This Works: A Comparison
+There are an infinite number of paths $q(t)$ that can connect two possible configurations, and so finding one that extremizes $I$ appears to be a daunting task.
 
-| | Newton–Euler | Lagrangian |
-|---|---|---|
-| Unknowns tracked | Positions, all forces (including constraints) | Generalized coordinates only |
-| Free-body diagrams | Required for every body | Not required |
-| Constraint forces | Must be solved for for or eliminated by hand | Never appear |
-| Vector/scalar | Vector equations | Scalar equations ($T$, $U$) |
-| Best suited to | Few bodies, forces of direct interest | Many DOF, complex constraints |
-
-Both methods produce the same equations of motion — they must, since Lagrange's equations were derived *from* Newton's second law. The Lagrangian approach simply automates the elimination of workless constraint forces that Newton–Euler methods require you to introduce and then cancel by hand.
-
-## Summary
-
-D'Alembert's principle, $\sum_i({\bf F}_i-m_i{\bf a}_i)\cdot\delta{\bf r}_i=0$, converts dynamics into a virtual-work statement. Expanding in generalized coordinates yields **Lagrange's equations**:
+The necessary conditions for the components of $q(t)$ to extremize $I$ are that $q(t)$ satisfy the following differential equations:
 \begin{align}
-    \frac{d}{dt}\lp\frac{\partial T}{\partial\dot q_j}\rp-\frac{\partial T}{\partial q_j} = Q_j, \qquad j=1,\dots,n.
+    \frac{d}{dt}\lp\frac{\partial L}{\partial u^i}\rp-\frac{\partial L}{\partial q^i} = 0\qquad (k = 1,2,3).
 \end{align}
-For conservative forces, $Q_j=-\partial U/\partial q_j$, and with $L=T-U$:
-\begin{align}
-    \frac{d}{dt}\lp\frac{\partial L}{\partial\dot q_j}\rp-\frac{\partial L}{\partial q_j} = 0.
-\end{align}
-Nonconservative generalized forces $Q_j^{\text{nc}}$ appear on the right-hand side when present.
+In the context of extremizing $I$ (calculus of variations), these are known as the Euler-Lagrange equations.
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+#| fig-width: 4.5
+\usetikzlibrary{arrows.meta,decorations.markings}
+\begin{tikzpicture}[
+    >=Stealth,
+    midarrow/.style={
+        postaction={decorate,
+            decoration={markings, mark=at position 0.52 with {\arrow{Stealth}}}}
+    }
+]
+
+% --- axes ---
+\draw (0,0) -- (9.2,0);
+\draw (0,0) -- (0,8.2);
+
+% --- tick marks ---
+\foreach \x in {0.4,0.8,...,9.0} \draw (\x,0) -- (\x,-0.08);
+\foreach \y in {0.4,0.8,...,8.0} \draw (0,\y) -- (-0.08,\y);
+
+% --- endpoints ---
+\coordinate (A) at (1,1);   % (t0, q(t0))
+\coordinate (B) at (7.4,7.4); % (t1, q(t1))
+
+% --- dashed guide lines ---
+\draw[dashed] (0,1) -- (A) -- (1,0);
+\draw[dashed] (0,7.4) -- (B) -- (7.4,0);
+
+% --- filled endpoint dots ---
+\filldraw (A) circle (2.2pt);
+\filldraw (B) circle (2.2pt);
+
+% --- family of varied paths, all sharing endpoints A and B ---
+\draw[thick,midarrow] (A) .. controls (2.0,4.6) and (4.2,7.0) .. (B);
+\draw[thick,midarrow] (A) .. controls (2.4,3.3) and (5.0,6.0) .. (B);
+\draw[thick,midarrow] (A) .. controls (3.0,2.3) and (5.6,4.9) .. (B);
+\draw[thick,midarrow] (A) .. controls (3.6,1.7) and (6.2,3.6) .. (B);
+\draw[thick,midarrow] (A) .. controls (4.3,1.3) and (6.8,2.4) .. (B);
+
+% --- axis labels ---
+\node[left]  at (0,7.4) {$q(t_1)$};
+\node[left]  at (0,1)   {$q(t_0)$};
+\node[left]  at (0,4.6) {$q$};
+\node[below] at (1,0)   {$t_0$};
+\node[below] at (7.4,0) {$t_1$};
+\node[below] at (4.7,0) {$t$};
+
+\end{tikzpicture}
+```
