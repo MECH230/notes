@@ -6,7 +6,82 @@ title: "Lagrange's Equations of Motion for a System of Particles"
 
 Put in simple terms, a holonomic constraint is a constraint which can be written in terms of position coordinates, e.g. $x=0$. A nonholonomic constraint is one which cannot be written in terms of position coordinates, e.g. ${\bf v}\cdot{\bf e}_\theta = 0$.
 
-There is a method, Frobenius' integrability criteria, which may be used to determine if a constraint or a system of constraints is holonomic or not. The criterion is beyond the scope of the class. Here, we restrict our attention to holonomic constraints.
+::: {.callout-tip title="Think!"}
+
+Question: Consider a particle constrained to move on a horizontal surface $z=0$. Is this constraint holonomic?
+
+::: {.callout-note title="Answer" collapse="true"}
+...
+:::
+
+:::
+
+::: {.callout-tip title="Think!"}
+
+Question: Consider two particles connected by a rigid massless rod of length $\ell$. What constraint is this system of two particles subject to? Is this constraint holonomic or nonholonomic?
+
+::: {.callout-note title="Answer" collapse="true"}
+...
+:::
+
+:::
+
+::: {.callout-tip title="Think!"}
+
+Question: Consider the system in the previous question where $m_2$ is subject to a knife-edge constraint ${\bf v}_2\cdot{\bf e}_2=0$. Is this constraint holonomic or nonholonomic.
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+#| fig-width: 6
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[
+    >=Stealth,
+    every node/.style={font=\itshape},
+    Evec/.style={-{Stealth}, gray, thick},
+    evec/.style={-{Stealth}, gray!80, thick},
+    rvec/.style={-{Stealth}, line width=1.1pt, color=blue!40!black}
+]
+% --- parameters ---
+\coordinate (O)  at (6,0);
+\def\myang{25}
+\def\mylen{9.4}
+\coordinate (m1) at (1.2,3.5);
+\coordinate (m2) at ($(m1)+(\myang:\mylen)$);
+% --- global frame E1, E2 at O ---
+\draw[Evec] (O) -- ++(3,0) node[right] {${\bf E}_1$};
+\draw[Evec] (O) -- ++(0,2.6) node[above] {${\bf E}_2$};
+% --- rod between m1 and m2 ---
+\draw[thick] (m1) -- (m2);
+\node at ($(m1)!0.5!(m2)+(0,0.35)$) {$\ell$};
+% --- reference (dashed) line and angle arc at m1 ---
+\draw[dashed] (m1) -- ++(3,0);
+\draw (m1)++(0.8,0) arc (0:\myang:0.8);
+\node at ($(m1)+(\myang/2:1.05)$) {$\vartheta$};
+% --- local frame e1, e2 at m1 ---
+\draw[evec] (m1) -- ++(\myang:1.7) node[right] {${\bf e}_1$};
+\draw[evec] (m1) -- ++(\myang+90:1.7) node[above] {${\bf e}_2$};
+% --- m1: filled disk ---
+\filldraw[gray!60, draw=black, thick] (m1) circle (0.55);
+\node[below] at ($(m1)+(0,-0.6)$) {$m_1$};
+% --- m2: ring/pulley ---
+\draw[thick] (m2) circle (0.55);
+\draw[thick] ($(m2)+(\myang-15:0.55)$) -- ($(m2)+(\myang+165:0.55)$);
+\node[right] at ($(m2)+(0.3,-0.75)$) {$m_2$};
+% --- position vectors r1, r2 from O ---
+\draw[rvec] (O) -- (m1) node[pos=0.45,below left=1pt] {${\bf r}_1$};
+\draw[rvec] (O) -- ($(m2)+(\myang+180:0.55)$) node[pos=0.55,right=2pt] {${\bf r}_2$};
+\end{tikzpicture}
+```
+
+::: {.callout-note title="Answer" collapse="true"}
+...
+:::
+
+:::
+
+Frobenius' integrability criteria may be used to determine definitely if a constraint or a system of constraints is holonomic or not. The criterion is beyond the scope of the class. Here, we restrict our attention to holonomic constraints.
 
 ## Lagrange's Prescription on Constraints
 
@@ -16,35 +91,75 @@ Consider a constraint of the form
 \end{align*}
 then the associated Lagrange prescription of the constraint force is $\mu{\bf f}_K$ applied at particle $K$, $K=1,\hdots,n$.
 
-*Example:* A particle constrained on a plane $z = 0$. This constraint may be written as ${\bf v}\cdot{\bf E}_z = 0$ and the constraint force acting on the particle is ${\bf F} = \mu{\bf E}_z.$
+::: {.callout-tip title="Think!"}
 
+Question: Prescribe the constraint force for a particle constrained on a plane $z = 0$.
+
+::: {.callout-note title="Answer" collapse="true"}
+This constraint may be written as ${\bf v}\cdot{\bf E}_z = 0$ and the constraint force acting on the particle is ${\bf F} = \mu{\bf E}_z.$
+:::
+
+:::
+
+::: {.callout-tip title="Think!"}
+
+Question: Prescribe the constraint force acting on a simple pendulum associated with the constraint that the length of the pendulum is constant.
+
+::: {.callout-note title="Answer" collapse="true"}
 A simple pendulum has the constraint ${\bf r} = 0$ which may be written as ${\bf v}\cdot{\bf e}_r = 0$, then the constraint force acting on the particle is ${\bf F} = \mu{\bf e}_r$.
+:::
+
+:::
 
 ## Unconstrained Equations
 
-Consider a system of $n$ particles with $3n$ degrees of freedom. The generalized coordinates of the system may be listed as
+Consider a system of $n$ particles with $3n$ coordinates. The system is subject to $m$ holonomic constraints, so the number of degrees of freedom of the system is $3n-m$. The generalized coordinates of the system may be listed as
 \begin{align}
     q =
     \begin{bmatrix}
         x^1 & y^1 & z^1 & \cdots & x^n & y^n & z^n
     \end{bmatrix}^T
 \end{align}
-and their derivatives may be written as
+and the corresponding generalized velocities are
 \begin{align}
     u =
     \begin{bmatrix}
         v^{x1} & v^{y1} & v^{z1} & \cdots & v^{xn} & v^{yn} & v^{zn}
     \end{bmatrix}^T
 \end{align}
-and the kinetic energy of the system is $T$, then Lagrange's equations of motion of the system are
+We define $u$ so that later we set $u = \dot{q}$.
+
+We arrange the generalized coordinates such that the first $3n-m$ coordinates are the unconstrained degrees of freedom and the last $m$ coordinates are equal to the holonomic constraints, and can be later set to zero.
+
+::: {.callout-tip title="Think!"}
+
+Question: Generalized coordinates for simple harmonic oscillator.
+
+::: {.callout-note title="Answer" collapse="true"}
+$q = [x\ y\ z]$, $u = [v_x\ v_y\ v_z]$.
+:::
+
+:::
+
+::: {.callout-tip title="Think!"}
+
+Question: Generalized coordinates for simple pendulum.
+
+::: {.callout-note title="Answer" collapse="true"}
+$q = [\theta\ \beta\ z]$, $u = [u_\theta\ u_\beta\ u_z]$ where $\beta = r-\ell$.
+:::
+
+:::
+
+The kinetic energy of the system is $T$, then Lagrange's equations of motion of the system are
 \begin{align}
-    \frac{d}{dt}\lp\frac{\partial T}{\partial u^i}\rp-\frac{\partial T}{\partial q^i} = {\bf F}\cdot{\bf a}_i
+    \frac{d}{dt}\lp\frac{\partial T}{\partial u^i}\rp-\frac{\partial T}{\partial q^i} = \sum_{K=1}^n{\bf F}^K\cdot \frac{\partial {\bf r}^K}{\partial q^i}
 \end{align}
 Equivalently, using the Lagrangian $L = T-U$, where $U$ is the potential energy, the equations of motion of the system may be written as
 \begin{align}
-    \frac{d}{dt}\lp\frac{\partial L}{\partial u^i}\rp-\frac{\partial L}{\partial q^i} = {\bf F}_{nconc}\cdot{\bf a}_i.
+    \frac{d}{dt}\lp\frac{\partial L}{\partial u^i}\rp-\frac{\partial L}{\partial q^i} = \sum_{K=1}^n{\bf F}_{nonc}^K\cdot \frac{\partial {\bf r}^K}{\partial q^i}
 \end{align}
-${\bf a}_i = \dfrac{\partial {\bf r}}{\partial q^i}$
+where ${\bf F}^K$ is the sum of external forces acting on particle $K$ while ${\bf F}_{nonc}^K$ is the sum of nonconservative forces acting on $K$.
 
 ### Advantage of Lagrange's Equations
 
@@ -60,9 +175,16 @@ Equivalently, using the constrained Lagrangian $\tilde{L} = \tilde{T}-\tilde{U}$
 \begin{align}
     \frac{d}{dt}\lp\frac{\partial \tilde{L}}{\partial u^i}\rp-\frac{\partial \tilde{L}}{\partial q^i} = {\bf F}_{nconc}\cdot{\bf a}_i.
 \end{align}
-If the forces are prescribed with Lagrange's prescription, ${\bf F}\cdot{\bf a}_i = 0$
+If the forces are prescribed with Lagrange's prescription, then ${\bf F}\cdot{\bf a}_i$ and ${\bf F}_{nconc}\cdot{\bf a}_i$ reduce to ${\bf F}_{applied}\cdot{\bf a}_i$ and ${\bf F}_{applied, nconc}\cdot{\bf a}_i$ respectively, that is the applied forces and the nonconservative applied forces.
+
+In many cases, the nonconservative applied forces are zero, hence the commonly known homogeneous form of Lagrange's equation
+\begin{align}
+    \frac{d}{dt}\lp\frac{\partial \tilde{L}}{\partial u^i}\rp-\frac{\partial \tilde{L}}{\partial q^i} = 0.
+\end{align}
 
 ## Example: Simple Harmonic Oscillator
+
+Consider a simple harmonic oscillator of mass $m$ connected to a linear spring of unstretched length $\ell_0$ and stiffness $k$. The origin is taken at the location of $m$ when the spring is unstretched so that the position vector of $m$ is ${\bf r} = x{\bf E}_x$ and $x$ denotes the stretch of the spring. The velocity of $m$ is ${\bf v} = v{\bf E}_x$. Find the equation of motion of the mass $m$.
 
 Using unconstrained Lagrangian:
 \begin{align}
@@ -85,8 +207,6 @@ Equation along $z$,
 \end{align}
 
 Using constrained Lagrangian:
-
-Consider a simple harmonic oscillator of mass $m$ connected to a linear spring of unstretched length $\ell_0$ and stiffness $k$. The origin is taken at the location of $m$ when the spring is unstretched so that the position vector of $m$ is ${\bf r} = x{\bf E}_x$ and $x$ denotes the stretch of the spring. The velocity of $m$ is ${\bf v} = v{\bf E}_x$
 
 The kinetic energy of the spring is $\tilde{T} = \frac{1}{2}v^2$ and potential energy is $\tilde{U} = \frac{1}{2}kx^2$, thus the Lagrangian is $\tilde{L} = \frac{1}{2}v^2-\frac{1}{2}kx^2$. Here, $m$ has one degree of freedom, so $q = [x]$ and $u = [v]$, so the equation of motion of the system is obtained ...
 
@@ -237,5 +357,24 @@ In the context of extremizing $I$ (calculus of variations), these are known as t
 \node[below] at (7.4,0) {$t_1$};
 \node[below] at (4.7,0) {$t$};
 
+\end{tikzpicture}
+```
+
+## Exercises
+
+Double pendulum
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+\begin{tikzpicture}
+    \coordinate (O) at (0,0);
+    \coordinate (B) at (1,-2);
+    \coordinate (C) at (3,-4);
+    \draw[thick] (O) -- (B);
+    \draw[thick] (B) -- (C);
+    \draw[dashed] (O) -- ++(0,-2);
+    \draw[dashed] (B) -- ++(0,-2);
 \end{tikzpicture}
 ```

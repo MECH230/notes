@@ -51,9 +51,7 @@ book:
         - rigid_body_dynamics/systems_of_particles_and_rigid_bodies.qmd
     - part: "Lagrangian Mechanics"
       chapters:
-        - lagrangian_mechanics/generalized_coordinates.qmd
         - lagrangian_mechanics/lagranges_equations.qmd
-        - lagrangian_mechanics/examples_and_applications.qmd
     - references.qmd
     - part: "Appendices"
       chapters:
@@ -85,7 +83,8 @@ format:
               balpha: "\\boldsymbol{\\alpha}",
               bchi: "\\boldsymbol{\\chi}",
               bpi: "\\boldsymbol{\\pi}",
-              bPi: "\\boldsymbol{\\Pi}"
+              bPi: "\\boldsymbol{\\Pi}",
+              hdots: "\\ldots"
             }
           }
         };
@@ -108,5 +107,6 @@ format:
         \newcommand{\bchi}{\boldsymbol{\chi}}
         \newcommand{\bpi}{\boldsymbol{\pi}}
         \newcommand{\bPi}{\boldsymbol{\Pi}}
+        \providecommand{\hdots}{\ldots}
 
 
