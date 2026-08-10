@@ -114,7 +114,7 @@ obtained by writing
 \end{align}
 and noting that $\int_{\mathcal{B}}\bpi\times{\bf v}\,dm={\bf H}^C$ (by the same steps used above, since $\int\bpi\,dm={\bf 0}$) while $\int_{\mathcal{B}}{\bf v}\,dm=m{\bf v}_C={\bf G}$.
 
-{{< video https://youtube.com/shorts/3bu7kY8JLpM title="Kinetic energy – rigid body rotating about a fixed point" >}}
+{{< video https://youtu.be/3bu7kY8JLpM title="Kinetic energy – rigid body rotating about a fixed point" >}}
 
 ## Derivation of the Work-Energy Theorem
 
@@ -258,7 +258,7 @@ A bar of length $\ell$ and mass $m$ pinned at its end. The energy is conserved:
 #| engine: tikz
 #| echo: false
 #| fig-align: center
-#| fig-width: 3
+#| fig-width: 2
 \begin{tikzpicture}
     \draw[thick] (0,0) -- (3,-4);
     \fill[black] (0,0) circle (0.1);
@@ -283,7 +283,7 @@ What happens if there is a follower force applied at the end of the rod always p
 #| engine: tikz
 #| echo: false
 #| fig-align: center
-#| fig-width: 3
+#| fig-width: 2
 \begin{tikzpicture}
     \draw[thick] (0,0) -- (3,-4);
     \fill[black] (0,0) circle (0.1);
