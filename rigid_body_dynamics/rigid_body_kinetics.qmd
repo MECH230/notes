@@ -12,7 +12,7 @@ and **Euler's second law** (Balance of Angular Momentum, BoAM), which can be exp
 \begin{align}
     {\bf M}^O &= \dot{\bf H}^O \quad\text{about a fixed point }O,\\
     {\bf M}^C &= \dot{\bf H}^C \quad\text{about the center of mass }C,\\
-    {\bf M}^P &= \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G} \quad\text{about any material point }P.
+    {\bf M}^P &= \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G} = \dot{\bf H}^C+({\bf r}_C-{\bf r}_P)\times m{\bf a}_C \quad\text{about any material point }P.
 \end{align}
 The BoAM is an **independent postulate**, not derivable from the BoLM.
 
@@ -58,7 +58,7 @@ Examples of pure moments: reaction moments ${\bf M}_R$ at joints; torsional spri
 
 ### Does Weight Result in a Moment About the Center of Mass?
 
-The total weight is ${\bf W} = \int_{\mathcal{B}}{\bf g}\,dm = m{\bf g}$, and its moment about $C$ is:
+The total weight is ${\bf W} = \int_{\mathcal{B}}{\bf g}\,dm = {\bf g}\int_{\mathcal{B}}dm = m{\bf g}$, and its moment about $C$ is:
 \begin{align}
     {\bf M}^C = \int_{\mathcal{B}}\bpi\times{\bf g}\,dm = \lp\int_{\mathcal{B}}\bpi\,dm\rp\times{\bf g} = {\bf 0},
 \end{align}
@@ -76,7 +76,10 @@ Starting from ${\bf M}^C = \dot{\bf H}^C$ and replacing ${\bf M}^P = {\bf M}^C+(
 \end{align}
 Substituting $\dot{\bf H}^C = \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G}+({\bf r}_P-{\bf r}_C)\times m{\bf a}_C$ and simplifying:
 \begin{align}
-    {\bf M}^P = \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G},
+    \begin{split}
+        {\bf M}^P &= \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G}+({\bf r}_P-{\bf r}_C)\times m{\bf a}_C+({\bf r}_C-{\bf r}_P)\times{\bf F},\\
+        &= \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G},
+    \end{split}
 \end{align}
 recovering the BoAM about a general material point $P$.
 
@@ -211,6 +214,8 @@ For fixed-axis rotation with $\bomega = \omega{\bf E}_z$ and $I_{xz}=I_{yz}=0$:
 \end{align}
 
 Four classes of applications: (1) purely translational motion ($\bomega=\balpha={\bf 0}$), (2) rigid body with a fixed point, (3) rolling and sliding rigid bodies, (4) imbalanced rotors.
+
+It is important to note that for the second set of applications, the balance law ${\bf M}^O=\dot{\bf H}^O$ is more convenient to use than ${\bf M}=\dot{\bf H}$. The role of ${\bf M}_R$ in these problems is to ensure that the axis of rotation remains ${\bf E}_z$. Finally, the four steps discussed are used as a guide to solving all of the applications.
 
 
 ## Exercises

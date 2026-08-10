@@ -30,7 +30,7 @@ Consider a body $\mathcal{B}$ in motion in 3D space.
 ```
 
 - A body $\mathcal{B}$ is a collection of material points (mass particles or particles).
-- It is convenient to define a fixed reference configuration $\boldsymbol{\kappa}_0$ for the body.
+- It is convenient to define a fixed reference configuration $\boldsymbol{\kappa}_0$ for the body: ${\bf X}=\boldsymbol{\kappa}_0$.
 - The present (or current) configuration of the body is denoted by $\boldsymbol{\kappa}_t$.
 - We denote a material point by $X$. The position of the material point $X$ relative to a fixed origin at the reference configuration is denoted by ${\bf X}$ and at time $t$ is denoted by ${\bf x}$.
 - This motion is invertible; we can use ${\bchi}$ to uniquely define the motion as a function of $X$ and $t$: ${\bf x} = \tilde{\bchi}(X,t) = {\bchi}({\bf X},t)$.
@@ -90,10 +90,11 @@ Any rigid body motion can be built in two steps:
 
 Then every rigid motion is:
 \begin{align}
-    {\bf x} = \bchi({\bf X},t) = {\bf Q}(t){\bf X}+{\bf y}(t).
+    {\bf x} = \bchi({\bf X},t) = {\bf x}_I({\bf X},t)+{\bf y}(t) = {\bf Q}(t){\bf X}+{\bf y}(t).
 \end{align}
+For each rigid motion (and choice of $O$), ${\bf Q}(t)$ and ${\bf y}(t)$ are unique.
 
-${\bf Q}(t)$ is an object that acts on a vector to produce another vector. If ${\bf Q}$ is also linear, then we call it a **tensor**. We will show that ${\bf Q}(t)$ is a linear map and is called the **rotation tensor**. Both ${\bf Q}$ and ${\bf y}$ are the same for all material points of the rigid body(functions of $t$ only) as all material points on the rigid body are rotated and translated by the same amount. 
+${\bf Q}(t)$ is an object that acts on a vector to produce another vector. If ${\bf Q}$ is also linear, then we call it a **tensor**. We will show that ${\bf Q}(t)$ is a linear map and is called the **rotation tensor**. Both ${\bf Q}$ and ${\bf y}$ are the same for all material points of the rigid body(functions of $t$ only) as all material points on the rigid body are rotated and translated by the same amount.
 
 In this class we consider bodies translating and rotatingin the plane, ie. **general plane motion**, where $\bomega = \dot{\theta}{\bf E}_3$ and $\balpha = \dot{\bomega}$. The fixed axis of rotation is ${\bf E}_3$.
 
@@ -422,7 +423,7 @@ From rigid body motion, for any two material points $A$ and $B$:
     {\bf x}_B &= {\bf Q}{\bf X}_B+{\bf q}.
 \end{align}
 Thus,
-$({\bf x}_B-{\bf x}_A) = {\bf Q}({\bf X}_B-{\bf X}_A)$. Differentiating:
+$({\bf x}_B-{\bf x}_A) = {\bf Q}({\bf X}_B-{\bf X}_A)$, where ${\bf Q}$ is a proper orthogonal tensor, meaning that ${\bf Q}{\bf Q}^T = {\bf I}$ and $\det({\bf Q}) = 1$. Differentiating:
 \begin{align}
     {\bf v}_B-{\bf v}_A =\dot{\bf Q}({\bf X}_B-{\bf X}_A) = \dot{\bf Q}{\bf Q}^T({\bf x}_B-{\bf x}_A).
 \end{align}
@@ -433,7 +434,11 @@ The taking the derivative of ${\bf Q}{\bf Q}^T={\bf I}$, we show that $\dot{\bf 
 \end{align}
 
 ::: {.callout-important title="Note!"}
-Every skew tensor corresponds to a vector cross product. In the Cartesian basis, if ${\bf a} = a_1{\bf E}_1+a_2{\bf E}_2+a_3{\bf E}_3$ and ${\bf b} = b_1{\bf E}_1+b_2{\bf E}_2+b_3{\bf E}_3$, then ${\bf a}\times{\bf b}$ has the matrix representation
+Every skew tensor corresponds to a vector cross product. In the Cartesian basis, if ${\bf a} = a_1{\bf E}_1+a_2{\bf E}_2+a_3{\bf E}_3$ and ${\bf b} = b_1{\bf E}_1+b_2{\bf E}_2+b_3{\bf E}_3$, then
+\begin{align}
+    {\bf a}\times{\bf b} = (a_2b_3-a_3b_2){\bf E}_1-(a_1b_3-a_3){\bf E}_2+(a_1b_2-a_2b_1){\bf E}_3,
+\end{align}
+which can be re-written in matrix form (using the Cartesian basis) as
 \begin{align}
     [{\bf a}\times{\bf b}] = \underbrace{\begin{bmatrix}0&-a_3&a_2\\a_3&0&-a_1\\-a_2&a_1&0\end{bmatrix}}_{[{\bf a}]_\times}\begin{bmatrix}b_1\\b_2\\b_3\end{bmatrix}.
 \end{align}
@@ -464,13 +469,14 @@ Let $A$ and $B$ be material points on the rigid body. Expressing ${\bf x}_{B/A}$
     {\bf v}_{B/A} &= x\dot{\bf e}_x+y\dot{\bf e}_y = \bomega\times{\bf x}_{B/A},\\
     {\bf a}_{B/A} &= \balpha\times{\bf x}_{B/A}+\bomega\times(\bomega\times{\bf x}_{B/A}).
 \end{align}
-With $\bomega = \omega{\bf E}_z$ and $\balpha = \alpha{\bf E}_z$:
+Here, $\bomega = \omega{\bf E}_z$ and $\balpha = \alpha{\bf E}_z$ are the previously defined angular velocity and angular acceleration of the rigid body (in general, $\bomega$ and $\balpha$ are not necessarily constrained to be along ${\bf E}_3$). With $\bomega = \omega{\bf E}_z$ and $\balpha = \alpha{\bf E}_z$:
 \begin{align}
     \omega\,d\omega = \alpha\,d\theta, \qquad \omega\,dt = d\theta, \qquad \alpha\,dt = d\omega.
 \end{align}
 
 ::: {.callout-important title="Note!"}
-The anglar velocity and angular acceleration are properties of the rigid bodies. All material lines on the RB rotate with the same angular velocity and angular acceleration.
+- ${\bf v}_{B/A} = \bomega\times{\bf x}_{B/A}$ is an expression of rigidity: $\frac{d}{dt}({\bf x}_{B/A})={\bf 0}$.
+- The angular velocity and angular acceleration are properties of the rigid body. All material lines on the rigid body rotate with the same angular velocity and angular acceleration.
 :::
 
 ## Particle in a Noninertial Frame
@@ -495,6 +501,8 @@ Consider a particle $B$ whose motion is described by a noninertial frame with or
 The balance of linear momentum for particle $B$ in the noninertial frame is the same as in an inertial frame, except that the fictitious forces $-m\left({\bf a}_A+\balpha\times({\bf x}_B-{\bf x}_A)+\bomega\times\lp\bomega\times\lp{\bf x}_B-{\bf x}_A\rp\rp+2\bomega\times\overset{\circ}{\bf x}_{B/A}\right)$ must be included.
 
 :::
+
+### Merry-go-round
 
 ::: {.callout-tip title="Think!"}
 **Question:** Watch the below video of people playing catch on a merry-go-round. A ball is thrown on a merry-go-round rotating about fixed center $O$, with ${\bf r}_0 = -R{\bf E}_x$ and ${\bf v}_0 = v_0{\bf E}_x$. The merry-go-round has an angular velocity $\bomega$ and an angular acceleration $\balpha$. What are the velocity and acceleration of the ball that is appears to have with respect to an observer on the merry-go-round?
@@ -568,6 +576,8 @@ The term $\balpha\times{\bf r}_P$ is the tangential acceleration; $\bomega\times
 :::
 :::
 
+For a body in fixed point rotation, the velocity of each point on the body is perpendicular to the position vector from the axis of rotation to this point.
+
 ::: {.callout-tip title="Think!"}
 **Question:** Draw the velocity profile of a sphere rotating about its fixed center, or of a random rigid body in fixed point rotation.
 
@@ -597,13 +607,16 @@ So ${\bf r}_{A/IC}$ is perpendicular to ${\bf v}_A$. Knowing the directions of $
 \end{tikzpicture}
 ```
 
-For the IC:
+For the IC at this instant:
 \begin{align}
-    {\bf v}_P = \bomega\times{\bf r}_{P/IC}.
+    \begin{split}
+        {\bf v}_P &= \bomega\times{\bf r}_{P/IC},\\
+        {\bf a}_P &= \balpha\times{\bf r}_{P/IC}+\bomega\times(\bomega\times{\bf r}_{P/IC}).
+    \end{split}
 \end{align}
 
 ::: {.callout-important title="Note!"}
-- The IC of a RB does not have to be on the RB itself, however, the IC behaves like a material point of the RB. One could consider a massless extension of the RB which containts the IC. 
+- The IC of a RB does not have to be on the RB itself, however, the IC behaves like a material point of the RB. One could consider a massless extension of the RB which containts the IC.
 
 - The IC can only be used for velocity analysis since its acceleration is nonzero.
 
@@ -612,15 +625,31 @@ For the IC:
 - For a translating rigid body the IC is at infinity.
 :::
 
+**Procedure:**
+
+- Use geometry to find the IC.
+- Find $|\omega| = \lnorm\bomega\rnorm$ using ${\bf v}_P=\bomega\times{\bf r}_{P/IC}$.
+- Get ${\bf v}_P$ for any point $P$.
+
+*Examples: Rod falling on corner and [Crank slider](https://www.youtube.com/watch?v=RDixpdSGERQ).*
 
 {{< video https://youtu.be/E_5JPTllkDU title="IC of rotation for the link of a crank slider" >}}
 
-<!-- ## Doing Kinematics Geometrically
+## Doing Kinematics Geometrically
 
-In some problems, geometric laws that hold for all time can be differentiated:
+In some problems, we can use the laws of geometry that are true for every time and are differentiable.
+
+*Example: Problem 5/31.*
+
+Focus on triangle $OAB$:
+
+- Let $\alpha$ be the angle $OAB$.
+- Let $\beta$ be the angle $BOA$. $\dot{\beta}$ is the angular velocity of bar $OA$.
+- Let $\theta$ be the angle $OBA$. $\dot{\theta}$ is the angular velocity of bar $BC$.
+
 - The law of sines holds at all times.
 - The law of cosines holds at all times.
-- Angle sum relations for a triangle (e.g. $\beta+\alpha+\theta=\pi$) can be differentiated. -->
+- The fact that $OAB$ is a triangle holds at all times, so $\beta+\alpha+\theta=\pi$, which we can differentiate.
 
 ## Kinematics of Rolling and Sliding
 
@@ -636,7 +665,7 @@ Since $P$ belongs to $\mathcal{B}$:
     {\bf a}_P-{\bf a}_C &= \balpha\times({\bf r}_P-{\bf r}_C)+\bomega\times\lp\bomega\times({\bf r}_P-{\bf r}_C)\rp.
 \end{align}
 
-- **Contact (touching):** ${\bf v}_P\cdot{\bf n} = 0$.
+- **Contact (touching):** ${\bf v}_P\cdot{\bf n} = 0$. Thus, ${\bf v}_C\cdot{\bf n} = -\bomega\times({\bf r}_P-{\bf r}_C)\cdot{\bf n}$.
 - **Rolling (no slip):** ${\bf v}_P = {\bf 0}$, so ${\bf v}_C = -\bomega\times({\bf r}_P-{\bf r}_C)$. Note: ${\bf a}_P \neq {\bf 0}$ in general.
 
 ### Example: Rolling Circular Disk
@@ -720,6 +749,8 @@ For rigid bodies, $C$ behaves as a material point:
     {\bf v}_C-{\bf v}_A = \bomega\times({\bf r}_C-{\bf r}_A), \qquad
     {\bf a}_C-{\bf a}_A = \balpha\times({\bf r}_C-{\bf r}_A)+\bomega\times\lp\bomega\times({\bf r}_C-{\bf r}_A)\rp.
 \end{align}
+
+*Example: Find the center of mass of any body from Set 15.*
 
 ## Linear Momentum
 

@@ -194,6 +194,25 @@ Each force is dotted with the velocity of its point of application.
 
 ### Torsional Spring
 
+A torsional spring is just a model for some kind of elasticity at the joint.
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+#| fig-width: 3
+\begin{tikzpicture}
+    \draw[domain=0:1000, samples=100, smooth, variable=\t]
+        plot ({0.0005*\t * cos(\t)}, {0.0005*\t * sin(\t)});
+    \draw[thick] (0,0) -- (3,-4);
+    \fill[black] (0,0) circle (0.1);
+    \draw[thick,->] (0,0) -- (0,-1) node[below] {${\bf E}_x$};
+    \draw[thick,->] (0,0) -- (1,0) node[right] {${\bf E}_y$};
+    \draw[thick,->,blue] (0,0) -- (0.6,-0.8) node[below] {${\bf e}_x$};
+    \draw[thick,->,blue] (0,0) -- (0.8,0.6) node[above] {${\bf e}_y$};
+\end{tikzpicture}
+```
+
 A torsional spring with stiffness $K$ creates a couple ${\bf M}_S = -K\theta{\bf E}_z$. Its power is:
 \begin{align}
     {\bf M}_S\cdot\bomega = -K\theta\dot{\theta} = -\frac{d}{dt}\lp\frac{K\theta^2}{2}\rp.
@@ -257,6 +276,24 @@ Adding a dead mass $m_e$ at the end:
 \end{align}
 
 ### Follower Force
+
+What happens if there is a follower force applied at the end of the rod always perpendicular to it?
+
+```{r}
+#| engine: tikz
+#| echo: false
+#| fig-align: center
+#| fig-width: 3
+\begin{tikzpicture}
+    \draw[thick] (0,0) -- (3,-4);
+    \fill[black] (0,0) circle (0.1);
+    \draw[thick,->] (0,0) -- (0,-1) node[below] {${\bf E}_x$};
+    \draw[thick,->] (0,0) -- (1,0) node[right] {${\bf E}_y$};
+    \draw[thick,->,blue] (0,0) -- (0.6,-0.8) node[below] {${\bf e}_x$};
+    \draw[thick,->,blue] (0,0) -- (0.8,0.6) node[above] {${\bf e}_y$};
+    \draw[thick,->] (3,-4) -- (4.6,-2.8) node[above] {${\bf P}$};
+\end{tikzpicture}
+```
 
 If instead a follower force ${\bf P}$ is applied perpendicular to the bar at its end, this force is **nonconservative** (its direction actively changes with configuration). Energy is not conserved.
 
