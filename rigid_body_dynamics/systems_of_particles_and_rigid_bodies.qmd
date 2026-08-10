@@ -16,6 +16,7 @@ The angular velocity of the spherical shell is $\bomega_1 = \dot{\theta}_1{\bf E
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 3
 \begin{tikzpicture}
     % spherical shell
     \draw[thick] (0,3) circle (3);
@@ -70,6 +71,7 @@ The angular velocity of the spherical shell is $\bomega_1 = \dot{\theta}_1{\bf E
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 3
 \begin{tikzpicture}
     % spherical shell
     \draw[thick] (0,3) circle (3);
@@ -102,6 +104,7 @@ The angular velocity of the spherical shell is $\bomega_1 = \dot{\theta}_1{\bf E
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 3
 \begin{tikzpicture}
     % spherical shell
     \draw[thick] (0,3) circle (3);
@@ -133,6 +136,7 @@ The angular velocity of the spherical shell is $\bomega_1 = \dot{\theta}_1{\bf E
 #| engine: tikz
 #| echo: false
 #| fig-align: center
+#| fig-width: 3
 \begin{tikzpicture}
     % driving bar
     \begin{scope}[rotate around={30:(0,3)}]

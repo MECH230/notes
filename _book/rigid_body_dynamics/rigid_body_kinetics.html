@@ -447,7 +447,7 @@ window.Quarto = {
 \end{align}\]</span> and <strong>Euler’s second law</strong> (Balance of Angular Momentum, BoAM), which can be expressed in three equivalent forms: <span class="math display">\[\begin{align}
     {\bf M}^O &amp;= \dot{\bf H}^O \quad\text{about a fixed point }O,\\
     {\bf M}^C &amp;= \dot{\bf H}^C \quad\text{about the center of mass }C,\\
-    {\bf M}^P &amp;= \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G} \quad\text{about any material point }P.
+    {\bf M}^P &amp;= \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G} = \dot{\bf H}^C+({\bf r}_C-{\bf r}_P)\times m{\bf a}_C \quad\text{about any material point }P.
 \end{align}\]</span> The BoAM is an <strong>independent postulate</strong>, not derivable from the BoLM.</p>
 </section>
 <section id="resultant-forces-and-moments" class="level2" data-number="20.2">
@@ -471,7 +471,7 @@ window.Quarto = {
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/Era7OOKyVEw" title="Different types of springs &amp; their uses | Skill-Lync" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <section id="does-weight-result-in-a-moment-about-the-center-of-mass" class="level3" data-number="20.2.1">
 <h3 data-number="20.2.1" class="anchored" data-anchor-id="does-weight-result-in-a-moment-about-the-center-of-mass"><span class="header-section-number">20.2.1</span> Does Weight Result in a Moment About the Center of Mass?</h3>
-<p>The total weight is <span class="math inline">\({\bf W} = \int_{\mathcal{B}}{\bf g}\,dm = m{\bf g}\)</span>, and its moment about <span class="math inline">\(C\)</span> is: <span class="math display">\[\begin{align}
+<p>The total weight is <span class="math inline">\({\bf W} = \int_{\mathcal{B}}{\bf g}\,dm = {\bf g}\int_{\mathcal{B}}dm = m{\bf g}\)</span>, and its moment about <span class="math inline">\(C\)</span> is: <span class="math display">\[\begin{align}
     {\bf M}^C = \int_{\mathcal{B}}\bpi\times{\bf g}\,dm = \lp\int_{\mathcal{B}}\bpi\,dm\rp\times{\bf g} = {\bf 0},
 \end{align}\]</span> since <span class="math inline">\(\int_{\mathcal{B}}\bpi\,dm = {\bf 0}\)</span> by definition of the center of mass.</p>
 </section>
@@ -484,7 +484,10 @@ window.Quarto = {
 <p>Starting from <span class="math inline">\({\bf M}^C = \dot{\bf H}^C\)</span> and replacing <span class="math inline">\({\bf M}^P = {\bf M}^C+({\bf r}_C-{\bf r}_P)\times{\bf F}\)</span>: <span class="math display">\[\begin{align}
     {\bf M}^P = \dot{\bf H}^C+({\bf r}_C-{\bf r}_P)\times{\bf F}.
 \end{align}\]</span> Substituting <span class="math inline">\(\dot{\bf H}^C = \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G}+({\bf r}_P-{\bf r}_C)\times m{\bf a}_C\)</span> and simplifying: <span class="math display">\[\begin{align}
-    {\bf M}^P = \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G},
+    \begin{split}
+        {\bf M}^P &amp;= \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G}+({\bf r}_P-{\bf r}_C)\times m{\bf a}_C+({\bf r}_C-{\bf r}_P)\times{\bf F},\\
+        &amp;= \dot{\bf H}^P+({\bf v}_P-{\bf v}_C)\times{\bf G},
+    \end{split}
 \end{align}\]</span> recovering the BoAM about a general material point <span class="math inline">\(P\)</span>.</p>
 </section>
 <section id="boam-about-a-fixed-point-o" class="level3" data-number="20.3.2">
@@ -612,6 +615,7 @@ window.Quarto = {
     {\bf F} = m\dot{\bf v}_C, \qquad {\bf M} = I_{zz}\dot{\omega}{\bf E}_z.
 \end{align}\]</span></p>
 <p>Four classes of applications: (1) purely translational motion (<span class="math inline">\(\bomega=\balpha={\bf 0}\)</span>), (2) rigid body with a fixed point, (3) rolling and sliding rigid bodies, (4) imbalanced rotors.</p>
+<p>It is important to note that for the second set of applications, the balance law <span class="math inline">\({\bf M}^O=\dot{\bf H}^O\)</span> is more convenient to use than <span class="math inline">\({\bf M}=\dot{\bf H}\)</span>. The role of <span class="math inline">\({\bf M}_R\)</span> in these problems is to ensure that the axis of rotation remains <span class="math inline">\({\bf E}_z\)</span>. Finally, the four steps discussed are used as a guide to solving all of the applications.</p>
 </section>
 <section id="exercises" class="level2" data-number="20.9">
 <h2 data-number="20.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">20.9</span> Exercises</h2>
