@@ -34,7 +34,7 @@ Question: Consider the system in the previous question where $m_2$ is subject to
 #| engine: tikz
 #| echo: false
 #| fig-align: center
-#| fig-width: 6
+#| fig-width: 3
 \usetikzlibrary{arrows.meta,calc}
 \begin{tikzpicture}[
     >=Stealth,
@@ -169,13 +169,13 @@ If the system is subject to $m$ holonomic constraints, if you choose the last $m
 
 Consider a system of $n$ particles with $3n$ degrees of freedom and $m$ holonomic constraints prescribed using Lagrange's equations of motion. The unconstrained degrees of freedom of the system are arranged in an array of generalized coordinates $q$ and generalized velocities $u$, and the constrained kinetic energy of the system is $\tilde{T}$, then Lagrange's equations of motion of the system are
 \begin{align}
-    \frac{d}{dt}\lp\frac{\partial \tilde{T}}{\partial u^i}\rp-\frac{\partial \tilde{T}}{\partial q^i} = {\bf F}\cdot{\bf a}_i.
+    \frac{d}{dt}\lp\frac{\partial \tilde{T}}{\partial u^i}\rp-\frac{\partial \tilde{T}}{\partial q^i} = \sum_{K=1}^n{\bf F}^K\cdot \frac{\partial {\bf r}^K}{\partial q^i}
 \end{align}
 Equivalently, using the constrained Lagrangian $\tilde{L} = \tilde{T}-\tilde{U}$, where $\tilde{U}$ is the constrained potential energy, the equations of motion of the system may be written as
 \begin{align}
-    \frac{d}{dt}\lp\frac{\partial \tilde{L}}{\partial u^i}\rp-\frac{\partial \tilde{L}}{\partial q^i} = {\bf F}_{nconc}\cdot{\bf a}_i.
+    \frac{d}{dt}\lp\frac{\partial \tilde{L}}{\partial u^i}\rp-\frac{\partial \tilde{L}}{\partial q^i} = \sum_{K=1}^n{\bf F}_{nonc}^K\cdot \frac{\partial {\bf r}^K}{\partial q^i}
 \end{align}
-If the forces are prescribed with Lagrange's prescription, then ${\bf F}\cdot{\bf a}_i$ and ${\bf F}_{nconc}\cdot{\bf a}_i$ reduce to ${\bf F}_{applied}\cdot{\bf a}_i$ and ${\bf F}_{applied, nconc}\cdot{\bf a}_i$ respectively, that is the applied forces and the nonconservative applied forces.
+If the forces are prescribed with Lagrange's prescription, then $ \sum_{K=1}^n{\bf F}^K\cdot \frac{\partial {\bf r}^K}{\partial q^i}$ and $\sum_{K=1}^n{\bf F}_{nonc}^K\cdot \frac{\partial {\bf r}^K}{\partial q^i}$ reduce to $\sum_{K=1}^n{\bf F}_{appliedc}\cdot\frac{\partial {\bf r}^K}{\partial q^i}$ and $\sum_{K=1}^n{\bf F}_{applied, nconc}\cdot\frac{\partial {\bf r}^K}{\partial q^i}$ respectively, that is the applied forces and the nonconservative applied forces.
 
 In many cases, the nonconservative applied forces are zero, hence the commonly known homogeneous form of Lagrange's equation
 \begin{align}
