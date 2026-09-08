@@ -93,6 +93,35 @@ MathJax = {
   }
 };
 </script>
+<style>
+/* Historical Perspective boxes: same visual pattern as the built-in
+   Quarto callouts (colored title bar + tinted body) but in a
+   distinct purple/violet so they are never confused with the
+   Think!/Note/Example callouts used elsewhere. */
+.historical-box {
+  border: 1px solid #6a1b9a;
+  border-radius: 0.25rem;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem 1rem 1.25rem;
+  background-color: #faf5fc;
+}
+.historical-title {
+  display: block;
+  margin: -0.75rem -1.25rem 0.75rem -1.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: #6a1b9a;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.historical-box figure {
+  text-align: center;
+}
+.historical-box figcaption {
+  font-size: 0.85em;
+  color: #555555;
+}
+</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -473,6 +502,16 @@ window.Quarto = {
 \end{align}\]</span> We postulate the following balance law/axiom/postulate to be true: <span class="math display">\[\begin{align}
     {\bf F} = \dot{\bf G},
 \end{align}\]</span> where <span class="math inline">\({\bf F}\)</span> is the resultant external force acting on the particle. This is known as the <strong>Balance of Linear Momentum</strong>, <strong>Newton’s Second Law</strong>, or <strong>Euler’s First Law</strong>.</p>
+<div class="historical-box">
+<p><span class="historical-title">Historical Perspective: Newton’s <em>Principia</em> (1687)</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/historical/principia_laws_of_motion.jpg" class="img-fluid figure-img" style="width:55.0%"></p>
+<figcaption><em>Axiomata sive Leges Motus</em> (“Axioms, or Laws of Motion”), Book I of the first edition of Newton’s <em>Philosophiæ Naturalis Principia Mathematica</em>, 1687 (Wikimedia Commons, public domain).</figcaption>
+</figure>
+</div>
+<p>This is the page on which Newton first stated, in Latin, the three laws of motion used throughout this chapter – including the balance of linear momentum above, and Newton’s Third Law, stated later in this chapter.</p>
+</div>
 <p><strong>Important:</strong> <span class="math inline">\({\bf a}\)</span> here is the absolute acceleration vector of the particle.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Think!">
 <div class="callout-header d-flex align-content-center">
@@ -637,9 +676,9 @@ mg(-{\bf E}_y) = m\lp\ddot{x}{\bf E}_x+\ddot{y}{\bf E}_y\rp.
 </ol>
 <p>The <span class="math inline">\(x\)</span>-equation is a first order ODE for <span class="math inline">\(v_x = \dot{x}\)</span>: <span class="math display">\[\begin{align}
     \begin{split}
-        -c_s v_x &amp;= m\Dot{v}_x\\
+        -c_s v_x &amp;= m\dot{v}_x\\
         -\frac{c_s}{m}dt &amp;= \frac{d v_x}{v_x}\\
-        -\frac{c_s}{m}\int_0^t d\Tilde{t} &amp;= \int_{v_{x_0}}^{v_c(t)}\frac{d\Tilde{v}_x}{\tilde{v}_x}\\
+        -\frac{c_s}{m}\int_0^t d\tilde{t} &amp;= \int_{v_{x_0}}^{v_c(t)}\frac{d\tilde{v}_x}{\tilde{v}_x}\\
         -\frac{c_s}{m}t &amp;= \ln\lp\frac{v_x}{v_{x_0}}\rp\\
         v_x &amp;= v_{x_0}e^{-\frac{c_s t}{m}}
     \end{split}
@@ -657,7 +696,7 @@ mg(-{\bf E}_y) = m\lp\ddot{x}{\bf E}_x+\ddot{y}{\bf E}_y\rp.
 </div>
 <p>Solving the <span class="math inline">\(y\)</span>-equation: <span class="math display">\[\begin{align}
     dt &amp;= \frac{m dv_y}{-mg-c_s v_y}\\
-    \int_0^td\tilde{t} &amp;= m\int_{v_{y_0}}^{v_y(t)}\frac{d\Tilde{v}_y}{-mg-c_s\Tilde{v}_y}\\
+    \int_0^td\tilde{t} &amp;= m\int_{v_{y_0}}^{v_y(t)}\frac{d\tilde{v}_y}{-mg-c_s\tilde{v}_y}\\
     v_y &amp;= -\frac{mg}{c_s}+\frac{1}{c_s}\lp mg+c_s v_{y_0}\rp e^{-c_st/m}
 \end{align}\]</span> As <span class="math inline">\(t\rightarrow\infty\)</span>, <span class="math inline">\(v_y \rightarrow -\frac{mg}{c_s}\)</span>. Thus, the terminal velocity <span class="math display">\[\begin{align}
     {\bf v}_{\text{term}} = \frac{mg}{c_s}\lp-{\bf E}_y\rp.
