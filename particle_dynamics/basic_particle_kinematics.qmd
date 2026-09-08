@@ -180,40 +180,12 @@ No. It is constant only during rectilinear motion in a fixed direction.
     {\bf r}(t) = R_0\lp\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\rp.
 \end{align}
 
-Calculate and plot ${\bf v}$, ${\bf a}$, ${\bf v}\times {\bf a}$, $\lnorm{\bf r}\rnorm$. Show that the motion satisfies:
+Calculate ${\bf v}$, ${\bf a}$, ${\bf v}\times {\bf a}$, $\lnorm{\bf r}\rnorm$. Describe the motion of the particle. Show that the motion satisfies:
 \begin{align}
     \ddot{x}+\omega^2 x=0, \qquad \ddot{y}+\omega^2 y=0.
 \end{align}
-::: {.callout-note title="Answer" collapse="true"}
-Answer: ...
-:::
-:::
-
-
-::: {.callout-warning title="Example"}
-**Question:** Consider a particle $P$ moving in $\mathbb{E}^2$ with position vector
-\begin{align*}
-    {\bf r} = R_0\lp\cos\lp\omega t\rp{\bf E}_x+\sin\lp\omega t\rp{\bf E}_y\rp.
-\end{align*}
-Calculate ${\bf r}\times{\bf a}$ and ${\bf r}\cdot{\bf a}$. Describe the motion of the particle.
 
 ::: {.callout-note title="Answer" collapse="true"}
-<!-- The velocity and acceleration are:
-\begin{align*}
-    {\bf v} &= R_0\omega\lp-\sin\lp\omega t\rp{\bf E}_x+\cos\lp\omega t\rp{\bf E}_y\rp,\\
-    {\bf a} &= -R_0\omega^2\lp\cos\lp\omega t\rp{\bf E}_x+\sin\lp\omega t\rp{\bf E}_y\rp.
-\end{align*}
-Note that $\dot{\bf E}_x={\bf 0}$ and $\dot{\bf E}_y={\bf 0}$ since the basis is fixed, and the chain rule applies.
-
-Noting that ${\bf a} = -\omega^2{\bf r}$:
-\begin{align*}
-    {\bf r}\times{\bf a} = {\bf r}\times(-\omega^2{\bf r}) = -\omega^2{\bf r}\times{\bf r} = {\bf 0}.
-\end{align*}
-
-For ${\bf r}\cdot{\bf a}$:
-\begin{align*}
-    {\bf r}\cdot{\bf a} &= -R_0^2\omega^2\lp\cos^2(\omega t)+\sin^2(\omega t)\rp = -R_0^2\omega^2.
-\end{align*} -->
 
 We calculate the velocity and acceleration vectors of the particle as follows:
 
@@ -314,6 +286,16 @@ Alternatively,
 -\omega^2\|{\bf r}\|^2 \\
 &=
 -\omega^2R_0^2.
+\end{align*}
+
+Noting that ${\bf a} = -\omega^2{\bf r}$, we can show that the given ${\bf r}$ satisfies the given differential equations:
+\begin{align*}
+    {\bf r}\times{\bf a} = {\bf r}\times(-\omega^2{\bf r}) = -\omega^2{\bf r}\times{\bf r} = {\bf 0}.
+\end{align*}
+
+For ${\bf r}\cdot{\bf a}$:
+\begin{align*}
+    {\bf r}\cdot{\bf a} &= -R_0^2\omega^2\lp\cos^2(\omega t)+\sin^2(\omega t)\rp = -R_0^2\omega^2.
 \end{align*}
 :::
 :::
