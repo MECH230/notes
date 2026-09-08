@@ -93,6 +93,35 @@ MathJax = {
   }
 };
 </script>
+<style>
+/* Historical Perspective boxes: same visual pattern as the built-in
+   Quarto callouts (colored title bar + tinted body) but in a
+   distinct purple/violet so they are never confused with the
+   Think!/Note/Example callouts used elsewhere. */
+.historical-box {
+  border: 1px solid #6a1b9a;
+  border-radius: 0.25rem;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem 1rem 1.25rem;
+  background-color: #faf5fc;
+}
+.historical-title {
+  display: block;
+  margin: -0.75rem -1.25rem 0.75rem -1.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: #6a1b9a;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.historical-box figure {
+  text-align: center;
+}
+.historical-box figcaption {
+  font-size: 0.85em;
+  color: #555555;
+}
+</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>

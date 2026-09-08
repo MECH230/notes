@@ -93,6 +93,35 @@ MathJax = {
   }
 };
 </script>
+<style>
+/* Historical Perspective boxes: same visual pattern as the built-in
+   Quarto callouts (colored title bar + tinted body) but in a
+   distinct purple/violet so they are never confused with the
+   Think!/Note/Example callouts used elsewhere. */
+.historical-box {
+  border: 1px solid #6a1b9a;
+  border-radius: 0.25rem;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem 1rem 1.25rem;
+  background-color: #faf5fc;
+}
+.historical-title {
+  display: block;
+  margin: -0.75rem -1.25rem 0.75rem -1.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: #6a1b9a;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.historical-box figure {
+  text-align: center;
+}
+.historical-box figcaption {
+  font-size: 0.85em;
+  color: #555555;
+}
+</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -653,27 +682,11 @@ window.Quarto = {
 <p><strong>Question:</strong> Consider a particle moving in space with position vector <span class="math display">\[\begin{align}
     {\bf r}(t) = R_0\lp\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\rp.
 \end{align}\]</span></p>
-<p>Calculate and plot <span class="math inline">\({\bf v}\)</span>, <span class="math inline">\({\bf a}\)</span>, <span class="math inline">\({\bf v}\times {\bf a}\)</span>, <span class="math inline">\(\lnorm{\bf r}\rnorm\)</span>. Show that the motion satisfies: <span class="math display">\[\begin{align}
+<p>Calculate <span class="math inline">\({\bf v}\)</span>, <span class="math inline">\({\bf a}\)</span>, <span class="math inline">\({\bf v}\times {\bf a}\)</span>, <span class="math inline">\(\lnorm{\bf r}\rnorm\)</span>. Describe the motion of the particle. Show that the motion satisfies: <span class="math display">\[\begin{align}
     \ddot{x}+\omega^2 x=0, \qquad \ddot{y}+\omega^2 y=0.
-\end{align}\]</span> ::: {.callout-note title=“Answer” collapse=“true”} Answer: …</p>
-</div>
-</div>
-<p>:::</p>
-<div class="callout callout-style-default callout-warning callout-titled" title="Example">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Example
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Question:</strong> Consider a particle <span class="math inline">\(P\)</span> moving in <span class="math inline">\(\mathbb{E}^2\)</span> with position vector <span class="math display">\[\begin{align*}
-    {\bf r} = R_0\lp\cos\lp\omega t\rp{\bf E}_x+\sin\lp\omega t\rp{\bf E}_y\rp.
-\end{align*}\]</span> Calculate <span class="math inline">\({\bf r}\times{\bf a}\)</span> and <span class="math inline">\({\bf r}\cdot{\bf a}\)</span>. Describe the motion of the particle.</p>
+\end{align}\]</span></p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -682,24 +695,8 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<!-- The velocity and acceleration are:
-\begin{align*}
-    {\bf v} &= R_0\omega\lp-\sin\lp\omega t\rp{\bf E}_x+\cos\lp\omega t\rp{\bf E}_y\rp,\\
-    {\bf a} &= -R_0\omega^2\lp\cos\lp\omega t\rp{\bf E}_x+\sin\lp\omega t\rp{\bf E}_y\rp.
-\end{align*}
-Note that $\dot{\bf E}_x={\bf 0}$ and $\dot{\bf E}_y={\bf 0}$ since the basis is fixed, and the chain rule applies.
-
-Noting that ${\bf a} = -\omega^2{\bf r}$:
-\begin{align*}
-    {\bf r}\times{\bf a} = {\bf r}\times(-\omega^2{\bf r}) = -\omega^2{\bf r}\times{\bf r} = {\bf 0}.
-\end{align*}
-
-For ${\bf r}\cdot{\bf a}$:
-\begin{align*}
-    {\bf r}\cdot{\bf a} &= -R_0^2\omega^2\lp\cos^2(\omega t)+\sin^2(\omega t)\rp = -R_0^2\omega^2.
-\end{align*} -->
 <p>We calculate the velocity and acceleration vectors of the particle as follows:</p>
 <p><span class="math display">\[\begin{align*}
 {\bf v} &amp;= \frac{d{\bf r}}{dt}
@@ -789,6 +786,12 @@ R_0\left(\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\right)
 &amp;=
 -\omega^2R_0^2.
 \end{align*}\]</span></p>
+<p>Noting that <span class="math inline">\({\bf a} = -\omega^2{\bf r}\)</span>, we can show that the given <span class="math inline">\({\bf r}\)</span> satisfies the given differential equations: <span class="math display">\[\begin{align*}
+    {\bf r}\times{\bf a} = {\bf r}\times(-\omega^2{\bf r}) = -\omega^2{\bf r}\times{\bf r} = {\bf 0}.
+\end{align*}\]</span></p>
+<p>For <span class="math inline">\({\bf r}\cdot{\bf a}\)</span>: <span class="math display">\[\begin{align*}
+    {\bf r}\cdot{\bf a} &amp;= -R_0^2\omega^2\lp\cos^2(\omega t)+\sin^2(\omega t)\rp = -R_0^2\omega^2.
+\end{align*}\]</span></p>
 </div>
 </div>
 </div>
@@ -850,7 +853,7 @@ R_0\left(\cos(\omega t){\bf E}_x+\sin(\omega t){\bf E}_y\right)
 \end{align}\]</span> If <span class="math inline">\(a=a(v)\)</span>, then <span class="math display">\[\begin{align}
     \begin{split}
         ds &amp;= \frac{vdv}{a}\\
-        s(t)-s_0 &amp;=\int_{v_0}^{v}\frac{\tilde{v}d\tilde{v}}{a(\Tilde{v})}.
+        s(t)-s_0 &amp;=\int_{v_0}^{v}\frac{\tilde{v}d\tilde{v}}{a(\tilde{v})}.
     \end{split}
 \end{align}\]</span></p>
 </section>
