@@ -374,7 +374,7 @@ If $a=a(v)$, then
 \begin{align}
     \begin{split}
         ds &= \frac{vdv}{a}\\
-        s(t)-s_0 &=\int_{v_0}^{v}\frac{\tilde{v}d\tilde{v}}{a(\Tilde{v})}.
+        s(t)-s_0 &=\int_{v_0}^{v}\frac{\tilde{v}d\tilde{v}}{a(\tilde{v})}.
     \end{split}
 \end{align}
 

@@ -16,6 +16,26 @@ and **Euler's second law** (Balance of Angular Momentum, BoAM), which can be exp
 \end{align}
 The BoAM is an **independent postulate**, not derivable from the BoLM.
 
+::: {.historical-box}
+[Historical Perspective: Leonhard Euler (1707--1783)]{.historical-title}
+
+![Portrait by Emanuel Handmann, 1753 (Wikimedia Commons, public domain).](../figures/historical/leonhard_euler.jpg){width=35% fig-align="center"}
+
+Swiss mathematician and physicist, one of the most prolific scientists in history. Euler recast Newton's mechanics in the vectorial, differential-equation form used today, and in 1750 he was the first to state the balance of linear and angular momentum as independent postulates for a general body -- the two balance laws that bear his name above.
+:::
+
+::: {.historical-box}
+[Historical Perspective: Euler's Original Paper (1750)]{.historical-title}
+
+::: {layout-ncol="2"}
+![Opening page (archive.org, public domain).](../figures/historical/euler_1750_paper.jpg)
+
+![The page stating the balance laws (archive.org, public domain).](../figures/historical/euler_1750_paper_equations.jpg)
+:::
+
+Euler's "Découverte d'un nouveau principe de mécanique," Mémoires de l'Académie des sciences de Berlin, 1750. In this paper, Euler proposed that ${\bf F}=m{\bf a}$ (his "first law") should be applied not only to particles, as Newton had done, but independently to every infinitesimal element of a body, and introduced the balance of angular momentum (his "second law") as a separate, independent postulate -- the foundation of rigid body dynamics used in this chapter.
+:::
+
 ## Resultant Forces and Moments
 
 The resultant force ${\bf F}$ is the sum of all external forces. The resultant moment about a point includes the moment due to forces plus any applied pure moments ${\bf M}_e$ not due to forces.

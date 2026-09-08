@@ -57,7 +57,23 @@ Forces are interactions between bodies that cause them to move, and more specifi
 ## Gravitational force
 All bodies on or near the earth are subject to the earth's gravitational force and, as shown by Galileo in his famous experiments, will fall toward the center of the earth (unless prevented from doing so by other forces) with the same acceleration; the magnitude of this acceleration is denoted by $g$.
 
+::: {.historical-box}
+[Historical Perspective: Galileo Galilei (1564--1642)]{.historical-title}
+
+![Portrait by Justus Sustermans, 1636 (Wikimedia Commons, public domain).](../figures/historical/galileo_galilei.jpg){width=35% fig-align="center"}
+
+Italian astronomer, physicist, and engineer, often called the father of observational astronomy and of the modern scientific method. His experiments on falling bodies and inclined planes were the first systematic study of kinematics, and his advocacy of a heliocentric solar system brought him into famous conflict with the Church.
+:::
+
 It was later shown by Newton, on the basis of Kepler's laws of planetary motion, that the magnitude of the acceleration (with respect to a frame of reference based on the "fixed" stars) due to gravitational force between any two bodies (idealized as particles) is inversely proportional to the square of the distance between them, and for each body it is proportional to the quantity of matter (or mass) of the other body. The product of mass and acceleration is therefore equal and opposite for the two bodies and may be identified with the force exerted on each body by the other.
+
+::: {.historical-box}
+[Historical Perspective: Isaac Newton (1642--1727)]{.historical-title}
+
+![Portrait by Godfrey Kneller, 1689 (Wikimedia Commons, public domain).](../figures/historical/isaac_newton.jpg){width=35% fig-align="center"}
+
+English mathematician and physicist. Building on Galileo's and Kepler's work, Newton's 1687 *Philosophiæ Naturalis Principia Mathematica* established the three laws of motion and the law of universal gravitation, unifying the mechanics of falling bodies on Earth with the motion of the planets for the first time.
+:::
 
 {{< video https://youtu.be/icrTzMozNgo title="Introduction to Dynamics" >}}
 

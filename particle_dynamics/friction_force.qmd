@@ -4,6 +4,14 @@ title: "Friction Force"
 
 Most theories of friction arise from studies by the French scientist Charles Augustin de Coulomb (1736–1806).
 
+::: {.historical-box}
+[Historical Perspective: Charles-Augustin de Coulomb (1736--1806)]{.historical-title}
+
+![Portrait of Charles-Augustin de Coulomb (Wikimedia Commons, public domain).](../figures/historical/charles_coulomb.png){width=35% fig-align="center"}
+
+French physicist and military engineer. Beyond his eponymous law of electrostatic force, Coulomb's 1785 prize-winning memoir *Théorie des machines simples* established the empirical laws of dry friction -- that friction is roughly proportional to normal force and largely independent of contact area and sliding speed -- still used in engineering today.
+:::
+
 ## Introduction
 
 Consider a block on a rough horizontal surface pushed with force ${\bf P} = P{\bf E}_x$.
@@ -30,6 +38,15 @@ Upon increasing $P$, we observe:
 - Both $P^*$ and $P^{**}$ are proportional to the normal force $\lnorm{\bf N}\rnorm$.
 
 ## Formalism: Coulomb's Theory of Friction
+
+::: {.historical-box}
+[Historical Perspective: Coulomb's Original Memoir (1785)]{.historical-title}
+
+![Page from Coulomb's *Théorie des machines simples, en ayant égard au frottement de leurs parties et à la roideur des cordages*, 1785 (Gallica / Bibliothèque nationale de France, public domain).](../figures/historical/coulomb_1785_memoir.jpg){width=55% fig-align="center"}
+
+This prize memoir, submitted to the French Academy of Sciences, contains Coulomb's systematic experiments on sliding and rolling friction that gave rise to the formalism presented below.
+:::
+
 
 We distinguish two types of friction: static and kinetic.
 
