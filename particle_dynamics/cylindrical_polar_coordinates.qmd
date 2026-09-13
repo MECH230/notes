@@ -418,6 +418,9 @@ The position, velocity, acceleration of the particle are
     {\bf a} &= \lp\ddot{r}-r\dot{\theta}^2\rp{\bf e}_r+\lp2\dot{r}\dot{\theta}+r\ddot{\theta}\rp{\bf e}_\theta+\ddot{z}{\bf E}_z.
 \end{align*}
 
+{{< video https://youtu.be/FMEV8mmVqEE title="Cylindrical basis for particle moving on a cone" >}}
+
+
 ## Summary
 
 **Cylindrical polar basis** $\{\mathbf{e}_r,\mathbf{e}_\theta,\mathbf{E}_z\}$:

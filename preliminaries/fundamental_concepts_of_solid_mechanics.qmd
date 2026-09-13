@@ -31,7 +31,7 @@ The correspondence between the particles and the positions occupied by them at a
 ## Deformation
 The displacement of a body is said to be rigid if the distances between all pairs of particles are the same in any two configurations. Otherwise, the body is said to undergo deformation.
 
-## Rigid bodies
+<!-- ## Rigid bodies
 Bodies that can undergo only rigid displacements are called rigid bodies. Bodies that are not rigid are deformable.
 
 ## Motion
@@ -44,7 +44,7 @@ A rigid motion is a motion that involves only rigid displacements.
 The rate of change, in time, of the position of a particle is its velocity.
 
 ## Acceleration
-The velocity may in turn change in time, and its rate of change is the acceleration. The motion of a body is called uniform if the acceleration of all the particles is zero; otherwise, it is called accelerated.
+The velocity may in turn change in time, and its rate of change is the acceleration. The motion of a body is called uniform if the acceleration of all the particles is zero; otherwise, it is called accelerated. -->
 
 ## Kinematics
 The branch of mechanics dealing with the displacement and motion of bodies is called kinematics.
