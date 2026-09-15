@@ -124,6 +124,9 @@ MathJax = {
 .historical-box.historical-collapsed .historical-title {
   margin-bottom: 0;
 }
+.historical-box > p:has(> .historical-title) {
+  margin: 0;
+}
 .historical-title::after {
   content: "\25BE";
   position: absolute;
@@ -155,10 +158,15 @@ document.addEventListener("DOMContentLoaded", function () {
     var title = box.querySelector(".historical-title");
     if (!title) return;
 
-    // Gather everything after the title span into a collapsible wrapper.
+    // Pandoc wraps a bare [text]{.class} span in its own <p>. Walk up
+    // to that paragraph (if any) so the whole header line toggles and
+    // so we collect *its* siblings, not the span's (which has none).
+    var titleBlock = title.closest("p") || title;
+
+    // Gather everything after the title block into a collapsible wrapper.
     var contentWrap = document.createElement("div");
     contentWrap.className = "historical-content";
-    var node = title.nextSibling;
+    var node = titleBlock.nextSibling;
     while (node) {
       var next = node.nextSibling;
       contentWrap.appendChild(node);
@@ -168,17 +176,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Start collapsed.
     box.classList.add("historical-collapsed");
-    title.setAttribute("role", "button");
-    title.setAttribute("tabindex", "0");
-    title.setAttribute("aria-expanded", "false");
+    titleBlock.classList.add("historical-title-block");
+    titleBlock.setAttribute("role", "button");
+    titleBlock.setAttribute("tabindex", "0");
+    titleBlock.setAttribute("aria-expanded", "false");
 
     function toggle() {
       var collapsed = box.classList.toggle("historical-collapsed");
-      title.setAttribute("aria-expanded", String(!collapsed));
+      titleBlock.setAttribute("aria-expanded", String(!collapsed));
     }
 
-    title.addEventListener("click", toggle);
-    title.addEventListener("keydown", function (e) {
+    titleBlock.addEventListener("click", toggle);
+    titleBlock.addEventListener("keydown", function (e) {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         toggle();
@@ -531,6 +540,11 @@ window.Quarto = {
 <p>Recall the arc-length parameter <span class="math inline">\(s\)</span> associated with <span class="math inline">\(\mathcal{C}\)</span>: <span class="math display">\[\begin{align*}
     \lp\frac{ds}{dt}\rp^2 = \frac{d{\bf r}}{dt}\cdot\frac{d{\bf r}}{dt} = \frac{dx}{dt}\frac{dx}{dt}+\frac{dy}{dt}\frac{dy}{dt}+\frac{dz}{dt}\frac{dz}{dt}.
 \end{align*}\]</span> This parameter uniquely identifies a point <span class="math inline">\(P\)</span> on <span class="math inline">\(\mathcal{C}\)</span>, giving the representation <span class="math inline">\({\bf r} = \hat{\bf r}(s)\)</span>.</p>
+<div class="historical-box">
+<p><span class="historical-title">Historical Perspective: Frenet, Serret, and the Moving Basis</span></p>
+<p>The unit vectors <span class="math inline">\({\bf e}_t, {\bf e}_n, {\bf e}_b\)</span> carry the names of two French mathematicians who never worked together. Jean Frédéric Frenet first derived the formulas describing how this triad turns along a curve in his 1847 doctoral thesis at Toulouse, publishing only a summary in 1852. Joseph Alfred Serret arrived at the same relations independently and published them in full in 1851, and it is largely through his more widely circulated version that both the formulas and the triad came to carry both names.</p>
+<p>The real subtlety of this basis is that <span class="math inline">\(\{{\bf e}_t,{\bf e}_n,{\bf e}_b\}\)</span> rotates as the particle moves along <span class="math inline">\(\mathcal{C}\)</span>, even though the curve itself is fixed in space. Differentiating a vector expressed in a rotating basis introduces extra terms beyond the plain derivatives of its components – the same idea that Gaspard-Gustave de Coriolis formalized in 1835 for observers in rotating reference frames. That same extra term reappears explicitly, under its own name, as the <em>Coriolis acceleration</em> when we revisit rotation later using cylindrical polar coordinates.</p>
+</div>
 <section id="the-serret-frenet-triad" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="the-serret-frenet-triad"><span class="header-section-number">11.1</span> The Serret-Frenet Triad</h2>
 <div class="cell" data-layout-align="center">
