@@ -12,6 +12,14 @@ Recall the arc-length parameter $s$ associated with $\mathcal{C}$:
 \end{align*}
 This parameter uniquely identifies a point $P$ on $\mathcal{C}$, giving the representation ${\bf r} = \hat{\bf r}(s)$.
 
+::: {.historical-box}
+[Historical Perspective: Frenet, Serret, and the Moving Basis]{.historical-title}
+
+The unit vectors ${\bf e}_t, {\bf e}_n, {\bf e}_b$ carry the names of two French mathematicians who never worked together. Jean Frédéric Frenet first derived the formulas describing how this triad turns along a curve in his 1847 doctoral thesis at Toulouse, publishing only a summary in 1852. Joseph Alfred Serret arrived at the same relations independently and published them in full in 1851, and it is largely through his more widely circulated version that both the formulas and the triad came to carry both names.
+
+The real subtlety of this basis is that $\{{\bf e}_t,{\bf e}_n,{\bf e}_b\}$ rotates as the particle moves along $\mathcal{C}$, even though the curve itself is fixed in space. Differentiating a vector expressed in a rotating basis introduces extra terms beyond the plain derivatives of its components -- the same idea that Gaspard-Gustave de Coriolis formalized in 1835 for observers in rotating reference frames. That same extra term reappears explicitly, under its own name, as the *Coriolis acceleration* when we revisit rotation later using cylindrical polar coordinates.
+:::
+
 ## The Serret-Frenet Triad
 
 ```{r}

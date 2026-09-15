@@ -6,12 +6,16 @@ The **degree of freedom (DOF)** of a system is the number of independent coordin
 
 Examples:
 
-- A particle free to move in $\mathbb{E}^2$ has 2 DOFs.
-- A particle constrained to move on a curve in $\mathbb{E}^2$ has 1 DOF.
-- Two particles free to move in $\mathbb{E}^2$ have a combined total of 4 DOFs.
-- If two particles in $\mathbb{E}^2$ are constrained to move on the same curve, they have 2 DOFs.
-- If two particles in $\mathbb{E}^2$ are connected by a rigid rod, they have 3 DOFs. The constraint $\lnorm{\bf r}_{B/A}\rnorm = l\,\forall t$ provides a relationship between their coordinates that eliminates one DOF.
-- If two particles in $\mathbb{E}^2$ are connected by a rigid rod and constrained to move on a curve, they have 1 DOF.
+| System | DOFs | Constraints | Constraint equation(s) |
+|---|:-:|:-:|---|
+| A particle free to move in $\mathbb{E}^2$ | 2 | 0 | -- |
+| A particle constrained to move on a curve in $\mathbb{E}^2$ | 1 | 1 | (curve equation, implicit) |
+| Two particles free to move in $\mathbb{E}^2$ | 4 | 0 | -- |
+| Two particles in $\mathbb{E}^2$ constrained to move on the same curve | 2 | 2 | (curve equation for each particle, implicit) |
+| Two particles in $\mathbb{E}^2$ connected by a rigid rod | 3 | 1 | $\lnorm{\bf r}_{B/A}\rnorm = l\,\forall t$ |
+| Two particles in $\mathbb{E}^2$ connected by a rigid rod *and* constrained to move on a curve | 1 | 3 | $\lnorm{\bf r}_{B/A}\rnorm = l\,\forall t$; curve equation for each particle (implicit) |
+
+The **number of constraints** is the number of DOFs the unconstrained system would have (2 per free particle in $\mathbb{E}^2$) minus the actual number of DOFs; each independent constraint equation removes exactly one DOF.
 
 ---
 

@@ -120,6 +120,9 @@ format:
         .historical-box.historical-collapsed .historical-title {
           margin-bottom: 0;
         }
+        .historical-box > p:has(> .historical-title) {
+          margin: 0;
+        }
         .historical-title::after {
           content: "\25BE";
           position: absolute;
@@ -151,10 +154,15 @@ format:
             var title = box.querySelector(".historical-title");
             if (!title) return;
 
-            // Gather everything after the title span into a collapsible wrapper.
+            // Pandoc wraps a bare [text]{.class} span in its own <p>. Walk up
+            // to that paragraph (if any) so the whole header line toggles and
+            // so we collect *its* siblings, not the span's (which has none).
+            var titleBlock = title.closest("p") || title;
+
+            // Gather everything after the title block into a collapsible wrapper.
             var contentWrap = document.createElement("div");
             contentWrap.className = "historical-content";
-            var node = title.nextSibling;
+            var node = titleBlock.nextSibling;
             while (node) {
               var next = node.nextSibling;
               contentWrap.appendChild(node);
@@ -164,17 +172,18 @@ format:
 
             // Start collapsed.
             box.classList.add("historical-collapsed");
-            title.setAttribute("role", "button");
-            title.setAttribute("tabindex", "0");
-            title.setAttribute("aria-expanded", "false");
+            titleBlock.classList.add("historical-title-block");
+            titleBlock.setAttribute("role", "button");
+            titleBlock.setAttribute("tabindex", "0");
+            titleBlock.setAttribute("aria-expanded", "false");
 
             function toggle() {
               var collapsed = box.classList.toggle("historical-collapsed");
-              title.setAttribute("aria-expanded", String(!collapsed));
+              titleBlock.setAttribute("aria-expanded", String(!collapsed));
             }
 
-            title.addEventListener("click", toggle);
-            title.addEventListener("keydown", function (e) {
+            titleBlock.addEventListener("click", toggle);
+            titleBlock.addEventListener("keydown", function (e) {
               if (e.key === "Enter" || e.key === " ") {
                 e.preventDefault();
                 toggle();

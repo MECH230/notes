@@ -105,6 +105,9 @@ MathJax = {
   padding: 0.75rem 1.25rem 1rem 1.25rem;
   background-color: #faf5fc;
 }
+.historical-box.historical-collapsed {
+  padding-bottom: 0;
+}
 .historical-title {
   display: block;
   margin: -0.75rem -1.25rem 0.75rem -1.25rem;
@@ -113,6 +116,30 @@ MathJax = {
   color: #ffffff;
   font-weight: 600;
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-right: 2.5rem;
+}
+.historical-box.historical-collapsed .historical-title {
+  margin-bottom: 0;
+}
+.historical-title::after {
+  content: "\25BE";
+  position: absolute;
+  right: 1.25rem;
+  top: 0.5rem;
+  font-size: 1.1em;
+  transition: transform 0.2s ease;
+}
+.historical-box.historical-collapsed .historical-title::after {
+  transform: rotate(-90deg);
+}
+.historical-content {
+  overflow: hidden;
+}
+.historical-box.historical-collapsed .historical-content {
+  display: none;
 }
 .historical-box figure {
   text-align: center;
@@ -122,6 +149,44 @@ MathJax = {
   color: #555555;
 }
 </style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".historical-box").forEach(function (box) {
+    var title = box.querySelector(".historical-title");
+    if (!title) return;
+
+    // Gather everything after the title span into a collapsible wrapper.
+    var contentWrap = document.createElement("div");
+    contentWrap.className = "historical-content";
+    var node = title.nextSibling;
+    while (node) {
+      var next = node.nextSibling;
+      contentWrap.appendChild(node);
+      node = next;
+    }
+    box.appendChild(contentWrap);
+
+    // Start collapsed.
+    box.classList.add("historical-collapsed");
+    title.setAttribute("role", "button");
+    title.setAttribute("tabindex", "0");
+    title.setAttribute("aria-expanded", "false");
+
+    function toggle() {
+      var collapsed = box.classList.toggle("historical-collapsed");
+      title.setAttribute("aria-expanded", String(!collapsed));
+    }
+
+    title.addEventListener("click", toggle);
+    title.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+});
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -866,6 +931,7 @@ N_\theta{\bf e}_\theta+N_z{\bf E}_z - mg{\bf E}_z &amp;= m\lp\ddot{r}-r\omega^2\
     {\bf v} &amp;= \dot{r}{\bf e}_r+r\dot{\theta}{\bf e}_\theta+\dot{z}{\bf E}_z,\\
     {\bf a} &amp;= \lp\ddot{r}-r\dot{\theta}^2\rp{\bf e}_r+\lp2\dot{r}\dot{\theta}+r\ddot{\theta}\rp{\bf e}_\theta+\ddot{z}{\bf E}_z.
 \end{align*}\]</span></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/FMEV8mmVqEE" title="Cylindrical basis for particle moving on a cone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="summary" class="level2" data-number="9.6">
 <h2 data-number="9.6" class="anchored" data-anchor-id="summary"><span class="header-section-number">9.6</span> Summary</h2>

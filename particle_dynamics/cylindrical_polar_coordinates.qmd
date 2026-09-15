@@ -75,7 +75,7 @@ $\{{\bf e}_r,{\bf e}_\theta\}$ is an orthonormal basis: ${\bf e}_r\cdot{\bf e}_r
 
 
 ::: {.callout-tip title="Think!"}
-**Question:** Calculate $\dot{\bf e}_r (=\dot{\theta}{\bf e}_\theta)$ and $\dot{\bf e}_\theta (= \dot{\bf e}_r)$.
+**Question:** Calculate $\dot{\bf e}_r (=\dot{\theta}{\bf e}_\theta)$ and $\dot{\bf e}_\theta (= \dot{\theta}{\bf e}_r)$.
 
 ::: {.callout-note title="Answer" collapse="true"}
 \begin{align}
