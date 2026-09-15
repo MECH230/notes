@@ -124,6 +124,9 @@ MathJax = {
   padding: 0.75rem 1.25rem 1rem 1.25rem;
   background-color: #faf5fc;
 }
+.historical-box.historical-collapsed {
+  padding-bottom: 0;
+}
 .historical-title {
   display: block;
   margin: -0.75rem -1.25rem 0.75rem -1.25rem;
@@ -132,6 +135,30 @@ MathJax = {
   color: #ffffff;
   font-weight: 600;
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-right: 2.5rem;
+}
+.historical-box.historical-collapsed .historical-title {
+  margin-bottom: 0;
+}
+.historical-title::after {
+  content: "\25BE";
+  position: absolute;
+  right: 1.25rem;
+  top: 0.5rem;
+  font-size: 1.1em;
+  transition: transform 0.2s ease;
+}
+.historical-box.historical-collapsed .historical-title::after {
+  transform: rotate(-90deg);
+}
+.historical-content {
+  overflow: hidden;
+}
+.historical-box.historical-collapsed .historical-content {
+  display: none;
 }
 .historical-box figure {
   text-align: center;
@@ -141,6 +168,44 @@ MathJax = {
   color: #555555;
 }
 </style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".historical-box").forEach(function (box) {
+    var title = box.querySelector(".historical-title");
+    if (!title) return;
+
+    // Gather everything after the title span into a collapsible wrapper.
+    var contentWrap = document.createElement("div");
+    contentWrap.className = "historical-content";
+    var node = title.nextSibling;
+    while (node) {
+      var next = node.nextSibling;
+      contentWrap.appendChild(node);
+      node = next;
+    }
+    box.appendChild(contentWrap);
+
+    // Start collapsed.
+    box.classList.add("historical-collapsed");
+    title.setAttribute("role", "button");
+    title.setAttribute("tabindex", "0");
+    title.setAttribute("aria-expanded", "false");
+
+    function toggle() {
+      var collapsed = box.classList.toggle("historical-collapsed");
+      title.setAttribute("aria-expanded", String(!collapsed));
+    }
+
+    title.addEventListener("click", toggle);
+    title.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+});
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -441,25 +506,10 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#mechanics" id="toc-mechanics" class="nav-link active" data-scroll-target="#mechanics"><span class="header-section-number">5.1</span> Mechanics</a></li>
-  <li><a href="#solid-mechanics" id="toc-solid-mechanics" class="nav-link" data-scroll-target="#solid-mechanics"><span class="header-section-number">5.2</span> Solid Mechanics</a></li>
-  <li><a href="#body" id="toc-body" class="nav-link" data-scroll-target="#body"><span class="header-section-number">5.3</span> Body</a></li>
-  <li><a href="#continuum" id="toc-continuum" class="nav-link" data-scroll-target="#continuum"><span class="header-section-number">5.4</span> Continuum</a></li>
-  <li><a href="#material-points" id="toc-material-points" class="nav-link" data-scroll-target="#material-points"><span class="header-section-number">5.5</span> Material Points</a></li>
-  <li><a href="#displacement" id="toc-displacement" class="nav-link" data-scroll-target="#displacement"><span class="header-section-number">5.6</span> Displacement</a></li>
-  <li><a href="#configuration" id="toc-configuration" class="nav-link" data-scroll-target="#configuration"><span class="header-section-number">5.7</span> Configuration</a></li>
-  <li><a href="#deformation" id="toc-deformation" class="nav-link" data-scroll-target="#deformation"><span class="header-section-number">5.8</span> Deformation</a></li>
-  <li><a href="#rigid-bodies" id="toc-rigid-bodies" class="nav-link" data-scroll-target="#rigid-bodies"><span class="header-section-number">5.9</span> Rigid bodies</a></li>
-  <li><a href="#motion" id="toc-motion" class="nav-link" data-scroll-target="#motion"><span class="header-section-number">5.10</span> Motion</a></li>
-  <li><a href="#rigid-motion" id="toc-rigid-motion" class="nav-link" data-scroll-target="#rigid-motion"><span class="header-section-number">5.11</span> Rigid Motion</a></li>
-  <li><a href="#velocity" id="toc-velocity" class="nav-link" data-scroll-target="#velocity"><span class="header-section-number">5.12</span> Velocity</a></li>
-  <li><a href="#acceleration" id="toc-acceleration" class="nav-link" data-scroll-target="#acceleration"><span class="header-section-number">5.13</span> Acceleration</a></li>
-  <li><a href="#kinematics" id="toc-kinematics" class="nav-link" data-scroll-target="#kinematics"><span class="header-section-number">5.14</span> Kinematics</a></li>
-  <li><a href="#force" id="toc-force" class="nav-link" data-scroll-target="#force"><span class="header-section-number">5.15</span> Force</a></li>
-  <li><a href="#galileo-kepler-newton" id="toc-galileo-kepler-newton" class="nav-link" data-scroll-target="#galileo-kepler-newton"><span class="header-section-number">6</span> Galileo, Kepler, Newton</a>
+  <li><a href="#galileo-kepler-newton" id="toc-galileo-kepler-newton" class="nav-link active" data-scroll-target="#galileo-kepler-newton"><span class="header-section-number">5.1</span> Galileo, Kepler, Newton</a>
   <ul class="collapse">
-  <li><a href="#gravitational-force" id="toc-gravitational-force" class="nav-link" data-scroll-target="#gravitational-force"><span class="header-section-number">6.1</span> Gravitational force</a></li>
-  <li><a href="#equilibrium" id="toc-equilibrium" class="nav-link" data-scroll-target="#equilibrium"><span class="header-section-number">6.2</span> Equilibrium</a></li>
+  <li><a href="#gravitational-force" id="toc-gravitational-force" class="nav-link" data-scroll-target="#gravitational-force"><span class="header-section-number">5.1.1</span> Gravitational force</a></li>
+  <li><a href="#equilibrium" id="toc-equilibrium" class="nav-link" data-scroll-target="#equilibrium"><span class="header-section-number">5.1.2</span> Equilibrium</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -487,74 +537,74 @@ window.Quarto = {
 
 
 <p>This section is adapted from chapter 1 of <a href="https://link.springer.com/book/10.1007/978-1-4614-6768-7">Introduction to Solid Mechanics - An Integrated Approach</a> by Lubliner and Papadopoulos <span class="citation" data-cites="lubliner2017introduction">(<a href="../references.html#ref-lubliner2017introduction" role="doc-biblioref">Lubliner and Papadopoulos 2017</a>)</span>.</p>
-<section id="mechanics" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="mechanics"><span class="header-section-number">5.1</span> Mechanics</h2>
-<p>Mechanics, as a scientific discipline, is the study of the behavior of bodies subject to forces and displacements (and, to some extent, heating and cooling).</p>
-</section>
-<section id="solid-mechanics" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="solid-mechanics"><span class="header-section-number">5.2</span> Solid Mechanics</h2>
-<p>Solid mechanics is the branch of mechanics dealing specifically with solid bodies.</p>
-</section>
-<section id="body" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="body"><span class="header-section-number">5.3</span> Body</h2>
-<p>A body, for the purpose of mechanics, is a portion of matter that, at a given moment in time, occupies a certain region in space.</p>
 <ul>
-<li><strong>Particle</strong> If the region occupied by the body can be idealized as being of negligible extent (and thus reducible to a point), the body is called a particle.</li>
-<li><strong>Finite Body</strong> A body that is not reducible to a point is called a finite body.</li>
+<li><strong>Mechanics</strong>
+<ul>
+<li>Mechanics, as a scientific discipline, is the study of the behavior of bodies subject to forces and displacements (and, to some extent, heating and cooling).</li>
+</ul></li>
+<li><strong>Solid Mechanics</strong>
+<ul>
+<li>Solid mechanics is the branch of mechanics dealing specifically with solid bodies.</li>
+</ul></li>
+<li><strong>Body</strong>
+<ul>
+<li>A body, for the purpose of mechanics, is a portion of matter that, at a given moment in time, occupies a certain region in space.</li>
+<li><strong>Particle</strong>
+<ul>
+<li>If the region occupied by the body can be idealized as being of negligible extent (and thus reducible to a point), the body is called a particle.</li>
+</ul></li>
+<li><strong>Finite Body</strong>
+<ul>
+<li>A body that is not reducible to a point is called a finite body.</li>
+</ul></li>
+</ul></li>
+<li><strong>Continuum</strong>
+<ul>
+<li>A finite body occupying a connected region every portion of which contains some matter is called a continuous body or, simply, a continuum.</li>
+</ul></li>
+<li><strong>Material Points</strong>
+<ul>
+<li>At any point in a region occupied by a continuum, the matter in its immediate (infinitesimal) neighborhood can also be thought of as constituting a particle, and we may thus speak of the particles (also called material points) of a continuum.</li>
+</ul></li>
+<li><strong>Displacement</strong>
+<ul>
+<li>A body is said to undergo a displacement when some or all of its particles are moved to occupy different positions in space.</li>
+</ul></li>
+<li><strong>Configuration</strong>
+<ul>
+<li>The correspondence between the particles and the positions occupied by them at a given time is known as the body’s configuration.</li>
+</ul></li>
+<li><strong>Deformation</strong>
+<ul>
+<li>The displacement of a body is said to be rigid if the distances between all pairs of particles are the same in any two configurations. Otherwise, the body is said to undergo deformation.</li>
+</ul></li>
+<li><strong>Kinematics</strong>
+<ul>
+<li>The branch of mechanics dealing with the displacement and motion of bodies is called kinematics.</li>
+</ul></li>
+<li><strong>Force</strong>
+<ul>
+<li>Forces are interactions between bodies that cause them to move, and more specifically to accelerate, relative to each other (unless prevented from doing so by other forces).</li>
+</ul></li>
 </ul>
-</section>
-<section id="continuum" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="continuum"><span class="header-section-number">5.4</span> Continuum</h2>
-<p>A finite body occupying a connected region every portion of which contains some matter is called a continuous body or, simply, a continuum.</p>
-</section>
-<section id="material-points" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="material-points"><span class="header-section-number">5.5</span> Material Points</h2>
-<p>At any point in a region occupied by a continuum, the matter in its immediate (infinitesimal) neighborhood can also be thought of as constituting a particle, and we may thus speak of the particles (also called material points) of a continuum.</p>
-</section>
-<section id="displacement" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="displacement"><span class="header-section-number">5.6</span> Displacement</h2>
-<p>A body is said to undergo a displacement when some or all of its particles are moved to occupy different positions in space.</p>
-</section>
-<section id="configuration" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="configuration"><span class="header-section-number">5.7</span> Configuration</h2>
-<p>The correspondence between the particles and the positions occupied by them at a given time is known as the body’s configuration.</p>
-</section>
-<section id="deformation" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="deformation"><span class="header-section-number">5.8</span> Deformation</h2>
-<p>The displacement of a body is said to be rigid if the distances between all pairs of particles are the same in any two configurations. Otherwise, the body is said to undergo deformation.</p>
-</section>
-<section id="rigid-bodies" class="level2" data-number="5.9">
-<h2 data-number="5.9" class="anchored" data-anchor-id="rigid-bodies"><span class="header-section-number">5.9</span> Rigid bodies</h2>
-<p>Bodies that can undergo only rigid displacements are called rigid bodies. Bodies that are not rigid are deformable.</p>
-</section>
-<section id="motion" class="level2" data-number="5.10">
-<h2 data-number="5.10" class="anchored" data-anchor-id="motion"><span class="header-section-number">5.10</span> Motion</h2>
-<p>Motion is said to occur when the body occupies a succession of different configurations continuously over time.</p>
-</section>
-<section id="rigid-motion" class="level2" data-number="5.11">
-<h2 data-number="5.11" class="anchored" data-anchor-id="rigid-motion"><span class="header-section-number">5.11</span> Rigid Motion</h2>
-<p>A rigid motion is a motion that involves only rigid displacements.</p>
-</section>
-<section id="velocity" class="level2" data-number="5.12">
-<h2 data-number="5.12" class="anchored" data-anchor-id="velocity"><span class="header-section-number">5.12</span> Velocity</h2>
-<p>The rate of change, in time, of the position of a particle is its velocity.</p>
-</section>
-<section id="acceleration" class="level2" data-number="5.13">
-<h2 data-number="5.13" class="anchored" data-anchor-id="acceleration"><span class="header-section-number">5.13</span> Acceleration</h2>
-<p>The velocity may in turn change in time, and its rate of change is the acceleration. The motion of a body is called uniform if the acceleration of all the particles is zero; otherwise, it is called accelerated.</p>
-</section>
-<section id="kinematics" class="level2" data-number="5.14">
-<h2 data-number="5.14" class="anchored" data-anchor-id="kinematics"><span class="header-section-number">5.14</span> Kinematics</h2>
-<p>The branch of mechanics dealing with the displacement and motion of bodies is called kinematics.</p>
-</section>
-<section id="force" class="level2" data-number="5.15">
-<h2 data-number="5.15" class="anchored" data-anchor-id="force"><span class="header-section-number">5.15</span> Force</h2>
-<p>Forces are interactions between bodies that cause them to move, and more specifically to accelerate, relative to each other (unless prevented from doing so by other forces).</p>
-</section>
-<section id="galileo-kepler-newton" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Galileo, Kepler, Newton</h1>
-<section id="gravitational-force" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="gravitational-force"><span class="header-section-number">6.1</span> Gravitational force</h2>
+<!-- ## Rigid bodies
+Bodies that can undergo only rigid displacements are called rigid bodies. Bodies that are not rigid are deformable.
+
+## Motion
+Motion is said to occur when the body occupies a succession of different configurations continuously over time.
+
+## Rigid Motion
+A rigid motion is a motion that involves only rigid displacements.
+
+## Velocity
+The rate of change, in time, of the position of a particle is its velocity.
+
+## Acceleration
+The velocity may in turn change in time, and its rate of change is the acceleration. The motion of a body is called uniform if the acceleration of all the particles is zero; otherwise, it is called accelerated. -->
+<section id="galileo-kepler-newton" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="galileo-kepler-newton"><span class="header-section-number">5.1</span> Galileo, Kepler, Newton</h2>
+<section id="gravitational-force" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="gravitational-force"><span class="header-section-number">5.1.1</span> Gravitational force</h3>
 <p>All bodies on or near the earth are subject to the earth’s gravitational force and, as shown by Galileo in his famous experiments, will fall toward the center of the earth (unless prevented from doing so by other forces) with the same acceleration; the magnitude of this acceleration is denoted by <span class="math inline">\(g\)</span>.</p>
 <div class="historical-box">
 <p><span class="historical-title">Historical Perspective: Galileo Galilei (1564–1642)</span></p>
@@ -579,8 +629,8 @@ window.Quarto = {
 </div>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/icrTzMozNgo" title="Introduction to Dynamics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="equilibrium" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="equilibrium"><span class="header-section-number">6.2</span> Equilibrium</h2>
+<section id="equilibrium" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="equilibrium"><span class="header-section-number">5.1.2</span> Equilibrium</h3>
 <p>If a body’s acceleration is zero, then it is at rest or in a uniform motion. In this case, the forces is said to be in equilibrium. The study of equilibrium is known as statics and constitutes one of the main subjects of this book. Traditionally, statics deals only (or at least primarily) with rigid bodies, while deformable bodies are studied in courses historically called strength of materials (or, more recently, mechanics of materials). In this book <span class="citation" data-cites="lubliner2017introduction">(<a href="../references.html#ref-lubliner2017introduction" role="doc-biblioref">Lubliner and Papadopoulos 2017</a>)</span>, the statics of rigid and deformable solid bodies will be studied in an integrated manner.</p>
 
 
