@@ -124,6 +124,9 @@ MathJax = {
 .historical-box.historical-collapsed .historical-title {
   margin-bottom: 0;
 }
+.historical-box > p:has(> .historical-title) {
+  margin: 0;
+}
 .historical-title::after {
   content: "\25BE";
   position: absolute;
@@ -155,10 +158,15 @@ document.addEventListener("DOMContentLoaded", function () {
     var title = box.querySelector(".historical-title");
     if (!title) return;
 
-    // Gather everything after the title span into a collapsible wrapper.
+    // Pandoc wraps a bare [text]{.class} span in its own <p>. Walk up
+    // to that paragraph (if any) so the whole header line toggles and
+    // so we collect *its* siblings, not the span's (which has none).
+    var titleBlock = title.closest("p") || title;
+
+    // Gather everything after the title block into a collapsible wrapper.
     var contentWrap = document.createElement("div");
     contentWrap.className = "historical-content";
-    var node = title.nextSibling;
+    var node = titleBlock.nextSibling;
     while (node) {
       var next = node.nextSibling;
       contentWrap.appendChild(node);
@@ -168,17 +176,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Start collapsed.
     box.classList.add("historical-collapsed");
-    title.setAttribute("role", "button");
-    title.setAttribute("tabindex", "0");
-    title.setAttribute("aria-expanded", "false");
+    titleBlock.classList.add("historical-title-block");
+    titleBlock.setAttribute("role", "button");
+    titleBlock.setAttribute("tabindex", "0");
+    titleBlock.setAttribute("aria-expanded", "false");
 
     function toggle() {
       var collapsed = box.classList.toggle("historical-collapsed");
-      title.setAttribute("aria-expanded", String(!collapsed));
+      titleBlock.setAttribute("aria-expanded", String(!collapsed));
     }
 
-    title.addEventListener("click", toggle);
-    title.addEventListener("keydown", function (e) {
+    titleBlock.addEventListener("click", toggle);
+    titleBlock.addEventListener("keydown", function (e) {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         toggle();
@@ -516,14 +525,61 @@ window.Quarto = {
 
 <p>The <strong>degree of freedom (DOF)</strong> of a system is the number of independent coordinates needed to describe a configuration of the system.</p>
 <p>Examples:</p>
-<ul>
-<li>A particle free to move in <span class="math inline">\(\mathbb{E}^2\)</span> has 2 DOFs.</li>
-<li>A particle constrained to move on a curve in <span class="math inline">\(\mathbb{E}^2\)</span> has 1 DOF.</li>
-<li>Two particles free to move in <span class="math inline">\(\mathbb{E}^2\)</span> have a combined total of 4 DOFs.</li>
-<li>If two particles in <span class="math inline">\(\mathbb{E}^2\)</span> are constrained to move on the same curve, they have 2 DOFs.</li>
-<li>If two particles in <span class="math inline">\(\mathbb{E}^2\)</span> are connected by a rigid rod, they have 3 DOFs. The constraint <span class="math inline">\(\lnorm{\bf r}_{B/A}\rnorm = l\,\forall t\)</span> provides a relationship between their coordinates that eliminates one DOF.</li>
-<li>If two particles in <span class="math inline">\(\mathbb{E}^2\)</span> are connected by a rigid rod and constrained to move on a curve, they have 1 DOF.</li>
-</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>System</th>
+<th style="text-align: center;">DOFs</th>
+<th style="text-align: center;">Constraints</th>
+<th>Constraint equation(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A particle free to move in <span class="math inline">\(\mathbb{E}^2\)</span></td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td>A particle constrained to move on a curve in <span class="math inline">\(\mathbb{E}^2\)</span></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td>(curve equation, implicit)</td>
+</tr>
+<tr class="odd">
+<td>Two particles free to move in <span class="math inline">\(\mathbb{E}^2\)</span></td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td>Two particles in <span class="math inline">\(\mathbb{E}^2\)</span> constrained to move on the same curve</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td>(curve equation for each particle, implicit)</td>
+</tr>
+<tr class="odd">
+<td>Two particles in <span class="math inline">\(\mathbb{E}^2\)</span> connected by a rigid rod</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td><span class="math inline">\(\lnorm{\bf r}_{B/A}\rnorm = l\,\forall t\)</span></td>
+</tr>
+<tr class="even">
+<td>Two particles in <span class="math inline">\(\mathbb{E}^2\)</span> connected by a rigid rod <em>and</em> constrained to move on a curve</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3</td>
+<td><span class="math inline">\(\lnorm{\bf r}_{B/A}\rnorm = l\,\forall t\)</span>; curve equation for each particle (implicit)</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>number of constraints</strong> is the number of DOFs the unconstrained system would have (2 per free particle in <span class="math inline">\(\mathbb{E}^2\)</span>) minus the actual number of DOFs; each independent constraint equation removes exactly one DOF.</p>
 <hr>
 <p><strong>Example:</strong> Consider two particles in smooth vertical slots. If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> move independently, the system has 2 DOFs. If connected by an inextensible cable, the system has 1 DOF.</p>
 <p>The inextensibility constraint <span class="math inline">\(\ell = \text{const.}\)</span> can be written as: <span class="math display">\[\begin{align}

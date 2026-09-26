@@ -140,6 +140,14 @@ Note the components of acceleration vector:
 - $r\dot{\theta}^2$: centripetal
 - $2\dot{r}\dot{\theta}$: Coriolis
 
+::: {.historical-box}
+[Historical Perspective: Gaspard-Gustave de Coriolis (1792--1843)]{.historical-title}
+
+Coriolis was a French mathematician and mechanical engineer at the École Polytechnique. His 1835 memoir *Sur les équations du mouvement relatif des systèmes de corps* worked out, for the first time in full generality, the extra terms that appear when Newton's laws are written for an observer in a rotating frame -- motivated not by weather or ocean currents, but by the mechanics of rotating machinery such as waterwheels and turbines. The term $2\dot{r}\dot{\theta}$ above is the one that now carries his name.
+
+The same underlying fact -- that differentiating a vector expressed in a basis which is itself rotating produces terms beyond the plain derivatives of its components -- had already appeared, without a name, in the Serret-Frenet formulae for a particle tracing a fixed space curve. It took much longer, well into the following century, for "the Coriolis effect" to enter popular use, once physicists and meteorologists adopted it to explain the deflection of winds and ocean currents on the rotating Earth.
+:::
+
 We may also introduce the notation
 \begin{align*}
     {\bf r} &= r{\bf e}_r+0{\bf e}_\theta\\
