@@ -323,7 +323,7 @@ Referring to the above triangle with interior angles $A$, $B$, and $C$ and with 
 \end{tikzpicture}
 ```
 
-**2.** Resolve the horizontal force $F$ into components along the $u$ and $v$ axes and determine the magnitudes of the components.
+**2.** Resolve the horizontal force ${\bf F}$ into components along the ${\bf u}$ and ${\bf v}$ basis and determine the magnitudes of the components, noting that ${\bf u}\cdot{\bf u}=1$ and ${\bf v}\cdot{\bf v}=1$
 
 ```{r}
 #| engine: tikz

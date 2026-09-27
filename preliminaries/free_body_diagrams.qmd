@@ -32,9 +32,9 @@ For a frictionless massless pulley, the tension in the string on either side of 
 
 ![](../figures/free_body_diagrams/problems/p1_setup.png){width=50%}
 
-::: {.callout-note title="Answer" collapse="true"}
+<!-- ::: {.callout-note title="Answer" collapse="true"}
 ![](../figures/free_body_diagrams/problems/p1_fbd.png){width=50%}
-:::
+::: -->
 
 **2.** Draw the FBD of the horizontal beam.
 
@@ -48,9 +48,9 @@ For a frictionless massless pulley, the tension in the string on either side of 
 
 ![](../figures/free_body_diagrams/problems/p3_setup.png){width=50%}
 
-::: {.callout-note title="Answer" collapse="true"}
+<!-- ::: {.callout-note title="Answer" collapse="true"}
 ![](../figures/free_body_diagrams/problems/p3_fbd.png){width=50%}
-:::
+::: -->
 
 **4.** Draw the FBD of the bar.
 
@@ -64,9 +64,9 @@ For a frictionless massless pulley, the tension in the string on either side of 
 
 ![](../figures/free_body_diagrams/problems/p5_setup.png){width=50%}
 
-::: {.callout-note title="Answer" collapse="true"}
+<!-- ::: {.callout-note title="Answer" collapse="true"}
 ![](../figures/free_body_diagrams/problems/p5_fbd.png){width=50%}
-:::
+::: -->
 
 **6.** Draw the FBDs of disks $A$ and $B$ each separately.
 
@@ -128,14 +128,14 @@ For a frictionless massless pulley, the tension in the string on either side of 
 
 ![](../figures/free_body_diagrams/problems/p13_setup.png){width=50%}
 
-::: {.callout-note title="Answer" collapse="true"}
+<!-- ::: {.callout-note title="Answer" collapse="true"}
 ![](../figures/free_body_diagrams/problems/p13_fbd.png){width=50%}
-:::
+::: -->
 
-**14.** Draw the FBD of each pulley.
+<!-- **14.** Draw the FBD of each pulley.
 
 ![](../figures/free_body_diagrams/problems/p14_setup.png){width=50%}
 
 ::: {.callout-note title="Answer" collapse="true"}
 ![](../figures/free_body_diagrams/problems/p14_fbd.png){width=50%}
-:::
+::: -->
