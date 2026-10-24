@@ -1,0 +1,21 @@
+<!--
+  Sign-in email for MECH230 notes.
+  Paste this into Supabase: Authentication -> Emails -> Templates,
+  in BOTH the "Magic Link" and the "Confirm signup" templates.
+  Subject for both:  Your MECH230 sign-in code: {{ .Token }}
+
+  The link sends the student back to the page they were on with a one-time
+  token after the "#". Email scanners (such as Outlook Safe Links) open the
+  page without running its script, so they cannot use up the token.
+-->
+<h2>Sign in to the MECH230 notes</h2>
+<p>Click the button below to sign in:</p>
+<p>
+  <a href="{{ .RedirectTo }}#mech230-login={{ .TokenHash }}"
+     style="display:inline-block;padding:10px 18px;background:#2780e3;color:#ffffff;text-decoration:none;border-radius:4px;">
+    Sign in to MECH230
+  </a>
+</p>
+<p>Or type this code on the page where you asked to sign in:</p>
+<p style="font-size:24px;font-weight:bold;letter-spacing:4px;">{{ .Token }}</p>
+<p style="color:#666666;font-size:13px;">The link and the code work once and expire after one hour. If you did not ask to sign in, you can ignore this email.</p>

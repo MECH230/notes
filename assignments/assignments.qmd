@@ -1,6 +1,13 @@
 ---
 title: "Assignments"
+pyodide:
+  packages:
+    - numpy
+    - scipy
+    - matplotlib
 ---
+
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
 This chapter collects the computational assignments for the course. Each section is a self-contained assignment: follow the steps, then do the exercises at the end.
 

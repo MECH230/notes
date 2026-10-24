@@ -11,6 +11,10 @@ By the end you should be able to:
 3. Convert the solution into positions and animate it with Matplotlib.
 4. Judge whether a numerical solution can be trusted.
 
+::: {.callout-note title="Code you can run on this page"}
+Cells with a **Run Code** button run Python directly in your browser, with nothing to install. Edit the code and run it as often as you like. The first run downloads Python and its packages, which can take up to a minute; after that, runs are quick.
+:::
+
 ### What you need {#what-you-need}
 
 - **Python 3** with three packages: `numpy` (arrays and math), `scipy` (the ODE solver) and `matplotlib` (plots and animations). Install them with
@@ -60,6 +64,91 @@ Four. Each degree of freedom contributes a coordinate and its rate: $x_1 = \thet
 :::
 :::
 
+:::: {.content-visible when-format="html"}
+
+#### Your turn: write the right-hand side
+
+The solver needs a Python function `dxdt(t, x)` that takes the time `t` and the state `x = [x1, x2]` and returns $[\dot{x}_1, \dot{x}_2]$. Python counts from 0, so $x_1$ is `x[0]` and $x_2$ is `x[1]`.
+
+Replace the blanks `______` using the system above, then press **Run Code**. The last line evaluates your function at $\theta = 0.5$ rad, $\dot{\theta} = 1.2$ rad/s so it can be checked.
+
+```{pyodide}
+#| exercise: ex_dxdt
+#| setup: true
+import numpy as np
+g = 9.81
+l = 1
+```
+
+```{pyodide}
+#| exercise: ex_dxdt
+def dxdt(t, x):
+    xdot1 = ______
+    xdot2 = ______
+    return [xdot1, xdot2]
+
+dxdt(0, [0.5, 1.2])
+```
+
+```{pyodide}
+#| exercise: ex_dxdt
+#| check: true
+import numpy as np
+g, l = 9.81, 1
+expected = [1.2, -g/l*np.sin(0.5)]
+try:
+    got = [float(v) for v in result]
+except Exception:
+    got = None
+if got is None or len(got) != 2:
+    feedback = {"correct": False, "message": "Your function should return a list of two numbers: [xdot1, xdot2]."}
+elif np.allclose(got, expected):
+    feedback = {"correct": True, "message": "Correct! This is exactly the function the solver needs."}
+elif np.allclose(got, expected[::-1]):
+    feedback = {"correct": False, "message": "Close: you have swapped the two entries. The first entry is the rate of x1, which is x2."}
+elif np.isclose(got[0], 1.2) and np.isclose(got[1], -g/l*0.5):
+    feedback = {"correct": False, "message": "You used theta instead of sin(theta). The pendulum equation is nonlinear: use np.sin(x[0])."}
+elif np.isclose(got[0], 1.2) and np.isclose(got[1], g/l*np.sin(0.5)):
+    feedback = {"correct": False, "message": "Check the sign of xdot2. Gravity pulls the pendulum back toward theta = 0."}
+elif np.isclose(got[0], 1.2):
+    feedback = {"correct": False, "message": "xdot1 is right. Look again at the equation for xdot2."}
+else:
+    feedback = {"correct": False, "message": "Not yet. Remember that x[0] is theta and x[1] is the angular velocity."}
+feedback
+```
+
+::: {.hint exercise="ex_dxdt"}
+::: {.callout-note collapse="false"}
+## Hint 1
+The first equation of the system is $\dot{x}_1 = x_2$. In code, $x_2$ is `x[1]`.
+:::
+:::
+
+::: {.hint exercise="ex_dxdt"}
+::: {.callout-note collapse="false"}
+## Hint 2
+The second equation is $\dot{x}_2 = -\frac{g}{\ell}\sin(x_1)$. Use `np.sin` for the sine, and `g` and `l` are already defined.
+:::
+:::
+
+::: {.solution exercise="ex_dxdt"}
+::: {.callout-tip collapse="false"}
+## Solution
+```python
+def dxdt(t, x):
+    xdot1 = x[1]
+    xdot2 = -g/l*np.sin(x[0])
+    return [xdot1, xdot2]
+```
+:::
+:::
+
+::::
+
+:::: {.content-visible unless-format="html"}
+*This exercise is interactive: complete it in the online version of these notes.*
+::::
+
 ### Step 3: Solve with `solve_ivp`
 
 First, import the packages and set the parameters.
@@ -74,7 +163,7 @@ g = 9.81    # Gravitational acceleration in SI units
 l = 1       # Length of pendulum chord in meters
 ```
 
-Next, write the right-hand side ${\bf f}(t, {\bf x})$ as a Python function. It takes the time `t` and the state `x = [x1, x2]` and returns $[\dot{x}_1, \dot{x}_2]$. Python counts from 0, so $x_1$ is `x[0]` and $x_2$ is `x[1]`.
+Next, add the right-hand side ${\bf f}(t, {\bf x})$, the function `dxdt` you wrote above.
 
 ```python
 # Define the ODE function
@@ -127,6 +216,45 @@ plt.show()
 The first maximum after release is at about $t = 2.09$ s, so the period is about $2.09$ s, roughly 4% longer than $T_0$. The period of the nonlinear pendulum grows with the amplitude. At $45^\circ$, $\sin(\theta)$ is already noticeably smaller than $\theta$, so the restoring torque is weaker than the linear model predicts.
 :::
 :::
+
+:::: {.content-visible when-format="html"}
+
+#### Try it in your browser
+
+Here is everything from this step in one cell. Change the length `l` or the initial angle `theta0`, then press **Run Code** to see how the motion changes.
+
+```{pyodide}
+#| autorun: false
+#| fig-width: 7
+#| fig-height: 3.5
+import numpy as np
+from scipy.integrate import solve_ivp
+import matplotlib.pyplot as plt
+
+g = 9.81            # gravitational acceleration (m/s^2)
+l = 1               # length of the pendulum (m)
+theta0 = np.pi/4    # initial angle (rad)
+thetadot0 = 0       # initial angular velocity (rad/s)
+
+def dxdt(t, x):
+    xdot1 = x[1]
+    xdot2 = -g/l*np.sin(x[0])
+    return [xdot1, xdot2]
+
+solution = solve_ivp(dxdt, (0, 5), [theta0, thetadot0], t_eval=np.linspace(0, 5, 100))
+
+plt.plot(solution.t, solution.y[0])
+plt.xlabel("t (s)")
+plt.ylabel("theta (rad)")
+plt.grid(alpha=0.3)
+plt.show()
+```
+
+::::
+
+:::: {.content-visible unless-format="html"}
+*An interactive version of this code is available in the online version of these notes.*
+::::
 
 ### Step 4: From angle to position
 
@@ -289,6 +417,47 @@ A pendulum released from rest cannot rise higher than where it started, so $\the
 should stay constant. Solve for $\theta_0 = \pi/4$ over 60 s, compute $e$ at every stored time, and plot it. Then solve again with `rtol=1e-8, atol=1e-10` and compare. What does this tell you about the default settings?
 
 **3. Linear versus nonlinear.** On the same axes, plot $\theta(t)$ from the nonlinear equation and from the linearized equation $\ddot{\theta} + \frac{g}{\ell}\theta = 0$, first for $\theta_0 = 5^\circ$ and then for $\theta_0 = 60^\circ$. When is the linear model good enough?
+
+:::: {.content-visible when-format="html"}
+
+You can work in the cell below. The nonlinear solution is already plotted; add the linear one.
+
+```{pyodide}
+#| autorun: false
+#| fig-width: 7
+#| fig-height: 3.5
+import numpy as np
+from scipy.integrate import solve_ivp
+import matplotlib.pyplot as plt
+
+g = 9.81
+l = 1
+theta0 = np.radians(5)
+t_eval = np.linspace(0, 10, 500)
+
+def nonlinear(t, x):
+    return [x[1], -g/l*np.sin(x[0])]
+
+# Write the linearized system here
+def linear(t, x):
+    return [x[1], 0]    # replace 0 with the linear term
+
+sol_nl = solve_ivp(nonlinear, (0, 10), [theta0, 0], t_eval=t_eval, rtol=1e-8, atol=1e-10)
+sol_l = solve_ivp(linear, (0, 10), [theta0, 0], t_eval=t_eval, rtol=1e-8, atol=1e-10)
+
+plt.plot(sol_nl.t, np.degrees(sol_nl.y[0]), label="nonlinear")
+plt.plot(sol_l.t, np.degrees(sol_l.y[0]), "--", label="linear")
+plt.xlabel("t (s)")
+plt.ylabel("theta (deg)")
+plt.legend()
+plt.show()
+```
+
+::::
+
+:::: {.content-visible unless-format="html"}
+*An interactive starter cell for this exercise is available in the online version of these notes.*
+::::
 
 **4. Add damping.** Air resistance adds a term to the equation of motion:
 \begin{align}

@@ -63,7 +63,8 @@ bibliography: references.bib
 
 
 format:
-  html:
+  live-html:
+    include-after-body: _includes/auth.html
     theme:
       - cosmo # Try: lumen, flatly, quartz, or materia
       - brand
