@@ -80,6 +80,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-ea8ef702a3f84812c808b1cddcfad5b3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
 <link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -109,6 +111,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <script>
 MathJax = {
   tex: {
@@ -589,6 +593,19 @@ window.Quarto = {
 <li>Convert the solution into positions and animate it with Matplotlib.</li>
 <li>Judge whether a numerical solution can be trusted.</li>
 </ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Code you can run on this page">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Code you can run on this page
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cells with a <strong>Run Code</strong> button run Python directly in your browser, with nothing to install. Edit the code and run it as often as you like. The first run downloads Python and its packages, which can take up to a minute; after that, runs are quick.</p>
+</div>
+</div>
 <section id="what-you-need" class="level3" data-number="24.1.1">
 <h3 data-number="24.1.1" class="anchored" data-anchor-id="what-you-need"><span class="header-section-number">24.1.1</span> What you need</h3>
 <ul>
@@ -640,7 +657,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> How many first-order equations would you need for a double pendulum, which has two degrees of freedom?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -649,7 +666,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Four. Each degree of freedom contributes a coordinate and its rate: <span class="math inline">\(x_1 = \theta_1\)</span>, <span class="math inline">\(x_2 = \theta_2\)</span>, <span class="math inline">\(x_3 = \dot{\theta}_1\)</span>, <span class="math inline">\(x_4 = \dot{\theta}_2\)</span>. In general, <span class="math inline">\(n\)</span> second-order equations become <span class="math inline">\(2n\)</span> first-order equations.</p>
 </div>
@@ -657,33 +674,115 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<section id="your-turn-write-the-right-hand-side" class="level4" data-number="24.1.3.1">
+<h4 data-number="24.1.3.1" class="anchored" data-anchor-id="your-turn-write-the-right-hand-side"><span class="header-section-number">24.1.3.1</span> Your turn: write the right-hand side</h4>
+<p>The solver needs a Python function <code>dxdt(t, x)</code> that takes the time <code>t</code> and the state <code>x = [x1, x2]</code> and returns <span class="math inline">\([\dot{x}_1, \dot{x}_2]\)</span>. Python counts from 0, so <span class="math inline">\(x_1\)</span> is <code>x[0]</code> and <span class="math inline">\(x_2\)</span> is <code>x[1]</code>.</p>
+<p>Replace the blanks <code>______</code> using the system above, then press <strong>Run Code</strong>. The last line evaluates your function at <span class="math inline">\(\theta = 0.5\)</span> rad, <span class="math inline">\(\dot{\theta} = 1.2\)</span> rad/s so it can be checked.</p>
+<div class="cell" data-exercise="ex_dxdt" data-setup="true">
+<script type="exercise-setup-ex_dxdt-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiZXhfZHhkdCIsInNldHVwIjp0cnVlfSwiY29kZSI6ImltcG9ydCBudW1weSBhcyBucFxuZyA9IDkuODFcbmwgPSAxIn0=
+</script>
+</div>
+<div class="cell" data-exercise="ex_dxdt">
+<div>
+<div id="pyodide-2" class="exercise-cell">
+
+</div>
+<script type="pyodide-2-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiZXhfZHhkdCJ9LCJjb2RlIjoiZGVmIGR4ZHQodCwgeCk6XG4gICAgeGRvdDEgPSBfX19fX19cbiAgICB4ZG90MiA9IF9fX19fX1xuICAgIHJldHVybiBbeGRvdDEsIHhkb3QyXVxuXG5keGR0KDAsIFswLjUsIDEuMl0pIn0=
+</script>
+</div>
+</div>
+<div class="cell" data-exercise="ex_dxdt" data-check="true">
+<script type="exercise-check-ex_dxdt-contents">
+eyJhdHRyIjp7ImNoZWNrIjp0cnVlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJleGVyY2lzZSI6ImV4X2R4ZHQifSwiY29kZSI6ImltcG9ydCBudW1weSBhcyBucFxuZywgbCA9IDkuODEsIDFcbmV4cGVjdGVkID0gWzEuMiwgLWcvbCpucC5zaW4oMC41KV1cbnRyeTpcbiAgICBnb3QgPSBbZmxvYXQodikgZm9yIHYgaW4gcmVzdWx0XVxuZXhjZXB0IEV4Y2VwdGlvbjpcbiAgICBnb3QgPSBOb25lXG5pZiBnb3QgaXMgTm9uZSBvciBsZW4oZ290KSAhPSAyOlxuICAgIGZlZWRiYWNrID0ge1wiY29ycmVjdFwiOiBGYWxzZSwgXCJtZXNzYWdlXCI6IFwiWW91ciBmdW5jdGlvbiBzaG91bGQgcmV0dXJuIGEgbGlzdCBvZiB0d28gbnVtYmVyczogW3hkb3QxLCB4ZG90Ml0uXCJ9XG5lbGlmIG5wLmFsbGNsb3NlKGdvdCwgZXhwZWN0ZWQpOlxuICAgIGZlZWRiYWNrID0ge1wiY29ycmVjdFwiOiBUcnVlLCBcIm1lc3NhZ2VcIjogXCJDb3JyZWN0ISBUaGlzIGlzIGV4YWN0bHkgdGhlIGZ1bmN0aW9uIHRoZSBzb2x2ZXIgbmVlZHMuXCJ9XG5lbGlmIG5wLmFsbGNsb3NlKGdvdCwgZXhwZWN0ZWRbOjotMV0pOlxuICAgIGZlZWRiYWNrID0ge1wiY29ycmVjdFwiOiBGYWxzZSwgXCJtZXNzYWdlXCI6IFwiQ2xvc2U6IHlvdSBoYXZlIHN3YXBwZWQgdGhlIHR3byBlbnRyaWVzLiBUaGUgZmlyc3QgZW50cnkgaXMgdGhlIHJhdGUgb2YgeDEsIHdoaWNoIGlzIHgyLlwifVxuZWxpZiBucC5pc2Nsb3NlKGdvdFswXSwgMS4yKSBhbmQgbnAuaXNjbG9zZShnb3RbMV0sIC1nL2wqMC41KTpcbiAgICBmZWVkYmFjayA9IHtcImNvcnJlY3RcIjogRmFsc2UsIFwibWVzc2FnZVwiOiBcIllvdSB1c2VkIHRoZXRhIGluc3RlYWQgb2Ygc2luKHRoZXRhKS4gVGhlIHBlbmR1bHVtIGVxdWF0aW9uIGlzIG5vbmxpbmVhcjogdXNlIG5wLnNpbih4WzBdKS5cIn1cbmVsaWYgbnAuaXNjbG9zZShnb3RbMF0sIDEuMikgYW5kIG5wLmlzY2xvc2UoZ290WzFdLCBnL2wqbnAuc2luKDAuNSkpOlxuICAgIGZlZWRiYWNrID0ge1wiY29ycmVjdFwiOiBGYWxzZSwgXCJtZXNzYWdlXCI6IFwiQ2hlY2sgdGhlIHNpZ24gb2YgeGRvdDIuIEdyYXZpdHkgcHVsbHMgdGhlIHBlbmR1bHVtIGJhY2sgdG93YXJkIHRoZXRhID0gMC5cIn1cbmVsaWYgbnAuaXNjbG9zZShnb3RbMF0sIDEuMik6XG4gICAgZmVlZGJhY2sgPSB7XCJjb3JyZWN0XCI6IEZhbHNlLCBcIm1lc3NhZ2VcIjogXCJ4ZG90MSBpcyByaWdodC4gTG9vayBhZ2FpbiBhdCB0aGUgZXF1YXRpb24gZm9yIHhkb3QyLlwifVxuZWxzZTpcbiAgICBmZWVkYmFjayA9IHtcImNvcnJlY3RcIjogRmFsc2UsIFwibWVzc2FnZVwiOiBcIk5vdCB5ZXQuIFJlbWVtYmVyIHRoYXQgeFswXSBpcyB0aGV0YSBhbmQgeFsxXSBpcyB0aGUgYW5ndWxhciB2ZWxvY2l0eS5cIn1cbmZlZWRiYWNrIn0=
+</script>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="ex_dxdt">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hint 1
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>The first equation of the system is <span class="math inline">\(\dot{x}_1 = x_2\)</span>. In code, <span class="math inline">\(x_2\)</span> is <code>x[1]</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="ex_dxdt">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hint 2
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>The second equation is <span class="math inline">\(\dot{x}_2 = -\frac{g}{\ell}\sin(x_1)\)</span>. Use <code>np.sin</code> for the sine, and <code>g</code> and <code>l</code> are already defined.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="webr-ojs-exercise exercise-solution d-none" data-exercise="ex_dxdt">
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dxdt(t, x):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    xdot1 <span class="op">=</span> x[<span class="dv">1</span>]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    xdot2 <span class="op">=</span> <span class="op">-</span>g<span class="op">/</span>l<span class="op">*</span>np.sin(x[<span class="dv">0</span>])</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [xdot1, xdot2]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="step-3-solve-with-solve_ivp" class="level3" data-number="24.1.4">
 <h3 data-number="24.1.4" class="anchored" data-anchor-id="step-3-solve-with-solve_ivp"><span class="header-section-number">24.1.4</span> Step 3: Solve with <code>solve_ivp</code></h3>
 <p>First, import the packages and set the parameters.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> solve_ivp</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.animation <span class="im">as</span> animation</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span>    <span class="co"># Gravitational acceleration in SI units</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> <span class="dv">1</span>       <span class="co"># Length of pendulum chord in meters</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Next, write the right-hand side <span class="math inline">\({\bf f}(t, {\bf x})\)</span> as a Python function. It takes the time <code>t</code> and the state <code>x = [x1, x2]</code> and returns <span class="math inline">\([\dot{x}_1, \dot{x}_2]\)</span>. Python counts from 0, so <span class="math inline">\(x_1\)</span> is <code>x[0]</code> and <span class="math inline">\(x_2\)</span> is <code>x[1]</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the ODE function</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dxdt(t, x):</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    xdot1 <span class="op">=</span> x[<span class="dv">1</span>]</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    xdot2 <span class="op">=</span> <span class="op">-</span>g<span class="op">/</span>l<span class="op">*</span>np.sin(x[<span class="dv">0</span>])</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [xdot1, xdot2]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> solve_ivp</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.animation <span class="im">as</span> animation</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span>    <span class="co"># Gravitational acceleration in SI units</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> <span class="dv">1</span>       <span class="co"># Length of pendulum chord in meters</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Next, add the right-hand side <span class="math inline">\({\bf f}(t, {\bf x})\)</span>, the function <code>dxdt</code> you wrote above.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the ODE function</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dxdt(t, x):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    xdot1 <span class="op">=</span> x[<span class="dv">1</span>]</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    xdot2 <span class="op">=</span> <span class="op">-</span>g<span class="op">/</span>l<span class="op">*</span>np.sin(x[<span class="dv">0</span>])</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [xdot1, xdot2]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now choose the time interval and the initial conditions, and call the solver. Here the pendulum is released from rest at <span class="math inline">\(\theta_0 = \pi/4\)</span> (45°).</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the time span and initial condition</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>t_span <span class="op">=</span> (<span class="dv">0</span>, <span class="dv">5</span>)          <span class="co"># Time interval: from 0 to 5 s</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> [np.pi<span class="op">/</span><span class="dv">4</span>, <span class="dv">0</span>]        <span class="co"># theta(0) = pi/4, thetadot(0) = 0</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Solve the ODE</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>solution <span class="op">=</span> solve_ivp(dxdt, t_span, x0, t_eval<span class="op">=</span>np.linspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">100</span>))</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> solution.y[<span class="dv">0</span>]</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>thetadot <span class="op">=</span> solution.y[<span class="dv">1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the time span and initial condition</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>t_span <span class="op">=</span> (<span class="dv">0</span>, <span class="dv">5</span>)          <span class="co"># Time interval: from 0 to 5 s</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> [np.pi<span class="op">/</span><span class="dv">4</span>, <span class="dv">0</span>]        <span class="co"># theta(0) = pi/4, thetadot(0) = 0</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Solve the ODE</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>solution <span class="op">=</span> solve_ivp(dxdt, t_span, x0, t_eval<span class="op">=</span>np.linspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">100</span>))</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> solution.y[<span class="dv">0</span>]</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>thetadot <span class="op">=</span> solution.y[<span class="dv">1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The arguments of <code>solve_ivp</code> are:</p>
 <table class="caption-top table">
 <colgroup>
@@ -717,10 +816,10 @@ window.Quarto = {
 </table>
 <p>The result <code>solution</code> holds the times in <code>solution.t</code> and the states in <code>solution.y</code>: row 0 is <span class="math inline">\(\theta\)</span>, row 1 is <span class="math inline">\(\dot{\theta}\)</span>. By default the solver uses <code>RK45</code>, a Runge–Kutta method that adjusts its own step size.</p>
 <p>Plot <span class="math inline">\(\theta(t)\)</span> to look at the solution:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plt.plot(solution.t, theta)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"t (s)"</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"theta (rad)"</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>plt.plot(solution.t, theta)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"t (s)"</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"theta (rad)"</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../figures/assignments/pendulum_theta.png" class="img-fluid figure-img" style="width:70.0%"></p>
@@ -739,7 +838,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> For small angles, <span class="math inline">\(\sin(\theta) \approx \theta\)</span> and the period is <span class="math inline">\(T_0 = 2\pi\sqrt{\ell/g} \approx 2.01\)</span> s. Read the period off the plot above. Is it the same?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -748,7 +847,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The first maximum after release is at about <span class="math inline">\(t = 2.09\)</span> s, so the period is about <span class="math inline">\(2.09\)</span> s, roughly 4% longer than <span class="math inline">\(T_0\)</span>. The period of the nonlinear pendulum grows with the amplitude. At <span class="math inline">\(45^\circ\)</span>, <span class="math inline">\(\sin(\theta)\)</span> is already noticeably smaller than <span class="math inline">\(\theta\)</span>, so the restoring torque is weaker than the linear model predicts.</p>
 </div>
@@ -756,35 +855,49 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<section id="try-it-in-your-browser" class="level4" data-number="24.1.4.1">
+<h4 data-number="24.1.4.1" class="anchored" data-anchor-id="try-it-in-your-browser"><span class="header-section-number">24.1.4.1</span> Try it in your browser</h4>
+<p>Here is everything from this step in one cell. Change the length <code>l</code> or the initial angle <code>theta0</code>, then press <strong>Run Code</strong> to see how the motion changes.</p>
+<div class="cell" data-autorun="false">
+<div>
+<div id="pyodide-4" class="exercise-cell">
+
+</div>
+<script type="pyodide-4-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJmaWctaGVpZ2h0IjozLjUsImZpZy13aWR0aCI6N30sImNvZGUiOiJpbXBvcnQgbnVtcHkgYXMgbnBcbmZyb20gc2NpcHkuaW50ZWdyYXRlIGltcG9ydCBzb2x2ZV9pdnBcbmltcG9ydCBtYXRwbG90bGliLnB5cGxvdCBhcyBwbHRcblxuZyA9IDkuODEgICAgICAgICAgICAjIGdyYXZpdGF0aW9uYWwgYWNjZWxlcmF0aW9uIChtL3NeMilcbmwgPSAxICAgICAgICAgICAgICAgIyBsZW5ndGggb2YgdGhlIHBlbmR1bHVtIChtKVxudGhldGEwID0gbnAucGkvNCAgICAjIGluaXRpYWwgYW5nbGUgKHJhZClcbnRoZXRhZG90MCA9IDAgICAgICAgIyBpbml0aWFsIGFuZ3VsYXIgdmVsb2NpdHkgKHJhZC9zKVxuXG5kZWYgZHhkdCh0LCB4KTpcbiAgICB4ZG90MSA9IHhbMV1cbiAgICB4ZG90MiA9IC1nL2wqbnAuc2luKHhbMF0pXG4gICAgcmV0dXJuIFt4ZG90MSwgeGRvdDJdXG5cbnNvbHV0aW9uID0gc29sdmVfaXZwKGR4ZHQsICgwLCA1KSwgW3RoZXRhMCwgdGhldGFkb3QwXSwgdF9ldmFsPW5wLmxpbnNwYWNlKDAsIDUsIDEwMCkpXG5cbnBsdC5wbG90KHNvbHV0aW9uLnQsIHNvbHV0aW9uLnlbMF0pXG5wbHQueGxhYmVsKFwidCAocylcIilcbnBsdC55bGFiZWwoXCJ0aGV0YSAocmFkKVwiKVxucGx0LmdyaWQoYWxwaGE9MC4zKVxucGx0LnNob3coKSJ9
+</script>
+</div>
+</div>
+</section>
 </section>
 <section id="step-4-from-angle-to-position" class="level3" data-number="24.1.5">
 <h3 data-number="24.1.5" class="anchored" data-anchor-id="step-4-from-angle-to-position"><span class="header-section-number">24.1.5</span> Step 4: From angle to position</h3>
 <p>To draw the pendulum we need the position of the mass. With the pivot at the origin, <span class="math inline">\(x\)</span> to the right and <span class="math inline">\(y\)</span> up: <span class="math display">\[\begin{align}
     x = \ell\sin(\theta), \qquad y = -\ell\cos(\theta).
 \end{align}\]</span></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> l<span class="op">*</span>np.sin(theta)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="op">-</span>l<span class="op">*</span>np.cos(theta)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> l<span class="op">*</span>np.sin(theta)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="op">-</span>l<span class="op">*</span>np.cos(theta)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>theta</code> is an array, so <code>x</code> and <code>y</code> are arrays too: one position for each of the 100 times.</p>
 </section>
 <section id="step-5-animate-the-pendulum" class="level3" data-number="24.1.6">
 <h3 data-number="24.1.6" class="anchored" data-anchor-id="step-5-animate-the-pendulum"><span class="header-section-number">24.1.6</span> Step 5: Animate the pendulum</h3>
 <p>An animation is a figure whose contents are updated frame by frame. First, set up the figure with the pendulum in its initial position: a line for the string and a circle for the mass.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the figure and axis</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()          <span class="co"># creating figure and axes objects</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>ax.set_xlim([<span class="op">-</span><span class="fl">1.2</span><span class="op">*</span>l, <span class="fl">1.2</span><span class="op">*</span>l])      <span class="co"># limits of x-axis</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>ax.set_ylim([<span class="op">-</span><span class="fl">1.2</span><span class="op">*</span>l, <span class="fl">0.2</span><span class="op">*</span>l])      <span class="co"># limits of y-axis</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set axis labels and title</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"y"</span>)</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Animating motion of pendulum"</span>)</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Drawing a line from the origin to the mass m.</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># This line represents the chord of the pendulum.</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>line, <span class="op">=</span> ax.plot([<span class="dv">0</span>, x[<span class="dv">0</span>]], [<span class="dv">0</span>, y[<span class="dv">0</span>]], color<span class="op">=</span><span class="st">'black'</span>)</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>circle <span class="op">=</span> plt.Circle((x[<span class="dv">0</span>], y[<span class="dv">0</span>]), <span class="fl">0.1</span>, color<span class="op">=</span><span class="st">'blue'</span>, fill<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>ax.add_patch(circle)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the figure and axis</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()          <span class="co"># creating figure and axes objects</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>ax.set_xlim([<span class="op">-</span><span class="fl">1.2</span><span class="op">*</span>l, <span class="fl">1.2</span><span class="op">*</span>l])      <span class="co"># limits of x-axis</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>ax.set_ylim([<span class="op">-</span><span class="fl">1.2</span><span class="op">*</span>l, <span class="fl">0.2</span><span class="op">*</span>l])      <span class="co"># limits of y-axis</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set axis labels and title</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"y"</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Animating motion of pendulum"</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Drawing a line from the origin to the mass m.</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co"># This line represents the chord of the pendulum.</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>line, <span class="op">=</span> ax.plot([<span class="dv">0</span>, x[<span class="dv">0</span>]], [<span class="dv">0</span>, y[<span class="dv">0</span>]], color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>circle <span class="op">=</span> plt.Circle((x[<span class="dv">0</span>], y[<span class="dv">0</span>]), <span class="fl">0.1</span>, color<span class="op">=</span><span class="st">'blue'</span>, fill<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>ax.add_patch(circle)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-note callout-titled" title="Why `set_aspect('equal')`?">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -799,18 +912,18 @@ window.Quarto = {
 </div>
 </div>
 <p>Next, write an <code>update</code> function. Matplotlib calls it once per frame with the frame number, and it moves the line and the circle to that frame’s position.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Update function for animation</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update(frame):</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    line.set_xdata([<span class="dv">0</span>, x[frame]])</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    line.set_ydata([<span class="dv">0</span>, y[frame]])</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    circle.center <span class="op">=</span> (x[frame], y[frame])</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> line, circle,</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Update function for animation</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update(frame):</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    line.set_xdata([<span class="dv">0</span>, x[frame]])</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    line.set_ydata([<span class="dv">0</span>, y[frame]])</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    circle.center <span class="op">=</span> (x[frame], y[frame])</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> line, circle,</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Finally, create the animation, save it as an <code>.mp4</code> video and show it.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create animation</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>ani <span class="op">=</span> animation.FuncAnimation(fig, update, frames<span class="op">=</span>np.size(x), interval<span class="op">=</span><span class="dv">50</span>, blit<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>ani.save(<span class="st">'pendulum_animation.mp4'</span>, writer<span class="op">=</span><span class="st">'ffmpeg'</span>, fps<span class="op">=</span><span class="dv">20</span>)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create animation</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>ani <span class="op">=</span> animation.FuncAnimation(fig, update, frames<span class="op">=</span>np.size(x), interval<span class="op">=</span><span class="dv">50</span>, blit<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>ani.save(<span class="st">'pendulum_animation.mp4'</span>, writer<span class="op">=</span><span class="st">'ffmpeg'</span>, fps<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><code>frames=np.size(x)</code> makes one frame per stored time (100 frames).</li>
 <li><code>interval=50</code> shows each frame for 50 ms. Because the 100 stored times are 0.05 s apart, the animation plays in real time.</li>
@@ -833,7 +946,7 @@ window.Quarto = {
 <section id="the-complete-script" class="level3" data-number="24.1.7">
 <h3 data-number="24.1.7" class="anchored" data-anchor-id="the-complete-script"><span class="header-section-number">24.1.7</span> The complete script</h3>
 <div class="callout callout-style-default callout-note callout-titled" title="Full code: animation_simple_pendulum.py">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -842,69 +955,69 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># xdot1 = x2</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># xdot2 = -g/l*sin(x1)</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> solve_ivp</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.animation <span class="im">as</span> animation</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span>    <span class="co"># Gravitational acceleration in SI units</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> <span class="dv">1</span>       <span class="co"># Length of pendulum chord in meters</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the ODE function</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dxdt(t, x):</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    xdot1 <span class="op">=</span> x[<span class="dv">1</span>]</span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    xdot2 <span class="op">=</span> <span class="op">-</span>g<span class="op">/</span>l<span class="op">*</span>np.sin(x[<span class="dv">0</span>])</span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [xdot1, xdot2]</span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the time span and initial condition</span></span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>t_span <span class="op">=</span> (<span class="dv">0</span>, <span class="dv">5</span>)          <span class="co"># Time interval: from 0 to 5 s</span></span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> [np.pi<span class="op">/</span><span class="dv">4</span>, <span class="dv">0</span>]        <span class="co"># theta(0) = pi/4, thetadot(0) = 0</span></span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Solve the ODE</span></span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>solution <span class="op">=</span> solve_ivp(dxdt, t_span, x0, t_eval<span class="op">=</span>np.linspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">100</span>))</span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> solution.y[<span class="dv">0</span>]</span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>thetadot <span class="op">=</span> solution.y[<span class="dv">1</span>]</span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> l<span class="op">*</span>np.sin(theta)</span>
-<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="op">-</span>l<span class="op">*</span>np.cos(theta)</span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the figure and axis</span></span>
-<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()          <span class="co"># creating figure and axes objects</span></span>
-<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>ax.set_xlim([<span class="op">-</span><span class="fl">1.2</span><span class="op">*</span>l, <span class="fl">1.2</span><span class="op">*</span>l])      <span class="co"># limits of x-axis</span></span>
-<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>ax.set_ylim([<span class="op">-</span><span class="fl">1.2</span><span class="op">*</span>l, <span class="fl">0.2</span><span class="op">*</span>l])      <span class="co"># limits of y-axis</span></span>
-<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>)</span>
-<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Set axis labels</span></span>
-<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
-<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"y"</span>)</span>
-<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Set plot title</span></span>
-<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Animating motion of pendulum"</span>)</span>
-<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Drawing a line from the origin to the mass m.</span></span>
-<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a><span class="co"># This line represents the chord of the pendulum.</span></span>
-<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a>line, <span class="op">=</span> ax.plot([<span class="dv">0</span>, x[<span class="dv">0</span>]], [<span class="dv">0</span>, y[<span class="dv">0</span>]], color<span class="op">=</span><span class="st">'black'</span>)</span>
-<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>circle <span class="op">=</span> plt.Circle((x[<span class="dv">0</span>], y[<span class="dv">0</span>]), <span class="fl">0.1</span>, color<span class="op">=</span><span class="st">'blue'</span>, fill<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>ax.add_patch(circle)</span>
-<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Update function for animation</span></span>
-<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update(frame):</span>
-<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a>    line.set_xdata([<span class="dv">0</span>, x[frame]])</span>
-<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>    line.set_ydata([<span class="dv">0</span>, y[frame]])</span>
-<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a>    circle.center <span class="op">=</span> (x[frame], y[frame])</span>
-<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> line, circle,</span>
-<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Create animation</span></span>
-<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a>ani <span class="op">=</span> animation.FuncAnimation(fig, update, frames<span class="op">=</span>np.size(x), interval<span class="op">=</span><span class="dv">50</span>, blit<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>ani.save(<span class="st">'pendulum_animation.mp4'</span>, writer<span class="op">=</span><span class="st">'ffmpeg'</span>, fps<span class="op">=</span><span class="dv">20</span>)</span>
-<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># xdot1 = x2</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># xdot2 = -g/l*sin(x1)</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> solve_ivp</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.animation <span class="im">as</span> animation</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span>    <span class="co"># Gravitational acceleration in SI units</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> <span class="dv">1</span>       <span class="co"># Length of pendulum chord in meters</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the ODE function</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dxdt(t, x):</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    xdot1 <span class="op">=</span> x[<span class="dv">1</span>]</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    xdot2 <span class="op">=</span> <span class="op">-</span>g<span class="op">/</span>l<span class="op">*</span>np.sin(x[<span class="dv">0</span>])</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [xdot1, xdot2]</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the time span and initial condition</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>t_span <span class="op">=</span> (<span class="dv">0</span>, <span class="dv">5</span>)          <span class="co"># Time interval: from 0 to 5 s</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> [np.pi<span class="op">/</span><span class="dv">4</span>, <span class="dv">0</span>]        <span class="co"># theta(0) = pi/4, thetadot(0) = 0</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Solve the ODE</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>solution <span class="op">=</span> solve_ivp(dxdt, t_span, x0, t_eval<span class="op">=</span>np.linspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">100</span>))</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> solution.y[<span class="dv">0</span>]</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>thetadot <span class="op">=</span> solution.y[<span class="dv">1</span>]</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> l<span class="op">*</span>np.sin(theta)</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="op">-</span>l<span class="op">*</span>np.cos(theta)</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the figure and axis</span></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()          <span class="co"># creating figure and axes objects</span></span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>ax.set_xlim([<span class="op">-</span><span class="fl">1.2</span><span class="op">*</span>l, <span class="fl">1.2</span><span class="op">*</span>l])      <span class="co"># limits of x-axis</span></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>ax.set_ylim([<span class="op">-</span><span class="fl">1.2</span><span class="op">*</span>l, <span class="fl">0.2</span><span class="op">*</span>l])      <span class="co"># limits of y-axis</span></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Set axis labels</span></span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"y"</span>)</span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Set plot title</span></span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Animating motion of pendulum"</span>)</span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Drawing a line from the origin to the mass m.</span></span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a><span class="co"># This line represents the chord of the pendulum.</span></span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>line, <span class="op">=</span> ax.plot([<span class="dv">0</span>, x[<span class="dv">0</span>]], [<span class="dv">0</span>, y[<span class="dv">0</span>]], color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a>circle <span class="op">=</span> plt.Circle((x[<span class="dv">0</span>], y[<span class="dv">0</span>]), <span class="fl">0.1</span>, color<span class="op">=</span><span class="st">'blue'</span>, fill<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a>ax.add_patch(circle)</span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Update function for animation</span></span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update(frame):</span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>    line.set_xdata([<span class="dv">0</span>, x[frame]])</span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a>    line.set_ydata([<span class="dv">0</span>, y[frame]])</span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a>    circle.center <span class="op">=</span> (x[frame], y[frame])</span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> line, circle,</span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Create animation</span></span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a>ani <span class="op">=</span> animation.FuncAnimation(fig, update, frames<span class="op">=</span>np.size(x), interval<span class="op">=</span><span class="dv">50</span>, blit<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a>ani.save(<span class="st">'pendulum_animation.mp4'</span>, writer<span class="op">=</span><span class="st">'ffmpeg'</span>, fps<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -919,7 +1032,7 @@ window.Quarto = {
 <h3 data-number="24.1.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">24.1.9</span> Exercises</h3>
 <p><strong>1. Large swings.</strong> Release the pendulum from rest at <span class="math inline">\(\theta_0 = 170^\circ\)</span> (remember to convert to radians with <code>np.radians(170)</code>) and solve over 10 s. Plot <span class="math inline">\(\theta(t)\)</span> and animate it. Does the motion make physical sense?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -928,7 +1041,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>A pendulum released from rest cannot rise higher than where it started, so <span class="math inline">\(\theta\)</span> should stay between <span class="math inline">\(-170^\circ\)</span> and <span class="math inline">\(170^\circ\)</span>. If your plot leaves that range, the problem is not the physics. Look at the optional arguments <code>rtol</code> and <code>atol</code> of <code>solve_ivp</code>, and see Exercise 2.</p>
 </div>
@@ -938,15 +1051,234 @@ window.Quarto = {
     e = \frac{1}{2}\ell^2\dot{\theta}^2 + g\ell\left(1-\cos(\theta)\right)
 \end{align}\]</span> should stay constant. Solve for <span class="math inline">\(\theta_0 = \pi/4\)</span> over 60 s, compute <span class="math inline">\(e\)</span> at every stored time, and plot it. Then solve again with <code>rtol=1e-8, atol=1e-10</code> and compare. What does this tell you about the default settings?</p>
 <p><strong>3. Linear versus nonlinear.</strong> On the same axes, plot <span class="math inline">\(\theta(t)\)</span> from the nonlinear equation and from the linearized equation <span class="math inline">\(\ddot{\theta} + \frac{g}{\ell}\theta = 0\)</span>, first for <span class="math inline">\(\theta_0 = 5^\circ\)</span> and then for <span class="math inline">\(\theta_0 = 60^\circ\)</span>. When is the linear model good enough?</p>
+<p>You can work in the cell below. The nonlinear solution is already plotted; add the linear one.</p>
+<div class="cell" data-autorun="false">
+<div>
+<div id="pyodide-5" class="exercise-cell">
+
+</div>
+<script type="pyodide-5-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJmaWctaGVpZ2h0IjozLjUsImZpZy13aWR0aCI6N30sImNvZGUiOiJpbXBvcnQgbnVtcHkgYXMgbnBcbmZyb20gc2NpcHkuaW50ZWdyYXRlIGltcG9ydCBzb2x2ZV9pdnBcbmltcG9ydCBtYXRwbG90bGliLnB5cGxvdCBhcyBwbHRcblxuZyA9IDkuODFcbmwgPSAxXG50aGV0YTAgPSBucC5yYWRpYW5zKDUpXG50X2V2YWwgPSBucC5saW5zcGFjZSgwLCAxMCwgNTAwKVxuXG5kZWYgbm9ubGluZWFyKHQsIHgpOlxuICAgIHJldHVybiBbeFsxXSwgLWcvbCpucC5zaW4oeFswXSldXG5cbiMgV3JpdGUgdGhlIGxpbmVhcml6ZWQgc3lzdGVtIGhlcmVcbmRlZiBsaW5lYXIodCwgeCk6XG4gICAgcmV0dXJuIFt4WzFdLCAwXSAgICAjIHJlcGxhY2UgMCB3aXRoIHRoZSBsaW5lYXIgdGVybVxuXG5zb2xfbmwgPSBzb2x2ZV9pdnAobm9ubGluZWFyLCAoMCwgMTApLCBbdGhldGEwLCAwXSwgdF9ldmFsPXRfZXZhbCwgcnRvbD0xZS04LCBhdG9sPTFlLTEwKVxuc29sX2wgPSBzb2x2ZV9pdnAobGluZWFyLCAoMCwgMTApLCBbdGhldGEwLCAwXSwgdF9ldmFsPXRfZXZhbCwgcnRvbD0xZS04LCBhdG9sPTFlLTEwKVxuXG5wbHQucGxvdChzb2xfbmwudCwgbnAuZGVncmVlcyhzb2xfbmwueVswXSksIGxhYmVsPVwibm9ubGluZWFyXCIpXG5wbHQucGxvdChzb2xfbC50LCBucC5kZWdyZWVzKHNvbF9sLnlbMF0pLCBcIi0tXCIsIGxhYmVsPVwibGluZWFyXCIpXG5wbHQueGxhYmVsKFwidCAocylcIilcbnBsdC55bGFiZWwoXCJ0aGV0YSAoZGVnKVwiKVxucGx0LmxlZ2VuZCgpXG5wbHQuc2hvdygpIn0=
+</script>
+</div>
+</div>
 <p><strong>4. Add damping.</strong> Air resistance adds a term to the equation of motion: <span class="math display">\[\begin{align}
     \ddot{\theta} + \frac{c}{m}\dot{\theta} + \frac{g}{\ell}\sin(\theta) = 0.
 \end{align}\]</span> Rewrite it as a first-order system, change <code>dxdt</code> accordingly, and animate the motion for <span class="math inline">\(c/m = 0.5\)</span> s<span class="math inline">\(^{-1}\)</span>. Plot the energy <span class="math inline">\(e\)</span> from Exercise 2. How does it change over time, and why?</p>
 
 
+<script type="pyodide-data">
+eyJvcHRpb25zIjp7ImVudiI6eyJQTE9UTFlfUkVOREVSRVIiOiJwbG90bHlfbWltZXR5cGUifSwiaW5kZXhVUkwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvcHlvZGlkZS92MC4yOC4xL2Z1bGwvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsicHlvZGlkZV9odHRwIiwibWljcm9waXAiLCJpcHl0aG9uIiwibnVtcHkiLCJzY2lweSIsIm1hdHBsb3RsaWIiXX19
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl81ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS01LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzUgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzUsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTQiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl80ID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS00LWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtNC1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzQgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzQsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTIiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8yID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0yLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgLy8gRGVmYXVsdCBleGVyY2lzZSBjb25maWd1cmF0aW9uXG4gIGNvbnN0IG9wdGlvbnMgPSBPYmplY3QuYXNzaWduKFxuICAgIHtcbiAgICAgIGlkOiBcInB5b2RpZGUtMi1jb250ZW50c1wiLFxuICAgICAgZW52aXI6IGBleGVyY2lzZS1lbnYtJHtibG9jay5hdHRyLmV4ZXJjaXNlfWAsXG4gICAgICBlcnJvcjogZmFsc2UsXG4gICAgICBjYXB0aW9uOiAnRXhlcmNpc2UnLFxuICAgIH0sXG4gICAgYmxvY2suYXR0clxuICApO1xuXG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IocHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG4gIHJldHVybiBlZGl0b3IuY29udGFpbmVyO1xufVxudmlld29mIF9weW9kaWRlX3ZhbHVlXzIgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzIsIHt9KTtcbl9weW9kaWRlX2ZlZWRiYWNrXzIgPSB7XG4gIGNvbnN0IHsgUHlvZGlkZUdyYWRlciB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcbiAgY29uc3QgZW1wdHlGZWVkYmFjayA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuXG4gIGNvbnN0IGdyYWRlciA9IG5ldyBQeW9kaWRlR3JhZGVyKF9weW9kaWRlX3ZhbHVlXzIuZXZhbHVhdG9yKTtcbiAgY29uc3QgZmVlZGJhY2sgPSBhd2FpdCBncmFkZXIuZ3JhZGVFeGVyY2lzZSgpO1xuICBpZiAoIWZlZWRiYWNrKSByZXR1cm4gZW1wdHlGZWVkYmFjaztcbiAgcmV0dXJuIGZlZWRiYWNrO1xufVxuIn0seyJjZWxsTmFtZSI6InB5b2RpZGUtcHJlbHVkZSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InB5b2RpZGVPanMgPSB7XG4gIGNvbnN0IHtcbiAgICBQeW9kaWRlRXZhbHVhdG9yLFxuICAgIFB5b2RpZGVFbnZpcm9ubWVudE1hbmFnZXIsXG4gICAgc2V0dXBQeXRob24sXG4gICAgc3RhcnRQeW9kaWRlV29ya2VyLFxuICAgIGI2NERlY29kZSxcbiAgICBjb2xsYXBzZVBhdGgsXG4gIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHN0YXR1c0NvbnRhaW5lciA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwiZXhlcmNpc2UtbG9hZGluZy1zdGF0dXNcIik7XG4gIGNvbnN0IGluZGljYXRvckNvbnRhaW5lciA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwiZXhlcmNpc2UtbG9hZGluZy1pbmRpY2F0b3JcIik7XG4gIGluZGljYXRvckNvbnRhaW5lci5jbGFzc0xpc3QucmVtb3ZlKFwiZC1ub25lXCIpO1xuXG4gIGxldCBzdGF0dXNUZXh0ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudChcImRpdlwiKVxuICBzdGF0dXNUZXh0LmNsYXNzTGlzdCA9IFwiZXhlcmNpc2UtbG9hZGluZy1kZXRhaWxzXCI7XG4gIHN0YXR1c1RleHQgPSBzdGF0dXNDb250YWluZXIuYXBwZW5kQ2hpbGQoc3RhdHVzVGV4dCk7XG4gIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgSW5pdGlhbGlzZWA7XG5cbiAgLy8gSG9pc3QgaW5kaWNhdG9yIG91dCBmcm9tIGZpbmFsIHNsaWRlIHdoZW4gcnVubmluZyB1bmRlciByZXZlYWxcbiAgY29uc3QgcmV2ZWFsU3RhdHVzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXZlYWwgLmV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpZiAocmV2ZWFsU3RhdHVzKSB7XG4gICAgcmV2ZWFsU3RhdHVzLnJlbW92ZSgpO1xuICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsID4gLnNsaWRlc1wiKS5hcHBlbmRDaGlsZChyZXZlYWxTdGF0dXMpO1xuICB9XG5cbiAgLy8gTWFrZSBhbnkgcmV2ZWFsIHNsaWRlcyB3aXRoIGxpdmUgY2VsbHMgc2Nyb2xsYWJsZVxuICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKFwiLnJldmVhbCAuZXhlcmNpc2UtY2VsbFwiKS5mb3JFYWNoKChlbCkgPT4ge1xuICAgIGVsLmNsb3Nlc3QoJ3NlY3Rpb24uc2xpZGUnKS5jbGFzc0xpc3QuYWRkKFwic2Nyb2xsYWJsZVwiKTtcbiAgfSlcblxuICAvLyBQeW9kaWRlIHN1cHBsZW1lbnRhbCBkYXRhIGFuZCBvcHRpb25zXG4gIGNvbnN0IGRhdGFDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInB5b2RpZGUtZGF0YVxcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGRhdGEgPSBKU09OLnBhcnNlKGI2NERlY29kZShkYXRhQ29udGVudCkpO1xuXG4gIC8vIEdyYWIgbGlzdCBvZiByZXNvdXJjZXMgdG8gYmUgZG93bmxvYWRlZFxuICBjb25zdCBmaWxlc0NvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwidmZzLWZpbGVcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBmaWxlcyA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKGZpbGVzQ29udGVudCkpO1xuXG4gIGxldCBweW9kaWRlUHJvbWlzZSA9IChhc3luYyAoKSA9PiB7XG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBQeW9kaWRlYDtcbiAgICBjb25zdCBweW9kaWRlID0gYXdhaXQgc3RhcnRQeW9kaWRlV29ya2VyKGRhdGEub3B0aW9ucyk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYERvd25sb2FkaW5nIHBhY2thZ2U6IG1pY3JvcGlwYDtcbiAgICBhd2FpdCBweW9kaWRlLmxvYWRQYWNrYWdlKFwibWljcm9waXBcIik7XG4gICAgY29uc3QgbWljcm9waXAgPSBhd2FpdCBweW9kaWRlLnB5aW1wb3J0KFwibWljcm9waXBcIik7XG4gICAgYXdhaXQgZGF0YS5wYWNrYWdlcy5wa2dzLm1hcCgocGtnKSA9PiAoKSA9PiB7XG4gICAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYERvd25sb2FkaW5nIHBhY2thZ2U6ICR7cGtnfWA7XG4gICAgICByZXR1cm4gbWljcm9waXAuaW5zdGFsbChwa2cpO1xuICAgIH0pLnJlZHVjZSgoY3VyLCBuZXh0KSA9PiBjdXIudGhlbihuZXh0KSwgUHJvbWlzZS5yZXNvbHZlKCkpO1xuICAgIGF3YWl0IG1pY3JvcGlwLmRlc3Ryb3koKTtcblxuICAgIC8vIERvd25sb2FkIGFuZCBpbnN0YWxsIHJlc291cmNlc1xuICAgIGF3YWl0IGZpbGVzLm1hcCgoZmlsZSkgPT4gYXN5bmMgKCkgPT4ge1xuICAgICAgY29uc3QgbmFtZSA9IGZpbGUuc3Vic3RyaW5nKGZpbGUubGFzdEluZGV4T2YoJy8nKSArIDEpO1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyByZXNvdXJjZTogJHtuYW1lfWA7XG4gICAgICBjb25zdCByZXNwb25zZSA9IGF3YWl0IGZldGNoKGZpbGUpO1xuICAgICAgaWYgKCFyZXNwb25zZS5vaykge1xuICAgICAgICB0aHJvdyBuZXcgRXJyb3IoYENhbid0IGRvd25sb2FkIFxcYCR7ZmlsZX1cXGAuIEVycm9yICR7cmVzcG9uc2Uuc3RhdHVzfTogXCIke3Jlc3BvbnNlLnN0YXR1c1RleHR9XCIuYCk7XG4gICAgICB9XG4gICAgICBjb25zdCBkYXRhID0gYXdhaXQgcmVzcG9uc2UuYXJyYXlCdWZmZXIoKTtcblxuICAgICAgLy8gU3RvcmUgVVJMcyBpbiB0aGUgY3dkIHdpdGhvdXQgYW55IHN1YmRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGlmIChmaWxlLmluY2x1ZGVzKFwiOi8vXCIpKSB7XG4gICAgICAgIGZpbGUgPSBuYW1lO1xuICAgICAgfVxuXG4gICAgICAvLyBDb2xsYXBzZSBoaWdoZXIgZGlyZWN0b3J5IHN0cnVjdHVyZVxuICAgICAgZmlsZSA9IGNvbGxhcHNlUGF0aChmaWxlKTtcblxuICAgICAgLy8gQ3JlYXRlIGRpcmVjdG9yeSB0cmVlLCBpZ25vcmluZyBcImRpcmVjdG9yeSBleGlzdHNcIiBWRlMgZXJyb3JzXG4gICAgICBjb25zdCBwYXJ0cyA9IGZpbGUuc3BsaXQoJy8nKS5zbGljZSgwLCAtMSk7XG4gICAgICBsZXQgcGF0aCA9ICcnO1xuICAgICAgd2hpbGUgKHBhcnRzLmxlbmd0aCA+IDApIHtcbiAgICAgICAgcGF0aCArPSBwYXJ0cy5zaGlmdCgpICsgJy8nO1xuICAgICAgICB0cnkge1xuICAgICAgICAgIGF3YWl0IHB5b2RpZGUuRlMubWtkaXIocGF0aCk7XG4gICAgICAgIH0gY2F0Y2ggKGUpIHtcbiAgICAgICAgICBpZiAoZS5uYW1lICE9PSBcIkVycm5vRXJyb3JcIikgdGhyb3cgZTtcbiAgICAgICAgICBpZiAoZS5lcnJubyAhPT0gMjApIHtcbiAgICAgICAgICAgIGNvbnN0IGVycm9yVGV4dFB0ciA9IGF3YWl0IHB5b2RpZGUuX21vZHVsZS5fc3RyZXJyb3IoZS5lcnJubyk7XG4gICAgICAgICAgICBjb25zdCBlcnJvclRleHQgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuVVRGOFRvU3RyaW5nKGVycm9yVGV4dFB0cik7XG4gICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoYEZpbGVzeXN0ZW0gRXJyb3IgJHtlLmVycm5vfSBcIiR7ZXJyb3JUZXh0fVwiLmApO1xuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgfVxuXG4gICAgICAvLyBXcml0ZSB0aGlzIGZpbGUgdG8gdGhlIFZGU1xuICAgICAgdHJ5IHtcbiAgICAgICAgcmV0dXJuIGF3YWl0IHB5b2RpZGUuRlMud3JpdGVGaWxlKGZpbGUsIG5ldyBVaW50OEFycmF5KGRhdGEpKTtcbiAgICAgIH0gY2F0Y2ggKGUpIHtcbiAgICAgICAgaWYgKGUubmFtZSAhPT0gXCJFcnJub0Vycm9yXCIpIHRocm93IGU7XG4gICAgICAgIGNvbnN0IGVycm9yVGV4dFB0ciA9IGF3YWl0IHB5b2RpZGUuX21vZHVsZS5fc3RyZXJyb3IoZS5lcnJubyk7XG4gICAgICAgIGNvbnN0IGVycm9yVGV4dCA9IGF3YWl0IHB5b2RpZGUuX21vZHVsZS5VVEY4VG9TdHJpbmcoZXJyb3JUZXh0UHRyKTtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yICR7ZS5lcnJub30gXCIke2Vycm9yVGV4dH1cIi5gKTtcbiAgICAgIH1cbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcblxuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgUHlvZGlkZSBlbnZpcm9ubWVudCBzZXR1cGA7XG4gICAgYXdhaXQgc2V0dXBQeXRob24ocHlvZGlkZSk7XG5cbiAgICBzdGF0dXNUZXh0LnJlbW92ZSgpO1xuICAgIGlmIChzdGF0dXNDb250YWluZXIuY2hpbGRyZW4ubGVuZ3RoID09IDApIHtcbiAgICAgIHN0YXR1c0NvbnRhaW5lci5wYXJlbnROb2RlLnJlbW92ZSgpO1xuICAgIH1cbiAgICByZXR1cm4gcHlvZGlkZTtcbiAgfSkoKS5jYXRjaCgoZXJyKSA9PiB7XG4gICAgc3RhdHVzVGV4dC5zdHlsZS5jb2xvciA9IFwidmFyKC0tZXhlcmNpc2UtZWRpdG9yLWhsLWVyLCAjQUQwMDAwKVwiO1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBlcnIubWVzc2FnZTtcbiAgICAvL2luZGljYXRvckNvbnRhaW5lci5xdWVyeVNlbGVjdG9yKFwiLnNwaW5uZXItZ3Jvd1wiKS5jbGFzc0xpc3QuYWRkKFwiZC1ub25lXCIpO1xuICAgIHRocm93IGVycjtcbiAgfSk7XG5cbiAgLy8gS2VlcCB0cmFjayBvZiBpbml0aWFsIE9KUyBibG9jayByZW5kZXJcbiAgY29uc3QgcmVuZGVyZWRPanMgPSB7fTtcblxuICBjb25zdCBwcm9jZXNzID0gYXN5bmMgKGNvbnRleHQsIGlucHV0cykgPT4ge1xuICAgIGNvbnN0IHB5b2RpZGUgPSBhd2FpdCBweW9kaWRlUHJvbWlzZTtcbiAgICBjb25zdCBldmFsdWF0b3IgPSBuZXcgUHlvZGlkZUV2YWx1YXRvcihweW9kaWRlLCBjb250ZXh0KTtcbiAgICBhd2FpdCBldmFsdWF0b3IucHJvY2VzcyhpbnB1dHMpO1xuICAgIHJldHVybiBldmFsdWF0b3IuY29udGFpbmVyO1xuICB9XG5cbiAgcmV0dXJuIHtcbiAgICBweW9kaWRlUHJvbWlzZSxcbiAgICByZW5kZXJlZE9qcyxcbiAgICBwcm9jZXNzLFxuICB9O1xufVxuIn1dfQ==
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
 </section>
 </section>
 
 </main> <!-- /main -->
+<!--
+  MECH230 student sign-in (Phase 3)
+  - Adds a "Sign in" box at the top of the sidebar.
+  - Students enter their AUB email; Supabase emails them a sign-in link
+    and a 6-digit code. Either one signs them in.
+  - Other features use window.mech230 (see the bottom of this file).
+  Fill in the two values below from Supabase: Project Settings -> API.
+  Both are safe to publish; the database rules protect the data.
+-->
+<script>
+  window.MECH230_CONFIG = {
+    supabaseUrl: "https://jqfnfghtlxdicdiffdav.supabase.co",          // e.g. "https://abcdefghijkl.supabase.co"
+    supabaseAnonKey: "sb_publishable_fEukplhwWd36ZSA808wUIg_Xu6ezCJy",      // the "anon public" key
+    allowedDomains: ["mail.aub.edu", "aub.edu.lb"]
+  };
+</script>
+
+<style>
+  .mech230-auth { margin: 0.5rem 0 1rem 0; padding: 0.6rem 0.75rem; border: 1px solid var(--bs-border-color, #dee2e6); border-radius: 0.375rem; font-size: 0.875rem; background: var(--bs-body-bg, #fff); }
+  .mech230-auth .form-control { font-size: 0.875rem; padding: 0.25rem 0.5rem; }
+  .mech230-auth .btn { font-size: 0.8rem; padding: 0.2rem 0.6rem; }
+  .mech230-auth .mech230-msg { margin-top: 0.4rem; font-size: 0.8rem; }
+  .mech230-auth .mech230-msg.error { color: var(--bs-danger, #dc3545); }
+  .mech230-auth .mech230-who { overflow-wrap: anywhere; }
+  .mech230-auth[hidden] { display: none; }
+</style>
+
+<script type="module">
+  const cfg = window.MECH230_CONFIG || {};
+  const LOGIN_HASH = "mech230-login=";
+
+  // Shared helper for later phases (tutor, quizzes, code tracking).
+  const listeners = new Set();
+  let currentUser = null;
+  let readyResolve;
+  const api = {
+    enabled: false,
+    client: null,
+    ready: new Promise(r => (readyResolve = r)),
+    user: () => currentUser,
+    onChange(cb) { listeners.add(cb); cb(currentUser); return () => listeners.delete(cb); },
+    page: () => location.pathname.replace(/index\.html$/, ""),
+    async insert(table, row) {
+      if (!api.client || !currentUser) return { error: "not signed in" };
+      return api.client.from(table).insert({ page: api.page(), ...row });
+    }
+  };
+  window.mech230 = api;
+
+  function setUser(u) {
+    currentUser = u || null;
+    listeners.forEach(cb => { try { cb(currentUser); } catch (e) { console.error(e); } });
+    render();
+  }
+
+  // ---------- UI ----------
+  const box = document.createElement("div");
+  box.className = "mech230-auth";
+  box.hidden = true;
+  let stage = "idle";      // idle | email | code
+  let pendingEmail = "";
+  let message = "", isError = false;
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+
+  function render() {
+    const msg = message ? `<div class="mech230-msg ${isError ? "error" : ""}" role="status">${esc(message)}</div>` : "";
+    if (currentUser) {
+      box.innerHTML = `<div class="mech230-who">Signed in as <strong>${esc(currentUser.email)}</strong></div>
+        <button type="button" class="btn btn-link p-0 mt-1" data-act="signout">Sign out</button>`;
+    } else if (stage === "idle") {
+      box.innerHTML = `<div>Sign in with your AUB email to save your work.</div>
+        <button type="button" class="btn btn-primary w-100 mt-2" data-act="start">Sign in</button>${msg}`;
+    } else if (stage === "email") {
+      box.innerHTML = `<form data-act="send">
+          <label class="form-label mb-1" for="mech230-email">AUB email</label>
+          <input id="mech230-email" class="form-control" type="email" required autocomplete="email" placeholder="abc123@mail.aub.edu" value="${esc(pendingEmail)}">
+          <button type="submit" class="btn btn-primary w-100 mt-2">Email me a sign-in link</button>
+          <button type="button" class="btn btn-link p-0 mt-1" data-act="cancel">Cancel</button>
+          </form>${msg}`;
+    } else if (stage === "code") {
+      box.innerHTML = `<div>We sent an email to <strong>${esc(pendingEmail)}</strong>. Open it in Outlook and click the link, or type the code here:</div>
+        <form data-act="verify" class="mt-2">
+          <input id="mech230-code" class="form-control" inputmode="numeric" autocomplete="one-time-code" maxlength="10" placeholder="6-digit code" required>
+          <button type="submit" class="btn btn-primary w-100 mt-2">Sign in</button>
+          <button type="button" class="btn btn-link p-0 mt-1" data-act="start">Use another email</button>
+          </form>${msg}`;
+    }
+  }
+
+  function say(text, error = false) { message = text; isError = error; render(); }
+
+  function domainOk(email) {
+    const d = email.split("@")[1]?.toLowerCase() || "";
+    return (cfg.allowedDomains || []).includes(d);
+  }
+
+  box.addEventListener("click", async (e) => {
+    const act = e.target.closest("[data-act]")?.dataset.act;
+    if (act === "start") { stage = "email"; message = ""; render(); box.querySelector("#mech230-email")?.focus(); }
+    if (act === "cancel") { stage = "idle"; message = ""; render(); }
+    if (act === "signout") { await api.client.auth.signOut(); stage = "idle"; say("You are signed out."); }
+  });
+
+  box.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const act = e.target.dataset.act;
+    const btn = e.target.querySelector("button[type=submit]");
+    if (act === "send") {
+      const email = box.querySelector("#mech230-email").value.trim().toLowerCase();
+      pendingEmail = email;
+      if (!domainOk(email)) { say("Please use your AUB email address (" + cfg.allowedDomains.map(d => "@" + d).join(" or ") + ").", true); return; }
+      btn.disabled = true; btn.textContent = "Sending…";
+      const redirect = location.origin + location.pathname + location.search;
+      const { error } = await api.client.auth.signInWithOtp({ email, options: { shouldCreateUser: true, emailRedirectTo: redirect } });
+      if (error) { btn.disabled = false; btn.textContent = "Email me a sign-in link"; say(friendly(error), true); return; }
+      stage = "code"; say("");
+      box.querySelector("#mech230-code")?.focus();
+    }
+    if (act === "verify") {
+      const token = box.querySelector("#mech230-code").value.replace(/\s/g, "");
+      btn.disabled = true; btn.textContent = "Checking…";
+      const { error } = await api.client.auth.verifyOtp({ email: pendingEmail, token, type: "email" });
+      if (error) { btn.disabled = false; btn.textContent = "Sign in"; say(friendly(error), true); return; }
+      stage = "idle"; message = "";
+    }
+  });
+
+  function friendly(error) {
+    const m = (error && (error.message || String(error))) || "";
+    if (/rate limit|seconds/i.test(m)) return "Please wait a minute before asking for another email.";
+    if (/expired|invalid/i.test(m)) return "That code is wrong or has expired. Ask for a new email and try again.";
+    if (/database error|AUB email/i.test(m)) return "Please sign in with your AUB email address.";
+    if (/fetch|network/i.test(m)) return "Could not reach the sign-in service. Check your connection and try again.";
+    return "Something went wrong: " + m;
+  }
+
+  function mount() {
+    const target = document.querySelector("#quarto-sidebar .sidebar-menu-container") || document.querySelector("#quarto-sidebar");
+    if (target) target.prepend(box); else document.body.prepend(box);
+  }
+
+  // ---------- start ----------
+  async function start() {
+    if (!cfg.supabaseUrl || !cfg.supabaseAnonKey) { readyResolve(api); return; }  // not configured yet: stay hidden
+    mount();
+    let createClient;
+    try {
+      ({ createClient } = await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/+esm"));
+    } catch (e) {
+      console.error("mech230: could not load Supabase", e);
+      readyResolve(api); return;
+    }
+    api.client = createClient(cfg.supabaseUrl, cfg.supabaseAnonKey, {
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false }
+    });
+    api.enabled = true;
+    box.hidden = false;
+
+    // Signed in from the email link? The token is in the part of the URL
+    // after "#", which email scanners never send to the server, so the
+    // link still works after Outlook's Safe Links has checked it.
+    const h = location.hash;
+    if (h.includes(LOGIN_HASH)) {
+      const tokenHash = decodeURIComponent(h.split(LOGIN_HASH)[1].split("&")[0]);
+      history.replaceState(null, "", location.pathname + location.search);
+      say("Signing you in…");
+      const { error } = await api.client.auth.verifyOtp({ token_hash: tokenHash, type: "email" });
+      if (error) say("This sign-in link has expired or was already used. Please sign in again.", true);
+      else message = "";
+    }
+
+    const { data } = await api.client.auth.getSession();
+    setUser(data.session?.user);
+    api.client.auth.onAuthStateChange((_event, session) => setUser(session?.user));
+    readyResolve(api);
+  }
+  render();
+  start();
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../assignments";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

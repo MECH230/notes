@@ -45,6 +45,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-ea8ef702a3f84812c808b1cddcfad5b3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,6 +74,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <script>
 MathJax = {
   tex: {
@@ -920,9 +924,214 @@ window.Quarto = {
 </div>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
 </section>
 
 </main> <!-- /main -->
+<!--
+  MECH230 student sign-in (Phase 3)
+  - Adds a "Sign in" box at the top of the sidebar.
+  - Students enter their AUB email; Supabase emails them a sign-in link
+    and a 6-digit code. Either one signs them in.
+  - Other features use window.mech230 (see the bottom of this file).
+  Fill in the two values below from Supabase: Project Settings -> API.
+  Both are safe to publish; the database rules protect the data.
+-->
+<script>
+  window.MECH230_CONFIG = {
+    supabaseUrl: "https://jqfnfghtlxdicdiffdav.supabase.co",          // e.g. "https://abcdefghijkl.supabase.co"
+    supabaseAnonKey: "sb_publishable_fEukplhwWd36ZSA808wUIg_Xu6ezCJy",      // the "anon public" key
+    allowedDomains: ["mail.aub.edu", "aub.edu.lb"]
+  };
+</script>
+
+<style>
+  .mech230-auth { margin: 0.5rem 0 1rem 0; padding: 0.6rem 0.75rem; border: 1px solid var(--bs-border-color, #dee2e6); border-radius: 0.375rem; font-size: 0.875rem; background: var(--bs-body-bg, #fff); }
+  .mech230-auth .form-control { font-size: 0.875rem; padding: 0.25rem 0.5rem; }
+  .mech230-auth .btn { font-size: 0.8rem; padding: 0.2rem 0.6rem; }
+  .mech230-auth .mech230-msg { margin-top: 0.4rem; font-size: 0.8rem; }
+  .mech230-auth .mech230-msg.error { color: var(--bs-danger, #dc3545); }
+  .mech230-auth .mech230-who { overflow-wrap: anywhere; }
+  .mech230-auth[hidden] { display: none; }
+</style>
+
+<script type="module">
+  const cfg = window.MECH230_CONFIG || {};
+  const LOGIN_HASH = "mech230-login=";
+
+  // Shared helper for later phases (tutor, quizzes, code tracking).
+  const listeners = new Set();
+  let currentUser = null;
+  let readyResolve;
+  const api = {
+    enabled: false,
+    client: null,
+    ready: new Promise(r => (readyResolve = r)),
+    user: () => currentUser,
+    onChange(cb) { listeners.add(cb); cb(currentUser); return () => listeners.delete(cb); },
+    page: () => location.pathname.replace(/index\.html$/, ""),
+    async insert(table, row) {
+      if (!api.client || !currentUser) return { error: "not signed in" };
+      return api.client.from(table).insert({ page: api.page(), ...row });
+    }
+  };
+  window.mech230 = api;
+
+  function setUser(u) {
+    currentUser = u || null;
+    listeners.forEach(cb => { try { cb(currentUser); } catch (e) { console.error(e); } });
+    render();
+  }
+
+  // ---------- UI ----------
+  const box = document.createElement("div");
+  box.className = "mech230-auth";
+  box.hidden = true;
+  let stage = "idle";      // idle | email | code
+  let pendingEmail = "";
+  let message = "", isError = false;
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+
+  function render() {
+    const msg = message ? `<div class="mech230-msg ${isError ? "error" : ""}" role="status">${esc(message)}</div>` : "";
+    if (currentUser) {
+      box.innerHTML = `<div class="mech230-who">Signed in as <strong>${esc(currentUser.email)}</strong></div>
+        <button type="button" class="btn btn-link p-0 mt-1" data-act="signout">Sign out</button>`;
+    } else if (stage === "idle") {
+      box.innerHTML = `<div>Sign in with your AUB email to save your work.</div>
+        <button type="button" class="btn btn-primary w-100 mt-2" data-act="start">Sign in</button>${msg}`;
+    } else if (stage === "email") {
+      box.innerHTML = `<form data-act="send">
+          <label class="form-label mb-1" for="mech230-email">AUB email</label>
+          <input id="mech230-email" class="form-control" type="email" required autocomplete="email" placeholder="abc123@mail.aub.edu" value="${esc(pendingEmail)}">
+          <button type="submit" class="btn btn-primary w-100 mt-2">Email me a sign-in link</button>
+          <button type="button" class="btn btn-link p-0 mt-1" data-act="cancel">Cancel</button>
+          </form>${msg}`;
+    } else if (stage === "code") {
+      box.innerHTML = `<div>We sent an email to <strong>${esc(pendingEmail)}</strong>. Open it in Outlook and click the link, or type the code here:</div>
+        <form data-act="verify" class="mt-2">
+          <input id="mech230-code" class="form-control" inputmode="numeric" autocomplete="one-time-code" maxlength="10" placeholder="6-digit code" required>
+          <button type="submit" class="btn btn-primary w-100 mt-2">Sign in</button>
+          <button type="button" class="btn btn-link p-0 mt-1" data-act="start">Use another email</button>
+          </form>${msg}`;
+    }
+  }
+
+  function say(text, error = false) { message = text; isError = error; render(); }
+
+  function domainOk(email) {
+    const d = email.split("@")[1]?.toLowerCase() || "";
+    return (cfg.allowedDomains || []).includes(d);
+  }
+
+  box.addEventListener("click", async (e) => {
+    const act = e.target.closest("[data-act]")?.dataset.act;
+    if (act === "start") { stage = "email"; message = ""; render(); box.querySelector("#mech230-email")?.focus(); }
+    if (act === "cancel") { stage = "idle"; message = ""; render(); }
+    if (act === "signout") { await api.client.auth.signOut(); stage = "idle"; say("You are signed out."); }
+  });
+
+  box.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const act = e.target.dataset.act;
+    const btn = e.target.querySelector("button[type=submit]");
+    if (act === "send") {
+      const email = box.querySelector("#mech230-email").value.trim().toLowerCase();
+      pendingEmail = email;
+      if (!domainOk(email)) { say("Please use your AUB email address (" + cfg.allowedDomains.map(d => "@" + d).join(" or ") + ").", true); return; }
+      btn.disabled = true; btn.textContent = "Sending…";
+      const redirect = location.origin + location.pathname + location.search;
+      const { error } = await api.client.auth.signInWithOtp({ email, options: { shouldCreateUser: true, emailRedirectTo: redirect } });
+      if (error) { btn.disabled = false; btn.textContent = "Email me a sign-in link"; say(friendly(error), true); return; }
+      stage = "code"; say("");
+      box.querySelector("#mech230-code")?.focus();
+    }
+    if (act === "verify") {
+      const token = box.querySelector("#mech230-code").value.replace(/\s/g, "");
+      btn.disabled = true; btn.textContent = "Checking…";
+      const { error } = await api.client.auth.verifyOtp({ email: pendingEmail, token, type: "email" });
+      if (error) { btn.disabled = false; btn.textContent = "Sign in"; say(friendly(error), true); return; }
+      stage = "idle"; message = "";
+    }
+  });
+
+  function friendly(error) {
+    const m = (error && (error.message || String(error))) || "";
+    if (/rate limit|seconds/i.test(m)) return "Please wait a minute before asking for another email.";
+    if (/expired|invalid/i.test(m)) return "That code is wrong or has expired. Ask for a new email and try again.";
+    if (/database error|AUB email/i.test(m)) return "Please sign in with your AUB email address.";
+    if (/fetch|network/i.test(m)) return "Could not reach the sign-in service. Check your connection and try again.";
+    return "Something went wrong: " + m;
+  }
+
+  function mount() {
+    const target = document.querySelector("#quarto-sidebar .sidebar-menu-container") || document.querySelector("#quarto-sidebar");
+    if (target) target.prepend(box); else document.body.prepend(box);
+  }
+
+  // ---------- start ----------
+  async function start() {
+    if (!cfg.supabaseUrl || !cfg.supabaseAnonKey) { readyResolve(api); return; }  // not configured yet: stay hidden
+    mount();
+    let createClient;
+    try {
+      ({ createClient } = await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/+esm"));
+    } catch (e) {
+      console.error("mech230: could not load Supabase", e);
+      readyResolve(api); return;
+    }
+    api.client = createClient(cfg.supabaseUrl, cfg.supabaseAnonKey, {
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false }
+    });
+    api.enabled = true;
+    box.hidden = false;
+
+    // Signed in from the email link? The token is in the part of the URL
+    // after "#", which email scanners never send to the server, so the
+    // link still works after Outlook's Safe Links has checked it.
+    const h = location.hash;
+    if (h.includes(LOGIN_HASH)) {
+      const tokenHash = decodeURIComponent(h.split(LOGIN_HASH)[1].split("&")[0]);
+      history.replaceState(null, "", location.pathname + location.search);
+      say("Signing you in…");
+      const { error } = await api.client.auth.verifyOtp({ token_hash: tokenHash, type: "email" });
+      if (error) say("This sign-in link has expired or was already used. Please sign in again.", true);
+      else message = "";
+    }
+
+    const { data } = await api.client.auth.getSession();
+    setUser(data.session?.user);
+    api.client.auth.onAuthStateChange((_event, session) => setUser(session?.user));
+    readyResolve(api);
+  }
+  render();
+  start();
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../lagrangian_mechanics";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
