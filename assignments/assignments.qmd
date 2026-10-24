@@ -1,0 +1,9 @@
+---
+title: "Assignments"
+---
+
+This chapter collects the computational assignments for the course. Each section is a self-contained assignment: follow the steps, then do the exercises at the end.
+
+The assignments use Python. You can run the code on your own computer (see [What you need](#what-you-need)) or in [Google Colab](https://colab.research.google.com/), which needs only a browser.
+
+{{< include _ode_pendulum.qmd >}}

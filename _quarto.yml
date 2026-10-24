@@ -52,6 +52,7 @@ book:
     - part: "Lagrangian Mechanics"
       chapters:
         - lagrangian_mechanics/lagranges_equations.qmd
+    - assignments/assignments.qmd
     - references.qmd
     - part: "Appendices"
       chapters:
