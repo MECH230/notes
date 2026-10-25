@@ -857,6 +857,158 @@ W10=
   render();
   start();
 </script>
+<!--
+  MECH230 quiz questions (Phase 5)
+  Turns each  ::: {.quiz-question qid="..." answer="c"}  block in a page
+  into a multiple-choice question with a "Check answer" button.
+  - 2 attempts; after a correct answer or 2 wrong ones, the answer and the
+    explanation (::: {.quiz-explanation}) are shown.
+  - If the student is signed in, every attempt is saved to the
+    quiz_answers table, and earlier attempts are restored on return.
+  Uses window.mech230 from _includes/auth.html.
+-->
+<style>
+  .quiz-question { border: 1px solid var(--bs-border-color, #dee2e6); border-radius: 0.5rem; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+  .quiz-question img { display: block; margin: 0.5rem auto; }
+  .quiz-choices { display: flex; flex-direction: column; gap: 0.4rem; margin: 0.75rem 0; }
+  .quiz-choice { display: flex; gap: 0.6rem; align-items: flex-start; padding: 0.45rem 0.7rem; border: 1px solid var(--bs-border-color, #dee2e6); border-radius: 0.375rem; cursor: pointer; }
+  .quiz-choice:hover { background: var(--bs-tertiary-bg, #f8f9fa); }
+  .quiz-choice input { margin-top: 0.3rem; }
+  .quiz-choice .quiz-letter { font-weight: 600; min-width: 1.6rem; }
+  .quiz-choice.is-correct { border-color: #198754; background: rgba(25, 135, 84, 0.08); }
+  .quiz-choice.is-wrong { border-color: #dc3545; background: rgba(220, 53, 69, 0.06); }
+  .quiz-locked .quiz-choice { cursor: default; }
+  .quiz-feedback { margin-top: 0.5rem; font-weight: 500; }
+  .quiz-feedback.ok { color: #198754; }
+  .quiz-feedback.bad { color: #dc3545; }
+  .quiz-save { font-size: 0.8rem; color: var(--bs-secondary-color, #6c757d); margin-top: 0.25rem; }
+  .quiz-explanation { margin-top: 0.75rem; padding: 0.6rem 0.8rem; border-left: 3px solid #2780e3; background: var(--bs-tertiary-bg, #f8f9fa); }
+  .quiz-explanation[hidden] { display: none; }
+</style>
+
+<script type="module">
+  const MAX_ATTEMPTS = 2;
+  const letters = "abcdefghij";
+  const quizzes = [];
+
+  function setup(el) {
+    const qid = el.dataset.qid;
+    const answer = (el.dataset.answer || "").toLowerCase();
+    if (!qid || !answer) return;
+    const list = [...el.querySelectorAll("ol, ul")].find(l => !l.closest(".quiz-explanation"));
+    if (!list) return;
+    const explanation = el.querySelector(".quiz-explanation");
+    if (explanation) explanation.hidden = true;
+
+    const choices = document.createElement("div");
+    choices.className = "quiz-choices";
+    choices.setAttribute("role", "radiogroup");
+    [...list.children].forEach((li, i) => {
+      const letter = letters[i];
+      const label = document.createElement("label");
+      label.className = "quiz-choice";
+      label.dataset.letter = letter;
+      label.innerHTML = `<input type="radio" name="quiz-${qid}" value="${letter}"><span class="quiz-letter">(${letter})</span><span class="quiz-text"></span>`;
+      const text = label.querySelector(".quiz-text");
+      while (li.firstChild) text.appendChild(li.firstChild);
+      choices.appendChild(label);
+    });
+    list.replaceWith(choices);
+
+    const controls = document.createElement("div");
+    controls.innerHTML = `<button type="button" class="btn btn-primary btn-sm">Check answer</button>
+      <div class="quiz-feedback" aria-live="polite"></div><div class="quiz-save"></div>`;
+    choices.after(controls);
+    const button = controls.querySelector("button");
+    const feedback = controls.querySelector(".quiz-feedback");
+    const save = controls.querySelector(".quiz-save");
+
+    const q = { el, qid, answer, choices, button, feedback, save, explanation, attempts: 0, done: false };
+
+    q.show = (choice, correct, restoring = false) => {
+      choices.querySelectorAll(".quiz-choice").forEach(c => c.classList.remove("is-wrong"));
+      const picked = choices.querySelector(`[data-letter="${choice}"]`);
+      if (picked) { picked.querySelector("input").checked = true; picked.classList.add(correct ? "is-correct" : "is-wrong"); }
+      if (correct) {
+        feedback.className = "quiz-feedback ok"; feedback.textContent = "Correct!";
+      } else if (q.attempts >= MAX_ATTEMPTS) {
+        feedback.className = "quiz-feedback bad"; feedback.textContent = `Not quite. The correct answer is (${answer}).`;
+      } else {
+        feedback.className = "quiz-feedback bad";
+        feedback.textContent = `Not quite. You have ${MAX_ATTEMPTS - q.attempts} more attempt${MAX_ATTEMPTS - q.attempts === 1 ? "" : "s"}.`;
+      }
+      if (correct || q.attempts >= MAX_ATTEMPTS) q.lock();
+    };
+
+    q.lock = () => {
+      q.done = true;
+      el.classList.add("quiz-locked");
+      choices.querySelector(`[data-letter="${answer}"]`)?.classList.add("is-correct");
+      choices.querySelectorAll("input").forEach(i => (i.disabled = true));
+      button.hidden = true;
+      if (explanation) explanation.hidden = false;
+    };
+
+    button.addEventListener("click", async () => {
+      const sel = choices.querySelector("input:checked");
+      if (!sel) { feedback.className = "quiz-feedback bad"; feedback.textContent = "Choose an answer first."; return; }
+      const choice = sel.value, correct = choice === answer;
+      q.attempts += 1;
+      q.show(choice, correct);
+      const m = window.mech230;
+      if (m && m.user()) {
+        save.textContent = "Saving…";
+        const { error } = await m.insert("quiz_answers", { question_id: qid, answer: { choice }, correct, attempt: q.attempts });
+        save.textContent = error ? "Could not save this answer. Please check your connection." : "Saved.";
+        if (error) console.error("quiz save", error);
+      } else if (m && m.enabled) {
+        save.textContent = "Sign in (top of the sidebar) to keep a record of your answers.";
+      }
+    });
+
+    q.reset = () => {
+      q.attempts = 0; q.done = false;
+      el.classList.remove("quiz-locked");
+      choices.querySelectorAll(".quiz-choice").forEach(c => c.classList.remove("is-correct", "is-wrong"));
+      choices.querySelectorAll("input").forEach(i => { i.disabled = false; i.checked = false; });
+      button.hidden = false; feedback.textContent = ""; feedback.className = "quiz-feedback"; save.textContent = "";
+      if (explanation) explanation.hidden = true;
+    };
+
+    quizzes.push(q);
+  }
+
+  async function restore(user) {
+    const m = window.mech230;
+    if (!user || !m?.client || !quizzes.length) return;
+    const ids = quizzes.map(q => q.qid);
+    const { data, error } = await m.client.from("quiz_answers")
+      .select("question_id, answer, correct, attempt, created_at")
+      .eq("user_id", user.id).in("question_id", ids).order("created_at", { ascending: true });
+    if (error) { console.error("quiz restore", error); return; }
+    for (const q of quizzes) {
+      if (q.done) continue;
+      const rows = data.filter(r => r.question_id === q.qid);
+      if (!rows.length) continue;
+      q.attempts = rows.length;
+      const last = rows.find(r => r.correct) || rows[rows.length - 1];
+      q.show(last.answer?.choice, !!last.correct, true);
+      q.save.textContent = "Restored from your earlier attempt.";
+    }
+  }
+
+  document.querySelectorAll(".quiz-question").forEach(setup);
+  if (quizzes.length && window.mech230) {
+    await window.mech230.ready;
+    let lastUserId;
+    window.mech230.onChange(user => {
+      const id = user?.id || null;
+      if (lastUserId !== undefined && id !== lastUserId) quizzes.forEach(q => q.reset());  // someone else signed in or out
+      lastUserId = id;
+      restore(user);
+    });
+  }
+</script>
 <script type="ojs-module-contents">
 eyJjb250ZW50cyI6W119
 </script>
