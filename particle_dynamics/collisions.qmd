@@ -164,6 +164,137 @@ and hence ${\bf v}_1'\cdot{\bf n}-{\bf v}_2'\cdot{\bf n}$ and ${\bf v}_1\cdot{\b
 :::
 :::
 
+## Quiz: Check Your Understanding
+
+Notation: ${\bf n}$ is the line of impact, ${\bf t}$ is tangent at contact, and $e$ is the coefficient of restitution,
+\begin{align*}
+    e = \frac{{\bf v}_2'\cdot{\bf n}-{\bf v}_1'\cdot{\bf n}}{{\bf v}_1\cdot{\bf n}-{\bf v}_2\cdot{\bf n}},
+\end{align*}
+where primes denote velocities just after impact.
+
+::: {.content-visible when-format="html"}
+Choose one answer per question and press **Check answer**. You have two attempts per question. If you are signed in, your answers are saved.
+:::
+
+::::: {.quiz-question qid="collisions-q1" answer="c"}
+**1.** Two smooth disks collide obliquely on a frictionless table. Which statement is correct?
+
+![](../figures/collisions/quiz/q1.png){width=35%}
+
+a. Each disk's momentum is conserved along ${\bf n}$; the total momentum along ${\bf t}$ is not conserved.
+b. Only the total momentum along ${\bf t}$ is conserved.
+c. The total momentum is conserved along ${\bf n}$; each disk's momentum is conserved along ${\bf t}$.
+d. Each disk's momentum is conserved in every direction.
+
+:::: {.content-visible when-format="html"}
+::: {.quiz-explanation}
+The disks are smooth, so the contact impulses act only along ${\bf n}$, and they are equal and opposite. Along ${\bf n}$, each disk's momentum changes but the total does not. Along ${\bf t}$ there is no impulse at all, so each disk keeps its own momentum.
+:::
+::::
+:::::
+
+::::: {.quiz-question qid="collisions-q2" answer="a"}
+**2.** A ball hits a *smooth* fixed floor obliquely. Which component of the ball's linear momentum is conserved during the impact?
+
+![](../figures/collisions/quiz/q2.png){width=38%}
+
+a. The horizontal (tangential) component.
+b. The vertical (normal) component.
+c. Both components.
+d. Neither component.
+
+:::: {.content-visible when-format="html"}
+::: {.quiz-explanation}
+A smooth floor can only push normal to itself, so the impulse on the ball is vertical. The horizontal momentum is unchanged; the vertical momentum reverses (scaled by $e$).
+:::
+::::
+:::::
+
+::::: {.quiz-question qid="collisions-q3" answer="d"}
+**3.** Same ball, but the floor is now *rough* and the ball slides during the impact. Is the ball's horizontal momentum still conserved?
+
+![](../figures/collisions/quiz/q3.png){width=36%}
+
+a. Yes, because friction is non-impulsive.
+b. Yes, because $e < 1$.
+c. Only if $e = 1$.
+d. No, because friction applies a tangential impulse.
+
+:::: {.content-visible when-format="html"}
+::: {.quiz-explanation}
+While the ball slides, the friction force is $\mu N$. The normal force $N$ is impulsive (very large over a very short time), so the friction force is impulsive too. It gives a horizontal impulse, and the horizontal momentum changes.
+:::
+::::
+:::::
+
+::::: {.quiz-question qid="collisions-q4" answer="b"}
+**4.** A bullet embeds in a block hanging at rest from a vertical inextensible string. During the short impact, what is conserved for bullet + block?
+
+![](../figures/collisions/quiz/q4.png){width=24%}
+
+a. Kinetic energy.
+b. Horizontal linear momentum only.
+c. Total linear momentum in all directions.
+d. Nothing.
+
+:::: {.content-visible when-format="html"}
+::: {.quiz-explanation}
+Take bullet + block as the system. The string tension is vertical and can be impulsive; gravity is not impulsive. No external impulse acts horizontally, so the horizontal momentum is conserved. Kinetic energy is not: the bullet embeds, so this is a perfectly plastic impact.
+:::
+::::
+:::::
+
+::::: {.quiz-question qid="collisions-q5" answer="c"}
+**5.** A 2 kg particle moving at 6 m/s hits a 1 kg particle at rest, head-on, with $e = 0.5$. What is the speed of the 1 kg particle after impact?
+
+![](../figures/collisions/quiz/q5.png){width=28%}
+
+a. 3 m/s
+b. 8 m/s
+c. 6 m/s
+d. 12 m/s
+
+:::: {.content-visible when-format="html"}
+::: {.quiz-explanation}
+Momentum: $2(6) = 2v_1' + 1\,v_2'$. Restitution: $v_2' - v_1' = 0.5\,(6 - 0) = 3$. Solving gives $v_1' = 3$ m/s and $v_2' = 6$ m/s.
+:::
+::::
+:::::
+
+::::: {.quiz-question qid="collisions-q6" answer="a"}
+**6.** For the impact in Question 5, how much kinetic energy is lost?
+
+![](../figures/collisions/quiz/q6.png){width=30%}
+
+a. 9 J
+b. 27 J
+c. 0 J
+d. 18 J
+
+:::: {.content-visible when-format="html"}
+::: {.quiz-explanation}
+Before: $T = \frac{1}{2}(2)(6)^2 = 36$ J. After: $T' = \frac{1}{2}(2)(3)^2 + \frac{1}{2}(1)(6)^2 = 9 + 18 = 27$ J. The loss is $36 - 27 = 9$ J.
+:::
+::::
+:::::
+
+::::: {.quiz-question qid="collisions-bonus" answer="d"}
+**Bonus.** A ball is dropped from rest from height $h$ onto a fixed floor with $e = 0.5$. How high does it bounce?
+
+![](../figures/collisions/quiz/bonus.png){width=24%}
+
+a. $h/2$
+b. $h$
+c. $h/\sqrt{2}$
+d. $h/4$
+
+:::: {.content-visible when-format="html"}
+::: {.quiz-explanation}
+The ball reaches the floor with speed $v = \sqrt{2gh}$ and leaves with $e v$. It rises to $h' = (ev)^2/(2g) = e^2 h = h/4$.
+:::
+::::
+:::::
+
 ## Exercises
 
 *The following problems are from Set 13 – Collisions. In all of the following problems, specify the system you are considering. Are there any conservations in that system? Remember that the linear momentum of a system is conserved in a fixed direction if the sum of forces acting on the system along this direction is zero.*
