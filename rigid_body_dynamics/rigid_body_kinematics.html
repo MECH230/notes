@@ -527,6 +527,7 @@ window.Quarto = {
   <li><a href="#kinematics-of-rolling-and-sliding" id="toc-kinematics-of-rolling-and-sliding" class="nav-link" data-scroll-target="#kinematics-of-rolling-and-sliding"><span class="header-section-number">19.11</span> Kinematics of Rolling and Sliding</a>
   <ul class="collapse">
   <li><a href="#example-rolling-circular-disk" id="toc-example-rolling-circular-disk" class="nav-link" data-scroll-target="#example-rolling-circular-disk"><span class="header-section-number">19.11.1</span> Example: Rolling Circular Disk</a></li>
+  <li><a href="#interactive-rolling-and-slipping-wheel" id="toc-interactive-rolling-and-slipping-wheel" class="nav-link" data-scroll-target="#interactive-rolling-and-slipping-wheel"><span class="header-section-number">19.11.2</span> Interactive: Rolling and Slipping Wheel</a></li>
   </ul></li>
   <li><a href="#center-of-mass" id="toc-center-of-mass" class="nav-link" data-scroll-target="#center-of-mass"><span class="header-section-number">19.12</span> Center of Mass</a></li>
   <li><a href="#linear-momentum" id="toc-linear-momentum" class="nav-link" data-scroll-target="#linear-momentum"><span class="header-section-number">19.13</span> Linear Momentum</a></li>
@@ -1463,6 +1464,251 @@ window.Quarto = {
     {\bf a}_P &amp;= -\omega^2 R{\bf E}_y.
 \end{align}\]</span> Thus, the acceleration of the contact point <span class="math inline">\(P\)</span> is purely vertical (toward the center).</p>
 </section>
+<section id="interactive-rolling-and-slipping-wheel" class="level3" data-number="19.11.2">
+<h3 data-number="19.11.2" class="anchored" data-anchor-id="interactive-rolling-and-slipping-wheel"><span class="header-section-number">19.11.2</span> Interactive: Rolling and Slipping Wheel</h3>
+<p>When a wheel slips, its instantaneous center of zero velocity (IC) is no longer the contact point. For a wheel spinning clockwise with angular speed <span class="math inline">\(\omega\)</span>, every point on the vertical diameter moves horizontally, with a speed proportional to its height above the IC. If the IC is a height <span class="math inline">\(h\)</span> above the contact point <span class="math inline">\(P\)</span> and the wheel has radius <span class="math inline">\(R\)</span>, then <span class="math display">\[\begin{align}
+    v_C = \omega\,(R-h), \qquad v_P = \omega\,h,
+\end{align}\]</span> where <span class="math inline">\(v_C\)</span> is the speed of the center (the car) to the right and <span class="math inline">\(v_P\)</span>, the slip velocity, is the speed of the contact point to the left. Rolling without slipping is the special case <span class="math inline">\(h = 0\)</span>.</p>
+<p>The simulation below uses the data of problem 5/91: a 26 in wheel spinning at <span class="math inline">\(N = 200\)</span> rev/min. Drag the <strong>IC</strong> along the vertical diameter, or set the car speed, and watch how the slip velocity changes.</p>
+<div id="wheel-sim" class="wheel-sim">
+  <div class="ws-status" aria-live="polite"></div>
+  <svg viewbox="0 0 720 420" role="img" aria-label="Wheel rolling and slipping on a road, with its velocity profile and instantaneous center">
+    <defs>
+      <marker id="ws-arrow-blue" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="6" markerheight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f5fbf"></path></marker>
+      <marker id="ws-arrow-red" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="6" markerheight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#c0392b"></path></marker>
+      <marker id="ws-arrow-grey" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="5" markerheight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#777"></path></marker>
+    </defs>
+    <g class="ws-ground"></g>
+    <path class="ws-trail" fill="none" stroke="#e67e22" stroke-width="1.5" stroke-dasharray="3 3"></path>
+    <g class="ws-wheel"></g>
+    <g class="ws-profile"></g>
+    <g class="ws-ic" style="cursor: grab">
+      <circle r="16" fill="transparent"></circle>
+      <circle r="7" fill="#fff" stroke="#8e44ad" stroke-width="3"></circle>
+      <text x="-14" y="5" text-anchor="end" fill="#8e44ad" font-weight="700" font-size="15">IC</text>
+    </g>
+  </svg>
+  <div class="ws-controls">
+    <label>IC height above contact, <i>h</i> = <span class="ws-h-val"></span> in
+      <input class="form-range ws-h" type="range" min="0" max="26" step="0.1" value="4"></label>
+    <label>Car speed, <i>v</i> = <span class="ws-v-val"></span> ft/s
+      <input class="form-range ws-v" type="range" step="0.01"></label>
+    <label>Wheel angular speed, <i>N</i> = <span class="ws-n-val"></span> rev/min
+      <input class="form-range ws-n" type="range" min="20" max="400" step="10" value="200"></label>
+    <label>Slow motion: <span class="ws-ts-val"></span>× real speed
+      <input class="form-range ws-ts" type="range" min="0.02" max="1" step="0.01" value="0.1"></label>
+    <div class="ws-buttons">
+      <button type="button" class="btn btn-primary btn-sm ws-play">Pause</button>
+      <button type="button" class="btn btn-outline-secondary btn-sm ws-roll">Roll without slipping (h = 0)</button>
+      <button type="button" class="btn btn-outline-secondary btn-sm ws-reset">Problem 5/91 (h = 4 in)</button>
+      <label class="ws-check"><input type="checkbox" class="ws-trace" checked=""> Show the path of a point on the tire</label>
+    </div>
+  </div>
+  <div class="ws-readout"></div>
+</div>
+<style>
+  .wheel-sim { border: 1px solid var(--bs-border-color, #dee2e6); border-radius: 0.5rem; padding: 0.75rem; margin: 1rem 0; }
+  .wheel-sim svg { width: 100%; height: auto; display: block; touch-action: none; user-select: none; }
+  .wheel-sim .ws-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25rem 1.5rem; margin-top: 0.5rem; font-size: 0.9rem; }
+  .wheel-sim .ws-controls > label { display: block; }
+  .wheel-sim .ws-buttons { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+  .wheel-sim .ws-check { font-size: 0.85rem; margin-left: 0.25rem; }
+  .wheel-sim .ws-status { font-weight: 600; min-height: 1.5em; }
+  .wheel-sim .ws-status.ok { color: #1e8449; }
+  .wheel-sim .ws-status.warn { color: #c0392b; }
+  .wheel-sim .ws-readout { margin-top: 0.6rem; font-size: 0.95rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+  .wheel-sim .ws-readout div { background: var(--bs-tertiary-bg, #f8f9fa); border-radius: 0.375rem; padding: 0.4rem 0.6rem; }
+  .wheel-sim .ws-readout b { display: block; font-size: 1.1rem; }
+  @media (max-width: 600px) { .wheel-sim .ws-controls, .wheel-sim .ws-readout { grid-template-columns: 1fr; } }
+</style>
+<script>
+(function () {
+  const root = document.getElementById("wheel-sim");
+  if (!root) return;
+  const svg = root.querySelector("svg");
+  const NS = "http://www.w3.org/2000/svg";
+  const $ = s => root.querySelector(s);
+  const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+
+  // Problem 5/91 data
+  const D_IN = 26, R = D_IN / 2;           // wheel radius (in)
+  const RPX = 130;                          // drawn radius (px)
+  const S = RPX / R;                        // px per inch
+  const GROUND = 370, CX = 300, CY = GROUND - RPX;
+
+  const state = { h: 4, N: 200, ts: 0.1, playing: true, trace: true, x: 0, theta: 0, trail: [] };
+  const omega = () => state.N * 2 * Math.PI / 60;          // rad/s
+  const vCar = () => omega() * (R - state.h);              // in/s, positive = right
+  const vSlip = () => omega() * state.h;                   // in/s, positive = contact point moves left
+
+  // ---------- static drawing ----------
+  const ground = $(".ws-ground"), wheel = $(".ws-wheel"), profile = $(".ws-profile"), ic = $(".ws-ic");
+  el("rect", { x: 0, y: GROUND, width: 720, height: 50, fill: "#d9e7f2" }, ground);
+  el("line", { x1: 0, y1: GROUND, x2: 720, y2: GROUND, stroke: "#5d6d7e", "stroke-width": 2 }, ground);
+  const ticks = el("g", {}, ground);
+  el("text", { x: 610, y: GROUND + 32, "font-size": 13, fill: "#5d6d7e" }, ground).textContent = "icy road";
+
+  el("circle", { cx: 0, cy: 0, r: RPX, fill: "#34495e" }, wheel);
+  el("circle", { cx: 0, cy: 0, r: RPX * 0.72, fill: "#aab7c4" }, wheel);
+  el("circle", { cx: 0, cy: 0, r: RPX * 0.6, fill: "#d6dde4" }, wheel);
+  const spokes = el("g", {}, wheel);
+  for (let i = 0; i < 5; i++) {
+    const a = i * 2 * Math.PI / 5;
+    el("line", { x1: 0, y1: 0, x2: RPX * 0.6 * Math.cos(a), y2: RPX * 0.6 * Math.sin(a), stroke: "#7f8c8d", "stroke-width": 6, "stroke-linecap": "round" }, spokes);
+  }
+  el("circle", { cx: 0, cy: 0, r: RPX * 0.14, fill: "#ecf0f1", stroke: "#7f8c8d" }, spokes);
+  el("circle", { cx: RPX * 0.86, cy: 0, r: 7, fill: "#e67e22", stroke: "#fff", "stroke-width": 2 }, spokes); // tracked point
+  el("circle", { cx: 0, cy: 0, r: 3, fill: "#222" }, wheel);
+  el("line", { x1: 0, y1: -RPX, x2: 0, y2: RPX, stroke: "#fff", "stroke-width": 1, "stroke-dasharray": "4 4", opacity: 0.7 }, wheel);
+  wheel.setAttribute("transform", `translate(${CX},${CY})`);
+
+  // ---------- velocity profile ----------
+  const PROFILE_X = CX;                     // arrows start on the vertical diameter
+  const VPX = 0.55;                         // px per (in/s)
+  function arrow(y_in, color, marker, label, width) {
+    const v = omega() * (y_in - state.h);   // + = right
+    const y = GROUND - y_in * S;
+    const len = v * VPX;
+    const g = el("g", {}, profile);
+    if (Math.abs(len) > 2) el("line", { x1: PROFILE_X, y1: y, x2: PROFILE_X + len, y2: y, stroke: color, "stroke-width": width || 2.5, "marker-end": `url(#${marker})` }, g);
+    if (label) {
+      const t = el("text", { x: PROFILE_X + len + (len >= 0 ? 8 : -8), y: y + 5, "font-size": 14, "font-weight": 600, fill: color, "text-anchor": len >= 0 ? "start" : "end" }, g);
+      t.textContent = label;
+    }
+    return len;
+  }
+  function drawProfile() {
+    profile.textContent = "";
+    for (const f of [0.25, 0.5, 0.75, 1.25, 1.5, 1.75]) arrow(f * R, "#999", "ws-arrow-grey", "", 1.5);
+    // line through the arrow tips: zero at the IC
+    const yTop = 2 * R, yBot = 0;
+    el("line", { x1: PROFILE_X + omega() * (yBot - state.h) * VPX, y1: GROUND, x2: PROFILE_X + omega() * (yTop - state.h) * VPX, y2: GROUND - yTop * S, stroke: "#999", "stroke-dasharray": "5 4" }, profile);
+    arrow(R, "#1f5fbf", "ws-arrow-blue", "v (car)");
+    arrow(0, "#c0392b", "ws-arrow-red", state.h > 0.05 ? "slip" : "");
+    ic.setAttribute("transform", `translate(${CX},${GROUND - state.h * S})`);
+  }
+
+  // ---------- readout ----------
+  const fts = ins => ins / 12;
+  function readout() {
+    const v = fts(vCar()), vs = fts(vSlip());
+    const dir = x => Math.abs(x) < 0.005 ? "" : (x > 0 ? " right" : " left");
+    $(".ws-readout").innerHTML =
+      `<div>Angular speed<b>&omega; = ${omega().toFixed(2)} rad/s</b>(clockwise)</div>` +
+      `<div>Car velocity, v = &omega;(R &minus; h)<b>${Math.abs(v).toFixed(2)} ft/s${dir(v)}</b></div>` +
+      `<div>Slip velocity of the tire, v<sub>s</sub> = &omega;h<b>${Math.abs(vs).toFixed(2)} ft/s${vs > 0.005 ? " left" : ""}</b></div>`;
+    const status = $(".ws-status");
+    if (state.h < 0.05) { status.textContent = "Rolling without slipping: the IC is the contact point"; status.className = "ws-status ok"; }
+    else if (Math.abs(state.h - R) < 0.05) { status.textContent = "Spinning in place: the car does not move"; status.className = "ws-status warn"; }
+    else if (state.h > R) { status.textContent = "IC above the center: the car moves left even though the wheel spins clockwise"; status.className = "ws-status warn"; }
+    else { status.textContent = "Slipping: the tire spins faster than the car moves"; status.className = "ws-status warn"; }
+  }
+
+  // ---------- controls ----------
+  const hIn = $(".ws-h"), vIn = $(".ws-v"), nIn = $(".ws-n"), tsIn = $(".ws-ts");
+  hIn.max = 2 * R;
+  function syncControls() {
+    hIn.value = state.h; $(".ws-h-val").textContent = state.h.toFixed(1);
+    const vmax = fts(omega() * R);
+    vIn.min = (-vmax).toFixed(2); vIn.max = vmax.toFixed(2); vIn.value = fts(vCar()).toFixed(2);
+    $(".ws-v-val").textContent = fts(vCar()).toFixed(2);
+    nIn.value = state.N; $(".ws-n-val").textContent = state.N;
+    $(".ws-ts-val").textContent = state.ts.toFixed(2);
+  }
+  function update() { syncControls(); drawProfile(); readout(); }
+  const setH = h => { state.h = Math.min(2 * R, Math.max(0, h)); state.trail = []; update(); };
+
+  hIn.addEventListener("input", () => setH(+hIn.value));
+  vIn.addEventListener("input", () => setH(R - (+vIn.value * 12) / omega()));
+  nIn.addEventListener("input", () => { state.N = +nIn.value; state.trail = []; update(); });
+  tsIn.addEventListener("input", () => { state.ts = +tsIn.value; update(); });
+  $(".ws-play").addEventListener("click", () => { state.playing = !state.playing; $(".ws-play").textContent = state.playing ? "Pause" : "Play"; if (state.playing) last = null; });
+  $(".ws-roll").addEventListener("click", () => setH(0));
+  $(".ws-reset").addEventListener("click", () => { state.N = 200; setH(4); });
+  $(".ws-trace").addEventListener("change", e => { state.trace = e.target.checked; state.trail = []; });
+
+  // drag the IC along the vertical diameter
+  let dragging = false;
+  const svgY = evt => { const pt = svg.createSVGPoint(); pt.x = evt.clientX; pt.y = evt.clientY; return pt.matrixTransform(svg.getScreenCTM().inverse()).y; };
+  ic.addEventListener("pointerdown", e => { dragging = true; ic.setPointerCapture(e.pointerId); ic.style.cursor = "grabbing"; });
+  ic.addEventListener("pointermove", e => { if (dragging) setH((GROUND - svgY(e)) / S); });
+  ic.addEventListener("pointerup", e => { dragging = false; ic.releasePointerCapture(e.pointerId); ic.style.cursor = "grab"; });
+
+  // ---------- animation ----------
+  const trailEl = $(".ws-trail");
+  function drawFrame() {
+    // camera follows the wheel: the road moves under it
+    ticks.textContent = "";
+    const spacing = 60, off = ((state.x * S) % spacing + spacing) % spacing;
+    for (let X = -off; X < 720 + spacing; X += spacing) el("line", { x1: X, y1: GROUND + 4, x2: X - 14, y2: GROUND + 18, stroke: "#8aa1b5", "stroke-width": 2 }, ticks);
+    // clockwise rotation in screen coordinates (y down) is a positive angle
+    spokes.setAttribute("transform", `rotate(${(state.theta * 180 / Math.PI) % 360})`);
+    if (state.trace) {
+      const a = state.theta, px = state.x * S + RPX * 0.86 * Math.cos(a), py = CY + RPX * 0.86 * Math.sin(a);
+      state.trail.push([px, py]);
+      if (state.trail.length > 600) state.trail.shift();
+      trailEl.setAttribute("d", state.trail.map((p, i) => `${i ? "L" : "M"}${(p[0] - state.x * S + CX).toFixed(1)} ${p[1].toFixed(1)}`).join(""));
+    } else trailEl.setAttribute("d", "");
+  }
+  let last = null;
+  function tick(t) {
+    if (state.playing) {
+      if (last !== null) {
+        const dt = Math.min(0.05, (t - last) / 1000) * state.ts;
+        state.x += vCar() * dt;          // inches
+        state.theta += omega() * dt;     // radians, clockwise
+      }
+      last = t;
+    }
+    drawFrame();
+    requestAnimationFrame(tick);
+  }
+  // pause when scrolled out of view to save battery
+  let autoPaused = false;
+  if ("IntersectionObserver" in window) new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting && state.playing) { state.playing = false; autoPaused = true; }
+    else if (e.isIntersecting && autoPaused) { state.playing = true; autoPaused = false; last = null; }
+  })).observe(root);
+
+  // zoom in on narrow screens so the labels stay readable
+  const fit = () => svg.setAttribute("viewBox", root.clientWidth < 560 ? "50 70 580 340" : "0 40 720 380");
+  fit(); window.addEventListener("resize", fit);
+
+  update();
+  requestAnimationFrame(tick);
+  root.wheelSim = { state, vCar, vSlip, omega, setH };   // used by tests
+})();
+</script>
+<div class="callout callout-style-default callout-tip callout-titled" title="Think!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Think!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question:</strong> In problem 5/91, the IC is 4 in above the contact point. Is the car moving faster or slower than if the wheel rolled without slipping at the same <span class="math inline">\(N\)</span>?</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Slower. With <span class="math inline">\(\omega = 2\pi(200)/60 = 20.94\)</span> rad/s and <span class="math inline">\(R = 13\)</span> in, rolling without slipping would give <span class="math inline">\(v = \omega R = 22.7\)</span> ft/s. With the IC at <span class="math inline">\(h = 4\)</span> in, <span class="math inline">\(v = \omega(R-h) = 15.71\)</span> ft/s to the right, and the tire slips at <span class="math inline">\(v_s = \omega h = 6.98\)</span> ft/s to the left.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="center-of-mass" class="level2" data-number="19.12">
 <h2 data-number="19.12" class="anchored" data-anchor-id="center-of-mass"><span class="header-section-number">19.12</span> Center of Mass</h2>
@@ -1566,7 +1812,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Question:</strong> Is my moment of inertia about an axis through my body greater when my arms are closed or open?</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1575,7 +1821,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Greater when arms are open — mass is farther from the axis.</p>
 </div>
