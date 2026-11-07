@@ -513,16 +513,18 @@ window.Quarto = {
   <li><a href="#advantage-of-lagranges-equations" id="toc-advantage-of-lagranges-equations" class="nav-link" data-scroll-target="#advantage-of-lagranges-equations"><span class="header-section-number">23.3.1</span> Advantage of Lagrange’s Equations</a></li>
   </ul></li>
   <li><a href="#constrained-equations" id="toc-constrained-equations" class="nav-link" data-scroll-target="#constrained-equations"><span class="header-section-number">23.4</span> Constrained Equations</a></li>
-  <li><a href="#example-simple-harmonic-oscillator" id="toc-example-simple-harmonic-oscillator" class="nav-link" data-scroll-target="#example-simple-harmonic-oscillator"><span class="header-section-number">23.5</span> Example: Simple Harmonic Oscillator</a></li>
-  <li><a href="#example-simple-pendulum" id="toc-example-simple-pendulum" class="nav-link" data-scroll-target="#example-simple-pendulum"><span class="header-section-number">23.6</span> Example: Simple Pendulum</a></li>
-  <li><a href="#example-double-pendulum" id="toc-example-double-pendulum" class="nav-link" data-scroll-target="#example-double-pendulum"><span class="header-section-number">23.7</span> Example: Double Pendulum</a></li>
-  <li><a href="#alternative-principles-of-dynamics" id="toc-alternative-principles-of-dynamics" class="nav-link" data-scroll-target="#alternative-principles-of-dynamics"><span class="header-section-number">23.8</span> Alternative Principles of Dynamics</a>
+  <li><a href="#how-to-solve-a-problem-with-lagranges-equations" id="toc-how-to-solve-a-problem-with-lagranges-equations" class="nav-link" data-scroll-target="#how-to-solve-a-problem-with-lagranges-equations"><span class="header-section-number">23.5</span> How to Solve a Problem With Lagrange’s Equations</a></li>
+  <li><a href="#example-simple-harmonic-oscillator" id="toc-example-simple-harmonic-oscillator" class="nav-link" data-scroll-target="#example-simple-harmonic-oscillator"><span class="header-section-number">23.6</span> Example: Simple Harmonic Oscillator</a></li>
+  <li><a href="#example-simple-pendulum" id="toc-example-simple-pendulum" class="nav-link" data-scroll-target="#example-simple-pendulum"><span class="header-section-number">23.7</span> Example: Simple Pendulum</a></li>
+  <li><a href="#example-double-pendulum" id="toc-example-double-pendulum" class="nav-link" data-scroll-target="#example-double-pendulum"><span class="header-section-number">23.8</span> Example: Double Pendulum</a></li>
+  <li><a href="#example-pendulum-with-a-spring-summer-2026-final" id="toc-example-pendulum-with-a-spring-summer-2026-final" class="nav-link" data-scroll-target="#example-pendulum-with-a-spring-summer-2026-final"><span class="header-section-number">23.9</span> Example: Pendulum With a Spring (Summer 2026 Final)</a></li>
+  <li><a href="#alternative-principles-of-dynamics" id="toc-alternative-principles-of-dynamics" class="nav-link" data-scroll-target="#alternative-principles-of-dynamics"><span class="header-section-number">23.10</span> Alternative Principles of Dynamics</a>
   <ul class="collapse">
-  <li><a href="#principle-of-virtual-work-and-dalemberts-principle" id="toc-principle-of-virtual-work-and-dalemberts-principle" class="nav-link" data-scroll-target="#principle-of-virtual-work-and-dalemberts-principle"><span class="header-section-number">23.8.1</span> Principle of Virtual Work and D’Alembert’s Principle</a></li>
-  <li><a href="#gauss-principle-of-least-action" id="toc-gauss-principle-of-least-action" class="nav-link" data-scroll-target="#gauss-principle-of-least-action"><span class="header-section-number">23.8.2</span> Gauss’ Principle of Least Action</a></li>
-  <li><a href="#hamiltons-principle" id="toc-hamiltons-principle" class="nav-link" data-scroll-target="#hamiltons-principle"><span class="header-section-number">23.8.3</span> Hamilton’s Principle</a></li>
+  <li><a href="#principle-of-virtual-work-and-dalemberts-principle" id="toc-principle-of-virtual-work-and-dalemberts-principle" class="nav-link" data-scroll-target="#principle-of-virtual-work-and-dalemberts-principle"><span class="header-section-number">23.10.1</span> Principle of Virtual Work and D’Alembert’s Principle</a></li>
+  <li><a href="#gauss-principle-of-least-action" id="toc-gauss-principle-of-least-action" class="nav-link" data-scroll-target="#gauss-principle-of-least-action"><span class="header-section-number">23.10.2</span> Gauss’ Principle of Least Action</a></li>
+  <li><a href="#hamiltons-principle" id="toc-hamiltons-principle" class="nav-link" data-scroll-target="#hamiltons-principle"><span class="header-section-number">23.10.3</span> Hamilton’s Principle</a></li>
   </ul></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">23.9</span> Exercises</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">23.11</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -806,47 +808,210 @@ window.Quarto = {
     \frac{d}{dt}\lp\frac{\partial \tilde{L}}{\partial u^i}\rp-\frac{\partial \tilde{L}}{\partial q^i} = 0.
 \end{align}\]</span></p>
 </section>
-<section id="example-simple-harmonic-oscillator" class="level2" data-number="23.5">
-<h2 data-number="23.5" class="anchored" data-anchor-id="example-simple-harmonic-oscillator"><span class="header-section-number">23.5</span> Example: Simple Harmonic Oscillator</h2>
-<p>Consider a simple harmonic oscillator of mass <span class="math inline">\(m\)</span> connected to a linear spring of unstretched length <span class="math inline">\(\ell_0\)</span> and stiffness <span class="math inline">\(k\)</span>. The origin is taken at the location of <span class="math inline">\(m\)</span> when the spring is unstretched so that the position vector of <span class="math inline">\(m\)</span> is <span class="math inline">\({\bf r} = x{\bf E}_x\)</span> and <span class="math inline">\(x\)</span> denotes the stretch of the spring. The velocity of <span class="math inline">\(m\)</span> is <span class="math inline">\({\bf v} = v{\bf E}_x\)</span>. Find the equation of motion of the mass <span class="math inline">\(m\)</span>.</p>
-<p>Using unconstrained Lagrangian: <span class="math display">\[\begin{align}
-    \begin{split}
-        &amp; q^1 = x,\qquad q^2 = y, \qquad q^3 = z,\\
-        &amp; u^1 = v_x,\qquad u^2 = v_y, \qquad u^3 = v_z,\\
-    \end{split}
-\end{align}\]</span> Lagrangian <span class="math display">\[\begin{align}
-    L = T-U  = \frac{m}{2}\lp v_x^2+v_y^2+v_z^2\rp-mgz
-\end{align}\]</span> Constraint forces <span class="math inline">\(\mu_1{\bf E}_y\)</span>, <span class="math inline">\(\mu_2{\bf E}_z\)</span>.</p>
-<p>Equation along <span class="math inline">\(z\)</span>, <span class="math display">\[\begin{align}
-    \begin{split}
-        \dot{\bf v}_z+mg = \mu_2.
-    \end{split}
+<section id="how-to-solve-a-problem-with-lagranges-equations" class="level2" data-number="23.5">
+<h2 data-number="23.5" class="anchored" data-anchor-id="how-to-solve-a-problem-with-lagranges-equations"><span class="header-section-number">23.5</span> How to Solve a Problem With Lagrange’s Equations</h2>
+<p>The examples below all follow the same steps:</p>
+<ol type="1">
+<li><strong>Constraints and coordinates.</strong> Write each constraint as a function that must vanish. Choose the generalized coordinates <span class="math inline">\(q\)</span> so that the free coordinates come first and the constraint functions come last, and define the generalized velocities <span class="math inline">\(u = \dot{q}\)</span>.</li>
+<li><strong>Constraint forces.</strong> Differentiate each constraint in time to put it in the form <span class="math inline">\({\bf f}_1\cdot{\bf v}_1+\hdots+{\bf f}_N\cdot{\bf v}_N+e=0\)</span>. By Lagrange’s prescription, the constraint force on particle <span class="math inline">\(K\)</span> is <span class="math inline">\(\mu\,{\bf f}_K\)</span>.</li>
+<li><strong>Constrained energies.</strong> Set the constrained coordinates to zero to get <span class="math inline">\(\tilde{T}(q,u)\)</span>, <span class="math inline">\(\tilde{U}(q)\)</span> and <span class="math inline">\(\tilde{L}=\tilde{T}-\tilde{U}\)</span>.</li>
+<li><strong>Equations of motion.</strong> For each free coordinate, <span class="math inline">\(\frac{d}{dt}\lp\frac{\partial \tilde{L}}{\partial u^i}\rp-\frac{\partial \tilde{L}}{\partial q^i} = 0\)</span>. The constraint forces do not appear.</li>
+<li><strong>Constraint forces (tensions, normal forces).</strong> For a constrained coordinate, use the <em>unconstrained</em> Lagrangian <span class="math inline">\(L\)</span> and keep the constraint forces on the right-hand side: <span class="math display">\[\begin{align}
+\frac{d}{dt}\lp\frac{\partial L}{\partial u^i}\rp-\frac{\partial L}{\partial q^i} = \sum_{K=1}^n{\bf F}_c^K\cdot \frac{\partial {\bf r}^K}{\partial q^i},
+\end{align}\]</span> then evaluate it with the constraints satisfied (the constrained coordinates and their rates equal to zero).</li>
+</ol>
+</section>
+<section id="example-simple-harmonic-oscillator" class="level2" data-number="23.6">
+<h2 data-number="23.6" class="anchored" data-anchor-id="example-simple-harmonic-oscillator"><span class="header-section-number">23.6</span> Example: Simple Harmonic Oscillator</h2>
+<p>Consider a mass <span class="math inline">\(m\)</span> on a smooth horizontal table, connected to a linear spring of stiffness <span class="math inline">\(k\)</span> and unstretched length <span class="math inline">\(\ell_0\)</span> lying along <span class="math inline">\({\bf E}_x\)</span>. Gravity acts in the <span class="math inline">\(-{\bf E}_z\)</span> direction. The origin is taken at the location of <span class="math inline">\(m\)</span> when the spring is unstretched, so that <span class="math inline">\(x\)</span> is the stretch of the spring. Find the equation of motion of <span class="math inline">\(m\)</span> and the normal force from the table.</p>
+<p><strong>Constraints and coordinates.</strong> The position of <span class="math inline">\(m\)</span> is <span class="math inline">\({\bf r} = x{\bf E}_x+y{\bf E}_y+z{\bf E}_z\)</span>. The table keeps the mass on the line of the spring: <span class="math display">\[\begin{align}
+    y = 0, \qquad z = 0.
+\end{align}\]</span> Hence <span class="math display">\[\begin{align}
+    q = \leb x \quad y \quad z\reb, \qquad u = \leb u_x \quad u_y \quad u_z\reb.
 \end{align}\]</span></p>
-<p>Using constrained Lagrangian:</p>
-<p>The kinetic energy of the spring is <span class="math inline">\(\tilde{T} = \frac{1}{2}v^2\)</span> and potential energy is <span class="math inline">\(\tilde{U} = \frac{1}{2}kx^2\)</span>, thus the Lagrangian is <span class="math inline">\(\tilde{L} = \frac{1}{2}v^2-\frac{1}{2}kx^2\)</span>. Here, <span class="math inline">\(m\)</span> has one degree of freedom, so <span class="math inline">\(q = [x]\)</span> and <span class="math inline">\(u = [v]\)</span>, so the equation of motion of the system is obtained …</p>
+<p><strong>Constraint forces.</strong> Differentiating the constraints gives <span class="math inline">\({\bf E}_y\cdot{\bf v} = 0\)</span> and <span class="math inline">\({\bf E}_z\cdot{\bf v} = 0\)</span>. By Lagrange’s prescription, the constraint force on <span class="math inline">\(m\)</span> is <span class="math display">\[\begin{align}
+    {\bf F}_c = \mu_1{\bf E}_y+\mu_2{\bf E}_z.
+\end{align}\]</span></p>
+<p><strong>Constrained energies.</strong> With <span class="math inline">\(y = z = 0\)</span>, <span class="math inline">\({\bf v} = u_x{\bf E}_x\)</span>, so <span class="math display">\[\begin{align}
+    \tilde{T} = \frac{1}{2}mu_x^2, \qquad \tilde{U} = \frac{1}{2}kx^2, \qquad \tilde{L} = \frac{1}{2}mu_x^2-\frac{1}{2}kx^2.
+\end{align}\]</span></p>
+<p><strong>Equation of motion.</strong> For <span class="math inline">\(q^1 = x\)</span>: <span class="math display">\[\begin{align}
+    \frac{d}{dt}\lp mu_x\rp + kx = 0 \implies m\ddot{x}+kx = 0.
+\end{align}\]</span></p>
+<p><strong>Normal force.</strong> The unconstrained Lagrangian is <span class="math display">\[\begin{align}
+    L = \frac{1}{2}m\lp u_x^2+u_y^2+u_z^2\rp-\frac{1}{2}k\varepsilon^2-mgz, \qquad \varepsilon = ||{\bf r}+\ell_0{\bf E}_x||-\ell_0.
+\end{align}\]</span> For <span class="math inline">\(q^3 = z\)</span>, using <span class="math inline">\(\frac{\partial {\bf r}}{\partial z} = {\bf E}_z\)</span>: <span class="math display">\[\begin{align}
+    m\dot{u}_z+k\varepsilon\frac{\partial \varepsilon}{\partial z}+mg = {\bf F}_c\cdot{\bf E}_z = \mu_2.
+\end{align}\]</span> With the constraints satisfied, <span class="math inline">\(\dot{u}_z = 0\)</span> and <span class="math inline">\(\frac{\partial \varepsilon}{\partial z} = \frac{z}{||{\bf r}+\ell_0{\bf E}_x||} = 0\)</span>, so <span class="math inline">\(\mu_2 = mg\)</span>: the table pushes up with the weight of the mass. The same steps for <span class="math inline">\(q^2 = y\)</span> give <span class="math inline">\(\mu_1 = 0\)</span>.</p>
 </section>
-<section id="example-simple-pendulum" class="level2" data-number="23.6">
-<h2 data-number="23.6" class="anchored" data-anchor-id="example-simple-pendulum"><span class="header-section-number">23.6</span> Example: Simple Pendulum</h2>
-<p><span class="math display">\[\begin{align}
-    \begin{split}
-        {\bf r} &amp;= \ell{\bf e}_x,\\
-        {\bf v} &amp;= \ell\dot{\theta}{\bf e}_y
-    \end{split}
-\end{align}\]</span> Gravitational potential energy</p>
+<section id="example-simple-pendulum" class="level2" data-number="23.7">
+<h2 data-number="23.7" class="anchored" data-anchor-id="example-simple-pendulum"><span class="header-section-number">23.7</span> Example: Simple Pendulum</h2>
+<p>A particle of mass <span class="math inline">\(m\)</span> hangs from a fixed point <span class="math inline">\(O\)</span> on a massless inextensible string of length <span class="math inline">\(\ell\)</span>, and moves in a vertical plane. <span class="math inline">\({\bf E}_x\)</span> points down, along gravity, <span class="math inline">\({\bf g} = g{\bf E}_x\)</span>. Find the equation of motion and the tension in the string.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lagranges_equations_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="240"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Constraints and coordinates.</strong> With the corotational basis <span class="math inline">\({\bf e}_x = \cos(\theta){\bf E}_x+\sin(\theta){\bf E}_y\)</span>, <span class="math inline">\({\bf e}_y = -\sin(\theta){\bf E}_x+\cos(\theta){\bf E}_y\)</span>, the position of <span class="math inline">\(m\)</span> is <span class="math inline">\({\bf r} = (\ell+\beta){\bf e}_x+z{\bf E}_z\)</span>, where <span class="math display">\[\begin{align}
+    \beta = ||{\bf r}-{\bf r}_O||-\ell = 0, \qquad z = {\bf r}\cdot{\bf E}_z = 0,
+\end{align}\]</span> and <span class="math display">\[\begin{align}
+    q = \leb \theta \quad \beta \quad z\reb, \qquad u = \leb u_\theta \quad u_\beta \quad u_z\reb.
+\end{align}\]</span> The velocity is <span class="math inline">\({\bf v} = u_\beta{\bf e}_x+(\ell+\beta)u_\theta{\bf e}_y+u_z{\bf E}_z\)</span>.</p>
+<p><strong>Constraint forces.</strong> <span class="math inline">\(\dot{\beta} = {\bf v}\cdot{\bf e}_x = 0\)</span> and <span class="math inline">\(\dot{z} = {\bf v}\cdot{\bf E}_z = 0\)</span>, so <span class="math display">\[\begin{align}
+    {\bf F}_c = \mu_1{\bf e}_x+\mu_2{\bf E}_z.
+\end{align}\]</span></p>
+<p><strong>Constrained energies.</strong> With <span class="math inline">\(\beta = z = 0\)</span>: <span class="math inline">\({\bf r} = \ell{\bf e}_x\)</span> and <span class="math inline">\({\bf v} = \ell u_\theta{\bf e}_y\)</span>, so <span class="math display">\[\begin{align}
+    \tilde{T} = \frac{1}{2}m\ell^2u_\theta^2, \qquad \tilde{U} = -m{\bf g}\cdot{\bf r} = -mg\ell\cos(\theta), \qquad \tilde{L} = \frac{1}{2}m\ell^2u_\theta^2+mg\ell\cos(\theta).
+\end{align}\]</span></p>
+<p><strong>Equation of motion.</strong> For <span class="math inline">\(q^1 = \theta\)</span>: <span class="math display">\[\begin{align}
+    \frac{d}{dt}\lp m\ell^2u_\theta\rp+mg\ell\sin(\theta) = 0 \implies \ddot{\theta}+\frac{g}{\ell}\sin(\theta) = 0,
+\end{align}\]</span> the same equation we found with the balance of linear momentum in <a href="../particle_dynamics/cylindrical_polar_coordinates.html#example-nonlinear-pendulum">Example: Nonlinear Pendulum</a>.</p>
+<p><strong>Tension.</strong> The unconstrained Lagrangian is <span class="math inline">\(L = \frac{1}{2}m\lp u_\beta^2+(\ell+\beta)^2u_\theta^2+u_z^2\rp+mg(\ell+\beta)\cos(\theta)\)</span>. For <span class="math inline">\(q^2 = \beta\)</span>, with <span class="math inline">\(\frac{\partial {\bf r}}{\partial \beta} = {\bf e}_x\)</span>: <span class="math display">\[\begin{align}
+    m\dot{u}_\beta-m(\ell+\beta)u_\theta^2-mg\cos(\theta) = {\bf F}_c\cdot{\bf e}_x = \mu_1.
+\end{align}\]</span> With <span class="math inline">\(\beta = u_\beta = \dot{u}_\beta = 0\)</span>, <span class="math inline">\(\mu_1 = -m\ell\dot{\theta}^2-mg\cos(\theta)\)</span>. The string pulls <span class="math inline">\(m\)</span> toward <span class="math inline">\(O\)</span> with tension <span class="math inline">\(T = -\mu_1\)</span>: <span class="math display">\[\begin{align}
+    T = m\ell\dot{\theta}^2+mg\cos(\theta).
+\end{align}\]</span></p>
 </section>
-<section id="example-double-pendulum" class="level2" data-number="23.7">
-<h2 data-number="23.7" class="anchored" data-anchor-id="example-double-pendulum"><span class="header-section-number">23.7</span> Example: Double Pendulum</h2>
-<p><span class="math display">\[\begin{align}
-    \begin{split}
-        {\bf r}_1 &amp;= \ell_1\,{}_{1}{\bf e}_x,\\
-        {\bf v}_1 &amp;= \ell_1\dot{\theta}_1\,{}_{1}{\bf e}_y,\\
-        {\bf r}_2 &amp;= {\bf r}_1+\ell_2\,{}_{2}{\bf e}_x,\\
-        {\bf v}_2 &amp;= {\bf v}_1+\ell_2\dot{\theta}_2\,{}_{2}{\bf e}_y
-    \end{split}
-\end{align}\]</span> Gravitational potential energy</p>
+<section id="example-double-pendulum" class="level2" data-number="23.8">
+<h2 data-number="23.8" class="anchored" data-anchor-id="example-double-pendulum"><span class="header-section-number">23.8</span> Example: Double Pendulum</h2>
+<p>A particle of mass <span class="math inline">\(m_1\)</span> hangs from <span class="math inline">\(O\)</span> on a massless inextensible string of length <span class="math inline">\(\ell_1\)</span>, and a particle of mass <span class="math inline">\(m_2\)</span> hangs from <span class="math inline">\(m_1\)</span> on a second string of length <span class="math inline">\(\ell_2\)</span>. The motion is planar and <span class="math inline">\({\bf g} = g{\bf E}_x\)</span>. Find the equations of motion and equations for the tensions in the strings.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lagranges_equations_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="288"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Constraints and coordinates.</strong> We set up two corotational bases, <span class="math inline">\({}_{i}{\bf e}_x = \cos(\theta_i){\bf E}_x+\sin(\theta_i){\bf E}_y\)</span> and <span class="math inline">\({}_{i}{\bf e}_y = -\sin(\theta_i){\bf E}_x+\cos(\theta_i){\bf E}_y\)</span> for <span class="math inline">\(i = 1, 2\)</span>, following the two strings. The constraints are <span class="math display">\[\begin{align}
+    \beta = ||{\bf r}_1-{\bf r}_O||-\ell_1 = 0, \qquad \gamma = ||{\bf r}_2-{\bf r}_1||-\ell_2 = 0, \qquad z_1 = 0, \qquad z_2 = 0,
+\end{align}\]</span> and the generalized coordinates and velocities are <span class="math display">\[\begin{align}
+    q = \leb \theta_1 \quad \theta_2 \quad \beta \quad \gamma \quad z_1 \quad z_2\reb, \qquad u = \leb u_{\theta_1} \quad u_{\theta_2} \quad u_\beta \quad u_\gamma \quad u_{z_1} \quad u_{z_2}\reb.
+\end{align}\]</span> The first two are free; the last four are constrained. The positions are <span class="math display">\[\begin{align}
+    {\bf r}_1 = (\ell_1+\beta)\,{}_{1}{\bf e}_x+z_1{\bf E}_z, \qquad {\bf r}_2 = (\ell_1+\beta)\,{}_{1}{\bf e}_x+(\ell_2+\gamma)\,{}_{2}{\bf e}_x+z_2{\bf E}_z.
+\end{align}\]</span></p>
+<p><strong>Constraint forces.</strong> Differentiating each constraint: <span class="math display">\[\begin{align}
+    \beta = 0 &amp;\implies {\bf v}_1\cdot{}_{1}{\bf e}_x = 0,\\
+    \gamma = 0 &amp;\implies ({\bf r}_2-{\bf r}_1)\cdot({\bf v}_2-{\bf v}_1) = 0,\\
+    z_1 = 0 &amp;\implies {\bf v}_1\cdot{\bf E}_z = 0,\\
+    z_2 = 0 &amp;\implies {\bf v}_2\cdot{\bf E}_z = 0.
+\end{align}\]</span> By Lagrange’s prescription, the constraint forces on <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> are <span class="math display">\[\begin{align}
+    {\bf F}_{c1} = \mu_1\,{}_{1}{\bf e}_x+\mu_2({\bf r}_1-{\bf r}_2)+\mu_3{\bf E}_z, \qquad {\bf F}_{c2} = \mu_2({\bf r}_2-{\bf r}_1)+\mu_4{\bf E}_z.
+\end{align}\]</span> The second string pulls the two particles toward each other with equal and opposite forces, as expected.</p>
+<p><strong>Constrained energies.</strong> With the constraints satisfied, <span class="math display">\[\begin{align}
+    {\bf v}_1 = \ell_1u_{\theta_1}\,{}_{1}{\bf e}_y, \qquad {\bf v}_2 = \ell_1u_{\theta_1}\,{}_{1}{\bf e}_y+\ell_2u_{\theta_2}\,{}_{2}{\bf e}_y, \qquad {}_{1}{\bf e}_y\cdot{}_{2}{\bf e}_y = \cos(\theta_2-\theta_1),
+\end{align}\]</span> so <span class="math display">\[\begin{align}
+    \tilde{T} &amp;= \frac{1}{2}m_1{\bf v}_1\cdot{\bf v}_1+\frac{1}{2}m_2{\bf v}_2\cdot{\bf v}_2 = \frac{1}{2}(m_1+m_2)\ell_1^2u_{\theta_1}^2+\frac{1}{2}m_2\ell_2^2u_{\theta_2}^2+m_2\ell_1\ell_2u_{\theta_1}u_{\theta_2}\cos(\theta_2-\theta_1),\\
+    \tilde{U} &amp;= -m_1g\ell_1\cos(\theta_1)-m_2g\lp\ell_1\cos(\theta_1)+\ell_2\cos(\theta_2)\rp,\\
+    \tilde{L} &amp;= \tilde{T}-\tilde{U}.
+\end{align}\]</span></p>
+<p><strong>Equations of motion.</strong> For <span class="math inline">\(i = 1, 2\)</span>, <span class="math inline">\(\frac{d}{dt}\lp\frac{\partial \tilde{L}}{\partial u^i}\rp-\frac{\partial \tilde{L}}{\partial q^i} = 0\)</span>.</p>
+<p>For <span class="math inline">\(q^1 = \theta_1\)</span>: <span class="math display">\[\begin{align}
+    \frac{d}{dt}\lp(m_1+m_2)\ell_1^2u_{\theta_1}+m_2\ell_1\ell_2u_{\theta_2}\cos(\theta_2-\theta_1)\rp-\lp m_2\ell_1\ell_2u_{\theta_1}u_{\theta_2}\sin(\theta_2-\theta_1)-(m_1+m_2)g\ell_1\sin(\theta_1)\rp = 0,
+\end{align}\]</span> which simplifies to <span class="math display">\[\begin{align}
+    (m_1+m_2)\ell_1^2\ddot{\theta}_1+m_2\ell_1\ell_2\lp\ddot{\theta}_2\cos(\theta_2-\theta_1)-\dot{\theta}_2^2\sin(\theta_2-\theta_1)\rp+(m_1+m_2)g\ell_1\sin(\theta_1) = 0.
+\end{align}\]</span> For <span class="math inline">\(q^2 = \theta_2\)</span>: <span class="math display">\[\begin{align}
+    \frac{d}{dt}\lp m_2\ell_2^2u_{\theta_2}+m_2\ell_1\ell_2u_{\theta_1}\cos(\theta_2-\theta_1)\rp-\lp -m_2\ell_1\ell_2u_{\theta_1}u_{\theta_2}\sin(\theta_2-\theta_1)-m_2g\ell_2\sin(\theta_2)\rp = 0,
+\end{align}\]</span> which simplifies to <span class="math display">\[\begin{align}
+    m_2\ell_2^2\ddot{\theta}_2+m_2\ell_1\ell_2\lp\ddot{\theta}_1\cos(\theta_2-\theta_1)+\dot{\theta}_1^2\sin(\theta_2-\theta_1)\rp+m_2g\ell_2\sin(\theta_2) = 0.
+\end{align}\]</span> These two coupled, nonlinear equations are solved numerically.</p>
+<p><strong>Tensions.</strong> The tensions come from the Lagrange equations of the constrained coordinates <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\gamma\)</span>, using the unconstrained Lagrangian <span class="math inline">\(L\)</span>: <span class="math display">\[\begin{align}
+    \text{string 1:} \quad \frac{d}{dt}\lp\frac{\partial L}{\partial u_\beta}\rp-\frac{\partial L}{\partial \beta} &amp;= {\bf F}_{c1}\cdot\frac{\partial {\bf r}_1}{\partial \beta}+{\bf F}_{c2}\cdot\frac{\partial {\bf r}_2}{\partial \beta},\\
+    \text{string 2:} \quad \frac{d}{dt}\lp\frac{\partial L}{\partial u_\gamma}\rp-\frac{\partial L}{\partial \gamma} &amp;= {\bf F}_{c1}\cdot\frac{\partial {\bf r}_1}{\partial \gamma}+{\bf F}_{c2}\cdot\frac{\partial {\bf r}_2}{\partial \gamma}.
+\end{align}\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Evaluating the tensions">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Evaluating the tensions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Since <span class="math inline">\(\frac{\partial {\bf r}_1}{\partial \beta} = \frac{\partial {\bf r}_2}{\partial \beta} = {}_{1}{\bf e}_x\)</span>, the <span class="math inline">\(\mu_2\)</span> terms cancel in the first equation and its right-hand side is <span class="math inline">\(\mu_1\)</span>. Since <span class="math inline">\(\frac{\partial {\bf r}_1}{\partial \gamma} = {\bf 0}\)</span> and <span class="math inline">\(\frac{\partial {\bf r}_2}{\partial \gamma} = {}_{2}{\bf e}_x\)</span>, the right-hand side of the second is <span class="math inline">\(\mu_2\ell_2\)</span>. Evaluating the left-hand sides with the constraints satisfied gives <span class="math display">\[\begin{align}
+    \mu_1 &amp;= -(m_1+m_2)\lp\ell_1\dot{\theta}_1^2+g\cos(\theta_1)\rp+m_2\ell_2\lp\ddot{\theta}_2\sin(\theta_1-\theta_2)-\dot{\theta}_2^2\cos(\theta_1-\theta_2)\rp,\\
+    \mu_2\ell_2 &amp;= -m_2\lp g\cos(\theta_2)+\ell_2\dot{\theta}_2^2+\ell_1\ddot{\theta}_1\sin(\theta_1-\theta_2)+\ell_1\dot{\theta}_1^2\cos(\theta_1-\theta_2)\rp.
+\end{align}\]</span> The string tensions are <span class="math inline">\(T_1 = -\mu_1\)</span> and <span class="math inline">\(T_2 = -\mu_2\ell_2\)</span>, with <span class="math inline">\(\ddot{\theta}_1\)</span> and <span class="math inline">\(\ddot{\theta}_2\)</span> taken from the equations of motion.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="alternative-principles-of-dynamics" class="level2" data-number="23.8">
-<h2 data-number="23.8" class="anchored" data-anchor-id="alternative-principles-of-dynamics"><span class="header-section-number">23.8</span> Alternative Principles of Dynamics</h2>
+<section id="example-pendulum-with-a-spring-summer-2026-final" class="level2" data-number="23.9">
+<h2 data-number="23.9" class="anchored" data-anchor-id="example-pendulum-with-a-spring-summer-2026-final"><span class="header-section-number">23.9</span> Example: Pendulum With a Spring (Summer 2026 Final)</h2>
+<p>A particle of mass <span class="math inline">\(m\)</span> is suspended by a massless inextensible string of length <span class="math inline">\(d\)</span>. The particle is also attached to a linear spring of stiffness <span class="math inline">\(K\)</span> and unstretched length <span class="math inline">\(\ell_0\)</span>, whose other end is fixed at <span class="math inline">\(B\)</span>, a distance <span class="math inline">\(d\)</span> from <span class="math inline">\(O\)</span> along <span class="math inline">\({\bf E}_y\)</span>. The motion of <span class="math inline">\(m\)</span> is planar, and <span class="math inline">\({\bf g} = g{\bf E}_x\)</span>. We define a corotational basis on the string, <span class="math display">\[\begin{align}
+    {\bf e}_x = \cos(\theta){\bf E}_x+\sin(\theta){\bf E}_y, \qquad {\bf e}_y = -\sin(\theta){\bf E}_x+\cos(\theta){\bf E}_y.
+\end{align}\]</span> The constraints imposed on <span class="math inline">\(m\)</span> are <span class="math display">\[\begin{align}
+    \beta = ||{\bf r}_A-{\bf r}_O||-d = 0, \qquad z = {\bf r}_A\cdot{\bf E}_z = 0.
+\end{align}\]</span> Hence, we choose the generalized coordinates and generalized velocities respectively as <span class="math display">\[\begin{align}
+    q = \leb \theta \quad \beta \quad z\reb, \qquad u = \leb u_\theta \quad u_\beta \quad u_z\reb.
+\end{align}\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/lagranges_equations/su26_final_p2.png" class="img-fluid figure-img" style="width:65.0%"></p>
+<figcaption>Summer 2026 final, Problem 2.</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li>Use Lagrange’s prescription to find the constraint forces corresponding to the constraints imposed on <span class="math inline">\(m\)</span>.</li>
+<li>Find expressions for the constrained kinetic energy <span class="math inline">\(\tilde{T}(q,u)\)</span>, constrained potential energy <span class="math inline">\(\tilde{U}(q)\)</span>, and constrained Lagrangian <span class="math inline">\(\tilde{L}(q,u)\)</span> of <span class="math inline">\(m\)</span>.</li>
+<li>Use Lagrangian mechanics to find the equation of motion of <span class="math inline">\(m\)</span>.</li>
+<li>Write one equation you could use to calculate the tension in the string. Specify what each term of the equation means.</li>
+</ol>
+<p><strong>Solution.</strong> The position and velocity of <span class="math inline">\(m\)</span> are <span class="math display">\[\begin{align}
+    {\bf r}_A = (d+\beta){\bf e}_x+z{\bf E}_z, \qquad {\bf v}_A = u_\beta{\bf e}_x+(d+\beta)u_\theta{\bf e}_y+u_z{\bf E}_z,
+\end{align}\]</span> and the fixed end of the spring is at <span class="math inline">\({\bf r}_B = d{\bf E}_y\)</span>.</p>
+<p><strong>1. Constraint forces.</strong> Differentiating the constraints, <span class="math display">\[\begin{align}
+    \beta = 0 \implies {\bf v}_A\cdot{\bf e}_x = 0, \qquad z = 0 \implies {\bf v}_A\cdot{\bf E}_z = 0,
+\end{align}\]</span> so by Lagrange’s prescription the constraint force on <span class="math inline">\(m\)</span> is <span class="math display">\[\begin{align}
+    {\bf F}_c = \mu_1{\bf e}_x+\mu_2{\bf E}_z.
+\end{align}\]</span> <span class="math inline">\(\mu_1{\bf e}_x\)</span> is the force of the string, and <span class="math inline">\(\mu_2{\bf E}_z\)</span> keeps the motion in the plane.</p>
+<p><strong>2. Constrained energies.</strong> With <span class="math inline">\(\beta = z = 0\)</span>: <span class="math inline">\({\bf r}_A = d{\bf e}_x\)</span> and <span class="math inline">\({\bf v}_A = du_\theta{\bf e}_y\)</span>, so <span class="math display">\[\begin{align}
+    \tilde{T} = \frac{1}{2}md^2u_\theta^2.
+\end{align}\]</span> The stretch of the spring is <span class="math inline">\(\varepsilon = ||{\bf r}_A-{\bf r}_B||-\ell_0\)</span>, with <span class="math inline">\({\bf r}_A-{\bf r}_B = d\cos(\theta){\bf E}_x+d\lp\sin(\theta)-1\rp{\bf E}_y\)</span>, so <span class="math display">\[\begin{align}
+    ||{\bf r}_A-{\bf r}_B|| = d\sqrt{\cos^2(\theta)+\lp\sin(\theta)-1\rp^2} = d\sqrt{2-2\sin(\theta)}, \qquad \varepsilon = d\sqrt{2-2\sin(\theta)}-\ell_0.
+\end{align}\]</span> Adding the gravitational potential energy <span class="math inline">\(-m{\bf g}\cdot{\bf r}_A = -mgd\cos(\theta)\)</span>, <span class="math display">\[\begin{align}
+    \tilde{U} &amp;= -mgd\cos(\theta)+\frac{1}{2}K\lp d\sqrt{2-2\sin(\theta)}-\ell_0\rp^2,\\
+    \tilde{L} &amp;= \frac{1}{2}md^2u_\theta^2+mgd\cos(\theta)-\frac{1}{2}K\lp d\sqrt{2-2\sin(\theta)}-\ell_0\rp^2.
+\end{align}\]</span></p>
+<p><strong>3. Equation of motion.</strong> For <span class="math inline">\(q^1 = \theta\)</span>, <span class="math inline">\(\frac{d}{dt}\lp\frac{\partial \tilde{L}}{\partial u_\theta}\rp-\frac{\partial \tilde{L}}{\partial \theta} = 0\)</span>, with <span class="math display">\[\begin{align}
+    \frac{\partial \tilde{L}}{\partial u_\theta} = md^2u_\theta, \qquad \frac{\partial \tilde{L}}{\partial \theta} = -mgd\sin(\theta)-K\varepsilon\frac{\partial \varepsilon}{\partial \theta}, \qquad \frac{\partial \varepsilon}{\partial \theta} = -\frac{d\cos(\theta)}{\sqrt{2-2\sin(\theta)}}.
+\end{align}\]</span> The equation of motion is <span class="math display">\[\begin{align}
+    md^2\ddot{\theta}+mgd\sin(\theta)-Kd\cos(\theta)\frac{d\sqrt{2-2\sin(\theta)}-\ell_0}{\sqrt{2-2\sin(\theta)}} = 0.
+\end{align}\]</span> The spring term is the moment about <span class="math inline">\(O\)</span> of the spring force: when the spring is stretched, it pulls <span class="math inline">\(m\)</span> toward <span class="math inline">\(B\)</span> and increases <span class="math inline">\(\theta\)</span>.</p>
+<p><strong>4. Tension.</strong> Using the unconstrained Lagrangian <span class="math inline">\(L = T-U\)</span> for the constrained coordinate <span class="math inline">\(q^2 = \beta\)</span>: <span class="math display">\[\begin{align}
+    \frac{d}{dt}\lp\frac{\partial L}{\partial u_\beta}\rp-\frac{\partial L}{\partial \beta} = {\bf F}_c\cdot\frac{\partial {\bf r}_A}{\partial \beta} = \mu_1,
+\end{align}\]</span> where <span class="math inline">\(L = \frac{1}{2}m\lp u_\beta^2+(d+\beta)^2u_\theta^2+u_z^2\rp+mg(d+\beta)\cos(\theta)-\frac{1}{2}K\varepsilon^2\)</span> depends on <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\frac{\partial {\bf r}_A}{\partial \beta} = {\bf e}_x\)</span>, and the equation is evaluated at <span class="math inline">\(\beta = u_\beta = \dot{u}_\beta = 0\)</span>. The tension in the string is <span class="math inline">\(T_s = -\mu_1\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Evaluating the tension">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Evaluating the tension
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>With <span class="math inline">\(\frac{\partial \varepsilon}{\partial \beta} = \frac{({\bf r}_A-{\bf r}_B)\cdot{\bf e}_x}{||{\bf r}_A-{\bf r}_B||} = \sqrt{\frac{1-\sin(\theta)}{2}}\)</span> at <span class="math inline">\(\beta = 0\)</span>, the <span class="math inline">\(\beta\)</span> equation gives <span class="math display">\[\begin{align}
+    \mu_1 = -md\dot{\theta}^2-mg\cos(\theta)+K\lp d\sqrt{2-2\sin(\theta)}-\ell_0\rp\sqrt{\frac{1-\sin(\theta)}{2}},
+\end{align}\]</span> so <span class="math display">\[\begin{align}
+    T_s = md\dot{\theta}^2+mg\cos(\theta)-K\lp d\sqrt{2-2\sin(\theta)}-\ell_0\rp\sqrt{\frac{1-\sin(\theta)}{2}}.
+\end{align}\]</span> This matches the balance of linear momentum along <span class="math inline">\({\bf e}_x\)</span>: <span class="math inline">\(-md\dot{\theta}^2 = mg\cos(\theta)+\mu_1+{\bf F}_s\cdot{\bf e}_x\)</span>, where <span class="math inline">\({\bf F}_s\)</span> is the spring force.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="alternative-principles-of-dynamics" class="level2" data-number="23.10">
+<h2 data-number="23.10" class="anchored" data-anchor-id="alternative-principles-of-dynamics"><span class="header-section-number">23.10</span> Alternative Principles of Dynamics</h2>
 <p>Source: O’Reilly’s textbook on Intermediate Dynamics, second edition, Section 4.12</p>
 <ul>
 <li>Jean Bernoulli’s principle of virtual work (1717) - for statics</li>
@@ -854,8 +1019,8 @@ window.Quarto = {
 <li>Gauss’ principle of least constraint (1829)</li>
 <li>Hamilton’s principle (1835)</li>
 </ul>
-<section id="principle-of-virtual-work-and-dalemberts-principle" class="level3" data-number="23.8.1">
-<h3 data-number="23.8.1" class="anchored" data-anchor-id="principle-of-virtual-work-and-dalemberts-principle"><span class="header-section-number">23.8.1</span> Principle of Virtual Work and D’Alembert’s Principle</h3>
+<section id="principle-of-virtual-work-and-dalemberts-principle" class="level3" data-number="23.10.1">
+<h3 data-number="23.10.1" class="anchored" data-anchor-id="principle-of-virtual-work-and-dalemberts-principle"><span class="header-section-number">23.10.1</span> Principle of Virtual Work and D’Alembert’s Principle</h3>
 <p>Consider the principle of virtual work and D’Alembert’s Principle applied to a system of particles. We assume that the particles are subject to a single constraint: <span class="math display">\[\begin{align*}
     {\bf f}_1\cdot{\bf v}_1+\hdots+{\bf f}_N\cdot{\bf v}_N + e = 0.
 \end{align*}\]</span> The principle of virtual work and D’Alembert’s principle collectively state that the motion of the system of particles is such that the following equation is satisfied: <span class="math display">\[\begin{align}
@@ -882,14 +1047,14 @@ window.Quarto = {
     \end{split}
 \end{align}\]</span></p>
 </section>
-<section id="gauss-principle-of-least-action" class="level3" data-number="23.8.2">
-<h3 data-number="23.8.2" class="anchored" data-anchor-id="gauss-principle-of-least-action"><span class="header-section-number">23.8.2</span> Gauss’ Principle of Least Action</h3>
+<section id="gauss-principle-of-least-action" class="level3" data-number="23.10.2">
+<h3 data-number="23.10.2" class="anchored" data-anchor-id="gauss-principle-of-least-action"><span class="header-section-number">23.10.2</span> Gauss’ Principle of Least Action</h3>
 <p>Suppose we have a system of <span class="math inline">\(N\)</span> particles that are subject to the constraint <span class="math display">\[\begin{align*}
     {\bf f}_1\cdot{\bf v}_1+\hdots+{\bf f}_N\cdot{\bf v}_N + e = 0.
 \end{align*}\]</span> and suppose that the constraint forces are prescribed by using Lagrange’s prescription <span class="math inline">\({\bf F}_{cK} = \mu{\bf f}_K\)</span>, <span class="math inline">\((K=1,\hdots,N)\)</span>. Then, in any motion of the system that satisfies the constraint, the constraint forces <span class="math inline">\({\bf F}_{cK} = \mu{\bf f}_K\)</span> are the least needed to ensure that the constraint is satisfied. That is, Lagrange’s prescription is in a sense optimal!</p>
 </section>
-<section id="hamiltons-principle" class="level3" data-number="23.8.3">
-<h3 data-number="23.8.3" class="anchored" data-anchor-id="hamiltons-principle"><span class="header-section-number">23.8.3</span> Hamilton’s Principle</h3>
+<section id="hamiltons-principle" class="level3" data-number="23.10.3">
+<h3 data-number="23.10.3" class="anchored" data-anchor-id="hamiltons-principle"><span class="header-section-number">23.10.3</span> Hamilton’s Principle</h3>
 <p>For ease of exposition, we restrict our discussion to a single particle of mass <span class="math inline">\(m\)</span> and suppose that the coordinates <span class="math inline">\(q = (q^1,q^2,q^2)\)</span> are used to parametrize the position vector. Hamilton’s principle states that the motion of the system between a given initial configuration <span class="math inline">\(q(t_0)\)</span> and a given final configuration <span class="math inline">\(q(t_1)\)</span> is such that it extremizes the integral: <span class="math display">\[\begin{align}
     \begin{split}
         I = \int_{t_0}^{t_1}Ldt
@@ -903,21 +1068,21 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="lagranges_equations_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="432"></p>
+<p><img src="lagranges_equations_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="432"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="exercises" class="level2" data-number="23.9">
-<h2 data-number="23.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">23.9</span> Exercises</h2>
+<section id="exercises" class="level2" data-number="23.11">
+<h2 data-number="23.11" class="anchored" data-anchor-id="exercises"><span class="header-section-number">23.11</span> Exercises</h2>
 <p>Double pendulum</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="lagranges_equations_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<p><img src="lagranges_equations_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
